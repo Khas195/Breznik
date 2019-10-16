@@ -1,6 +1,6 @@
 # Process documentation
 
-_This is the process documentation for the game Kristoslav. The process documentation here available here is the result of the works from the course True Story by Prof. Florian Berger and Prof. Sebastian Stamm. The members of this project: [Tung T. Cao](https://khas195.itch.io/), Christopher Bukal Chilicuisa, Frederic Wendt, Hariharan Anpalagan._
+_This is the process documentation for the game Kristoslav. The process documentation here available here is the result of the works from the course True Story by Prof. Florian Berger and Prof. Sebastian Stamm. The members of this project: [Tung T. Cao](https://khas195.itch.io/), Christopher Bukal Chilicuisa, Frederic Wendt, Hariharan Anpalagan, Sarah Junger._
 
 ---
 
