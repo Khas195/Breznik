@@ -1,0 +1,165 @@
+\hypertarget{class_mouse_rotate_camera}{}\doxysection{Mouse\+Rotate\+Camera Class Reference}
+\label{class_mouse_rotate_camera}\index{MouseRotateCamera@{MouseRotateCamera}}
+
+
+This class roate the camera entity based on the motion of the mouse.  
+
+
+
+
+Inheritance diagram for Mouse\+Rotate\+Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_mouse_rotate_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mouse\+Rotate\+Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_mouse_rotate_camera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mouse_rotate_camera_a7140c710ac92172f5ef20b9fa881ea58}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_mouse_rotate_camera_ac74ab212411bf84d8ab2fd901f3b5cf4}{Rotate\+Yaw\+And\+Pitch}} ()
+\begin{DoxyCompactList}\small\item\em This function rotate the yaw and pitch pivot accoring to the mouse input The pitch angle is limited by the pitch\+Lower\+Limit and the pitch\+Upper\+Limit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_mouse_rotate_camera_a2df874be83d8e9bfabd85695f4be4fd1}{sensitivity}} = 80
+\begin{DoxyCompactList}\small\item\em Determined the speed of the rotation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mouse_rotate_camera_a5622bf2d8bb4215e2bdbb0faa75bf92d}{pitch\+Upper\+Limit}} = 40
+\begin{DoxyCompactList}\small\item\em The limit of which the camera will not rotate. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mouse_rotate_camera_a5c3accfe9c02fa39fec227136e120734}{pitch\+Lower\+Limit}} = -\/30
+\begin{DoxyCompactList}\small\item\em The limit of which the camera will not rotate. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_mouse_rotate_camera_a4c4f56a4ce663b494c03c5cb8b62231f}{pitch\+Pivot}} = null
+\begin{DoxyCompactList}\small\item\em The pivot of which the script will rotate vertically. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_mouse_rotate_camera_ac04983026d86a93230726e86b1fdbf58}{yaw\+Pivot}} = null
+\begin{DoxyCompactList}\small\item\em The pivot of which the script will rotate horizontally. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mouse_rotate_camera_ac4ed5b95d517842c401eba604f6328d2}{pitch}} = 0f
+\begin{DoxyCompactList}\small\item\em The current pitch of the pitch pivot. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mouse_rotate_camera_a9195b6b83049c06f0c2b78c0ea10c2d4}{yaw}} = 0f
+\begin{DoxyCompactList}\small\item\em the current yaw of the yaw pivot \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class roate the camera entity based on the motion of the mouse. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mouse_rotate_camera_ac74ab212411bf84d8ab2fd901f3b5cf4}\label{class_mouse_rotate_camera_ac74ab212411bf84d8ab2fd901f3b5cf4}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!RotateYawAndPitch@{RotateYawAndPitch}}
+\index{RotateYawAndPitch@{RotateYawAndPitch}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{RotateYawAndPitch()}{RotateYawAndPitch()}}
+{\footnotesize\ttfamily void Mouse\+Rotate\+Camera.\+Rotate\+Yaw\+And\+Pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function rotate the yaw and pitch pivot accoring to the mouse input The pitch angle is limited by the pitch\+Lower\+Limit and the pitch\+Upper\+Limit. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mouse_rotate_camera_ac74ab212411bf84d8ab2fd901f3b5cf4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_mouse_rotate_camera_a7140c710ac92172f5ef20b9fa881ea58}\label{class_mouse_rotate_camera_a7140c710ac92172f5ef20b9fa881ea58}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!Update@{Update}}
+\index{Update@{Update}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Mouse\+Rotate\+Camera.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mouse_rotate_camera_a7140c710ac92172f5ef20b9fa881ea58_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mouse_rotate_camera_ac4ed5b95d517842c401eba604f6328d2}\label{class_mouse_rotate_camera_ac4ed5b95d517842c401eba604f6328d2}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!pitch@{pitch}}
+\index{pitch@{pitch}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily float Mouse\+Rotate\+Camera.\+pitch = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The current pitch of the pitch pivot. 
+
+\mbox{\Hypertarget{class_mouse_rotate_camera_a5c3accfe9c02fa39fec227136e120734}\label{class_mouse_rotate_camera_a5c3accfe9c02fa39fec227136e120734}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!pitchLowerLimit@{pitchLowerLimit}}
+\index{pitchLowerLimit@{pitchLowerLimit}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{pitchLowerLimit}{pitchLowerLimit}}
+{\footnotesize\ttfamily float Mouse\+Rotate\+Camera.\+pitch\+Lower\+Limit = -\/30\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The limit of which the camera will not rotate. 
+
+\mbox{\Hypertarget{class_mouse_rotate_camera_a4c4f56a4ce663b494c03c5cb8b62231f}\label{class_mouse_rotate_camera_a4c4f56a4ce663b494c03c5cb8b62231f}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!pitchPivot@{pitchPivot}}
+\index{pitchPivot@{pitchPivot}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{pitchPivot}{pitchPivot}}
+{\footnotesize\ttfamily Transform Mouse\+Rotate\+Camera.\+pitch\+Pivot = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The pivot of which the script will rotate vertically. 
+
+\mbox{\Hypertarget{class_mouse_rotate_camera_a5622bf2d8bb4215e2bdbb0faa75bf92d}\label{class_mouse_rotate_camera_a5622bf2d8bb4215e2bdbb0faa75bf92d}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!pitchUpperLimit@{pitchUpperLimit}}
+\index{pitchUpperLimit@{pitchUpperLimit}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{pitchUpperLimit}{pitchUpperLimit}}
+{\footnotesize\ttfamily float Mouse\+Rotate\+Camera.\+pitch\+Upper\+Limit = 40\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The limit of which the camera will not rotate. 
+
+\mbox{\Hypertarget{class_mouse_rotate_camera_a2df874be83d8e9bfabd85695f4be4fd1}\label{class_mouse_rotate_camera_a2df874be83d8e9bfabd85695f4be4fd1}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!sensitivity@{sensitivity}}
+\index{sensitivity@{sensitivity}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{sensitivity}{sensitivity}}
+{\footnotesize\ttfamily float Mouse\+Rotate\+Camera.\+sensitivity = 80\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determined the speed of the rotation. 
+
+\mbox{\Hypertarget{class_mouse_rotate_camera_a9195b6b83049c06f0c2b78c0ea10c2d4}\label{class_mouse_rotate_camera_a9195b6b83049c06f0c2b78c0ea10c2d4}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!yaw@{yaw}}
+\index{yaw@{yaw}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{yaw}{yaw}}
+{\footnotesize\ttfamily float Mouse\+Rotate\+Camera.\+yaw = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the current yaw of the yaw pivot 
+
+\mbox{\Hypertarget{class_mouse_rotate_camera_ac04983026d86a93230726e86b1fdbf58}\label{class_mouse_rotate_camera_ac04983026d86a93230726e86b1fdbf58}} 
+\index{MouseRotateCamera@{MouseRotateCamera}!yawPivot@{yawPivot}}
+\index{yawPivot@{yawPivot}!MouseRotateCamera@{MouseRotateCamera}}
+\doxysubsubsection{\texorpdfstring{yawPivot}{yawPivot}}
+{\footnotesize\ttfamily Transform Mouse\+Rotate\+Camera.\+yaw\+Pivot = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The pivot of which the script will rotate horizontally. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/3\+D/\+Camera/\mbox{\hyperlink{_mouse_rotate_camera_8cs}{Mouse\+Rotate\+Camera.\+cs}}\end{DoxyCompactItemize}

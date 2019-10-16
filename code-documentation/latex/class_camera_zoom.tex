@@ -1,0 +1,226 @@
+\hypertarget{class_camera_zoom}{}\doxysection{Camera\+Zoom Class Reference}
+\label{class_camera_zoom}\index{CameraZoom@{CameraZoom}}
+
+
+Inheritance diagram for Camera\+Zoom\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_camera_zoom__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Camera\+Zoom\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_camera_zoom__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_zoom_a6cb710e441b19e986f514dc9a4d873a6}{Clear}} (bool clear\+Player)
+\item 
+float \mbox{\hyperlink{class_camera_zoom_aa4c5acb9ea3803e87c938fe8deb639a6}{Get\+Max\+Zoom}} ()
+\item 
+void \mbox{\hyperlink{class_camera_zoom_a6a6d2e2b57d12d711d506edf83c15505}{Set\+Max\+Zoom}} (float new\+Max\+Zoom)
+\item 
+void \mbox{\hyperlink{class_camera_zoom_a1ab31573320b1ed6307ff28069154378}{Add\+Encapsolate\+Object}} (Transform obj)
+\item 
+float \mbox{\hyperlink{class_camera_zoom_aaaef9d33a52ab1108cc8763b888e4f33}{Get\+Follow\+Percentage}} ()
+\item 
+void \mbox{\hyperlink{class_camera_zoom_acd663317667d93c079e882ff2b77cb61}{Set\+Follow\+Percentage}} (float zoom\+Follow\+Percentage)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_zoom_ab5bd1ecf04a7452ec64f55379a4050ce}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_camera_zoom_a60f7073f8331c718d14cd692cbf9b982}{Fixed\+Update}} ()
+\item 
+float \mbox{\hyperlink{class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64}{Get\+Greatest\+Distance}} (List$<$ Transform $>$ \mbox{\hyperlink{class_camera_zoom_a7f89ef134e9ca7cedc95ea38e19c49ba}{encapsulated\+Targets}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \mbox{\hyperlink{class_camera_zoom_a6d459c51144f11adac8c426c2af12c2a}{host}} = null
+\item 
+List$<$ Transform $>$ \mbox{\hyperlink{class_camera_zoom_a7f89ef134e9ca7cedc95ea38e19c49ba}{encapsulated\+Targets}} = new List$<$Transform$>$()
+\item 
+Transform \mbox{\hyperlink{class_camera_zoom_aa9fef0a16ac5b5301be307fe9ad73308}{character}} = null
+\item 
+float \mbox{\hyperlink{class_camera_zoom_a8f97e56b8f9ee759a4e83a62b49feda8}{min\+Zoom}} = 0
+\item 
+float \mbox{\hyperlink{class_camera_zoom_abb4f06ca11d71cd452a556093c686d25}{max\+Zoom}} = 1
+\item 
+float \mbox{\hyperlink{class_camera_zoom_a8025847768e405c0a61a73888484c182}{follow\+Percentage}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_zoom_a1ab31573320b1ed6307ff28069154378}\label{class_camera_zoom_a1ab31573320b1ed6307ff28069154378}} 
+\index{CameraZoom@{CameraZoom}!AddEncapsolateObject@{AddEncapsolateObject}}
+\index{AddEncapsolateObject@{AddEncapsolateObject}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{AddEncapsolateObject()}{AddEncapsolateObject()}}
+{\footnotesize\ttfamily void Camera\+Zoom.\+Add\+Encapsolate\+Object (\begin{DoxyParamCaption}\item[{Transform}]{obj }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_camera_zoom_a1ab31573320b1ed6307ff28069154378_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_a6cb710e441b19e986f514dc9a4d873a6}\label{class_camera_zoom_a6cb710e441b19e986f514dc9a4d873a6}} 
+\index{CameraZoom@{CameraZoom}!Clear@{Clear}}
+\index{Clear@{Clear}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Camera\+Zoom.\+Clear (\begin{DoxyParamCaption}\item[{bool}]{clear\+Player }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_camera_zoom_a6cb710e441b19e986f514dc9a4d873a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_a60f7073f8331c718d14cd692cbf9b982}\label{class_camera_zoom_a60f7073f8331c718d14cd692cbf9b982}} 
+\index{CameraZoom@{CameraZoom}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Camera\+Zoom.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_camera_zoom_a60f7073f8331c718d14cd692cbf9b982_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_aaaef9d33a52ab1108cc8763b888e4f33}\label{class_camera_zoom_aaaef9d33a52ab1108cc8763b888e4f33}} 
+\index{CameraZoom@{CameraZoom}!GetFollowPercentage@{GetFollowPercentage}}
+\index{GetFollowPercentage@{GetFollowPercentage}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{GetFollowPercentage()}{GetFollowPercentage()}}
+{\footnotesize\ttfamily float Camera\+Zoom.\+Get\+Follow\+Percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_camera_zoom_aaaef9d33a52ab1108cc8763b888e4f33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64}\label{class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64}} 
+\index{CameraZoom@{CameraZoom}!GetGreatestDistance@{GetGreatestDistance}}
+\index{GetGreatestDistance@{GetGreatestDistance}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{GetGreatestDistance()}{GetGreatestDistance()}}
+{\footnotesize\ttfamily float Camera\+Zoom.\+Get\+Greatest\+Distance (\begin{DoxyParamCaption}\item[{List$<$ Transform $>$}]{encapsulated\+Targets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_aa4c5acb9ea3803e87c938fe8deb639a6}\label{class_camera_zoom_aa4c5acb9ea3803e87c938fe8deb639a6}} 
+\index{CameraZoom@{CameraZoom}!GetMaxZoom@{GetMaxZoom}}
+\index{GetMaxZoom@{GetMaxZoom}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{GetMaxZoom()}{GetMaxZoom()}}
+{\footnotesize\ttfamily float Camera\+Zoom.\+Get\+Max\+Zoom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_camera_zoom_aa4c5acb9ea3803e87c938fe8deb639a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_acd663317667d93c079e882ff2b77cb61}\label{class_camera_zoom_acd663317667d93c079e882ff2b77cb61}} 
+\index{CameraZoom@{CameraZoom}!SetFollowPercentage@{SetFollowPercentage}}
+\index{SetFollowPercentage@{SetFollowPercentage}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{SetFollowPercentage()}{SetFollowPercentage()}}
+{\footnotesize\ttfamily void Camera\+Zoom.\+Set\+Follow\+Percentage (\begin{DoxyParamCaption}\item[{float}]{zoom\+Follow\+Percentage }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_camera_zoom_acd663317667d93c079e882ff2b77cb61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_a6a6d2e2b57d12d711d506edf83c15505}\label{class_camera_zoom_a6a6d2e2b57d12d711d506edf83c15505}} 
+\index{CameraZoom@{CameraZoom}!SetMaxZoom@{SetMaxZoom}}
+\index{SetMaxZoom@{SetMaxZoom}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{SetMaxZoom()}{SetMaxZoom()}}
+{\footnotesize\ttfamily void Camera\+Zoom.\+Set\+Max\+Zoom (\begin{DoxyParamCaption}\item[{float}]{new\+Max\+Zoom }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_camera_zoom_a6a6d2e2b57d12d711d506edf83c15505_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_camera_zoom_ab5bd1ecf04a7452ec64f55379a4050ce}\label{class_camera_zoom_ab5bd1ecf04a7452ec64f55379a4050ce}} 
+\index{CameraZoom@{CameraZoom}!Start@{Start}}
+\index{Start@{Start}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Camera\+Zoom.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_zoom_aa9fef0a16ac5b5301be307fe9ad73308}\label{class_camera_zoom_aa9fef0a16ac5b5301be307fe9ad73308}} 
+\index{CameraZoom@{CameraZoom}!character@{character}}
+\index{character@{character}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{character}{character}}
+{\footnotesize\ttfamily Transform Camera\+Zoom.\+character = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_zoom_a7f89ef134e9ca7cedc95ea38e19c49ba}\label{class_camera_zoom_a7f89ef134e9ca7cedc95ea38e19c49ba}} 
+\index{CameraZoom@{CameraZoom}!encapsulatedTargets@{encapsulatedTargets}}
+\index{encapsulatedTargets@{encapsulatedTargets}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{encapsulatedTargets}{encapsulatedTargets}}
+{\footnotesize\ttfamily List$<$Transform$>$ Camera\+Zoom.\+encapsulated\+Targets = new List$<$Transform$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_zoom_a8025847768e405c0a61a73888484c182}\label{class_camera_zoom_a8025847768e405c0a61a73888484c182}} 
+\index{CameraZoom@{CameraZoom}!followPercentage@{followPercentage}}
+\index{followPercentage@{followPercentage}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{followPercentage}{followPercentage}}
+{\footnotesize\ttfamily float Camera\+Zoom.\+follow\+Percentage\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_zoom_a6d459c51144f11adac8c426c2af12c2a}\label{class_camera_zoom_a6d459c51144f11adac8c426c2af12c2a}} 
+\index{CameraZoom@{CameraZoom}!host@{host}}
+\index{host@{host}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily Camera Camera\+Zoom.\+host = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_zoom_abb4f06ca11d71cd452a556093c686d25}\label{class_camera_zoom_abb4f06ca11d71cd452a556093c686d25}} 
+\index{CameraZoom@{CameraZoom}!maxZoom@{maxZoom}}
+\index{maxZoom@{maxZoom}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{maxZoom}{maxZoom}}
+{\footnotesize\ttfamily float Camera\+Zoom.\+max\+Zoom = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_zoom_a8f97e56b8f9ee759a4e83a62b49feda8}\label{class_camera_zoom_a8f97e56b8f9ee759a4e83a62b49feda8}} 
+\index{CameraZoom@{CameraZoom}!minZoom@{minZoom}}
+\index{minZoom@{minZoom}!CameraZoom@{CameraZoom}}
+\doxysubsubsection{\texorpdfstring{minZoom}{minZoom}}
+{\footnotesize\ttfamily float Camera\+Zoom.\+min\+Zoom = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/2\+D/\+Camera2\+D/\mbox{\hyperlink{_camera_zoom_8cs}{Camera\+Zoom.\+cs}}\end{DoxyCompactItemize}

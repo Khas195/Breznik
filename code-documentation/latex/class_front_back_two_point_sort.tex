@@ -1,0 +1,218 @@
+\hypertarget{class_front_back_two_point_sort}{}\doxysection{Front\+Back\+Two\+Point\+Sort Class Reference}
+\label{class_front_back_two_point_sort}\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+
+
+This class offers a 2 points for the process of determination of whether the character\textquotesingle{}s sprite is above or blow the host\textquotesingle{}s sprite.  
+
+
+
+
+Inheritance diagram for Front\+Back\+Two\+Point\+Sort\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_front_back_two_point_sort__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Front\+Back\+Two\+Point\+Sort\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_front_back_two_point_sort__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_front_back_two_point_sort_a1b46c1ac6d39c58c3e2c04291aaea2b1}{Is\+Above\+Character}} (Vector3 character\+Pos)
+\begin{DoxyCompactList}\small\item\em Check whether the host\textquotesingle{}s sprite should be above the character\textquotesingle{}s sprite. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_front_back_two_point_sort_abfbe2ef7f6ccc6113091ae43410aa798}{Is\+Below\+Character}} (Vector3 character\+Pos)
+\begin{DoxyCompactList}\small\item\em Check whether the host\textquotesingle{}s sprite should be below the character\textquotesingle{}s sprite. \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_i_front_back_sorting_adbe37ea0cc860fb42e104118f9d5d53a}{Host\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the host position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_front_back_sorting_a5d6df14782d89a78ba5e001af5db8c2e}{Set\+Host\+Position}} (Vector3 pos)
+\begin{DoxyCompactList}\small\item\em Set the host position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_i_front_back_sorting_a9467a90de94948ea2e8d904b4a87c1b7}{host}}
+\begin{DoxyCompactList}\small\item\em The host game object of which this script will act upon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_front_back_sorting_ad82f49f13560530041f62240a659f0d2}{use\+Self\+As\+Host}}
+\begin{DoxyCompactList}\small\item\em This option allowed this script to use the parent game object as host instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_front_back_two_point_sort_a976e0dc79bb3d363301a0c85ba03c5fb}{Start}} ()
+\item 
+bool \mbox{\hyperlink{class_front_back_two_point_sort_a831167cdee06f037d13615877c0b80f2}{Is\+Left\+Of\+Pivot}} (Vector3 character\+Pos)
+\begin{DoxyCompactList}\small\item\em Return whether the character\textquotesingle{}s position is left of the host\textquotesingle{}s pivot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_front_back_two_point_sort_abca2234b1edb9f5c459d8eba200a4819}{left\+Point}} = null
+\begin{DoxyCompactList}\small\item\em The left pivot of the host object. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_front_back_two_point_sort_a5894a4f989c7286f45b0cbb5d141972c}{right\+Point}} = null
+\begin{DoxyCompactList}\small\item\em The right pivot of the host object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class offers a 2 points for the process of determination of whether the character\textquotesingle{}s sprite is above or blow the host\textquotesingle{}s sprite. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_front_back_sorting_adbe37ea0cc860fb42e104118f9d5d53a}\label{class_i_front_back_sorting_adbe37ea0cc860fb42e104118f9d5d53a}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!HostPosition@{HostPosition}}
+\index{HostPosition@{HostPosition}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{HostPosition()}{HostPosition()}}
+{\footnotesize\ttfamily virtual Vector3 I\+Front\+Back\+Sorting.\+Host\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Get the host position. 
+
+\mbox{\Hypertarget{class_front_back_two_point_sort_a1b46c1ac6d39c58c3e2c04291aaea2b1}\label{class_front_back_two_point_sort_a1b46c1ac6d39c58c3e2c04291aaea2b1}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!IsAboveCharacter@{IsAboveCharacter}}
+\index{IsAboveCharacter@{IsAboveCharacter}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{IsAboveCharacter()}{IsAboveCharacter()}}
+{\footnotesize\ttfamily override bool Front\+Back\+Two\+Point\+Sort.\+Is\+Above\+Character (\begin{DoxyParamCaption}\item[{Vector3}]{character\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the host\textquotesingle{}s sprite should be above the character\textquotesingle{}s sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character\+Pos} & is the position (vector3) of the character \\
+\hline
+{\em host\+Pos} & is the position of the host \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_front_back_sorting_aec5597998def5d8c32e401bc040aea7b}{I\+Front\+Back\+Sorting}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_front_back_two_point_sort_a1b46c1ac6d39c58c3e2c04291aaea2b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_front_back_two_point_sort_abfbe2ef7f6ccc6113091ae43410aa798}\label{class_front_back_two_point_sort_abfbe2ef7f6ccc6113091ae43410aa798}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!IsBelowCharacter@{IsBelowCharacter}}
+\index{IsBelowCharacter@{IsBelowCharacter}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{IsBelowCharacter()}{IsBelowCharacter()}}
+{\footnotesize\ttfamily override bool Front\+Back\+Two\+Point\+Sort.\+Is\+Below\+Character (\begin{DoxyParamCaption}\item[{Vector3}]{character\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the host\textquotesingle{}s sprite should be below the character\textquotesingle{}s sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character\+Pos} & is the position (vector3) of the character \\
+\hline
+{\em host\+Pos} & is the position of the host \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_front_back_sorting_ac26a5a0c05ee35848a7a0d75620cb052}{I\+Front\+Back\+Sorting}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_front_back_two_point_sort_abfbe2ef7f6ccc6113091ae43410aa798_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_front_back_two_point_sort_a831167cdee06f037d13615877c0b80f2}\label{class_front_back_two_point_sort_a831167cdee06f037d13615877c0b80f2}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!IsLeftOfPivot@{IsLeftOfPivot}}
+\index{IsLeftOfPivot@{IsLeftOfPivot}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{IsLeftOfPivot()}{IsLeftOfPivot()}}
+{\footnotesize\ttfamily bool Front\+Back\+Two\+Point\+Sort.\+Is\+Left\+Of\+Pivot (\begin{DoxyParamCaption}\item[{Vector3}]{character\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return whether the character\textquotesingle{}s position is left of the host\textquotesingle{}s pivot. 
+
+This function determined which pivot is used in the comparision to check whether the character\textquotesingle{}s sprite should be above or below the host\textquotesingle{}s sprite. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_front_back_two_point_sort_a831167cdee06f037d13615877c0b80f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_i_front_back_sorting_a5d6df14782d89a78ba5e001af5db8c2e}\label{class_i_front_back_sorting_a5d6df14782d89a78ba5e001af5db8c2e}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!SetHostPosition@{SetHostPosition}}
+\index{SetHostPosition@{SetHostPosition}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{SetHostPosition()}{SetHostPosition()}}
+{\footnotesize\ttfamily virtual void I\+Front\+Back\+Sorting.\+Set\+Host\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Set the host position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & is the new host\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_front_back_two_point_sort_a976e0dc79bb3d363301a0c85ba03c5fb}\label{class_front_back_two_point_sort_a976e0dc79bb3d363301a0c85ba03c5fb}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!Start@{Start}}
+\index{Start@{Start}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Front\+Back\+Two\+Point\+Sort.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_front_back_sorting_a9467a90de94948ea2e8d904b4a87c1b7}\label{class_i_front_back_sorting_a9467a90de94948ea2e8d904b4a87c1b7}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!host@{host}}
+\index{host@{host}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily Transform I\+Front\+Back\+Sorting.\+host\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The host game object of which this script will act upon. 
+
+\mbox{\Hypertarget{class_front_back_two_point_sort_abca2234b1edb9f5c459d8eba200a4819}\label{class_front_back_two_point_sort_abca2234b1edb9f5c459d8eba200a4819}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!leftPoint@{leftPoint}}
+\index{leftPoint@{leftPoint}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{leftPoint}{leftPoint}}
+{\footnotesize\ttfamily Transform Front\+Back\+Two\+Point\+Sort.\+left\+Point = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The left pivot of the host object. 
+
+\mbox{\Hypertarget{class_front_back_two_point_sort_a5894a4f989c7286f45b0cbb5d141972c}\label{class_front_back_two_point_sort_a5894a4f989c7286f45b0cbb5d141972c}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!rightPoint@{rightPoint}}
+\index{rightPoint@{rightPoint}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{rightPoint}{rightPoint}}
+{\footnotesize\ttfamily Transform Front\+Back\+Two\+Point\+Sort.\+right\+Point = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The right pivot of the host object. 
+
+\mbox{\Hypertarget{class_i_front_back_sorting_ad82f49f13560530041f62240a659f0d2}\label{class_i_front_back_sorting_ad82f49f13560530041f62240a659f0d2}} 
+\index{FrontBackTwoPointSort@{FrontBackTwoPointSort}!useSelfAsHost@{useSelfAsHost}}
+\index{useSelfAsHost@{useSelfAsHost}!FrontBackTwoPointSort@{FrontBackTwoPointSort}}
+\doxysubsubsection{\texorpdfstring{useSelfAsHost}{useSelfAsHost}}
+{\footnotesize\ttfamily bool I\+Front\+Back\+Sorting.\+use\+Self\+As\+Host\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+This option allowed this script to use the parent game object as host instead. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/2\+D/\+Layer\+Sorting2\+D/\mbox{\hyperlink{_front_back_two_point_sort_8cs}{Front\+Back\+Two\+Point\+Sort.\+cs}}\end{DoxyCompactItemize}
