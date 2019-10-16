@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 /**
  * The IMovement interface acts as a generalization of all type of movements in the game.!--
@@ -8,7 +9,7 @@ public abstract class IMovement : MonoBehaviour {
     /**
      * Different types of movement mode in the game
      */
-    public enum MovementMode
+    public enum MovementType
     {
         Walk, 
         Run 
@@ -17,13 +18,22 @@ public abstract class IMovement : MonoBehaviour {
     /** The container for all movement related data */
     protected MovementData data = null;
     /** The current movement mode */
-    protected MovementMode moveMode = MovementMode.Walk;
+    protected MovementType moveMode = MovementType.Walk;
     /** All movements actions should be handle in this function*/
     public abstract void Move (float forward, float side);
     /** Signaled that the jump command had been called */
     public abstract void SignalJump();
+
+    /// <summary>
+    /// Set the rigid body for the movement behavior.
+    /// </summary>
+    /// <param name="hostRigidBody"> The rigidbody of the character's model</param>
+    public virtual void SetRigidBody(Rigidbody hostRigidBody)
+    {
+    }
+
     /** Set the current movement mode */
-    public void SetMovementMode(MovementMode newMode)
+    public void SetMovementMode(MovementType newMode)
     {
         moveMode = newMode;
     }
@@ -35,10 +45,10 @@ public abstract class IMovement : MonoBehaviour {
         float moveSpeed;
         switch (moveMode)
         {
-            case MovementMode.Run:
+            case MovementType.Run:
                 moveSpeed = data.runSpeed ;
                 break;
-            case MovementMode.Walk:
+            case MovementType.Walk:
                 moveSpeed = data.walkSpeed;
                 break;
             default:
