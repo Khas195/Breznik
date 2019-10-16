@@ -6,6 +6,7 @@ _This is the process documentation for the game Kristoslav. The process document
 
 ### [To Do](./to-do.md)
 The todo list of practical tasks for the project.
+Also [Hacknplan](https://app.hacknplan.com/p/105211/kanban?categoryId=0&boardId=268784) is used the project for task management.
 
 ### [Process Journal](./process-journals)
 A journal that includes high-level reflections of each member that worked on the project on the design and development process, intended to be complementary to the [commit history of the repository](https://bitbucket.org/btkgamedesign/kristoslav/commits/).
