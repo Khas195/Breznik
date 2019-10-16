@@ -1,0 +1,146 @@
+\hypertarget{class_tweener}{}\doxysection{Tweener Class Reference}
+\label{class_tweener}\index{Tweener@{Tweener}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}{Tween\+Type}} \{ \mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229a3d7967c2580f02f1ec2e8d1d3d7f7c95}{Tween\+Type.\+Linear\+Tween}}, 
+\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229a52afbedefc192687be6606155b5bf593}{Tween\+Type.\+Ease\+In\+Quad}}, 
+\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229afa3017a8e690c168c1c1ae13360e65df}{Tween\+Type.\+Ease\+Out\+Quad}}, 
+\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229ad37eb834b1eb836f03c9aafdc55e2e6d}{Tween\+Type.\+Ease\+In\+Out\+Quad}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_tweener_a7e97dcc14ea647a69db665b601dc510f}{Tween}} (\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}{Tween\+Type}} type, float cur\+Time, float begining\+Value, float change\+In\+Value, float duration)
+\item 
+static float \mbox{\hyperlink{class_tweener_a983b4e6232ca4c2b9e93d4220ebe5f80}{Linear\+Tween}} (float cur\+Time, float begining\+Value, float change\+In\+Value, float duration)
+\item 
+static Color \mbox{\hyperlink{class_tweener_a151f2faff98630a3d3eb5cbaa9f9c234}{Tween\+Color}} (\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}{Tween\+Type}} type, float cur\+Time, Color origin\+Color, Color change\+In\+Value, float duration)
+\item 
+static float \mbox{\hyperlink{class_tweener_a2f94312fb2f166eb6778b0a5a3d43cfb}{Ease\+In\+Quad}} (float cur\+Time, float begining\+Value, float change\+In\+Value, float duration)
+\item 
+static float \mbox{\hyperlink{class_tweener_a0c38ba76d2665c81ae00c57cf2636371}{Ease\+Out\+Quad}} (float cur\+Time, float begining\+Value, float change\+In\+Value, float duration)
+\item 
+static float \mbox{\hyperlink{class_tweener_a3c67bb99722d5c59a34d4ecde9cdffbc}{Ease\+In\+Out\+Quad}} (float cur\+Time, float begining\+Value, float change\+In\+Value, float duration)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}\label{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}} 
+\index{Tweener@{Tweener}!TweenType@{TweenType}}
+\index{TweenType@{TweenType}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{TweenType}{TweenType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}{Tweener.\+Tween\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LinearTween@{LinearTween}!Tweener@{Tweener}}\index{Tweener@{Tweener}!LinearTween@{LinearTween}}}\mbox{\Hypertarget{class_tweener_ae0bb19752c20d7484f42f7ca2d130229a3d7967c2580f02f1ec2e8d1d3d7f7c95}\label{class_tweener_ae0bb19752c20d7484f42f7ca2d130229a3d7967c2580f02f1ec2e8d1d3d7f7c95}} 
+Linear\+Tween&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EaseInQuad@{EaseInQuad}!Tweener@{Tweener}}\index{Tweener@{Tweener}!EaseInQuad@{EaseInQuad}}}\mbox{\Hypertarget{class_tweener_ae0bb19752c20d7484f42f7ca2d130229a52afbedefc192687be6606155b5bf593}\label{class_tweener_ae0bb19752c20d7484f42f7ca2d130229a52afbedefc192687be6606155b5bf593}} 
+Ease\+In\+Quad&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EaseOutQuad@{EaseOutQuad}!Tweener@{Tweener}}\index{Tweener@{Tweener}!EaseOutQuad@{EaseOutQuad}}}\mbox{\Hypertarget{class_tweener_ae0bb19752c20d7484f42f7ca2d130229afa3017a8e690c168c1c1ae13360e65df}\label{class_tweener_ae0bb19752c20d7484f42f7ca2d130229afa3017a8e690c168c1c1ae13360e65df}} 
+Ease\+Out\+Quad&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EaseInOutQuad@{EaseInOutQuad}!Tweener@{Tweener}}\index{Tweener@{Tweener}!EaseInOutQuad@{EaseInOutQuad}}}\mbox{\Hypertarget{class_tweener_ae0bb19752c20d7484f42f7ca2d130229ad37eb834b1eb836f03c9aafdc55e2e6d}\label{class_tweener_ae0bb19752c20d7484f42f7ca2d130229ad37eb834b1eb836f03c9aafdc55e2e6d}} 
+Ease\+In\+Out\+Quad&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tweener_a3c67bb99722d5c59a34d4ecde9cdffbc}\label{class_tweener_a3c67bb99722d5c59a34d4ecde9cdffbc}} 
+\index{Tweener@{Tweener}!EaseInOutQuad@{EaseInOutQuad}}
+\index{EaseInOutQuad@{EaseInOutQuad}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{EaseInOutQuad()}{EaseInOutQuad()}}
+{\footnotesize\ttfamily static float Tweener.\+Ease\+In\+Out\+Quad (\begin{DoxyParamCaption}\item[{float}]{cur\+Time,  }\item[{float}]{begining\+Value,  }\item[{float}]{change\+In\+Value,  }\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tweener_a3c67bb99722d5c59a34d4ecde9cdffbc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tweener_a2f94312fb2f166eb6778b0a5a3d43cfb}\label{class_tweener_a2f94312fb2f166eb6778b0a5a3d43cfb}} 
+\index{Tweener@{Tweener}!EaseInQuad@{EaseInQuad}}
+\index{EaseInQuad@{EaseInQuad}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{EaseInQuad()}{EaseInQuad()}}
+{\footnotesize\ttfamily static float Tweener.\+Ease\+In\+Quad (\begin{DoxyParamCaption}\item[{float}]{cur\+Time,  }\item[{float}]{begining\+Value,  }\item[{float}]{change\+In\+Value,  }\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tweener_a2f94312fb2f166eb6778b0a5a3d43cfb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tweener_a0c38ba76d2665c81ae00c57cf2636371}\label{class_tweener_a0c38ba76d2665c81ae00c57cf2636371}} 
+\index{Tweener@{Tweener}!EaseOutQuad@{EaseOutQuad}}
+\index{EaseOutQuad@{EaseOutQuad}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{EaseOutQuad()}{EaseOutQuad()}}
+{\footnotesize\ttfamily static float Tweener.\+Ease\+Out\+Quad (\begin{DoxyParamCaption}\item[{float}]{cur\+Time,  }\item[{float}]{begining\+Value,  }\item[{float}]{change\+In\+Value,  }\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tweener_a0c38ba76d2665c81ae00c57cf2636371_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tweener_a983b4e6232ca4c2b9e93d4220ebe5f80}\label{class_tweener_a983b4e6232ca4c2b9e93d4220ebe5f80}} 
+\index{Tweener@{Tweener}!LinearTween@{LinearTween}}
+\index{LinearTween@{LinearTween}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{LinearTween()}{LinearTween()}}
+{\footnotesize\ttfamily static float Tweener.\+Linear\+Tween (\begin{DoxyParamCaption}\item[{float}]{cur\+Time,  }\item[{float}]{begining\+Value,  }\item[{float}]{change\+In\+Value,  }\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tweener_a983b4e6232ca4c2b9e93d4220ebe5f80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tweener_a7e97dcc14ea647a69db665b601dc510f}\label{class_tweener_a7e97dcc14ea647a69db665b601dc510f}} 
+\index{Tweener@{Tweener}!Tween@{Tween}}
+\index{Tween@{Tween}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{Tween()}{Tween()}}
+{\footnotesize\ttfamily static float Tweener.\+Tween (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}{Tween\+Type}}}]{type,  }\item[{float}]{cur\+Time,  }\item[{float}]{begining\+Value,  }\item[{float}]{change\+In\+Value,  }\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_tweener_a7e97dcc14ea647a69db665b601dc510f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_tweener_a7e97dcc14ea647a69db665b601dc510f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tweener_a151f2faff98630a3d3eb5cbaa9f9c234}\label{class_tweener_a151f2faff98630a3d3eb5cbaa9f9c234}} 
+\index{Tweener@{Tweener}!TweenColor@{TweenColor}}
+\index{TweenColor@{TweenColor}!Tweener@{Tweener}}
+\doxysubsubsection{\texorpdfstring{TweenColor()}{TweenColor()}}
+{\footnotesize\ttfamily static Color Tweener.\+Tween\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tweener_ae0bb19752c20d7484f42f7ca2d130229}{Tween\+Type}}}]{type,  }\item[{float}]{cur\+Time,  }\item[{Color}]{origin\+Color,  }\item[{Color}]{change\+In\+Value,  }\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tweener_a151f2faff98630a3d3eb5cbaa9f9c234_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Ultilities/\mbox{\hyperlink{_tweener_8cs}{Tweener.\+cs}}\end{DoxyCompactItemize}

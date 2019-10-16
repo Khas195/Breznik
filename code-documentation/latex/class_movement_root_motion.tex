@@ -1,0 +1,275 @@
+\hypertarget{class_movement_root_motion}{}\doxysection{Movement\+Root\+Motion Class Reference}
+\label{class_movement_root_motion}\index{MovementRootMotion@{MovementRootMotion}}
+
+
+This class move the host object by ultilize root motion in the animations of the host object.  
+
+
+
+
+Inheritance diagram for Movement\+Root\+Motion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_movement_root_motion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Movement\+Root\+Motion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_movement_root_motion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40}{Movement\+Mode}} \{ \mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62}{Movement\+Mode.\+Walk}}, 
+\mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40ac5301693c4e792bcd5a479ef38fb8f8d}{Movement\+Mode.\+Run}}
+ \}
+\begin{DoxyCompactList}\small\item\em Different types of movement mode in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de}{Move}} (float forward, float side)
+\begin{DoxyCompactList}\small\item\em All movements actions should be handle in this function. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_movement_root_motion_a5eeadefa1382d44fb403377d5d46f332}{Signal\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em Signaled that the jump command had been called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_movement_a6c04585e3e788c0b308cb00f61cdb295}{Set\+Movement\+Mode}} (\mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40}{Movement\+Mode}} new\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the current movement mode. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_i_movement_aac27e47a2c9667d8b691c936471082f5}{Is\+Touching\+Ground}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}{Get\+Speed\+Based\+On\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Get the correspondence speed in the data container(\+Movement\+Data) based on the currnt movement mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_movement_data}{Movement\+Data}} \mbox{\hyperlink{class_i_movement_a67ec344a60681000b657db752bc21971}{data}} = null
+\begin{DoxyCompactList}\small\item\em The container for all movement related data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40}{Movement\+Mode}} \mbox{\hyperlink{class_i_movement_afff2a26f0dcb004ae43cb293decdab18}{move\+Mode}} = \mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62}{Movement\+Mode.\+Walk}}
+\begin{DoxyCompactList}\small\item\em The current movement mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_movement_root_motion_a1d5b8ae409380097f4d881b99cedabb8}{last\+Forward}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_movement_root_motion_a12e0a3ca4d9ee40192100de753d9a907}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_movement_root_motion_aea34a6348e63c77642dbe1bd1c6dcdde}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_movement_root_motion_ac182931ffbfd392ab012e35465734169}{anim}} = null
+\begin{DoxyCompactList}\small\item\em The animator of the host object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_movement_root_motion_af81701795fb69926c09fe0d35317675e}{speed\+Step}} = 0
+\item 
+float \mbox{\hyperlink{class_movement_root_motion_a0a12159417ca6d6826da9552342b0f02}{target\+Forward\+Speed}} = 0
+\item 
+float \mbox{\hyperlink{class_movement_root_motion_aba81550eeb6011c36fe29c809e3d04b7}{target\+Side\+Speed}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class move the host object by ultilize root motion in the animations of the host object. 
+
+This class is greatly dependent on the settings of the animation state machine. This is class should be changed according to the settings of the animation state machine. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_i_movement_a27174271007699a25c49af4a4ee50c40}\label{class_i_movement_a27174271007699a25c49af4a4ee50c40}} 
+\index{MovementRootMotion@{MovementRootMotion}!MovementMode@{MovementMode}}
+\index{MovementMode@{MovementMode}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{MovementMode}{MovementMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40}{I\+Movement.\+Movement\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [inherited]}}
+
+
+
+Different types of movement mode in the game. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Walk@{Walk}!MovementRootMotion@{MovementRootMotion}}\index{MovementRootMotion@{MovementRootMotion}!Walk@{Walk}}}\mbox{\Hypertarget{class_i_movement_a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62}\label{class_i_movement_a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62}} 
+Walk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run@{Run}!MovementRootMotion@{MovementRootMotion}}\index{MovementRootMotion@{MovementRootMotion}!Run@{Run}}}\mbox{\Hypertarget{class_i_movement_a27174271007699a25c49af4a4ee50c40ac5301693c4e792bcd5a479ef38fb8f8d}\label{class_i_movement_a27174271007699a25c49af4a4ee50c40ac5301693c4e792bcd5a479ef38fb8f8d}} 
+Run&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}\label{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}} 
+\index{MovementRootMotion@{MovementRootMotion}!GetSpeedBasedOnMode@{GetSpeedBasedOnMode}}
+\index{GetSpeedBasedOnMode@{GetSpeedBasedOnMode}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{GetSpeedBasedOnMode()}{GetSpeedBasedOnMode()}}
+{\footnotesize\ttfamily float I\+Movement.\+Get\+Speed\+Based\+On\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Get the correspondence speed in the data container(\+Movement\+Data) based on the currnt movement mode. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_i_movement_aac27e47a2c9667d8b691c936471082f5}\label{class_i_movement_aac27e47a2c9667d8b691c936471082f5}} 
+\index{MovementRootMotion@{MovementRootMotion}!IsTouchingGround@{IsTouchingGround}}
+\index{IsTouchingGround@{IsTouchingGround}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{IsTouchingGround()}{IsTouchingGround()}}
+{\footnotesize\ttfamily virtual bool I\+Movement.\+Is\+Touching\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_movement_a39996c31188b6d361b9fb8b4c38cd6df}{Movement}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_movement_aac27e47a2c9667d8b691c936471082f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de}\label{class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de}} 
+\index{MovementRootMotion@{MovementRootMotion}!Move@{Move}}
+\index{Move@{Move}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily override void Movement\+Root\+Motion.\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+All movements actions should be handle in this function. 
+
+
+
+Implements \mbox{\hyperlink{class_i_movement_abeb4f7bb7a84ba21041dd4ac88081f23}{I\+Movement}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_i_movement_a6c04585e3e788c0b308cb00f61cdb295}\label{class_i_movement_a6c04585e3e788c0b308cb00f61cdb295}} 
+\index{MovementRootMotion@{MovementRootMotion}!SetMovementMode@{SetMovementMode}}
+\index{SetMovementMode@{SetMovementMode}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{SetMovementMode()}{SetMovementMode()}}
+{\footnotesize\ttfamily void I\+Movement.\+Set\+Movement\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40}{Movement\+Mode}}}]{new\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Set the current movement mode. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_movement_a6c04585e3e788c0b308cb00f61cdb295_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_movement_root_motion_a5eeadefa1382d44fb403377d5d46f332}\label{class_movement_root_motion_a5eeadefa1382d44fb403377d5d46f332}} 
+\index{MovementRootMotion@{MovementRootMotion}!SignalJump@{SignalJump}}
+\index{SignalJump@{SignalJump}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{SignalJump()}{SignalJump()}}
+{\footnotesize\ttfamily override void Movement\+Root\+Motion.\+Signal\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Signaled that the jump command had been called. 
+
+
+
+Implements \mbox{\hyperlink{class_i_movement_a2d47acb7fe566d1301ac90efd48772b9}{I\+Movement}}.
+
+\mbox{\Hypertarget{class_movement_root_motion_a12e0a3ca4d9ee40192100de753d9a907}\label{class_movement_root_motion_a12e0a3ca4d9ee40192100de753d9a907}} 
+\index{MovementRootMotion@{MovementRootMotion}!Start@{Start}}
+\index{Start@{Start}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Movement\+Root\+Motion.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_movement_root_motion_aea34a6348e63c77642dbe1bd1c6dcdde}\label{class_movement_root_motion_aea34a6348e63c77642dbe1bd1c6dcdde}} 
+\index{MovementRootMotion@{MovementRootMotion}!Update@{Update}}
+\index{Update@{Update}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Movement\+Root\+Motion.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_movement_root_motion_ac182931ffbfd392ab012e35465734169}\label{class_movement_root_motion_ac182931ffbfd392ab012e35465734169}} 
+\index{MovementRootMotion@{MovementRootMotion}!anim@{anim}}
+\index{anim@{anim}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{anim}{anim}}
+{\footnotesize\ttfamily Animator Movement\+Root\+Motion.\+anim = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The animator of the host object. 
+
+\mbox{\Hypertarget{class_i_movement_a67ec344a60681000b657db752bc21971}\label{class_i_movement_a67ec344a60681000b657db752bc21971}} 
+\index{MovementRootMotion@{MovementRootMotion}!data@{data}}
+\index{data@{data}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_movement_data}{Movement\+Data}} I\+Movement.\+data = null\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The container for all movement related data. 
+
+\mbox{\Hypertarget{class_i_movement_afff2a26f0dcb004ae43cb293decdab18}\label{class_i_movement_afff2a26f0dcb004ae43cb293decdab18}} 
+\index{MovementRootMotion@{MovementRootMotion}!moveMode@{moveMode}}
+\index{moveMode@{moveMode}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{moveMode}{moveMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40}{Movement\+Mode}} I\+Movement.\+move\+Mode = \mbox{\hyperlink{class_i_movement_a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62}{Movement\+Mode.\+Walk}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The current movement mode. 
+
+\mbox{\Hypertarget{class_movement_root_motion_af81701795fb69926c09fe0d35317675e}\label{class_movement_root_motion_af81701795fb69926c09fe0d35317675e}} 
+\index{MovementRootMotion@{MovementRootMotion}!speedStep@{speedStep}}
+\index{speedStep@{speedStep}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{speedStep}{speedStep}}
+{\footnotesize\ttfamily float Movement\+Root\+Motion.\+speed\+Step = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_movement_root_motion_a0a12159417ca6d6826da9552342b0f02}\label{class_movement_root_motion_a0a12159417ca6d6826da9552342b0f02}} 
+\index{MovementRootMotion@{MovementRootMotion}!targetForwardSpeed@{targetForwardSpeed}}
+\index{targetForwardSpeed@{targetForwardSpeed}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{targetForwardSpeed}{targetForwardSpeed}}
+{\footnotesize\ttfamily float Movement\+Root\+Motion.\+target\+Forward\+Speed = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_movement_root_motion_aba81550eeb6011c36fe29c809e3d04b7}\label{class_movement_root_motion_aba81550eeb6011c36fe29c809e3d04b7}} 
+\index{MovementRootMotion@{MovementRootMotion}!targetSideSpeed@{targetSideSpeed}}
+\index{targetSideSpeed@{targetSideSpeed}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{targetSideSpeed}{targetSideSpeed}}
+{\footnotesize\ttfamily float Movement\+Root\+Motion.\+target\+Side\+Speed = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_movement_root_motion_a1d5b8ae409380097f4d881b99cedabb8}\label{class_movement_root_motion_a1d5b8ae409380097f4d881b99cedabb8}} 
+\index{MovementRootMotion@{MovementRootMotion}!lastForward@{lastForward}}
+\index{lastForward@{lastForward}!MovementRootMotion@{MovementRootMotion}}
+\doxysubsubsection{\texorpdfstring{lastForward}{lastForward}}
+{\footnotesize\ttfamily float Movement\+Root\+Motion.\+last\+Forward\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/3\+D/\+Movement/\mbox{\hyperlink{_movement_root_motion_8cs}{Movement\+Root\+Motion.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{class_front_back_sorting}{}\doxysection{Front\+Back\+Sorting Class Reference}
+\label{class_front_back_sorting}\index{FrontBackSorting@{FrontBackSorting}}
+
+
+This class offers the most simple sorting.  
+
+
+
+
+Inheritance diagram for Front\+Back\+Sorting\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_front_back_sorting__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Front\+Back\+Sorting\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_front_back_sorting__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_front_back_sorting_a09d180dbb268cf43b9ea38b28dc034c1}{Is\+Above\+Character}} (Vector3 character\+Pos)
+\begin{DoxyCompactList}\small\item\em This function return whether the host\textquotesingle{}s sprite should be above the character\textquotesingle{}s sprite. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_front_back_sorting_ad5e2985b0c68f9d560108205143aa3d0}{Is\+Below\+Character}} (Vector3 character\+Pos)
+\begin{DoxyCompactList}\small\item\em This function return whether the host\textquotesingle{}s sprite should be below the character\textquotesingle{}s sprite. \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_i_front_back_sorting_adbe37ea0cc860fb42e104118f9d5d53a}{Host\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the host position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_front_back_sorting_a5d6df14782d89a78ba5e001af5db8c2e}{Set\+Host\+Position}} (Vector3 pos)
+\begin{DoxyCompactList}\small\item\em Set the host position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_i_front_back_sorting_a9467a90de94948ea2e8d904b4a87c1b7}{host}}
+\begin{DoxyCompactList}\small\item\em The host game object of which this script will act upon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_front_back_sorting_ad82f49f13560530041f62240a659f0d2}{use\+Self\+As\+Host}}
+\begin{DoxyCompactList}\small\item\em This option allowed this script to use the parent game object as host instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_front_back_sorting_a17d55c23c23be73fe916086a78fa67c0}{Start}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class offers the most simple sorting. 
+
+Whether the character\textquotesingle{}s sprite is aoove or below the sprite is determined by the character\textquotesingle{}s y position in comparison to the host\textquotesingle{}s sprite 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_front_back_sorting_adbe37ea0cc860fb42e104118f9d5d53a}\label{class_i_front_back_sorting_adbe37ea0cc860fb42e104118f9d5d53a}} 
+\index{FrontBackSorting@{FrontBackSorting}!HostPosition@{HostPosition}}
+\index{HostPosition@{HostPosition}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{HostPosition()}{HostPosition()}}
+{\footnotesize\ttfamily virtual Vector3 I\+Front\+Back\+Sorting.\+Host\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Get the host position. 
+
+\mbox{\Hypertarget{class_front_back_sorting_a09d180dbb268cf43b9ea38b28dc034c1}\label{class_front_back_sorting_a09d180dbb268cf43b9ea38b28dc034c1}} 
+\index{FrontBackSorting@{FrontBackSorting}!IsAboveCharacter@{IsAboveCharacter}}
+\index{IsAboveCharacter@{IsAboveCharacter}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{IsAboveCharacter()}{IsAboveCharacter()}}
+{\footnotesize\ttfamily override bool Front\+Back\+Sorting.\+Is\+Above\+Character (\begin{DoxyParamCaption}\item[{Vector3}]{character\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function return whether the host\textquotesingle{}s sprite should be above the character\textquotesingle{}s sprite. 
+
+
+
+Implements \mbox{\hyperlink{class_i_front_back_sorting_aec5597998def5d8c32e401bc040aea7b}{I\+Front\+Back\+Sorting}}.
+
+\mbox{\Hypertarget{class_front_back_sorting_ad5e2985b0c68f9d560108205143aa3d0}\label{class_front_back_sorting_ad5e2985b0c68f9d560108205143aa3d0}} 
+\index{FrontBackSorting@{FrontBackSorting}!IsBelowCharacter@{IsBelowCharacter}}
+\index{IsBelowCharacter@{IsBelowCharacter}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{IsBelowCharacter()}{IsBelowCharacter()}}
+{\footnotesize\ttfamily override bool Front\+Back\+Sorting.\+Is\+Below\+Character (\begin{DoxyParamCaption}\item[{Vector3}]{character\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function return whether the host\textquotesingle{}s sprite should be below the character\textquotesingle{}s sprite. 
+
+
+
+Implements \mbox{\hyperlink{class_i_front_back_sorting_ac26a5a0c05ee35848a7a0d75620cb052}{I\+Front\+Back\+Sorting}}.
+
+\mbox{\Hypertarget{class_i_front_back_sorting_a5d6df14782d89a78ba5e001af5db8c2e}\label{class_i_front_back_sorting_a5d6df14782d89a78ba5e001af5db8c2e}} 
+\index{FrontBackSorting@{FrontBackSorting}!SetHostPosition@{SetHostPosition}}
+\index{SetHostPosition@{SetHostPosition}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{SetHostPosition()}{SetHostPosition()}}
+{\footnotesize\ttfamily virtual void I\+Front\+Back\+Sorting.\+Set\+Host\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Set the host position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & is the new host\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_front_back_sorting_a17d55c23c23be73fe916086a78fa67c0}\label{class_front_back_sorting_a17d55c23c23be73fe916086a78fa67c0}} 
+\index{FrontBackSorting@{FrontBackSorting}!Start@{Start}}
+\index{Start@{Start}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Front\+Back\+Sorting.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_front_back_sorting_a9467a90de94948ea2e8d904b4a87c1b7}\label{class_i_front_back_sorting_a9467a90de94948ea2e8d904b4a87c1b7}} 
+\index{FrontBackSorting@{FrontBackSorting}!host@{host}}
+\index{host@{host}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily Transform I\+Front\+Back\+Sorting.\+host\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The host game object of which this script will act upon. 
+
+\mbox{\Hypertarget{class_i_front_back_sorting_ad82f49f13560530041f62240a659f0d2}\label{class_i_front_back_sorting_ad82f49f13560530041f62240a659f0d2}} 
+\index{FrontBackSorting@{FrontBackSorting}!useSelfAsHost@{useSelfAsHost}}
+\index{useSelfAsHost@{useSelfAsHost}!FrontBackSorting@{FrontBackSorting}}
+\doxysubsubsection{\texorpdfstring{useSelfAsHost}{useSelfAsHost}}
+{\footnotesize\ttfamily bool I\+Front\+Back\+Sorting.\+use\+Self\+As\+Host\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+This option allowed this script to use the parent game object as host instead. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/2\+D/\+Layer\+Sorting2\+D/\mbox{\hyperlink{_front_back_sorting_8cs}{Front\+Back\+Sorting.\+cs}}\end{DoxyCompactItemize}
