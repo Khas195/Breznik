@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 /// <summary>
 /// The Character class handles all the possible behavior that a character can have.
@@ -23,6 +24,8 @@ public class Character : MonoBehaviour
     [SerializeField]
     IMovement movementBehavior;
 
+    [SerializeField]
+    UnityEvent onCharacterAttack;
 
     void Awake()
     {
@@ -45,6 +48,24 @@ public class Character : MonoBehaviour
         movementBehavior.Move(forward, side);
         return true;
     }
+    /// <summary>
+    /// This function invoke an event whenever the character is signal to attack
+    /// It returns true if the event is successfully called and vice versa.
+    /// </summary>
+    /// <returns></returns>
+    public bool Attack()
+    {
+        Definition.CharacterDebug(this, "try to attack");
+        if (movementBehavior.IsTouchingGround() == false)
+        {
+            Definition.CharacterDebug(this, "attack failed, character is in the air");
+            return false;
+        }
+        Definition.CharacterDebug(this, "attack triggred successful");
+        onCharacterAttack.Invoke();
+        return true;
+    }
+
     /// <summary>
     /// This function ask the moveBehavior of the character to signal the jump function in the next fixed update;.
     /// </summary>
