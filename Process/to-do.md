@@ -68,6 +68,7 @@ _If you found any bugs in the game then add them to this list_
     - Commit: 
 
         - Summary.
-
+        
         - List of changes.
+
 ---
