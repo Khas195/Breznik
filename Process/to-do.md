@@ -11,7 +11,7 @@ _If you found any bugs in the game then add them to this list_
 
 ---
 ### To do
-- Meeting on Thursday, 17 October 2019 at 12:30 am. 
+- ~~Meeting on Thursday, 17 October 2019 at 12:30 am~~. 
 
 
 ###(17 October 2019 at 12:30)
