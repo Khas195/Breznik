@@ -15,12 +15,14 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// </summary>
     [SerializeField]
     Rigidbody hostRb;
-
     // Update is called once per frame
     void Update()
     {
         animator.SetFloat("MoveSpeed", hostRb.velocity.magnitude);
         animator.SetFloat("VelocityY", hostRb.velocity.y);
+    }
+    public void PlayAttackAnimation() {
+        animator.SetTrigger("attack");
     }
 
 }

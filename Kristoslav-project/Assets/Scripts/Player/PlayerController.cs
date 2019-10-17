@@ -43,7 +43,9 @@ public class PlayerController : MonoBehaviour
         {
             character.RequestJump();
         }
-
+        if (Input.GetMouseButtonDown(0)) {
+            character.Attack();
+        }
         character.RequestMove(vertical, horizontal);
 
     }
