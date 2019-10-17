@@ -29,8 +29,9 @@ _If you found any bugs in the game then add them to this list_
 
 - Long term:.
 
-    - Layout of the map (Chris).
-
+    - ~~Layout of the map (Chris)~~.
+    ![](screen-shots/MapLayout-Meeting-Thursday17October2019.png)
+    __Original Map Layout__
     - Design(environment design and layout) of the layout of the areas.
 
         - Village (Freddy, 28 October, 2019)
