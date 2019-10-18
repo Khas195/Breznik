@@ -13,8 +13,9 @@ _If you found any bugs in the game then add them to this list_
 ### To do
 - ~~Meeting on Thursday, 17 October 2019 at 12:30 am~~. 
 
+---
 
-###(17 October 2019 at 12:30)
+### (17 October 2019 at 12:30)
 
 - Goal something for the playtest.
 
@@ -28,7 +29,11 @@ _If you found any bugs in the game then add them to this list_
 
 - Long term:.
 
-    - Layout of the map (Chris).
+    - ~~Layout of the map (Chris)~~.
+
+    ![](./screen-shots/MapLayout-Meeting-Thursday17October2019.png)
+
+    __Original Map Layout__
 
     - Design(environment design and layout) of the layout of the areas.
 
@@ -65,3 +70,5 @@ _If you found any bugs in the game then add them to this list_
         - Summary.
 
         - List of changes.
+
+---
