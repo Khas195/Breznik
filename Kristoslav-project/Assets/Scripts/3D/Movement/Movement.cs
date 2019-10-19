@@ -156,7 +156,10 @@ public class Movement : IMovement
 
         Definition.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
     }
-
+    private void Update()
+    {
+        this.data.currentVelocity = charRigidbody.velocity;
+    }
     private void FixedUpdate()
     {
         ProcessMovement();
