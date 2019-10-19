@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
     [SerializeField]
     Rigidbody hostRigidBody;
 
+
+
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
     /// If the character does not have a movement behavior, he/she will not be able to move.
@@ -24,9 +26,11 @@ public class Character : MonoBehaviour
     [SerializeField]
     IMovement movementBehavior;
 
+
     [SerializeField]
     UnityEvent onCharacterAttack;
-
+    [SerializeField]
+    bool isAttacking = false;
     void Awake()
     {
         movementBehavior.SetRigidBody(hostRigidBody);
@@ -44,6 +48,10 @@ public class Character : MonoBehaviour
     public bool RequestMove(float forward, float side)
     {
         if (movementBehavior == null) return false;
+        if (isAttacking == true)
+        {
+            forward = side = 0;
+        }
 
         movementBehavior.Move(forward, side);
         return true;
@@ -61,11 +69,15 @@ public class Character : MonoBehaviour
             Definition.CharacterDebug(this, "attack failed, character is in the air");
             return false;
         }
+        isAttacking = true;
         Definition.CharacterDebug(this, "attack triggred successful");
         onCharacterAttack.Invoke();
         return true;
     }
-
+    public void SetAttackingStatus(bool attacking)
+    {
+        isAttacking = attacking;
+    }
     /// <summary>
     /// This function ask the moveBehavior of the character to signal the jump function in the next fixed update;.
     /// </summary>
@@ -73,17 +85,13 @@ public class Character : MonoBehaviour
     /// True: if successfully called the SignalJump function. <br />
     /// False: <br/>
     ///   - if the model is not touching the ground
-    ///   - If the movementBehaviro is null </returns>
+    ///   - If the movementBehaviro is null
+    ///   - if there is an attacking animation playing. </returns>
     public bool RequestJump()
     {
-        if (movementBehavior == null) return false;
-
-        if (movementBehavior.IsTouchingGround())
-        {
-            movementBehavior.SignalJump();
-            return true;
-        }
-        return false;
+        if (movementBehavior == null || !movementBehavior.IsTouchingGround() || isAttacking == true) return false;
+        movementBehavior.SignalJump();
+        return true;
     }
     /// <summary>
     /// This function set the movement Type for the moveBehavior.
@@ -101,6 +109,10 @@ public class Character : MonoBehaviour
             return true;
         }
         return false;
+    }
+    public bool IsAttacking()
+    {
+        return isAttacking;
     }
 }
 
