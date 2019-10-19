@@ -15,14 +15,38 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// </summary>
     [SerializeField]
     Rigidbody hostRb;
+    [SerializeField]
+    Character character;
+
+
+    [SerializeField]
+    List<AnimationClip> attackingClip;
+
     // Update is called once per frame
     void Update()
     {
         animator.SetFloat("MoveSpeed", hostRb.velocity.magnitude);
         animator.SetFloat("VelocityY", hostRb.velocity.y);
     }
-    public void PlayAttackAnimation() {
+    public bool IsAttackingAnimationBeingPlayed()
+    {
+        var currentClip = GetCurrentAnimationClip();
+        foreach (var clip in attackingClip)
+        {
+            if (currentClip == clip)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public void PlayAttackAnimation()
+    {
         animator.SetTrigger("attack");
     }
 
+    private AnimationClip GetCurrentAnimationClip()
+    {
+        return animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+    }
 }
