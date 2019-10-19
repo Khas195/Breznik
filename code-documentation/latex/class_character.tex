@@ -1,0 +1,202 @@
+\hypertarget{class_character}{}\doxysection{Character Class Reference}
+\label{class_character}\index{Character@{Character}}
+
+
+The \mbox{\hyperlink{class_character}{Character}} class handles all the possible behavior that a character can have.  
+
+
+
+
+Inheritance diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_character_a9c7f55fec087704ceb34c27460ab2883}{Request\+Move}} (float forward, float side)
+\begin{DoxyCompactList}\small\item\em This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_a973dc08e95ee705b985d4424f4b6c00e}{Request\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_a890e5eae232bca1b0404ab277a9f7fbe}{Request\+Movement\+Type}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}} move\+Type)
+\begin{DoxyCompactList}\small\item\em This function set the movement Type for the move\+Behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_a4b94b509f20b3916112479cdfdcbcd01}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody \mbox{\hyperlink{class_character_ae91b6199245ae87206e43fbd2ae9e440}{host\+Rigid\+Body}}
+\begin{DoxyCompactList}\small\item\em The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_a736d5b47bff2750392858a40e7ab1e9b}{movement\+Behavior}}
+\begin{DoxyCompactList}\small\item\em Reference to the movement behavior of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_character}{Character}} class handles all the possible behavior that a character can have. 
+
+It\textquotesingle{}s handle the character\textquotesingle{}s behaviors by calling the appropriate behavior.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_character_a4b94b509f20b3916112479cdfdcbcd01}\label{class_character_a4b94b509f20b3916112479cdfdcbcd01}} 
+\index{Character@{Character}!Awake@{Awake}}
+\index{Awake@{Awake}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Character.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_character_a4b94b509f20b3916112479cdfdcbcd01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a973dc08e95ee705b985d4424f4b6c00e}\label{class_character_a973dc08e95ee705b985d4424f4b6c00e}} 
+\index{Character@{Character}!RequestJump@{RequestJump}}
+\index{RequestJump@{RequestJump}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{RequestJump()}{RequestJump()}}
+{\footnotesize\ttfamily bool Character.\+Request\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. 
+
+\begin{DoxyReturn}{Returns}
+True\+: if successfully called the Signal\+Jump function. ~\newline
+ False\+: ~\newline
+
+\begin{DoxyItemize}
+\item if the model is not touching the ground
+\item If the movement\+Behaviro is null 
+\end{DoxyItemize}
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a973dc08e95ee705b985d4424f4b6c00e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a973dc08e95ee705b985d4424f4b6c00e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a9c7f55fec087704ceb34c27460ab2883}\label{class_character_a9c7f55fec087704ceb34c27460ab2883}} 
+\index{Character@{Character}!RequestMove@{RequestMove}}
+\index{RequestMove@{RequestMove}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{RequestMove()}{RequestMove()}}
+{\footnotesize\ttfamily bool Character.\+Request\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})}
+
+
+
+This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forward} & fordward is how much the host game object should move forward and backward \\
+\hline
+{\em side} & side is how much the host game object should move sideway \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: if successfully called the move function. ~\newline
+ False\+: if move\+Behavior is null ~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_character_a9c7f55fec087704ceb34c27460ab2883_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a9c7f55fec087704ceb34c27460ab2883_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a890e5eae232bca1b0404ab277a9f7fbe}\label{class_character_a890e5eae232bca1b0404ab277a9f7fbe}} 
+\index{Character@{Character}!RequestMovementType@{RequestMovementType}}
+\index{RequestMovementType@{RequestMovementType}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{RequestMovementType()}{RequestMovementType()}}
+{\footnotesize\ttfamily bool Character.\+Request\+Movement\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}}}]{move\+Type }\end{DoxyParamCaption})}
+
+
+
+This function set the movement Type for the move\+Behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move\+Type} & The movement Type defined in \mbox{\hyperlink{class_movement}{Movement}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: if successfully set the movement mode of the move behavior. ~\newline
+ False\+: if movement\+Behavior is null. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a890e5eae232bca1b0404ab277a9f7fbe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a890e5eae232bca1b0404ab277a9f7fbe_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_character_ae91b6199245ae87206e43fbd2ae9e440}\label{class_character_ae91b6199245ae87206e43fbd2ae9e440}} 
+\index{Character@{Character}!hostRigidBody@{hostRigidBody}}
+\index{hostRigidBody@{hostRigidBody}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{hostRigidBody}{hostRigidBody}}
+{\footnotesize\ttfamily Rigidbody Character.\+host\+Rigid\+Body\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. 
+
+~\newline
+ Need to be set in Unity Editor.\mbox{\Hypertarget{class_character_a736d5b47bff2750392858a40e7ab1e9b}\label{class_character_a736d5b47bff2750392858a40e7ab1e9b}} 
+\index{Character@{Character}!movementBehavior@{movementBehavior}}
+\index{movementBehavior@{movementBehavior}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{movementBehavior}{movementBehavior}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character.\+movement\+Behavior\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the movement behavior of the character. 
+
+~\newline
+ If the character does not have a movement behavior, he/she will not be able to move.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Character/\mbox{\hyperlink{_character_8cs}{Character.\+cs}}\end{DoxyCompactItemize}
