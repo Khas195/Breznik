@@ -19,6 +19,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     Character character;
 
 
+
     [SerializeField]
     List<AnimationClip> attackingClip;
 
@@ -48,5 +49,13 @@ public class CharacterAnimatorControl : MonoBehaviour
     private AnimationClip GetCurrentAnimationClip()
     {
         return animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+    }
+    public bool IsPlaying(string animationName)
+    {
+        if (GetCurrentAnimationClip().name == animationName)
+        {
+            return true;
+        }
+        return false;
     }
 }
