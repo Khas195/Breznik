@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7044c6709323443a74a241c047c306, type: 3}
-  m_Name: CanMove
+  m_Script: {fileID: 11500000, guid: 2381c95acf53f3b49be64450421bbb13, type: 3}
+  m_Name: DefaultSkin
   m_EditorClassIdentifier: 
-  conditions:
-  - {fileID: 11400000, guid: 4604bd1965aeb2041b740f720949f22e, type: 2}
-  - {fileID: 11400000, guid: bf6f05d02c86cdb479f321f7006d5494, type: 2}
-  needAllToSastisfied: 1
+  healthBar: {fileID: 11400000, guid: 966c64052adb7844fac1a647e4ee1545, type: 2}
+  staminaBar: {fileID: 11400000, guid: 9a1a7b5159d10474f80a8c93a02b2921, type: 2}
