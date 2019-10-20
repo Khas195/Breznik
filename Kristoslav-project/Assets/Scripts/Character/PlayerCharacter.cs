@@ -12,7 +12,7 @@ public class PlayerCharacter : Character
     /// </summary>
     [Header("Character Stats Holder")]
     [SerializeField]
-    CharacterStatsData characterStats;
+    CharacterData characterData;
 
     [Header("Action costs")]
     /// <summary>
@@ -39,11 +39,16 @@ public class PlayerCharacter : Character
     /// The cooldown timer for regening after draining health or stamina.
     /// </summary>
     Timer regenCoolDownTimer;
+    public override void Awake()
+    {
+        movementBehavior.SetMovementData(characterData.movementData);
+        base.Awake();
+    }
     void Start()
     {
-        characterStats.curHealth = characterStats.health;
-        characterStats.curStamina = characterStats.stamina;
-        regenCoolDownTimer = new Timer(characterStats.coolDownTilRegen, StartRegen);
+        characterData.statsData.curHealth = characterData.statsData.health;
+        characterData.statsData.curStamina = characterData.statsData.stamina;
+        regenCoolDownTimer = new Timer(characterData.statsData.coolDownTilRegen, StartRegen);
     }
 
     /// <summary>
@@ -56,7 +61,7 @@ public class PlayerCharacter : Character
 
     public override CharacterStatsData GetCharacterStats()
     {
-        return characterStats;
+        return characterData.statsData;
     }
 
     void Update()
@@ -73,14 +78,14 @@ public class PlayerCharacter : Character
     /// </summary>
     private void Regen()
     {
-        characterStats.curHealth += characterStats.healthRegenRate * Time.deltaTime;
-        characterStats.curStamina += characterStats.staminaRegenRate * Time.deltaTime;
-        if (characterStats.curHealth >= characterStats.health && characterStats.curStamina >= characterStats.stamina)
+        characterData.statsData.curHealth += characterData.statsData.healthRegenRate * Time.deltaTime;
+        characterData.statsData.curStamina += characterData.statsData.staminaRegenRate * Time.deltaTime;
+        if (characterData.statsData.curHealth >= characterData.statsData.health && characterData.statsData.curStamina >= characterData.statsData.stamina)
         {
             shouldRegen = false;
         }
-        characterStats.curHealth = Mathf.Clamp(characterStats.curHealth, 0, characterStats.health);
-        characterStats.curStamina = Mathf.Clamp(characterStats.curStamina, 0, characterStats.stamina);
+        characterData.statsData.curHealth = Mathf.Clamp(characterData.statsData.curHealth, 0, characterData.statsData.health);
+        characterData.statsData.curStamina = Mathf.Clamp(characterData.statsData.curStamina, 0, characterData.statsData.stamina);
     }
 
     /// <summary>
@@ -92,8 +97,8 @@ public class PlayerCharacter : Character
         var movementData = movement.GetMovementData();
         if (movementData.currentVelocity.magnitude >= movementData.walkSpeed && movement.GetCurrentMoveMode() == Movement.MovementType.Run)
         {
-            characterStats.curStamina -= runCost.cost * Time.deltaTime;
-            characterStats.curStamina = Mathf.Clamp(characterStats.curStamina, 0, characterStats.stamina);
+            characterData.statsData.curStamina -= runCost.cost * Time.deltaTime;
+            characterData.statsData.curStamina = Mathf.Clamp(characterData.statsData.curStamina, 0, characterData.statsData.stamina);
             TriggerRegenCooldown();
         }
     }
@@ -112,7 +117,7 @@ public class PlayerCharacter : Character
     {
         if (base.RequestJump())
         {
-            characterStats.curStamina -= jumpCost.cost;
+            characterData.statsData.curStamina -= jumpCost.cost;
             TriggerRegenCooldown();
             return true;
         }
@@ -141,7 +146,12 @@ public class PlayerCharacter : Character
     public override void BeingDamage(float damage)
     {
         base.BeingDamage(damage);
-        this.characterStats.curHealth -= damage;
+        this.characterData.statsData.curHealth -= damage;
+        TriggerRegenCooldown();
+    }
+    public void OnPlayerAttack() {
+        this.characterData.statsData.curStamina -= attackCost.cost;
+        characterData.statsData.curStamina = Mathf.Clamp(characterData.statsData.curStamina, 0, characterData.statsData.stamina);
         TriggerRegenCooldown();
     }
 }
