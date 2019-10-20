@@ -52,12 +52,18 @@ public class FlexibleUIStatsBar : FlexibleUI
 
     public void SetFilledAmount(float value)
     {
-        filled.fillAmount = value;
+        if (filled) {
+            filled.fillAmount = value;
+        }
     }
 
     public float GetFilledAmount()
     {
-        return filled.fillAmount;
+        if (filled) {
+            return filled.fillAmount;
+        } else {
+            return 0;
+        }
     }
 
     private void AddMissingComponent()
