@@ -24,6 +24,11 @@ public abstract class IMovement : MonoBehaviour {
     /** Signaled that the jump command had been called */
     public abstract void SignalJump();
 
+    public MovementType GetCurrentMoveMode()
+    {
+        return moveMode;
+    }
+
     /// <summary>
     /// Set the rigid body for the movement behavior.
     /// </summary>
@@ -60,5 +65,8 @@ public abstract class IMovement : MonoBehaviour {
     }
     public virtual bool IsTouchingGround() {
         return true;
+    }
+    public virtual MovementData GetMovementData() {
+        return this.data;
     }
 }

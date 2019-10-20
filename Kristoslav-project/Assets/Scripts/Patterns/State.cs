@@ -3,14 +3,10 @@ using UnityEngine.Events;
 
 public class State : MonoBehaviour
 {
-    [SerializeField]
-    protected UnityEvent OnPressedEvent;
-    [SerializeField]
-    protected UnityEvent OnPoppedEvent;
-    [SerializeField]
-    protected UnityEvent OnReturnPeekEvent;
-    [SerializeField]
-    protected UnityEvent OnPushedEvent;
+    public UnityEvent OnPressedEvent;
+    public UnityEvent OnPoppedEvent;
+    public UnityEvent OnReturnPeekEvent;
+    public UnityEvent OnPushedEvent;
     public virtual void OnPressed()
     {
         if (OnPressedEvent != null)
@@ -38,9 +34,5 @@ public class State : MonoBehaviour
         {
             OnReturnPeekEvent.Invoke();
         }
-    }
-    public virtual void StateUpdate()
-    {
-
     }
 }

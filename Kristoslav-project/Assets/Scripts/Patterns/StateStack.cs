@@ -11,18 +11,17 @@ public class StateStack
         {
             Definition.StateStackDebug("Pushing NULL into the stack");
         }
-
+        
         if (IsStackEmpty() == false)
         {
             Definition.StateStackDebug("Call OnPressed on " + stack.Peek());
             stack.Peek().OnPressed();
         }
 
-        Definition.StateStackDebug("Call OnPushed on " + newState);
+        stack.Push(newState);
 
         newState.OnPushed();
-
-        stack.Push(newState);
+        Definition.StateStackDebug("Call OnPushed on " + newState);
     }
 
     public bool IsStackEmpty()
@@ -35,12 +34,12 @@ public class StateStack
         State result = null;
         if (IsStackEmpty())
         {
-            Definition.StateStackDebug("Popping an emptyState");
+            Definition.StateStackDebug("Popping an empty stack");
             return result;
         }
 
-        result = stack.Pop();
         Definition.StateStackDebug("Call OnPop on" + result);
+        result = stack.Pop();
         result.OnPopped();
 
         if (!IsStackEmpty())
