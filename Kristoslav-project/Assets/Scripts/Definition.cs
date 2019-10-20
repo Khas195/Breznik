@@ -30,6 +30,11 @@ public class Definition
         Debug.Log("Movement Log: " + message);
     }
 
+    public static void GameEventDebug(string message)
+    {
+        Debug.Log("Game Event: " + message);
+    }
+
     public static void CharacterDebug(Character character, string message)
     {
         Debug.Log(character +  ": "  + message);
