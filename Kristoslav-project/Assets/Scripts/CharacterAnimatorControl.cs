@@ -10,6 +10,9 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// </summary>
     [SerializeField]
     Animator animator;
+
+
+
     /// <summary>
     /// The rigidbody of the model of the Character.
     /// </summary>
@@ -47,18 +50,26 @@ public class CharacterAnimatorControl : MonoBehaviour
         }
         return false;
     }
-    public void OnAttackAnimBegin() {
+    public void OnAttackAnimBegin()
+    {
         isAttacking = true;
-        comboCount+=1;
+        comboCount += 1;
     }
-    public void OnAttackAnimEnd() {
+    public void OnAttackAnimEnd()
+    {
         isAttacking = false;
-        if (comboCount >= maxComboCount) {
+        if (comboCount >= maxComboCount)
+        {
             comboCount = 0;
             animator.ResetTrigger("attack");
         }
-        if(animator.GetBool("attack") == false){
+        if (animator.GetBool("attack") == false)
+        {
             comboCount = 0;
         }
+    }
+    public bool IsInAttackingAnimation()
+    {
+        return isAttacking;
     }
 }
