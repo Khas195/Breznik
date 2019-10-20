@@ -22,13 +22,13 @@ public class PlayerStatsUI : MonoBehaviour
     /// The character stats data of the character
     /// </summary>
     [SerializeField]
-    CharacterStatsData data;
+    CharacterData data;
 
     // Update is called once per frame
     void Update()
     {
-        var targetHealthValue= data.curHealth/data.health;
-        var targetStaminaValue = data.curStamina/data.stamina;
+        var targetHealthValue= data.statsData.curHealth/data.statsData.health;
+        var targetStaminaValue = data.statsData. curStamina/data.statsData.stamina;
 
         healthBar.value = Mathf.Lerp(healthBar.value, targetHealthValue, 0.1f);
         staminaBar.value = Mathf.Lerp(staminaBar.value, targetStaminaValue, 0.1f);
