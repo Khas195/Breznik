@@ -70,6 +70,7 @@ public class PlayerCharacter : Character
         {
             Regen();
         }
+        characterData.position = this.transform.position;
         regenCoolDownTimer.Tick();
     }
 
