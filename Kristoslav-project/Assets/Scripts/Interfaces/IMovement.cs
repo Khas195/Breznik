@@ -14,7 +14,6 @@ public abstract class IMovement : MonoBehaviour {
         Walk, 
         Run 
     }
-    [SerializeField]
     /** The container for all movement related data */
     protected MovementData data = null;
     /** The current movement mode */
@@ -42,9 +41,18 @@ public abstract class IMovement : MonoBehaviour {
     {
         moveMode = newMode;
     }
+    /// <summary>
+    /// Set the movement data.
+    /// </summary>
+    /// <param name="movementData">The movement data</param>
+    public void SetMovementData(MovementData movementData)
+    {
+        this.data = movementData;
+    }
+
     /** 
-     * Get the correspondence speed in the data container(MovementData) based on the currnt movement mode
-     */
+* Get the correspondence speed in the data container(MovementData) based on the currnt movement mode
+*/
     protected float GetSpeedBasedOnMode()
     {
         float moveSpeed;

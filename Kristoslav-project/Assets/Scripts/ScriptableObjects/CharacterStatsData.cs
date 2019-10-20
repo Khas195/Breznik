@@ -11,6 +11,5 @@ public class CharacterStatsData : ScriptableObject {
     public float staminaRegenRate;
 
     public float coolDownTilRegen;
-    public float attackCooldown;
 }
 
