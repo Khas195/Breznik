@@ -19,11 +19,14 @@ _If you found any bugs in the game then add them to this list_
 
 - Goal something for the playtest.
 
-    - Combat system (Tung, Tuesday 22 October 2019).
+    - ~~Combat system (Tung, Tuesday 22 October 2019).~~
+        - Not actually done, The character can attack but there's no AI and the Ai doesnt hit back.
 
-    - Fighting Animation(Chris, Monday 21 October 2019).
+    - ~~Fighting Animation(Chris, Monday 21 October 2019).~~
 
-    - Basic UI (can be done easily).
+    - ~~Basic UI (can be done easily).~~
+        - Added health bar.
+        - The stamina bar is just changing the color of the health bar.
 
 - Unity Version: 2019.2.6f1.
 
