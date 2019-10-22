@@ -24,8 +24,8 @@ public class EnemyCharacter : Character
     public override void BeingDamage(float damage)
     {
         base.BeingDamage(damage);
-        Definition.CharacterDebug(this, " suffered " + damage + ", OUCH!!");
         curStats.curHealth -= damage;
+        Definition.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + curStats.curHealth);
     }
 
     public override CharacterStatsData GetCharacterStats()
