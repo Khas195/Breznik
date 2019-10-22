@@ -5,46 +5,24 @@ using UnityEngine;
 
 public class CharacterAnimatorControl : MonoBehaviour
 {
-    [SerializeField]
-    Rigidbody hostRb;
+    /// <summary>
+    /// The animator of the character.
+    /// </summary>
     [SerializeField]
     Animator animator;
+    /// <summary>
+    /// The rigidbody of the model of the Character.
+    /// </summary>
     [SerializeField]
-    List<AnimationClip> attackingAnims;
-    [SerializeField]
-    bool isAttacking;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    Rigidbody hostRb;
     // Update is called once per frame
     void Update()
     {
-        var curClip = animator.GetCurrentAnimatorClipInfo(0)[0];
-        isAttacking = IsAnAttackingClip(curClip);
         animator.SetFloat("MoveSpeed", hostRb.velocity.magnitude);
-        animator.SetInteger("ChangeInVelY", (int)hostRb.velocity.y);
+        animator.SetFloat("VelocityY", hostRb.velocity.y);
+    }
+    public void PlayAttackAnimation() {
+        animator.SetTrigger("attack");
     }
 
-    private bool IsAnAttackingClip(AnimatorClipInfo curClip)
-    {
-        foreach(var clip in attackingAnims){
-            if (curClip.clip == clip){
-                return true;
-            }
-        } 
-        return false;
-    }
-
-    public void TriggerAttackAnimation()
-    {
-        animator.SetTrigger("Attack");
-    }
-
-    public bool IsAttacking()
-    {
-        return isAttacking;
-    }
 }

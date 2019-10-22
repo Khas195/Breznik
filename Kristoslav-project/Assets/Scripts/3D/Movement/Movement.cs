@@ -9,16 +9,16 @@ using UnityEngine;
  */
 public class Movement : IMovement
 {
+
+    /// <summary>
+    /// The Collider of the character's model;
+    /// </summary>
     [SerializeField]
-    [Tooltip("The RigidBody of the moving object")]
-    /** The rigid body of the host object.!--
-     * Needed to be assigned in the unity editor
-     */
-    Rigidbody targetRigidBody = null;
+    Collider charCollider;
     /**
-     * Decide if the host object should move foward accodring the camera's facing direction.!--
-     * Instead of move forward according to its own facing direction
-     */
+ * Decide if the host object should move foward accodring the camera's facing direction.!--
+ * Instead of move forward according to its own facing direction
+ */
     [SerializeField]
     bool shouldMoveTowardCameraDirection;
     [SerializeField]
@@ -38,6 +38,14 @@ public class Movement : IMovement
      */
     [SerializeField]
     List<Transform> checkGroundsList;
+
+
+    /// <summary>
+    ///  the rigidbody of the character's model.
+    /// </summary>
+    Rigidbody charRigidbody = null;
+
+
     /** cached the forward value in the Move function*/
     int moveForward = 0;
     /** cached the side value in the Move function*/
@@ -46,6 +54,10 @@ public class Movement : IMovement
     bool jumpSignal = false;
     /** Cached transform of the host object */
     Transform targetTransform = null;
+    /// <summary>
+    /// the distance from the middle of the character's collider's center to ground. 
+    /// </summary>
+    float distanceToGround;
     void Start()
     {
         Initalize();
@@ -55,7 +67,16 @@ public class Movement : IMovement
      */
     private void Initalize()
     {
-        targetTransform = targetRigidBody.transform;
+        targetTransform = charRigidbody.transform;
+        distanceToGround = charCollider.bounds.extents.y;
+    }
+    /// <summary>
+    /// Set the rigid body of the character's model.
+    /// </summary>
+    /// <param name="hostRigidBody"> The rigid body of the character's model.</param>
+    public override void SetRigidBody(Rigidbody hostRigidBody)
+    {
+        this.charRigidbody = hostRigidBody;
     }
 
     /**
@@ -103,8 +124,8 @@ public class Movement : IMovement
         var moveDir = forwardDir + sideDir;
         moveDir.y = 0;
         Definition.MovementDebug("Camera Move Direction" + moveDir);
-        var rotation = Quaternion.LookRotation(moveDir);
-        targetRigidBody.rotation = Quaternion.Slerp(targetRigidBody.rotation, rotation, rotateSpeed * Time.deltaTime);
+        var newDir = Vector3.RotateTowards(charRigidbody.transform.forward, moveDir, rotateSpeed * Time.deltaTime, 0.0f);
+        charRigidbody.rotation = Quaternion.LookRotation(newDir);
     }
 
     /**
@@ -130,10 +151,10 @@ public class Movement : IMovement
 
         var moveDirection = forwardDirection + sideDirection;
         Definition.MovementDebug("Movement Direction: " + moveDirection);
-        var velocity = moveDirection * speed + Vector3.up * targetRigidBody.velocity.y;
-        targetRigidBody.velocity = velocity;
+        var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
+        charRigidbody.velocity = velocity;
 
-        Definition.MovementDebug("Movement Velocity after each step: " + targetRigidBody.velocity);
+        Definition.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
     }
 
     private void FixedUpdate()
@@ -163,7 +184,7 @@ public class Movement : IMovement
     private void Jump()
     {
         Debug.Log("Character jump with force of " + data.jumpForce);
-        targetRigidBody.AddForce(Vector3.up * data.jumpForce, ForceMode.Impulse);
+        charRigidbody.AddForce(Vector3.up * data.jumpForce, ForceMode.Impulse);
     }
     /**
      * Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (checkGroundsList)
@@ -173,14 +194,14 @@ public class Movement : IMovement
     {
         foreach (var trans in checkGroundsList)
         {
-            if (Physics.Raycast(trans.position, -Vector3.up, 0.1f))
+            if (Physics.Raycast(trans.position, -Vector3.up, distanceToGround + 0.1f))
             {
                 return true;
             }
         }
         return false;
     }
-    
+
 
 
 }

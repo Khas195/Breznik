@@ -29,4 +29,19 @@ public class Definition
     {
         Debug.Log("Movement Log: " + message);
     }
+
+    public static void CharacterDebug(Character character, string message)
+    {
+        Debug.Log(character +  ": "  + message);
+    }
+
+    public static void GameStateDebug(GameState state, string message)
+    {
+        Debug.Log(state +  ": "  + message);
+    }
+
+    public static void GameMasterDebug(GameMaster gameMaster, string message)
+    {
+        Debug.Log(gameMaster +  ": "  + message);
+    }
 }
