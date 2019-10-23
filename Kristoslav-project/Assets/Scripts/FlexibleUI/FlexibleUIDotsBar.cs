@@ -130,8 +130,8 @@ public class FlexibleUIDotsBar : FlexibleUI
     public void SetFilledAmount(float value)
     {
         var count = value * uIData.staminaDots.maxCount;
-        curCount = Mathf.RoundToInt(count);
-        FillMissing(count);
+        curCount = Mathf.FloorToInt(count);
+        FillMissing(curCount);
     }
 
     private void FillMissing(float count)
