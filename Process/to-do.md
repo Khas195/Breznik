@@ -3,12 +3,26 @@
 * On Wednesday: Release the game
 
 ---
-### Bugs
+### Bugs and Other Changes In Code
 
 _If you found any bugs in the game then add them to this list_
 
-- Wait for it
+---
 
+### 23 October 2019 (After the first play test)
+#### Bugs
+    - Enemy health bar look at the camera instead of the character
+    - When attack, sometimes it doesn’t do damage
+    - When attack, it deals too much damage.
+    - Camera stuck when rotate too much.
+    - Character play run animation when being pushed.
+    - Character collider got stuck to his surroundings.
+    - Character stuck in jumping animation.
+#### Other changes
+    - When moving, rotate toward the move direction not the camera look direct.
+    - Make the dangerous objects look more intimidating
+    - Smaller collider while jumping.
+    - Change stamina to dots instead of precise bar.
 ---
 ### To do
 - ~~Meeting on Thursday, 17 October 2019 at 12:30 am~~. 
