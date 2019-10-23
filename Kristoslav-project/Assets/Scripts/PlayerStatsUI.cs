@@ -17,7 +17,7 @@ public class PlayerStatsUI : MonoBehaviour
     /// The Stamina bar of the character.
     /// </summary>
     [SerializeField]
-    FlexibleUIStatsBar staminaBar;
+    FlexibleUIDotsBar staminaDots;
     /// <summary>
     /// The character stats data of the character
     /// </summary>
@@ -31,11 +31,10 @@ public class PlayerStatsUI : MonoBehaviour
         var targetStaminaValue = data.statsData. curStamina/data.statsData.stamina;
 
         var curHealthValue = healthBar.GetFilledAmount();
-        var curStaminaValue= staminaBar.GetFilledAmount();
 
         curHealthValue  = Mathf.Lerp(curHealthValue, targetHealthValue, 0.1f);
-        curStaminaValue = Mathf.Lerp(curStaminaValue, targetStaminaValue, 0.1f);
+
         healthBar.SetFilledAmount(curHealthValue);
-        staminaBar.SetFilledAmount(curStaminaValue);
+        staminaDots.SetFilledAmount(targetStaminaValue);
     }
 }
