@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class FlexibleUIStatsBar : FlexibleUI
 {
     public enum StatsBarType
@@ -52,16 +50,20 @@ public class FlexibleUIStatsBar : FlexibleUI
 
     public void SetFilledAmount(float value)
     {
-        if (filled) {
+        if (filled)
+        {
             filled.fillAmount = value;
         }
     }
 
     public float GetFilledAmount()
     {
-        if (filled) {
+        if (filled)
+        {
             return filled.fillAmount;
-        } else {
+        }
+        else
+        {
             return 0;
         }
     }
@@ -85,11 +87,11 @@ public class FlexibleUIStatsBar : FlexibleUI
             var filledGameObject = this.transform.Find("Filled");
             if (filledGameObject == null)
             {
-                this.filled= CreateChildImage("Filled");
+                this.filled = CreateChildImage("Filled");
             }
             else
             {
-                this.filled= filledGameObject.GetComponent<Image>();
+                this.filled = filledGameObject.GetComponent<Image>();
             }
         }
         if (border == null)
@@ -97,11 +99,11 @@ public class FlexibleUIStatsBar : FlexibleUI
             var borderGameObject = this.transform.Find("Border");
             if (borderGameObject == null)
             {
-                this.border= CreateChildImage("Border");
+                this.border = CreateChildImage("Border");
             }
             else
             {
-                this.border= borderGameObject.GetComponent<Image>();
+                this.border = borderGameObject.GetComponent<Image>();
             }
         }
 

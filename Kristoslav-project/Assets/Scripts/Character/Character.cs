@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     protected Rigidbody hostRigidBody;
+    
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
     /// If the character does not have a movement behavior, he/she will not be able to move.
@@ -81,7 +82,7 @@ public class Character : MonoBehaviour
             forward = side = 0;
             result = false;
         }
-        movementBehavior.Move(forward, side);
+        movementBehavior.MoveRelativeTo(forward, side, hostRigidBody.transform);
         return result;
     }
     /// <summary>

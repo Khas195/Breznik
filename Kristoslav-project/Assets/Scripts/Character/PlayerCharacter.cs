@@ -13,18 +13,13 @@ public class PlayerCharacter : Character
     [Header("Character Stats Holder")]
     [SerializeField]
     CharacterData characterData;
+    /// <summary>
+    /// The camera that follow the player
+    /// </summary>
+    [SerializeField]
+    protected Camera playerCamera;
 
     [Header("Action costs")]
-    /// <summary>
-    /// The cost of stamina while the character is running.
-    /// </summary>
-    [SerializeField]
-    PlayerActionCost runCost;
-    /// <summary>
-    /// The cost of jumping when the character signal jump
-    /// </summary>
-    [SerializeField]
-    PlayerActionCost jumpCost;
     /// <summary>
     /// The cost of attack when the character play an attack animation. 
     /// </summary>
@@ -90,21 +85,6 @@ public class PlayerCharacter : Character
     }
 
     /// <summary>
-    /// check if the player's character is running. Then drain the stamina of the character.
-    /// </summary>
-    private void UpdateRunningStaminaCost()
-    {
-        var movement = GetMovementBehavior();
-        var movementData = movement.GetMovementData();
-        if (movementData.currentVelocity.magnitude >= movementData.walkSpeed && movement.GetCurrentMoveMode() == Movement.MovementType.Run)
-        {
-            characterData.statsData.curStamina -= runCost.cost * Time.deltaTime;
-            characterData.statsData.curStamina = Mathf.Clamp(characterData.statsData.curStamina, 0, characterData.statsData.stamina);
-            TriggerRegenCooldown();
-        }
-    }
-
-    /// <summary>
     /// Trigger the cool down of regeneration.
     /// </summary>
     private void TriggerRegenCooldown()
@@ -116,22 +96,22 @@ public class PlayerCharacter : Character
 
     public override bool RequestJump()
     {
-        if (base.RequestJump())
-        {
-            characterData.statsData.curStamina -= jumpCost.cost;
-            TriggerRegenCooldown();
-            return true;
-        }
-        return false;
+       return base.RequestJump(); 
     }
     public override bool RequestMove(float forward, float side)
     {
-        UpdateRunningStaminaCost();
         if (changeMoveTypeConditions.IsSatisfied(this) == false)
         {
             this.RequestMovementType(Movement.MovementType.Walk);
         }
-        return base.RequestMove(forward, side);
+        var shouldMove = true;
+        if (moveConditions.IsSatisfied(this) == false) {
+            forward =side = 0;
+            shouldMove = false;
+        }
+        movementBehavior.MoveRelativeTo(forward, side, playerCamera.transform);
+
+        return shouldMove;
     }
 
     public override bool Attack()
@@ -150,7 +130,8 @@ public class PlayerCharacter : Character
         this.characterData.statsData.curHealth -= damage;
         TriggerRegenCooldown();
     }
-    public void OnPlayerAttack() {
+    public void OnPlayerAttack()
+    {
         this.characterData.statsData.curStamina -= attackCost.cost;
         characterData.statsData.curStamina = Mathf.Clamp(characterData.statsData.curStamina, 0, characterData.statsData.stamina);
         TriggerRegenCooldown();

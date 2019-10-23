@@ -26,12 +26,28 @@ public class CharacterAnimatorControl : MonoBehaviour
     [SerializeField]
     int comboCount = 0;
 
+
+    IMovement movement;
+    void Start()
+    {
+        movement = character.GetMovementBehavior();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        animator.SetInteger("ComboCount", comboCount);
-        animator.SetFloat("MoveSpeed", hostRb.velocity.magnitude);
+        var moveSpeed = hostRb.velocity.magnitude;
+        moveSpeed = Mathf.Round(moveSpeed);
+        if (moveSpeed > 0) {
+            if (movement.HadMoveCommand() == false) {
+                moveSpeed = 0;
+            }
+        } 
         animator.SetFloat("VelocityY", hostRb.velocity.y);
+
+        animator.SetFloat("MoveSpeed", moveSpeed);
+
+        animator.SetInteger("ComboCount", comboCount);
     }
     public void PlayAttackAnimation()
     {

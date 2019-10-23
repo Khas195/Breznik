@@ -5,4 +5,6 @@ public class CharacterData : ScriptableObject {
     public CharacterStatsData statsData;
     public MovementData movementData;
     public Vector3 position;
+    
+    public Vector3 cameraPos;
 }
