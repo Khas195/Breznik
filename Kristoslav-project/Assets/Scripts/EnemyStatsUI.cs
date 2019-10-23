@@ -16,6 +16,12 @@ public class EnemyStatsUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateHealthbar();
+        RotateTowardCamera();
+    }
+
+    private void UpdateHealthbar()
+    {
         var statsData = character.GetCharacterStats();
         var targetHealthValue = statsData.curHealth / statsData.health;
 
@@ -23,7 +29,14 @@ public class EnemyStatsUI : MonoBehaviour
 
         curHealthValue = Mathf.Lerp(curHealthValue, targetHealthValue, 0.1f);
         healthBar.SetFilledAmount(curHealthValue);
-        canvas.transform.rotation = Quaternion.LookRotation((playerData.position - character.transform.position).normalized);
+    }
 
+    private void RotateTowardCamera()
+    {
+        var camPos = playerData.cameraPos;
+        camPos.y = 0;
+        var charPos = character.transform.position;
+        charPos.y = 0;
+        canvas.transform.rotation = Quaternion.LookRotation((camPos - charPos).normalized);
     }
 }
