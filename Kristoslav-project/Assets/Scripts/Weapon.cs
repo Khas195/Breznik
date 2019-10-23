@@ -8,17 +8,19 @@ public class Weapon : MonoBehaviour
     float damage;
     [SerializeField]
     GameObject wielder;
-
-
-    GameObject currentVictim = null;
+    [SerializeField]
+    PhysicCallBack killBox;
+    [SerializeField]
     Character wielderChar;
     void Start()
     {
         wielderChar = wielder.GetComponentInChildren<Character>();
-
+        killBox.triggerEnter.AddListener(OnKillBoxEnter);
     }
-
-    void OnTriggerEnter(Collider other)
+    public void SwitchKillBox(bool isOn) {
+        killBox.gameObject.SetActive(isOn);
+    }
+    public void OnKillBoxEnter(Collider other)
     {
         Definition.CharacterDebug(wielderChar, "Character's weapon touched something");
         var otherObject = other.gameObject;
@@ -37,5 +39,4 @@ public class Weapon : MonoBehaviour
             }
         }
     }
-    
 }
