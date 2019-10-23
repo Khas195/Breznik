@@ -10,7 +10,7 @@ public class FlexibleUIStatsBar : FlexibleUI
         StaminaBar
     }
     [SerializeField]
-    StatsBarType type;
+    protected StatsBarType type;
 
     Image border;
     Image background;
@@ -28,11 +28,6 @@ public class FlexibleUIStatsBar : FlexibleUI
                 background.sprite = uIData.healthBar.backgroundSprite;
                 filled.sprite = uIData.healthBar.filledSprite;
                 break;
-            case StatsBarType.StaminaBar:
-                border.sprite = uIData.staminaBar.borderSprite;
-                background.sprite = uIData.staminaBar.backgroundSprite;
-                filled.sprite = uIData.staminaBar.filledSprite;
-                break;
             default:
                 border.sprite = uIData.healthBar.borderSprite;
                 background.sprite = uIData.healthBar.backgroundSprite;
@@ -48,7 +43,7 @@ public class FlexibleUIStatsBar : FlexibleUI
         filled.fillMethod = Image.FillMethod.Horizontal;
     }
 
-    public void SetFilledAmount(float value)
+    public virtual void SetFilledAmount(float value)
     {
         if (filled)
         {
@@ -56,7 +51,7 @@ public class FlexibleUIStatsBar : FlexibleUI
         }
     }
 
-    public float GetFilledAmount()
+    public virtual float GetFilledAmount()
     {
         if (filled)
         {
@@ -68,7 +63,7 @@ public class FlexibleUIStatsBar : FlexibleUI
         }
     }
 
-    private void AddMissingComponent()
+    protected virtual void AddMissingComponent()
     {
         if (background == null)
         {

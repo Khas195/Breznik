@@ -119,7 +119,7 @@ public class Movement : IMovement
         var sideDir = relativeTo.right * side;
         var moveDir = forwardDir + sideDir;
         moveDir.y = 0;
-        Definition.MovementDebug("Camera Move Direction" + moveDir);
+        Definition.MovementDebug("Move Direction" + moveDir);
         var newDir = Vector3.RotateTowards(charRigidbody.transform.forward, moveDir, rotateSpeed * Time.deltaTime, 0.0f);
         charRigidbody.rotation = Quaternion.LookRotation(newDir);
     }
@@ -149,7 +149,6 @@ public class Movement : IMovement
         Definition.MovementDebug("Movement Direction: " + moveDirection);
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
-
         Definition.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
     }
     private void Update()
