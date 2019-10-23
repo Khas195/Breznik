@@ -4,28 +4,41 @@ using UnityEngine;
  * The IMovement interface acts as a generalization of all type of movements in the game.!--
  * It is used by the Player controller to move the target gameobject
  */
-public abstract class IMovement : MonoBehaviour {
+public class IMovement : MonoBehaviour
+{
 
     /**
      * Different types of movement mode in the game
      */
     public enum MovementType
     {
-        Walk, 
-        Run 
+        Walk,
+        Run
     }
     /** The container for all movement related data */
     protected MovementData data = null;
     /** The current movement mode */
     protected MovementType moveMode = MovementType.Walk;
     /** All movements actions should be handle in this function*/
-    public abstract void Move (float forward, float side);
+    public virtual void Move(float forward, float side) { return; }
+    public virtual void MoveRelativeTo(float forward, float side, Transform relativeTo)
+    {
+        return;
+    }
     /** Signaled that the jump command had been called */
-    public abstract void SignalJump();
+    public virtual void SignalJump()
+    {
+        return;
+    }
 
     public MovementType GetCurrentMoveMode()
     {
         return moveMode;
+    }
+
+    public virtual bool HadMoveCommand()
+    {
+        return true;
     }
 
     /// <summary>
@@ -59,7 +72,7 @@ public abstract class IMovement : MonoBehaviour {
         switch (moveMode)
         {
             case MovementType.Run:
-                moveSpeed = data.runSpeed ;
+                moveSpeed = data.runSpeed;
                 break;
             case MovementType.Walk:
                 moveSpeed = data.walkSpeed;
@@ -71,10 +84,12 @@ public abstract class IMovement : MonoBehaviour {
 
         return moveSpeed;
     }
-    public virtual bool IsTouchingGround() {
+    public virtual bool IsTouchingGround()
+    {
         return true;
     }
-    public virtual MovementData GetMovementData() {
+    public virtual MovementData GetMovementData()
+    {
         return this.data;
     }
 }
