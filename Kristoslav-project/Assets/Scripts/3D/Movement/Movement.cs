@@ -15,24 +15,20 @@ public class Movement : IMovement
     /// </summary>
     [SerializeField]
     Collider charCollider;
+    [SerializeField]
+    Collider charAirbornedCollider;
     /**
  * Decide if the host object should move foward accodring the camera's facing direction.!--
  * Instead of move forward according to its own facing direction
  */
     [SerializeField]
-    bool shouldMoveTowardCameraDirection;
+    bool rotateTowardMovingDir;
     [SerializeField]
     /**
      * The rotate speed of the host object toward the camera's facing direction.!--
      * Not needed if shouldMoveTowardCameraDirection is false 
      */
     float rotateSpeed;
-    [SerializeField]
-    /**
-     * The camera entity that the host entity is facing toward.!--
-     * Needed to be assigned in the unity editor if shouldMoveTowardCameraDirection is true
-     */
-    GameObject cameraYawPivot;
     /**
      * The list of points which is needed to know whether the host object is airborned or not
      */
@@ -85,9 +81,9 @@ public class Movement : IMovement
      * \param fordward is how much the host game object should move forward and backward
      * \param side is how much the host game object should move sideway
      */
-    public override void Move(float forward, float side)
+    public override void MoveRelativeTo(float forward, float side, Transform relativeTo)
     {
-        if (shouldMoveTowardCameraDirection)
+        if (rotateTowardMovingDir)
         {
             if (forward != 0 || side != 0)
             {
@@ -96,7 +92,7 @@ public class Movement : IMovement
 
                 moveForward = Mathf.Abs(moveForward);
 
-                RotateTowardCameraDirection(forward, side);
+                RotateTowardMovingDirection(forward, side, relativeTo);
             }
             else
             {
@@ -113,17 +109,17 @@ public class Movement : IMovement
     }
 
     /**
-     * Rotate the host game object toward the camera entity's facing direction
+     * Rotate the host game object toward the forward direction of the movement 
      * \param fordward is how much the host game object should move forward and backward
      * \param side is how much the host game object should move sideway
      */
-    private void RotateTowardCameraDirection(float forward, float side)
+    private void RotateTowardMovingDirection(float forward, float side, Transform relativeTo)
     {
-        var forwardDir = cameraYawPivot.transform.forward * forward;
-        var sideDir = cameraYawPivot.transform.right * side;
+        var forwardDir = relativeTo.forward * forward;
+        var sideDir = relativeTo.right * side;
         var moveDir = forwardDir + sideDir;
         moveDir.y = 0;
-        Definition.MovementDebug("Camera Move Direction" + moveDir);
+        Definition.MovementDebug("Move Direction" + moveDir);
         var newDir = Vector3.RotateTowards(charRigidbody.transform.forward, moveDir, rotateSpeed * Time.deltaTime, 0.0f);
         charRigidbody.rotation = Quaternion.LookRotation(newDir);
     }
@@ -153,12 +149,16 @@ public class Movement : IMovement
         Definition.MovementDebug("Movement Direction: " + moveDirection);
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
-
         Definition.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
     }
     private void Update()
     {
         this.data.currentVelocity = charRigidbody.velocity;
+        if (charAirbornedCollider) {
+            var isAscending = charRigidbody.velocity.y > 0f;
+            charCollider.enabled = !isAscending;
+            charAirbornedCollider.enabled = isAscending;
+        }
     }
     private void FixedUpdate()
     {
@@ -204,7 +204,10 @@ public class Movement : IMovement
         }
         return false;
     }
-
+    public override bool HadMoveCommand()
+    {
+        return moveForward != 0 || moveSide != 0;
+    }
 
 
 }

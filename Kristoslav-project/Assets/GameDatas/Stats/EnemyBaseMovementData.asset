@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7044c6709323443a74a241c047c306, type: 3}
-  m_Name: CanMove
+  m_Script: {fileID: 11500000, guid: 6ad3fcf248deff545ac767d533a745c1, type: 3}
+  m_Name: EnemyBaseMovementData
   m_EditorClassIdentifier: 
-  conditions:
-  - {fileID: 11400000, guid: ae2045755840de94e97a48c3bb4d8d3b, type: 2}
-  - {fileID: 11400000, guid: ec8ff62d3eebfa34d9f3daae9ac643d9, type: 2}
-  needAllToSastisfied: 1
+  walkSpeed: 7
+  runSpeed: 7
+  jumpForce: 5
+  currentVelocity: {x: 0, y: -0.00000059604645, z: 6.9935536e-23}
