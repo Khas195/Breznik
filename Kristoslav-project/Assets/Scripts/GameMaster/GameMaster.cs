@@ -16,6 +16,8 @@ public class GameMaster : MonoBehaviour
     /// </summary>
     StateStack gameStateStack = new StateStack();
 
+
+
     /// <summary>
     /// The possible game states in a certain scene.
     /// The first possible state will start as the base state.
@@ -23,6 +25,12 @@ public class GameMaster : MonoBehaviour
     [Tooltip("Use the first Game State as default state or startup state")]
     [SerializeField]
     List<GameState> possibleGameStates = new List<GameState>();
+
+
+
+    [SerializeField]
+    Text canInteractText;
+
     /// <summary>
     /// The name of the scene that is going to be loaded when moving into the LoadingScene.
     /// </summary>
@@ -31,7 +39,6 @@ public class GameMaster : MonoBehaviour
     /// The Single instant of the game master.
     /// </summary>
     static GameMaster instance;
-
     /// <summary>
     /// Return the single instance of the game master.
     /// if the instance is null then search out for the game object with the tag "GameMaster" to get that instance. 
@@ -44,6 +51,11 @@ public class GameMaster : MonoBehaviour
             instance = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         }
         return instance;
+    }
+
+    public GameState GetCurrentGameState()
+    {
+        return (GameState)gameStateStack.GetPeek();
     }
 
     void Awake()
@@ -59,32 +71,6 @@ public class GameMaster : MonoBehaviour
         FindAllPossibleStates();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    void Update()
-    {
-        HandlePausedInput();
-    }
-
-    /// <summary>
-    /// Handle inputs for transition from InGame State and  Paused State.
-    /// </summary>
-    private void HandlePausedInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            var currentState = (GameState)gameStateStack.GetPeek();
-            if (currentState != null)
-            {
-                if (currentState.GetState() == GameState.States.InGame)
-                {
-                    RequestGameState(GameState.States.GamePaused);
-                }
-                else if (currentState.GetState() == GameState.States.GamePaused)
-                {
-                    RequestGameState(GameState.States.InGame);
-                }
-            }
-        }
-    }
 
     /// <summary>
     /// Find all the game object with the tag "GameMaster".
@@ -92,9 +78,13 @@ public class GameMaster : MonoBehaviour
     /// </summary>
     private void PreventMoreThanOneGameMaster()
     {
-        if (GameObject.FindGameObjectsWithTag("GameMaster").Length > 1)
+        if (GameMaster.instance != null)
         {
             Destroy(this.transform.parent.gameObject);
+        }
+        else
+        {
+            GameMaster.instance = this;
         }
     }
     /// <summary>
@@ -188,16 +178,61 @@ public class GameMaster : MonoBehaviour
     /// If the requested state is valid then called on Pop on all states in stack.
     /// </summary>
     /// <param name="requestState">The requested state.</param>
-    public void RequestGameState(GameState.States requestState)
+    public bool RequestGameState(GameState.States requestState)
     {
         var result = LookupGameState(requestState);
         if (result == null)
         {
             Definition.GameMasterDebug(this, "trying to request a state that does not exist.");
-            return;
+            return false;
         }
-        gameStateStack.EmptyStack();
-        gameStateStack.Push(result);
+        var currentState = (GameState)gameStateStack.GetPeek();
+        if (currentState == null)
+        {
+            gameStateStack.EmptyStack();
+            gameStateStack.Push(result);
+            return true;
+        }
+        else if (currentState.GetState() == requestState)
+        {
+            return false;
+        }
+        else
+        {
+            return TryToTransitToState(requestState, result, currentState);
+        }
+    }
+
+    private bool TryToTransitToState(GameState.States requestState, GameState result, GameState currentState)
+    {
+        var currentStateType = currentState.GetState();
+        switch (requestState)
+        {
+            case GameState.States.InDiagloues:
+                if (currentStateType == GameState.States.InGame)
+                {
+                    gameStateStack.Push(result);
+                    return true;
+                }
+                break;
+            case GameState.States.InGame:
+                if (currentStateType == GameState.States.InDiagloues)
+                {
+                    gameStateStack.Pop();
+                    return true;
+                }
+                else
+                {
+                    gameStateStack.EmptyStack();
+                    gameStateStack.Push(result);
+                }
+                break;
+            default:
+                gameStateStack.EmptyStack();
+                gameStateStack.Push(result);
+                return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -241,4 +276,5 @@ public class GameMaster : MonoBehaviour
     {
         RequestLoadScene("ArenaScene");
     }
+    
 }
