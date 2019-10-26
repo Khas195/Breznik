@@ -60,7 +60,11 @@ public class StateStack
 
     public State GetPeek()
     {
-        return stack.Peek();
+        if (stack.Count > 0) {
+            return stack.Peek();
+        } else {
+            return null;
+        }
     }
 
     public bool Contains(State playingState)

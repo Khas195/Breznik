@@ -6,12 +6,17 @@ public class Definition
 {
     public static void StateStackDebug(string message)
     {
-        Debug.Log("State Stack: " + message);
+        Debug.Log("State Stack Log: " + message);
     }
 
     public static void InteractableDebug(string message)
     {
-        Debug.Log("Interactable Object: " + message);
+        Debug.Log("Interactable Object Log: " + message);
+    }
+
+    public static void NPCDebug(string message)
+    {
+        Debug.Log("NPC Log: " + message);
     }
 
     public static void InitalizeErrors(string message)
@@ -32,7 +37,7 @@ public class Definition
 
     public static void GameEventDebug(string message)
     {
-        Debug.Log("Game Event: " + message);
+        Debug.Log("Game Event Log: " + message);
     }
 
     public static void CharacterDebug(Character character, string message)
