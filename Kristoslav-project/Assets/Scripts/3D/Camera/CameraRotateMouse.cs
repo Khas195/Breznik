@@ -15,27 +15,28 @@ public class CameraRotateMouse : MonoBehaviour
     [SerializeField]
     Transform yawnPivot = null;
     float curPitch;
-        // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
-    {    }
+    { }
 
     // Update is called once per frame
     void Update()
     {
         var yawn = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        yawnPivot.Rotate(Vector3.up * yawn );
+        yawnPivot.Rotate(Vector3.up * yawn);
         var pitch = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-        curPitch += pitch;
-        if (curPitch > headUpperLimit)
+        pitchPivot.Rotate(Vector3.left * pitch);
+        curPitch = pitchPivot.localEulerAngles.x;
+        if (curPitch < 180 && curPitch > headUpperLimit)
         {
             curPitch = headUpperLimit;
-            pitch = 0;
-        } else if (curPitch < headLowerLimit)  {
-            curPitch = headLowerLimit;
-            pitch = 0;
         }
-        pitchPivot.Rotate(Vector3.left* pitch );
+        else if (curPitch >= 180 && curPitch < 360 + headLowerLimit)
+        {
+            curPitch = headLowerLimit;
+        }
+        pitchPivot.transform.localRotation = Quaternion.Euler(curPitch, 0, 0);
+        Logger.CameraDebug("Local euler angles of pitch pivot: " + pitchPivot.localEulerAngles);
+    }
 
-    }  
-    
 }

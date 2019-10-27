@@ -9,10 +9,11 @@ using UnityEngine.UI;
  */
 public class PlayerController : MonoBehaviour
 {
-
     [SerializeField]
     /** \brief Reference to the character*/
     Character character = null;
+    [SerializeField]
+    UnityEvent interact = new UnityEvent();
 
     void Update()
     {
@@ -30,7 +31,6 @@ public class PlayerController : MonoBehaviour
 
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
-
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             character.RequestMovementType(IMovement.MovementType.Run);
@@ -43,8 +43,16 @@ public class PlayerController : MonoBehaviour
         {
             character.RequestJump();
         }
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             character.Attack();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            var gameState = GameMaster.GetInstance().GetCurrentGameState();
+            if (gameState != null && gameState.GetState() == GameState.States.InGame) {
+                interact.Invoke();
+            }
         }
         character.RequestMove(vertical, horizontal);
 

@@ -7,11 +7,13 @@ public class CameraFollow : MonoBehaviour
 {
     [SerializeField]
     Transform host = null;
+
     [SerializeField]
     List<Transform> encapsolatedTarget = new List<Transform>();
     [SerializeField]
     Transform character = null;
-
+    [SerializeField]
+    CharacterData playerData = null;
     [SerializeField]
     [Tooltip("Each frame the camera move x percentage closer to the target")]
     float followPercentage = 0.02f;
@@ -22,13 +24,20 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     bool followZ = false;
 
-
+    Camera mCamera;
     // Start is called before the first frame update
     void Start()
     {
         encapsolatedTarget.Add(character);
+        mCamera = host.GetComponentInChildren<Camera>();
     }
 
+    private void Update()
+    {
+        if (playerData != null) {
+            playerData.cameraPos =  mCamera.transform.position;
+        }
+    }
     void FixedUpdate()
     {
         var targetPos = GetCenterPosition(encapsolatedTarget);
@@ -79,7 +88,7 @@ public class CameraFollow : MonoBehaviour
         {
             bounds.Encapsulate(target.position);
         }
-        Definition.CameraDebug("Camera Center position: " + bounds.center);
+        Logger.CameraDebug("Camera Center position: " + bounds.center);
         return bounds.center;
     }
 

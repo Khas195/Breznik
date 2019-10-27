@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MonologueManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject textCanvas;
+    GameObject monologueUI;
     [SerializeField]
     Text monologueText;
 
@@ -18,9 +18,30 @@ public class MonologueManager : MonoBehaviour
     float curSentenceTime;
     int curSentenceIndex = 0;
     bool isPlaying;
-    // Start is called before the first frame update
-    void Start()
+
+    static MonologueManager instance;
+    public static MonologueManager GetInstance() {
+        return instance;
+    }
+    void Awake()
     {
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void Skip()
+    {
+        if (IsMonologueFinished()) {
+            Reset();
+            if (IsMonologueInQueue()) {
+                PlayNext();
+            }
+        } else {
+            NextSentence();
+        }
     }
 
     // Update is called once per frame
@@ -48,9 +69,20 @@ public class MonologueManager : MonoBehaviour
         }
         else
         {
-            textCanvas.SetActive(false);
+            monologueUI.SetActive(false);
         }
     }
+
+    public void SetTextUI(Text textUI)
+    {
+        this.monologueText = textUI;
+    }
+
+    public void SetMonologueUI(GameObject ui)
+    {
+        this.monologueUI = ui;
+    }
+
     private void PlayNext()
     {
         Play(monologueList.Dequeue());
@@ -84,7 +116,11 @@ public class MonologueManager : MonoBehaviour
         curSentenceIndex = 0;
         curSentenceTime = 0;
         monologueText.text = "";
-        textCanvas.SetActive(false);
+        monologueUI.SetActive(false);
+    }
+    public void HardReset() {
+        Reset();
+        monologueList.Clear();
     }
     public void QueueMonologue(MonologueData newMonologue)
     {
@@ -100,7 +136,7 @@ public class MonologueManager : MonoBehaviour
         isPlaying = true;
         curSentenceTime = monologue.timeBetweenEachSentence;
         curData = monologue;
-        textCanvas.SetActive(true);
+        monologueUI.SetActive(true);
     }
     public void Play(string sentence)
     {
@@ -111,7 +147,7 @@ public class MonologueManager : MonoBehaviour
         isPlaying = true;
         curSentenceTime = monologue.timeBetweenEachSentence;
         curData = monologue;
-        textCanvas.SetActive(true);
+        monologueUI.SetActive(true);
     }
     public bool IsPlaying()
     {

@@ -10,24 +10,61 @@ using UnityEngine.Events;
 /// </summary>
 public class Character : MonoBehaviour
 {
+    [Header("Requirements")]
     /// <summary>
     /// The RigidBody of the Character's model. <br/>
     /// Need to be set in Unity Editor.
     /// </summary>
     [SerializeField]
-    Rigidbody hostRigidBody;
-
+    protected Rigidbody hostRigidBody;
+    
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
     /// If the character does not have a movement behavior, he/she will not be able to move.
     /// </summary>
     [SerializeField]
-    IMovement movementBehavior;
+    protected IMovement movementBehavior;
 
+
+    /// <summary>
+    /// This is event is called when an attack is successfully trigger.
+    /// </summary>
     [SerializeField]
-    UnityEvent onCharacterAttack;
+    protected UnityEvent onCharacterAttack;
+    /// <summary>
+    /// Reference to the animator control.
+    /// </summary>
+    [SerializeField]
+    protected CharacterAnimatorControl animatorControl;
 
-    void Awake()
+    [Header("Character conditions check for actions")]
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    /// jumpConditions check whether it is possible to jump.
+    /// </summary>
+    [SerializeField]
+    protected ConditionsChecker jumpConditions;
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    /// moveConditions check whether it is possible to move
+    /// </summary>
+    [SerializeField]
+    protected ConditionsChecker moveConditions;
+
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    ///  attackConditions check wheter the character can attack.
+    /// </summary>
+    [SerializeField]
+    protected ConditionsChecker attackConditions;
+
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    /// changeMoveTypeConditions check whether it is possible to change the current move mode. 
+    /// </summary>
+    [SerializeField]
+    protected ConditionsChecker changeMoveTypeConditions;
+    public virtual void Awake()
     {
         movementBehavior.SetRigidBody(hostRigidBody);
     }
@@ -37,48 +74,40 @@ public class Character : MonoBehaviour
     /// </summary>
     /// <param name="forward"> fordward is how much the host game object should move forward and backward </param>
     /// <param name="side"> side is how much the host game object should move sideway </param>
-    /// <returns> 
-    /// True: if successfully called the move function. <br/>
-    /// False: if moveBehavior is null <br/>
-    /// </returns>
-    public bool RequestMove(float forward, float side)
+    public virtual bool RequestMove(float forward, float side)
     {
-        if (movementBehavior == null) return false;
-
-        movementBehavior.Move(forward, side);
-        return true;
+        var result = true;
+        if (moveConditions.IsSatisfied(this) == false)
+        {
+            forward = side = 0;
+            result = false;
+        }
+        movementBehavior.MoveRelativeTo(forward, side, hostRigidBody.transform);
+        return result;
     }
     /// <summary>
     /// This function invoke an event whenever the character is signal to attack
     /// It returns true if the event is successfully called and vice versa.
     /// </summary>
     /// <returns></returns>
-    public bool Attack()
+    public virtual bool Attack()
     {
-        Definition.CharacterDebug(this, "try to attack");
-        if (movementBehavior.IsTouchingGround() == false)
+        if (attackConditions.IsSatisfied(this) == false)
         {
-            Definition.CharacterDebug(this, "attack failed, character is in the air");
             return false;
         }
-        Definition.CharacterDebug(this, "attack triggred successful");
         onCharacterAttack.Invoke();
         return true;
     }
-
     /// <summary>
     /// This function ask the moveBehavior of the character to signal the jump function in the next fixed update;.
     /// </summary>
     /// <returns>
-    /// True: if successfully called the SignalJump function. <br />
-    /// False: <br/>
-    ///   - if the model is not touching the ground
-    ///   - If the movementBehaviro is null </returns>
-    public bool RequestJump()
+    /// True: if successfully called the SignalJump function and vice versa <br />
+    /// </returns>
+    public virtual bool RequestJump()
     {
-        if (movementBehavior == null) return false;
-
-        if (movementBehavior.IsTouchingGround())
+        if (jumpConditions.IsSatisfied(this))
         {
             movementBehavior.SignalJump();
             return true;
@@ -93,14 +122,48 @@ public class Character : MonoBehaviour
     /// True: if successfully set the movement mode of the move behavior. <br/>
     /// False: if movementBehavior is null.
     /// </returns>
-    public bool RequestMovementType(Movement.MovementType moveType)
+    public virtual bool RequestMovementType(Movement.MovementType moveType)
     {
-        if (movementBehavior != null)
+        if (changeMoveTypeConditions.IsSatisfied(this))
         {
             movementBehavior.SetMovementMode(moveType);
             return true;
         }
+        movementBehavior.SetMovementMode(Movement.MovementType.Walk);
         return false;
+    }
+    /// <summary>
+    /// Get the movement behavior of the character.
+    /// </summary>
+    /// <returns>The movement behavior of the character. Can be null</returns>
+    public IMovement GetMovementBehavior()
+    {
+        return movementBehavior;
+    }
+
+    /// <summary>
+    /// Get the character animator control.
+    /// </summary>
+    /// <returns>The animator control of the character. Can be null</returns>
+    public CharacterAnimatorControl GetCharacterAnimator()
+    {
+        return animatorControl;
+    }
+    /// <summary>
+    /// Get the character stats data of the character.
+    /// </summary>
+    /// <returns> The character stats of the character. Can be null</returns>
+    public virtual CharacterStatsData GetCharacterStats()
+    {
+        return null;
+    }
+    /// <summary>
+    /// Is called if the character are to be damaged.
+    /// </summary>
+    /// <param name="damage"> the damage value</param>
+    public virtual void BeingDamage(float damage)
+    {
+        return;
     }
 }
 
