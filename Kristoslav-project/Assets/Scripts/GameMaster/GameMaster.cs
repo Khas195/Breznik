@@ -130,7 +130,7 @@ public class GameMaster : MonoBehaviour
         var currentState = (GameState)gameStateStack.GetPeek();
         if (currentState == null || currentState.GetState() != GameState.States.Loading)
         {
-            Definition.GameMasterDebug(this, " tried to load a scene while game master is not in loading state");
+            Logger.GameMasterDebug(this, " tried to load a scene while game master is not in loading state");
             return;
         }
         StartCoroutine(LoadAsyn(slider, loadingText));
@@ -183,7 +183,7 @@ public class GameMaster : MonoBehaviour
         var result = LookupGameState(requestState);
         if (result == null)
         {
-            Definition.GameMasterDebug(this, "trying to request a state that does not exist.");
+            Logger.GameMasterDebug(this, "trying to request a state that does not exist.");
             return false;
         }
         var currentState = (GameState)gameStateStack.GetPeek();

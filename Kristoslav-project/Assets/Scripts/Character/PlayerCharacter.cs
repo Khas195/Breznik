@@ -12,19 +12,19 @@ public class PlayerCharacter : Character
     /// </summary>
     [Header("Character Stats Holder")]
     [SerializeField]
-    CharacterData characterData;
+    CharacterData characterData = null;
     /// <summary>
     /// The camera that follow the player
     /// </summary>
     [SerializeField]
-    protected Camera playerCamera;
+    protected Camera playerCamera = null;
 
     [Header("Action costs")]
     /// <summary>
     /// The cost of attack when the character play an attack animation. 
     /// </summary>
     [SerializeField]
-    PlayerActionCost attackCost;
+    PlayerActionCost attackCost = null;
 
     /// <summary>
     /// Whether the character should regen health and stamina or not.
@@ -33,7 +33,7 @@ public class PlayerCharacter : Character
     /// <summary>
     /// The cooldown timer for regening after draining health or stamina.
     /// </summary>
-    Timer regenCoolDownTimer;
+    Timer regenCoolDownTimer = null;
     public override void Awake()
     {
         movementBehavior.SetMovementData(characterData.movementData);

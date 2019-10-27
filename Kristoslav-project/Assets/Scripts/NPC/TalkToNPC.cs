@@ -13,7 +13,8 @@ public class TalkToNPC : MonoBehaviour
         if (NPCinteract)
         {
             NPCinteract.Defocus(this.transform.parent.gameObject);
-            Definition.NPCDebug(other.transform.parent + " leave interacting range");
+            Logger.NPCDebug(other.transform.parent + " leave interacting range");
+            
             currentNPC = null;
         }
     }
@@ -24,16 +25,16 @@ public class TalkToNPC : MonoBehaviour
         if (NPCinteract)
         {
             NPCinteract.Focus(this.transform.parent.gameObject);
-            Definition.NPCDebug(this.transform.parent + " found an NPC");
+            Logger.NPCDebug(this.transform.parent + " found an NPC");
             currentNPC = NPCinteract;
         }
     }
     public void Talk() {
         if (currentNPC) {
-            Definition.NPCDebug("Initiate conversation with " + currentNPC.GetName());
+            Logger.NPCDebug("Initiate conversation with " + currentNPC.GetName());
             currentNPC.Interact(this.transform.parent.gameObject);
         } else {
-            Definition.NPCDebug("No one to talk to");
+            Logger.NPCDebug("No one to talk to");
         }
     }
     // Update is called once per frame

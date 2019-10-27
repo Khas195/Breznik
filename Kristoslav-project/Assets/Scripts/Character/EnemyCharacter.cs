@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyCharacter : Character
 {
     [SerializeField]
-    CharacterData enemyBaseStatsTemplate;
+    CharacterData enemyBaseStatsTemplate = null;
 
     [SerializeField]
     CharacterStatsData curStats;
@@ -25,7 +25,7 @@ public class EnemyCharacter : Character
     {
         base.BeingDamage(damage);
         curStats.curHealth -= damage;
-        Definition.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + curStats.curHealth);
+        Logger.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + curStats.curHealth);
     }
 
     public override CharacterStatsData GetCharacterStats()

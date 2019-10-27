@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageOnTouch : MonoBehaviour
 {
    [SerializeField] 
-   float damage;
+   float damage = 1;
     void OnCollisionEnter(Collision collisionInfo)
     {
         var character = collisionInfo.gameObject.GetComponentInChildren<Character>();

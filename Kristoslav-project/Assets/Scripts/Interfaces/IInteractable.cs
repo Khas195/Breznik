@@ -19,7 +19,7 @@ public class IInteractable : MonoBehaviour
     }
     public virtual void Focus(GameObject interacter)
     {
-        Definition.InteractableDebug(interacter.name + " try to focus " + this.name);
+        Logger.InteractableDebug(interacter.name + " try to focus " + this.name);
         isFocus = true;
         focusChanged.Invoke(this);
     }
@@ -31,7 +31,7 @@ public class IInteractable : MonoBehaviour
 
     public virtual bool Interact(GameObject interacter)
     {
-        Definition.InteractableDebug(interacter.name + " try to interact with " + this.name);
+        Logger.InteractableDebug(interacter.name + " try to interact with " + this.name);
         return isFocus;
     }
 
