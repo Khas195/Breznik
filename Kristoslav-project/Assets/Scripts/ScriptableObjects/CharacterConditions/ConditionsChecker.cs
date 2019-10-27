@@ -5,9 +5,9 @@ using UnityEngine;
 public class ConditionsChecker : ScriptableObject
 {
     [SerializeField]
-    List<CharacterBehaviorCondition> conditions;
+    List<CharacterBehaviorCondition> conditions = new List<CharacterBehaviorCondition>();
     [SerializeField]
-    bool needAllToSastisfied;
+    bool needAllToSastisfied = false;
 
     public bool IsSatisfied(Character character)
     {

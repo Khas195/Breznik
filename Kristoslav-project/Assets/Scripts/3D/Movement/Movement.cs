@@ -14,26 +14,26 @@ public class Movement : IMovement
     /// The Collider of the character's model;
     /// </summary>
     [SerializeField]
-    Collider charCollider;
+    Collider charCollider = null;
     [SerializeField]
-    Collider charAirbornedCollider;
+    Collider charAirbornedCollider = null;
     /**
  * Decide if the host object should move foward accodring the camera's facing direction.!--
  * Instead of move forward according to its own facing direction
  */
     [SerializeField]
-    bool rotateTowardMovingDir;
+    bool rotateTowardMovingDir = false;
     [SerializeField]
     /**
      * The rotate speed of the host object toward the camera's facing direction.!--
      * Not needed if shouldMoveTowardCameraDirection is false 
      */
-    float rotateSpeed;
+    float rotateSpeed = 5f;
     /**
      * The list of points which is needed to know whether the host object is airborned or not
      */
     [SerializeField]
-    List<Transform> checkGroundsList;
+    List<Transform> checkGroundsList = new List<Transform>();
 
 
     /// <summary>
@@ -53,7 +53,7 @@ public class Movement : IMovement
     /// <summary>
     /// the distance from the middle of the character's collider's center to ground. 
     /// </summary>
-    float distanceToGround;
+    float distanceToGround = 0.1f;
     void Start()
     {
         Initalize();
@@ -105,7 +105,7 @@ public class Movement : IMovement
             moveForward = (int)forward;
             moveSide = (int)side;
         }
-        Definition.MovementDebug("Movement(forward, side): " + moveForward + ", " + moveSide);
+        Logger.MovementDebug("Movement(forward, side): " + moveForward + ", " + moveSide);
     }
 
     /**
@@ -119,7 +119,7 @@ public class Movement : IMovement
         var sideDir = relativeTo.right * side;
         var moveDir = forwardDir + sideDir;
         moveDir.y = 0;
-        Definition.MovementDebug("Move Direction" + moveDir);
+        Logger.MovementDebug("Move Direction" + moveDir);
         var newDir = Vector3.RotateTowards(charRigidbody.transform.forward, moveDir, rotateSpeed * Time.deltaTime, 0.0f);
         charRigidbody.rotation = Quaternion.LookRotation(newDir);
     }
@@ -146,10 +146,10 @@ public class Movement : IMovement
         var sideDirection = targetTransform.right * side;
 
         var moveDirection = forwardDirection + sideDirection;
-        Definition.MovementDebug("Movement Direction: " + moveDirection);
+        Logger.MovementDebug("Movement Direction: " + moveDirection);
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
-        Definition.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
+        Logger.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
     }
     private void Update()
     {

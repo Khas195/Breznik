@@ -11,12 +11,12 @@ public class GameEventListener : MonoBehaviour
     /// The Game event.
     /// </summary>
     [SerializeField]
-    GameEvent Event;
+    GameEvent Event = null;
     /// <summary>
     /// The reponse if the event is raised
     /// </summary>
     [SerializeField]
-    UnityEvent response;
+    UnityEvent response = null;
     /// <summary>
     /// Raised the event.
     /// </summary>

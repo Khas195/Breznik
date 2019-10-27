@@ -12,17 +12,17 @@ public class PlayerStatsUI : MonoBehaviour
     /// The health bar of the character.
     /// </summary>
     [SerializeField]
-    FlexibleUIStatsBar healthBar;
+    FlexibleUIStatsBar healthBar = null;
     /// <summary>
     /// The Stamina bar of the character.
     /// </summary>
     [SerializeField]
-    FlexibleUIDotsBar staminaDots;
+    FlexibleUIDotsBar staminaDots = null;
     /// <summary>
     /// The character stats data of the character
     /// </summary>
     [SerializeField]
-    CharacterData data;
+    CharacterData data = null;
 
     // Update is called once per frame
     void Update()

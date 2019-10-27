@@ -10,7 +10,7 @@ public class HasStamina : CharacterBehaviorCondition {
     /// <summary>
     /// The action cost.
     /// </summary>
-    PlayerActionCost cost;
+    PlayerActionCost cost = null;
     /// <summary>
     /// Check if the racter has enough stamina for the action.
     /// </summary>

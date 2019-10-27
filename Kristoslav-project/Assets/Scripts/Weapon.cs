@@ -5,13 +5,13 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
-    float damage;
+    float damage = 0;
     [SerializeField]
-    GameObject wielder;
+    GameObject wielder = null;
     [SerializeField]
-    PhysicCallBack killBox;
+    PhysicCallBack killBox = null;
     [SerializeField]
-    Character wielderChar;
+    Character wielderChar = null;
     void Start()
     {
         wielderChar = wielder.GetComponentInChildren<Character>();
@@ -22,18 +22,19 @@ public class Weapon : MonoBehaviour
     }
     public void OnKillBoxEnter(Collider other)
     {
-        Definition.CharacterDebug(wielderChar, "Character's weapon touched something");
+        Logger.CharacterDebug(wielderChar, "Character's weapon touched something");
+
         var otherObject = other.gameObject;
         if (otherObject != wielder)
         {
-            Definition.CharacterDebug(wielderChar, "Character's weapon didnt touch himself.");
+            Logger.CharacterDebug(wielderChar, "Character's weapon didnt touch himself.");
             var character = otherObject.GetComponentInChildren<Character>();
             if (character)
             {
-                Definition.CharacterDebug(wielderChar, "Character's weapon touched a different character - " + character);
+                Logger.CharacterDebug(wielderChar, "Character's weapon touched a different character - " + character);
                 if (wielderChar.GetCharacterAnimator().IsInAttackingAnimation())
                 {
-                    Definition.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
+                    Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
                     character.BeingDamage(damage);
                 }
             }

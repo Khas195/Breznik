@@ -5,13 +5,13 @@ using UnityEngine;
 public class EnemyStatsUI : MonoBehaviour
 {
     [SerializeField]
-    EnemyCharacter character;
+    EnemyCharacter character = null;
     [SerializeField]
-    FlexibleUIStatsBar healthBar;
+    FlexibleUIStatsBar healthBar = null;
     [SerializeField]
-    Canvas canvas;
+    Canvas canvas = null;
     [SerializeField]
-    CharacterData playerData;
+    CharacterData playerData = null;
 
     // Update is called once per frame
     void Update()
