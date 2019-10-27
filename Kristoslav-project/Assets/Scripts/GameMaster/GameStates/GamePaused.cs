@@ -12,7 +12,7 @@ public class GamePaused : GameState
     /// The InGame menu holder.
     /// </summary>
     [SerializeField]
-    GameObject inGameMenuHolder;
+    GameObject inGameMenuHolder = null;
     /// <summary>
     /// Called when game paused state is poped out of the stack.
     /// Hide in game menu and unpaused the game.
@@ -57,5 +57,10 @@ public class GamePaused : GameState
     {
         GameMaster.GetInstance().RequestLoadScene("MainMenuScene");
     }
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            this.ResumeGame();
+        }
+    }
 }

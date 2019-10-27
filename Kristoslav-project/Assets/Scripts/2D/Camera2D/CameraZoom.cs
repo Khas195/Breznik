@@ -31,7 +31,7 @@ public class CameraZoom : MonoBehaviour
     {
         var greatestDistance = GetGreatestDistance(encapsulatedTargets);
         var clampedZoomValue = Mathf.Clamp(greatestDistance, minZoom, maxZoom);
-        Definition.CameraDebug("Clamped Zoom size : " + clampedZoomValue);
+        Logger.CameraDebug("Clamped Zoom size : " + clampedZoomValue);
         host.orthographicSize = Mathf.Lerp(host.orthographicSize, clampedZoomValue, followPercentage);
     }
 
@@ -74,7 +74,7 @@ public class CameraZoom : MonoBehaviour
             bounds.Encapsulate(target.position);
         }
         var result  = bounds.size.x < bounds.size.y ? bounds.size.y : bounds.size.x;
-        Definition.CameraDebug("Greatest distance between focus objects: " + result);
+        Logger.CameraDebug("Greatest distance between focus objects: " + result);
         return result;
     }
 

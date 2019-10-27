@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class NPCInteractable : IInteractable
 {
     [SerializeField]
-    List<MonologueData> datas;
+    List<MonologueData> datas = null;
     [SerializeField]
-    GameObject host;
+    GameObject host = null;
     [SerializeField]
-    CharacterData playerData;
+    CharacterData playerData = null;
     [SerializeField]
-    float rotateSpedd;
+    float rotateSpeed = 0;
     [SerializeField]
-    float breakConversationDistance;
+    float breakConversationDistance = 0;
     [SerializeField]
-    Text npcNameUI;
+    Text npcNameUI = null;
     [SerializeField]
-    Canvas npcCanvas;
+    Canvas npcCanvas = null;
     bool isTracking;
     void Start()
     {
@@ -27,12 +27,13 @@ public class NPCInteractable : IInteractable
     public override void Defocus(GameObject interacter)
     {
         base.Defocus(interacter);
-        Definition.NPCDebug("Defocus " + this);
+        Logger.NPCDebug("Defocus " + this);
     }
     public override void Focus(GameObject interacter)
     {
         base.Focus(interacter);
-        Definition.NPCDebug("Focus " + this);
+        Logger.NPCDebug("Focus " + this);
+
     }
 
     public override GameObject GetGameObject()
@@ -42,7 +43,7 @@ public class NPCInteractable : IInteractable
 
     public override bool Interact(GameObject interacter)
     {
-        Definition.NPCDebug("Talk to " + this);
+        Logger.NPCDebug("Talk to " + this);
         if (base.Interact(interacter))
         {
             if (GameMaster.GetInstance().RequestGameState(GameState.States.InDiagloues))
@@ -87,7 +88,7 @@ public class NPCInteractable : IInteractable
     {
         var direction = (playerData.position - host.transform.position).normalized;
         var lookRotation = Quaternion.LookRotation(direction);
-        host.transform.rotation = Quaternion.Slerp(host.transform.rotation, lookRotation, rotateSpedd * Time.deltaTime);
+        host.transform.rotation = Quaternion.Slerp(host.transform.rotation, lookRotation, rotateSpeed * Time.deltaTime);
     }
 
     public override string GetName()

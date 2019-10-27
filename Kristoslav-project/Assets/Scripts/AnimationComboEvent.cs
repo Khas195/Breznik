@@ -5,9 +5,9 @@ using UnityEngine;
 public class AnimationComboEvent : MonoBehaviour
 {
     [SerializeField]
-    GameEvent OnAttackBegin;
+    GameEvent OnAttackBegin = null;
     [SerializeField]
-    GameEvent OnAttackEnd;
+    GameEvent OnAttackEnd = null;
     public void BeginCombo(int comboCount) {
         OnAttackBegin.Raise();
     }

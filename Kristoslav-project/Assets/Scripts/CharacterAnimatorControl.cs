@@ -9,7 +9,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// The animator of the character.
     /// </summary>
     [SerializeField]
-    Animator animator;
+    Animator animator =null;
 
 
 
@@ -17,12 +17,12 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// The rigidbody of the model of the Character.
     /// </summary>
     [SerializeField]
-    Rigidbody hostRb;
+    Rigidbody hostRb =null;
     [SerializeField]
-    Character character;
+    Character character = null;
     bool isAttacking = false;
     [SerializeField]
-    int maxComboCount;
+    int maxComboCount = 0;
     [SerializeField]
     int comboCount = 0;
 
@@ -46,8 +46,6 @@ public class CharacterAnimatorControl : MonoBehaviour
         animator.SetFloat("VelocityY", hostRb.velocity.y);
 
         animator.SetFloat("MoveSpeed", moveSpeed);
-
-        animator.SetInteger("ComboCount", comboCount);
     }
     public void PlayAttackAnimation()
     {

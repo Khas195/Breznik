@@ -9,9 +9,9 @@ using UnityEngine.UI;
 public class InGame : GameState
 {
     [SerializeField]
-    GameObject inGameUIs;
+    GameObject inGameUIs = null;
     [SerializeField]
-    Text interactCue;
+    Text interactCue = null;
     /// <summary>
     /// Called when the in game state is poped out of the stack.
     /// Show the mouse.

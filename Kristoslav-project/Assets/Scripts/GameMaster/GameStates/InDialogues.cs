@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class InDialogues :GameState 
 {
     [SerializeField]
-    GameObject dialogueUI;
-    MonologueManager manager;
+    GameObject dialogueUI = null;
+    MonologueManager manager = null;
     public override void OnPopped()
     {
         base.OnPopped();

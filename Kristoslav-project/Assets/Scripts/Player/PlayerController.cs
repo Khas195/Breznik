@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     /** \brief Reference to the character*/
     Character character = null;
     [SerializeField]
-    UnityEvent interact;
+    UnityEvent interact = new UnityEvent();
 
     void Update()
     {

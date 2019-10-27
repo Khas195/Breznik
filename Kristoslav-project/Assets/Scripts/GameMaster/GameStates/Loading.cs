@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class Loading : GameState
 {
     [SerializeField]
-    Slider slider;
+    Slider slider = null;
     [SerializeField]
-    Text loadingText;
+    Text loadingText = null;
     
     public override void OnPopped()
     {

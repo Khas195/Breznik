@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class FlexibleUIDotsBar : FlexibleUI
 {
     [SerializeField]
-    List<Image> usedDot;
+    List<Image> usedDot = new List<Image>();
     [SerializeField]
-    List<Image> unusedDot;
+    List<Image> unusedDot = new List<Image>();
 
     [SerializeField]
-    RectTransform rectTransform;
+    RectTransform rectTransform = null;
     int curCount;
     public override void Awake()
     {
