@@ -7,43 +7,64 @@ The \mbox{\hyperlink{class_character}{Character}} class handles all the possible
 
 
 
-Inheritance diagram for Character\+:\nopagebreak
+Inheritance diagram for Character\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{class_character__inherit__graph}
+\includegraphics[width=274pt]{class_character__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Character\+:\nopagebreak
+Collaboration diagram for Character\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=266pt]{class_character__coll__graph}
+\includegraphics[width=350pt]{class_character__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_character_a9c7f55fec087704ceb34c27460ab2883}{Request\+Move}} (float forward, float side)
-\begin{DoxyCompactList}\small\item\em This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_character_a973dc08e95ee705b985d4424f4b6c00e}{Request\+Jump}} ()
-\begin{DoxyCompactList}\small\item\em This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_character_a890e5eae232bca1b0404ab277a9f7fbe}{Request\+Movement\+Type}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}} move\+Type)
-\begin{DoxyCompactList}\small\item\em This function set the movement Type for the move\+Behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}{Awake}} ()
 \item 
-void \mbox{\hyperlink{class_character_a4b94b509f20b3916112479cdfdcbcd01}{Awake}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+virtual bool \mbox{\hyperlink{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}{Request\+Move}} (float forward, float side)
+\begin{DoxyCompactList}\small\item\em This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_aac80a99e7d65890e59304a74fc059c74}{Attack}} ()
+\begin{DoxyCompactList}\small\item\em This function invoke an event whenever the character is signal to attack It returns true if the event is successfully called and vice versa. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_afea0491dc5b0a44c2e2296fb87c11393}{Request\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_a9c90452155c735e88b3872d2fb62ad37}{Request\+Movement\+Type}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}} move\+Type)
+\begin{DoxyCompactList}\small\item\em This function set the movement Type for the move\+Behavior. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_ae1658993038fafcab66c35fabe7c5c4a}{Get\+Movement\+Behavior}} ()
+\begin{DoxyCompactList}\small\item\em Get the movement behavior of the character. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} \mbox{\hyperlink{class_character_aa175e282a08f772115452e76f542817d}{Get\+Character\+Animator}} ()
+\begin{DoxyCompactList}\small\item\em Get the character animator control. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_character_stats_data}{Character\+Stats\+Data}} \mbox{\hyperlink{class_character_af8e4ce789975d7fabf0a27785653e38e}{Get\+Character\+Stats}} ()
+\begin{DoxyCompactList}\small\item\em Get the character stats data of the character. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_character_af9b759e74efefe757ee49a38d79c5238}{Being\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Is called if the character are to be damaged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Rigidbody \mbox{\hyperlink{class_character_ae91b6199245ae87206e43fbd2ae9e440}{host\+Rigid\+Body}}
 \begin{DoxyCompactList}\small\item\em The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_a736d5b47bff2750392858a40e7ab1e9b}{movement\+Behavior}}
-\begin{DoxyCompactList}\small\item\em Reference to the movement behavior of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reference to the movement behavior of the character. \end{DoxyCompactList}\item 
+Unity\+Event \mbox{\hyperlink{class_character_a2781bb31e42725e8e71efb4cff94e7c6}{on\+Character\+Attack}}
+\begin{DoxyCompactList}\small\item\em This is event is called when an attack is successfully trigger. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} \mbox{\hyperlink{class_character_a7350d7b91b3717ed4653f18bb40bab30}{animator\+Control}}
+\begin{DoxyCompactList}\small\item\em Reference to the animator control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a36de084cc26942ad378ea9494ad8a5bc}{jump\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}{move\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}{attack\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a3fca381aacbc571e0bf8678882ee2610}{change\+Move\+Type\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -52,58 +73,190 @@ The \mbox{\hyperlink{class_character}{Character}} class handles all the possible
 It\textquotesingle{}s handle the character\textquotesingle{}s behaviors by calling the appropriate behavior.
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_character_a4b94b509f20b3916112479cdfdcbcd01}\label{class_character_a4b94b509f20b3916112479cdfdcbcd01}} 
-\index{Character@{Character}!Awake@{Awake}}
-\index{Awake@{Awake}!Character@{Character}}
-\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
-{\footnotesize\ttfamily void Character.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_character_aac80a99e7d65890e59304a74fc059c74}\label{class_character_aac80a99e7d65890e59304a74fc059c74}} 
+\index{Character@{Character}!Attack@{Attack}}
+\index{Attack@{Attack}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily virtual bool Character.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function invoke an event whenever the character is signal to attack It returns true if the event is successfully called and vice versa. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_a49f0cf11a8e85e75507ff3269d044712}{Player\+Character}}, and \mbox{\hyperlink{class_enemy_character_a76aa5ac06c306eea5b8ac0de28b80a78}{Enemy\+Character}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=332pt]{class_character_a4b94b509f20b3916112479cdfdcbcd01_cgraph}
+\includegraphics[width=350pt]{class_character_aac80a99e7d65890e59304a74fc059c74_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_character_a973dc08e95ee705b985d4424f4b6c00e}\label{class_character_a973dc08e95ee705b985d4424f4b6c00e}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aac80a99e7d65890e59304a74fc059c74_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}\label{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}} 
+\index{Character@{Character}!Awake@{Awake}}
+\index{Awake@{Awake}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily virtual void Character.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_aa643acaf1b50c05a9ef66b833ffc7f95}{Player\+Character}}, and \mbox{\hyperlink{class_enemy_character_aebb29b453a4abbfbe598051cafb9342f}{Enemy\+Character}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_character_a7cca5d1f141f2f46a1d087fd3e28a953_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_af9b759e74efefe757ee49a38d79c5238}\label{class_character_af9b759e74efefe757ee49a38d79c5238}} 
+\index{Character@{Character}!BeingDamage@{BeingDamage}}
+\index{BeingDamage@{BeingDamage}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{BeingDamage()}{BeingDamage()}}
+{\footnotesize\ttfamily virtual void Character.\+Being\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Is called if the character are to be damaged. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & the damage value\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_acbf0accf279c6616391dcb31b0ce4118}{Player\+Character}}, and \mbox{\hyperlink{class_enemy_character_a73b9fb1df8d70eac2e4b775e92e860d0}{Enemy\+Character}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_af9b759e74efefe757ee49a38d79c5238_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aa175e282a08f772115452e76f542817d}\label{class_character_aa175e282a08f772115452e76f542817d}} 
+\index{Character@{Character}!GetCharacterAnimator@{GetCharacterAnimator}}
+\index{GetCharacterAnimator@{GetCharacterAnimator}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{GetCharacterAnimator()}{GetCharacterAnimator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} Character.\+Get\+Character\+Animator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the character animator control. 
+
+\begin{DoxyReturn}{Returns}
+The animator control of the character. Can be null
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aa175e282a08f772115452e76f542817d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_af8e4ce789975d7fabf0a27785653e38e}\label{class_character_af8e4ce789975d7fabf0a27785653e38e}} 
+\index{Character@{Character}!GetCharacterStats@{GetCharacterStats}}
+\index{GetCharacterStats@{GetCharacterStats}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{GetCharacterStats()}{GetCharacterStats()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_character_stats_data}{Character\+Stats\+Data}} Character.\+Get\+Character\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the character stats data of the character. 
+
+\begin{DoxyReturn}{Returns}
+The character stats of the character. Can be null
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_a1b5f31c890bea95fa6540e448bb77221}{Player\+Character}}, and \mbox{\hyperlink{class_enemy_character_ab988456ec292f9d3fc491394ec593194}{Enemy\+Character}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_af8e4ce789975d7fabf0a27785653e38e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ae1658993038fafcab66c35fabe7c5c4a}\label{class_character_ae1658993038fafcab66c35fabe7c5c4a}} 
+\index{Character@{Character}!GetMovementBehavior@{GetMovementBehavior}}
+\index{GetMovementBehavior@{GetMovementBehavior}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{GetMovementBehavior()}{GetMovementBehavior()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character.\+Get\+Movement\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the movement behavior of the character. 
+
+\begin{DoxyReturn}{Returns}
+The movement behavior of the character. Can be null
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_ae1658993038fafcab66c35fabe7c5c4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_afea0491dc5b0a44c2e2296fb87c11393}\label{class_character_afea0491dc5b0a44c2e2296fb87c11393}} 
 \index{Character@{Character}!RequestJump@{RequestJump}}
 \index{RequestJump@{RequestJump}!Character@{Character}}
 \doxysubsubsection{\texorpdfstring{RequestJump()}{RequestJump()}}
-{\footnotesize\ttfamily bool Character.\+Request\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. 
 
 \begin{DoxyReturn}{Returns}
-True\+: if successfully called the Signal\+Jump function. ~\newline
- False\+: ~\newline
-
-\begin{DoxyItemize}
-\item if the model is not touching the ground
-\item If the movement\+Behaviro is null 
-\end{DoxyItemize}
+True\+: if successfully called the Signal\+Jump function and vice versa ~\newline
+ 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_af98a13bab958e606a330ae868a1a7f69}{Player\+Character}}, and \mbox{\hyperlink{class_enemy_character_ae57381f0053b19a96d22fecb614bf14a}{Enemy\+Character}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a973dc08e95ee705b985d4424f4b6c00e_cgraph}
+\includegraphics[width=350pt]{class_character_afea0491dc5b0a44c2e2296fb87c11393_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a973dc08e95ee705b985d4424f4b6c00e_icgraph}
+\includegraphics[width=350pt]{class_character_afea0491dc5b0a44c2e2296fb87c11393_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_character_a9c7f55fec087704ceb34c27460ab2883}\label{class_character_a9c7f55fec087704ceb34c27460ab2883}} 
+\mbox{\Hypertarget{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}\label{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}} 
 \index{Character@{Character}!RequestMove@{RequestMove}}
 \index{RequestMove@{RequestMove}!Character@{Character}}
 \doxysubsubsection{\texorpdfstring{RequestMove()}{RequestMove()}}
-{\footnotesize\ttfamily bool Character.\+Request\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -116,30 +269,31 @@ This fucntion ask the move\+Behavior of the character to move the character\text
 {\em side} & side is how much the host game object should move sideway \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True\+: if successfully called the move function. ~\newline
- False\+: if move\+Behavior is null ~\newline
- 
-\end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_aef051e596c27491d72361b8433262c81}{Player\+Character}}, and \mbox{\hyperlink{class_enemy_character_a6b284b6d7854753c187628c97a26458e}{Enemy\+Character}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=325pt]{class_character_a9c7f55fec087704ceb34c27460ab2883_cgraph}
+\includegraphics[width=350pt]{class_character_aea4be2e1287d97dfc3187f66dad5a5bb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a9c7f55fec087704ceb34c27460ab2883_icgraph}
+\includegraphics[width=350pt]{class_character_aea4be2e1287d97dfc3187f66dad5a5bb_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_character_a890e5eae232bca1b0404ab277a9f7fbe}\label{class_character_a890e5eae232bca1b0404ab277a9f7fbe}} 
+\mbox{\Hypertarget{class_character_a9c90452155c735e88b3872d2fb62ad37}\label{class_character_a9c90452155c735e88b3872d2fb62ad37}} 
 \index{Character@{Character}!RequestMovementType@{RequestMovementType}}
 \index{RequestMovementType@{RequestMovementType}!Character@{Character}}
 \doxysubsubsection{\texorpdfstring{RequestMovementType()}{RequestMovementType()}}
-{\footnotesize\ttfamily bool Character.\+Request\+Movement\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}}}]{move\+Type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Movement\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}}}]{move\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -159,7 +313,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a890e5eae232bca1b0404ab277a9f7fbe_cgraph}
+\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -167,35 +321,95 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a890e5eae232bca1b0404ab277a9f7fbe_icgraph}
+\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_icgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_character_ae91b6199245ae87206e43fbd2ae9e440}\label{class_character_ae91b6199245ae87206e43fbd2ae9e440}} 
+\mbox{\Hypertarget{class_character_a7350d7b91b3717ed4653f18bb40bab30}\label{class_character_a7350d7b91b3717ed4653f18bb40bab30}} 
+\index{Character@{Character}!animatorControl@{animatorControl}}
+\index{animatorControl@{animatorControl}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{animatorControl}{animatorControl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} Character.\+animator\+Control\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reference to the animator control. 
+
+\mbox{\Hypertarget{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}\label{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}} 
+\index{Character@{Character}!attackConditions@{attackConditions}}
+\index{attackConditions@{attackConditions}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{attackConditions}{attackConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+attack\+Conditions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+attack\+Conditions check wheter the character can attack.\mbox{\Hypertarget{class_character_a3fca381aacbc571e0bf8678882ee2610}\label{class_character_a3fca381aacbc571e0bf8678882ee2610}} 
+\index{Character@{Character}!changeMoveTypeConditions@{changeMoveTypeConditions}}
+\index{changeMoveTypeConditions@{changeMoveTypeConditions}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{changeMoveTypeConditions}{changeMoveTypeConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+change\+Move\+Type\+Conditions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+change\+Move\+Type\+Conditions check whether it is possible to change the current move mode.\mbox{\Hypertarget{class_character_ae91b6199245ae87206e43fbd2ae9e440}\label{class_character_ae91b6199245ae87206e43fbd2ae9e440}} 
 \index{Character@{Character}!hostRigidBody@{hostRigidBody}}
 \index{hostRigidBody@{hostRigidBody}!Character@{Character}}
 \doxysubsubsection{\texorpdfstring{hostRigidBody}{hostRigidBody}}
-{\footnotesize\ttfamily Rigidbody Character.\+host\+Rigid\+Body\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Rigidbody Character.\+host\+Rigid\+Body\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. 
 
 ~\newline
- Need to be set in Unity Editor.\mbox{\Hypertarget{class_character_a736d5b47bff2750392858a40e7ab1e9b}\label{class_character_a736d5b47bff2750392858a40e7ab1e9b}} 
+ Need to be set in Unity Editor.\mbox{\Hypertarget{class_character_a36de084cc26942ad378ea9494ad8a5bc}\label{class_character_a36de084cc26942ad378ea9494ad8a5bc}} 
+\index{Character@{Character}!jumpConditions@{jumpConditions}}
+\index{jumpConditions@{jumpConditions}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{jumpConditions}{jumpConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+jump\+Conditions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+jump\+Conditions check whether it is possible to jump.\mbox{\Hypertarget{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}\label{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}} 
+\index{Character@{Character}!moveConditions@{moveConditions}}
+\index{moveConditions@{moveConditions}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{moveConditions}{moveConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+move\+Conditions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+move\+Conditions check whether it is possible to move\mbox{\Hypertarget{class_character_a736d5b47bff2750392858a40e7ab1e9b}\label{class_character_a736d5b47bff2750392858a40e7ab1e9b}} 
 \index{Character@{Character}!movementBehavior@{movementBehavior}}
 \index{movementBehavior@{movementBehavior}!Character@{Character}}
 \doxysubsubsection{\texorpdfstring{movementBehavior}{movementBehavior}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character.\+movement\+Behavior\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character.\+movement\+Behavior\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 Reference to the movement behavior of the character. 
 
 ~\newline
- If the character does not have a movement behavior, he/she will not be able to move.
+ If the character does not have a movement behavior, he/she will not be able to move.\mbox{\Hypertarget{class_character_a2781bb31e42725e8e71efb4cff94e7c6}\label{class_character_a2781bb31e42725e8e71efb4cff94e7c6}} 
+\index{Character@{Character}!onCharacterAttack@{onCharacterAttack}}
+\index{onCharacterAttack@{onCharacterAttack}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{onCharacterAttack}{onCharacterAttack}}
+{\footnotesize\ttfamily Unity\+Event Character.\+on\+Character\+Attack\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This is event is called when an attack is successfully trigger. 
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

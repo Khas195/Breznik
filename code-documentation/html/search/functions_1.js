@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['calculateasymptoticaverage_281',['CalculateAsymptoticAverage',['../class_ultilities.html#ae463e7bbaf110896f71de6a736bc581b',1,'Ultilities']]],
-  ['cameradebug_282',['CameraDebug',['../class_definition.html#af26cae00523f1e3be0215836ddf6e463',1,'Definition']]],
-  ['clear_283',['Clear',['../class_camera_zoom.html#a6cb710e441b19e986f514dc9a4d873a6',1,'CameraZoom.Clear()'],['../class_camera_follow.html#afe8f90ce8dcb5582c32e0971567f4fc9',1,'CameraFollow.Clear()']]],
-  ['constraint_284',['Constraint',['../class_constraint_camera.html#a57c0efd1e0230f2745fffa61fbc4055a',1,'ConstraintCamera']]],
-  ['contains_285',['Contains',['../class_state_stack.html#a3dce6691e1553fc9a7bcb7eb925d012e',1,'StateStack']]],
-  ['controlmovement_286',['ControlMovement',['../class_player_controller.html#a52d074ae80211c21828023a6e381812b',1,'PlayerController']]]
+  ['backtomenu_618',['BackToMenu',['../class_game_paused.html#a04e35f80b8fed630e18114bcacf74ce7',1,'GamePaused']]],
+  ['begincombo_619',['BeginCombo',['../class_animation_combo_event.html#af30d7ae26ddb43645b7e832703ce9a52',1,'AnimationComboEvent']]],
+  ['beingdamage_620',['BeingDamage',['../class_character.html#af9b759e74efefe757ee49a38d79c5238',1,'Character.BeingDamage()'],['../class_enemy_character.html#a73b9fb1df8d70eac2e4b775e92e860d0',1,'EnemyCharacter.BeingDamage()'],['../class_player_character.html#acbf0accf279c6616391dcb31b0ce4118',1,'PlayerCharacter.BeingDamage()']]]
 ];
