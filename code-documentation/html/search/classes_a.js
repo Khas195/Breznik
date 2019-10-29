@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ultilities_249',['Ultilities',['../class_ultilities.html',1,'']]]
+  ['npcinteractable_526',['NPCInteractable',['../class_n_p_c_interactable.html',1,'']]]
 ];
