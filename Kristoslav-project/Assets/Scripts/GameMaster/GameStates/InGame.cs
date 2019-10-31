@@ -51,6 +51,9 @@ public class InGame : GameState
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             GameMaster.GetInstance().RequestGameState(GameState.States.GamePaused);
+        } 
+        if (Input.GetKeyDown(KeyCode.I)){
+            GameMaster.GetInstance().RequestGameState(GameState.States.InInventory);
         }
     }
 }

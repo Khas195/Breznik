@@ -1,6 +1,6 @@
 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
-    #define ENABLE_LOG
+#define ENABLE_LOG
 #endif
 using System;
 using System.Diagnostics;
@@ -20,6 +20,12 @@ public class Logger
     public static void InteractableDebug(string message)
     {
         UnityEngine.Debug.Log("Interactable Object Log: " + message);
+    }
+
+    [Conditional("ENABLE_LOG")]
+    public static void InventoryDebug(string message)
+    {
+        UnityEngine.Debug.Log("Inventory System : " + message);
     }
 
     [Conditional("ENABLE_LOG")]
@@ -69,5 +75,10 @@ public class Logger
     public static void GameMasterDebug(GameMaster gameMaster, string message)
     {
         UnityEngine.Debug.Log(gameMaster + ": " + message);
+    }
+    [Conditional("ENABLE_LOG")]
+    public static void UltilitiesLog(string message)
+    {
+        UnityEngine.Debug.Log("Ultilities: " + message);
     }
 }

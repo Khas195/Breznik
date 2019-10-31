@@ -14,7 +14,8 @@ public class GameState : State
         MainMenu,
         InGame,
         GamePaused,
-        InDiagloues
+        InDiagloues,
+        InInventory
     }
     /// <summary>
     /// The state's type of the current game state.
