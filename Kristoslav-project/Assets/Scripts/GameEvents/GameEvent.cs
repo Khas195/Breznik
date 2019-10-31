@@ -29,7 +29,8 @@ public class GameEvent : ScriptableObject
     {
         if (listeners.Contains(listener))
         {
-            Definition.GameEventDebug(listener + " REGISTERING to " + this + " while ALREADY being in the list");
+            Logger.GameEventDebug(listener + " REGISTERING to " + this + " while ALREADY being in the list");
+            
             return;
         }
         listeners.Add(listener);
@@ -42,7 +43,7 @@ public class GameEvent : ScriptableObject
     {
         if (!listeners.Contains(listener))
         {
-            Definition.GameEventDebug(listener + " UNREGISTERING to " + this + " while NOT being in the list");
+            Logger.GameEventDebug(listener + " UNREGISTERING to " + this + " while NOT being in the list");
             return;
         }
         listeners.Remove(listener);

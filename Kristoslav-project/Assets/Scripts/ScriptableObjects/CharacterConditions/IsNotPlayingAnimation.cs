@@ -5,7 +5,7 @@ public class IsNotPlayingAnimation : CharacterBehaviorCondition
 {
     [SerializeField]
 
-    string animationName;
+    string animationName = "Empty";
     public override bool IsSatisfied(Character character)
     {
         var charAnimControl = character.GetCharacterAnimator();

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['state_246',['State',['../class_state.html',1,'']]],
-  ['statestack_247',['StateStack',['../class_state_stack.html',1,'']]]
+  ['loading_515',['Loading',['../class_loading.html',1,'']]],
+  ['logger_516',['Logger',['../class_logger.html',1,'']]]
 ];

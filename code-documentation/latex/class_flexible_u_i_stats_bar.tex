@@ -1,0 +1,262 @@
+\hypertarget{class_flexible_u_i_stats_bar}{}\doxysection{Flexible\+U\+I\+Stats\+Bar Class Reference}
+\label{class_flexible_u_i_stats_bar}\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+
+
+Inheritance diagram for Flexible\+U\+I\+Stats\+Bar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_flexible_u_i_stats_bar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flexible\+U\+I\+Stats\+Bar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_flexible_u_i_stats_bar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26}{Stats\+Bar\+Type}} \{ \mbox{\hyperlink{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26ae15d32d9aa0ebc20e7f866b0e81579a9}{Stats\+Bar\+Type.\+Health\+Bar}}, 
+\mbox{\hyperlink{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26ac4cad3236314bc8f7a17afe8d7657000}{Stats\+Bar\+Type.\+Stamina\+Bar}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_flexible_u_i_stats_bar_af032c3931f5c5cd1897b86832e2cc2ec}{Set\+Filled\+Amount}} (float value)
+\item 
+virtual float \mbox{\hyperlink{class_flexible_u_i_stats_bar_af00a92f24d8561cc1fb06f641bea2462}{Get\+Filled\+Amount}} ()
+\item 
+virtual void \mbox{\hyperlink{class_flexible_u_i_a922f8c4f979da2ca37dd13672b042e9a}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_flexible_u_i_a22b42b1a5a0c5ab76d2ff7659c55732c}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_flexible_u_i_stats_bar_a5654b4ced2c04e3bf82a9cff0a5de943}{On\+Skin\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_flexible_u_i_stats_bar_a291a710f73622529258b4ec7b6ea6132}{Add\+Missing\+Component}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26}{Stats\+Bar\+Type}} \mbox{\hyperlink{class_flexible_u_i_stats_bar_a4c1f7fad510a1cafaaa565abb03e7f73}{type}}
+\item 
+\mbox{\hyperlink{class_flexible_u_i_data}{Flexible\+U\+I\+Data}} \mbox{\hyperlink{class_flexible_u_i_a184d003aded51981e04e0fcb648d6e45}{u\+I\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_flexible_u_i_stats_bar_ad467797cd9d45acee43b91a1e7bde059}{Create\+Child\+Image}} (string name)
+\item 
+void \mbox{\hyperlink{class_flexible_u_i_stats_bar_a6e88898a202505580ae9e1de40af37de}{Add\+Stretch\+Rect\+Transform}} (Game\+Object target\+Game\+Object)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_flexible_u_i_stats_bar_a1512a8ce5b2316a15914c08cf2e7873b}{border}}
+\item 
+Image \mbox{\hyperlink{class_flexible_u_i_stats_bar_a3cf98fd5f468c49dc5f7ace1d638d317}{background}}
+\item 
+Image \mbox{\hyperlink{class_flexible_u_i_stats_bar_a911aff8d217300b70b4b78f8304ac032}{filled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26}\label{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!StatsBarType@{StatsBarType}}
+\index{StatsBarType@{StatsBarType}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{StatsBarType}{StatsBarType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26}{Flexible\+U\+I\+Stats\+Bar.\+Stats\+Bar\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HealthBar@{HealthBar}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!HealthBar@{HealthBar}}}\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26ae15d32d9aa0ebc20e7f866b0e81579a9}\label{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26ae15d32d9aa0ebc20e7f866b0e81579a9}} 
+Health\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StaminaBar@{StaminaBar}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!StaminaBar@{StaminaBar}}}\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26ac4cad3236314bc8f7a17afe8d7657000}\label{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26ac4cad3236314bc8f7a17afe8d7657000}} 
+Stamina\+Bar&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a291a710f73622529258b4ec7b6ea6132}\label{class_flexible_u_i_stats_bar_a291a710f73622529258b4ec7b6ea6132}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!AddMissingComponent@{AddMissingComponent}}
+\index{AddMissingComponent@{AddMissingComponent}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{AddMissingComponent()}{AddMissingComponent()}}
+{\footnotesize\ttfamily virtual void Flexible\+U\+I\+Stats\+Bar.\+Add\+Missing\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_a291a710f73622529258b4ec7b6ea6132_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_a291a710f73622529258b4ec7b6ea6132_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a6e88898a202505580ae9e1de40af37de}\label{class_flexible_u_i_stats_bar_a6e88898a202505580ae9e1de40af37de}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!AddStretchRectTransform@{AddStretchRectTransform}}
+\index{AddStretchRectTransform@{AddStretchRectTransform}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{AddStretchRectTransform()}{AddStretchRectTransform()}}
+{\footnotesize\ttfamily void Flexible\+U\+I\+Stats\+Bar.\+Add\+Stretch\+Rect\+Transform (\begin{DoxyParamCaption}\item[{Game\+Object}]{target\+Game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_a6e88898a202505580ae9e1de40af37de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_flexible_u_i_a922f8c4f979da2ca37dd13672b042e9a}\label{class_flexible_u_i_a922f8c4f979da2ca37dd13672b042e9a}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!Awake@{Awake}}
+\index{Awake@{Awake}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily virtual void Flexible\+U\+I.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_flexible_u_i_dots_bar_a28ac4a0bd6daecc8a4a8c70da795e76a}{Flexible\+U\+I\+Dots\+Bar}}.
+
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_ad467797cd9d45acee43b91a1e7bde059}\label{class_flexible_u_i_stats_bar_ad467797cd9d45acee43b91a1e7bde059}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!CreateChildImage@{CreateChildImage}}
+\index{CreateChildImage@{CreateChildImage}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{CreateChildImage()}{CreateChildImage()}}
+{\footnotesize\ttfamily Image Flexible\+U\+I\+Stats\+Bar.\+Create\+Child\+Image (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_ad467797cd9d45acee43b91a1e7bde059_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_ad467797cd9d45acee43b91a1e7bde059_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_af00a92f24d8561cc1fb06f641bea2462}\label{class_flexible_u_i_stats_bar_af00a92f24d8561cc1fb06f641bea2462}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!GetFilledAmount@{GetFilledAmount}}
+\index{GetFilledAmount@{GetFilledAmount}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{GetFilledAmount()}{GetFilledAmount()}}
+{\footnotesize\ttfamily virtual float Flexible\+U\+I\+Stats\+Bar.\+Get\+Filled\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_af00a92f24d8561cc1fb06f641bea2462_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a5654b4ced2c04e3bf82a9cff0a5de943}\label{class_flexible_u_i_stats_bar_a5654b4ced2c04e3bf82a9cff0a5de943}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!OnSkinUI@{OnSkinUI}}
+\index{OnSkinUI@{OnSkinUI}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{OnSkinUI()}{OnSkinUI()}}
+{\footnotesize\ttfamily override void Flexible\+U\+I\+Stats\+Bar.\+On\+Skin\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_flexible_u_i_a441126b4484b57362fef1df98140efe8}{Flexible\+UI}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_a5654b4ced2c04e3bf82a9cff0a5de943_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_af032c3931f5c5cd1897b86832e2cc2ec}\label{class_flexible_u_i_stats_bar_af032c3931f5c5cd1897b86832e2cc2ec}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!SetFilledAmount@{SetFilledAmount}}
+\index{SetFilledAmount@{SetFilledAmount}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{SetFilledAmount()}{SetFilledAmount()}}
+{\footnotesize\ttfamily virtual void Flexible\+U\+I\+Stats\+Bar.\+Set\+Filled\+Amount (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_flexible_u_i_stats_bar_af032c3931f5c5cd1897b86832e2cc2ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_flexible_u_i_a22b42b1a5a0c5ab76d2ff7659c55732c}\label{class_flexible_u_i_a22b42b1a5a0c5ab76d2ff7659c55732c}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!Update@{Update}}
+\index{Update@{Update}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Flexible\+U\+I.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_flexible_u_i_dots_bar_a4dbe217e6d10ad53a9df82bd2338fa2e}{Flexible\+U\+I\+Dots\+Bar}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_flexible_u_i_a22b42b1a5a0c5ab76d2ff7659c55732c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a3cf98fd5f468c49dc5f7ace1d638d317}\label{class_flexible_u_i_stats_bar_a3cf98fd5f468c49dc5f7ace1d638d317}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!background@{background}}
+\index{background@{background}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily Image Flexible\+U\+I\+Stats\+Bar.\+background\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a1512a8ce5b2316a15914c08cf2e7873b}\label{class_flexible_u_i_stats_bar_a1512a8ce5b2316a15914c08cf2e7873b}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!border@{border}}
+\index{border@{border}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{border}{border}}
+{\footnotesize\ttfamily Image Flexible\+U\+I\+Stats\+Bar.\+border\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a911aff8d217300b70b4b78f8304ac032}\label{class_flexible_u_i_stats_bar_a911aff8d217300b70b4b78f8304ac032}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!filled@{filled}}
+\index{filled@{filled}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{filled}{filled}}
+{\footnotesize\ttfamily Image Flexible\+U\+I\+Stats\+Bar.\+filled\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_flexible_u_i_stats_bar_a4c1f7fad510a1cafaaa565abb03e7f73}\label{class_flexible_u_i_stats_bar_a4c1f7fad510a1cafaaa565abb03e7f73}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!type@{type}}
+\index{type@{type}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_flexible_u_i_stats_bar_a53fa108ca5458fa569301de744b94d26}{Stats\+Bar\+Type}} Flexible\+U\+I\+Stats\+Bar.\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_flexible_u_i_a184d003aded51981e04e0fcb648d6e45}\label{class_flexible_u_i_a184d003aded51981e04e0fcb648d6e45}} 
+\index{FlexibleUIStatsBar@{FlexibleUIStatsBar}!uIData@{uIData}}
+\index{uIData@{uIData}!FlexibleUIStatsBar@{FlexibleUIStatsBar}}
+\doxysubsubsection{\texorpdfstring{uIData}{uIData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_flexible_u_i_data}{Flexible\+U\+I\+Data}} Flexible\+U\+I.\+u\+I\+Data\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Flexible\+U\+I/\mbox{\hyperlink{_flexible_u_i_stats_bar_8cs}{Flexible\+U\+I\+Stats\+Bar.\+cs}}\end{DoxyCompactItemize}

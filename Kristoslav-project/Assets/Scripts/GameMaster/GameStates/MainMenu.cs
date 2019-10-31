@@ -10,7 +10,10 @@ public class MainMenu : GameState
     /// The start button to go to the main game scene.
     /// </summary>
     [SerializeField]
-    Button startButton;
+    Button startButton = null;
+
+    int test = 0;
+
     /// <summary>
     /// Called then Main Menu is poped out of the stack.
     /// </summary>

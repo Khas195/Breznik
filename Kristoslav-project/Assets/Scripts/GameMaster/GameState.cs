@@ -13,13 +13,14 @@ public class GameState : State
         Loading,
         MainMenu,
         InGame,
-        GamePaused 
+        GamePaused,
+        InDiagloues
     }
     /// <summary>
     /// The state's type of the current game state.
     /// </summary>
     [SerializeField]
-    States state;
+    States state = States.InGame;
     /// <summary>
     /// Get the state type/name of the current game state.
     /// </summary>

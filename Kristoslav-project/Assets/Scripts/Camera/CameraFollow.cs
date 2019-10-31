@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     Transform character = null;
     [SerializeField]
-    CharacterData playerData;
+    CharacterData playerData = null;
     [SerializeField]
     [Tooltip("Each frame the camera move x percentage closer to the target")]
     float followPercentage = 0.02f;
@@ -23,7 +23,6 @@ public class CameraFollow : MonoBehaviour
     bool followY = false;
     [SerializeField]
     bool followZ = false;
-
 
     Camera mCamera;
     // Start is called before the first frame update
@@ -89,7 +88,7 @@ public class CameraFollow : MonoBehaviour
         {
             bounds.Encapsulate(target.position);
         }
-        Definition.CameraDebug("Camera Center position: " + bounds.center);
+        Logger.CameraDebug("Camera Center position: " + bounds.center);
         return bounds.center;
     }
 
