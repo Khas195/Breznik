@@ -389,6 +389,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81698852}
   m_CullTransparentMesh: 0
+--- !u!4 &85746870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2123227515284787282, guid: d1492488a67a4534d9d7e3b8534aa96f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1268520162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &87800095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,12 +1517,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581220964}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &593171535 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3134883097685136781, guid: d1492488a67a4534d9d7e3b8534aa96f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1268520162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &650183747
 GameObject:
   m_ObjectHideFlags: 0
@@ -4150,11 +4150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 593171535}
+      objectReference: {fileID: 85746870}
     - target: {fileID: 8425287927583838324, guid: 544ffd1bad02624458cb5dfc1a0a0e99,
         type: 3}
       propertyPath: followY
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425287927583838324, guid: 544ffd1bad02624458cb5dfc1a0a0e99,
         type: 3}
@@ -4162,6 +4162,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b9b5e309a1249a44f9706c99b07899b9,
         type: 2}
+    - target: {fileID: 8425287927583838324, guid: 544ffd1bad02624458cb5dfc1a0a0e99,
+        type: 3}
+      propertyPath: followPercentage
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8425287927037437890, guid: 544ffd1bad02624458cb5dfc1a0a0e99,
         type: 3}
       propertyPath: headLowerLimit
@@ -5108,7 +5113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0014343262, y: 15}
+  m_AnchoredPosition: {x: 0.0014648438, y: 15}
   m_SizeDelta: {x: 0, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026260631
