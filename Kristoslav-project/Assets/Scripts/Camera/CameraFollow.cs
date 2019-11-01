@@ -23,6 +23,8 @@ public class CameraFollow : MonoBehaviour
     bool followY = false;
     [SerializeField]
     bool followZ = false;
+    [SerializeField]
+    float maxDistance;
 
     Camera mCamera;
     // Start is called before the first frame update
@@ -34,14 +36,28 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (playerData != null) {
-            playerData.cameraPos =  mCamera.transform.position;
+        if (playerData != null)
+        {
+            playerData.cameraPos = mCamera.transform.position;
         }
     }
-    void FixedUpdate()
+    void LateUpdate()
     {
         var targetPos = GetCenterPosition(encapsolatedTarget);
         var hostPos = host.position;
+        if (Vector3.Distance(targetPos, hostPos) > maxDistance)
+        {
+            host.transform.position = (hostPos - targetPos).normalized * maxDistance + targetPos;
+        }
+        else
+        {
+            LerpToward(targetPos, hostPos);
+
+        }
+    }
+
+    private void LerpToward(Vector3 targetPos, Vector3 hostPos)
+    {
         if (followX)
         {
             hostPos.x = Mathf.Lerp(hostPos.x, targetPos.x, followPercentage);
