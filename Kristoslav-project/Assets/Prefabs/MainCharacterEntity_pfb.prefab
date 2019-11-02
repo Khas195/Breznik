@@ -535,7 +535,18 @@ MonoBehaviour:
   character: {fileID: 311056116}
   interact:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1844926100}
+        m_MethodName: Talk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &706283025778376290
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,10 +717,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1844926100}
+        m_MethodName: OnObjectEnterSphere
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1844926100}
+        m_MethodName: OnObjectExitSphere
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5169556745118821799
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,11 +826,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706283024076468071}
     m_Modifications:
-    - target: {fileID: 2129666816750094851, guid: 5c920cf226a1bce49af4db463705b472,
-        type: 3}
-      propertyPath: m_Name
-      value: Krstoslav_Pfb
-      objectReference: {fileID: 0}
     - target: {fileID: 3749698335119577049, guid: 5c920cf226a1bce49af4db463705b472,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -867,6 +895,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129666816750094851, guid: 5c920cf226a1bce49af4db463705b472,
+        type: 3}
+      propertyPath: m_Name
+      value: Krstoslav_Pfb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c920cf226a1bce49af4db463705b472, type: 3}

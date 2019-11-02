@@ -41,36 +41,40 @@ public class CameraFollow : MonoBehaviour
             playerData.cameraPos = mCamera.transform.position;
         }
     }
+    void FixedUpdate()
+    {
+        var targetPos = GetCenterPosition(encapsolatedTarget);
+        var hostPos = host.position;
+        hostPos = LerpToward(targetPos, hostPos);
+
+        host.position = hostPos;
+    }
     void LateUpdate()
     {
         var targetPos = GetCenterPosition(encapsolatedTarget);
         var hostPos = host.position;
         if (Vector3.Distance(targetPos, hostPos) > maxDistance)
         {
-            host.transform.position = (hostPos - targetPos).normalized * maxDistance + targetPos;
+            hostPos = targetPos - (targetPos - hostPos).normalized * maxDistance;
         }
-        else
-        {
-            LerpToward(targetPos, hostPos);
-
-        }
+        host.position = hostPos;
     }
 
-    private void LerpToward(Vector3 targetPos, Vector3 hostPos)
+    private Vector3 LerpToward(Vector3 targetPos, Vector3 curPos)
     {
         if (followX)
         {
-            hostPos.x = Mathf.Lerp(hostPos.x, targetPos.x, followPercentage);
+            curPos.x = Mathf.Lerp(curPos.x, targetPos.x, followPercentage);
         }
         if (followY)
         {
-            hostPos.y = Mathf.Lerp(hostPos.y, targetPos.y, followPercentage);
+            curPos.y = Mathf.Lerp(curPos.y, targetPos.y, followPercentage);
         }
         if (followZ)
         {
-            hostPos.z = Mathf.Lerp(hostPos.z, targetPos.z, followPercentage);
+            curPos.z = Mathf.Lerp(curPos.z, targetPos.z, followPercentage);
         }
-        host.transform.position = hostPos;
+        return curPos;
     }
 
     public void SetFollowPercentage(float value)
@@ -104,7 +108,6 @@ public class CameraFollow : MonoBehaviour
         {
             bounds.Encapsulate(target.position);
         }
-        Logger.CameraDebug("Camera Center position: " + bounds.center);
         return bounds.center;
     }
 
