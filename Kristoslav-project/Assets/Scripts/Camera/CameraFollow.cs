@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     bool followZ = false;
     [SerializeField]
-    float maxDistance;
+    float maxDistance = 2;
 
     Camera mCamera;
     // Start is called before the first frame update

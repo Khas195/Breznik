@@ -5,13 +5,13 @@ using UnityEngine;
 public class RotateToward : MonoBehaviour
 {
     [SerializeField]
-    GameObject host;
+    GameObject host = null;
     [SerializeField]
-    GameObject target;
+    GameObject target = null;
     [SerializeField]
-    float rotateSpeed;
+    float rotateSpeed = 2;
     [SerializeField]
-    bool rotateY;
+    bool rotateY = false;
 
 
     // Update is called once per frame

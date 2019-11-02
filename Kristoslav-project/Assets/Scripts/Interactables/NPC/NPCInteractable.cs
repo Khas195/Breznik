@@ -16,13 +16,12 @@ public class NPCInteractable : IInteractable
     [SerializeField]
     Text npcNameUI = null;
     [SerializeField]
-    Canvas npcCanvas = null;
-    [SerializeField]
-    RotateToward towardCharRotator;
+    RotateToward towardCharRotator = null;
     bool isTracking;
     void Start()
     {
         npcNameUI.text = this.GetName();
+        
     }
     public override void Defocus(GameObject interacter)
     {

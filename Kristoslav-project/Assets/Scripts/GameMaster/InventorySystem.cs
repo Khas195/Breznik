@@ -11,15 +11,6 @@ public class InventorySystem : SingletonMonobehavior<InventorySystem>
     [SerializeField]
     InventoryUIManager uIManager = null;
 
-    [SerializeField]
-    ItemObject test = null;
-    [SerializeField]
-    ItemObject test1 = null;
-
-
-
-    [SerializeField]
-    ItemObject test2 = null;
     protected override void Awake()
     {
         base.Awake();

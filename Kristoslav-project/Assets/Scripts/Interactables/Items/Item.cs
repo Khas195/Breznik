@@ -6,11 +6,11 @@ using UnityEngine;
 public class Item : IInteractable 
 {
     [SerializeField]
-    GameObject itemEntity;
+    GameObject itemEntity = null;
     [SerializeField]
-    ItemObject itemData;
+    ItemObject itemData = null;
     [SerializeField]
-    Canvas itemCanvas;
+    Canvas itemCanvas = null;
     void Awake()
     {
     }
