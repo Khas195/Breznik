@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &317980523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317980524}
+  - component: {fileID: 317980525}
+  m_Layer: 0
+  m_Name: InteractWithObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317980524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317980523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 706283025778376289}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317980525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317980523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092a9228efebdd4c962241b9e134522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1474991716
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +623,7 @@ Transform:
   - {fileID: 706283025237850592}
   - {fileID: 1718198466}
   - {fileID: 1844926099}
+  - {fileID: 317980524}
   m_Father: {fileID: 2123227515284787282}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -729,10 +773,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 317980525}
+        m_MethodName: OnObjectEnterSphere
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExit:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1844926100}
+        m_MethodName: OnObjectExitSphere
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 317980525}
         m_MethodName: OnObjectExitSphere
         m_Mode: 0
         m_Arguments:
@@ -903,15 +969,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c920cf226a1bce49af4db463705b472, type: 3}
---- !u!1 &3814753695939958152 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2129666816750094851, guid: 5c920cf226a1bce49af4db463705b472,
-    type: 3}
-  m_PrefabInstance: {fileID: 2990006327961427851}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2123227515284787282 stripped
+--- !u!4 &5917570564158883412 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3749698335119577049, guid: 5c920cf226a1bce49af4db463705b472,
+  m_CorrespondingSourceObject: {fileID: 8890613615442270687, guid: 5c920cf226a1bce49af4db463705b472,
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
@@ -921,9 +981,15 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5917570564158883412 stripped
+--- !u!4 &2123227515284787282 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8890613615442270687, guid: 5c920cf226a1bce49af4db463705b472,
+  m_CorrespondingSourceObject: {fileID: 3749698335119577049, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3814753695939958152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2129666816750094851, guid: 5c920cf226a1bce49af4db463705b472,
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}

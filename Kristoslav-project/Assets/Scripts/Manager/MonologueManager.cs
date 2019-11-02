@@ -10,7 +10,6 @@ public class MonologueManager : MonoBehaviour
     [SerializeField]
     Text monologueText;
 
-    [SerializeField]
     MonologueData curData;
     [SerializeField]
     Queue<MonologueData> monologueList = new Queue<MonologueData>();
