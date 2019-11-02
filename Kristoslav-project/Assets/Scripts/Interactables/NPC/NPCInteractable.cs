@@ -12,13 +12,13 @@ public class NPCInteractable : IInteractable
     [SerializeField]
     CharacterData playerData = null;
     [SerializeField]
-    float rotateSpeed = 0;
-    [SerializeField]
     float breakConversationDistance = 0;
     [SerializeField]
     Text npcNameUI = null;
     [SerializeField]
     Canvas npcCanvas = null;
+    [SerializeField]
+    RotateToward towardCharRotator;
     bool isTracking;
     void Start()
     {
@@ -59,10 +59,10 @@ public class NPCInteractable : IInteractable
     }
     void Update()
     {
-        RotateTowardCamera();
+        //RotateTowardCamera();
         if (isTracking)
         {
-            RotateTowardPlayer();
+            this.towardCharRotator.enabled = true;
             if (Vector3.Distance(playerData.position, host.transform.position) > breakConversationDistance)
             {
                 isTracking = false;
@@ -71,24 +71,11 @@ public class NPCInteractable : IInteractable
             }
             if (GameMaster.GetInstance().GetCurrentGameState().GetState() != GameState.States.InDiagloues)
             {
+                this.towardCharRotator.enabled = false;
                 isTracking = false;
             }
 
         }
-    }
-    private void RotateTowardCamera()
-    {
-        var camPos = playerData.cameraPos;
-        camPos.y = 0;
-        var charPos = host.transform.position;
-        charPos.y = 0;
-        npcCanvas.transform.rotation = Quaternion.LookRotation((camPos - charPos).normalized);
-    }
-    private void RotateTowardPlayer()
-    {
-        var direction = (playerData.position - host.transform.position).normalized;
-        var lookRotation = Quaternion.LookRotation(direction);
-        host.transform.rotation = Quaternion.Slerp(host.transform.rotation, lookRotation, rotateSpeed * Time.deltaTime);
     }
 
     public override string GetName()

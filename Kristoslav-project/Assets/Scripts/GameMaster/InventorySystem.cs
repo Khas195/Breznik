@@ -25,36 +25,7 @@ public class InventorySystem : SingletonMonobehavior<InventorySystem>
         base.Awake();
         inventory.ClearContainer();
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            this.AddItem(test);
-            FocusItem(test);
-        }
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            this.AddItem(test1);
-            FocusItem(test1);
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            this.AddItem(test2);
-            FocusItem(test2);
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            this.RemoveItem(test);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            this.RemoveItem(test1);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            this.RemoveItem(test2);
-        }
-    }
+    
     public void AddItem(ItemObject newItem)
     {
         if (inventory.AddItem(newItem))
