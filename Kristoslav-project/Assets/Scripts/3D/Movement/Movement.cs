@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 /// <summary>
 /// This class handles all movement related behaviors in 3D
@@ -14,12 +15,14 @@ public class Movement : IMovement
     /// The Collider of the character's model;
     /// </summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     Collider charCollider = null;
 
     /// <summary>
     /// The collider this character will use while it is airborned. 
     ///</summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     Collider charAirbornedCollider = null;
     /// <summary>
     /// Decide if the host object should move foward accodring the camera's facing direction.!--
@@ -32,6 +35,7 @@ public class Movement : IMovement
     /// Not needed if shouldMoveTowardCameraDirection is false 
     /// </summary>
     [SerializeField]
+    [ShowIf("rotateTowardMovingDir")]
     float rotateSpeed = 5f;
     /// <summary>
     ///  The list of points which is needed to know whether the host object is airborned or not
