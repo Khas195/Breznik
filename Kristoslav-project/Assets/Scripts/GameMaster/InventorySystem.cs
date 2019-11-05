@@ -2,9 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+public class OnItemEvent : UnityEvent<ItemObject>{
+}
 public class InventorySystem : SingletonMonobehavior<InventorySystem>
 {
+    public OnItemEvent onItemCollected = new OnItemEvent();
     [SerializeField]
     InventoryObject inventory = null;
 
@@ -22,6 +26,7 @@ public class InventorySystem : SingletonMonobehavior<InventorySystem>
         if (inventory.AddItem(newItem))
         {
             uIManager.AddItem(newItem);
+            onItemCollected.Invoke(newItem);
         }
     }
     public void RemoveItem(ItemObject targetItem)

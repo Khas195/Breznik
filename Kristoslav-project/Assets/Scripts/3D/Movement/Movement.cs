@@ -41,8 +41,8 @@ public class Movement : IMovement
 
 
     Rigidbody charRigidbody = null;
-    int moveForward = 0;
-    int moveSide = 0;
+    float moveForward = 0;
+    float moveSide = 0;
     bool jumpSignal = false;
     Transform targetTransform = null;
     float distanceToGround = 0.1f;
@@ -82,10 +82,8 @@ public class Movement : IMovement
             if (forward != 0 || side != 0)
             {
                 // Choose whether the forward has a bigger value or the side
-                moveForward = (int)(Mathf.Abs(forward) > Mathf.Abs(side) ? forward : side);
-
+                moveForward = (Mathf.Abs(forward) > Mathf.Abs(side) ? forward : side);
                 moveForward = Mathf.Abs(moveForward);
-
                 RotateTowardMovingDirection(forward, side, relativeTo);
             }
             else
@@ -96,8 +94,8 @@ public class Movement : IMovement
         }
         else
         {
-            moveForward = (int)forward;
-            moveSide = (int)side;
+            moveForward = forward;
+            moveSide = side;
         }
     }
 
@@ -133,7 +131,7 @@ public class Movement : IMovement
     /// <param name="speed"> speed is the desired movement speed for the host object.</param>
     /// <param name="forward"> forward is how much the player need to move forward or backward.</param>
     /// <param name="side"> side is how much the player need to move sideway.</param>
-    void Step(float speed, int forward, int side)
+    void Step(float speed, float forward, float side)
     {
         var forwardDirection = targetTransform.forward * forward;
         var sideDirection = targetTransform.right * side;

@@ -11,12 +11,11 @@ public class InventoryObject : ScriptableObject
 
     public bool AddItem(ItemObject newItem)
     {
-        if (container.Contains(newItem))
+        if (container.Contains(newItem) )
         {
             Logger.InventoryDebug("Trying to add the same instance of an item twice");
             return false;
         }
-
         container.Add(newItem);
         return true;
     }
