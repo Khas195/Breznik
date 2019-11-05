@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 /// <summary>
 /// The player controlled character.
@@ -10,20 +11,22 @@ public class PlayerCharacter : Character
     /// <summary>
     /// The player character's stats
     /// </summary>
-    [Header("Character Stats Holder")]
+    [Space]
     [SerializeField]
+    [BoxGroup("Character Stats Holder")]
     CharacterData characterData = null;
     /// <summary>
     /// The camera that follow the player
     /// </summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     protected Camera playerCamera = null;
 
-    [Header("Action costs")]
     /// <summary>
     /// The cost of attack when the character play an attack animation. 
     /// </summary>
     [SerializeField]
+    [BoxGroup("Action Cost")]
     PlayerActionCost attackCost = null;
 
     /// <summary>
@@ -96,7 +99,7 @@ public class PlayerCharacter : Character
 
     public override bool RequestJump()
     {
-       return base.RequestJump(); 
+        return base.RequestJump();
     }
     public override bool RequestMove(float forward, float side)
     {
@@ -105,8 +108,9 @@ public class PlayerCharacter : Character
             this.RequestMovementType(Movement.MovementType.Walk);
         }
         var shouldMove = true;
-        if (moveConditions.IsSatisfied(this) == false) {
-            forward =side = 0;
+        if (moveConditions.IsSatisfied(this) == false)
+        {
+            forward = side = 0;
             shouldMove = false;
         }
         movementBehavior.MoveRelativeTo(forward, side, playerCamera.transform);
