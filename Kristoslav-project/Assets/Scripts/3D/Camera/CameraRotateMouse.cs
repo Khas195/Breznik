@@ -36,7 +36,6 @@ public class CameraRotateMouse : MonoBehaviour
             curPitch = headLowerLimit;
         }
         pitchPivot.transform.localRotation = Quaternion.Euler(curPitch, 0, 0);
-        Logger.CameraDebug("Local euler angles of pitch pivot: " + pitchPivot.localEulerAngles);
     }
 
 }

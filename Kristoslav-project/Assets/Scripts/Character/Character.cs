@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,45 +11,51 @@ using UnityEngine.Events;
 /// </summary>
 public class Character : MonoBehaviour
 {
-    [Header("Requirements")]
     /// <summary>
     /// The RigidBody of the Character's model. <br/>
     /// Need to be set in Unity Editor.
     /// </summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     protected Rigidbody hostRigidBody;
-    
+
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
     /// If the character does not have a movement behavior, he/she will not be able to move.
     /// </summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     protected IMovement movementBehavior;
 
 
+    [Space]
     /// <summary>
     /// This is event is called when an attack is successfully trigger.
     /// </summary>
     [SerializeField]
+    [BoxGroup("Animation Related")]
     protected UnityEvent onCharacterAttack;
     /// <summary>
     /// Reference to the animator control.
     /// </summary>
     [SerializeField]
+    [BoxGroup("Animation Related")]
     protected CharacterAnimatorControl animatorControl;
 
-    [Header("Character conditions check for actions")]
+    [Space]
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     /// jumpConditions check whether it is possible to jump.
     /// </summary>
     [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
     protected ConditionsChecker jumpConditions;
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     /// moveConditions check whether it is possible to move
     /// </summary>
     [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
     protected ConditionsChecker moveConditions;
 
     /// <summary>
@@ -56,6 +63,7 @@ public class Character : MonoBehaviour
     ///  attackConditions check wheter the character can attack.
     /// </summary>
     [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
     protected ConditionsChecker attackConditions;
 
     /// <summary>
@@ -63,6 +71,7 @@ public class Character : MonoBehaviour
     /// changeMoveTypeConditions check whether it is possible to change the current move mode. 
     /// </summary>
     [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
     protected ConditionsChecker changeMoveTypeConditions;
     public virtual void Awake()
     {

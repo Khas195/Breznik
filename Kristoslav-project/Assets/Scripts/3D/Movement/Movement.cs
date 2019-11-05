@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 /// <summary>
 /// This class handles all movement related behaviors in 3D
@@ -14,12 +15,14 @@ public class Movement : IMovement
     /// The Collider of the character's model;
     /// </summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     Collider charCollider = null;
 
     /// <summary>
     /// The collider this character will use while it is airborned. 
     ///</summary>
     [SerializeField]
+    [BoxGroup("Requirements")]
     Collider charAirbornedCollider = null;
     /// <summary>
     /// Decide if the host object should move foward accodring the camera's facing direction.!--
@@ -32,6 +35,7 @@ public class Movement : IMovement
     /// Not needed if shouldMoveTowardCameraDirection is false 
     /// </summary>
     [SerializeField]
+    [ShowIf("rotateTowardMovingDir")]
     float rotateSpeed = 5f;
     /// <summary>
     ///  The list of points which is needed to know whether the host object is airborned or not
@@ -41,8 +45,8 @@ public class Movement : IMovement
 
 
     Rigidbody charRigidbody = null;
-    int moveForward = 0;
-    int moveSide = 0;
+    float moveForward = 0;
+    float moveSide = 0;
     bool jumpSignal = false;
     Transform targetTransform = null;
     float distanceToGround = 0.1f;
@@ -82,10 +86,8 @@ public class Movement : IMovement
             if (forward != 0 || side != 0)
             {
                 // Choose whether the forward has a bigger value or the side
-                moveForward = (int)(Mathf.Abs(forward) > Mathf.Abs(side) ? forward : side);
-
+                moveForward = (Mathf.Abs(forward) > Mathf.Abs(side) ? forward : side);
                 moveForward = Mathf.Abs(moveForward);
-
                 RotateTowardMovingDirection(forward, side, relativeTo);
             }
             else
@@ -96,10 +98,9 @@ public class Movement : IMovement
         }
         else
         {
-            moveForward = (int)forward;
-            moveSide = (int)side;
+            moveForward = forward;
+            moveSide = side;
         }
-        Logger.MovementDebug("Movement(forward, side): " + moveForward + ", " + moveSide);
     }
 
     /// <summary>
@@ -114,7 +115,6 @@ public class Movement : IMovement
         var sideDir = relativeTo.right * side;
         var moveDir = forwardDir + sideDir;
         moveDir.y = 0;
-        Logger.MovementDebug("Move Direction" + moveDir);
         var newDir = Vector3.RotateTowards(charRigidbody.transform.forward, moveDir, rotateSpeed * Time.deltaTime, 0.0f);
         charRigidbody.rotation = Quaternion.LookRotation(newDir);
     }
@@ -135,16 +135,14 @@ public class Movement : IMovement
     /// <param name="speed"> speed is the desired movement speed for the host object.</param>
     /// <param name="forward"> forward is how much the player need to move forward or backward.</param>
     /// <param name="side"> side is how much the player need to move sideway.</param>
-    void Step(float speed, int forward, int side)
+    void Step(float speed, float forward, float side)
     {
         var forwardDirection = targetTransform.forward * forward;
         var sideDirection = targetTransform.right * side;
 
         var moveDirection = forwardDirection + sideDirection;
-        Logger.MovementDebug("Movement Direction: " + moveDirection);
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
-        Logger.MovementDebug("Movement Velocity after each step: " + charRigidbody.velocity);
     }
     private void Update()
     {
