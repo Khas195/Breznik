@@ -43,6 +43,18 @@ public class Movement : IMovement
     [SerializeField]
     List<Transform> checkGroundsList = new List<Transform>();
 
+    [SerializeField]
+    [ReadOnly]
+    [BoxGroup("Character Speed")]
+    float targetSpeed = 0;
+    [SerializeField]
+    [ReadOnly]
+    [BoxGroup("Character Speed")]
+    float currentSpeed = 0;
+    [SerializeField]
+    [BoxGroup("Character Speed")]
+    float smoothAccel = 0;
+
 
     Rigidbody charRigidbody = null;
     float moveForward = 0;
@@ -144,14 +156,7 @@ public class Movement : IMovement
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
     }
-    [SerializeField]
-    [ReadOnly]
-    float targetSpeed = 0;
-    [SerializeField]
-    [ReadOnly]
-    float currentSpeed = 0;
-    [SerializeField]
-    float smoothAccel = 0;
+
     private void Update()
     {
         targetSpeed = (moveForward != 0 | moveSide != 0) ? GetSpeedBasedOnMode() : 0;
@@ -171,7 +176,7 @@ public class Movement : IMovement
         ProcessMovement();
     }
 
-    
+
     /// <summary>
     /// This function process the movement of the host object according to the forward, side and jump inputs
     /// The movement speed is also changed if the host object is airborned

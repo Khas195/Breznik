@@ -8,11 +8,11 @@ public class AnimationComboEvent : MonoBehaviour
     GameEvent OnAttackBegin = null;
     [SerializeField]
     GameEvent OnAttackEnd = null;
-    public void BeginCombo(int comboCount) {
+    public void BeginCombo() {
         OnAttackBegin.Raise();
     }
 
-    public void EndCombo(int comboCount) {
+    public void EndCombo() {
         OnAttackEnd.Raise();
     }
 }
