@@ -9,7 +9,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// The animator of the character.
     /// </summary>
     [SerializeField]
-    Animator animator =null;
+    Animator animator = null;
 
 
 
@@ -17,7 +17,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// The rigidbody of the model of the Character.
     /// </summary>
     [SerializeField]
-    Rigidbody hostRb =null;
+    Rigidbody hostRb = null;
     [SerializeField]
     Character character = null;
     bool isAttacking = false;
@@ -62,18 +62,20 @@ public class CharacterAnimatorControl : MonoBehaviour
     {
         isAttacking = true;
         comboCount += 1;
+        animator.applyRootMotion = true;
+        movement.gameObject.SetActive(false);
+        animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
     }
     public void OnAttackAnimEnd()
     {
         isAttacking = false;
-        if (comboCount >= maxComboCount)
+        if (comboCount >= maxComboCount || animator.GetBool("attack") == false)
         {
             comboCount = 0;
             animator.ResetTrigger("attack");
-        }
-        if (animator.GetBool("attack") == false)
-        {
-            comboCount = 0;
+            animator.applyRootMotion = false;
+            movement.gameObject.SetActive(true);
+            animator.updateMode = AnimatorUpdateMode.Normal;
         }
     }
     public bool IsInAttackingAnimation()
