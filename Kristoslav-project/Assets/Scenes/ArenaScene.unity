@@ -4053,6 +4053,21 @@ PrefabInstance:
       propertyPath: rotateTowardMovingDir
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 706283025201240040, guid: d1492488a67a4534d9d7e3b8534aa96f,
+        type: 3}
+      propertyPath: timeToMaxSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 706283025201240040, guid: d1492488a67a4534d9d7e3b8534aa96f,
+        type: 3}
+      propertyPath: interpolateValue
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 706283025201240040, guid: d1492488a67a4534d9d7e3b8534aa96f,
+        type: 3}
+      propertyPath: smoothAccel
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1492488a67a4534d9d7e3b8534aa96f, type: 3}
 --- !u!1 &1299057179
