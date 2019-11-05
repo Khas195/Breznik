@@ -144,9 +144,21 @@ public class Movement : IMovement
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
     }
+    [SerializeField]
+    [ReadOnly]
+    float targetSpeed = 0;
+    [SerializeField]
+    [ReadOnly]
+    float currentSpeed = 0;
+    [SerializeField]
+    float smoothAccel = 0;
     private void Update()
     {
+        targetSpeed = (moveForward != 0 | moveSide != 0) ? GetSpeedBasedOnMode() : 0;
+        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, smoothAccel);
+
         this.data.currentVelocity = charRigidbody.velocity;
+        this.data.currentSpeed = currentSpeed;
         if (charAirbornedCollider)
         {
             var isAscending = charRigidbody.velocity.y > 0f;
@@ -159,6 +171,7 @@ public class Movement : IMovement
         ProcessMovement();
     }
 
+    
     /// <summary>
     /// This function process the movement of the host object according to the forward, side and jump inputs
     /// The movement speed is also changed if the host object is airborned
@@ -170,9 +183,7 @@ public class Movement : IMovement
             Jump();
             jumpSignal = false;
         }
-        float moveSpeed = 0;
-        moveSpeed = GetSpeedBasedOnMode();
-        Step(moveSpeed, moveForward, moveSide);
+        Step(currentSpeed, moveForward, moveSide);
     }
 
     /// <summary>

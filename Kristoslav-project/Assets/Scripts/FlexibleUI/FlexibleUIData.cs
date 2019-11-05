@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,9 @@ public class FlexibleUIData : ScriptableObject
     public DotsUIData staminaDots;
 
     [Header("Inventory Item Background")]
+    [ShowAssetPreview]
     public SpriteState itemButtonSpriteState;
 
-    public Sprite ItemBackgroundSprite { get; internal set; }
+    [ShowAssetPreview]
+    public Sprite ItemBackgroundSprite ;
 }
