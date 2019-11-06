@@ -29,11 +29,8 @@ public class InInventory : GameState
     }
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1)) {
-                return;
-            }
             GameMaster.GetInstance().RequestGameState(GameState.States.InGame);
         }
     }

@@ -9,7 +9,8 @@ public class IsNotPlayingAnimation : CharacterBehaviorCondition
     public override bool IsSatisfied(Character character)
     {
         var charAnimControl = character.GetCharacterAnimator();
-        if ( charAnimControl.IsPlaying(animationName)) {
+        if (charAnimControl.IsPlaying(animationName))
+        {
             return false;
         }
         return true;
