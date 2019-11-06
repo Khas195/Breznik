@@ -13,6 +13,7 @@ public class AnimationComboEvent : MonoBehaviour
     }
 
     public void EndCombo() {
+        Debug.Log("Combo end");
         OnAttackEnd.Raise();
     }
 }

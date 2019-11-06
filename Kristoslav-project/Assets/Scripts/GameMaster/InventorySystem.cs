@@ -29,6 +29,12 @@ public class InventorySystem : SingletonMonobehavior<InventorySystem>
             onItemCollected.Invoke(newItem);
         }
     }
+
+    public bool IsOpen()
+    {
+        return uIManager.IsOpen();
+    }
+
     public void RemoveItem(ItemObject targetItem)
     {
         if (inventory.RemoveItem(targetItem))

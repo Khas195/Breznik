@@ -45,6 +45,11 @@ public class InventoryUIManager : MonoBehaviour
         }
     }
 
+    public bool IsOpen()
+    {
+        return this.gameObject.activeSelf;
+    }
+
     public void RemoveItem(ItemObject targetItem)
     {
         var targetSlot = slots.Find(slot => slot.GetItemObject() == targetItem);
