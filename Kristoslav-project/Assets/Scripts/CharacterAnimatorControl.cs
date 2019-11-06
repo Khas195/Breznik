@@ -64,7 +64,6 @@ public class CharacterAnimatorControl : MonoBehaviour
     {
         isAttacking = true;
         comboCount += 1;
-        //SwitchRootMotion(true);
     }
     public void OnAttackAnimEnd()
     {
@@ -74,14 +73,7 @@ public class CharacterAnimatorControl : MonoBehaviour
             isAttacking = false;
             comboCount = 0;
             animator.ResetTrigger("attack");
-            //SwitchRootMotion(false);
         }
-    }
-
-    private void SwitchRootMotion(bool active)
-    {
-        animator.applyRootMotion = active;
-        animator.updateMode = active ? AnimatorUpdateMode.AnimatePhysics : AnimatorUpdateMode.Normal;
     }
 
     public bool IsInAttackingAnimation()
