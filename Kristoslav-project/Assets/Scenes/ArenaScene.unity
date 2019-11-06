@@ -4058,6 +4058,11 @@ PrefabInstance:
       propertyPath: maxComboCount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5272210171014145444, guid: d1492488a67a4534d9d7e3b8534aa96f,
+        type: 3}
+      propertyPath: rootBone
+      value: 
+      objectReference: {fileID: 1911477618}
     - target: {fileID: 311056118, guid: d1492488a67a4534d9d7e3b8534aa96f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6299,6 +6304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6848efcf07d7b4493d8cf9a2bccc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1911477618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 417572879986000955, guid: d1492488a67a4534d9d7e3b8534aa96f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1268520162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1920953305
 GameObject:
   m_ObjectHideFlags: 0
