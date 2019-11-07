@@ -137,7 +137,11 @@ MonoBehaviour:
   wielder: {fileID: 7224959950909961287}
   wielderChar: {fileID: 311056116}
   InKillBox: []
-  hitboxes: []
+  hitboxes:
+  - {fileID: 1841920560}
+  - {fileID: 69851962009098128}
+  - {fileID: 7766168901856136893}
+  - {fileID: 2113142331773439123}
 --- !u!1 &1841920558
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +883,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDamageTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1718198469}
+        m_MethodName: DealsDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8553778457898136724
 GameObject:
   m_ObjectHideFlags: 0
