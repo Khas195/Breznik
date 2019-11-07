@@ -12,9 +12,6 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     Character wielderChar = null;
     [SerializeField]
-    [ReadOnly]
-    List<Character> InKillBox = new List<Character>();
-    [SerializeField]
     List<Collider> hitboxes;
 
     void Start()
