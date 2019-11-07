@@ -38,46 +38,44 @@ public class CharacterAnimatorControl : MonoBehaviour
     {
         var moveSpeed = movement.GetMovementData().currentSpeed;
         animator.SetFloat("VelocityY", hostRb.velocity.y);
-
         animator.SetFloat("MoveSpeed", moveSpeed);
+
+        if (isAttacking)
+        {
+        }
     }
     public void PlayAttackAnimation()
     {
         animator.SetTrigger("attack");
     }
-
-    private AnimationClip GetCurrentAnimationClip()
-    {
-        return animator.GetCurrentAnimatorClipInfo(0)[0].clip;
-    }
     public bool IsPlaying(string animationName)
     {
-        if (GetCurrentAnimationClip().name == animationName)
+        var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName(animationName) && stateInfo.normalizedTime < 1.0f)
         {
             return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
     }
     public void OnAttackAnimBegin()
     {
         isAttacking = true;
         comboCount += 1;
-        animator.applyRootMotion = true;
-        movement.gameObject.SetActive(false);
-        animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
     }
     public void OnAttackAnimEnd()
     {
-        isAttacking = false;
         if (comboCount >= maxComboCount || animator.GetBool("attack") == false)
         {
+            var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            isAttacking = false;
             comboCount = 0;
             animator.ResetTrigger("attack");
-            animator.applyRootMotion = false;
-            movement.gameObject.SetActive(true);
-            animator.updateMode = AnimatorUpdateMode.Normal;
         }
     }
+
     public bool IsInAttackingAnimation()
     {
         return isAttacking;

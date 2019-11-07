@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 3426239374228711168
-    second: AttackA
+    second: AttackA_Clip
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: AttackA
+      name: AttackA_Clip
       takeName: AttackA
       internalID: 0
-      firstFrame: 294
-      lastFrame: 334
+      firstFrame: 293
+      lastFrame: 343
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -58,25 +58,11 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0
-        functionName: BeginCombo
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 1
-        functionName: EndCombo
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 294
+      additiveReferencePoseFrame: 293
     isReadable: 0
   meshes:
     lODScreenPercentages: []
