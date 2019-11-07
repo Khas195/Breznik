@@ -14,7 +14,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     /// The State stack that is used to manage the game states.
     /// The top state is always the current state of the game master.
     /// </summary>
-    StateStack gameStateStack = new StateStack();
+    StateStack<GameState> gameStateStack = new StateStack<GameState>();
 
 
 
@@ -40,7 +40,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
 
     public GameState GetCurrentGameState()
     {
-        return (GameState)gameStateStack.GetPeek();
+        return gameStateStack.GetPeek();
     }
 
     protected override void Awake()
@@ -67,6 +67,14 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     {
         possibleGameStates.Clear();
         FindAllPossibleStates();
+    }
+    public bool IsInState(GameState.States stateToCheck)
+    {
+        var currentState = this.gameStateStack.GetPeek();
+        if (currentState && currentState.GetState() == stateToCheck ){
+            return true;
+        }
+        return false;
     }
     /// <summary>
     /// Set the time scale of the game.
@@ -97,7 +105,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     /// <param name="loadingText">The text to show the progress.</param>
     public void LoadScene(Slider slider, Text loadingText)
     {
-        var currentState = (GameState)gameStateStack.GetPeek();
+        var currentState = gameStateStack.GetPeek();
         if (currentState == null || currentState.GetState() != GameState.States.Loading)
         {
             Logger.GameMasterDebug(this, " tried to load a scene while game master is not in loading state");

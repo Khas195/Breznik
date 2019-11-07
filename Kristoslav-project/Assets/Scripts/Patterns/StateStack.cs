@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-public class StateStack 
+public class StateStack<T> where T : State
 {
-    Stack<State> stack = new Stack<State>();
+    Stack<T> stack = new Stack<T>();
 
-    public void Push(State newState)
+    public void Push(T newState)
     {
         if (newState == null)
         {
@@ -30,9 +30,9 @@ public class StateStack
         return stack.Count <= 0;
     }
 
-    public State Pop()
+    public T Pop()
     {
-        State result = null;
+        T result = null;
         if (IsStackEmpty())
         {
             Logger.StateStackDebug("Popping an empty stack");
@@ -59,7 +59,7 @@ public class StateStack
         }
     }
 
-    public State GetPeek()
+    public T GetPeek()
     {
         if (stack.Count > 0) {
             return stack.Peek();
@@ -68,7 +68,7 @@ public class StateStack
         }
     }
 
-    public bool Contains(State playingState)
+    public bool Contains(T playingState)
     {
         return stack.Contains(playingState);
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class CharacterAnimatorControl : MonoBehaviour
@@ -10,9 +11,6 @@ public class CharacterAnimatorControl : MonoBehaviour
     /// </summary>
     [SerializeField]
     Animator animator = null;
-
-
-
     /// <summary>
     /// The rigidbody of the model of the Character.
     /// </summary>
@@ -20,13 +18,9 @@ public class CharacterAnimatorControl : MonoBehaviour
     Rigidbody hostRb = null;
     [SerializeField]
     Character character = null;
+    [SerializeField]
+    [ReadOnly]
     bool isAttacking = false;
-    [SerializeField]
-    int maxComboCount = 0;
-    [SerializeField]
-    int comboCount = 0;
-
-
     IMovement movement;
     void Start()
     {
@@ -39,10 +33,6 @@ public class CharacterAnimatorControl : MonoBehaviour
         var moveSpeed = movement.GetMovementData().currentSpeed;
         animator.SetFloat("VelocityY", hostRb.velocity.y);
         animator.SetFloat("MoveSpeed", moveSpeed);
-
-        if (isAttacking)
-        {
-        }
     }
     public void PlayAttackAnimation()
     {
@@ -63,17 +53,10 @@ public class CharacterAnimatorControl : MonoBehaviour
     public void OnAttackAnimBegin()
     {
         isAttacking = true;
-        comboCount += 1;
     }
     public void OnAttackAnimEnd()
     {
-        if (comboCount >= maxComboCount || animator.GetBool("attack") == false)
-        {
-            var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            isAttacking = false;
-            comboCount = 0;
-            animator.ResetTrigger("attack");
-        }
+        isAttacking = false;
     }
 
     public bool IsInAttackingAnimation()
