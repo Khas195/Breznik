@@ -90,9 +90,6 @@ MonoBehaviour:
   hostRb: {fileID: 239632818}
   character: {fileID: 311056116}
   isAttacking: 0
-  weapon: {fileID: 1718198469}
-  maxCombo: 4
-  curCombo: 0
 --- !u!1 &1718198465
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,9 +135,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   wielder: {fileID: 7224959950909961287}
-  killBox: {fileID: 1841920561}
   wielderChar: {fileID: 311056116}
   InKillBox: []
+  hitboxes:
+  - {fileID: 1841920560}
+  - {fileID: 69851962009098128}
+  - {fileID: 7766168901856136893}
+  - {fileID: 2113142331773439123}
 --- !u!1 &1841920558
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +881,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9993eb2adb36d4ebed4a739851633e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDamageTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1718198469}
+        m_MethodName: DealsDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8553778457898136724
 GameObject:
   m_ObjectHideFlags: 0

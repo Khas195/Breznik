@@ -531,9 +531,6 @@ MonoBehaviour:
   hostRb: {fileID: 5786944491642378433}
   character: {fileID: 6404111022877999381}
   isAttacking: 0
-  weapon: {fileID: 0}
-  maxCombo: 4
-  curCombo: 0
 --- !u!1 &6404111021844266572
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6404111022288793417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyEntity_pfb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
