@@ -21,14 +21,6 @@ public class PlayerCharacter : Character
     [SerializeField]
     [BoxGroup("Requirements")]
     protected Camera playerCamera = null;
-
-    /// <summary>
-    /// The cost of attack when the character play an attack animation. 
-    /// </summary>
-    [SerializeField]
-    [BoxGroup("Action Cost")]
-    PlayerActionCost attackCost = null;
-
     /// <summary>
     /// Whether the character should regen health and stamina or not.
     /// </summary>
@@ -136,8 +128,6 @@ public class PlayerCharacter : Character
     }
     public void OnPlayerAttack()
     {
-        this.characterData.statsData.curStamina -= attackCost.cost;
-        characterData.statsData.curStamina = Mathf.Clamp(characterData.statsData.curStamina, 0, characterData.statsData.stamina);
         TriggerRegenCooldown();
     }
 }
