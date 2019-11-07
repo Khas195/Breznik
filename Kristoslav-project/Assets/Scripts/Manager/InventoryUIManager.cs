@@ -8,6 +8,8 @@ public class InventoryUIManager : MonoBehaviour
 {
 
     [SerializeField]
+    GameObject hostObject = null;
+    [SerializeField]
     GameObject slotPrefab = null;
     [SerializeField]
     Transform viewPoint = null;
@@ -45,9 +47,19 @@ public class InventoryUIManager : MonoBehaviour
         }
     }
 
+    public void ShowUI()
+    {
+        hostObject.SetActive(true);
+    }
+
+    public void HideUI()
+    {
+        hostObject.SetActive(false);
+    }
+
     public bool IsOpen()
     {
-        return this.gameObject.activeSelf;
+        return hostObject.activeSelf;
     }
 
     public void RemoveItem(ItemObject targetItem)
@@ -64,7 +76,8 @@ public class InventoryUIManager : MonoBehaviour
 
         if (activeSlot == targetSlot)
         {
-            if (TrySelectNextItem(targetSlot)){
+            if (TrySelectNextItem(targetSlot))
+            {
                 activeSlot = null;
             }
         }

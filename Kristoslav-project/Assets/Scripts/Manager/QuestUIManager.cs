@@ -10,6 +10,15 @@ public class QuestUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+    public void OnQuestAdded(Quest addedQuest)
+    {
+        UpdateQuestLod();
+    }
+
+    private void UpdateQuestLod()
+    {
         var activeQuests = QuestSystem.GetInstance().GetActiveQuests();
         questLog.text = "";
         for (int i = 0; i < activeQuests.Count; i++)
@@ -17,7 +26,7 @@ public class QuestUIManager : MonoBehaviour
             questLog.text += activeQuests[i].description + "\n";
             for (int j = 0; j < activeQuests[i].objectives.Count; j++)
             {
-                questLog.text += activeQuests[i].objectives[j].description + " " + activeQuests[i].objectives[j].achieved + "/" 
+                questLog.text += activeQuests[i].objectives[j].description + " " + activeQuests[i].objectives[j].achieved + "/"
                 + activeQuests[i].objectives[j].amount + "\n";
             }
         }
