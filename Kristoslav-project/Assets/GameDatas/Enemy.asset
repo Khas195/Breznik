@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cd6da5e12e824bbdbc0faf11779e4, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  statsData: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
+  stats: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
   movementData: {fileID: 11400000, guid: a2fa67714b61fdc4895e2f491bc1ccca, type: 2}
+  rotateSpeed: 20
+  position: {x: 0, y: 0, z: 0}
+  cameraPos: {x: 0, y: 0, z: 0}

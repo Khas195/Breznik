@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
-    float damage = 0;
+    int damage = 0;
     [SerializeField]
     GameObject wielder = null;
     [SerializeField]
@@ -32,12 +32,12 @@ public class Weapon : MonoBehaviour
     }
     public bool TryToDealsDamage(Collider targetCollider)
     {
-        Logger.CharacterDebug(wielderChar, "Character's weapon left something");
+        Logger.CharacterDebug(wielderChar, "Character's weapon touch something");
 
         var otherObject = targetCollider.gameObject;
         if (otherObject != wielder)
         {
-            Logger.CharacterDebug(wielderChar, "Character's weapon didnt left himself.");
+            Logger.CharacterDebug(wielderChar, "Character's weapon didnt touch himself.");
             var character = otherObject.GetComponentInChildren<Character>();
             if (character)
             {

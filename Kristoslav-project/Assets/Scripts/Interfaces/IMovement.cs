@@ -21,6 +21,12 @@ public class IMovement : MonoBehaviour
     protected MovementType moveMode = MovementType.Walk;
     /** All movements actions should be handle in this function*/
     public virtual void Move(float forward, float side) { return; }
+
+    public virtual float GetCurrentSpeed()
+    {
+        return 0;
+    }
+
     /** Signaled that the jump command had been called */
     public virtual void SignalJump()
     {

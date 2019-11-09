@@ -108,14 +108,14 @@ public class Movement : IMovement
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
     }
-
+    public override float GetCurrentSpeed(){
+        return currentSpeed;
+    }
     private void Update()
     {
         targetSpeed = (moveForward != 0 | moveSide != 0) ? GetSpeedBasedOnMode() : 0;
         currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, smoothAccel);
 
-        this.data.currentVelocity = charRigidbody.velocity;
-        this.data.currentSpeed = currentSpeed;
         if (charAirbornedCollider)
         {
             var isAscending = charRigidbody.velocity.y > 0f;

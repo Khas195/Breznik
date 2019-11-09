@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterAnimatorControl : MonoBehaviour
 {
@@ -18,26 +19,21 @@ public class CharacterAnimatorControl : MonoBehaviour
     Rigidbody hostRb = null;
     [SerializeField]
     Character character = null;
-    [SerializeField]
-    [ReadOnly]
-    bool isAttacking = false;
-    IMovement movement;
     void Start()
     {
-        movement = character.GetMovementBehavior();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var moveSpeed = movement.GetMovementData().currentSpeed;
+        var moveSpeed = character.GetCurrentSpeed();
         animator.SetFloat("VelocityY", hostRb.velocity.y);
         animator.SetFloat("MoveSpeed", moveSpeed);
     }
     public void PlayAttackAnimation()
     {
         animator.SetTrigger("attack");
-        isAttacking = true;
+
     }
     public bool IsPlaying(string animationName)
     {
@@ -51,11 +47,21 @@ public class CharacterAnimatorControl : MonoBehaviour
             return false;
         }
     }
-    public void SetIsAttack(bool attack) {
-        isAttacking = attack;
+    public void SetIsAttack(bool attack)
+    {
+        if (attack)
+        {
+            character.OnAttackStart();
+        }
+        else
+        {
+            character.OnAttackDone();
+        }
     }
     public bool IsInAttackingAnimation()
     {
-        return isAttacking;
+        return character.IsAttacking();
     }
+
+
 }

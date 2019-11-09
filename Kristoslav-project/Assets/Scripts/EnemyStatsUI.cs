@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemyStatsUI : MonoBehaviour
 {
     [SerializeField]
-    EnemyCharacter character = null;
+    Character character = null;
+    [SerializeField]
+    CharacterStatsData baseStats = null;
     [SerializeField]
     FlexibleUIStatsBar healthBar = null;
     [SerializeField]
@@ -22,8 +24,7 @@ public class EnemyStatsUI : MonoBehaviour
 
     private void UpdateHealthbar()
     {
-        var statsData = character.GetCharacterStats();
-        var targetHealthValue = statsData.curHealth / statsData.health;
+        var targetHealthValue = character.GetHealth()/ baseStats.health;
 
         var curHealthValue = healthBar.GetFilledAmount();
 
