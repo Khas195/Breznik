@@ -22,13 +22,15 @@ public class PlayerStatsUI : MonoBehaviour
     /// The character stats data of the character
     /// </summary>
     [SerializeField]
-    CharacterData data = null;
+    CharacterStatsData baseStats = null;
+    [SerializeField]
+    Character player = null;
 
     // Update is called once per frame
     void Update()
     {
-        var targetHealthValue= data.statsData.curHealth/data.statsData.health;
-        var targetStaminaValue = data.statsData. curStamina/data.statsData.stamina;
+        var targetHealthValue= player.GetHealth()/baseStats.health;
+        var targetStaminaValue = player.GetStamina()/baseStats.stamina;
 
         var curHealthValue = healthBar.GetFilledAmount();
 

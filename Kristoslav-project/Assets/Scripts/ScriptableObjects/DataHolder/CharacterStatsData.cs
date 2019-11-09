@@ -2,13 +2,11 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterStatsData", menuName = "Data/Stats", order = 1)]
 public class CharacterStatsData : ScriptableObject {
-    public float health;
-    public float curHealth;
-    public float healthRegenRate;
+    public int health;
+    public int healthRegenRate;
 
-    public float stamina;
-    public float curStamina;
-    public float staminaRegenRate;
+    public int stamina;
+    public int staminaRegenRate;
 
     public float coolDownTilRegen;
 }

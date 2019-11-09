@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,6 +32,14 @@ public class Quest : ScriptableObject
         for (int i = 0; i < objectives.Count; i++)
         {
             objectives[i].Deactivate();
+        }
+    }
+
+    public void Reset()
+    {
+        for (int i = 0; i < objectives.Count; i++)
+        {
+            objectives[i].Reset();
         }
     }
 }

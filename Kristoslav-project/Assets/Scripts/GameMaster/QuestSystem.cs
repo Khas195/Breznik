@@ -17,7 +17,7 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
 
     List<Quest> completedQuest = new List<Quest>();
     [SerializeField]
-    Quest test;
+    Quest test = null;
     void Update()
     {
         UpdateQuests();
@@ -46,7 +46,7 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
             Debug.Log("Trying to receive the same quest");
             return false;
         }
-
+        newQuest.Reset();
         activeQuest.Add(newQuest);
         newQuest.Activate();
         questAddedEvent.Invoke(newQuest);

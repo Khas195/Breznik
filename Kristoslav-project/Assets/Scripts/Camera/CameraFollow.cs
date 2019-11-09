@@ -13,8 +13,6 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     Transform character = null;
     [SerializeField]
-    CharacterData playerData = null;
-    [SerializeField]
     [Tooltip("Each frame the camera move x percentage closer to the target")]
     float followPercentage = 0.02f;
     [SerializeField]
@@ -36,10 +34,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (playerData != null)
-        {
-            playerData.cameraPos = mCamera.transform.position;
-        }
+        
     }
     void FixedUpdate()
     {
