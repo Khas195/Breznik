@@ -23,28 +23,18 @@ public class PlayerCharacter : Character
     /// The cooldown timer for regening after draining health or stamina.
     /// </summary>
     Timer regenCoolDownTimer = null;
-    public override void Awake()
-    {
-        base.Awake();
-    }
     void Start()
     {
         characterData.statsData.curHealth = characterData.statsData.health;
         characterData.statsData.curStamina = characterData.statsData.stamina;
         regenCoolDownTimer = new Timer(characterData.statsData.coolDownTilRegen, StartRegen);
     }
-
     /// <summary>
     /// Set shouldRegen to true
     /// </summary>
     private void StartRegen()
     {
         shouldRegen = true;
-    }
-
-    public override CharacterStatsData GetCharacterStats()
-    {
-        return characterData.statsData;
     }
 
     void Update()
@@ -81,42 +71,9 @@ public class PlayerCharacter : Character
         regenCoolDownTimer.Reset();
         regenCoolDownTimer.Trigger();
     }
-
-    public override bool RequestJump()
-    {
-        return base.RequestJump();
-    }
-    public override bool RequestMove(float forward, float side)
-    {
-        if (changeMoveTypeConditions.IsSatisfied(this) == false)
-        {
-            this.RequestMovementType(Movement.MovementType.Walk);
-        }
-        var shouldMove = true;
-        if (moveConditions.IsSatisfied(this) == false)
-        {
-            forward = side = 0;
-            shouldMove = false;
-        }
-        movementBehavior.MoveRelativeTo(forward, side, playerCamera.transform);
-
-        return shouldMove;
-    }
-
-    public override bool Attack()
-    {
-        return base.Attack();
-    }
-
-    public override bool RequestMovementType(IMovement.MovementType moveType)
-    {
-        return base.RequestMovementType(moveType);
-    }
-
     public override void BeingDamage(float damage)
     {
         base.BeingDamage(damage);
-        this.characterData.statsData.curHealth -= damage;
         TriggerRegenCooldown();
     }
     public void OnPlayerAttack()

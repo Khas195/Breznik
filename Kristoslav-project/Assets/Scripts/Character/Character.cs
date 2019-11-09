@@ -57,6 +57,9 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
     protected ConditionsChecker jumpConditions;
+
+
+
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     /// moveConditions check whether it is possible to move
@@ -80,10 +83,23 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
     protected ConditionsChecker changeMoveTypeConditions;
+
     public virtual void Awake()
     {
         movementBehavior.SetRigidBody(hostRigidBody);
         movementBehavior.SetMovementData(characterData.movementData);
+    }
+    public void RotateToward(Vector3 direction, bool rotateY)
+    {
+        if (moveConditions.IsSatisfied(this) == false) return;
+        if (rotateY == false)
+        {
+           direction.y = 0;
+        }
+        var lookRotation = Quaternion.LookRotation(direction);
+
+        hostRigidBody.transform.rotation = Quaternion.Slerp(hostRigidBody.transform.rotation, lookRotation
+                                        , characterData.rotateSpeed* Time.deltaTime);
     }
 
     /// <summary>
@@ -99,7 +115,7 @@ public class Character : MonoBehaviour
             forward = side = 0;
             result = false;
         }
-        movementBehavior.MoveRelativeTo(forward, side, hostRigidBody.transform);
+        movementBehavior.Move(forward, side);
         return result;
     }
     /// <summary>
@@ -172,7 +188,7 @@ public class Character : MonoBehaviour
     /// <returns> The character stats of the character. Can be null</returns>
     public virtual CharacterStatsData GetCharacterStats()
     {
-        return null;
+        return this.characterData.statsData;
     }
     /// <summary>
     /// Is called if the character are to be damaged.
@@ -180,6 +196,7 @@ public class Character : MonoBehaviour
     /// <param name="damage"> the damage value</param>
     public virtual void BeingDamage(float damage)
     {
+        this.characterData.statsData.curHealth -= damage;
         return;
     }
 }

@@ -10,15 +10,8 @@ public class AttackChainEvent : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var characterAnimatorCtrl = animator.gameObject.transform.GetComponentInChildren<CharacterAnimatorControl>();
-        characterAnimatorCtrl.OnAttackAnimBegin();
+        characterAnimatorCtrl.SetIsAttack(true);
         animator.applyRootMotion = true;
         animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
     }
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        var characterAnimatorCtrl = animator.gameObject.transform.GetComponentInChildren<CharacterAnimatorControl>();
-        characterAnimatorCtrl.OnAttackAnimEnd();
-    }
-
 }

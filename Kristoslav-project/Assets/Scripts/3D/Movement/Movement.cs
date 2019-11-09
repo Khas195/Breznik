@@ -24,19 +24,7 @@ public class Movement : IMovement
     [SerializeField]
     [BoxGroup("Requirements")]
     Collider charAirbornedCollider = null;
-    /// <summary>
-    /// Decide if the host object should move foward accodring the camera's facing direction.!--
-    ///Instead of move forward according to its own facing direction
-    /// </summary>
-    [SerializeField]
-    bool rotateTowardMovingDir = false;
-    /// <summary>
-    /// The rotate speed of the host object toward the camera's facing direction.!--
-    /// Not needed if shouldMoveTowardCameraDirection is false 
-    /// </summary>
-    [SerializeField]
-    [ShowIf("rotateTowardMovingDir")]
-    float rotateSpeed = 5f;
+    
     /// <summary>
     ///  The list of points which is needed to know whether the host object is airborned or not
     /// </summary>
@@ -86,49 +74,13 @@ public class Movement : IMovement
 
     /// <summary>
     ///  This function received the player's inputs (forward and side) then saved them to be processed in the next fixed update.
-    ///If shouldMoveTowardCameraDirection is true then it will rotate the host game object toward the camera's faciing direction first.
     /// </summary>
     /// <param name="forward"> fordward is how much the host game object should move forward and backward</param>
     /// <param name="side"> side is how much the host game object should move sideway</param>
-    /// <param name="relativeTo"> If rotate Toward Moving Dirrection is true, use the forward and side of this to rotate the host object toward when moving.</param>
-    public override void MoveRelativeTo(float forward, float side, Transform relativeTo)
+    public override void Move (float forward, float side)
     {
-        if (rotateTowardMovingDir)
-        {
-            if (forward != 0 || side != 0)
-            {
-                // Choose whether the forward has a bigger value or the side
-                moveForward = (Mathf.Abs(forward) > Mathf.Abs(side) ? forward : side);
-                moveForward = Mathf.Abs(moveForward);
-                RotateTowardMovingDirection(forward, side, relativeTo);
-            }
-            else
-            {
-                moveForward = 0;
-                moveSide = 0;
-            }
-        }
-        else
-        {
-            moveForward = forward;
-            moveSide = side;
-        }
-    }
-
-    /// <summary>
-    ///  Rotate the host game object toward the forward direction of the movement 
-    /// </summary>
-    /// <param name="forward"> fordward is how much the host game object should move forward and backward</param>
-    /// <param name="side"> side is how much the host game object should move sideway</param>
-    /// <param name="relativeTo">Rotate the host object toward the host facing direction.</param>
-    private void RotateTowardMovingDirection(float forward, float side, Transform relativeTo)
-    {
-        var forwardDir = relativeTo.forward * forward;
-        var sideDir = relativeTo.right * side;
-        var moveDir = forwardDir + sideDir;
-        moveDir.y = 0;
-        var newDir = Vector3.RotateTowards(charRigidbody.transform.forward, moveDir, rotateSpeed * Time.deltaTime, 0.0f);
-        charRigidbody.rotation = Quaternion.LookRotation(newDir);
+        moveForward = forward;
+        moveSide = side;
     }
 
     /// <summary>

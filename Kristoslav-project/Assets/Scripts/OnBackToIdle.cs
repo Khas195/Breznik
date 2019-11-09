@@ -9,6 +9,7 @@ public class OnBackToIdle : StateMachineBehaviour
     {
         animator.applyRootMotion = false;
         animator.updateMode = AnimatorUpdateMode.Normal;
+        animator.GetComponentInChildren<CharacterAnimatorControl>().SetIsAttack(false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -37,6 +37,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     public void PlayAttackAnimation()
     {
         animator.SetTrigger("attack");
+        isAttacking = true;
     }
     public bool IsPlaying(string animationName)
     {
@@ -50,15 +51,9 @@ public class CharacterAnimatorControl : MonoBehaviour
             return false;
         }
     }
-    public void OnAttackAnimBegin()
-    {
-        isAttacking = true;
+    public void SetIsAttack(bool attack) {
+        isAttacking = attack;
     }
-    public void OnAttackAnimEnd()
-    {
-        isAttacking = false;
-    }
-
     public bool IsInAttackingAnimation()
     {
         return isAttacking;
