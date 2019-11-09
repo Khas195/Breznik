@@ -7,7 +7,6 @@ public class CharacterData : ScriptableObject {
     public MovementData movementData;
 
     public float rotateSpeed;
-    public Vector3 position;
     
     public Vector3 cameraPos;
 }

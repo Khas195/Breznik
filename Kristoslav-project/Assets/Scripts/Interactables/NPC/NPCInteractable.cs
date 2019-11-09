@@ -10,8 +10,6 @@ public class NPCInteractable : IInteractable
     [SerializeField]
     GameObject host = null;
     [SerializeField]
-    CharacterData playerData = null;
-    [SerializeField]
     float breakConversationDistance = 0;
     [SerializeField]
     string NPCName = "";
@@ -19,6 +17,7 @@ public class NPCInteractable : IInteractable
     Text npcNameUi = null;
     [SerializeField]
     RotateToward towardCharRotator = null;
+    GameObject otherSpeaker = null;
     bool isTracking;
     void Start()
     {
@@ -54,6 +53,7 @@ public class NPCInteractable : IInteractable
                 }
                 isTracking = true;
             }
+            otherSpeaker = interacter;
         }
         return false;
     }
@@ -63,7 +63,7 @@ public class NPCInteractable : IInteractable
         if (isTracking)
         {
             this.towardCharRotator.enabled = true;
-            if (Vector3.Distance(playerData.position, host.transform.position) > breakConversationDistance)
+            if (Vector3.Distance(otherSpeaker.transform.position, host.transform.position) > breakConversationDistance)
             {
                 isTracking = false;
                 MonologueManager.GetInstance().HardReset();

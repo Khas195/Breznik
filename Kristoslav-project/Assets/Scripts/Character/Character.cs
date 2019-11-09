@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Requirements")]
+    [Required]
     protected Rigidbody hostRigidBody;
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
@@ -25,6 +26,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Requirements")]
+    [Required]
     protected IMovement movementBehavior;
     /// <summary>
     /// The player character's stats
@@ -32,6 +34,7 @@ public class Character : MonoBehaviour
     [Space]
     [SerializeField]
     [BoxGroup("Character Stats Holder")]
+    [Required]
     protected CharacterData characterData = null;
     [SerializeField]
     [BoxGroup("Character Stats Holder")]
@@ -59,6 +62,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker jumpConditions;
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
@@ -66,6 +70,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker moveConditions;
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
@@ -73,6 +78,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker attackConditions;
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
@@ -80,6 +86,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker changeMoveTypeConditions;
 
 

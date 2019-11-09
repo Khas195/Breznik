@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class InteractableMananger : MonoBehaviour
 {
+    [SerializeField]
+    GameObject host = null;
     List<IInteractable> inRangeList = new List<IInteractable>();
     [SerializeField]
     Text interactCue = null;
@@ -63,7 +65,7 @@ public class InteractableMananger : MonoBehaviour
     {
         if (highlightInteractable)
         {
-            highlightInteractable.Interact(this.gameObject);
+            highlightInteractable.Interact(host);
             inRangeList.Remove(highlightInteractable);
             highlightInteractable = null;
         }
@@ -71,7 +73,7 @@ public class InteractableMananger : MonoBehaviour
         {
             var lastIndex = inRangeList.Count - 1;
             lastIndex = lastIndex < 0 ? 0 : lastIndex;
-            inRangeList[lastIndex].Focus(this.gameObject);
+            inRangeList[lastIndex].Focus(host);
             HighlightInteractable(inRangeList[lastIndex]);
         }
     }

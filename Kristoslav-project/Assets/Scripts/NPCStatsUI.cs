@@ -1,30 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
-public class EnemyStatsUI : MonoBehaviour
+public class NPCStatsUI : MonoBehaviour
 {
     [SerializeField]
+    [Required]
     Character character = null;
     [SerializeField]
-    CharacterStatsData baseStats = null;
+    [Required]
+    Canvas canvas = null;
+
+
     [SerializeField]
+    bool hasHealthBar = true;
+    [SerializeField]
+    [ShowIf("hasHealthBar")]
     FlexibleUIStatsBar healthBar = null;
     [SerializeField]
-    Canvas canvas = null;
-    [SerializeField]
-    CharacterData playerData = null;
+    [ShowIf("hasHealthBar")]
+    CharacterStatsData baseStats = null;
 
     // Update is called once per frame
     void Update()
     {
-        UpdateHealthbar();
+        if (hasHealthBar)
+        {
+            UpdateHealthbar();
+        }
         RotateTowardCamera();
     }
 
     private void UpdateHealthbar()
     {
-        var targetHealthValue = character.GetHealth()/ baseStats.health;
+        var targetHealthValue = character.GetHealth() / baseStats.health;
 
         var curHealthValue = healthBar.GetFilledAmount();
 
@@ -34,7 +44,7 @@ public class EnemyStatsUI : MonoBehaviour
 
     private void RotateTowardCamera()
     {
-        var camPos = playerData.cameraPos;
+        var camPos = MainCameraEntity.GetInstance().GetHost().transform.position;
         camPos.y = 0;
         var charPos = character.transform.position;
         charPos.y = 0;

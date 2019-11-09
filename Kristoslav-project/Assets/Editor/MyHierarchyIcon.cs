@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
+using NaughtyAttributes;
 
 [InitializeOnLoad]
 public class MyHierarchyIcon
@@ -22,36 +23,39 @@ public class MyHierarchyIcon
 
     static void HierarchyItemCB(int instanceID, Rect selectionRect)
     {
-        return;
         var go = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
         if (go)
         {
             var components = go.GetComponents<Component>();
-            for (int i = 0; i < components.Length; i++)
+            if (components.Length> 0)
             {
-                FieldInfo[] fields = GetAllSerializedField(components, i);
-
-                bool componentHasAllRef = true;
-
-                for (int j = 0; j < fields.Length; j++)
+                for (int i = 0; i < components.Length; i++)
                 {
-                    if (fields[j].GetValue(components[i]) == null)
+                    FieldInfo[] fields = GetAllSerializedField(components, i);
+
+                    bool componentHasAllRef = true;
+
+                    for (int j = 0; j < fields.Length; j++)
                     {
-                        componentHasAllRef = false;
+                        if (fields[j].GetValue(components[i]) == null)
+                        {
+                            componentHasAllRef = false;
+                        }
+                    }
+                    if (componentHasAllRef == false)
+                    {
+                        DrawIcon(selectionRect);
                     }
                 }
-                if (componentHasAllRef == false)
-                {
-                    DrawIcon(selectionRect);
-                }
             }
+
         }
     }
 
     private static FieldInfo[] GetAllSerializedField(Component[] components, int i)
     {
         return components[i].GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-        .Where(f => f.GetCustomAttribute<SerializeField>() != null).ToArray();
+        .Where(f => f.GetCustomAttribute<RequiredAttribute>() != null).ToArray();
     }
 
     private static void DrawIcon(Rect selectionRect)

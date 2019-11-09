@@ -126,53 +126,6 @@ MonoBehaviour:
   triggerExit:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &2647410653411090255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1814166730317838527}
-  - component: {fileID: 5544133423639434319}
-  m_Layer: 0
-  m_Name: RotateCanvasTowardCamera (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1814166730317838527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2647410653411090255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4380745006571396943}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5544133423639434319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2647410653411090255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925b9003c152e6e428f10b7539d21f1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  host: {fileID: 8293202214252534093}
-  target: {fileID: 0}
-  rotateSpeed: 20
-  rotateY: 0
 --- !u!1 &3456832384131970091
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d749f846eacd6146b4bc9a0480f3335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   wielder: {fileID: 3820935899339472065}
   wielderChar: {fileID: 706283023929801222}
   hitboxes:
@@ -4251,7 +4204,7 @@ Transform:
   - {fileID: 3820935898174898668}
   - {fileID: 7670494686184481492}
   - {fileID: 6129816750433604373}
-  - {fileID: 1814166730317838527}
+  - {fileID: 1172726959546683706}
   m_Father: {fileID: 3820935899339472064}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4529,6 +4482,54 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.82, z: 0}
+--- !u!1 &5874186938194272962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1172726959546683706}
+  - component: {fileID: 2980332866358946344}
+  m_Layer: 0
+  m_Name: NPCStatsUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1172726959546683706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874186938194272962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4380745006571396943}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2980332866358946344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874186938194272962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4bacbd0c4dd354c991aba6a27e71e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 706283023929801222}
+  canvas: {fileID: 6611110028403380352}
+  hasHealthBar: 0
+  healthBar: {fileID: 0}
+  baseStats: {fileID: 11400000, guid: 843c3593706c7c9499d762b2d69d89a5, type: 2}
 --- !u!1 &6964547990999070248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,7 +4656,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db1194ff85c8be4458943776c8f320dd, type: 2}
   - {fileID: 11400000, guid: 40d12432d67ad684aaf7fc2f473a74e1, type: 2}
   host: {fileID: 3820935899339472065}
-  playerData: {fileID: 11400000, guid: b9b5e309a1249a44f9706c99b07899b9, type: 2}
   breakConversationDistance: 5
   NPCName: Kristoslav The Friendly Smurf
   npcNameUi: {fileID: 5304442548447426804}
