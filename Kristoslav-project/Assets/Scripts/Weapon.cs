@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     Character wielderChar = null;
     [SerializeField]
-    List<Collider> hitboxes;
+    List<Collider> hitboxes = new List<Collider>();
 
     void Start()
     {

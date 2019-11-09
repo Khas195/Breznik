@@ -640,6 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostRigidBody: {fileID: 5786944491642378433}
   movementBehavior: {fileID: 2110982483968632652}
+  characterData: {fileID: 11400000, guid: 9613a960de80ff34186896f6f1636161, type: 2}
   onCharacterAttack:
     m_PersistentCalls:
       m_Calls:
@@ -660,9 +661,7 @@ MonoBehaviour:
   attackConditions: {fileID: 11400000, guid: 63354548e1847b141a26a38c22c85e74, type: 2}
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
-  enemyBaseStatsTemplate: {fileID: 11400000, guid: 9613a960de80ff34186896f6f1636161,
-    type: 2}
-  curStats: {fileID: 0}
+  curStats: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
 --- !u!1 &6630280968001513762
 GameObject:
   m_ObjectHideFlags: 0

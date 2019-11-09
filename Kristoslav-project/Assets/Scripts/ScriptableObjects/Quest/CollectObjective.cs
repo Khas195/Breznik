@@ -17,7 +17,7 @@ public class CollectObjective : Objective
     }
     public void OnItemCollected ( ItemObject itemAdded) {
         if (itemAdded == toCollect) {
-            this.IncreaseAchieved();
+            achieved = toCollect.GetAmountInInventory();
         }
     }
 

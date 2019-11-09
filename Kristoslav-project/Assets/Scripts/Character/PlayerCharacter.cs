@@ -8,13 +8,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerCharacter : Character
 {
-    /// <summary>
-    /// The player character's stats
-    /// </summary>
-    [Space]
-    [SerializeField]
-    [BoxGroup("Character Stats Holder")]
-    CharacterData characterData = null;
+    
     /// <summary>
     /// The camera that follow the player
     /// </summary>
@@ -31,7 +25,6 @@ public class PlayerCharacter : Character
     Timer regenCoolDownTimer = null;
     public override void Awake()
     {
-        movementBehavior.SetMovementData(characterData.movementData);
         base.Awake();
     }
     void Start()

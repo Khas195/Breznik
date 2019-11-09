@@ -27,6 +27,13 @@ public class Character : MonoBehaviour
     [BoxGroup("Requirements")]
     protected IMovement movementBehavior;
 
+    /// <summary>
+    /// The player character's stats
+    /// </summary>
+    [Space]
+    [SerializeField]
+    [BoxGroup("Character Stats Holder")]
+    protected CharacterData characterData = null;
 
     [Space]
     /// <summary>
@@ -76,6 +83,7 @@ public class Character : MonoBehaviour
     public virtual void Awake()
     {
         movementBehavior.SetRigidBody(hostRigidBody);
+        movementBehavior.SetMovementData(characterData.movementData);
     }
 
     /// <summary>

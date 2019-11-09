@@ -14,14 +14,15 @@ public class NPCInteractable : IInteractable
     [SerializeField]
     float breakConversationDistance = 0;
     [SerializeField]
-    Text npcNameUI = null;
+    string NPCName = "";
+    [SerializeField]
+    Text npcNameUi = null;
     [SerializeField]
     RotateToward towardCharRotator = null;
     bool isTracking;
     void Start()
     {
-        npcNameUI.text = this.GetName();
-        
+        npcNameUi.text = NPCName;
     }
     public override void Defocus(GameObject interacter)
     {
@@ -79,7 +80,7 @@ public class NPCInteractable : IInteractable
 
     public override string GetName()
     {
-        return "Tung";
+        return NPCName;
     }
     public override string GetKindOfInteraction()
     {

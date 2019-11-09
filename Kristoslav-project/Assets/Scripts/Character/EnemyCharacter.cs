@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class EnemyCharacter : Character
 {
     [SerializeField]
-    CharacterData enemyBaseStatsTemplate = null;
-
-    [SerializeField]
+    [ReadOnly]
     CharacterStatsData curStats;
     public override bool Attack()
     {
@@ -17,8 +16,8 @@ public class EnemyCharacter : Character
     public override void Awake()
     {
         base.Awake();
-        movementBehavior.SetMovementData(enemyBaseStatsTemplate.movementData);
-        curStats = GameObject.Instantiate(enemyBaseStatsTemplate.statsData);
+        movementBehavior.SetMovementData(this.characterData.movementData);
+        curStats = GameObject.Instantiate(this.characterData.statsData);
     }
 
     public override void BeingDamage(float damage)

@@ -310,20 +310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6587ed414792abb4b90d067d23c03539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnInteractableFocusChange
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 823309884}
-          m_ObjectArgumentAssemblyTypeName: IInteractable, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isFocus: 0
   datas:
   - {fileID: 11400000, guid: a8c1fef82feb58e4fbabdff4dd386141, type: 2}
@@ -333,7 +319,6 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: b9b5e309a1249a44f9706c99b07899b9, type: 2}
   breakConversationDistance: 5
   npcNameUI: {fileID: 7844594796237550444}
-  npcCanvas: {fileID: 1251301425603261662}
   towardCharRotator: {fileID: 1052499232}
 --- !u!1 &6109636939733662953
 GameObject:
@@ -475,7 +460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Christopher
+  m_Text: Tung
 --- !u!1001 &4000026231822416495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,11 +543,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 747077120858090222, guid: 954a42dced2cacf42b33e79d2beca743,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 316c01aab690a6747bcd4830151da261, type: 2}
     - target: {fileID: 2087412266812628352, guid: 954a42dced2cacf42b33e79d2beca743,
         type: 3}
       propertyPath: m_RootOrder
@@ -573,6 +553,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 747077120858090222, guid: 954a42dced2cacf42b33e79d2beca743,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 316c01aab690a6747bcd4830151da261, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 954a42dced2cacf42b33e79d2beca743, type: 3}
 --- !u!1 &4674451157419717655 stripped

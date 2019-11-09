@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class QuestUIManager : MonoBehaviour
 {
     [SerializeField]
-    Text questLog;
+    Text questLog = null;
     // Update is called once per frame
     void Update()
     {
-
+        UpdateQuestLog();
     }
     public void OnQuestAdded(Quest addedQuest)
     {
-        UpdateQuestLod();
+        UpdateQuestLog();
     }
 
-    private void UpdateQuestLod()
+    private void UpdateQuestLog()
     {
         var activeQuests = QuestSystem.GetInstance().GetActiveQuests();
         questLog.text = "";
@@ -27,7 +27,7 @@ public class QuestUIManager : MonoBehaviour
             for (int j = 0; j < activeQuests[i].objectives.Count; j++)
             {
                 questLog.text += activeQuests[i].objectives[j].description + " " + activeQuests[i].objectives[j].achieved + "/"
-                + activeQuests[i].objectives[j].amount + "\n";
+                + activeQuests[i].objectives[j].targetAmount + "\n";
             }
         }
     }
