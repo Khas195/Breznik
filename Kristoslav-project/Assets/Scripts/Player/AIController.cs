@@ -5,7 +5,7 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
     [SerializeField]
-    Character character;
+    Character character = null;
     // Start is called before the first frame update
     void Start()
     {
