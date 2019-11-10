@@ -1,24 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class NPCInteractable : IInteractable
 {
     [SerializeField]
-    List<MonologueData> datas = null;
-    [SerializeField]
+    [Required]
+    [BoxGroup("Required")]
     GameObject host = null;
     [SerializeField]
-    float breakConversationDistance = 0;
-    [SerializeField]
+    [BoxGroup("Required")]
     string NPCName = "";
     [SerializeField]
+    [Required]
+    [BoxGroup("Required")]
     Text npcNameUi = null;
+
     [SerializeField]
-    RotateToward towardCharRotator = null;
+    List<MonologueData> datas = null;
+
+    [SerializeField]
+    float breakConversationDistance = 3;
+
+    [SerializeField]
+    private float rotateSpeed = 10f;
     GameObject otherSpeaker = null;
-    bool isTracking;
+    bool isTracking = false;
+    private GameObject playerObject = null;
+
+
     void Start()
     {
         npcNameUi.text = NPCName;
@@ -35,11 +47,6 @@ public class NPCInteractable : IInteractable
 
     }
 
-    public override GameObject GetGameObject()
-    {
-        return base.GetGameObject();
-    }
-
     public override bool Interact(GameObject interacter)
     {
         Logger.NPCDebug("Talk to " + this);
@@ -52,6 +59,7 @@ public class NPCInteractable : IInteractable
                     MonologueManager.GetInstance().QueueMonologue(data);
                 }
                 isTracking = true;
+                playerObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYER);
             }
             otherSpeaker = interacter;
         }
@@ -62,7 +70,7 @@ public class NPCInteractable : IInteractable
         //RotateTowardCamera();
         if (isTracking)
         {
-            this.towardCharRotator.enabled = true;
+            RotateTowardPlayer();
             if (Vector3.Distance(otherSpeaker.transform.position, host.transform.position) > breakConversationDistance)
             {
                 isTracking = false;
@@ -71,11 +79,18 @@ public class NPCInteractable : IInteractable
             }
             if (GameMaster.GetInstance().GetCurrentGameState().GetState() != GameState.States.InDiagloues)
             {
-                this.towardCharRotator.enabled = false;
                 isTracking = false;
             }
 
         }
+    }
+
+    private void RotateTowardPlayer()
+    {
+        var direction = playerObject.transform.position - host.transform.position;
+        direction.y = 0;
+        var lookRot = Quaternion.LookRotation(direction.normalized);
+        host.transform.rotation = Quaternion.Slerp(host.transform.rotation, lookRot, rotateSpeed * Time.deltaTime);
     }
 
     public override string GetName()

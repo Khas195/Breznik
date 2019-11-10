@@ -21,7 +21,11 @@ public class NPCStatsUI : MonoBehaviour
     [SerializeField]
     [ShowIf("hasHealthBar")]
     CharacterStatsData baseStats = null;
+    GameObject cameraObject = null;
 
+    void Start()
+    {
+    }
     // Update is called once per frame
     void Update()
     {
@@ -44,7 +48,11 @@ public class NPCStatsUI : MonoBehaviour
 
     private void RotateTowardCamera()
     {
-        var camPos = MainCameraEntity.GetInstance().GetHost().transform.position;
+        if (cameraObject == null)
+        {
+            cameraObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYERCAMERA);
+        }
+        var camPos = cameraObject.transform.position;
         camPos.y = 0;
         var charPos = character.transform.position;
         charPos.y = 0;

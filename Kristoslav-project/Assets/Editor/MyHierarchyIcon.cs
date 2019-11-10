@@ -27,7 +27,7 @@ public class MyHierarchyIcon
         if (go)
         {
             var components = go.GetComponents<Component>();
-            if (components.Length> 0)
+            if (components.Length > 0)
             {
                 for (int i = 0; i < components.Length; i++)
                 {

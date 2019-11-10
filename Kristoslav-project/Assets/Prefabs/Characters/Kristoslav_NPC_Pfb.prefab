@@ -189,53 +189,6 @@ MonoBehaviour:
   triggerExit:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &3577833930654458122
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6129816750433604373}
-  - component: {fileID: 8273981589129268939}
-  m_Layer: 0
-  m_Name: RotateNPCTowardCharacter (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6129816750433604373
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3577833930654458122}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4380745006571396943}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8273981589129268939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3577833930654458122}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925b9003c152e6e428f10b7539d21f1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  host: {fileID: 3820935899339472065}
-  target: {fileID: 0}
-  rotateSpeed: 20
-  rotateY: 0
 --- !u!1 &3820935898073054811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,7 +4156,6 @@ Transform:
   - {fileID: 3820935899005581131}
   - {fileID: 3820935898174898668}
   - {fileID: 7670494686184481492}
-  - {fileID: 6129816750433604373}
   - {fileID: 1172726959546683706}
   m_Father: {fileID: 3820935899339472064}
   m_RootOrder: 7
@@ -4511,7 +4463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4380745006571396943}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2980332866358946344
 MonoBehaviour:
@@ -4651,15 +4603,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocus: 0
+  host: {fileID: 3820935899339472065}
+  NPCName: Kristoslav The Friendly Smurf
+  npcNameUi: {fileID: 5304442548447426804}
   datas:
   - {fileID: 11400000, guid: a8c1fef82feb58e4fbabdff4dd386141, type: 2}
   - {fileID: 11400000, guid: db1194ff85c8be4458943776c8f320dd, type: 2}
   - {fileID: 11400000, guid: 40d12432d67ad684aaf7fc2f473a74e1, type: 2}
-  host: {fileID: 3820935899339472065}
   breakConversationDistance: 5
-  NPCName: Kristoslav The Friendly Smurf
-  npcNameUi: {fileID: 5304442548447426804}
-  towardCharRotator: {fileID: 8273981589129268939}
+  rotateSpeed: 10
 --- !u!1 &8267276912026537097
 GameObject:
   m_ObjectHideFlags: 0
