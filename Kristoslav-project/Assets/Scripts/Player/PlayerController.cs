@@ -16,7 +16,10 @@ public class PlayerController : MonoBehaviour
     Camera playerCameraView = null;
     [SerializeField]
     UnityEvent interact = new UnityEvent();
-
+    void Start()
+    {
+        EntitiesMaster.GetInstance().RegisterEntity(EntitiesMaster.EntitiesKey.PLAYER, character.GetHost());
+    }
     void Update()
     {
         ControlMovement();
@@ -58,7 +61,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if ((forward != 0 || side != 0)) 
+        if ((forward != 0 || side != 0))
         {
             var movedir = Vector3.zero;
 
@@ -72,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+
 
 
 }

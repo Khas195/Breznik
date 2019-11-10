@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InteractableMananger : MonoBehaviour
+public class InteractableMananger : SingletonMonobehavior<InteractableMananger>
 {
     [SerializeField]
     GameObject host = null;
@@ -16,7 +16,7 @@ public class InteractableMananger : MonoBehaviour
     public void OnInteractableEnter(Collider other)
     {
         var enteredInteractable = other.GetComponentInChildren<IInteractable>();
-        
+
         if (enteredInteractable)
         {
             Logger.InventoryDebug("Interactable in range: " + enteredInteractable);

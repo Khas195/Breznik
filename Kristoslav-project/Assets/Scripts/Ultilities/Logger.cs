@@ -77,6 +77,12 @@ public class Logger
         UnityEngine.Debug.Log(gameMaster + ": " + message);
     }
     [Conditional("ENABLE_LOG")]
+    public static void EntitiesMasterDebug(EntitiesMaster entitiesMaster, string message)
+    {
+
+        UnityEngine.Debug.Log(entitiesMaster + ": " + message);
+    }
+    [Conditional("ENABLE_LOG")]
     public static void UltilitiesLog(string message)
     {
         UnityEngine.Debug.Log("Ultilities: " + message);

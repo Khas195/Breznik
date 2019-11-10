@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCameraEntity : SingletonMonobehavior<MainCameraEntity>
+public class MainCameraEntity : MonoBehaviour
 {
 
     [SerializeField]
     GameObject host = null;
 
-    public GameObject GetHost() {
+    public GameObject GetHost()
+    {
         return host;
     }
-
-    protected override void Awake()
+    void Start()
     {
-        base.Awake();
+        EntitiesMaster.GetInstance().RegisterEntity(EntitiesMaster.EntitiesKey.PLAYERCAMERA, host);
     }
 }

@@ -20,6 +20,9 @@ public class Character : MonoBehaviour
     [BoxGroup("Requirements")]
     [Required]
     protected Rigidbody hostRigidBody;
+
+
+
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
     /// If the character does not have a movement behavior, he/she will not be able to move.
@@ -99,6 +102,10 @@ public class Character : MonoBehaviour
         movementBehavior.SetMovementData(characterData.movementData);
         health = characterData.stats.health;
         stamina = characterData.stats.stamina;
+    }
+    public GameObject GetHost()
+    {
+        return hostRigidBody.gameObject;
     }
     #endregion
     #region Stats Manipulation

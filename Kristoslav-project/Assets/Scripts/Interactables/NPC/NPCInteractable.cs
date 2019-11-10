@@ -1,27 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class NPCInteractable : IInteractable
 {
     [SerializeField]
-    List<MonologueData> datas = null;
-    [SerializeField]
+    [Required]
+    [BoxGroup("Required")]
     GameObject host = null;
     [SerializeField]
-    float breakConversationDistance = 0;
+    [BoxGroup("Required")]
+    CharacterData charData = null;
     [SerializeField]
-    string NPCName = "";
-    [SerializeField]
+    [Required]
+    [BoxGroup("Required")]
     Text npcNameUi = null;
+
     [SerializeField]
-    RotateToward towardCharRotator = null;
+    List<MonologueData> beforeQuestIsFinished = new List<MonologueData>();
+    [SerializeField]
+    List<MonologueData> questFinishedTalk = new List<MonologueData>();
+    [SerializeField]
+    List<MonologueData> whileQuestIsActive = new List<MonologueData>();
+    [SerializeField]
+    List<MonologueData> afterQuestIsFinished = new List<MonologueData>();
+
+    [SerializeField]
+    [ReadOnly]
+    Quest givenQuest = null;
+    [SerializeField]
+    float breakConversationDistance = 3;
+
+    [SerializeField]
+    private float rotateSpeed = 10f;
     GameObject otherSpeaker = null;
-    bool isTracking;
+    bool isTracking = false;
+    private GameObject playerObject = null;
+
+
     void Start()
     {
-        npcNameUi.text = NPCName;
+        npcNameUi.text = charData.characterName;
     }
     public override void Defocus(GameObject interacter)
     {
@@ -35,11 +56,6 @@ public class NPCInteractable : IInteractable
 
     }
 
-    public override GameObject GetGameObject()
-    {
-        return base.GetGameObject();
-    }
-
     public override bool Interact(GameObject interacter)
     {
         Logger.NPCDebug("Talk to " + this);
@@ -47,22 +63,54 @@ public class NPCInteractable : IInteractable
         {
             if (GameMaster.GetInstance().RequestGameState(GameState.States.InDiagloues))
             {
-                foreach (var data in datas)
+                if (givenQuest)
                 {
-                    MonologueManager.GetInstance().QueueMonologue(data);
+                    if (QuestSystem.GetInstance().CheckIfActiveQuestIsCompleted(givenQuest))
+                    {
+                        Talk(questFinishedTalk);
+                    }
+                    else if (QuestSystem.GetInstance().CheckIfQuestArchived(givenQuest))
+                    {
+                        Talk(afterQuestIsFinished);
+                    }
+                    else if (QuestSystem.GetInstance().IsActiveQuest(givenQuest))
+                    {
+                        Talk(whileQuestIsActive);
+                    }
+                }
+                else
+                {
+                    Talk(beforeQuestIsFinished);
                 }
                 isTracking = true;
+                if (playerObject == null)
+                {
+                    playerObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYER);
+                }
             }
             otherSpeaker = interacter;
         }
         return false;
     }
+
+    private void Talk(List<MonologueData> monologues)
+    {
+        foreach (var data in monologues)
+        {
+            MonologueManager.GetInstance().QueueMonologue(data);
+            if (data.quest)
+            {
+                givenQuest = data.quest;
+            }
+        }
+    }
+
     void Update()
     {
         //RotateTowardCamera();
         if (isTracking)
         {
-            this.towardCharRotator.enabled = true;
+            RotateTowardPlayer();
             if (Vector3.Distance(otherSpeaker.transform.position, host.transform.position) > breakConversationDistance)
             {
                 isTracking = false;
@@ -71,16 +119,23 @@ public class NPCInteractable : IInteractable
             }
             if (GameMaster.GetInstance().GetCurrentGameState().GetState() != GameState.States.InDiagloues)
             {
-                this.towardCharRotator.enabled = false;
                 isTracking = false;
             }
 
         }
     }
 
+    private void RotateTowardPlayer()
+    {
+        var direction = playerObject.transform.position - host.transform.position;
+        direction.y = 0;
+        var lookRot = Quaternion.LookRotation(direction.normalized);
+        host.transform.rotation = Quaternion.Slerp(host.transform.rotation, lookRot, rotateSpeed * Time.deltaTime);
+    }
+
     public override string GetName()
     {
-        return NPCName;
+        return charData.characterName;
     }
     public override string GetKindOfInteraction()
     {

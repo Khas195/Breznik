@@ -20,23 +20,29 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
     Quest test = null;
     void Update()
     {
-        UpdateQuests();
-        if (Input.GetKeyDown(KeyCode.O)) {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
             this.AddQuest(test);
         }
     }
-
-    private void UpdateQuests()
+    public bool CheckIfActiveQuestIsCompleted(Quest quest)
     {
-        for (int i = 0; i < activeQuest.Count; i++)
+        if (activeQuest.Contains(quest))
         {
-            if (activeQuest[i].IsCompleted())
+            if (quest.IsCompleted())
             {
-                questCompletedEvent.Invoke(activeQuest[i]);
-                completedQuest.Add(activeQuest[i]);
-                RemoveQuest(activeQuest[i]);
+                questCompletedEvent.Invoke(quest);
+                completedQuest.Add(quest);
+                RemoveQuest(quest);
+                return true;
             }
+            return false;
         }
+        return false;
+    }
+    public bool CheckIfQuestArchived(Quest quest)
+    {
+        return completedQuest.Contains(quest);
     }
 
     public bool AddQuest(Quest newQuest)
@@ -66,5 +72,10 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
     public List<Quest> GetActiveQuests()
     {
         return activeQuest;
+    }
+
+    public bool IsActiveQuest(Quest givenQuest)
+    {
+        return activeQuest.Contains(givenQuest);
     }
 }

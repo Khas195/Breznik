@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class IInteractable : MonoBehaviour
+public abstract class IInteractable : MonoBehaviour
 {
     [SerializeField]
     protected bool isFocus;
@@ -28,11 +28,6 @@ public class IInteractable : MonoBehaviour
     {
         Logger.InteractableDebug(interacter.name + " try to interact with " + this.name);
         return isFocus;
-    }
-
-    public virtual GameObject GetGameObject()
-    {
-        return this.gameObject;
     }
 
     public bool IsFocus()

@@ -66,12 +66,14 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         possibleGameStates.Clear();
+        EntitiesMaster.GetInstance().Clear();
         FindAllPossibleStates();
     }
     public bool IsInState(GameState.States stateToCheck)
     {
         var currentState = this.gameStateStack.GetPeek();
-        if (currentState && currentState.GetState() == stateToCheck ){
+        if (currentState && currentState.GetState() == stateToCheck)
+        {
             return true;
         }
         return false;
