@@ -15,8 +15,10 @@ public class CollectObjective : Objective
     {
         return base.IsCompleted();
     }
-    public void OnItemCollected ( ItemObject itemAdded) {
-        if (itemAdded == toCollect) {
+    public void OnItemCollected(ItemObject itemAdded)
+    {
+        if (itemAdded == toCollect)
+        {
             achieved = toCollect.GetAmountInInventory();
         }
     }

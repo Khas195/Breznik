@@ -12,15 +12,24 @@ public class NPCInteractable : IInteractable
     GameObject host = null;
     [SerializeField]
     [BoxGroup("Required")]
-    string NPCName = "";
+    CharacterData charData = null;
     [SerializeField]
     [Required]
     [BoxGroup("Required")]
     Text npcNameUi = null;
 
     [SerializeField]
-    List<MonologueData> datas = null;
+    List<MonologueData> beforeQuestIsFinished = new List<MonologueData>();
+    [SerializeField]
+    List<MonologueData> questFinishedTalk = new List<MonologueData>();
+    [SerializeField]
+    List<MonologueData> whileQuestIsActive = new List<MonologueData>();
+    [SerializeField]
+    List<MonologueData> afterQuestIsFinished = new List<MonologueData>();
 
+    [SerializeField]
+    [ReadOnly]
+    Quest givenQuest = null;
     [SerializeField]
     float breakConversationDistance = 3;
 
@@ -33,7 +42,7 @@ public class NPCInteractable : IInteractable
 
     void Start()
     {
-        npcNameUi.text = NPCName;
+        npcNameUi.text = charData.characterName;
     }
     public override void Defocus(GameObject interacter)
     {
@@ -54,17 +63,48 @@ public class NPCInteractable : IInteractable
         {
             if (GameMaster.GetInstance().RequestGameState(GameState.States.InDiagloues))
             {
-                foreach (var data in datas)
+                if (givenQuest)
                 {
-                    MonologueManager.GetInstance().QueueMonologue(data);
+                    if (QuestSystem.GetInstance().CheckIfActiveQuestIsCompleted(givenQuest))
+                    {
+                        Talk(questFinishedTalk);
+                    }
+                    else if (QuestSystem.GetInstance().CheckIfQuestArchived(givenQuest))
+                    {
+                        Talk(afterQuestIsFinished);
+                    }
+                    else if (QuestSystem.GetInstance().IsActiveQuest(givenQuest))
+                    {
+                        Talk(whileQuestIsActive);
+                    }
+                }
+                else
+                {
+                    Talk(beforeQuestIsFinished);
                 }
                 isTracking = true;
-                playerObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYER);
+                if (playerObject == null)
+                {
+                    playerObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYER);
+                }
             }
             otherSpeaker = interacter;
         }
         return false;
     }
+
+    private void Talk(List<MonologueData> monologues)
+    {
+        foreach (var data in monologues)
+        {
+            MonologueManager.GetInstance().QueueMonologue(data);
+            if (data.quest)
+            {
+                givenQuest = data.quest;
+            }
+        }
+    }
+
     void Update()
     {
         //RotateTowardCamera();
@@ -95,7 +135,7 @@ public class NPCInteractable : IInteractable
 
     public override string GetName()
     {
-        return NPCName;
+        return charData.characterName;
     }
     public override string GetKindOfInteraction()
     {
