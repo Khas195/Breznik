@@ -5,7 +5,9 @@ using UnityEngine;
 public class MonologueData : ScriptableObject
 {
     public float timeBetweenEachSentence = 2f;
+    [TextArea]
     public List<string> sentences = new List<string>();
+    public Quest quest = null;
 
     public string GetSentence(int index)
     {

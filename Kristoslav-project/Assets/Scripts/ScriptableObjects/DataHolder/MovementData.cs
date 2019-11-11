@@ -13,6 +13,4 @@ public class MovementData : ScriptableObject
     public float walkSpeed = 5;
     public float runSpeed = 10;
     public float jumpForce = 5;
-    public Vector3 currentVelocity = Vector3.zero;
-    public float currentSpeed = 0;
 }

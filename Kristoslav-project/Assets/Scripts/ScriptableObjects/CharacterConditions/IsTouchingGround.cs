@@ -14,6 +14,6 @@ public class IsTouchingGround : CharacterBehaviorCondition
     /// <returns>true: if the character is touching ground and vice versa.</returns>
     public override bool IsSatisfied(Character character)
     {
-        return character.GetMovementBehavior().IsTouchingGround();
+        return character.IsTouchingGround();
     }
 }

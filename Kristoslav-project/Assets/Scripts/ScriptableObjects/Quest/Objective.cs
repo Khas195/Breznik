@@ -5,18 +5,18 @@ public abstract class Objective : ScriptableObject
 {
     [TextArea(15, 20)]
     public string description = "";
-    public int amount = 1;
+    public int targetAmount = 1;
     public int achieved = 0;
     public virtual void Activate() {
     }
     public virtual bool IsCompleted()
     {
-        return achieved >= amount;
+        return achieved >= targetAmount;
     }
-    public void IncreaseAchieved()
-    {
-        achieved++;
-    }
+    
     public virtual void Deactivate() {
+    }
+    public virtual void Reset(){
+        achieved = 0;
     }
 }
