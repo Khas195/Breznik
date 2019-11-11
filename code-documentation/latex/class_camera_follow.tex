@@ -11,11 +11,12 @@ Inheritance diagram for Camera\+Follow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Camera\+Follow\+:\nopagebreak
+Collaboration diagram for Camera\+Follow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{class_camera_follow__coll__graph}
+\includegraphics[width=350pt]{class_camera_follow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -34,6 +35,8 @@ void \mbox{\hyperlink{class_camera_follow_aa7fc79bdb7d71410f19383973e1f707b}{Add
 \item 
 void \mbox{\hyperlink{class_camera_follow_adbbbae516b9d54ffc9afe287dcb72cd5}{Start}} ()
 \item 
+void \mbox{\hyperlink{class_camera_follow_a623c485e39b82f268a356463829fd8b9}{Update}} ()
+\item 
 void \mbox{\hyperlink{class_camera_follow_ab8ce2043b1a47917b8b970f5579af9ec}{Fixed\+Update}} ()
 \item 
 Vector3 \mbox{\hyperlink{class_camera_follow_af01ec816d70679ea8bfe388f71d07704}{Get\+Center\+Position}} (List$<$ Transform $>$ list\+Of\+Targets)
@@ -47,6 +50,8 @@ List$<$ Transform $>$ \mbox{\hyperlink{class_camera_follow_a74eb89469936936582d3
 \item 
 Transform \mbox{\hyperlink{class_camera_follow_a7f84b1a538ef291cb9b2a02fb407aac3}{character}} = null
 \item 
+\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_camera_follow_a40c1c9ceaf767a577d2a3f4e538842e1}{player\+Data}} = null
+\item 
 float \mbox{\hyperlink{class_camera_follow_a84fef30d89972200d520d068e108e624}{follow\+Percentage}} = 0.\+02f
 \item 
 bool \mbox{\hyperlink{class_camera_follow_a830dc2986d722e78186d05b7af25bebf}{followX}} = false
@@ -54,6 +59,8 @@ bool \mbox{\hyperlink{class_camera_follow_a830dc2986d722e78186d05b7af25bebf}{fol
 bool \mbox{\hyperlink{class_camera_follow_acb30ca174771a79306af65c0d3d95338}{followY}} = false
 \item 
 bool \mbox{\hyperlink{class_camera_follow_a0c065826af6f896189a9dd0899ab43ec}{followZ}} = false
+\item 
+Camera \mbox{\hyperlink{class_camera_follow_ac24ab1266bb03cde2c3cd3d0450c190b}{m\+Camera}}
 \end{DoxyCompactItemize}
 
 
@@ -90,7 +97,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
 {\footnotesize\ttfamily void Camera\+Follow.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -103,7 +111,8 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{GetCenterPosition()}{GetCenterPosition()}}
 {\footnotesize\ttfamily Vector3 Camera\+Follow.\+Get\+Center\+Position (\begin{DoxyParamCaption}\item[{List$<$ Transform $>$}]{list\+Of\+Targets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -149,6 +158,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Camera\+Follow.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_camera_follow_a623c485e39b82f268a356463829fd8b9}\label{class_camera_follow_a623c485e39b82f268a356463829fd8b9}} 
+\index{CameraFollow@{CameraFollow}!Update@{Update}}
+\index{Update@{Update}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Camera\+Follow.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -193,6 +208,18 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{host@{host}!CameraFollow@{CameraFollow}}
 \doxysubsubsection{\texorpdfstring{host}{host}}
 {\footnotesize\ttfamily Transform Camera\+Follow.\+host = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_follow_ac24ab1266bb03cde2c3cd3d0450c190b}\label{class_camera_follow_ac24ab1266bb03cde2c3cd3d0450c190b}} 
+\index{CameraFollow@{CameraFollow}!mCamera@{mCamera}}
+\index{mCamera@{mCamera}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{mCamera}{mCamera}}
+{\footnotesize\ttfamily Camera Camera\+Follow.\+m\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_follow_a40c1c9ceaf767a577d2a3f4e538842e1}\label{class_camera_follow_a40c1c9ceaf767a577d2a3f4e538842e1}} 
+\index{CameraFollow@{CameraFollow}!playerData@{playerData}}
+\index{playerData@{playerData}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{playerData}{playerData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Camera\+Follow.\+player\+Data = null\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

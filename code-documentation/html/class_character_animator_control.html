@@ -84,17 +84,28 @@ Collaboration diagram for CharacterAnimatorControl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_character_animator_control__coll__graph.png" border="0" usemap="#_character_animator_control_coll__map" alt="Collaboration graph"/></div>
 <map name="_character_animator_control_coll__map" id="_character_animator_control_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,176,107"/>
-<area shape="rect" title=" " alt="" coords="35,5,146,32"/>
+<area shape="rect" title=" " alt="" coords="21,316,192,343"/>
+<area shape="rect" href="class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="84,405,163,432"/>
+<area shape="rect" title=" " alt="" coords="51,81,162,108"/>
+<area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="187,183,271,209"/>
+<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="202,81,310,108"/>
+<area shape="rect" title=" " alt="" coords="260,5,379,32"/>
+<area shape="rect" href="class_conditions_checker.html" title=" " alt="" coords="298,132,429,159"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a563971501cbc71e0ef25c7b589e95eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a563971501cbc71e0ef25c7b589e95eeb">TriggerAttackAnimation</a> ()</td></tr>
-<tr class="separator:a563971501cbc71e0ef25c7b589e95eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc0201618afe96bf472f076f345fc1f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#adc0201618afe96bf472f076f345fc1f3">IsAttacking</a> ()</td></tr>
-<tr class="separator:adc0201618afe96bf472f076f345fc1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781056f28fcf44438c98ce27f7ac1be4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a781056f28fcf44438c98ce27f7ac1be4">PlayAttackAnimation</a> ()</td></tr>
+<tr class="separator:a781056f28fcf44438c98ce27f7ac1be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a1b8db08e836f4765b8a0b06690e31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a58a1b8db08e836f4765b8a0b06690e31">IsPlaying</a> (string animationName)</td></tr>
+<tr class="separator:a58a1b8db08e836f4765b8a0b06690e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0efefa9709fd9deb43f16b1ea2ad7113"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a0efefa9709fd9deb43f16b1ea2ad7113">OnAttackAnimBegin</a> ()</td></tr>
+<tr class="separator:a0efefa9709fd9deb43f16b1ea2ad7113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a65e488816f705b999498e0a70deef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ab7a65e488816f705b999498e0a70deef">OnAttackAnimEnd</a> ()</td></tr>
+<tr class="separator:ab7a65e488816f705b999498e0a70deef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bffce3e193cb3e1301b51b81c1cb464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a5bffce3e193cb3e1301b51b81c1cb464">IsInAttackingAnimation</a> ()</td></tr>
+<tr class="separator:a5bffce3e193cb3e1301b51b81c1cb464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -102,23 +113,31 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a0a93416536c2f6504d9110be9a057085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d574155a378ca5b7a50a7a7edad92d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a1d574155a378ca5b7a50a7a7edad92d6">Update</a> ()</td></tr>
 <tr class="separator:a1d574155a378ca5b7a50a7a7edad92d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e6878fba23fc5aa9e4a70c4bf8b1ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#af0e6878fba23fc5aa9e4a70c4bf8b1ff">IsAnAttackingClip</a> (AnimatorClipInfo curClip)</td></tr>
-<tr class="separator:af0e6878fba23fc5aa9e4a70c4bf8b1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae151fefa5b241550fde1213501ee8239"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ae151fefa5b241550fde1213501ee8239">GetCurrentAnimationClip</a> ()</td></tr>
+<tr class="separator:ae151fefa5b241550fde1213501ee8239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab7a6d7957e508d3a20140ca12edf5653"><td class="memItemLeft" align="right" valign="top">Rigidbody&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ab7a6d7957e508d3a20140ca12edf5653">hostRb</a></td></tr>
-<tr class="separator:ab7a6d7957e508d3a20140ca12edf5653"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b8da0a67119b09e3b1e5ca19eb5b2ae"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a7b8da0a67119b09e3b1e5ca19eb5b2ae">animator</a></td></tr>
+<tr class="memitem:a7b8da0a67119b09e3b1e5ca19eb5b2ae"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a7b8da0a67119b09e3b1e5ca19eb5b2ae">animator</a> =null</td></tr>
+<tr class="memdesc:a7b8da0a67119b09e3b1e5ca19eb5b2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The animator of the character.  <a href="class_character_animator_control.html#a7b8da0a67119b09e3b1e5ca19eb5b2ae">More...</a><br /></td></tr>
 <tr class="separator:a7b8da0a67119b09e3b1e5ca19eb5b2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61544952475e94b8e5984c7b90ecd80"><td class="memItemLeft" align="right" valign="top">List&lt; AnimationClip &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ad61544952475e94b8e5984c7b90ecd80">attackingAnims</a></td></tr>
-<tr class="separator:ad61544952475e94b8e5984c7b90ecd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0994e0b02cbffec9d64d30cdcac4ca5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ab0994e0b02cbffec9d64d30cdcac4ca5">isAttacking</a></td></tr>
+<tr class="memitem:ab7a6d7957e508d3a20140ca12edf5653"><td class="memItemLeft" align="right" valign="top">Rigidbody&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ab7a6d7957e508d3a20140ca12edf5653">hostRb</a> =null</td></tr>
+<tr class="memdesc:ab7a6d7957e508d3a20140ca12edf5653"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rigidbody of the model of the <a class="el" href="class_character.html" title="The Character class handles all the possible behavior that a character can have.">Character</a>.  <a href="class_character_animator_control.html#ab7a6d7957e508d3a20140ca12edf5653">More...</a><br /></td></tr>
+<tr class="separator:ab7a6d7957e508d3a20140ca12edf5653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343eaa0ef94d4e9f55c04d4e1f8c9201"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character.html">Character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a343eaa0ef94d4e9f55c04d4e1f8c9201">character</a> = null</td></tr>
+<tr class="separator:a343eaa0ef94d4e9f55c04d4e1f8c9201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0994e0b02cbffec9d64d30cdcac4ca5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#ab0994e0b02cbffec9d64d30cdcac4ca5">isAttacking</a> = false</td></tr>
 <tr class="separator:ab0994e0b02cbffec9d64d30cdcac4ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de7bb10818e270801b8b42cdbed09ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a5de7bb10818e270801b8b42cdbed09ed">maxComboCount</a> = 0</td></tr>
+<tr class="separator:a5de7bb10818e270801b8b42cdbed09ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbaf3f9cc5f2bb9fae802b3f433bdeac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#adbaf3f9cc5f2bb9fae802b3f433bdeac">comboCount</a> = 0</td></tr>
+<tr class="separator:adbaf3f9cc5f2bb9fae802b3f433bdeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1fc4ac3ae04dd78d590e26a0eee23e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_movement.html">IMovement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_animator_control.html#a5a1fc4ac3ae04dd78d590e26a0eee23e">movement</a></td></tr>
+<tr class="separator:a5a1fc4ac3ae04dd78d590e26a0eee23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af0e6878fba23fc5aa9e4a70c4bf8b1ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0e6878fba23fc5aa9e4a70c4bf8b1ff">&#9670;&nbsp;</a></span>IsAnAttackingClip()</h2>
+<a id="ae151fefa5b241550fde1213501ee8239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae151fefa5b241550fde1213501ee8239">&#9670;&nbsp;</a></span>GetCurrentAnimationClip()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,10 +146,9 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool CharacterAnimatorControl.IsAnAttackingClip </td>
+          <td class="memname">AnimationClip CharacterAnimatorControl.GetCurrentAnimationClip </td>
           <td>(</td>
-          <td class="paramtype">AnimatorClipInfo&#160;</td>
-          <td class="paramname"><em>curClip</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -143,23 +161,112 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_character_animator_control_af0e6878fba23fc5aa9e4a70c4bf8b1ff_icgraph.png" border="0" usemap="#class_character_animator_control_af0e6878fba23fc5aa9e4a70c4bf8b1ff_icgraph" alt=""/></div>
-<map name="class_character_animator_control_af0e6878fba23fc5aa9e4a70c4bf8b1ff_icgraph" id="class_character_animator_control_af0e6878fba23fc5aa9e4a70c4bf8b1ff_icgraph">
+<div class="center"><img src="class_character_animator_control_ae151fefa5b241550fde1213501ee8239_icgraph.png" border="0" usemap="#class_character_animator_control_ae151fefa5b241550fde1213501ee8239_icgraph" alt=""/></div>
+<map name="class_character_animator_control_ae151fefa5b241550fde1213501ee8239_icgraph" id="class_character_animator_control_ae151fefa5b241550fde1213501ee8239_icgraph">
 <area shape="rect" title=" " alt="" coords="228,5,403,47"/>
-<area shape="rect" href="class_character_animator_control.html#a1d574155a378ca5b7a50a7a7edad92d6" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" href="class_character_animator_control.html#a58a1b8db08e836f4765b8a0b06690e31" title=" " alt="" coords="5,5,180,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="adc0201618afe96bf472f076f345fc1f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc0201618afe96bf472f076f345fc1f3">&#9670;&nbsp;</a></span>IsAttacking()</h2>
+<a id="a5bffce3e193cb3e1301b51b81c1cb464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bffce3e193cb3e1301b51b81c1cb464">&#9670;&nbsp;</a></span>IsInAttackingAnimation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool CharacterAnimatorControl.IsAttacking </td>
+          <td class="memname">bool CharacterAnimatorControl.IsInAttackingAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464_icgraph.png" border="0" usemap="#class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464_icgraph" alt=""/></div>
+<map name="class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464_icgraph" id="class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464_icgraph">
+<area shape="rect" title=" " alt="" coords="375,23,549,65"/>
+<area shape="rect" href="class_is_not_attacking.html#a9e91e0844677a24ace98f71fe13a0f8b" title=" " alt="" coords="156,5,327,32"/>
+<area shape="rect" href="class_weapon.html#a6e1fc16f0b3505210907b7ea8b9283f4" title=" " alt="" coords="160,56,323,83"/>
+<area shape="rect" href="class_weapon.html#ae4f517eead254a905b55b9d9cd9b651c" title=" " alt="" coords="5,56,108,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58a1b8db08e836f4765b8a0b06690e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a1b8db08e836f4765b8a0b06690e31">&#9670;&nbsp;</a></span>IsPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CharacterAnimatorControl.IsPlaying </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>animationName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31_cgraph.png" border="0" usemap="#class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31_cgraph" alt=""/></div>
+<map name="class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31_cgraph" id="class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" href="class_character_animator_control.html#ae151fefa5b241550fde1213501ee8239" title=" " alt="" coords="228,5,403,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0efefa9709fd9deb43f16b1ea2ad7113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0efefa9709fd9deb43f16b1ea2ad7113">&#9670;&nbsp;</a></span>OnAttackAnimBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterAnimatorControl.OnAttackAnimBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7a65e488816f705b999498e0a70deef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a65e488816f705b999498e0a70deef">&#9670;&nbsp;</a></span>OnAttackAnimEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterAnimatorControl.OnAttackAnimEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a781056f28fcf44438c98ce27f7ac1be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781056f28fcf44438c98ce27f7ac1be4">&#9670;&nbsp;</a></span>PlayAttackAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterAnimatorControl.PlayAttackAnimation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -191,23 +298,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_animator_control_a0a93416536c2f6504d9110be9a057085_cgraph.png" border="0" usemap="#class_character_animator_control_a0a93416536c2f6504d9110be9a057085_cgraph" alt=""/></div>
+<map name="class_character_animator_control_a0a93416536c2f6504d9110be9a057085_cgraph" id="class_character_animator_control_a0a93416536c2f6504d9110be9a057085_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" href="class_character.html#ae1658993038fafcab66c35fabe7c5c4a" title="Get the movement behavior of the character." alt="" coords="228,13,439,39"/>
+</map>
 </div>
-</div>
-<a id="a563971501cbc71e0ef25c7b589e95eeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a563971501cbc71e0ef25c7b589e95eeb">&#9670;&nbsp;</a></span>TriggerAttackAnimation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CharacterAnimatorControl.TriggerAttackAnimation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -239,7 +338,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6_cgraph.png" border="0" usemap="#class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6_cgraph" alt=""/></div>
 <map name="class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6_cgraph" id="class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,180,47"/>
-<area shape="rect" href="class_character_animator_control.html#af0e6878fba23fc5aa9e4a70c4bf8b1ff" title=" " alt="" coords="228,5,403,47"/>
+<area shape="rect" href="class_i_movement.html#a678684cf45c8f45b5b29d15a7741784b" title=" " alt="" coords="228,13,428,39"/>
 </map>
 </div>
 
@@ -256,7 +355,31 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Animator CharacterAnimatorControl.animator</td>
+          <td class="memname">Animator CharacterAnimatorControl.animator =null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The animator of the character. </p>
+
+</div>
+</div>
+<a id="a343eaa0ef94d4e9f55c04d4e1f8c9201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343eaa0ef94d4e9f55c04d4e1f8c9201">&#9670;&nbsp;</a></span>character</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_character.html">Character</a> CharacterAnimatorControl.character = null</td>
         </tr>
       </table>
   </td>
@@ -268,8 +391,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ad61544952475e94b8e5984c7b90ecd80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad61544952475e94b8e5984c7b90ecd80">&#9670;&nbsp;</a></span>attackingAnims</h2>
+<a id="adbaf3f9cc5f2bb9fae802b3f433bdeac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbaf3f9cc5f2bb9fae802b3f433bdeac">&#9670;&nbsp;</a></span>comboCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +401,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;AnimationClip&gt; CharacterAnimatorControl.attackingAnims</td>
+          <td class="memname">int CharacterAnimatorControl.comboCount = 0</td>
         </tr>
       </table>
   </td>
@@ -300,7 +423,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Rigidbody CharacterAnimatorControl.hostRb</td>
+          <td class="memname">Rigidbody CharacterAnimatorControl.hostRb =null</td>
         </tr>
       </table>
   </td>
@@ -309,6 +432,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The rigidbody of the model of the <a class="el" href="class_character.html" title="The Character class handles all the possible behavior that a character can have.">Character</a>. </p>
 
 </div>
 </div>
@@ -322,7 +447,51 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool CharacterAnimatorControl.isAttacking</td>
+          <td class="memname">bool CharacterAnimatorControl.isAttacking = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5de7bb10818e270801b8b42cdbed09ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de7bb10818e270801b8b42cdbed09ed">&#9670;&nbsp;</a></span>maxComboCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CharacterAnimatorControl.maxComboCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a1fc4ac3ae04dd78d590e26a0eee23e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a1fc4ac3ae04dd78d590e26a0eee23e">&#9670;&nbsp;</a></span>movement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_movement.html">IMovement</a> CharacterAnimatorControl.movement</td>
         </tr>
       </table>
   </td>

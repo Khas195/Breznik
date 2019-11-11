@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['walk_450',['Walk',['../class_i_movement.html#acdc5e47c665524aa577a125d851a7cb8a7a16a854f32231a8df9326136b09ee62',1,'IMovement']]]
+  ['indiagloues_963',['InDiagloues',['../class_game_state.html#ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2',1,'GameState']]],
+  ['ingame_964',['InGame',['../class_game_state.html#ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec',1,'GameState']]]
 ];

@@ -1,0 +1,147 @@
+\hypertarget{class_game_event}{}\doxysection{Game\+Event Class Reference}
+\label{class_game_event}\index{GameEvent@{GameEvent}}
+
+
+This game event signal its listener if the event is raised.  
+
+
+
+
+Inheritance diagram for Game\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_game_event__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_game_event__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_event_a376eac22936308057d9abf2c487b6844}{Raise}} ()
+\begin{DoxyCompactList}\small\item\em Tell every listeners that the event is raised. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_event_a69b8a6a9b0a462c80e354958d91b334c}{Register\+Listener}} (\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}} listener)
+\begin{DoxyCompactList}\small\item\em Register new listener. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_event_ae17ad6c9bf290b3329e6184f83a07855}{Un\+Register\+Listener}} (\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}} listener)
+\begin{DoxyCompactList}\small\item\em Unregister the lisener. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}} $>$ \mbox{\hyperlink{class_game_event_ae2c1e9732d4fafa684db3fd13b8b7b21}{listeners}} = new List$<$\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}}$>$()
+\begin{DoxyCompactList}\small\item\em The list of listeners \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This game event signal its listener if the event is raised. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_event_a376eac22936308057d9abf2c487b6844}\label{class_game_event_a376eac22936308057d9abf2c487b6844}} 
+\index{GameEvent@{GameEvent}!Raise@{Raise}}
+\index{Raise@{Raise}!GameEvent@{GameEvent}}
+\doxysubsubsection{\texorpdfstring{Raise()}{Raise()}}
+{\footnotesize\ttfamily void Game\+Event.\+Raise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tell every listeners that the event is raised. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_event_a376eac22936308057d9abf2c487b6844_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_event_a69b8a6a9b0a462c80e354958d91b334c}\label{class_game_event_a69b8a6a9b0a462c80e354958d91b334c}} 
+\index{GameEvent@{GameEvent}!RegisterListener@{RegisterListener}}
+\index{RegisterListener@{RegisterListener}!GameEvent@{GameEvent}}
+\doxysubsubsection{\texorpdfstring{RegisterListener()}{RegisterListener()}}
+{\footnotesize\ttfamily void Game\+Event.\+Register\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}}}]{listener }\end{DoxyParamCaption})}
+
+
+
+Register new listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & The new listener\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_event_a69b8a6a9b0a462c80e354958d91b334c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_event_a69b8a6a9b0a462c80e354958d91b334c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_event_ae17ad6c9bf290b3329e6184f83a07855}\label{class_game_event_ae17ad6c9bf290b3329e6184f83a07855}} 
+\index{GameEvent@{GameEvent}!UnRegisterListener@{UnRegisterListener}}
+\index{UnRegisterListener@{UnRegisterListener}!GameEvent@{GameEvent}}
+\doxysubsubsection{\texorpdfstring{UnRegisterListener()}{UnRegisterListener()}}
+{\footnotesize\ttfamily void Game\+Event.\+Un\+Register\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}}}]{listener }\end{DoxyParamCaption})}
+
+
+
+Unregister the lisener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & The listener to be unregistered.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_event_ae17ad6c9bf290b3329e6184f83a07855_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_event_ae17ad6c9bf290b3329e6184f83a07855_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_event_ae2c1e9732d4fafa684db3fd13b8b7b21}\label{class_game_event_ae2c1e9732d4fafa684db3fd13b8b7b21}} 
+\index{GameEvent@{GameEvent}!listeners@{listeners}}
+\index{listeners@{listeners}!GameEvent@{GameEvent}}
+\doxysubsubsection{\texorpdfstring{listeners}{listeners}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}}$>$ Game\+Event.\+listeners = new List$<$\mbox{\hyperlink{class_game_event_listener}{Game\+Event\+Listener}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The list of listeners 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Game\+Events/\mbox{\hyperlink{_game_event_8cs}{Game\+Event.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,601 @@
+\hypertarget{class_game_master}{}\doxysection{Game\+Master Class Reference}
+\label{class_game_master}\index{GameMaster@{GameMaster}}
+
+
+Control the flow of the game.  
+
+
+
+
+Inheritance diagram for Game\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_game_master__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{class_game_master__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_state}{Game\+State}} \mbox{\hyperlink{class_game_master_af6c7c29a81be188d1171d22f93e34b3d}{Get\+Current\+Game\+State}} ()
+\item 
+void \mbox{\hyperlink{class_game_master_ae96def3d3c7314908b64b0c360763d97}{On\+Scene\+Loaded}} (Scene scene, Load\+Scene\+Mode mode)
+\begin{DoxyCompactList}\small\item\em Called whenever a scene is loaded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_abd8a0ea98042d520681e2d370990037e}{Set\+Game\+Time\+Scale}} (float time\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the time scale of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_aadbcc7236da8eac0db15249ef13834af}{Load\+Scene}} (Slider slider, Text loading\+Text)
+\begin{DoxyCompactList}\small\item\em Can only be called by the \mbox{\hyperlink{class_loading}{Loading}} \mbox{\hyperlink{class_state}{State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a896eed42965e4fcb8339f036b03430e0}{Set\+Mouse\+Visibility}} (bool is\+Visible)
+\begin{DoxyCompactList}\small\item\em Show or hide mouse in the current scene. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_master_ab6e3e51a33d6e89e7af93255f904a617}{Request\+Game\+State}} (\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}} request\+State)
+\begin{DoxyCompactList}\small\item\em Request a new game state for the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a7e88d5833850a5a889d52f7bcb1520aa}{Request\+Load\+Scene}} (string scene\+Name)
+\begin{DoxyCompactList}\small\item\em Request load a new scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a33c802376b353f99be17c31e2829fdba}{Exit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Exit the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a277fc326efbb056a21bb8b65158f89d8}{Go\+To\+Arena}} ()
+\begin{DoxyCompactList}\small\item\em Go to the arena scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_master}{Game\+Master}} \mbox{\hyperlink{class_game_master_a9eb6dd216e1ec4df704a85831d4c2a32}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Return the single instance of the game master. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_master_ac1570c139d47160b148ba14c46ded00a}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_game_master_a0f98f0d3b5b5d5bd79b3134adfb7b17d}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_game_master_a2aace22ba30a2984703f929627c7a231}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_game_master_a3b8d891948bb2476d1b331d3a8edf2c8}{Prevent\+More\+Than\+One\+Game\+Master}} ()
+\begin{DoxyCompactList}\small\item\em Find all the game object with the tag \char`\"{}\+Game\+Master\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a9d6af77cccc0aacb723e14a0c7241b26}{Find\+All\+Possible\+States}} ()
+\begin{DoxyCompactList}\small\item\em Find all the possible game states in the current scene. \end{DoxyCompactList}\item 
+I\+Enumerator \mbox{\hyperlink{class_game_master_af393ecb5e4f690caaa96a3b96a8c87fa}{Load\+Asyn}} (Slider slider, Text loading\+Text)
+\begin{DoxyCompactList}\small\item\em Load the scene\+To\+Load in the background. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_master_a5fb08825f2107143346afeb7d5cbdb30}{Try\+To\+Transit\+To\+State}} (\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}} request\+State, \mbox{\hyperlink{class_game_state}{Game\+State}} result, \mbox{\hyperlink{class_game_state}{Game\+State}} current\+State)
+\item 
+\mbox{\hyperlink{class_game_state}{Game\+State}} \mbox{\hyperlink{class_game_master_ab5288b47c97b7ce25c24569cbf9efc07}{Lookup\+Game\+State}} (\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}} request\+State)
+\begin{DoxyCompactList}\small\item\em Look up the requested state in the list of possible game states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_stack}{State\+Stack}} \mbox{\hyperlink{class_game_master_adab285703a47d98f58756bd09466e77a}{game\+State\+Stack}} = new \mbox{\hyperlink{class_state_stack}{State\+Stack}}()
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_state}{State}} stack that is used to manage the game states. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_game_state}{Game\+State}} $>$ \mbox{\hyperlink{class_game_master_a6646d1cd3dbf329289af10c5a0eac3d2}{possible\+Game\+States}} = new List$<$\mbox{\hyperlink{class_game_state}{Game\+State}}$>$()
+\begin{DoxyCompactList}\small\item\em The possible game states in a certain scene. \end{DoxyCompactList}\item 
+Text \mbox{\hyperlink{class_game_master_abb41934fe3714319847f1d59df73a797}{can\+Interact\+Text}}
+\item 
+string \mbox{\hyperlink{class_game_master_a587de65ba67a8f019f019cb55c81e13a}{scene\+To\+Load}}
+\begin{DoxyCompactList}\small\item\em The name of the scene that is going to be loaded when moving into the Loading\+Scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_master}{Game\+Master}} \mbox{\hyperlink{class_game_master_ab54ceea00629d0275446d298453a3836}{instance}}
+\begin{DoxyCompactList}\small\item\em The Single instant of the game master. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Control the flow of the game. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_master_ac1570c139d47160b148ba14c46ded00a}\label{class_game_master_ac1570c139d47160b148ba14c46ded00a}} 
+\index{GameMaster@{GameMaster}!Awake@{Awake}}
+\index{Awake@{Awake}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Game\+Master.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ac1570c139d47160b148ba14c46ded00a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a33c802376b353f99be17c31e2829fdba}\label{class_game_master_a33c802376b353f99be17c31e2829fdba}} 
+\index{GameMaster@{GameMaster}!ExitGame@{ExitGame}}
+\index{ExitGame@{ExitGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{ExitGame()}{ExitGame()}}
+{\footnotesize\ttfamily void Game\+Master.\+Exit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exit the game. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a33c802376b353f99be17c31e2829fdba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a9d6af77cccc0aacb723e14a0c7241b26}\label{class_game_master_a9d6af77cccc0aacb723e14a0c7241b26}} 
+\index{GameMaster@{GameMaster}!FindAllPossibleStates@{FindAllPossibleStates}}
+\index{FindAllPossibleStates@{FindAllPossibleStates}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{FindAllPossibleStates()}{FindAllPossibleStates()}}
+{\footnotesize\ttfamily void Game\+Master.\+Find\+All\+Possible\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Find all the possible game states in the current scene. 
+
+A game object holder with a tag \char`\"{}\+Game\+States\char`\"{} with the possible game states as child is needed. Whether the child object is active or not is irrelevant.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a9d6af77cccc0aacb723e14a0c7241b26_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a9d6af77cccc0aacb723e14a0c7241b26_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_af6c7c29a81be188d1171d22f93e34b3d}\label{class_game_master_af6c7c29a81be188d1171d22f93e34b3d}} 
+\index{GameMaster@{GameMaster}!GetCurrentGameState@{GetCurrentGameState}}
+\index{GetCurrentGameState@{GetCurrentGameState}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{GetCurrentGameState()}{GetCurrentGameState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state}{Game\+State}} Game\+Master.\+Get\+Current\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_af6c7c29a81be188d1171d22f93e34b3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_af6c7c29a81be188d1171d22f93e34b3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a9eb6dd216e1ec4df704a85831d4c2a32}\label{class_game_master_a9eb6dd216e1ec4df704a85831d4c2a32}} 
+\index{GameMaster@{GameMaster}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_game_master}{Game\+Master}} Game\+Master.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the single instance of the game master. 
+
+if the instance is null then search out for the game object with the tag \char`\"{}\+Game\+Master\char`\"{} to get that instance.
+
+\begin{DoxyReturn}{Returns}
+the first instance of \mbox{\hyperlink{class_game_master}{Game\+Master}} that its found in the current scene.
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a9eb6dd216e1ec4df704a85831d4c2a32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a277fc326efbb056a21bb8b65158f89d8}\label{class_game_master_a277fc326efbb056a21bb8b65158f89d8}} 
+\index{GameMaster@{GameMaster}!GoToArena@{GoToArena}}
+\index{GoToArena@{GoToArena}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{GoToArena()}{GoToArena()}}
+{\footnotesize\ttfamily void Game\+Master.\+Go\+To\+Arena (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Go to the arena scene. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a277fc326efbb056a21bb8b65158f89d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a277fc326efbb056a21bb8b65158f89d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a2aace22ba30a2984703f929627c7a231}\label{class_game_master_a2aace22ba30a2984703f929627c7a231}} 
+\index{GameMaster@{GameMaster}!Init@{Init}}
+\index{Init@{Init}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Game\+Master.\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a2aace22ba30a2984703f929627c7a231_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_game_master_a2aace22ba30a2984703f929627c7a231_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_af393ecb5e4f690caaa96a3b96a8c87fa}\label{class_game_master_af393ecb5e4f690caaa96a3b96a8c87fa}} 
+\index{GameMaster@{GameMaster}!LoadAsyn@{LoadAsyn}}
+\index{LoadAsyn@{LoadAsyn}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{LoadAsyn()}{LoadAsyn()}}
+{\footnotesize\ttfamily I\+Enumerator Game\+Master.\+Load\+Asyn (\begin{DoxyParamCaption}\item[{Slider}]{slider,  }\item[{Text}]{loading\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load the scene\+To\+Load in the background. 
+
+After which ask the user to press space bar to load the scene.
+
+
+\begin{DoxyParams}{Parameters}
+{\em slider} & The slider to show the progress.\\
+\hline
+{\em loading\+Text} & The text to show the progress.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_af393ecb5e4f690caaa96a3b96a8c87fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_af393ecb5e4f690caaa96a3b96a8c87fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_aadbcc7236da8eac0db15249ef13834af}\label{class_game_master_aadbcc7236da8eac0db15249ef13834af}} 
+\index{GameMaster@{GameMaster}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}}
+{\footnotesize\ttfamily void Game\+Master.\+Load\+Scene (\begin{DoxyParamCaption}\item[{Slider}]{slider,  }\item[{Text}]{loading\+Text }\end{DoxyParamCaption})}
+
+
+
+Can only be called by the \mbox{\hyperlink{class_loading}{Loading}} \mbox{\hyperlink{class_state}{State}}. 
+
+Used for loading operation in the loading Scene.
+
+
+\begin{DoxyParams}{Parameters}
+{\em slider} & The slider to show the progress.\\
+\hline
+{\em loading\+Text} & The text to show the progress.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_aadbcc7236da8eac0db15249ef13834af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_game_master_aadbcc7236da8eac0db15249ef13834af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ab5288b47c97b7ce25c24569cbf9efc07}\label{class_game_master_ab5288b47c97b7ce25c24569cbf9efc07}} 
+\index{GameMaster@{GameMaster}!LookupGameState@{LookupGameState}}
+\index{LookupGameState@{LookupGameState}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{LookupGameState()}{LookupGameState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state}{Game\+State}} Game\+Master.\+Lookup\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}}}]{request\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Look up the requested state in the list of possible game states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request\+State} & The requested state.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Null if the requested state is invalid and the request state if the requested state is valid.
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ab5288b47c97b7ce25c24569cbf9efc07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ae96def3d3c7314908b64b0c360763d97}\label{class_game_master_ae96def3d3c7314908b64b0c360763d97}} 
+\index{GameMaster@{GameMaster}!OnSceneLoaded@{OnSceneLoaded}}
+\index{OnSceneLoaded@{OnSceneLoaded}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{OnSceneLoaded()}{OnSceneLoaded()}}
+{\footnotesize\ttfamily void Game\+Master.\+On\+Scene\+Loaded (\begin{DoxyParamCaption}\item[{Scene}]{scene,  }\item[{Load\+Scene\+Mode}]{mode }\end{DoxyParamCaption})}
+
+
+
+Called whenever a scene is loaded. 
+
+Clear all possible\+Game\+States from previous scene and then find the new possible states in the loaded scene.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & The loaded scene.\\
+\hline
+{\em mode} & The mode of which the scene is loaded\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ae96def3d3c7314908b64b0c360763d97_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ae96def3d3c7314908b64b0c360763d97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a3b8d891948bb2476d1b331d3a8edf2c8}\label{class_game_master_a3b8d891948bb2476d1b331d3a8edf2c8}} 
+\index{GameMaster@{GameMaster}!PreventMoreThanOneGameMaster@{PreventMoreThanOneGameMaster}}
+\index{PreventMoreThanOneGameMaster@{PreventMoreThanOneGameMaster}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{PreventMoreThanOneGameMaster()}{PreventMoreThanOneGameMaster()}}
+{\footnotesize\ttfamily void Game\+Master.\+Prevent\+More\+Than\+One\+Game\+Master (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Find all the game object with the tag \char`\"{}\+Game\+Master\char`\"{}. 
+
+If more than one object with said tag is found, destroy self.Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a3b8d891948bb2476d1b331d3a8edf2c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ab6e3e51a33d6e89e7af93255f904a617}\label{class_game_master_ab6e3e51a33d6e89e7af93255f904a617}} 
+\index{GameMaster@{GameMaster}!RequestGameState@{RequestGameState}}
+\index{RequestGameState@{RequestGameState}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{RequestGameState()}{RequestGameState()}}
+{\footnotesize\ttfamily bool Game\+Master.\+Request\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}}}]{request\+State }\end{DoxyParamCaption})}
+
+
+
+Request a new game state for the game. 
+
+If the requested state is valid then called on Pop on all states in stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em request\+State} & The requested state.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ab6e3e51a33d6e89e7af93255f904a617_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ab6e3e51a33d6e89e7af93255f904a617_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a7e88d5833850a5a889d52f7bcb1520aa}\label{class_game_master_a7e88d5833850a5a889d52f7bcb1520aa}} 
+\index{GameMaster@{GameMaster}!RequestLoadScene@{RequestLoadScene}}
+\index{RequestLoadScene@{RequestLoadScene}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{RequestLoadScene()}{RequestLoadScene()}}
+{\footnotesize\ttfamily void Game\+Master.\+Request\+Load\+Scene (\begin{DoxyParamCaption}\item[{string}]{scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Request load a new scene. 
+
+Call On\+Pop on all current states in the game state stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+Name} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a7e88d5833850a5a889d52f7bcb1520aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a7e88d5833850a5a889d52f7bcb1520aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_abd8a0ea98042d520681e2d370990037e}\label{class_game_master_abd8a0ea98042d520681e2d370990037e}} 
+\index{GameMaster@{GameMaster}!SetGameTimeScale@{SetGameTimeScale}}
+\index{SetGameTimeScale@{SetGameTimeScale}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{SetGameTimeScale()}{SetGameTimeScale()}}
+{\footnotesize\ttfamily void Game\+Master.\+Set\+Game\+Time\+Scale (\begin{DoxyParamCaption}\item[{float}]{time\+Scale }\end{DoxyParamCaption})}
+
+
+
+Set the time scale of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Scale} & The new Time Scale Of the game.\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_abd8a0ea98042d520681e2d370990037e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a896eed42965e4fcb8339f036b03430e0}\label{class_game_master_a896eed42965e4fcb8339f036b03430e0}} 
+\index{GameMaster@{GameMaster}!SetMouseVisibility@{SetMouseVisibility}}
+\index{SetMouseVisibility@{SetMouseVisibility}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{SetMouseVisibility()}{SetMouseVisibility()}}
+{\footnotesize\ttfamily void Game\+Master.\+Set\+Mouse\+Visibility (\begin{DoxyParamCaption}\item[{bool}]{is\+Visible }\end{DoxyParamCaption})}
+
+
+
+Show or hide mouse in the current scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Visible} & Whether the mouse should be visible or not.\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a896eed42965e4fcb8339f036b03430e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a0f98f0d3b5b5d5bd79b3134adfb7b17d}\label{class_game_master_a0f98f0d3b5b5d5bd79b3134adfb7b17d}} 
+\index{GameMaster@{GameMaster}!Start@{Start}}
+\index{Start@{Start}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Game\+Master.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a0f98f0d3b5b5d5bd79b3134adfb7b17d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a5fb08825f2107143346afeb7d5cbdb30}\label{class_game_master_a5fb08825f2107143346afeb7d5cbdb30}} 
+\index{GameMaster@{GameMaster}!TryToTransitToState@{TryToTransitToState}}
+\index{TryToTransitToState@{TryToTransitToState}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{TryToTransitToState()}{TryToTransitToState()}}
+{\footnotesize\ttfamily bool Game\+Master.\+Try\+To\+Transit\+To\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}}}]{request\+State,  }\item[{\mbox{\hyperlink{class_game_state}{Game\+State}}}]{result,  }\item[{\mbox{\hyperlink{class_game_state}{Game\+State}}}]{current\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a5fb08825f2107143346afeb7d5cbdb30_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a5fb08825f2107143346afeb7d5cbdb30_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_master_abb41934fe3714319847f1d59df73a797}\label{class_game_master_abb41934fe3714319847f1d59df73a797}} 
+\index{GameMaster@{GameMaster}!canInteractText@{canInteractText}}
+\index{canInteractText@{canInteractText}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{canInteractText}{canInteractText}}
+{\footnotesize\ttfamily Text Game\+Master.\+can\+Interact\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_master_adab285703a47d98f58756bd09466e77a}\label{class_game_master_adab285703a47d98f58756bd09466e77a}} 
+\index{GameMaster@{GameMaster}!gameStateStack@{gameStateStack}}
+\index{gameStateStack@{gameStateStack}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{gameStateStack}{gameStateStack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state_stack}{State\+Stack}} Game\+Master.\+game\+State\+Stack = new \mbox{\hyperlink{class_state_stack}{State\+Stack}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{class_state}{State}} stack that is used to manage the game states. 
+
+The top state is always the current state of the game master.\mbox{\Hypertarget{class_game_master_ab54ceea00629d0275446d298453a3836}\label{class_game_master_ab54ceea00629d0275446d298453a3836}} 
+\index{GameMaster@{GameMaster}!instance@{instance}}
+\index{instance@{instance}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_master}{Game\+Master}} Game\+Master.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The Single instant of the game master. 
+
+\mbox{\Hypertarget{class_game_master_a6646d1cd3dbf329289af10c5a0eac3d2}\label{class_game_master_a6646d1cd3dbf329289af10c5a0eac3d2}} 
+\index{GameMaster@{GameMaster}!possibleGameStates@{possibleGameStates}}
+\index{possibleGameStates@{possibleGameStates}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{possibleGameStates}{possibleGameStates}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_game_state}{Game\+State}}$>$ Game\+Master.\+possible\+Game\+States = new List$<$\mbox{\hyperlink{class_game_state}{Game\+State}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The possible game states in a certain scene. 
+
+The first possible state will start as the base state.\mbox{\Hypertarget{class_game_master_a587de65ba67a8f019f019cb55c81e13a}\label{class_game_master_a587de65ba67a8f019f019cb55c81e13a}} 
+\index{GameMaster@{GameMaster}!sceneToLoad@{sceneToLoad}}
+\index{sceneToLoad@{sceneToLoad}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{sceneToLoad}{sceneToLoad}}
+{\footnotesize\ttfamily string Game\+Master.\+scene\+To\+Load\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the scene that is going to be loaded when moving into the Loading\+Scene. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Game\+Master/\mbox{\hyperlink{_game_master_8cs}{Game\+Master.\+cs}}\end{DoxyCompactItemize}
