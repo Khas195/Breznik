@@ -11,12 +11,17 @@ public class InventoryObject : ScriptableObject
 
     public bool AddItem(ItemObject newItem)
     {
-        if (container.Contains(newItem) )
+        if (newItem == null)
         {
-            Logger.InventoryDebug("Trying to add the same instance of an item twice");
             return false;
         }
-        container.Add(newItem);
+        if (container.Contains(newItem) == false)
+        {
+            Logger.InventoryDebug("Add new Item to Inventory: " + newItem);
+            container.Add(newItem);
+        }
+        newItem.IncreaseAmountInInventory();
+        Logger.InventoryDebug(newItem + " increases count in Inventory by 1" + "- Current Amount : " + newItem.GetAmountInInventory());
         return true;
     }
     public bool RemoveItem(ItemObject targetItem)
@@ -27,11 +32,16 @@ public class InventoryObject : ScriptableObject
             return false;
         }
         container.Remove(targetItem);
+        targetItem.ResetAmountInInventory();
         return true;
     }
 
     public void ClearContainer()
     {
+        for (int i = 0; i < container.Count; i++)
+        {
+            container[i].ResetAmountInInventory();
+        }
         container.Clear();
     }
 

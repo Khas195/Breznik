@@ -13,8 +13,13 @@ public class PlayerController : MonoBehaviour
     /** \brief Reference to the character*/
     Character character = null;
     [SerializeField]
+    Camera playerCameraView = null;
+    [SerializeField]
     UnityEvent interact = new UnityEvent();
-
+    void Start()
+    {
+        EntitiesMaster.GetInstance().RegisterEntity(EntitiesMaster.EntitiesKey.PLAYER, character.GetHost());
+    }
     void Update()
     {
         ControlMovement();
@@ -29,8 +34,8 @@ public class PlayerController : MonoBehaviour
     private void ControlMovement()
     {
 
-        var horizontal = Input.GetAxisRaw("Horizontal");
-        var vertical = Input.GetAxisRaw("Vertical");
+        var side = Input.GetAxisRaw("Horizontal");
+        var forward = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             character.RequestMovementType(IMovement.MovementType.Run);
@@ -50,11 +55,27 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             var gameState = GameMaster.GetInstance().GetCurrentGameState();
-            if (gameState != null && gameState.GetState() == GameState.States.InGame) {
+            if (gameState != null && gameState.GetState() == GameState.States.InGame)
+            {
                 interact.Invoke();
             }
         }
-        character.RequestMove(vertical, horizontal);
+
+        if ((forward != 0 || side != 0))
+        {
+            var movedir = Vector3.zero;
+
+            movedir = Ultilities.CalculateMoveDirection(horizontalInput: side, forwardInput: forward
+                                            , playerCameraView.transform.forward, playerCameraView.transform.right);
+
+            character.RotateToward(movedir.normalized, rotateY: false);
+        }
+        forward = Mathf.Abs(forward) > Mathf.Abs(side) ? Mathf.Abs(forward) : Mathf.Abs(side);
+        character.RequestMove(forward, 0);
 
     }
+
+
+
+
 }

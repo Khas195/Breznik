@@ -18,9 +18,7 @@ public class HasStamina : CharacterBehaviorCondition {
     /// <returns>True if has enough stamina and vice versa.</returns>
     public override bool IsSatisfied(Character character)
     {
-        var stats = character.GetCharacterStats();
-        if (stats == null) return true;
-        if (stats.curStamina >= cost.cost) {
+        if (character.GetStamina()>= cost.cost) {
             return true;
         } else {
             return false;
