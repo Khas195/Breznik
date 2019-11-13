@@ -8,13 +8,15 @@ using UnityEngine.UI;
 /// <summary>
 /// Control the flow of the game. 
 /// </summary>
-public class GameMaster : MonoBehaviour
+public class GameMaster : SingletonMonobehavior<GameMaster>
 {
     /// <summary>
     /// The State stack that is used to manage the game states.
     /// The top state is always the current state of the game master.
     /// </summary>
-    StateStack gameStateStack = new StateStack();
+    StateStack<GameState> gameStateStack = new StateStack<GameState>();
+
+
 
 
 
@@ -35,32 +37,15 @@ public class GameMaster : MonoBehaviour
     /// The name of the scene that is going to be loaded when moving into the LoadingScene.
     /// </summary>
     string sceneToLoad;
-    /// <summary>
-    /// The Single instant of the game master.
-    /// </summary>
-    static GameMaster instance;
-    /// <summary>
-    /// Return the single instance of the game master.
-    /// if the instance is null then search out for the game object with the tag "GameMaster" to get that instance. 
-    /// </summary>
-    /// <returns> the first instance of GameMaster that its found in the current scene.</returns>
-    public static GameMaster GetInstance()
-    {
-        if (instance == null)
-        {
-            instance = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-        }
-        return instance;
-    }
 
     public GameState GetCurrentGameState()
     {
-        return (GameState)gameStateStack.GetPeek();
+        return gameStateStack.GetPeek();
     }
 
-    void Awake()
+    protected override void Awake()
     {
-        PreventMoreThanOneGameMaster();
+        base.Awake();
     }
     void Start()
     {
@@ -73,21 +58,6 @@ public class GameMaster : MonoBehaviour
     }
 
     /// <summary>
-    /// Find all the game object with the tag "GameMaster".
-    /// If more than one object with said tag is found, destroy self.
-    /// </summary>
-    private void PreventMoreThanOneGameMaster()
-    {
-        if (GameMaster.instance != null)
-        {
-            Destroy(this.transform.parent.gameObject);
-        }
-        else
-        {
-            GameMaster.instance = this;
-        }
-    }
-    /// <summary>
     /// Called whenever a scene is loaded.
     /// Clear all possibleGameStates from previous scene and then find the new possible states in the loaded scene.
     /// </summary>
@@ -96,7 +66,17 @@ public class GameMaster : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         possibleGameStates.Clear();
+        EntitiesMaster.GetInstance().Clear();
         FindAllPossibleStates();
+    }
+    public bool IsInState(GameState.States stateToCheck)
+    {
+        var currentState = this.gameStateStack.GetPeek();
+        if (currentState && currentState.GetState() == stateToCheck)
+        {
+            return true;
+        }
+        return false;
     }
     /// <summary>
     /// Set the time scale of the game.
@@ -127,7 +107,7 @@ public class GameMaster : MonoBehaviour
     /// <param name="loadingText">The text to show the progress.</param>
     public void LoadScene(Slider slider, Text loadingText)
     {
-        var currentState = (GameState)gameStateStack.GetPeek();
+        var currentState = gameStateStack.GetPeek();
         if (currentState == null || currentState.GetState() != GameState.States.Loading)
         {
             Logger.GameMasterDebug(this, " tried to load a scene while game master is not in loading state");
@@ -203,6 +183,7 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    // TODO: do something about this function plz.
     private bool TryToTransitToState(GameState.States requestState, GameState result, GameState currentState)
     {
         var currentStateType = currentState.GetState();
@@ -221,10 +202,22 @@ public class GameMaster : MonoBehaviour
                     gameStateStack.Pop();
                     return true;
                 }
+                else if (currentStateType == GameState.States.InInventory)
+                {
+                    gameStateStack.Pop();
+                    return true;
+                }
                 else
                 {
                     gameStateStack.EmptyStack();
                     gameStateStack.Push(result);
+                    return true;
+                }
+            case GameState.States.InInventory:
+                if (currentStateType == GameState.States.InGame)
+                {
+                    gameStateStack.Push(result);
+                    return true;
                 }
                 break;
             default:
@@ -276,5 +269,5 @@ public class GameMaster : MonoBehaviour
     {
         RequestLoadScene("ArenaScene");
     }
-    
 }
+

@@ -3,9 +3,13 @@ using UnityEngine.Events;
 
 public class State : MonoBehaviour
 {
+    [SerializeField]
     public UnityEvent OnPressedEvent;
+    [SerializeField]
     public UnityEvent OnPoppedEvent;
+    [SerializeField]
     public UnityEvent OnReturnPeekEvent;
+    [SerializeField]
     public UnityEvent OnPushedEvent;
     public virtual void OnPressed()
     {

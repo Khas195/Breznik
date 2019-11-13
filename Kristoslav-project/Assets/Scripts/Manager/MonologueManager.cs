@@ -10,7 +10,6 @@ public class MonologueManager : MonoBehaviour
     [SerializeField]
     Text monologueText;
 
-    [SerializeField]
     MonologueData curData;
     [SerializeField]
     Queue<MonologueData> monologueList = new Queue<MonologueData>();
@@ -20,26 +19,39 @@ public class MonologueManager : MonoBehaviour
     bool isPlaying;
 
     static MonologueManager instance;
-    public static MonologueManager GetInstance() {
+    public static MonologueManager GetInstance()
+    {
         return instance;
     }
     void Awake()
     {
-        if (instance == null) {
+        if (instance == null)
+        {
             instance = this;
-        } else {
+        }
+        else
+        {
             Destroy(this.gameObject);
         }
     }
 
     public void Skip()
     {
-        if (IsMonologueFinished()) {
+        if (IsMonologueFinished())
+        {
+            if (DoesContainQuestInMonologue())
+            {
+                QuestSystem.GetInstance().AddQuest(curData.quest);
+            }
             Reset();
-            if (IsMonologueInQueue()) {
+
+            if (IsMonologueInQueue())
+            {
                 PlayNext();
             }
-        } else {
+        }
+        else
+        {
             NextSentence();
         }
     }
@@ -55,7 +67,12 @@ public class MonologueManager : MonoBehaviour
             {
                 if (IsMonologueFinished())
                 {
+                    if (DoesContainQuestInMonologue())
+                    {
+                        QuestSystem.GetInstance().AddQuest(curData.quest);
+                    }
                     Reset();
+
                     if (IsMonologueInQueue())
                     {
                         PlayNext();
@@ -71,6 +88,11 @@ public class MonologueManager : MonoBehaviour
         {
             monologueUI.SetActive(false);
         }
+    }
+
+    private bool DoesContainQuestInMonologue()
+    {
+        return curData.quest != null;
     }
 
     public void SetTextUI(Text textUI)
@@ -118,7 +140,8 @@ public class MonologueManager : MonoBehaviour
         monologueText.text = "";
         monologueUI.SetActive(false);
     }
-    public void HardReset() {
+    public void HardReset()
+    {
         Reset();
         monologueList.Clear();
     }

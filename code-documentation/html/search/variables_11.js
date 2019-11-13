@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['viewtime_437',['viewTime',['../class_area_view.html#a43ab6534dfd9a19a9971507d89154c3e',1,'AreaView']]]
+  ['scenetoload_915',['sceneToLoad',['../class_game_master.html#a587de65ba67a8f019f019cb55c81e13a',1,'GameMaster']]],
+  ['sensitivity_916',['sensitivity',['../class_camera_rotate_mouse.html#a7bedbc8e73f8edccbd885842dfb3aa74',1,'CameraRotateMouse.sensitivity()'],['../class_mouse_rotate_camera.html#a2df874be83d8e9bfabd85695f4be4fd1',1,'MouseRotateCamera.sensitivity()']]],
+  ['sentences_917',['sentences',['../class_monologue_data.html#a97375904ff4fd5262e8706afd482a381',1,'MonologueData']]],
+  ['shouldregen_918',['shouldRegen',['../class_player_character.html#a15696f4b81a0bcf573aaa3ee14471e7c',1,'PlayerCharacter']]],
+  ['slider_919',['slider',['../class_loading.html#afbec5d4ac3fd411afa0740d0888782db',1,'Loading']]],
+  ['smoothacceleration_920',['smoothAcceleration',['../class_movement2_d.html#af5b8a2bb9af6386305cb6ddf9ff4ab83',1,'Movement2D']]],
+  ['sortingobjects_921',['sortingObjects',['../class_front_back_sorting_manager.html#a1f207cd24751437f114a5b8f91197909',1,'FrontBackSortingManager']]],
+  ['spacebetween_922',['spaceBetween',['../class_dots_u_i_data.html#abe2d37998d70ac330216a374d381949f',1,'DotsUIData']]],
+  ['speedstep_923',['speedStep',['../class_movement_root_motion.html#af81701795fb69926c09fe0d35317675e',1,'MovementRootMotion']]],
+  ['stack_924',['stack',['../class_state_stack.html#aa875322362f3546c8f9093059157baa8',1,'StateStack']]],
+  ['stamina_925',['stamina',['../class_character_stats_data.html#a2fc767a38acb70817fd576c25fe59ac8',1,'CharacterStatsData']]],
+  ['staminadots_926',['staminaDots',['../class_flexible_u_i_data.html#acbd3e36d14a9003ca0e42d96275ca80e',1,'FlexibleUIData.staminaDots()'],['../class_player_stats_u_i.html#a780a43b0a98b401319ea8d73046d4050',1,'PlayerStatsUI.staminaDots()']]],
+  ['staminaregenrate_927',['staminaRegenRate',['../class_character_stats_data.html#a1d9c71142a9b7af10781b1f4059d8f18',1,'CharacterStatsData']]],
+  ['startbutton_928',['startButton',['../class_main_menu.html#a5d649b03cdc3f649f4850eb7271bc565',1,'MainMenu']]],
+  ['state_929',['state',['../class_game_state.html#a74a21359dbd9e4fe3f9500a2c47dabfc',1,'GameState']]],
+  ['statsdata_930',['statsData',['../class_character_data.html#a59227cc3316706fae38b912decaf78e9',1,'CharacterData']]]
 ];

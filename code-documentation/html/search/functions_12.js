@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['unview_355',['UnView',['../class_area_view.html#a514648446a8d5ebebf5afbd5381bc996',1,'AreaView']]],
-  ['update_356',['Update',['../class_area_view.html#a817f1dd1a3a1077c3b9e8817b2af532b',1,'AreaView.Update()'],['../class_front_back_sorting_manager.html#ac72a83d8b2a826734ce8c023da339f3d',1,'FrontBackSortingManager.Update()'],['../class_movement2_d.html#a2ca9d7325e390e6f82f6744196852634',1,'Movement2D.Update()'],['../class_camera_rotate_mouse.html#aca7afbcc2c4ad7382189208144002439',1,'CameraRotateMouse.Update()'],['../class_mouse_rotate_camera.html#a7140c710ac92172f5ef20b9fa881ea58',1,'MouseRotateCamera.Update()'],['../class_movement_root_motion.html#aea34a6348e63c77642dbe1bd1c6dcdde',1,'MovementRootMotion.Update()'],['../class_character_animator_control.html#a1d574155a378ca5b7a50a7a7edad92d6',1,'CharacterAnimatorControl.Update()'],['../class_i_interactable.html#a4daf2d5fe133aa643ab4a1e1266e0cf9',1,'IInteractable.Update()'],['../class_monologue_manager.html#ab145a5339a365ae62f027f24991c277c',1,'MonologueManager.Update()'],['../class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43',1,'PlayerController.Update()'],['../class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0',1,'OnCreateTrigger.Update()']]],
-  ['updatecurrentspeed_357',['UpdateCurrentSpeed',['../class_movement2_d.html#a49868fdd944970646f91b3242642bcde',1,'Movement2D']]]
+  ['talk_764',['Talk',['../class_talk_to_n_p_c.html#a63eec91f57a7d036a7e683aac8ba620a',1,'TalkToNPC']]],
+  ['tick_765',['Tick',['../class_timer.html#ad416ed6bdaf6ab9f42cb02e57563b805',1,'Timer']]],
+  ['timer_766',['Timer',['../class_timer.html#afb92243e80b0eac16b5956fd23e05b56',1,'Timer.Timer(float time, OnTimerDone callback)'],['../class_timer.html#a99ec6507fdc91f87452d53d6e3c347af',1,'Timer.Timer(float attackCooldown)']]],
+  ['trigger_767',['Trigger',['../class_timer.html#abec15b67118c7eed85e9c618e5482b48',1,'Timer']]],
+  ['triggerregencooldown_768',['TriggerRegenCooldown',['../class_player_character.html#a72167cfb9ada9c29cf1e030d4070d207',1,'PlayerCharacter']]],
+  ['trytotransittostate_769',['TryToTransitToState',['../class_game_master.html#a5fb08825f2107143346afeb7d5cbdb30',1,'GameMaster']]],
+  ['tween_770',['Tween',['../class_tweener.html#a7e97dcc14ea647a69db665b601dc510f',1,'Tweener']]],
+  ['tweencolor_771',['TweenColor',['../class_tweener.html#a151f2faff98630a3d3eb5cbaa9f9c234',1,'Tweener']]]
 ];

@@ -51,6 +51,23 @@ public class InGame : GameState
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             GameMaster.GetInstance().RequestGameState(GameState.States.GamePaused);
+        } 
+        if (Input.GetKeyDown(KeyCode.I)){
+            GameMaster.GetInstance().RequestGameState(GameState.States.InInventory);
         }
+    }
+
+    public override void OnPressed()
+    {
+        base.OnPressed();
+        this.gameObject.SetActive(false);
+        GameMaster.GetInstance().SetMouseVisibility(true);
+    }
+
+    public override void OnReturnPeek()
+    {
+        base.OnReturnPeek();
+        this.gameObject.SetActive(true);
+        GameMaster.GetInstance().SetMouseVisibility(false);
     }
 }

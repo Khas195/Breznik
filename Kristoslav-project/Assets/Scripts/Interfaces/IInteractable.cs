@@ -4,15 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[Serializable]
-public class OnFocusChange : UnityEvent<IInteractable> { }
-public class IInteractable : MonoBehaviour
+public abstract class IInteractable : MonoBehaviour
 {
-
-    [SerializeField]
-    OnFocusChange focusChanged = new OnFocusChange();
     [SerializeField]
     protected bool isFocus;
+
     public virtual string GetName()
     {
         return "";
@@ -21,23 +17,17 @@ public class IInteractable : MonoBehaviour
     {
         Logger.InteractableDebug(interacter.name + " try to focus " + this.name);
         isFocus = true;
-        focusChanged.Invoke(this);
     }
     public virtual void Defocus(GameObject interacter)
     {
+        Logger.InteractableDebug(interacter.name + " defocus " + this.name);
         isFocus = false;
-        focusChanged.Invoke(this);
     }
 
     public virtual bool Interact(GameObject interacter)
     {
         Logger.InteractableDebug(interacter.name + " try to interact with " + this.name);
         return isFocus;
-    }
-
-    public virtual GameObject GetGameObject()
-    {
-        return this.gameObject;
     }
 
     public bool IsFocus()

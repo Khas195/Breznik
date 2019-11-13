@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['frontbacksorting_230',['FrontBackSorting',['../class_front_back_sorting.html',1,'']]],
-  ['frontbacksortingmanager_231',['FrontBackSortingManager',['../class_front_back_sorting_manager.html',1,'']]],
-  ['frontbacktwopointsort_232',['FrontBackTwoPointSort',['../class_front_back_two_point_sort.html',1,'']]]
+  ['enemycharacter_491',['EnemyCharacter',['../class_enemy_character.html',1,'']]],
+  ['enemystatsui_492',['EnemyStatsUI',['../class_enemy_stats_u_i.html',1,'']]]
 ];

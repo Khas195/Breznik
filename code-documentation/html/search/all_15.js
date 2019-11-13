@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['walk_216',['Walk',['../class_i_movement.html#acdc5e47c665524aa577a125d851a7cb8a7a16a854f32231a8df9326136b09ee62',1,'IMovement']]],
-  ['walkspeed_217',['walkSpeed',['../class_movement_data.html#a96d4da40435645898c6834f6cca917c9',1,'MovementData']]]
+  ['view_464',['View',['../class_area_view.html#a58d5c95f3bbe4adc940e4497caeb3447',1,'AreaView']]],
+  ['viewtime_465',['viewTime',['../class_area_view.html#a43ab6534dfd9a19a9971507d89154c3e',1,'AreaView']]]
 ];

@@ -11,6 +11,8 @@ public class MainMenu : GameState
     /// </summary>
     [SerializeField]
     Button startButton = null;
+
+
     /// <summary>
     /// Called then Main Menu is poped out of the stack.
     /// </summary>
