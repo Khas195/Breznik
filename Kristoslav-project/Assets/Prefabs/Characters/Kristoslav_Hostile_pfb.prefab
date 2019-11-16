@@ -62,7 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 988151046}
-  - component: {fileID: 988151047}
+  - component: {fileID: 1231586969}
   m_Layer: 0
   m_Name: AIController
   m_TagString: Untagged
@@ -84,7 +84,7 @@ Transform:
   m_Father: {fileID: 5060813624698879410}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &988151047
+--- !u!114 &1231586969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 988151045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74cc2bd4025bd0745b8de65f972b1af4, type: 3}
+  m_Script: {fileID: 11500000, guid: add3a644debd68f46905a3ce668e6034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 8303845897647315195}
+  aiCharacter: {fileID: 8303845897647315195}
+  currentState: {fileID: 11400000, guid: 08c108be2b7d5254cbacc62aa15102ae, type: 2}
+  remainInState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
+  isAIActive: 1
+  chaseTarget: {fileID: 0}
+  currentDestination: {x: 0, y: 0, z: 0}
+  rootPosition: {fileID: 0}
+  patrolRange: 20
 --- !u!1 &1899120401
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostRigidBody: {fileID: 5761976970833478241}
   movementBehavior: {fileID: 5060813624130950203}
-  characterData: {fileID: 11400000, guid: 12eb66c0797c9734d9ab1c543e98adcb, type: 2}
+  characterData: {fileID: 11400000, guid: 9613a960de80ff34186896f6f1636161, type: 2}
   health: 0
   stamina: 0
   onCharacterAttack:
@@ -4440,6 +4447,7 @@ GameObject:
   - component: {fileID: 5761976970833478241}
   - component: {fileID: 5761976970231153679}
   - component: {fileID: 8858606246384600108}
+  - component: {fileID: 1878030103}
   m_Layer: 8
   m_Name: KrstoslavScaledWRig_Model
   m_TagString: Untagged
@@ -4480,7 +4488,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e69bee239de7a144494cc8f1a7bc868f, type: 3}
   m_Controller: {fileID: 9100000, guid: 92c2dd1dc73e3cb48962390f1d6b2c50, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -4544,6 +4552,22 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.82, z: 0}
+--- !u!208 &1878030103
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761976971450490428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.15, y: 1, z: 0.15}
+  m_MoveThreshold: 0
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0.82, z: 0}
+  m_TimeToStationary: 1
 --- !u!1 &5761976971459801994
 GameObject:
   m_ObjectHideFlags: 0
