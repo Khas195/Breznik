@@ -24,7 +24,7 @@ public class Movement : IMovement
     [SerializeField]
     [BoxGroup("Requirements")]
     Collider charAirbornedCollider = null;
-    
+
     /// <summary>
     ///  The list of points which is needed to know whether the host object is airborned or not
     /// </summary>
@@ -77,7 +77,7 @@ public class Movement : IMovement
     /// </summary>
     /// <param name="forward"> fordward is how much the host game object should move forward and backward</param>
     /// <param name="side"> side is how much the host game object should move sideway</param>
-    public override void Move (float forward, float side)
+    public override void Move(float forward, float side)
     {
         moveForward = forward;
         moveSide = side;
@@ -108,7 +108,8 @@ public class Movement : IMovement
         var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
         charRigidbody.velocity = velocity;
     }
-    public override float GetCurrentSpeed(){
+    public override float GetCurrentSpeed()
+    {
         return currentSpeed;
     }
     private void Update()
