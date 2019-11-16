@@ -39,6 +39,9 @@ public class Character : MonoBehaviour
     [BoxGroup("Character Stats Holder")]
     [Required]
     protected CharacterData characterData = null;
+
+
+
     [SerializeField]
     [BoxGroup("Character Stats Holder")]
     [ReadOnly]
@@ -129,6 +132,10 @@ public class Character : MonoBehaviour
     public float GetCurrentSpeed()
     {
         return movementBehavior.GetCurrentSpeed();
+    }
+    public CharacterData GetStats()
+    {
+        return characterData;
     }
     #endregion
     #region Action 
