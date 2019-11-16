@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Serializable]
 public class OnQuestEvent : UnityEvent<Quest>
 {
 }
@@ -16,26 +17,32 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
 
     List<Quest> completedQuest = new List<Quest>();
     [SerializeField]
-    Quest test;
+    Quest test = null;
     void Update()
     {
-        UpdateQuests();
-        if (Input.GetKeyDown(KeyCode.O)) {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
             this.AddQuest(test);
         }
     }
-
-    private void UpdateQuests()
+    public bool CheckIfActiveQuestIsCompleted(Quest quest)
     {
-        for (int i = 0; i < activeQuest.Count; i++)
+        if (activeQuest.Contains(quest))
         {
-            if (activeQuest[i].IsCompleted())
+            if (quest.IsCompleted())
             {
-                questCompletedEvent.Invoke(activeQuest[i]);
-                completedQuest.Add(activeQuest[i]);
-                RemoveQuest(activeQuest[i]);
+                questCompletedEvent.Invoke(quest);
+                completedQuest.Add(quest);
+                RemoveQuest(quest);
+                return true;
             }
+            return false;
         }
+        return false;
+    }
+    public bool CheckIfQuestArchived(Quest quest)
+    {
+        return completedQuest.Contains(quest);
     }
 
     public bool AddQuest(Quest newQuest)
@@ -45,7 +52,7 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
             Debug.Log("Trying to receive the same quest");
             return false;
         }
-
+        newQuest.Reset();
         activeQuest.Add(newQuest);
         newQuest.Activate();
         questAddedEvent.Invoke(newQuest);
@@ -65,5 +72,10 @@ public class QuestSystem : SingletonMonobehavior<QuestSystem>
     public List<Quest> GetActiveQuests()
     {
         return activeQuest;
+    }
+
+    public bool IsActiveQuest(Quest givenQuest)
+    {
+        return activeQuest.Contains(givenQuest);
     }
 }

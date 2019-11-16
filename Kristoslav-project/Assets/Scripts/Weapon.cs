@@ -1,43 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
-    float damage = 0;
+    int damage = 0;
     [SerializeField]
     GameObject wielder = null;
     [SerializeField]
-    PhysicCallBack killBox = null;
-    [SerializeField]
     Character wielderChar = null;
+    [SerializeField]
+    List<Collider> hitboxes = new List<Collider>();
+
     void Start()
     {
         wielderChar = wielder.GetComponentInChildren<Character>();
-        killBox.triggerEnter.AddListener(OnKillBoxEnter);
     }
-    public void SwitchKillBox(bool isOn) {
-        killBox.gameObject.SetActive(isOn);
-    }
-    public void OnKillBoxEnter(Collider other)
+    public void DealsDamage(int hitBoxIndex)
     {
-        Logger.CharacterDebug(wielderChar, "Character's weapon touched something");
+        Debug.Log("Deals attack called - Hit Box" + hitBoxIndex);
+        if (hitBoxIndex < 1 || hitBoxIndex > hitboxes.Count) return;
+        var targetHitBoxes = hitboxes[hitBoxIndex-1];
+        Collider[] cols = Physics.OverlapBox(targetHitBoxes.bounds.center, targetHitBoxes.bounds.extents,
+         targetHitBoxes.transform.rotation, LayerMask.GetMask("HitBox"));
+        foreach (var col in cols)
+        {
+            TryToDealsDamage(col);
+        }
+    }
+    public bool TryToDealsDamage(Collider targetCollider)
+    {
+        Logger.CharacterDebug(wielderChar, "Character's weapon touch something");
 
-        var otherObject = other.gameObject;
+        var otherObject = targetCollider.gameObject;
         if (otherObject != wielder)
         {
             Logger.CharacterDebug(wielderChar, "Character's weapon didnt touch himself.");
             var character = otherObject.GetComponentInChildren<Character>();
             if (character)
             {
-                Logger.CharacterDebug(wielderChar, "Character's weapon touched a different character - " + character);
-                if (wielderChar.GetCharacterAnimator().IsInAttackingAnimation())
-                {
-                    Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
-                    character.BeingDamage(damage);
-                }
+                Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
+                character.BeingDamage(damage);
+                return true;
             }
         }
+        return false;
     }
 }

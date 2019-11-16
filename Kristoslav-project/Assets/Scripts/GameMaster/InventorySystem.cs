@@ -52,10 +52,10 @@ public class InventorySystem : SingletonMonobehavior<InventorySystem>
     }
     public void HideUI()
     {
-        this.uIManager.gameObject.SetActive(false);
+        this.uIManager.HideUI();
     }
     public void ShowUI()
     {
-        this.uIManager.gameObject.SetActive(true);
+        this.uIManager.ShowUI();
     }
 }

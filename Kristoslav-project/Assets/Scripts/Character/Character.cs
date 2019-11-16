@@ -11,13 +11,17 @@ using UnityEngine.Events;
 /// </summary>
 public class Character : MonoBehaviour
 {
+    #region Properties
     /// <summary>
     /// The RigidBody of the Character's model. <br/>
     /// Need to be set in Unity Editor.
     /// </summary>
     [SerializeField]
     [BoxGroup("Requirements")]
+    [Required]
     protected Rigidbody hostRigidBody;
+
+
 
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
@@ -25,23 +29,35 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Requirements")]
+    [Required]
     protected IMovement movementBehavior;
-
-
+    /// <summary>
+    /// The player character's stats
+    /// </summary>
+    [Space]
+    [SerializeField]
+    [BoxGroup("Character Stats Holder")]
+    [Required]
+    protected CharacterData characterData = null;
+    [SerializeField]
+    [BoxGroup("Character Stats Holder")]
+    [ReadOnly]
+    protected float health = 0;
+    [SerializeField]
+    [BoxGroup("Character Stats Holder")]
+    [ReadOnly]
+    protected float stamina = 0;
     [Space]
     /// <summary>
     /// This is event is called when an attack is successfully trigger.
     /// </summary>
     [SerializeField]
-    [BoxGroup("Animation Related")]
+    [BoxGroup("Attack Command")]
     protected UnityEvent onCharacterAttack;
-    /// <summary>
-    /// Reference to the animator control.
-    /// </summary>
     [SerializeField]
-    [BoxGroup("Animation Related")]
-    protected CharacterAnimatorControl animatorControl;
-
+    [BoxGroup("Attack Command")]
+    [ReadOnly]
+    bool isAttacking;
     [Space]
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
@@ -49,6 +65,7 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker jumpConditions;
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
@@ -56,28 +73,77 @@ public class Character : MonoBehaviour
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker moveConditions;
-
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     ///  attackConditions check wheter the character can attack.
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker attackConditions;
-
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     /// changeMoveTypeConditions check whether it is possible to change the current move mode. 
     /// </summary>
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
+    [Required]
     protected ConditionsChecker changeMoveTypeConditions;
+
+
+    #endregion
+    #region Functions
+    #region UnityFunctions
     public virtual void Awake()
     {
         movementBehavior.SetRigidBody(hostRigidBody);
+        movementBehavior.SetMovementData(characterData.movementData);
+        health = characterData.stats.health;
+        stamina = characterData.stats.stamina;
     }
+    public GameObject GetHost()
+    {
+        return hostRigidBody.gameObject;
+    }
+    #endregion
+    #region Stats Manipulation
+    /// <summary>
+    /// Is called if the character are to be damaged.
+    /// </summary>
+    /// <param name="damage"> the damage value</param>
+    public virtual void BeingDamage(int damage)
+    {
+        this.health -= damage;
+        Logger.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + this.health + " out of " + characterData.stats.health);
+    }
+    public float GetHealth()
+    {
+        return health;
+    }
+    public float GetStamina()
+    {
+        return stamina;
+    }
+    public float GetCurrentSpeed()
+    {
+        return movementBehavior.GetCurrentSpeed();
+    }
+    #endregion
+    #region Action 
+    public void RotateToward(Vector3 direction, bool rotateY)
+    {
+        if (moveConditions.IsSatisfied(this) == false) return;
+        if (rotateY == false)
+        {
+            direction.y = 0;
+        }
+        var lookRotation = Quaternion.LookRotation(direction);
 
+        hostRigidBody.transform.rotation = Quaternion.Slerp(hostRigidBody.transform.rotation, lookRotation
+                                        , characterData.rotateSpeed * Time.deltaTime);
+    }
     /// <summary>
     /// This fucntion ask the moveBehavior of the character to move the character's model.
     /// </summary>
@@ -91,7 +157,7 @@ public class Character : MonoBehaviour
             forward = side = 0;
             result = false;
         }
-        movementBehavior.MoveRelativeTo(forward, side, hostRigidBody.transform);
+        movementBehavior.Move(forward, side);
         return result;
     }
     /// <summary>
@@ -106,6 +172,7 @@ public class Character : MonoBehaviour
             return false;
         }
         onCharacterAttack.Invoke();
+        isAttacking = true;
         return true;
     }
     /// <summary>
@@ -141,38 +208,25 @@ public class Character : MonoBehaviour
         movementBehavior.SetMovementMode(Movement.MovementType.Walk);
         return false;
     }
-    /// <summary>
-    /// Get the movement behavior of the character.
-    /// </summary>
-    /// <returns>The movement behavior of the character. Can be null</returns>
-    public IMovement GetMovementBehavior()
+    public bool IsAttacking()
     {
-        return movementBehavior;
+        return this.isAttacking;
     }
+    public void OnAttackStart()
+    {
+        this.isAttacking = true;
+    }
+    public void OnAttackDone()
+    {
+        this.isAttacking = false;
+    }
+    public bool IsTouchingGround()
+    {
+        return this.movementBehavior.IsTouchingGround();
+    }
+    #endregion
 
-    /// <summary>
-    /// Get the character animator control.
-    /// </summary>
-    /// <returns>The animator control of the character. Can be null</returns>
-    public CharacterAnimatorControl GetCharacterAnimator()
-    {
-        return animatorControl;
-    }
-    /// <summary>
-    /// Get the character stats data of the character.
-    /// </summary>
-    /// <returns> The character stats of the character. Can be null</returns>
-    public virtual CharacterStatsData GetCharacterStats()
-    {
-        return null;
-    }
-    /// <summary>
-    /// Is called if the character are to be damaged.
-    /// </summary>
-    /// <param name="damage"> the damage value</param>
-    public virtual void BeingDamage(float damage)
-    {
-        return;
-    }
+
+    #endregion
 }
 
