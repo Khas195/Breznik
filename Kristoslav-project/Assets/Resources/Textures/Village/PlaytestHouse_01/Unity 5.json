@@ -1,0 +1,58 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                },
+                "Subsurface Scattering Parameters": {
+                    "sssColor": [
+                        0.7009999752044678,
+                        0.3009999990463257,
+                        0.3050000071525574
+                    ],
+                    "sssEnabled": true,
+                    "sssScale": 0.5,
+                    "sssType": 1
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "house_door_01_mat": {
+            "shader": "Main shader"
+        },
+        "house_roof_01_mat": {
+            "shader": "Main shader"
+        },
+        "house_wall_01_mat": {
+            "shader": "Main shader"
+        },
+        "house_window_01_mat": {
+            "shader": "Main shader"
+        },
+        "house_window_02_mat": {
+            "shader": "Main shader"
+        },
+        "house_wood_01_mat": {
+            "shader": "Main shader"
+        },
+        "lambert3": {
+            "shader": "Main shader"
+        }
+    }
+}
