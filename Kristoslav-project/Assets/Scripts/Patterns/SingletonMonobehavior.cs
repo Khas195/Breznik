@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingletonMonobehavior<T> : MonoBehaviour where T : SingletonMonobehavior<T>
+public abstract class SingletonMonobehavior<T> : MonoBehaviour where T : SingletonMonobehavior<T>
 {
     static T instance;
-    public static T GetInstance() {
+    public static T GetInstance()
+    {
         T result = null;
         try
         {
-            result = (T) instance;
+            result = (T)instance;
         }
         catch (System.InvalidCastException)
         {
@@ -18,10 +19,14 @@ public class SingletonMonobehavior<T> : MonoBehaviour where T : SingletonMonobeh
         }
         return result;
     }
-    protected virtual void Awake() {
-        if (instance) {
+    protected virtual void Awake()
+    {
+        if (instance)
+        {
             Destroy(this.gameObject);
-        } else {
+        }
+        else
+        {
             instance = (T)this;
         }
 
