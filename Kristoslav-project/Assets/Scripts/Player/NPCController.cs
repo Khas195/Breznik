@@ -81,6 +81,7 @@ public class NPCController : MonoBehaviour
             {
                 Debug.Log("Path invalid, recalculating path ");
                 this.SetDestination(currentDestination);
+                aiCharacter.RequestMove(0, 0);
                 return;
             }
 
@@ -110,6 +111,10 @@ public class NPCController : MonoBehaviour
     {
         Transform charTransform = aiCharacter.GetHost().transform;
         NavMeshHit hit;
+        if (currentPoint >= currentPath.corners.Length)
+        {
+            return false;
+        }
         if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, 1))
         {
             if (NavMesh.CalculatePath(hit.position, currentPath.corners[currentPoint], 1, new NavMeshPath()) == false)
@@ -178,7 +183,7 @@ public class NPCController : MonoBehaviour
     {
 
         var distance = Vector3.Distance(currentDestination, aiCharacter.GetHost().transform.position);
-        if (distance <= aiCharacter.GetStats().stoppingDistance || currentPoint >= currentPath.corners.Length)
+        if (distance <= aiCharacter.GetStats().stoppingDistance)
         {
             return true;
         }
