@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
+    public UnityEvent OnWeaponHit = new UnityEvent();
     [SerializeField]
     int damage = 0;
     [SerializeField]
@@ -13,6 +15,8 @@ public class Weapon : MonoBehaviour
     Character wielderChar = null;
     [SerializeField]
     List<Collider> hitboxes = new List<Collider>();
+    [SerializeField]
+    GameObject swordEdge;
 
     void Start()
     {
@@ -22,7 +26,7 @@ public class Weapon : MonoBehaviour
     {
         Debug.Log("Deals attack called - Hit Box" + hitBoxIndex);
         if (hitBoxIndex < 1 || hitBoxIndex > hitboxes.Count) return;
-        var targetHitBoxes = hitboxes[hitBoxIndex-1];
+        var targetHitBoxes = hitboxes[hitBoxIndex - 1];
         Collider[] cols = Physics.OverlapBox(targetHitBoxes.bounds.center, targetHitBoxes.bounds.extents,
          targetHitBoxes.transform.rotation, LayerMask.GetMask("HitBox"));
         foreach (var col in cols)
@@ -42,6 +46,9 @@ public class Weapon : MonoBehaviour
             if (character)
             {
                 Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
+                VFXSystem.GetInstance().SpawnHit(targetCollider.ClosestPointOnBounds(swordEdge.transform.position), 5f);
+                VFXSystem.GetInstance().SpawnBlood(targetCollider.ClosestPointOnBounds(swordEdge.transform.position), 5f);
+                OnWeaponHit.Invoke();
                 character.BeingDamage(damage);
                 return true;
             }

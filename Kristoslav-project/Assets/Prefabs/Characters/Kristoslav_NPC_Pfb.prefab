@@ -578,6 +578,7 @@ MonoBehaviour:
   - {fileID: 3890715394851468990}
   - {fileID: 6827537904143396755}
   - {fileID: 2906461362666024381}
+  swordEdge: {fileID: 0}
 --- !u!1 &3820935898187149977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2663,7 @@ GameObject:
   - component: {fileID: 237807313}
   m_Layer: 8
   m_Name: KrstoslavScaledWRig_Model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4272,6 +4273,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCharacterDeath:
+    m_PersistentCalls:
+      m_Calls: []
   isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
@@ -4604,12 +4608,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFocus: 0
   host: {fileID: 3820935899339472065}
-  NPCName: Kristoslav The Friendly Smurf
+  charData: {fileID: 11400000, guid: 12eb66c0797c9734d9ab1c543e98adcb, type: 2}
   npcNameUi: {fileID: 5304442548447426804}
-  datas:
+  beforeQuestIsFinished:
   - {fileID: 11400000, guid: a8c1fef82feb58e4fbabdff4dd386141, type: 2}
   - {fileID: 11400000, guid: db1194ff85c8be4458943776c8f320dd, type: 2}
   - {fileID: 11400000, guid: 40d12432d67ad684aaf7fc2f473a74e1, type: 2}
+  - {fileID: 11400000, guid: 814d4598c1f3fd14e91efa9e82663925, type: 2}
+  questFinishedTalk:
+  - {fileID: 11400000, guid: 2191e69cccbbd6342a98309b158d247b, type: 2}
+  whileQuestIsActive:
+  - {fileID: 11400000, guid: 1d455747c4e46f84b8aa2306c0ab6718, type: 2}
+  afterQuestIsFinished:
+  - {fileID: 11400000, guid: 3599a07f789f0a0429bf085c9ac828f7, type: 2}
+  givenQuest: {fileID: 0}
   breakConversationDistance: 5
   rotateSpeed: 10
 --- !u!1 &8267276912026537097
