@@ -247,7 +247,7 @@ public class NPCController : MonoBehaviour
     }
     public bool DoesChaseTargetExist()
     {
-        if (chaseTarget != null)
+        if (chaseTarget != null && chaseTarget.gameObject.activeInHierarchy == true)
         {
             return true;
         }
