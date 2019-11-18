@@ -5,6 +5,11 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Serializable]
+public class DeathEvent : UnityEvent<Character>
+{
+
+}
 /// <summary>
 /// The Character class handles all the possible behavior that a character can have.
 ///It's handle the character's behaviors by calling the appropriate behavior.
@@ -39,6 +44,9 @@ public class Character : MonoBehaviour
     [BoxGroup("Character Stats Holder")]
     [Required]
     protected CharacterData characterData = null;
+
+
+
     [SerializeField]
     [BoxGroup("Character Stats Holder")]
     [ReadOnly]
@@ -52,10 +60,18 @@ public class Character : MonoBehaviour
     /// This is event is called when an attack is successfully trigger.
     /// </summary>
     [SerializeField]
-    [BoxGroup("Attack Command")]
-    protected UnityEvent onCharacterAttack;
+    [BoxGroup("Character EVents")]
+    public UnityEvent onCharacterAttack = new UnityEvent();
     [SerializeField]
-    [BoxGroup("Attack Command")]
+    [BoxGroup("Character EVents")]
+    public DeathEvent OnCharacterDeath = new DeathEvent();
+    [SerializeField]
+    [BoxGroup("Character EVents")]
+    public UnityEvent OnCharacterDamaged = new UnityEvent();
+
+
+    [SerializeField]
+    [BoxGroup("Character Current Status")]
     [ReadOnly]
     bool isAttacking;
     [Space]
@@ -116,7 +132,18 @@ public class Character : MonoBehaviour
     public virtual void BeingDamage(int damage)
     {
         this.health -= damage;
+        OnCharacterDamaged.Invoke();
         Logger.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + this.health + " out of " + characterData.stats.health);
+        if (this.health <= 0)
+        {
+            VFXSystem.GetInstance().SpawnDeath(this.hostRigidBody.worldCenterOfMass, 3f);
+            OnCharacterDeath.Invoke(this);
+        }
+    }
+    void Update()
+    {
+        Debug.Log(this.hostRigidBody.position);
+
     }
     public float GetHealth()
     {
@@ -129,6 +156,10 @@ public class Character : MonoBehaviour
     public float GetCurrentSpeed()
     {
         return movementBehavior.GetCurrentSpeed();
+    }
+    public CharacterData GetStats()
+    {
+        return characterData;
     }
     #endregion
     #region Action 

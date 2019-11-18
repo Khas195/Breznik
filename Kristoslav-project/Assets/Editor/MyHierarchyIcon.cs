@@ -32,7 +32,10 @@ public class MyHierarchyIcon
                 for (int i = 0; i < components.Length; i++)
                 {
                     FieldInfo[] fields = GetAllSerializedField(components, i);
-
+                    if (fields == null)
+                    {
+                        continue;
+                    }
                     bool componentHasAllRef = true;
 
                     for (int j = 0; j < fields.Length; j++)
@@ -54,8 +57,13 @@ public class MyHierarchyIcon
 
     private static FieldInfo[] GetAllSerializedField(Component[] components, int i)
     {
-        return components[i].GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-        .Where(f => f.GetCustomAttribute<RequiredAttribute>() != null).ToArray();
+        var serializedFields = components[i].GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
+        .Where(f => f.GetCustomAttribute<RequiredAttribute>() != null);
+        if (serializedFields != null)
+        {
+            return serializedFields.ToArray();
+        }
+        return null;
     }
 
     private static void DrawIcon(Rect selectionRect)
