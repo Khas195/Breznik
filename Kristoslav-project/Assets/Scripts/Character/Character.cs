@@ -142,7 +142,6 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(this.hostRigidBody.position);
 
     }
     public float GetHealth()
