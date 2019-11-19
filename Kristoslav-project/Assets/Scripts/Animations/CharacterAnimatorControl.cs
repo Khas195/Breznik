@@ -27,6 +27,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     void Update()
     {
         var moveSpeed = character.GetCurrentSpeed();
+        animator.SetBool("TouchingGround", character.IsTouchingGround());
         animator.SetFloat("VelocityY", hostRb.velocity.y);
         animator.SetFloat("MoveSpeed", moveSpeed);
     }
