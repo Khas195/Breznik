@@ -62,7 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 988151046}
-  - component: {fileID: 988151047}
+  - component: {fileID: 1231586969}
   m_Layer: 0
   m_Name: AIController
   m_TagString: Untagged
@@ -84,7 +84,7 @@ Transform:
   m_Father: {fileID: 5060813624698879410}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &988151047
+--- !u!114 &1231586969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 988151045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74cc2bd4025bd0745b8de65f972b1af4, type: 3}
+  m_Script: {fileID: 11500000, guid: add3a644debd68f46905a3ce668e6034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 8303845897647315195}
+  aiCharacter: {fileID: 8303845897647315195}
+  currentState: {fileID: 11400000, guid: 08c108be2b7d5254cbacc62aa15102ae, type: 2}
+  remainInState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
+  isAIActive: 1
+  chaseTarget: {fileID: 0}
+  currentDestination: {x: 0, y: 0, z: 0}
+  rootPosition: {fileID: 0}
+  patrolRange: 100
 --- !u!1 &1899120401
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostRigidBody: {fileID: 5761976970833478241}
   movementBehavior: {fileID: 5060813624130950203}
-  characterData: {fileID: 11400000, guid: 12eb66c0797c9734d9ab1c543e98adcb, type: 2}
+  characterData: {fileID: 11400000, guid: 9613a960de80ff34186896f6f1636161, type: 2}
   health: 0
   stamina: 0
   onCharacterAttack:
@@ -855,12 +862,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCharacterDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5060813625128463539}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCharacterDamaged:
+    m_PersistentCalls:
+      m_Calls: []
   isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
   attackConditions: {fileID: 11400000, guid: 63354548e1847b141a26a38c22c85e74, type: 2}
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
+  canRotate: {fileID: 11400000, guid: c6c4d643a328c984a9fb86a6968d1eae, type: 2}
 --- !u!1 &5761976969404014938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,7 +1825,8 @@ Transform:
   m_LocalRotation: {x: -0.6134493, y: -0.09356773, z: 0.5019651, w: 0.6024585}
   m_LocalPosition: {x: -0.118, y: 0.02, z: 0.038}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4718096354883383410}
   m_Father: {fileID: 5761976970186779029}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -40.182003, y: -72.491005, z: 109.62301}
@@ -2760,7 +2786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5761976970423865444}
-  m_LocalRotation: {x: -0.0016507172, y: -0.015017654, z: 0.050602075, w: 0.9986046}
+  m_LocalRotation: {x: -0.0016507173, y: -0.015017654, z: 0.05060208, w: 0.9986046}
   m_LocalPosition: {x: -0.3354867, y: 6.0503563e-17, z: 4.937815e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2811,6 +2837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d749f846eacd6146b4bc9a0480f3335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnWeaponHit:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 10
   wielder: {fileID: 5761976971450490428}
   wielderChar: {fileID: 8303845897647315195}
@@ -2819,6 +2848,7 @@ MonoBehaviour:
   - {fileID: 5696647240263717955}
   - {fileID: 2607688633491672430}
   - {fileID: 5955381895347310400}
+  swordEdge: {fileID: 9143166056669231508}
 --- !u!1 &5761976970443492830
 GameObject:
   m_ObjectHideFlags: 0
@@ -4440,6 +4470,7 @@ GameObject:
   - component: {fileID: 5761976970833478241}
   - component: {fileID: 5761976970231153679}
   - component: {fileID: 8858606246384600108}
+  - component: {fileID: 1878030103}
   m_Layer: 8
   m_Name: KrstoslavScaledWRig_Model
   m_TagString: Untagged
@@ -4479,8 +4510,8 @@ Animator:
   m_GameObject: {fileID: 5761976971450490428}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e69bee239de7a144494cc8f1a7bc868f, type: 3}
-  m_Controller: {fileID: 9100000, guid: 92c2dd1dc73e3cb48962390f1d6b2c50, type: 2}
-  m_CullingMode: 1
+  m_Controller: {fileID: 9100000, guid: 1eb19e4b4c5f5fb46be7be835efe851d, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -4544,6 +4575,22 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.82, z: 0}
+--- !u!208 &1878030103
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761976971450490428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.15, y: 1, z: 0.15}
+  m_MoveThreshold: 0
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0.82, z: 0}
+  m_TimeToStationary: 1
 --- !u!1 &5761976971459801994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,3 +5080,33 @@ MonoBehaviour:
   hasHealthBar: 1
   healthBar: {fileID: 286225559}
   baseStats: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
+--- !u!1 &9143166056669231508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4718096354883383410}
+  m_Layer: 0
+  m_Name: SwordEdge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4718096354883383410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143166056669231508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: 0.698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5761976969881740347}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

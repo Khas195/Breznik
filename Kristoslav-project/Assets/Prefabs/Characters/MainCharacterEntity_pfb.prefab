@@ -89,6 +89,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d749f846eacd6146b4bc9a0480f3335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnWeaponHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Shake
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damage: 20
   wielder: {fileID: 7224959950909961287}
   wielderChar: {fileID: 311056116}
@@ -97,6 +111,7 @@ MonoBehaviour:
   - {fileID: 69851962009098128}
   - {fileID: 7766168901856136893}
   - {fileID: 2113142331773439123}
+  swordEdge: {fileID: 6857394041753847913}
 --- !u!1 &1841920558
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,12 +313,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCharacterDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706283024076468064}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCharacterDamaged:
+    m_PersistentCalls:
+      m_Calls: []
   isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
   attackConditions: {fileID: 11400000, guid: 63354548e1847b141a26a38c22c85e74, type: 2}
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
+  canRotate: {fileID: 11400000, guid: eeb1353d43e849b4fa2a1e3a8c393db3, type: 2}
 --- !u!1 &706283025201240042
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +820,36 @@ Transform:
   m_Father: {fileID: 6392422223370243268}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6857394041753847913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4491830963912166164}
+  m_Layer: 0
+  m_Name: SwordEdge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4491830963912166164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857394041753847913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5917570564292753436}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &239632818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -995,6 +1058,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5564923164932631500, guid: 5c920cf226a1bce49af4db463705b472,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1579582847686325413, guid: 5c920cf226a1bce49af4db463705b472,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -1002,15 +1070,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c920cf226a1bce49af4db463705b472, type: 3}
---- !u!1 &7224959950909961287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5564923164932631500, guid: 5c920cf226a1bce49af4db463705b472,
-    type: 3}
-  m_PrefabInstance: {fileID: 2990006327961427851}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &4365515067298097966 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1579582847686325413, guid: 5c920cf226a1bce49af4db463705b472,
+--- !u!4 &5917570564292753436 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8890613615308416919, guid: 5c920cf226a1bce49af4db463705b472,
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
@@ -1020,9 +1082,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &4365515067298097966 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1579582847686325413, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5917570564158883412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8890613615442270687, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7224959950909961287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5564923164932631500, guid: 5c920cf226a1bce49af4db463705b472,
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
