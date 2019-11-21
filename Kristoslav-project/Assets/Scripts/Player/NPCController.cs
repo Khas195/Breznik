@@ -79,24 +79,18 @@ public class NPCController : MonoBehaviour
         {
             if (IsPathStillValid() == false)
             {
-                Debug.Log("Path invalid, recalculating path ");
                 this.SetDestination(currentDestination);
                 aiCharacter.RequestMove(0, 0);
                 return;
             }
-
-            Debug.Log("Path Still Valid ");
             var currentPos = currentPath.corners[currentPoint];
 
             if (HasReachPoint(currentPos) == false)
             {
-
-                Debug.Log("Proceed To point");
                 ConvertDirectionToCharacterMoveInput(currentPos);
             }
             else
             {
-                Debug.Log("Advance to next point");
                 AdvanceToNextPointInPath();
                 aiCharacter.RequestMove(0, 0);
             }
@@ -119,7 +113,6 @@ public class NPCController : MonoBehaviour
         {
             if (NavMesh.CalculatePath(hit.position, currentPath.corners[currentPoint], 1, new NavMeshPath()) == false)
             {
-                Debug.Log("Failed To calculate Path");
                 return false;
             }
         }
@@ -207,8 +200,12 @@ public class NPCController : MonoBehaviour
         NavMeshHit hit;
         if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, 1))
         {
-            NavMesh.CalculatePath(hit.position, newDestination, 1, currentPath);
-            currentPoint = 1;
+            if (hit.position.x != Mathf.Infinity)
+            {
+                NavMesh.CalculatePath(hit.position, newDestination, 1, currentPath);
+                currentPoint = 1;
+            }
+
         }
     }
 

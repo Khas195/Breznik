@@ -107,6 +107,10 @@ public class Character : MonoBehaviour
     [BoxGroup("Character conditions check for actions")]
     [Required]
     protected ConditionsChecker changeMoveTypeConditions;
+    [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
+    [Required]
+    protected ConditionsChecker canRotate;
 
 
     #endregion
@@ -142,7 +146,6 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(this.hostRigidBody.position);
 
     }
     public float GetHealth()
@@ -165,7 +168,7 @@ public class Character : MonoBehaviour
     #region Action 
     public void RotateToward(Vector3 direction, bool rotateY)
     {
-        if (moveConditions.IsSatisfied(this) == false) return;
+        if (canRotate.IsSatisfied(this) == false) return;
         if (rotateY == false)
         {
             direction.y = 0;

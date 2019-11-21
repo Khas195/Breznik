@@ -103,7 +103,7 @@ MonoBehaviour:
   chaseTarget: {fileID: 0}
   currentDestination: {x: 0, y: 0, z: 0}
   rootPosition: {fileID: 0}
-  patrolRange: 20
+  patrolRange: 100
 --- !u!1 &1899120401
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,12 +876,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCharacterDamaged:
+    m_PersistentCalls:
+      m_Calls: []
   isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
   attackConditions: {fileID: 11400000, guid: 63354548e1847b141a26a38c22c85e74, type: 2}
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
+  canRotate: {fileID: 11400000, guid: c6c4d643a328c984a9fb86a6968d1eae, type: 2}
 --- !u!1 &5761976969404014938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,7 +2786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5761976970423865444}
-  m_LocalRotation: {x: -0.0016507172, y: -0.015017654, z: 0.050602075, w: 0.9986046}
+  m_LocalRotation: {x: -0.0016507173, y: -0.015017654, z: 0.05060208, w: 0.9986046}
   m_LocalPosition: {x: -0.3354867, y: 6.0503563e-17, z: 4.937815e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2833,6 +2837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d749f846eacd6146b4bc9a0480f3335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnWeaponHit:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 10
   wielder: {fileID: 5761976971450490428}
   wielderChar: {fileID: 8303845897647315195}
@@ -4503,7 +4510,7 @@ Animator:
   m_GameObject: {fileID: 5761976971450490428}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e69bee239de7a144494cc8f1a7bc868f, type: 3}
-  m_Controller: {fileID: 9100000, guid: 92c2dd1dc73e3cb48962390f1d6b2c50, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1eb19e4b4c5f5fb46be7be835efe851d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 7922989229985313098}
   - component: {fileID: 1202208234346777468}
   - component: {fileID: 4869397724090464133}
+  - component: {fileID: 5596585673413918278}
+  - component: {fileID: 5219837449536231185}
   m_Layer: 0
-  m_Name: PlaytestHouse_02
+  m_Name: PlaytestHouse_02_pfb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,3 +86,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5596585673413918278
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606575469797294937}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.44, y: 6.1205497, z: 6.47}
+  m_Center: {x: -1.2, y: 3.0602748, z: -2.18}
+--- !u!65 &5219837449536231185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606575469797294937}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.09, y: 4.13, z: 7.95}
+  m_Center: {x: 4.95, y: 1.99, z: 1.91}

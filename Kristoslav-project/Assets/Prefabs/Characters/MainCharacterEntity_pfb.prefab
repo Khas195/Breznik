@@ -89,6 +89,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d749f846eacd6146b4bc9a0480f3335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnWeaponHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Shake
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damage: 20
   wielder: {fileID: 7224959950909961287}
   wielderChar: {fileID: 311056116}
@@ -313,12 +327,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCharacterDamaged:
+    m_PersistentCalls:
+      m_Calls: []
   isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
   attackConditions: {fileID: 11400000, guid: 63354548e1847b141a26a38c22c85e74, type: 2}
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
+  canRotate: {fileID: 11400000, guid: eeb1353d43e849b4fa2a1e3a8c393db3, type: 2}
 --- !u!1 &706283025201240042
 GameObject:
   m_ObjectHideFlags: 0
