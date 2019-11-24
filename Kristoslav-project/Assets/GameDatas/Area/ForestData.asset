@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: effb8d8c9291f514f8f3153f719cb0a3, type: 3}
+  m_Name: ForestData
+  m_EditorClassIdentifier: 
+  areaName: Forest
+  typeOfInhabitants:
+  - inhabitant: {fileID: 8359318497915555427, guid: d2aa457296fd9b54aaa61f1e9aefde20,
+      type: 3}
+    ratio: 0.7
+  - inhabitant: {fileID: 2026486892482736966, guid: 8a53fd5d3567a9943b1cc83d7b01fe9c,
+      type: 3}
+    ratio: 0.3
+  maxPopulation: 20
+  size: 65
