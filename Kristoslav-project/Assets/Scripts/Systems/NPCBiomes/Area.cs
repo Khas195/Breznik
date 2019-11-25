@@ -13,7 +13,6 @@ public class Area : MonoBehaviour
     List<NPCController> nPCs;
     [SerializeField]
     GameObject center;
-    List<GameObject> currentInhabitants = new List<GameObject>();
     void Start()
     {
         PopulateArea();
@@ -36,7 +35,17 @@ public class Area : MonoBehaviour
             {
                 var randomPos = RandomPointInArea();
                 var newInhabitant = GameObject.Instantiate(inhabitantRatio.inhabitant, randomPos, Quaternion.identity, this.transform);
-                currentInhabitants.Add(newInhabitant);
+                var npcControl = newInhabitant.GetComponentInChildren<NPCController>();
+                var collider = newInhabitant.GetComponentInChildren<Collider>(true);
+                collider.enabled = true;
+                if (npcControl)
+                {
+                    nPCs.Add(npcControl);
+                    npcControl.SetHome(this.transform);
+                    npcControl.SetPatrolRange(data.size);
+                    npcControl.SetAiActive(true);
+                }
+
             }
 
         }

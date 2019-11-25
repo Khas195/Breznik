@@ -7,8 +7,7 @@ The main menu state of the game.
 
 
 
-Inheritance diagram for Main\+Menu\+:
-\nopagebreak
+Inheritance diagram for Main\+Menu\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for Main\+Menu\+:
 \end{figure}
 
 
-Collaboration diagram for Main\+Menu\+:
-\nopagebreak
+Collaboration diagram for Main\+Menu\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +32,8 @@ enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
 \newline
-\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -107,6 +106,10 @@ Game\+Paused&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{InDiagloues@{InDiagloues}!MainMenu@{MainMenu}}\index{MainMenu@{MainMenu}!InDiagloues@{InDiagloues}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}} 
 In\+Diagloues&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!MainMenu@{MainMenu}}\index{MainMenu@{MainMenu}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -190,6 +193,10 @@ Reimplemented from \mbox{\hyperlink{class_state_a0c3ba47d37fa69c7089f047476cb624
 \doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
+
 \mbox{\Hypertarget{class_main_menu_a049be19df7f1506e7ab150ec85c70aa9}\label{class_main_menu_a049be19df7f1506e7ab150ec85c70aa9}} 
 \index{MainMenu@{MainMenu}!OnPushed@{OnPushed}}
 \index{OnPushed@{OnPushed}!MainMenu@{MainMenu}}
@@ -209,6 +216,10 @@ Reimplemented from \mbox{\hyperlink{class_state_ad9351d83800a1801d889e6ac3f379e2
 \index{OnReturnPeek@{OnReturnPeek}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
 
 \mbox{\Hypertarget{class_main_menu_ac2a74cb6e3c827e2a8db8c41141f0984}\label{class_main_menu_ac2a74cb6e3c827e2a8db8c41141f0984}} 
 \index{MainMenu@{MainMenu}!StartGame@{StartGame}}
@@ -267,4 +278,4 @@ The state\textquotesingle{}s type of the current game state.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\+Game\+Master/\+Game\+States/\mbox{\hyperlink{_main_menu_8cs}{Main\+Menu.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_main_menu_8cs}{Main\+Menu.\+cs}}\end{DoxyCompactItemize}

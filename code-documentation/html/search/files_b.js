@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['oncreatetrigger_2ecs_593',['OnCreateTrigger.cs',['../_on_create_trigger_8cs.html',1,'']]],
-  ['onplayerseeobject_2ecs_594',['OnPlayerSeeObject.cs',['../_on_player_see_object_8cs.html',1,'']]]
+  ['naughtyattribute_2ecs_1062',['NaughtyAttribute.cs',['../_naughty_attribute_8cs.html',1,'']]],
+  ['npccharacter_2ecs_1063',['NPCCharacter.cs',['../_n_p_c_character_8cs.html',1,'']]],
+  ['npccontroller_2ecs_1064',['NPCController.cs',['../_n_p_c_controller_8cs.html',1,'']]],
+  ['npcinteractable_2ecs_1065',['NPCInteractable.cs',['../_n_p_c_interactable_8cs.html',1,'']]],
+  ['npcstatsui_2ecs_1066',['NPCStatsUI.cs',['../_n_p_c_stats_u_i_8cs.html',1,'']]]
 ];

@@ -2,8 +2,7 @@
 \label{class_n_p_c_interactable}\index{NPCInteractable@{NPCInteractable}}
 
 
-Inheritance diagram for N\+P\+C\+Interactable\+:
-\nopagebreak
+Inheritance diagram for N\+P\+C\+Interactable\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,8 +26,6 @@ override void \mbox{\hyperlink{class_n_p_c_interactable_aa44f5c68bc24515ea3c8546
 \item 
 override void \mbox{\hyperlink{class_n_p_c_interactable_a0baed10b6865e1347b217d6a44a1d615}{Focus}} (Game\+Object interacter)
 \item 
-override Game\+Object \mbox{\hyperlink{class_n_p_c_interactable_a8030b5745dff2af178ba70e0e4cb7222}{Get\+Game\+Object}} ()
-\item 
 override bool \mbox{\hyperlink{class_n_p_c_interactable_abcfed17a85a7cbcf23b471f42bd01809}{Interact}} (Game\+Object interacter)
 \item 
 override string \mbox{\hyperlink{class_n_p_c_interactable_af99798811539d5b11ef9759fea455be9}{Get\+Name}} ()
@@ -47,9 +44,9 @@ bool \mbox{\hyperlink{class_i_interactable_a233e5a0b03c975eb9f9c33edcdea591e}{is
 \item 
 void \mbox{\hyperlink{class_n_p_c_interactable_a423ac6bfea3442071b161a11e31de4ca}{Start}} ()
 \item 
-void \mbox{\hyperlink{class_n_p_c_interactable_a15982b83c5cb0678080e29afd48e379b}{Update}} ()
+void \mbox{\hyperlink{class_n_p_c_interactable_a826a6f76d9db35ed88a12d99e8df0c19}{Talk}} (List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$ monologues)
 \item 
-void \mbox{\hyperlink{class_n_p_c_interactable_aba342532386a26ce94f451be7a752f81}{Rotate\+Toward\+Camera}} ()
+void \mbox{\hyperlink{class_n_p_c_interactable_a15982b83c5cb0678080e29afd48e379b}{Update}} ()
 \item 
 void \mbox{\hyperlink{class_n_p_c_interactable_aa646b48b7442799e0cd7d621e43b8a5c}{Rotate\+Toward\+Player}} ()
 \item 
@@ -58,23 +55,31 @@ void \mbox{\hyperlink{class_n_p_c_interactable_a139c3883fb5422aa8dd9b86a68325adb
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$ \mbox{\hyperlink{class_n_p_c_interactable_a7ace8a613d964670a3892ecd8ec03e03}{datas}} = null
-\item 
 Game\+Object \mbox{\hyperlink{class_n_p_c_interactable_ac93503483d92314ff22a7b664718eec8}{host}} = null
 \item 
-\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_n_p_c_interactable_a89ddb3db70bb3c60e3f48636d196dd00}{player\+Data}} = null
+\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_n_p_c_interactable_a8a128a9a9fe5faa0dbb0a4757ff2f208}{char\+Data}} = null
 \item 
-float \mbox{\hyperlink{class_n_p_c_interactable_a1e559ec47fe91059760416a65c6f55ae}{rotate\+Speed}} = 0
+Text \mbox{\hyperlink{class_n_p_c_interactable_adb94fd88ff0266ad005a267f72bdad06}{npc\+Name\+Ui}} = null
 \item 
-float \mbox{\hyperlink{class_n_p_c_interactable_a9177911c3315f07110e7ffaa387e9dde}{break\+Conversation\+Distance}} = 0
+List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$ \mbox{\hyperlink{class_n_p_c_interactable_a6d0ac2e13749be5f2515f49a7bc3cae9}{before\+Quest\+Is\+Finished}} = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()
 \item 
-Text \mbox{\hyperlink{class_n_p_c_interactable_a84e0ec2c5586b5c12243d779231aad44}{npc\+Name\+UI}} = null
+List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$ \mbox{\hyperlink{class_n_p_c_interactable_a537706b9e133d1b78a98730bf81e3172}{quest\+Finished\+Talk}} = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()
 \item 
-Canvas \mbox{\hyperlink{class_n_p_c_interactable_a89053d16d57f60dbb8301c0e8dc7fb4f}{npc\+Canvas}} = null
+List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$ \mbox{\hyperlink{class_n_p_c_interactable_a66f6483f7257a1cfbcaf4da7a7d1db9a}{while\+Quest\+Is\+Active}} = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()
 \item 
-bool \mbox{\hyperlink{class_n_p_c_interactable_ab313210ee2369cde4132b2899e8ffad9}{is\+Tracking}}
+List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$ \mbox{\hyperlink{class_n_p_c_interactable_a9fc3727b439ffd30837fd72e9f0e39f2}{after\+Quest\+Is\+Finished}} = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()
 \item 
-\mbox{\hyperlink{class_on_focus_change}{On\+Focus\+Change}} \mbox{\hyperlink{class_i_interactable_ab58a800f4575fd9a49935a52cb6b0520}{focus\+Changed}} = new \mbox{\hyperlink{class_on_focus_change}{On\+Focus\+Change}}()
+\mbox{\hyperlink{class_quest}{Quest}} \mbox{\hyperlink{class_n_p_c_interactable_a1abc0fd654a45845a062b81406f30d65}{given\+Quest}} = null
+\item 
+float \mbox{\hyperlink{class_n_p_c_interactable_a9177911c3315f07110e7ffaa387e9dde}{break\+Conversation\+Distance}} = 3
+\item 
+float \mbox{\hyperlink{class_n_p_c_interactable_a1e559ec47fe91059760416a65c6f55ae}{rotate\+Speed}} = 10f
+\item 
+Game\+Object \mbox{\hyperlink{class_n_p_c_interactable_ad9fd038dd4c8431e943cde18600ea315}{other\+Speaker}} = null
+\item 
+bool \mbox{\hyperlink{class_n_p_c_interactable_ab313210ee2369cde4132b2899e8ffad9}{is\+Tracking}} = false
+\item 
+Game\+Object \mbox{\hyperlink{class_n_p_c_interactable_ac817c07c27b85218f7fb4a33a0781ea5}{player\+Object}} = null
 \end{DoxyCompactItemize}
 
 
@@ -89,20 +94,11 @@ bool \mbox{\hyperlink{class_n_p_c_interactable_ab313210ee2369cde4132b2899e8ffad9
 
 Reimplemented from \mbox{\hyperlink{class_i_interactable_a605cdb868788e146324b88c298fcd901}{I\+Interactable}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=338pt]{class_n_p_c_interactable_aa44f5c68bc24515ea3c85465fc606559_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_n_p_c_interactable_aa44f5c68bc24515ea3c85465fc606559_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_n_p_c_interactable_a0baed10b6865e1347b217d6a44a1d615}\label{class_n_p_c_interactable_a0baed10b6865e1347b217d6a44a1d615}} 
@@ -115,32 +111,13 @@ Here is the caller graph for this function\+:
 
 Reimplemented from \mbox{\hyperlink{class_i_interactable_a6115d5ebd874f3dd5b5aa3da0a098a2d}{I\+Interactable}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=330pt]{class_n_p_c_interactable_a0baed10b6865e1347b217d6a44a1d615_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_n_p_c_interactable_a0baed10b6865e1347b217d6a44a1d615_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_n_p_c_interactable_a8030b5745dff2af178ba70e0e4cb7222}\label{class_n_p_c_interactable_a8030b5745dff2af178ba70e0e4cb7222}} 
-\index{NPCInteractable@{NPCInteractable}!GetGameObject@{GetGameObject}}
-\index{GetGameObject@{GetGameObject}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{GetGameObject()}{GetGameObject()}}
-{\footnotesize\ttfamily override Game\+Object N\+P\+C\+Interactable.\+Get\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Reimplemented from \mbox{\hyperlink{class_i_interactable_a140ed5b70b06e665292d49cba7277187}{I\+Interactable}}.
-
 \mbox{\Hypertarget{class_n_p_c_interactable_ae188715e4ce00ace308ceb5a2dff8c0f}\label{class_n_p_c_interactable_ae188715e4ce00ace308ceb5a2dff8c0f}} 
 \index{NPCInteractable@{NPCInteractable}!GetKindOfInteraction@{GetKindOfInteraction}}
 \index{GetKindOfInteraction@{GetKindOfInteraction}!NPCInteractable@{NPCInteractable}}
@@ -161,14 +138,6 @@ Reimplemented from \mbox{\hyperlink{class_i_interactable_aab15ee75c526922e8d8fdd
 
 Reimplemented from \mbox{\hyperlink{class_i_interactable_a7c343352a69a2b0105217d5b196f7ebb}{I\+Interactable}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_n_p_c_interactable_af99798811539d5b11ef9759fea455be9_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_n_p_c_interactable_abcfed17a85a7cbcf23b471f42bd01809}\label{class_n_p_c_interactable_abcfed17a85a7cbcf23b471f42bd01809}} 
 \index{NPCInteractable@{NPCInteractable}!Interact@{Interact}}
 \index{Interact@{Interact}!NPCInteractable@{NPCInteractable}}
@@ -187,22 +156,13 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_n_p_c_interactable_abcfed17a85a7cbcf23b471f42bd01809_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=324pt]{class_n_p_c_interactable_abcfed17a85a7cbcf23b471f42bd01809_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_i_interactable_ab3368074b0e4e3723a2b3b3a03d36a95}\label{class_i_interactable_ab3368074b0e4e3723a2b3b3a03d36a95}} 
 \index{NPCInteractable@{NPCInteractable}!IsFocus@{IsFocus}}
 \index{IsFocus@{IsFocus}!NPCInteractable@{NPCInteractable}}
 \doxysubsubsection{\texorpdfstring{IsFocus()}{IsFocus()}}
 {\footnotesize\ttfamily bool I\+Interactable.\+Is\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -215,28 +175,13 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
 {\footnotesize\ttfamily void N\+P\+C\+Interactable.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_n_p_c_interactable_aba342532386a26ce94f451be7a752f81}\label{class_n_p_c_interactable_aba342532386a26ce94f451be7a752f81}} 
-\index{NPCInteractable@{NPCInteractable}!RotateTowardCamera@{RotateTowardCamera}}
-\index{RotateTowardCamera@{RotateTowardCamera}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{RotateTowardCamera()}{RotateTowardCamera()}}
-{\footnotesize\ttfamily void N\+P\+C\+Interactable.\+Rotate\+Toward\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_n_p_c_interactable_aba342532386a26ce94f451be7a752f81_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_n_p_c_interactable_aa646b48b7442799e0cd7d621e43b8a5c}\label{class_n_p_c_interactable_aa646b48b7442799e0cd7d621e43b8a5c}} 
 \index{NPCInteractable@{NPCInteractable}!RotateTowardPlayer@{RotateTowardPlayer}}
 \index{RotateTowardPlayer@{RotateTowardPlayer}!NPCInteractable@{NPCInteractable}}
 \doxysubsubsection{\texorpdfstring{RotateTowardPlayer()}{RotateTowardPlayer()}}
 {\footnotesize\ttfamily void N\+P\+C\+Interactable.\+Rotate\+Toward\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -249,12 +194,26 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void N\+P\+C\+Interactable.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_n_p_c_interactable_a826a6f76d9db35ed88a12d99e8df0c19}\label{class_n_p_c_interactable_a826a6f76d9db35ed88a12d99e8df0c19}} 
+\index{NPCInteractable@{NPCInteractable}!Talk@{Talk}}
+\index{Talk@{Talk}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{Talk()}{Talk()}}
+{\footnotesize\ttfamily void N\+P\+C\+Interactable.\+Talk (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_monologue_data}{Monologue\+Data}} $>$}]{monologues }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_n_p_c_interactable_a423ac6bfea3442071b161a11e31de4ca_cgraph}
+\includegraphics[width=350pt]{class_n_p_c_interactable_a826a6f76d9db35ed88a12d99e8df0c19_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_n_p_c_interactable_a826a6f76d9db35ed88a12d99e8df0c19_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_n_p_c_interactable_a15982b83c5cb0678080e29afd48e379b}\label{class_n_p_c_interactable_a15982b83c5cb0678080e29afd48e379b}} 
@@ -274,23 +233,35 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_n_p_c_interactable_a9fc3727b439ffd30837fd72e9f0e39f2}\label{class_n_p_c_interactable_a9fc3727b439ffd30837fd72e9f0e39f2}} 
+\index{NPCInteractable@{NPCInteractable}!afterQuestIsFinished@{afterQuestIsFinished}}
+\index{afterQuestIsFinished@{afterQuestIsFinished}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{afterQuestIsFinished}{afterQuestIsFinished}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$ N\+P\+C\+Interactable.\+after\+Quest\+Is\+Finished = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_interactable_a6d0ac2e13749be5f2515f49a7bc3cae9}\label{class_n_p_c_interactable_a6d0ac2e13749be5f2515f49a7bc3cae9}} 
+\index{NPCInteractable@{NPCInteractable}!beforeQuestIsFinished@{beforeQuestIsFinished}}
+\index{beforeQuestIsFinished@{beforeQuestIsFinished}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{beforeQuestIsFinished}{beforeQuestIsFinished}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$ N\+P\+C\+Interactable.\+before\+Quest\+Is\+Finished = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_n_p_c_interactable_a9177911c3315f07110e7ffaa387e9dde}\label{class_n_p_c_interactable_a9177911c3315f07110e7ffaa387e9dde}} 
 \index{NPCInteractable@{NPCInteractable}!breakConversationDistance@{breakConversationDistance}}
 \index{breakConversationDistance@{breakConversationDistance}!NPCInteractable@{NPCInteractable}}
 \doxysubsubsection{\texorpdfstring{breakConversationDistance}{breakConversationDistance}}
-{\footnotesize\ttfamily float N\+P\+C\+Interactable.\+break\+Conversation\+Distance = 0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float N\+P\+C\+Interactable.\+break\+Conversation\+Distance = 3\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_n_p_c_interactable_a7ace8a613d964670a3892ecd8ec03e03}\label{class_n_p_c_interactable_a7ace8a613d964670a3892ecd8ec03e03}} 
-\index{NPCInteractable@{NPCInteractable}!datas@{datas}}
-\index{datas@{datas}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{datas}{datas}}
-{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$ N\+P\+C\+Interactable.\+datas = null\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_n_p_c_interactable_a8a128a9a9fe5faa0dbb0a4757ff2f208}\label{class_n_p_c_interactable_a8a128a9a9fe5faa0dbb0a4757ff2f208}} 
+\index{NPCInteractable@{NPCInteractable}!charData@{charData}}
+\index{charData@{charData}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{charData}{charData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} N\+P\+C\+Interactable.\+char\+Data = null\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_i_interactable_ab58a800f4575fd9a49935a52cb6b0520}\label{class_i_interactable_ab58a800f4575fd9a49935a52cb6b0520}} 
-\index{NPCInteractable@{NPCInteractable}!focusChanged@{focusChanged}}
-\index{focusChanged@{focusChanged}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{focusChanged}{focusChanged}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_on_focus_change}{On\+Focus\+Change}} I\+Interactable.\+focus\+Changed = new \mbox{\hyperlink{class_on_focus_change}{On\+Focus\+Change}}()\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+\mbox{\Hypertarget{class_n_p_c_interactable_a1abc0fd654a45845a062b81406f30d65}\label{class_n_p_c_interactable_a1abc0fd654a45845a062b81406f30d65}} 
+\index{NPCInteractable@{NPCInteractable}!givenQuest@{givenQuest}}
+\index{givenQuest@{givenQuest}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{givenQuest}{givenQuest}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_quest}{Quest}} N\+P\+C\+Interactable.\+given\+Quest = null\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_n_p_c_interactable_ac93503483d92314ff22a7b664718eec8}\label{class_n_p_c_interactable_ac93503483d92314ff22a7b664718eec8}} 
 \index{NPCInteractable@{NPCInteractable}!host@{host}}
@@ -308,34 +279,46 @@ Here is the call graph for this function\+:
 \index{NPCInteractable@{NPCInteractable}!isTracking@{isTracking}}
 \index{isTracking@{isTracking}!NPCInteractable@{NPCInteractable}}
 \doxysubsubsection{\texorpdfstring{isTracking}{isTracking}}
-{\footnotesize\ttfamily bool N\+P\+C\+Interactable.\+is\+Tracking\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool N\+P\+C\+Interactable.\+is\+Tracking = false\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_n_p_c_interactable_a89053d16d57f60dbb8301c0e8dc7fb4f}\label{class_n_p_c_interactable_a89053d16d57f60dbb8301c0e8dc7fb4f}} 
-\index{NPCInteractable@{NPCInteractable}!npcCanvas@{npcCanvas}}
-\index{npcCanvas@{npcCanvas}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{npcCanvas}{npcCanvas}}
-{\footnotesize\ttfamily Canvas N\+P\+C\+Interactable.\+npc\+Canvas = null\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_n_p_c_interactable_adb94fd88ff0266ad005a267f72bdad06}\label{class_n_p_c_interactable_adb94fd88ff0266ad005a267f72bdad06}} 
+\index{NPCInteractable@{NPCInteractable}!npcNameUi@{npcNameUi}}
+\index{npcNameUi@{npcNameUi}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{npcNameUi}{npcNameUi}}
+{\footnotesize\ttfamily Text N\+P\+C\+Interactable.\+npc\+Name\+Ui = null\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_n_p_c_interactable_a84e0ec2c5586b5c12243d779231aad44}\label{class_n_p_c_interactable_a84e0ec2c5586b5c12243d779231aad44}} 
-\index{NPCInteractable@{NPCInteractable}!npcNameUI@{npcNameUI}}
-\index{npcNameUI@{npcNameUI}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{npcNameUI}{npcNameUI}}
-{\footnotesize\ttfamily Text N\+P\+C\+Interactable.\+npc\+Name\+UI = null\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_n_p_c_interactable_ad9fd038dd4c8431e943cde18600ea315}\label{class_n_p_c_interactable_ad9fd038dd4c8431e943cde18600ea315}} 
+\index{NPCInteractable@{NPCInteractable}!otherSpeaker@{otherSpeaker}}
+\index{otherSpeaker@{otherSpeaker}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{otherSpeaker}{otherSpeaker}}
+{\footnotesize\ttfamily Game\+Object N\+P\+C\+Interactable.\+other\+Speaker = null\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_n_p_c_interactable_a89ddb3db70bb3c60e3f48636d196dd00}\label{class_n_p_c_interactable_a89ddb3db70bb3c60e3f48636d196dd00}} 
-\index{NPCInteractable@{NPCInteractable}!playerData@{playerData}}
-\index{playerData@{playerData}!NPCInteractable@{NPCInteractable}}
-\doxysubsubsection{\texorpdfstring{playerData}{playerData}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} N\+P\+C\+Interactable.\+player\+Data = null\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_n_p_c_interactable_ac817c07c27b85218f7fb4a33a0781ea5}\label{class_n_p_c_interactable_ac817c07c27b85218f7fb4a33a0781ea5}} 
+\index{NPCInteractable@{NPCInteractable}!playerObject@{playerObject}}
+\index{playerObject@{playerObject}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{playerObject}{playerObject}}
+{\footnotesize\ttfamily Game\+Object N\+P\+C\+Interactable.\+player\+Object = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_interactable_a537706b9e133d1b78a98730bf81e3172}\label{class_n_p_c_interactable_a537706b9e133d1b78a98730bf81e3172}} 
+\index{NPCInteractable@{NPCInteractable}!questFinishedTalk@{questFinishedTalk}}
+\index{questFinishedTalk@{questFinishedTalk}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{questFinishedTalk}{questFinishedTalk}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$ N\+P\+C\+Interactable.\+quest\+Finished\+Talk = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_n_p_c_interactable_a1e559ec47fe91059760416a65c6f55ae}\label{class_n_p_c_interactable_a1e559ec47fe91059760416a65c6f55ae}} 
 \index{NPCInteractable@{NPCInteractable}!rotateSpeed@{rotateSpeed}}
 \index{rotateSpeed@{rotateSpeed}!NPCInteractable@{NPCInteractable}}
 \doxysubsubsection{\texorpdfstring{rotateSpeed}{rotateSpeed}}
-{\footnotesize\ttfamily float N\+P\+C\+Interactable.\+rotate\+Speed = 0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float N\+P\+C\+Interactable.\+rotate\+Speed = 10f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_interactable_a66f6483f7257a1cfbcaf4da7a7d1db9a}\label{class_n_p_c_interactable_a66f6483f7257a1cfbcaf4da7a7d1db9a}} 
+\index{NPCInteractable@{NPCInteractable}!whileQuestIsActive@{whileQuestIsActive}}
+\index{whileQuestIsActive@{whileQuestIsActive}!NPCInteractable@{NPCInteractable}}
+\doxysubsubsection{\texorpdfstring{whileQuestIsActive}{whileQuestIsActive}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$ N\+P\+C\+Interactable.\+while\+Quest\+Is\+Active = new List$<$\mbox{\hyperlink{class_monologue_data}{Monologue\+Data}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\+N\+P\+C/\mbox{\hyperlink{_n_p_c_interactable_8cs}{N\+P\+C\+Interactable.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Interactables/\+N\+P\+C/\mbox{\hyperlink{_n_p_c_interactable_8cs}{N\+P\+C\+Interactable.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{class_camera_shake}{}\doxysection{Camera\+Shake Class Reference}
+\label{class_camera_shake}\index{CameraShake@{CameraShake}}
+
+
+Inheritance diagram for Camera\+Shake\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_camera_shake__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Camera\+Shake\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_camera_shake__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_shake_ae98ee9abd34d4bb79f6d1466b0013f22}{Shake}} (float duration)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_shake_a9a2528e09a26906910e9c01799982d85}{On\+Enable}} ()
+\item 
+void \mbox{\hyperlink{class_camera_shake_afaa0c0499d12ffc02170faac24c718a6}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_camera_shake_a07235a2092e7b182074edf042227cc1c}{cam\+Transform}}
+\item 
+float \mbox{\hyperlink{class_camera_shake_aa3cb01aab56424dab679495d3f0595ef}{shake\+Amount}} = 0.\+7f
+\item 
+float \mbox{\hyperlink{class_camera_shake_a4aeb07ffe87968a7c9aa9aa97456c668}{decrease\+Factor}} = 1.\+0f
+\item 
+Vector3 \mbox{\hyperlink{class_camera_shake_ac297fc923fec25275a802b7b5a761e5c}{original\+Pos}}
+\item 
+float \mbox{\hyperlink{class_camera_shake_a36a21ae1ae33f722fd5943596dcf49c3}{shake\+Duration}} = 0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_shake_a9a2528e09a26906910e9c01799982d85}\label{class_camera_shake_a9a2528e09a26906910e9c01799982d85}} 
+\index{CameraShake@{CameraShake}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void Camera\+Shake.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_shake_ae98ee9abd34d4bb79f6d1466b0013f22}\label{class_camera_shake_ae98ee9abd34d4bb79f6d1466b0013f22}} 
+\index{CameraShake@{CameraShake}!Shake@{Shake}}
+\index{Shake@{Shake}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{Shake()}{Shake()}}
+{\footnotesize\ttfamily void Camera\+Shake.\+Shake (\begin{DoxyParamCaption}\item[{float}]{duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_camera_shake_afaa0c0499d12ffc02170faac24c718a6}\label{class_camera_shake_afaa0c0499d12ffc02170faac24c718a6}} 
+\index{CameraShake@{CameraShake}!Update@{Update}}
+\index{Update@{Update}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Camera\+Shake.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_shake_a07235a2092e7b182074edf042227cc1c}\label{class_camera_shake_a07235a2092e7b182074edf042227cc1c}} 
+\index{CameraShake@{CameraShake}!camTransform@{camTransform}}
+\index{camTransform@{camTransform}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{camTransform}{camTransform}}
+{\footnotesize\ttfamily Transform Camera\+Shake.\+cam\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_shake_a4aeb07ffe87968a7c9aa9aa97456c668}\label{class_camera_shake_a4aeb07ffe87968a7c9aa9aa97456c668}} 
+\index{CameraShake@{CameraShake}!decreaseFactor@{decreaseFactor}}
+\index{decreaseFactor@{decreaseFactor}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{decreaseFactor}{decreaseFactor}}
+{\footnotesize\ttfamily float Camera\+Shake.\+decrease\+Factor = 1.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_shake_ac297fc923fec25275a802b7b5a761e5c}\label{class_camera_shake_ac297fc923fec25275a802b7b5a761e5c}} 
+\index{CameraShake@{CameraShake}!originalPos@{originalPos}}
+\index{originalPos@{originalPos}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{originalPos}{originalPos}}
+{\footnotesize\ttfamily Vector3 Camera\+Shake.\+original\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_shake_aa3cb01aab56424dab679495d3f0595ef}\label{class_camera_shake_aa3cb01aab56424dab679495d3f0595ef}} 
+\index{CameraShake@{CameraShake}!shakeAmount@{shakeAmount}}
+\index{shakeAmount@{shakeAmount}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{shakeAmount}{shakeAmount}}
+{\footnotesize\ttfamily float Camera\+Shake.\+shake\+Amount = 0.\+7f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_shake_a36a21ae1ae33f722fd5943596dcf49c3}\label{class_camera_shake_a36a21ae1ae33f722fd5943596dcf49c3}} 
+\index{CameraShake@{CameraShake}!shakeDuration@{shakeDuration}}
+\index{shakeDuration@{shakeDuration}!CameraShake@{CameraShake}}
+\doxysubsubsection{\texorpdfstring{shakeDuration}{shakeDuration}}
+{\footnotesize\ttfamily float Camera\+Shake.\+shake\+Duration = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Camera/\mbox{\hyperlink{_camera_shake_8cs}{Camera\+Shake.\+cs}}\end{DoxyCompactItemize}
