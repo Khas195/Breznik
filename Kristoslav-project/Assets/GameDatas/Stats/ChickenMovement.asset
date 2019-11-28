@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: effb8d8c9291f514f8f3153f719cb0a3, type: 3}
-  m_Name: ForestData
+  m_Script: {fileID: 11500000, guid: 6ad3fcf248deff545ac767d533a745c1, type: 3}
+  m_Name: ChickenMovement
   m_EditorClassIdentifier: 
-  areaName: Forest
-  typeOfInhabitants:
-  - inhabitant: {fileID: 8017159200711920421, guid: de165df63fd4fcc4e9c61a63452c7527,
-      type: 3}
-    ratio: 1
-  maxPopulation: 20
-  size: 65
+  walkSpeed: 2
+  runSpeed: 2
+  jumpForce: 7
