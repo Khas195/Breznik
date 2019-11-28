@@ -1,8 +1,9 @@
 <map id="CharacterBehaviorCondition" name="CharacterBehaviorCondition">
-<area shape="rect" id="node1" title="Check a certain condtion to see if it satisfied ." alt="" coords="163,80,344,107"/>
+<area shape="rect" id="node1" title="Check a certain condtion to see if it satisfied ." alt="" coords="191,80,372,107"/>
 <area shape="rect" id="node3" href="$class_has_stamina.html" title="Check if the player action cost has enough stamina." alt="" coords="5,155,99,181"/>
-<area shape="rect" id="node4" href="$class_is_not_attacking.html" title=" " alt="" coords="123,155,229,181"/>
-<area shape="rect" id="node5" href="$class_is_not_playing_animation.html" title=" " alt="" coords="254,155,407,181"/>
-<area shape="rect" id="node6" href="$class_is_touching_ground.html" title="Check if the character is touching ground." alt="" coords="431,155,558,181"/>
-<area shape="rect" id="node2" title=" " alt="" coords="194,5,313,32"/>
+<area shape="rect" id="node4" href="$class_is_attacking.html" title=" " alt="" coords="123,155,210,181"/>
+<area shape="rect" id="node5" href="$class_is_in_inventory.html" title=" " alt="" coords="235,155,328,181"/>
+<area shape="rect" id="node6" href="$class_is_in_paused_menu.html" title=" " alt="" coords="353,155,471,181"/>
+<area shape="rect" id="node7" href="$class_is_touching_ground.html" title="Check if the character is touching ground." alt="" coords="495,155,622,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="222,5,341,32"/>
 </map>

@@ -1,0 +1,585 @@
+\hypertarget{class_n_p_c_character}{}\doxysection{N\+P\+C\+Character Class Reference}
+\label{class_n_p_c_character}\index{NPCCharacter@{NPCCharacter}}
+
+
+Inheritance diagram for N\+P\+C\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_n_p_c_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for N\+P\+C\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}{Awake}} ()
+\item 
+Game\+Object \mbox{\hyperlink{class_character_ad5015c2ad449b2c9a4598a899848e8cd}{Get\+Host}} ()
+\item 
+virtual void \mbox{\hyperlink{class_character_a1dd0ceab877e52531230ad4d87b9e948}{Being\+Damage}} (int damage)
+\begin{DoxyCompactList}\small\item\em Is called if the character are to be damaged. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_character_ae8ba68110ff061ba6d40930466e463a1}{Get\+Health}} ()
+\item 
+float \mbox{\hyperlink{class_character_ab3d3becb9cd892580822255e21213db2}{Get\+Stamina}} ()
+\item 
+float \mbox{\hyperlink{class_character_abd24b554986aa766a4039185dbee3c49}{Get\+Current\+Speed}} ()
+\item 
+\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_character_afb97330c5c3a3f3b704d771956fd3377}{Get\+Stats}} ()
+\item 
+void \mbox{\hyperlink{class_character_a6582d4d3cbe40678ca81623958676b5f}{Rotate\+Toward}} (Vector3 direction, bool rotateY)
+\item 
+virtual bool \mbox{\hyperlink{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}{Request\+Move}} (float forward, float side)
+\begin{DoxyCompactList}\small\item\em This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_aac80a99e7d65890e59304a74fc059c74}{Attack}} ()
+\begin{DoxyCompactList}\small\item\em This function invoke an event whenever the character is signal to attack It returns true if the event is successfully called and vice versa. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_afea0491dc5b0a44c2e2296fb87c11393}{Request\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_a9c90452155c735e88b3872d2fb62ad37}{Request\+Movement\+Type}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}} move\+Type)
+\begin{DoxyCompactList}\small\item\em This function set the movement Type for the move\+Behavior. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_aa93dd91db660de26a9f4d5f2539ddeaa}{Is\+Attacking}} ()
+\item 
+void \mbox{\hyperlink{class_character_a58338828aaf6af0ce7a6a02107513ce3}{On\+Attack\+Start}} ()
+\item 
+void \mbox{\hyperlink{class_character_a0f4fa390c0aa02d1e0c715cfb191eada}{On\+Attack\+Done}} ()
+\item 
+bool \mbox{\hyperlink{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c}{Is\+Touching\+Ground}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Event \mbox{\hyperlink{class_character_a2781bb31e42725e8e71efb4cff94e7c6}{on\+Character\+Attack}} = new Unity\+Event()
+\begin{DoxyCompactList}\small\item\em This is event is called when an attack is successfully trigger. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_death_event}{Death\+Event}} \mbox{\hyperlink{class_character_a0945c7aa868f33ea428e1bc9302b6bb9}{On\+Character\+Death}} = new \mbox{\hyperlink{class_death_event}{Death\+Event}}()
+\item 
+Unity\+Event \mbox{\hyperlink{class_character_a3bfd2e6d45fe4fc3d3e63172a6c00959}{On\+Character\+Damaged}} = new Unity\+Event()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody \mbox{\hyperlink{class_character_ae91b6199245ae87206e43fbd2ae9e440}{host\+Rigid\+Body}}
+\begin{DoxyCompactList}\small\item\em The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_a736d5b47bff2750392858a40e7ab1e9b}{movement\+Behavior}}
+\begin{DoxyCompactList}\small\item\em Reference to the movement behavior of the character. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_character_af86674f9440ec86b61c057dbc1b8586e}{character\+Data}} = null
+\begin{DoxyCompactList}\small\item\em The player character\textquotesingle{}s stats \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_character_a7bceb1f35a225d5475239fb8636921c4}{health}} = 0
+\item 
+float \mbox{\hyperlink{class_character_afedb7998be9bd7b6edb665777cf2c1c8}{stamina}} = 0
+\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a36de084cc26942ad378ea9494ad8a5bc}{jump\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}{move\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}{attack\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a3fca381aacbc571e0bf8678882ee2610}{change\+Move\+Type\+Conditions}}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_aaee9b3a240852149c350ec45afd1c6d3}{can\+Rotate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_p_c_character_ae77e302697fc55cffa1e0f5ed9abd988}{On\+Validate}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_character_a254f500ec8480dab586189b2815703d2}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_character_a80362366256841cf4ef957ff3b916f79}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text \mbox{\hyperlink{class_n_p_c_character_a659773fd9a57ac966a31487d09ded6b8}{name\+Tag}} = null
+\item 
+bool \mbox{\hyperlink{class_character_aabb3648d5aaeb3768a8fcc5ae6ce887b}{is\+Attacking}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_character_aac80a99e7d65890e59304a74fc059c74}\label{class_character_aac80a99e7d65890e59304a74fc059c74}} 
+\index{NPCCharacter@{NPCCharacter}!Attack@{Attack}}
+\index{Attack@{Attack}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily virtual bool Character.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+This function invoke an event whenever the character is signal to attack It returns true if the event is successfully called and vice versa. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aac80a99e7d65890e59304a74fc059c74_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aac80a99e7d65890e59304a74fc059c74_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}\label{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}} 
+\index{NPCCharacter@{NPCCharacter}!Awake@{Awake}}
+\index{Awake@{Awake}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily virtual void Character.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a7cca5d1f141f2f46a1d087fd3e28a953_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a1dd0ceab877e52531230ad4d87b9e948}\label{class_character_a1dd0ceab877e52531230ad4d87b9e948}} 
+\index{NPCCharacter@{NPCCharacter}!BeingDamage@{BeingDamage}}
+\index{BeingDamage@{BeingDamage}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{BeingDamage()}{BeingDamage()}}
+{\footnotesize\ttfamily virtual void Character.\+Being\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Is called if the character are to be damaged. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & the damage value\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_player_character_adf49d8113b65926523cd08386dc2d8c0}{Player\+Character}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a1dd0ceab877e52531230ad4d87b9e948_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_abd24b554986aa766a4039185dbee3c49}\label{class_character_abd24b554986aa766a4039185dbee3c49}} 
+\index{NPCCharacter@{NPCCharacter}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily float Character.\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_abd24b554986aa766a4039185dbee3c49_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_abd24b554986aa766a4039185dbee3c49_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ae8ba68110ff061ba6d40930466e463a1}\label{class_character_ae8ba68110ff061ba6d40930466e463a1}} 
+\index{NPCCharacter@{NPCCharacter}!GetHealth@{GetHealth}}
+\index{GetHealth@{GetHealth}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{GetHealth()}{GetHealth()}}
+{\footnotesize\ttfamily float Character.\+Get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_ae8ba68110ff061ba6d40930466e463a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ad5015c2ad449b2c9a4598a899848e8cd}\label{class_character_ad5015c2ad449b2c9a4598a899848e8cd}} 
+\index{NPCCharacter@{NPCCharacter}!GetHost@{GetHost}}
+\index{GetHost@{GetHost}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{GetHost()}{GetHost()}}
+{\footnotesize\ttfamily Game\+Object Character.\+Get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_ad5015c2ad449b2c9a4598a899848e8cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ab3d3becb9cd892580822255e21213db2}\label{class_character_ab3d3becb9cd892580822255e21213db2}} 
+\index{NPCCharacter@{NPCCharacter}!GetStamina@{GetStamina}}
+\index{GetStamina@{GetStamina}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{GetStamina()}{GetStamina()}}
+{\footnotesize\ttfamily float Character.\+Get\+Stamina (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_character_ab3d3becb9cd892580822255e21213db2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_afb97330c5c3a3f3b704d771956fd3377}\label{class_character_afb97330c5c3a3f3b704d771956fd3377}} 
+\index{NPCCharacter@{NPCCharacter}!GetStats@{GetStats}}
+\index{GetStats@{GetStats}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{GetStats()}{GetStats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Character.\+Get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_afb97330c5c3a3f3b704d771956fd3377_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aa93dd91db660de26a9f4d5f2539ddeaa}\label{class_character_aa93dd91db660de26a9f4d5f2539ddeaa}} 
+\index{NPCCharacter@{NPCCharacter}!IsAttacking@{IsAttacking}}
+\index{IsAttacking@{IsAttacking}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{IsAttacking()}{IsAttacking()}}
+{\footnotesize\ttfamily bool Character.\+Is\+Attacking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aa93dd91db660de26a9f4d5f2539ddeaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c}\label{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c}} 
+\index{NPCCharacter@{NPCCharacter}!IsTouchingGround@{IsTouchingGround}}
+\index{IsTouchingGround@{IsTouchingGround}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{IsTouchingGround()}{IsTouchingGround()}}
+{\footnotesize\ttfamily bool Character.\+Is\+Touching\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a0f4fa390c0aa02d1e0c715cfb191eada}\label{class_character_a0f4fa390c0aa02d1e0c715cfb191eada}} 
+\index{NPCCharacter@{NPCCharacter}!OnAttackDone@{OnAttackDone}}
+\index{OnAttackDone@{OnAttackDone}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{OnAttackDone()}{OnAttackDone()}}
+{\footnotesize\ttfamily void Character.\+On\+Attack\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a0f4fa390c0aa02d1e0c715cfb191eada_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a58338828aaf6af0ce7a6a02107513ce3}\label{class_character_a58338828aaf6af0ce7a6a02107513ce3}} 
+\index{NPCCharacter@{NPCCharacter}!OnAttackStart@{OnAttackStart}}
+\index{OnAttackStart@{OnAttackStart}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{OnAttackStart()}{OnAttackStart()}}
+{\footnotesize\ttfamily void Character.\+On\+Attack\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a58338828aaf6af0ce7a6a02107513ce3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_character_ae77e302697fc55cffa1e0f5ed9abd988}\label{class_n_p_c_character_ae77e302697fc55cffa1e0f5ed9abd988}} 
+\index{NPCCharacter@{NPCCharacter}!OnValidate@{OnValidate}}
+\index{OnValidate@{OnValidate}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{OnValidate()}{OnValidate()}}
+{\footnotesize\ttfamily void N\+P\+C\+Character.\+On\+Validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_character_afea0491dc5b0a44c2e2296fb87c11393}\label{class_character_afea0491dc5b0a44c2e2296fb87c11393}} 
+\index{NPCCharacter@{NPCCharacter}!RequestJump@{RequestJump}}
+\index{RequestJump@{RequestJump}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{RequestJump()}{RequestJump()}}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. 
+
+\begin{DoxyReturn}{Returns}
+True\+: if successfully called the Signal\+Jump function and vice versa ~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_afea0491dc5b0a44c2e2296fb87c11393_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_afea0491dc5b0a44c2e2296fb87c11393_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}\label{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}} 
+\index{NPCCharacter@{NPCCharacter}!RequestMove@{RequestMove}}
+\index{RequestMove@{RequestMove}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{RequestMove()}{RequestMove()}}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forward} & fordward is how much the host game object should move forward and backward \\
+\hline
+{\em side} & side is how much the host game object should move sideway \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aea4be2e1287d97dfc3187f66dad5a5bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aea4be2e1287d97dfc3187f66dad5a5bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a9c90452155c735e88b3872d2fb62ad37}\label{class_character_a9c90452155c735e88b3872d2fb62ad37}} 
+\index{NPCCharacter@{NPCCharacter}!RequestMovementType@{RequestMovementType}}
+\index{RequestMovementType@{RequestMovementType}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{RequestMovementType()}{RequestMovementType()}}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Movement\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}}}]{move\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+This function set the movement Type for the move\+Behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move\+Type} & The movement Type defined in \mbox{\hyperlink{class_movement}{Movement}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: if successfully set the movement mode of the move behavior. ~\newline
+ False\+: if movement\+Behavior is null. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a6582d4d3cbe40678ca81623958676b5f}\label{class_character_a6582d4d3cbe40678ca81623958676b5f}} 
+\index{NPCCharacter@{NPCCharacter}!RotateToward@{RotateToward}}
+\index{RotateToward@{RotateToward}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{RotateToward()}{RotateToward()}}
+{\footnotesize\ttfamily void Character.\+Rotate\+Toward (\begin{DoxyParamCaption}\item[{Vector3}]{direction,  }\item[{bool}]{rotateY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a6582d4d3cbe40678ca81623958676b5f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a6582d4d3cbe40678ca81623958676b5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_character_a254f500ec8480dab586189b2815703d2}\label{class_n_p_c_character_a254f500ec8480dab586189b2815703d2}} 
+\index{NPCCharacter@{NPCCharacter}!Start@{Start}}
+\index{Start@{Start}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void N\+P\+C\+Character.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_character_a80362366256841cf4ef957ff3b916f79}\label{class_n_p_c_character_a80362366256841cf4ef957ff3b916f79}} 
+\index{NPCCharacter@{NPCCharacter}!Update@{Update}}
+\index{Update@{Update}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void N\+P\+C\+Character.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}\label{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}} 
+\index{NPCCharacter@{NPCCharacter}!attackConditions@{attackConditions}}
+\index{attackConditions@{attackConditions}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{attackConditions}{attackConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+attack\+Conditions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+attack\+Conditions check wheter the character can attack.\mbox{\Hypertarget{class_character_aaee9b3a240852149c350ec45afd1c6d3}\label{class_character_aaee9b3a240852149c350ec45afd1c6d3}} 
+\index{NPCCharacter@{NPCCharacter}!canRotate@{canRotate}}
+\index{canRotate@{canRotate}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{canRotate}{canRotate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+can\+Rotate\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_character_a3fca381aacbc571e0bf8678882ee2610}\label{class_character_a3fca381aacbc571e0bf8678882ee2610}} 
+\index{NPCCharacter@{NPCCharacter}!changeMoveTypeConditions@{changeMoveTypeConditions}}
+\index{changeMoveTypeConditions@{changeMoveTypeConditions}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{changeMoveTypeConditions}{changeMoveTypeConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+change\+Move\+Type\+Conditions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+change\+Move\+Type\+Conditions check whether it is possible to change the current move mode.\mbox{\Hypertarget{class_character_af86674f9440ec86b61c057dbc1b8586e}\label{class_character_af86674f9440ec86b61c057dbc1b8586e}} 
+\index{NPCCharacter@{NPCCharacter}!characterData@{characterData}}
+\index{characterData@{characterData}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{characterData}{characterData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Character.\+character\+Data = null\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The player character\textquotesingle{}s stats 
+
+\mbox{\Hypertarget{class_character_a7bceb1f35a225d5475239fb8636921c4}\label{class_character_a7bceb1f35a225d5475239fb8636921c4}} 
+\index{NPCCharacter@{NPCCharacter}!health@{health}}
+\index{health@{health}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily float Character.\+health = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_character_ae91b6199245ae87206e43fbd2ae9e440}\label{class_character_ae91b6199245ae87206e43fbd2ae9e440}} 
+\index{NPCCharacter@{NPCCharacter}!hostRigidBody@{hostRigidBody}}
+\index{hostRigidBody@{hostRigidBody}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{hostRigidBody}{hostRigidBody}}
+{\footnotesize\ttfamily Rigidbody Character.\+host\+Rigid\+Body\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. 
+
+~\newline
+ Need to be set in Unity Editor.\mbox{\Hypertarget{class_character_aabb3648d5aaeb3768a8fcc5ae6ce887b}\label{class_character_aabb3648d5aaeb3768a8fcc5ae6ce887b}} 
+\index{NPCCharacter@{NPCCharacter}!isAttacking@{isAttacking}}
+\index{isAttacking@{isAttacking}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{isAttacking}{isAttacking}}
+{\footnotesize\ttfamily bool Character.\+is\+Attacking\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_character_a36de084cc26942ad378ea9494ad8a5bc}\label{class_character_a36de084cc26942ad378ea9494ad8a5bc}} 
+\index{NPCCharacter@{NPCCharacter}!jumpConditions@{jumpConditions}}
+\index{jumpConditions@{jumpConditions}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{jumpConditions}{jumpConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+jump\+Conditions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+jump\+Conditions check whether it is possible to jump.\mbox{\Hypertarget{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}\label{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}} 
+\index{NPCCharacter@{NPCCharacter}!moveConditions@{moveConditions}}
+\index{moveConditions@{moveConditions}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{moveConditions}{moveConditions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+move\+Conditions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+An Scriptable Conditions checker that can be created in the Unity Editor. 
+
+move\+Conditions check whether it is possible to move\mbox{\Hypertarget{class_character_a736d5b47bff2750392858a40e7ab1e9b}\label{class_character_a736d5b47bff2750392858a40e7ab1e9b}} 
+\index{NPCCharacter@{NPCCharacter}!movementBehavior@{movementBehavior}}
+\index{movementBehavior@{movementBehavior}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{movementBehavior}{movementBehavior}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character.\+movement\+Behavior\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Reference to the movement behavior of the character. 
+
+~\newline
+ If the character does not have a movement behavior, he/she will not be able to move.\mbox{\Hypertarget{class_n_p_c_character_a659773fd9a57ac966a31487d09ded6b8}\label{class_n_p_c_character_a659773fd9a57ac966a31487d09ded6b8}} 
+\index{NPCCharacter@{NPCCharacter}!nameTag@{nameTag}}
+\index{nameTag@{nameTag}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{nameTag}{nameTag}}
+{\footnotesize\ttfamily Text N\+P\+C\+Character.\+name\+Tag = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_character_a2781bb31e42725e8e71efb4cff94e7c6}\label{class_character_a2781bb31e42725e8e71efb4cff94e7c6}} 
+\index{NPCCharacter@{NPCCharacter}!onCharacterAttack@{onCharacterAttack}}
+\index{onCharacterAttack@{onCharacterAttack}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{onCharacterAttack}{onCharacterAttack}}
+{\footnotesize\ttfamily Unity\+Event Character.\+on\+Character\+Attack = new Unity\+Event()\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+This is event is called when an attack is successfully trigger. 
+
+\mbox{\Hypertarget{class_character_a3bfd2e6d45fe4fc3d3e63172a6c00959}\label{class_character_a3bfd2e6d45fe4fc3d3e63172a6c00959}} 
+\index{NPCCharacter@{NPCCharacter}!OnCharacterDamaged@{OnCharacterDamaged}}
+\index{OnCharacterDamaged@{OnCharacterDamaged}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{OnCharacterDamaged}{OnCharacterDamaged}}
+{\footnotesize\ttfamily Unity\+Event Character.\+On\+Character\+Damaged = new Unity\+Event()\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_character_a0945c7aa868f33ea428e1bc9302b6bb9}\label{class_character_a0945c7aa868f33ea428e1bc9302b6bb9}} 
+\index{NPCCharacter@{NPCCharacter}!OnCharacterDeath@{OnCharacterDeath}}
+\index{OnCharacterDeath@{OnCharacterDeath}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{OnCharacterDeath}{OnCharacterDeath}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_death_event}{Death\+Event}} Character.\+On\+Character\+Death = new \mbox{\hyperlink{class_death_event}{Death\+Event}}()\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_character_afedb7998be9bd7b6edb665777cf2c1c8}\label{class_character_afedb7998be9bd7b6edb665777cf2c1c8}} 
+\index{NPCCharacter@{NPCCharacter}!stamina@{stamina}}
+\index{stamina@{stamina}!NPCCharacter@{NPCCharacter}}
+\doxysubsubsection{\texorpdfstring{stamina}{stamina}}
+{\footnotesize\ttfamily float Character.\+stamina = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Character/\mbox{\hyperlink{_n_p_c_character_8cs}{N\+P\+C\+Character.\+cs}}\end{DoxyCompactItemize}

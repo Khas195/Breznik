@@ -63,6 +63,8 @@ public class CharacterAnimatorControl : MonoBehaviour
     {
         return character.IsAttacking();
     }
-
-
+    public void TriggerDeadAnimation()
+    {
+        animator.SetTrigger("Die");
+    }
 }

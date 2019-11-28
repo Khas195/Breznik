@@ -1,18 +1,58 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,335,124,361"/>
-<area shape="rect" id="node2" href="$class_character_behavior_condition.html" title="Check a certain condtion to see if it satisfied ." alt="" coords="172,81,353,108"/>
-<area shape="rect" id="node7" href="$class_character_data.html" title=" " alt="" coords="210,132,315,159"/>
-<area shape="rect" id="node8" href="$class_character_stats_data.html" title=" " alt="" coords="195,183,331,209"/>
-<area shape="rect" id="node9" href="$class_conditions_checker.html" title=" " alt="" coords="197,233,328,260"/>
-<area shape="rect" id="node10" href="$class_dots_u_i_data.html" title=" " alt="" coords="219,284,307,311"/>
-<area shape="rect" id="node11" href="$class_flexible_u_i_data.html" title=" " alt="" coords="209,335,316,361"/>
-<area shape="rect" id="node12" href="$class_game_event.html" title="This game event signal its listener if the event is raised." alt="" coords="218,385,307,412"/>
-<area shape="rect" id="node13" href="$class_monologue_data.html" title=" " alt="" coords="207,436,319,463"/>
-<area shape="rect" id="node14" href="$class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="209,487,317,513"/>
-<area shape="rect" id="node15" href="$class_player_action_cost.html" title=" " alt="" coords="201,537,324,564"/>
-<area shape="rect" id="node16" href="$class_stats_bar_u_i_data.html" title=" " alt="" coords="207,588,319,615"/>
-<area shape="rect" id="node3" href="$class_has_stamina.html" title="Check if the player action cost has enough stamina." alt="" coords="431,5,525,32"/>
-<area shape="rect" id="node4" href="$class_is_not_attacking.html" title=" " alt="" coords="425,56,531,83"/>
-<area shape="rect" id="node5" href="$class_is_not_playing_animation.html" title=" " alt="" coords="401,107,555,133"/>
-<area shape="rect" id="node6" href="$class_is_touching_ground.html" title="Check if the character is touching ground." alt="" coords="415,157,541,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,892,116,919"/>
+<area shape="rect" id="node2" href="$class_animation_combo_event.html" title=" " alt="" coords="181,5,334,32"/>
+<area shape="rect" id="node3" href="$class_area.html" title=" " alt="" coords="233,56,282,83"/>
+<area shape="rect" id="node4" href="$class_area_view.html" title=" " alt="" coords="219,107,296,133"/>
+<area shape="rect" id="node5" href="$class_camera_follow.html" title=" " alt="" coords="205,157,309,184"/>
+<area shape="rect" id="node6" href="$class_camera_rotate_mouse.html" title=" " alt="" coords="185,208,329,235"/>
+<area shape="rect" id="node7" href="$class_camera_shake.html" title=" " alt="" coords="205,259,309,285"/>
+<area shape="rect" id="node8" href="$class_camera_zoom.html" title=" " alt="" coords="208,309,307,336"/>
+<area shape="rect" id="node9" href="$class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="218,360,297,387"/>
+<area shape="rect" id="node12" href="$class_character_animator_control.html" title=" " alt="" coords="172,411,343,437"/>
+<area shape="rect" id="node13" href="$class_constraint_camera.html" title=" " alt="" coords="194,461,321,488"/>
+<area shape="rect" id="node14" href="$class_damage_on_touch.html" title=" " alt="" coords="196,512,319,539"/>
+<area shape="rect" id="node15" href="$class_damage_trigger_event.html" title=" " alt="" coords="187,563,328,589"/>
+<area shape="rect" id="node16" href="$class_dont_destroy_on_load.html" title="This script keep the parent game object and its children from being destroy when loading scene." alt="" coords="188,613,327,640"/>
+<area shape="rect" id="node17" href="$class_flexible_u_i.html" title=" " alt="" coords="218,664,297,691"/>
+<area shape="rect" id="node21" href="$class_front_back_sorting_manager.html" title="This class manages all the game object that runs the different sorting methods." alt="" coords="171,715,344,741"/>
+<area shape="rect" id="node22" href="$class_game_event_listener.html" title="Listen to a game event that can be created in UnityEditor." alt="" coords="190,765,325,792"/>
+<area shape="rect" id="node23" href="$class_i_front_back_sorting.html" title="This class aims to generalize the possible sorting method for 2d sprites in a top down view." alt="" coords="194,816,321,843"/>
+<area shape="rect" id="node26" href="$class_i_interactable.html" title=" " alt="" coords="211,867,303,893"/>
+<area shape="rect" id="node29" href="$class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="215,917,299,944"/>
+<area shape="rect" id="node33" href="$class_inventory_slot.html" title=" " alt="" coords="209,968,305,995"/>
+<area shape="rect" id="node34" href="$class_inventory_u_i_manager.html" title=" " alt="" coords="190,1019,325,1045"/>
+<area shape="rect" id="node35" href="$class_main_camera_entity.html" title=" " alt="" coords="193,1069,322,1096"/>
+<area shape="rect" id="node36" href="$class_monologue_manager.html" title=" " alt="" coords="190,1120,325,1147"/>
+<area shape="rect" id="node37" href="$class_mouse_rotate_camera.html" title="This class roate the camera entity based on the motion of the mouse." alt="" coords="185,1171,329,1197"/>
+<area shape="rect" id="node38" href="$class_n_p_c_controller.html" title=" " alt="" coords="205,1221,309,1248"/>
+<area shape="rect" id="node39" href="$class_n_p_c_stats_u_i.html" title=" " alt="" coords="211,1272,303,1299"/>
+<area shape="rect" id="node40" href="$class_on_create_trigger.html" title=" " alt="" coords="199,1323,315,1349"/>
+<area shape="rect" id="node41" href="$class_physic_call_back.html" title=" " alt="" coords="200,1373,315,1400"/>
+<area shape="rect" id="node42" href="$class_player_controller.html" title="This class processes the player&#39;s input and tell the character to perform the intended action." alt="" coords="200,1424,315,1451"/>
+<area shape="rect" id="node43" href="$class_player_stats_u_i.html" title="Handle the health bar and stamina of the character based on the character stats data." alt="" coords="206,1475,309,1501"/>
+<area shape="rect" id="node44" href="$class_quest_u_i_manager.html" title=" " alt="" coords="198,1525,317,1552"/>
+<area shape="rect" id="node45" href="$class_rotate_over_time.html" title=" " alt="" coords="200,1576,315,1603"/>
+<area shape="rect" id="node46" href="$class_rotate_toward.html" title=" " alt="" coords="207,1627,308,1653"/>
+<area shape="rect" id="node47" href="$class_singleton_monobehavior.html" title=" " alt="" coords="164,1677,351,1704"/>
+<area shape="rect" id="node48" href="$class_state.html" title=" " alt="" coords="231,1728,284,1755"/>
+<area shape="rect" id="node56" href="$class_weapon.html" title=" " alt="" coords="222,1779,293,1805"/>
+<area shape="rect" id="node10" href="$class_n_p_c_character.html" title=" " alt="" coords="425,335,531,361"/>
+<area shape="rect" id="node11" href="$class_player_character.html" title="The player controlled character." alt="" coords="421,385,535,412"/>
+<area shape="rect" id="node18" href="$class_flexible_u_i_button.html" title=" " alt="" coords="419,588,537,615"/>
+<area shape="rect" id="node19" href="$class_flexible_u_i_dots_bar.html" title=" " alt="" coords="415,639,541,665"/>
+<area shape="rect" id="node20" href="$class_flexible_u_i_stats_bar.html" title=" " alt="" coords="413,689,543,716"/>
+<area shape="rect" id="node24" href="$class_front_back_sorting.html" title="This class offers the most simple sorting." alt="" coords="417,740,539,767"/>
+<area shape="rect" id="node25" href="$class_front_back_two_point_sort.html" title="This class offers a 2 points for the process of determination of whether the character&#39;s sprite is ab..." alt="" coords="399,791,557,817"/>
+<area shape="rect" id="node27" href="$class_item.html" title=" " alt="" coords="455,841,501,868"/>
+<area shape="rect" id="node28" href="$class_n_p_c_interactable.html" title=" " alt="" coords="420,892,536,919"/>
+<area shape="rect" id="node30" href="$class_movement.html" title="This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the ob..." alt="" coords="437,943,519,969"/>
+<area shape="rect" id="node31" href="$class_movement2_d.html" title="This class handles all movement related behavior in 2D." alt="" coords="429,993,527,1020"/>
+<area shape="rect" id="node32" href="$class_movement_root_motion.html" title="This class move the host object by ultilize root motion in the animations of the host object." alt="" coords="405,1044,551,1071"/>
+<area shape="rect" id="node49" href="$class_game_state.html" title="The Game state of the game." alt="" coords="434,1728,522,1755"/>
+<area shape="rect" id="node50" href="$class_game_paused.html" title="The Paused State of the Game." alt="" coords="605,1601,707,1628"/>
+<area shape="rect" id="node51" href="$class_in_dialogues.html" title=" " alt="" coords="611,1652,701,1679"/>
+<area shape="rect" id="node52" href="$class_in_game.html" title="The In game state of the game." alt="" coords="623,1703,689,1729"/>
+<area shape="rect" id="node53" href="$class_in_inventory.html" title=" " alt="" coords="615,1753,697,1780"/>
+<area shape="rect" id="node54" href="$class_loading.html" title=" " alt="" coords="623,1804,689,1831"/>
+<area shape="rect" id="node55" href="$class_main_menu.html" title="The main menu state of the game." alt="" coords="615,1855,697,1881"/>
 </map>

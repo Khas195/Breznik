@@ -7,8 +7,7 @@ Handle the health bar and stamina of the character based on the character stats 
 
 
 
-Inheritance diagram for Player\+Stats\+UI\+:
-\nopagebreak
+Inheritance diagram for Player\+Stats\+UI\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,8 +36,10 @@ void \mbox{\hyperlink{class_player_stats_u_i_a9fd57f7db49724d102e3bce0d585242b}{
 \begin{DoxyCompactList}\small\item\em The health bar of the character. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_flexible_u_i_dots_bar}{Flexible\+U\+I\+Dots\+Bar}} \mbox{\hyperlink{class_player_stats_u_i_a780a43b0a98b401319ea8d73046d4050}{stamina\+Dots}} = null
 \begin{DoxyCompactList}\small\item\em The Stamina bar of the character. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_player_stats_u_i_a58faa9039cfd1b8eb0db6ed46f27728c}{data}} = null
-\begin{DoxyCompactList}\small\item\em The character stats data of the character \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_character_stats_data}{Character\+Stats\+Data}} \mbox{\hyperlink{class_player_stats_u_i_ae3060a518dc908c9d4c738d831550198}{base\+Stats}} = null
+\begin{DoxyCompactList}\small\item\em The character stats data of the character \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character}{Character}} \mbox{\hyperlink{class_player_stats_u_i_aab143f916cf63a83e714467d503171a8}{player}} = null
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -64,11 +65,11 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_player_stats_u_i_a58faa9039cfd1b8eb0db6ed46f27728c}\label{class_player_stats_u_i_a58faa9039cfd1b8eb0db6ed46f27728c}} 
-\index{PlayerStatsUI@{PlayerStatsUI}!data@{data}}
-\index{data@{data}!PlayerStatsUI@{PlayerStatsUI}}
-\doxysubsubsection{\texorpdfstring{data}{data}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Player\+Stats\+U\+I.\+data = null\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_player_stats_u_i_ae3060a518dc908c9d4c738d831550198}\label{class_player_stats_u_i_ae3060a518dc908c9d4c738d831550198}} 
+\index{PlayerStatsUI@{PlayerStatsUI}!baseStats@{baseStats}}
+\index{baseStats@{baseStats}!PlayerStatsUI@{PlayerStatsUI}}
+\doxysubsubsection{\texorpdfstring{baseStats}{baseStats}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_stats_data}{Character\+Stats\+Data}} Player\+Stats\+U\+I.\+base\+Stats = null\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -84,6 +85,12 @@ The character stats data of the character
 
 The health bar of the character. 
 
+\mbox{\Hypertarget{class_player_stats_u_i_aab143f916cf63a83e714467d503171a8}\label{class_player_stats_u_i_aab143f916cf63a83e714467d503171a8}} 
+\index{PlayerStatsUI@{PlayerStatsUI}!player@{player}}
+\index{player@{player}!PlayerStatsUI@{PlayerStatsUI}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character}{Character}} Player\+Stats\+U\+I.\+player = null\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_player_stats_u_i_a780a43b0a98b401319ea8d73046d4050}\label{class_player_stats_u_i_a780a43b0a98b401319ea8d73046d4050}} 
 \index{PlayerStatsUI@{PlayerStatsUI}!staminaDots@{staminaDots}}
 \index{staminaDots@{staminaDots}!PlayerStatsUI@{PlayerStatsUI}}
@@ -98,4 +105,4 @@ The Stamina bar of the character.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\mbox{\hyperlink{_player_stats_u_i_8cs}{Player\+Stats\+U\+I.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+U\+Is/\mbox{\hyperlink{_player_stats_u_i_8cs}{Player\+Stats\+U\+I.\+cs}}\end{DoxyCompactItemize}

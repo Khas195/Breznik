@@ -7,8 +7,7 @@ The In game state of the game.
 
 
 
-Inheritance diagram for In\+Game\+:
-\nopagebreak
+Inheritance diagram for In\+Game\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for In\+Game\+:
 \end{figure}
 
 
-Collaboration diagram for In\+Game\+:
-\nopagebreak
+Collaboration diagram for In\+Game\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +32,8 @@ enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
 \newline
-\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -46,12 +45,12 @@ override void \mbox{\hyperlink{class_in_game_a4e330cfbca66f59b90979968bbe5209e}{
 \begin{DoxyCompactList}\small\item\em Called when the in game state is poped out of the stack. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_in_game_a79bb20f3b0d661194a4ec79ec60a5c63}{On\+Interactable\+Focus\+Change}} (\mbox{\hyperlink{class_i_interactable}{I\+Interactable}} interact)
 \item 
-\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_afdf496f9802777eb2a7ea99e2705d573}{Get\+State}} ()
-\begin{DoxyCompactList}\small\item\em Get the state type/name of the current game state. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}{On\+Pressed}} ()
+override void \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{On\+Pressed}} ()
 \item 
-virtual void \mbox{\hyperlink{class_state_adbbf150abda90027741407a291db1924}{On\+Return\+Peek}} ()
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{On\+Return\+Peek}} ()
+\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_afdf496f9802777eb2a7ea99e2705d573}{Get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the state type/name of the current game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -112,6 +111,10 @@ Game\+Paused&\\
 In\+Diagloues&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!InGame@{InGame}}\index{InGame@{InGame}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
+\hline
+
 \end{DoxyEnumFields}
 
 
@@ -143,8 +146,7 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{OnInteractableFocusChange()}{OnInteractableFocusChange()}}
 {\footnotesize\ttfamily void In\+Game.\+On\+Interactable\+Focus\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_interactable}{I\+Interactable}}}]{interact }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -173,12 +175,24 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_in_game_ad722ed4120b3f0b074d88826f0c92bff_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}\label{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}} 
+\mbox{\Hypertarget{class_in_game_a764b76056231238a3dd3d649bd821dde}\label{class_in_game_a764b76056231238a3dd3d649bd821dde}} 
 \index{InGame@{InGame}!OnPressed@{OnPressed}}
 \index{OnPressed@{OnPressed}!InGame@{InGame}}
 \doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
-{\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily override void In\+Game.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Reimplemented from \mbox{\hyperlink{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_in_game_a764b76056231238a3dd3d649bd821dde_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_in_game_a4e330cfbca66f59b90979968bbe5209e}\label{class_in_game_a4e330cfbca66f59b90979968bbe5209e}} 
 \index{InGame@{InGame}!OnPushed@{OnPushed}}
 \index{OnPushed@{OnPushed}!InGame@{InGame}}
@@ -201,12 +215,24 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_in_game_a4e330cfbca66f59b90979968bbe5209e_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_state_adbbf150abda90027741407a291db1924}\label{class_state_adbbf150abda90027741407a291db1924}} 
+\mbox{\Hypertarget{class_in_game_a4f8190e06ebef10b38df9fb105686187}\label{class_in_game_a4f8190e06ebef10b38df9fb105686187}} 
 \index{InGame@{InGame}!OnReturnPeek@{OnReturnPeek}}
 \index{OnReturnPeek@{OnReturnPeek}!InGame@{InGame}}
 \doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
-{\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily override void In\+Game.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Reimplemented from \mbox{\hyperlink{class_state_adbbf150abda90027741407a291db1924}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_in_game_a4f8190e06ebef10b38df9fb105686187_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_in_game_a276249731903fd5b07ec8266a8a2e765}\label{class_in_game_a276249731903fd5b07ec8266a8a2e765}} 
 \index{InGame@{InGame}!Update@{Update}}
 \index{Update@{Update}!InGame@{InGame}}
@@ -218,7 +244,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_in_game_a276249731903fd5b07ec8266a8a2e765_cgraph}
+\includegraphics[width=335pt]{class_in_game_a276249731903fd5b07ec8266a8a2e765_cgraph}
 \end{center}
 \end{figure}
 
@@ -274,4 +300,4 @@ The state\textquotesingle{}s type of the current game state.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\+Game\+Master/\+Game\+States/\mbox{\hyperlink{_in_game_8cs}{In\+Game.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_in_game_8cs}{In\+Game.\+cs}}\end{DoxyCompactItemize}
