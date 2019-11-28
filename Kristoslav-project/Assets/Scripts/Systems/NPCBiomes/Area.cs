@@ -39,7 +39,10 @@ public class Area : MonoBehaviour
                 var newInhabitant = GameObject.Instantiate(inhabitantRatio.inhabitant, randomPos, Quaternion.identity, this.transform);
                 var npcControl = newInhabitant.GetComponentInChildren<NPCController>();
                 var collider = newInhabitant.GetComponentInChildren<Collider>(true);
-                collider.enabled = true;
+                if (collider != null)
+                {
+                    collider.enabled = true;
+                }
                 if (npcControl)
                 {
                     nPCs.Add(npcControl);
