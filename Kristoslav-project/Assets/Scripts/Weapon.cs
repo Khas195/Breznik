@@ -45,7 +45,7 @@ public class Weapon : MonoBehaviour
         {
             Logger.CharacterDebug(wielderChar, "Character's weapon didnt touch himself.");
             var character = otherObject.GetComponentInChildren<Character>();
-            if (character)
+            if (character && character.IsAlive())
             {
                 Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
                 VFXSystem.GetInstance().SpawnHit(targetCollider.ClosestPointOnBounds(swordEdge.transform.position), 5f);

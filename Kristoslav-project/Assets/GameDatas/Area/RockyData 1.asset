@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad3fcf248deff545ac767d533a745c1, type: 3}
-  m_Name: ChickenMovement
+  m_Script: {fileID: 11500000, guid: effb8d8c9291f514f8f3153f719cb0a3, type: 3}
+  m_Name: RockyData 1
   m_EditorClassIdentifier: 
-  walkSpeed: 10
-  runSpeed: 10
-  jumpForce: 7
+  areaName: Forest
+  typeOfInhabitants:
+  - inhabitant: {fileID: 5060813625128463539, guid: b8991182bbe1eff4fb4cb6dd1c35cac7,
+      type: 3}
+    ratio: 1
+  maxPopulation: 50
+  size: 220

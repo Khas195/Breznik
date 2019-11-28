@@ -41,6 +41,8 @@ public class NPCController : MonoBehaviour
     [SerializeField]
     [ReadOnly]
     Vector3 currentDestination = Vector3.zero;
+    [SerializeField]
+    LayerMask enemyMasks;
 
     NavMeshPath currentPath = null;
     int currentPoint = 0;
@@ -212,7 +214,7 @@ public class NPCController : MonoBehaviour
         NavMeshHit hit;
         if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, NavMesh.AllAreas))
         {
-            if (hit.position.x != Mathf.Infinity)
+            if (hit.position.x != Mathf.Infinity && newDestination.x != Mathf.Infinity)
             {
                 NavMesh.CalculatePath(hit.position, newDestination, 1, currentPath);
                 currentPoint = 1;
@@ -233,7 +235,7 @@ public class NPCController : MonoBehaviour
     {
         Transform characterTransform = aiCharacter.GetHost().transform;
         CharacterData stats = aiCharacter.GetStats();
-        Collider[] cols = Physics.OverlapSphere(characterTransform.position, stats.aggroRange, LayerMask.GetMask("HitBox"));
+        Collider[] cols = Physics.OverlapSphere(characterTransform.position, stats.aggroRange, enemyMasks);
         for (int i = 0; i < cols.Length; i++)
         {
             if (cols[i].gameObject.CompareTag("Player"))

@@ -21,8 +21,10 @@ public class Area : MonoBehaviour
     {
         if (data)
         {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(center.transform.position, data.size);
+            var color = Color.green;
+            color.a = 0.3f;
+            Gizmos.color = color;
+            Gizmos.DrawSphere(center.transform.position, data.size);
         }
     }
 
