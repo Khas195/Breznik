@@ -17,6 +17,8 @@ public class Weapon : MonoBehaviour
     List<Collider> hitboxes = new List<Collider>();
     [SerializeField]
     GameObject swordEdge;
+    [SerializeField]
+    LayerMask attackableMasks;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class Weapon : MonoBehaviour
         if (hitBoxIndex < 1 || hitBoxIndex > hitboxes.Count) return;
         var targetHitBoxes = hitboxes[hitBoxIndex - 1];
         Collider[] cols = Physics.OverlapBox(targetHitBoxes.bounds.center, targetHitBoxes.bounds.extents,
-         targetHitBoxes.transform.rotation, LayerMask.GetMask("HitBox"));
+         targetHitBoxes.transform.rotation, attackableMasks);
         foreach (var col in cols)
         {
             TryToDealsDamage(col);
