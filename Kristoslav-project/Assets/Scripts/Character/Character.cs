@@ -62,6 +62,9 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character EVents")]
     public UnityEvent onCharacterAttack = new UnityEvent();
+
+
+
     [SerializeField]
     [BoxGroup("Character EVents")]
     public DeathEvent OnCharacterDeath = new DeathEvent();
@@ -140,7 +143,6 @@ public class Character : MonoBehaviour
         Logger.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + this.health + " out of " + characterData.stats.health);
         if (this.health <= 0)
         {
-            VFXSystem.GetInstance().SpawnDeath(this.hostRigidBody.worldCenterOfMass, 3f);
             OnCharacterDeath.Invoke(this);
         }
     }
@@ -257,6 +259,10 @@ public class Character : MonoBehaviour
     public bool IsTouchingGround()
     {
         return this.movementBehavior.IsTouchingGround();
+    }
+    public bool IsAlive()
+    {
+        return health > 0;
     }
     #endregion
 

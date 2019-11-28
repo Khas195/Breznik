@@ -27,7 +27,7 @@ public class NPCController : MonoBehaviour
 
     [SerializeField]
     [BoxGroup("Settings")]
-    bool isAIActive = true;
+    bool isAIActive = false;
 
 
 
@@ -41,14 +41,14 @@ public class NPCController : MonoBehaviour
     [SerializeField]
     [ReadOnly]
     Vector3 currentDestination = Vector3.zero;
+    [SerializeField]
+    LayerMask enemyMasks;
 
     NavMeshPath currentPath = null;
     int currentPoint = 0;
 
     //Test
-    [SerializeField]
     Transform rootPosition;
-    [SerializeField]
     float patrolRange;
     void Awake()
     {
@@ -73,6 +73,22 @@ public class NPCController : MonoBehaviour
         }
         ProcessMovement();
     }
+
+    public void SetAiActive(bool active)
+    {
+        this.isAIActive = active;
+    }
+
+    public void SetPatrolRange(int size)
+    {
+        this.patrolRange = size;
+    }
+
+    public void SetHome(Transform transform)
+    {
+        this.rootPosition = transform;
+    }
+
     private void ProcessMovement()
     {
         if (HasReachedCurrentDestination() == false)
@@ -147,8 +163,6 @@ public class NPCController : MonoBehaviour
             Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetStats().aggroRange);
         }
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(rootPosition.position, patrolRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetStats().attackRange);
 
@@ -187,26 +201,27 @@ public class NPCController : MonoBehaviour
         return currentPath;
     }
 
-    public void SetDestination(Vector3 newDestination)
+    public bool SetDestination(Vector3 newDestination)
     {
         currentDestination = newDestination;
-        CalculatePath(currentDestination);
+        return CalculatePath(currentDestination);
     }
 
-    private void CalculatePath(Vector3 newDestination)
+    private bool CalculatePath(Vector3 newDestination)
     {
         currentPath.ClearCorners();
         Transform charTransform = aiCharacter.GetHost().transform;
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, 1))
+        if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, NavMesh.AllAreas))
         {
-            if (hit.position.x != Mathf.Infinity)
+            if (hit.position.x != Mathf.Infinity && newDestination.x != Mathf.Infinity)
             {
                 NavMesh.CalculatePath(hit.position, newDestination, 1, currentPath);
                 currentPoint = 1;
+                return true;
             }
-
         }
+        return false;
     }
 
     public Vector3 GetRandomPointInArea()
@@ -220,7 +235,7 @@ public class NPCController : MonoBehaviour
     {
         Transform characterTransform = aiCharacter.GetHost().transform;
         CharacterData stats = aiCharacter.GetStats();
-        Collider[] cols = Physics.OverlapSphere(characterTransform.position, stats.aggroRange, LayerMask.GetMask("HitBox"));
+        Collider[] cols = Physics.OverlapSphere(characterTransform.position, stats.aggroRange, enemyMasks);
         for (int i = 0; i < cols.Length; i++)
         {
             if (cols[i].gameObject.CompareTag("Player"))

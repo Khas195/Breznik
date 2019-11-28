@@ -2,8 +2,7 @@
 \label{class_loading}\index{Loading@{Loading}}
 
 
-Inheritance diagram for Loading\+:
-\nopagebreak
+Inheritance diagram for Loading\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Loading\+:
 \end{figure}
 
 
-Collaboration diagram for Loading\+:
-\nopagebreak
+Collaboration diagram for Loading\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,7 +27,8 @@ enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
 \newline
-\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -95,6 +94,10 @@ Game\+Paused&\\
 In\+Diagloues&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!Loading@{Loading}}\index{Loading@{Loading}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
+\hline
+
 \end{DoxyEnumFields}
 
 
@@ -144,6 +147,10 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
+
 \mbox{\Hypertarget{class_loading_a80066f4798d69bd7cc6aef91740469a9}\label{class_loading_a80066f4798d69bd7cc6aef91740469a9}} 
 \index{Loading@{Loading}!OnPushed@{OnPushed}}
 \index{OnPushed@{OnPushed}!Loading@{Loading}}
@@ -167,6 +174,10 @@ Here is the call graph for this function\+:
 \index{OnReturnPeek@{OnReturnPeek}!Loading@{Loading}}
 \doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
 
 
 
@@ -221,4 +232,4 @@ The state\textquotesingle{}s type of the current game state.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\+Game\+Master/\+Game\+States/\mbox{\hyperlink{_loading_8cs}{Loading.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_loading_8cs}{Loading.\+cs}}\end{DoxyCompactItemize}

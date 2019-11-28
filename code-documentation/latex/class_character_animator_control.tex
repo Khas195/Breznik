@@ -26,9 +26,7 @@ void \mbox{\hyperlink{class_character_animator_control_a781056f28fcf44438c98ce27
 \item 
 bool \mbox{\hyperlink{class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31}{Is\+Playing}} (string animation\+Name)
 \item 
-void \mbox{\hyperlink{class_character_animator_control_a0efefa9709fd9deb43f16b1ea2ad7113}{On\+Attack\+Anim\+Begin}} ()
-\item 
-void \mbox{\hyperlink{class_character_animator_control_ab7a65e488816f705b999498e0a70deef}{On\+Attack\+Anim\+End}} ()
+void \mbox{\hyperlink{class_character_animator_control_a9eb9f67e6ae5626891f288602780cf5d}{Set\+Is\+Attack}} (bool attack)
 \item 
 bool \mbox{\hyperlink{class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464}{Is\+In\+Attacking\+Animation}} ()
 \end{DoxyCompactItemize}
@@ -38,55 +36,31 @@ bool \mbox{\hyperlink{class_character_animator_control_a5bffce3e193cb3e1301b51b8
 void \mbox{\hyperlink{class_character_animator_control_a0a93416536c2f6504d9110be9a057085}{Start}} ()
 \item 
 void \mbox{\hyperlink{class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6}{Update}} ()
-\item 
-Animation\+Clip \mbox{\hyperlink{class_character_animator_control_ae151fefa5b241550fde1213501ee8239}{Get\+Current\+Animation\+Clip}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Animator \mbox{\hyperlink{class_character_animator_control_a7b8da0a67119b09e3b1e5ca19eb5b2ae}{animator}} =null
+Animator \mbox{\hyperlink{class_character_animator_control_a7b8da0a67119b09e3b1e5ca19eb5b2ae}{animator}} = null
 \begin{DoxyCompactList}\small\item\em The animator of the character. \end{DoxyCompactList}\item 
-Rigidbody \mbox{\hyperlink{class_character_animator_control_ab7a6d7957e508d3a20140ca12edf5653}{host\+Rb}} =null
+Rigidbody \mbox{\hyperlink{class_character_animator_control_ab7a6d7957e508d3a20140ca12edf5653}{host\+Rb}} = null
 \begin{DoxyCompactList}\small\item\em The rigidbody of the model of the \mbox{\hyperlink{class_character}{Character}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_character}{Character}} \mbox{\hyperlink{class_character_animator_control_a343eaa0ef94d4e9f55c04d4e1f8c9201}{character}} = null
-\item 
-bool \mbox{\hyperlink{class_character_animator_control_ab0994e0b02cbffec9d64d30cdcac4ca5}{is\+Attacking}} = false
-\item 
-int \mbox{\hyperlink{class_character_animator_control_a5de7bb10818e270801b8b42cdbed09ed}{max\+Combo\+Count}} = 0
-\item 
-int \mbox{\hyperlink{class_character_animator_control_adbaf3f9cc5f2bb9fae802b3f433bdeac}{combo\+Count}} = 0
-\item 
-\mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_animator_control_a5a1fc4ac3ae04dd78d590e26a0eee23e}{movement}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_character_animator_control_ae151fefa5b241550fde1213501ee8239}\label{class_character_animator_control_ae151fefa5b241550fde1213501ee8239}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!GetCurrentAnimationClip@{GetCurrentAnimationClip}}
-\index{GetCurrentAnimationClip@{GetCurrentAnimationClip}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{GetCurrentAnimationClip()}{GetCurrentAnimationClip()}}
-{\footnotesize\ttfamily Animation\+Clip Character\+Animator\+Control.\+Get\+Current\+Animation\+Clip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_character_animator_control_ae151fefa5b241550fde1213501ee8239_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464}\label{class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464}} 
 \index{CharacterAnimatorControl@{CharacterAnimatorControl}!IsInAttackingAnimation@{IsInAttackingAnimation}}
 \index{IsInAttackingAnimation@{IsInAttackingAnimation}!CharacterAnimatorControl@{CharacterAnimatorControl}}
 \doxysubsubsection{\texorpdfstring{IsInAttackingAnimation()}{IsInAttackingAnimation()}}
 {\footnotesize\ttfamily bool Character\+Animator\+Control.\+Is\+In\+Attacking\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464_icgraph}
+\includegraphics[width=350pt]{class_character_animator_control_a5bffce3e193cb3e1301b51b81c1cb464_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31}\label{class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31}} 
@@ -95,46 +69,40 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{IsPlaying()}{IsPlaying()}}
 {\footnotesize\ttfamily bool Character\+Animator\+Control.\+Is\+Playing (\begin{DoxyParamCaption}\item[{string}]{animation\+Name }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_character_animator_control_a58a1b8db08e836f4765b8a0b06690e31_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_character_animator_control_a0efefa9709fd9deb43f16b1ea2ad7113}\label{class_character_animator_control_a0efefa9709fd9deb43f16b1ea2ad7113}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!OnAttackAnimBegin@{OnAttackAnimBegin}}
-\index{OnAttackAnimBegin@{OnAttackAnimBegin}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{OnAttackAnimBegin()}{OnAttackAnimBegin()}}
-{\footnotesize\ttfamily void Character\+Animator\+Control.\+On\+Attack\+Anim\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_character_animator_control_ab7a65e488816f705b999498e0a70deef}\label{class_character_animator_control_ab7a65e488816f705b999498e0a70deef}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!OnAttackAnimEnd@{OnAttackAnimEnd}}
-\index{OnAttackAnimEnd@{OnAttackAnimEnd}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{OnAttackAnimEnd()}{OnAttackAnimEnd()}}
-{\footnotesize\ttfamily void Character\+Animator\+Control.\+On\+Attack\+Anim\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{class_character_animator_control_a781056f28fcf44438c98ce27f7ac1be4}\label{class_character_animator_control_a781056f28fcf44438c98ce27f7ac1be4}} 
 \index{CharacterAnimatorControl@{CharacterAnimatorControl}!PlayAttackAnimation@{PlayAttackAnimation}}
 \index{PlayAttackAnimation@{PlayAttackAnimation}!CharacterAnimatorControl@{CharacterAnimatorControl}}
 \doxysubsubsection{\texorpdfstring{PlayAttackAnimation()}{PlayAttackAnimation()}}
 {\footnotesize\ttfamily void Character\+Animator\+Control.\+Play\+Attack\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_character_animator_control_a0a93416536c2f6504d9110be9a057085}\label{class_character_animator_control_a0a93416536c2f6504d9110be9a057085}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!Start@{Start}}
-\index{Start@{Start}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Character\+Animator\+Control.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_character_animator_control_a9eb9f67e6ae5626891f288602780cf5d}\label{class_character_animator_control_a9eb9f67e6ae5626891f288602780cf5d}} 
+\index{CharacterAnimatorControl@{CharacterAnimatorControl}!SetIsAttack@{SetIsAttack}}
+\index{SetIsAttack@{SetIsAttack}!CharacterAnimatorControl@{CharacterAnimatorControl}}
+\doxysubsubsection{\texorpdfstring{SetIsAttack()}{SetIsAttack()}}
+{\footnotesize\ttfamily void Character\+Animator\+Control.\+Set\+Is\+Attack (\begin{DoxyParamCaption}\item[{bool}]{attack }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_animator_control_a0a93416536c2f6504d9110be9a057085_cgraph}
+\includegraphics[width=350pt]{class_character_animator_control_a9eb9f67e6ae5626891f288602780cf5d_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_animator_control_a9eb9f67e6ae5626891f288602780cf5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_animator_control_a0a93416536c2f6504d9110be9a057085}\label{class_character_animator_control_a0a93416536c2f6504d9110be9a057085}} 
+\index{CharacterAnimatorControl@{CharacterAnimatorControl}!Start@{Start}}
+\index{Start@{Start}!CharacterAnimatorControl@{CharacterAnimatorControl}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Character\+Animator\+Control.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6}\label{class_character_animator_control_a1d574155a378ca5b7a50a7a7edad92d6}} 
 \index{CharacterAnimatorControl@{CharacterAnimatorControl}!Update@{Update}}
 \index{Update@{Update}!CharacterAnimatorControl@{CharacterAnimatorControl}}
@@ -156,7 +124,7 @@ Here is the call graph for this function\+:
 \index{CharacterAnimatorControl@{CharacterAnimatorControl}!animator@{animator}}
 \index{animator@{animator}!CharacterAnimatorControl@{CharacterAnimatorControl}}
 \doxysubsubsection{\texorpdfstring{animator}{animator}}
-{\footnotesize\ttfamily Animator Character\+Animator\+Control.\+animator =null\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Animator Character\+Animator\+Control.\+animator = null\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -168,42 +136,18 @@ The animator of the character.
 \doxysubsubsection{\texorpdfstring{character}{character}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_character}{Character}} Character\+Animator\+Control.\+character = null\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_character_animator_control_adbaf3f9cc5f2bb9fae802b3f433bdeac}\label{class_character_animator_control_adbaf3f9cc5f2bb9fae802b3f433bdeac}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!comboCount@{comboCount}}
-\index{comboCount@{comboCount}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{comboCount}{comboCount}}
-{\footnotesize\ttfamily int Character\+Animator\+Control.\+combo\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}
-
 \mbox{\Hypertarget{class_character_animator_control_ab7a6d7957e508d3a20140ca12edf5653}\label{class_character_animator_control_ab7a6d7957e508d3a20140ca12edf5653}} 
 \index{CharacterAnimatorControl@{CharacterAnimatorControl}!hostRb@{hostRb}}
 \index{hostRb@{hostRb}!CharacterAnimatorControl@{CharacterAnimatorControl}}
 \doxysubsubsection{\texorpdfstring{hostRb}{hostRb}}
-{\footnotesize\ttfamily Rigidbody Character\+Animator\+Control.\+host\+Rb =null\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Rigidbody Character\+Animator\+Control.\+host\+Rb = null\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The rigidbody of the model of the \mbox{\hyperlink{class_character}{Character}}. 
 
-\mbox{\Hypertarget{class_character_animator_control_ab0994e0b02cbffec9d64d30cdcac4ca5}\label{class_character_animator_control_ab0994e0b02cbffec9d64d30cdcac4ca5}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!isAttacking@{isAttacking}}
-\index{isAttacking@{isAttacking}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{isAttacking}{isAttacking}}
-{\footnotesize\ttfamily bool Character\+Animator\+Control.\+is\+Attacking = false\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_character_animator_control_a5de7bb10818e270801b8b42cdbed09ed}\label{class_character_animator_control_a5de7bb10818e270801b8b42cdbed09ed}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!maxComboCount@{maxComboCount}}
-\index{maxComboCount@{maxComboCount}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{maxComboCount}{maxComboCount}}
-{\footnotesize\ttfamily int Character\+Animator\+Control.\+max\+Combo\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_character_animator_control_a5a1fc4ac3ae04dd78d590e26a0eee23e}\label{class_character_animator_control_a5a1fc4ac3ae04dd78d590e26a0eee23e}} 
-\index{CharacterAnimatorControl@{CharacterAnimatorControl}!movement@{movement}}
-\index{movement@{movement}!CharacterAnimatorControl@{CharacterAnimatorControl}}
-\doxysubsubsection{\texorpdfstring{movement}{movement}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character\+Animator\+Control.\+movement\hspace{0.3cm}{\ttfamily [private]}}
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\mbox{\hyperlink{_character_animator_control_8cs}{Character\+Animator\+Control.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Animations/\mbox{\hyperlink{_character_animator_control_8cs}{Character\+Animator\+Control.\+cs}}\end{DoxyCompactItemize}

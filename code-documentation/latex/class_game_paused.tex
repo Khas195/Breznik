@@ -7,8 +7,7 @@ The Paused \mbox{\hyperlink{class_state}{State}} of the Game.
 
 
 
-Inheritance diagram for Game\+Paused\+:
-\nopagebreak
+Inheritance diagram for Game\+Paused\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for Game\+Paused\+:
 \end{figure}
 
 
-Collaboration diagram for Game\+Paused\+:
-\nopagebreak
+Collaboration diagram for Game\+Paused\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +32,8 @@ enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
 \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
 \newline
-\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -112,6 +111,10 @@ Game\+Paused&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{InDiagloues@{InDiagloues}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!InDiagloues@{InDiagloues}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}} 
 In\+Diagloues&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -203,6 +206,10 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
+
 \mbox{\Hypertarget{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6}\label{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6}} 
 \index{GamePaused@{GamePaused}!OnPushed@{OnPushed}}
 \index{OnPushed@{OnPushed}!GamePaused@{GamePaused}}
@@ -231,6 +238,10 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
+
 \mbox{\Hypertarget{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f}\label{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f}} 
 \index{GamePaused@{GamePaused}!ResumeGame@{ResumeGame}}
 \index{ResumeGame@{ResumeGame}!GamePaused@{GamePaused}}
@@ -249,8 +260,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -322,4 +332,4 @@ The state\textquotesingle{}s type of the current game state.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/\+Game\+Master/\+Game\+States/\mbox{\hyperlink{_game_paused_8cs}{Game\+Paused.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_game_paused_8cs}{Game\+Paused.\+cs}}\end{DoxyCompactItemize}

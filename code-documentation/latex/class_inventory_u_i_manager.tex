@@ -1,0 +1,266 @@
+\hypertarget{class_inventory_u_i_manager}{}\doxysection{Inventory\+U\+I\+Manager Class Reference}
+\label{class_inventory_u_i_manager}\index{InventoryUIManager@{InventoryUIManager}}
+
+
+Inheritance diagram for Inventory\+U\+I\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_inventory_u_i_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Inventory\+U\+I\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_inventory_u_i_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_manager_a54483202bc18a2b46ad576bb77e736f3}{Add\+Item}} (\mbox{\hyperlink{class_item_object}{Item\+Object}} new\+Item)
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_manager_a89c6c4b82f192cc04d2ee3840d1ff94f}{Show\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_manager_a9b1103e5b6a6eeb99a633affc1855071}{Hide\+UI}} ()
+\item 
+bool \mbox{\hyperlink{class_inventory_u_i_manager_a836258c2608bae4e8a7a6e0433942399}{Is\+Open}} ()
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_manager_a4ff3c04d0d67321413144f7f7c454e7a}{Remove\+Item}} (\mbox{\hyperlink{class_item_object}{Item\+Object}} target\+Item)
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_manager_a165abacd39405b9accd9933b0c683d72}{Focus\+Item}} (\mbox{\hyperlink{class_item_object}{Item\+Object}} target\+Item)
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_manager_aca9dc157fe8e5082ce1d21deb8903aa3}{On\+Item\+Clicked}} (\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}} slot\+Clicked)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_inventory_u_i_manager_abe2d0b100a05f4043f15b26a2bfdc514}{Try\+Select\+Next\+Item}} (\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}} target\+Slot)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_inventory_u_i_manager_a506f5003d91d5a6985fcfec0d62a5023}{host\+Object}} = null
+\item 
+Game\+Object \mbox{\hyperlink{class_inventory_u_i_manager_a2ee36ec9364044f3e659f97acefbb4c7}{slot\+Prefab}} = null
+\item 
+Transform \mbox{\hyperlink{class_inventory_u_i_manager_a260532cce20804fb99c01297dea389b0}{view\+Point}} = null
+\item 
+Game\+Object \mbox{\hyperlink{class_inventory_u_i_manager_a929de3d35a051ed1f55c1ae1be749b96}{content\+Box}} = null
+\item 
+List$<$ \mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}} $>$ \mbox{\hyperlink{class_inventory_u_i_manager_aae4c69e3543ee87dbdc7bd93964656b0}{slots}} = new List$<$\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}}$>$()
+\item 
+\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}} \mbox{\hyperlink{class_inventory_u_i_manager_a4e40ec7e98a07e378a5d956e54ae8533}{active\+Slot}} = null
+\item 
+Text \mbox{\hyperlink{class_inventory_u_i_manager_a9e9ab6f3a36be182abbb9e28d34dcb40}{description}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a54483202bc18a2b46ad576bb77e736f3}\label{class_inventory_u_i_manager_a54483202bc18a2b46ad576bb77e736f3}} 
+\index{InventoryUIManager@{InventoryUIManager}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily void Inventory\+U\+I\+Manager.\+Add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_object}{Item\+Object}}}]{new\+Item }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a54483202bc18a2b46ad576bb77e736f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a54483202bc18a2b46ad576bb77e736f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a165abacd39405b9accd9933b0c683d72}\label{class_inventory_u_i_manager_a165abacd39405b9accd9933b0c683d72}} 
+\index{InventoryUIManager@{InventoryUIManager}!FocusItem@{FocusItem}}
+\index{FocusItem@{FocusItem}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{FocusItem()}{FocusItem()}}
+{\footnotesize\ttfamily void Inventory\+U\+I\+Manager.\+Focus\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_object}{Item\+Object}}}]{target\+Item }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a165abacd39405b9accd9933b0c683d72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a165abacd39405b9accd9933b0c683d72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a9b1103e5b6a6eeb99a633affc1855071}\label{class_inventory_u_i_manager_a9b1103e5b6a6eeb99a633affc1855071}} 
+\index{InventoryUIManager@{InventoryUIManager}!HideUI@{HideUI}}
+\index{HideUI@{HideUI}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{HideUI()}{HideUI()}}
+{\footnotesize\ttfamily void Inventory\+U\+I\+Manager.\+Hide\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a9b1103e5b6a6eeb99a633affc1855071_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a836258c2608bae4e8a7a6e0433942399}\label{class_inventory_u_i_manager_a836258c2608bae4e8a7a6e0433942399}} 
+\index{InventoryUIManager@{InventoryUIManager}!IsOpen@{IsOpen}}
+\index{IsOpen@{IsOpen}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{IsOpen()}{IsOpen()}}
+{\footnotesize\ttfamily bool Inventory\+U\+I\+Manager.\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a836258c2608bae4e8a7a6e0433942399_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_aca9dc157fe8e5082ce1d21deb8903aa3}\label{class_inventory_u_i_manager_aca9dc157fe8e5082ce1d21deb8903aa3}} 
+\index{InventoryUIManager@{InventoryUIManager}!OnItemClicked@{OnItemClicked}}
+\index{OnItemClicked@{OnItemClicked}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{OnItemClicked()}{OnItemClicked()}}
+{\footnotesize\ttfamily void Inventory\+U\+I\+Manager.\+On\+Item\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}}}]{slot\+Clicked }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_aca9dc157fe8e5082ce1d21deb8903aa3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_aca9dc157fe8e5082ce1d21deb8903aa3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a4ff3c04d0d67321413144f7f7c454e7a}\label{class_inventory_u_i_manager_a4ff3c04d0d67321413144f7f7c454e7a}} 
+\index{InventoryUIManager@{InventoryUIManager}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{RemoveItem()}{RemoveItem()}}
+{\footnotesize\ttfamily void Inventory\+U\+I\+Manager.\+Remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_object}{Item\+Object}}}]{target\+Item }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a4ff3c04d0d67321413144f7f7c454e7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a4ff3c04d0d67321413144f7f7c454e7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a89c6c4b82f192cc04d2ee3840d1ff94f}\label{class_inventory_u_i_manager_a89c6c4b82f192cc04d2ee3840d1ff94f}} 
+\index{InventoryUIManager@{InventoryUIManager}!ShowUI@{ShowUI}}
+\index{ShowUI@{ShowUI}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{ShowUI()}{ShowUI()}}
+{\footnotesize\ttfamily void Inventory\+U\+I\+Manager.\+Show\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_a89c6c4b82f192cc04d2ee3840d1ff94f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_u_i_manager_abe2d0b100a05f4043f15b26a2bfdc514}\label{class_inventory_u_i_manager_abe2d0b100a05f4043f15b26a2bfdc514}} 
+\index{InventoryUIManager@{InventoryUIManager}!TrySelectNextItem@{TrySelectNextItem}}
+\index{TrySelectNextItem@{TrySelectNextItem}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{TrySelectNextItem()}{TrySelectNextItem()}}
+{\footnotesize\ttfamily bool Inventory\+U\+I\+Manager.\+Try\+Select\+Next\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}}}]{target\+Slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_abe2d0b100a05f4043f15b26a2bfdc514_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_u_i_manager_abe2d0b100a05f4043f15b26a2bfdc514_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_inventory_u_i_manager_a4e40ec7e98a07e378a5d956e54ae8533}\label{class_inventory_u_i_manager_a4e40ec7e98a07e378a5d956e54ae8533}} 
+\index{InventoryUIManager@{InventoryUIManager}!activeSlot@{activeSlot}}
+\index{activeSlot@{activeSlot}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{activeSlot}{activeSlot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}} Inventory\+U\+I\+Manager.\+active\+Slot = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_u_i_manager_a929de3d35a051ed1f55c1ae1be749b96}\label{class_inventory_u_i_manager_a929de3d35a051ed1f55c1ae1be749b96}} 
+\index{InventoryUIManager@{InventoryUIManager}!contentBox@{contentBox}}
+\index{contentBox@{contentBox}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{contentBox}{contentBox}}
+{\footnotesize\ttfamily Game\+Object Inventory\+U\+I\+Manager.\+content\+Box = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_u_i_manager_a9e9ab6f3a36be182abbb9e28d34dcb40}\label{class_inventory_u_i_manager_a9e9ab6f3a36be182abbb9e28d34dcb40}} 
+\index{InventoryUIManager@{InventoryUIManager}!description@{description}}
+\index{description@{description}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily Text Inventory\+U\+I\+Manager.\+description = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_u_i_manager_a506f5003d91d5a6985fcfec0d62a5023}\label{class_inventory_u_i_manager_a506f5003d91d5a6985fcfec0d62a5023}} 
+\index{InventoryUIManager@{InventoryUIManager}!hostObject@{hostObject}}
+\index{hostObject@{hostObject}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{hostObject}{hostObject}}
+{\footnotesize\ttfamily Game\+Object Inventory\+U\+I\+Manager.\+host\+Object = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_u_i_manager_a2ee36ec9364044f3e659f97acefbb4c7}\label{class_inventory_u_i_manager_a2ee36ec9364044f3e659f97acefbb4c7}} 
+\index{InventoryUIManager@{InventoryUIManager}!slotPrefab@{slotPrefab}}
+\index{slotPrefab@{slotPrefab}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{slotPrefab}{slotPrefab}}
+{\footnotesize\ttfamily Game\+Object Inventory\+U\+I\+Manager.\+slot\+Prefab = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_u_i_manager_aae4c69e3543ee87dbdc7bd93964656b0}\label{class_inventory_u_i_manager_aae4c69e3543ee87dbdc7bd93964656b0}} 
+\index{InventoryUIManager@{InventoryUIManager}!slots@{slots}}
+\index{slots@{slots}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{slots}{slots}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}}$>$ Inventory\+U\+I\+Manager.\+slots = new List$<$\mbox{\hyperlink{class_inventory_slot}{Inventory\+Slot}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_u_i_manager_a260532cce20804fb99c01297dea389b0}\label{class_inventory_u_i_manager_a260532cce20804fb99c01297dea389b0}} 
+\index{InventoryUIManager@{InventoryUIManager}!viewPoint@{viewPoint}}
+\index{viewPoint@{viewPoint}!InventoryUIManager@{InventoryUIManager}}
+\doxysubsubsection{\texorpdfstring{viewPoint}{viewPoint}}
+{\footnotesize\ttfamily Transform Inventory\+U\+I\+Manager.\+view\+Point = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\+Manager/\mbox{\hyperlink{_inventory_u_i_manager_8cs}{Inventory\+U\+I\+Manager.\+cs}}\end{DoxyCompactItemize}

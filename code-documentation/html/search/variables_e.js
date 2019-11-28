@@ -1,11 +1,19 @@
 var searchData=
 [
-  ['objectsinarea_891',['objectsInArea',['../class_area_view.html#a6073af19e1ba29d7a0627be51085a18d',1,'AreaView']]],
-  ['onattackbegin_892',['OnAttackBegin',['../class_animation_combo_event.html#ad652d800506e1ab58b3458b06535ca44',1,'AnimationComboEvent']]],
-  ['onattackend_893',['OnAttackEnd',['../class_animation_combo_event.html#a097c0ad71e710944858b96564fe5e868',1,'AnimationComboEvent']]],
-  ['oncharacterattack_894',['onCharacterAttack',['../class_character.html#a2781bb31e42725e8e71efb4cff94e7c6',1,'Character']]],
-  ['onpoppedevent_895',['OnPoppedEvent',['../class_state.html#a20fc72fdf070d3a72357cb7fa803b47e',1,'State']]],
-  ['onpressedevent_896',['OnPressedEvent',['../class_state.html#ad0507e140b71af2ef1051b1745dc87fd',1,'State']]],
-  ['onpushedevent_897',['OnPushedEvent',['../class_state.html#aa5bb373a5972ecd79e81e201e660bbf9',1,'State']]],
-  ['onreturnpeekevent_898',['OnReturnPeekEvent',['../class_state.html#a53de060b4fa2616ccc02d6e405703d42',1,'State']]]
+  ['objectives_1537',['objectives',['../class_quest.html#a558170d12de24c4e771a7d9922ed8a58',1,'Quest']]],
+  ['objectsinarea_1538',['objectsInArea',['../class_area_view.html#a6073af19e1ba29d7a0627be51085a18d',1,'AreaView']]],
+  ['onattackbegin_1539',['OnAttackBegin',['../class_animation_combo_event.html#ad652d800506e1ab58b3458b06535ca44',1,'AnimationComboEvent']]],
+  ['onattackend_1540',['OnAttackEnd',['../class_animation_combo_event.html#a097c0ad71e710944858b96564fe5e868',1,'AnimationComboEvent']]],
+  ['oncharacterattack_1541',['onCharacterAttack',['../class_character.html#a2781bb31e42725e8e71efb4cff94e7c6',1,'Character']]],
+  ['oncharacterdamaged_1542',['OnCharacterDamaged',['../class_character.html#a3bfd2e6d45fe4fc3d3e63172a6c00959',1,'Character']]],
+  ['oncharacterdeath_1543',['OnCharacterDeath',['../class_character.html#a0945c7aa868f33ea428e1bc9302b6bb9',1,'Character']]],
+  ['ondamagetrigger_1544',['OnDamageTrigger',['../class_damage_trigger_event.html#a00f812299065eb75a46309e8c2c15838',1,'DamageTriggerEvent']]],
+  ['onitemcollected_1545',['onItemCollected',['../class_inventory_system.html#ac5955e815df7f5ecc07106b8ed7f99d1',1,'InventorySystem']]],
+  ['onpoppedevent_1546',['OnPoppedEvent',['../class_state.html#a20fc72fdf070d3a72357cb7fa803b47e',1,'State']]],
+  ['onpressedevent_1547',['OnPressedEvent',['../class_state.html#ad0507e140b71af2ef1051b1745dc87fd',1,'State']]],
+  ['onpushedevent_1548',['OnPushedEvent',['../class_state.html#aa5bb373a5972ecd79e81e201e660bbf9',1,'State']]],
+  ['onreturnpeekevent_1549',['OnReturnPeekEvent',['../class_state.html#a53de060b4fa2616ccc02d6e405703d42',1,'State']]],
+  ['onweaponhit_1550',['OnWeaponHit',['../class_weapon.html#aa1f1a99d4c7b39a588426ae14e8f70ed',1,'Weapon']]],
+  ['originalpos_1551',['originalPos',['../class_camera_shake.html#ac297fc923fec25275a802b7b5a761e5c',1,'CameraShake']]],
+  ['otherspeaker_1552',['otherSpeaker',['../class_n_p_c_interactable.html#ad9fd038dd4c8431e943cde18600ea315',1,'NPCInteractable']]]
 ];

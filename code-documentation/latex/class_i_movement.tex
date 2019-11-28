@@ -35,7 +35,7 @@ enum \mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Moveme
 \item 
 virtual void \mbox{\hyperlink{class_i_movement_a4daa38b53b9f561762dcf6ad22f8a2b2}{Move}} (float forward, float side)
 \begin{DoxyCompactList}\small\item\em All movements actions should be handle in this function. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_i_movement_a8ccafaf76fb26f2d369697c89d6d8762}{Move\+Relative\+To}} (float forward, float side, Transform relative\+To)
+virtual float \mbox{\hyperlink{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}{Get\+Current\+Speed}} ()
 \item 
 virtual void \mbox{\hyperlink{class_i_movement_a90ee03e4b3be9f77c9cd8b09a58b900d}{Signal\+Jump}} ()
 \begin{DoxyCompactList}\small\item\em Signaled that the jump command had been called. \end{DoxyCompactList}\item 
@@ -102,6 +102,24 @@ Run&\\
 \doxysubsubsection{\texorpdfstring{GetCurrentMoveMode()}{GetCurrentMoveMode()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} I\+Movement.\+Get\+Current\+Move\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}\label{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}} 
+\index{IMovement@{IMovement}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!IMovement@{IMovement}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily virtual float I\+Movement.\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_movement_a0fb022cc9dff3e3af971272f75b6b241}{Movement}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_i_movement_a02cf39d107895cca12448ce39c4555f0}\label{class_i_movement_a02cf39d107895cca12448ce39c4555f0}} 
 \index{IMovement@{IMovement}!GetMovementData@{GetMovementData}}
 \index{GetMovementData@{GetMovementData}!IMovement@{IMovement}}
@@ -118,7 +136,8 @@ Run&\\
 
 Get the correspondence speed in the data container(\+Movement\+Data) based on the currnt movement mode. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -135,14 +154,6 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Reimplemented in \mbox{\hyperlink{class_movement_ae608f54844231fb1d257e6dfe0e6cb46}{Movement}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_i_movement_a678684cf45c8f45b5b29d15a7741784b_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_i_movement_aac27e47a2c9667d8b691c936471082f5}\label{class_i_movement_aac27e47a2c9667d8b691c936471082f5}} 
 \index{IMovement@{IMovement}!IsTouchingGround@{IsTouchingGround}}
 \index{IsTouchingGround@{IsTouchingGround}!IMovement@{IMovement}}
@@ -173,24 +184,14 @@ All movements actions should be handle in this function.
 
 
 
-Reimplemented in \mbox{\hyperlink{class_movement2_d_aea00f7aee904a57de7b8679208265ce8}{Movement2D}}, and \mbox{\hyperlink{class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de}{Movement\+Root\+Motion}}.
-
-\mbox{\Hypertarget{class_i_movement_a8ccafaf76fb26f2d369697c89d6d8762}\label{class_i_movement_a8ccafaf76fb26f2d369697c89d6d8762}} 
-\index{IMovement@{IMovement}!MoveRelativeTo@{MoveRelativeTo}}
-\index{MoveRelativeTo@{MoveRelativeTo}!IMovement@{IMovement}}
-\doxysubsubsection{\texorpdfstring{MoveRelativeTo()}{MoveRelativeTo()}}
-{\footnotesize\ttfamily virtual void I\+Movement.\+Move\+Relative\+To (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side,  }\item[{Transform}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Reimplemented in \mbox{\hyperlink{class_movement_a1aad16d2f3cedb08e246f2befce8f11d}{Movement}}.
+Reimplemented in \mbox{\hyperlink{class_movement_a8ff6031ad6e03730fbe2cae1ab8c21de}{Movement}}, \mbox{\hyperlink{class_movement2_d_aea00f7aee904a57de7b8679208265ce8}{Movement2D}}, and \mbox{\hyperlink{class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de}{Movement\+Root\+Motion}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_i_movement_a8ccafaf76fb26f2d369697c89d6d8762_icgraph}
+\includegraphics[width=350pt]{class_i_movement_a4daa38b53b9f561762dcf6ad22f8a2b2_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}\label{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}} 
@@ -226,8 +227,7 @@ Here is the caller graph for this function\+:
 
 Set the current movement mode. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -253,8 +253,7 @@ Set the rigid body for the movement behavior.
 
 Reimplemented in \mbox{\hyperlink{class_movement_a005eed16b6fc4f20d48a1cdeb788dcee}{Movement}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -275,8 +274,7 @@ Signaled that the jump command had been called.
 
 Reimplemented in \mbox{\hyperlink{class_movement_a24a35054a243546e8d3318927034423a}{Movement}}, \mbox{\hyperlink{class_movement2_d_ad644849dbe54e82815ee2a4bca79756e}{Movement2D}}, and \mbox{\hyperlink{class_movement_root_motion_a5eeadefa1382d44fb403377d5d46f332}{Movement\+Root\+Motion}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
