@@ -1,0 +1,185 @@
+\hypertarget{class_entities_master}{}\doxysection{Entities\+Master Class Reference}
+\label{class_entities_master}\index{EntitiesMaster@{EntitiesMaster}}
+
+
+Inheritance diagram for Entities\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_entities_master__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Entities\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_entities_master__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}} \{ \mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2a07c80e2a355d91402a00d82b1fa13855}{Entities\+Key.\+P\+L\+A\+Y\+ER}}, 
+\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2a30aa118f4b86cec039eacf123ba6460f}{Entities\+Key.\+P\+L\+A\+Y\+E\+R\+C\+A\+M\+E\+RA}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_entities_master_a0bb277f3f06df547d2fb82cddbb56a65}{Register\+Entity}} (\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}} key, Game\+Object entity)
+\item 
+void \mbox{\hyperlink{class_entities_master_a129190b8b644c1646eec6b02e2a93104}{Unregister\+Entity}} (\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}} key, Game\+Object entity)
+\item 
+Game\+Object \mbox{\hyperlink{class_entities_master_a387c24f61e6cc01ade9a7853ce4bd5ef}{Get\+Global\+Entity}} (\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}} key)
+\item 
+void \mbox{\hyperlink{class_entities_master_a1d2788b98ad8ba07628a964627605d0a}{Clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_entities_master_ad359db28e3609723bb1b3bcef151b8d8}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_pack}{Entity\+Pack}} \mbox{\hyperlink{class_entities_master_a348775576d18b5ac50ca35827c6ab5a6}{Try\+To\+Get\+Value}} (\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}} key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_entity_pack}{Entity\+Pack}} $>$ \mbox{\hyperlink{class_entities_master_aec42eafb0f1266c43d6a7203ba46bbdd}{global\+Entities}} = new List$<$\mbox{\hyperlink{class_entity_pack}{Entity\+Pack}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}{instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_entities_master_a2d0987d06ded779182001811350116a2}\label{class_entities_master_a2d0987d06ded779182001811350116a2}} 
+\index{EntitiesMaster@{EntitiesMaster}!EntitiesKey@{EntitiesKey}}
+\index{EntitiesKey@{EntitiesKey}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{EntitiesKey}{EntitiesKey}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Master.\+Entities\+Key}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER@{PLAYER}!EntitiesMaster@{EntitiesMaster}}\index{EntitiesMaster@{EntitiesMaster}!PLAYER@{PLAYER}}}\mbox{\Hypertarget{class_entities_master_a2d0987d06ded779182001811350116a2a07c80e2a355d91402a00d82b1fa13855}\label{class_entities_master_a2d0987d06ded779182001811350116a2a07c80e2a355d91402a00d82b1fa13855}} 
+P\+L\+A\+Y\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYERCAMERA@{PLAYERCAMERA}!EntitiesMaster@{EntitiesMaster}}\index{EntitiesMaster@{EntitiesMaster}!PLAYERCAMERA@{PLAYERCAMERA}}}\mbox{\Hypertarget{class_entities_master_a2d0987d06ded779182001811350116a2a30aa118f4b86cec039eacf123ba6460f}\label{class_entities_master_a2d0987d06ded779182001811350116a2a30aa118f4b86cec039eacf123ba6460f}} 
+P\+L\+A\+Y\+E\+R\+C\+A\+M\+E\+RA&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entities_master_ad359db28e3609723bb1b3bcef151b8d8}\label{class_entities_master_ad359db28e3609723bb1b3bcef151b8d8}} 
+\index{EntitiesMaster@{EntitiesMaster}!Awake@{Awake}}
+\index{Awake@{Awake}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily override void Entities\+Master.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}{Singleton\+Monobehavior$<$ Entities\+Master $>$}}.
+
+\mbox{\Hypertarget{class_entities_master_a1d2788b98ad8ba07628a964627605d0a}\label{class_entities_master_a1d2788b98ad8ba07628a964627605d0a}} 
+\index{EntitiesMaster@{EntitiesMaster}!Clear@{Clear}}
+\index{Clear@{Clear}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Entities\+Master.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_entities_master_a387c24f61e6cc01ade9a7853ce4bd5ef}\label{class_entities_master_a387c24f61e6cc01ade9a7853ce4bd5ef}} 
+\index{EntitiesMaster@{EntitiesMaster}!GetGlobalEntity@{GetGlobalEntity}}
+\index{GetGlobalEntity@{GetGlobalEntity}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{GetGlobalEntity()}{GetGlobalEntity()}}
+{\footnotesize\ttfamily Game\+Object Entities\+Master.\+Get\+Global\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}}}]{key }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_entities_master_a387c24f61e6cc01ade9a7853ce4bd5ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}\label{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}} 
+\index{EntitiesMaster@{EntitiesMaster}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_entities_master_a0bb277f3f06df547d2fb82cddbb56a65}\label{class_entities_master_a0bb277f3f06df547d2fb82cddbb56a65}} 
+\index{EntitiesMaster@{EntitiesMaster}!RegisterEntity@{RegisterEntity}}
+\index{RegisterEntity@{RegisterEntity}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{RegisterEntity()}{RegisterEntity()}}
+{\footnotesize\ttfamily void Entities\+Master.\+Register\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}}}]{key,  }\item[{Game\+Object}]{entity }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_entities_master_a0bb277f3f06df547d2fb82cddbb56a65_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_entities_master_a348775576d18b5ac50ca35827c6ab5a6}\label{class_entities_master_a348775576d18b5ac50ca35827c6ab5a6}} 
+\index{EntitiesMaster@{EntitiesMaster}!TryToGetValue@{TryToGetValue}}
+\index{TryToGetValue@{TryToGetValue}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{TryToGetValue()}{TryToGetValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity_pack}{Entity\+Pack}} Entities\+Master.\+Try\+To\+Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_entities_master_a348775576d18b5ac50ca35827c6ab5a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_entities_master_a129190b8b644c1646eec6b02e2a93104}\label{class_entities_master_a129190b8b644c1646eec6b02e2a93104}} 
+\index{EntitiesMaster@{EntitiesMaster}!UnregisterEntity@{UnregisterEntity}}
+\index{UnregisterEntity@{UnregisterEntity}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{UnregisterEntity()}{UnregisterEntity()}}
+{\footnotesize\ttfamily void Entities\+Master.\+Unregister\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entities_master_a2d0987d06ded779182001811350116a2}{Entities\+Key}}}]{key,  }\item[{Game\+Object}]{entity }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_entities_master_a129190b8b644c1646eec6b02e2a93104_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_entities_master_aec42eafb0f1266c43d6a7203ba46bbdd}\label{class_entities_master_aec42eafb0f1266c43d6a7203ba46bbdd}} 
+\index{EntitiesMaster@{EntitiesMaster}!globalEntities@{globalEntities}}
+\index{globalEntities@{globalEntities}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{globalEntities}{globalEntities}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_entity_pack}{Entity\+Pack}}$>$ Entities\+Master.\+global\+Entities = new List$<$\mbox{\hyperlink{class_entity_pack}{Entity\+Pack}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}\label{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}} 
+\index{EntitiesMaster@{EntitiesMaster}!instance@{instance}}
+\index{instance@{instance}!EntitiesMaster@{EntitiesMaster}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\mbox{\hyperlink{_entities_master_8cs}{Entities\+Master.\+cs}}\end{DoxyCompactItemize}

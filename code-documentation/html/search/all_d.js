@@ -1,10 +1,22 @@
 var searchData=
 [
-  ['needalltosastisfied_291',['needAllToSastisfied',['../class_conditions_checker.html#a964bf8a93db4dd6961cc454eb8070c76',1,'ConditionsChecker']]],
-  ['nextsentence_292',['NextSentence',['../class_monologue_manager.html#ae75d6e6538062ae8180c0d4f593151d2',1,'MonologueManager']]],
-  ['npccanvas_293',['npcCanvas',['../class_n_p_c_interactable.html#a89053d16d57f60dbb8301c0e8dc7fb4f',1,'NPCInteractable']]],
-  ['npcdebug_294',['NPCDebug',['../class_logger.html#a01b1c8bbf7e861a19c8cbed606fb47ab',1,'Logger']]],
-  ['npcinteractable_295',['NPCInteractable',['../class_n_p_c_interactable.html',1,'']]],
-  ['npcinteractable_2ecs_296',['NPCInteractable.cs',['../_n_p_c_interactable_8cs.html',1,'']]],
-  ['npcnameui_297',['npcNameUI',['../class_n_p_c_interactable.html#a84e0ec2c5586b5c12243d779231aad44',1,'NPCInteractable']]]
+  ['name_473',['Name',['../class_naughty_attributes_1_1_progress_bar_attribute.html#ae3641e91b5d75013a44a10a8bdd9c0f7',1,'NaughtyAttributes.ProgressBarAttribute.Name()'],['../class_naughty_attributes_1_1_group_attribute.html#a1a98ea7bd81c886b5de0eaf2e86720c3',1,'NaughtyAttributes.GroupAttribute.Name()']]],
+  ['nametag_474',['nameTag',['../class_n_p_c_character.html#a659773fd9a57ac966a31487d09ded6b8',1,'NPCCharacter']]],
+  ['naughtyattribute_475',['NaughtyAttribute',['../class_naughty_attributes_1_1_naughty_attribute.html',1,'NaughtyAttributes']]],
+  ['naughtyattribute_2ecs_476',['NaughtyAttribute.cs',['../_naughty_attribute_8cs.html',1,'']]],
+  ['naughtyattributes_477',['NaughtyAttributes',['../namespace_naughty_attributes.html',1,'']]],
+  ['needalltosastisfied_478',['needAllToSastisfied',['../class_conditions_checker.html#a964bf8a93db4dd6961cc454eb8070c76',1,'ConditionsChecker']]],
+  ['nextsentence_479',['NextSentence',['../class_monologue_manager.html#ae75d6e6538062ae8180c0d4f593151d2',1,'MonologueManager']]],
+  ['normal_480',['Normal',['../namespace_naughty_attributes.html#aa04406e306e9b4ec12d055088cb37079a960b44c579bc2f6818d2daaf9e4c16f0',1,'NaughtyAttributes']]],
+  ['npccharacter_481',['NPCCharacter',['../class_n_p_c_character.html',1,'']]],
+  ['npccharacter_2ecs_482',['NPCCharacter.cs',['../_n_p_c_character_8cs.html',1,'']]],
+  ['npccontroller_483',['NPCController',['../class_n_p_c_controller.html',1,'']]],
+  ['npccontroller_2ecs_484',['NPCController.cs',['../_n_p_c_controller_8cs.html',1,'']]],
+  ['npcdebug_485',['NPCDebug',['../class_logger.html#a01b1c8bbf7e861a19c8cbed606fb47ab',1,'Logger']]],
+  ['npcinteractable_486',['NPCInteractable',['../class_n_p_c_interactable.html',1,'']]],
+  ['npcinteractable_2ecs_487',['NPCInteractable.cs',['../_n_p_c_interactable_8cs.html',1,'']]],
+  ['npcnameui_488',['npcNameUi',['../class_n_p_c_interactable.html#adb94fd88ff0266ad005a267f72bdad06',1,'NPCInteractable']]],
+  ['npcs_489',['nPCs',['../class_area.html#a62653b62bd3bb1b2d76eb69a9b5f746b',1,'Area']]],
+  ['npcstatsui_490',['NPCStatsUI',['../class_n_p_c_stats_u_i.html',1,'']]],
+  ['npcstatsui_2ecs_491',['NPCStatsUI.cs',['../_n_p_c_stats_u_i_8cs.html',1,'']]]
 ];

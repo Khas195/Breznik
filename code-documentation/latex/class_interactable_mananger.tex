@@ -1,0 +1,219 @@
+\hypertarget{class_interactable_mananger}{}\doxysection{Interactable\+Mananger Class Reference}
+\label{class_interactable_mananger}\index{InteractableMananger@{InteractableMananger}}
+
+
+Inheritance diagram for Interactable\+Mananger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_interactable_mananger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Interactable\+Mananger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_interactable_mananger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_interactable_mananger_acaf0bab9eafb756ce8ad45870e4fce19}{On\+Interactable\+Enter}} (Collider other)
+\item 
+void \mbox{\hyperlink{class_interactable_mananger_a5607ce7e8a6f0daae08d3b7571be52d6}{On\+Interactable\+Exit}} (Collider other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_interactable_mananger_a7cd11475e8e7c7df47ba50e29790c76e}{Highlight\+Interactable}} (\mbox{\hyperlink{class_i_interactable}{I\+Interactable}} interact)
+\item 
+void \mbox{\hyperlink{class_interactable_mananger_a1302bfcfb9be4dd3ea38c323c2e5e80d}{Turn\+Off\+Hightlight}} ()
+\item 
+void \mbox{\hyperlink{class_interactable_mananger_a84aa09760b3436dfe5938c5767d4b570}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_interactable_mananger_a4643d9bd4fc1efb34f3181a2793fed86}{Try\+To\+Interact}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_interactable_mananger_a6722e8ecc02cc73ff37492b5a8a11c96}{host}} = null
+\item 
+List$<$ \mbox{\hyperlink{class_i_interactable}{I\+Interactable}} $>$ \mbox{\hyperlink{class_interactable_mananger_a5dcfcfcaac94a5bc91ff648af5416448}{in\+Range\+List}} = new List$<$\mbox{\hyperlink{class_i_interactable}{I\+Interactable}}$>$()
+\item 
+Text \mbox{\hyperlink{class_interactable_mananger_a18fe46c9890e402feab61fb5d0d91258}{interact\+Cue}} = null
+\item 
+\mbox{\hyperlink{class_i_interactable}{I\+Interactable}} \mbox{\hyperlink{class_interactable_mananger_a6dc6a250e4d10b2268f77bb9b8154f39}{highlight\+Interactable}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}{instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}\label{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}} 
+\index{InteractableMananger@{InteractableMananger}!Awake@{Awake}}
+\index{Awake@{Awake}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}\label{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}} 
+\index{InteractableMananger@{InteractableMananger}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_interactable_mananger_a7cd11475e8e7c7df47ba50e29790c76e}\label{class_interactable_mananger_a7cd11475e8e7c7df47ba50e29790c76e}} 
+\index{InteractableMananger@{InteractableMananger}!HighlightInteractable@{HighlightInteractable}}
+\index{HighlightInteractable@{HighlightInteractable}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{HighlightInteractable()}{HighlightInteractable()}}
+{\footnotesize\ttfamily void Interactable\+Mananger.\+Highlight\+Interactable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_interactable}{I\+Interactable}}}]{interact }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a7cd11475e8e7c7df47ba50e29790c76e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a7cd11475e8e7c7df47ba50e29790c76e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interactable_mananger_acaf0bab9eafb756ce8ad45870e4fce19}\label{class_interactable_mananger_acaf0bab9eafb756ce8ad45870e4fce19}} 
+\index{InteractableMananger@{InteractableMananger}!OnInteractableEnter@{OnInteractableEnter}}
+\index{OnInteractableEnter@{OnInteractableEnter}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{OnInteractableEnter()}{OnInteractableEnter()}}
+{\footnotesize\ttfamily void Interactable\+Mananger.\+On\+Interactable\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_acaf0bab9eafb756ce8ad45870e4fce19_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interactable_mananger_a5607ce7e8a6f0daae08d3b7571be52d6}\label{class_interactable_mananger_a5607ce7e8a6f0daae08d3b7571be52d6}} 
+\index{InteractableMananger@{InteractableMananger}!OnInteractableExit@{OnInteractableExit}}
+\index{OnInteractableExit@{OnInteractableExit}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{OnInteractableExit()}{OnInteractableExit()}}
+{\footnotesize\ttfamily void Interactable\+Mananger.\+On\+Interactable\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a5607ce7e8a6f0daae08d3b7571be52d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interactable_mananger_a4643d9bd4fc1efb34f3181a2793fed86}\label{class_interactable_mananger_a4643d9bd4fc1efb34f3181a2793fed86}} 
+\index{InteractableMananger@{InteractableMananger}!TryToInteract@{TryToInteract}}
+\index{TryToInteract@{TryToInteract}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{TryToInteract()}{TryToInteract()}}
+{\footnotesize\ttfamily void Interactable\+Mananger.\+Try\+To\+Interact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a4643d9bd4fc1efb34f3181a2793fed86_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a4643d9bd4fc1efb34f3181a2793fed86_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interactable_mananger_a1302bfcfb9be4dd3ea38c323c2e5e80d}\label{class_interactable_mananger_a1302bfcfb9be4dd3ea38c323c2e5e80d}} 
+\index{InteractableMananger@{InteractableMananger}!TurnOffHightlight@{TurnOffHightlight}}
+\index{TurnOffHightlight@{TurnOffHightlight}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{TurnOffHightlight()}{TurnOffHightlight()}}
+{\footnotesize\ttfamily void Interactable\+Mananger.\+Turn\+Off\+Hightlight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a1302bfcfb9be4dd3ea38c323c2e5e80d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interactable_mananger_a84aa09760b3436dfe5938c5767d4b570}\label{class_interactable_mananger_a84aa09760b3436dfe5938c5767d4b570}} 
+\index{InteractableMananger@{InteractableMananger}!Update@{Update}}
+\index{Update@{Update}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Interactable\+Mananger.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interactable_mananger_a84aa09760b3436dfe5938c5767d4b570_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_interactable_mananger_a6dc6a250e4d10b2268f77bb9b8154f39}\label{class_interactable_mananger_a6dc6a250e4d10b2268f77bb9b8154f39}} 
+\index{InteractableMananger@{InteractableMananger}!highlightInteractable@{highlightInteractable}}
+\index{highlightInteractable@{highlightInteractable}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{highlightInteractable}{highlightInteractable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_interactable}{I\+Interactable}} Interactable\+Mananger.\+highlight\+Interactable = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_interactable_mananger_a6722e8ecc02cc73ff37492b5a8a11c96}\label{class_interactable_mananger_a6722e8ecc02cc73ff37492b5a8a11c96}} 
+\index{InteractableMananger@{InteractableMananger}!host@{host}}
+\index{host@{host}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily Game\+Object Interactable\+Mananger.\+host = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_interactable_mananger_a5dcfcfcaac94a5bc91ff648af5416448}\label{class_interactable_mananger_a5dcfcfcaac94a5bc91ff648af5416448}} 
+\index{InteractableMananger@{InteractableMananger}!inRangeList@{inRangeList}}
+\index{inRangeList@{inRangeList}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{inRangeList}{inRangeList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_i_interactable}{I\+Interactable}}$>$ Interactable\+Mananger.\+in\+Range\+List = new List$<$\mbox{\hyperlink{class_i_interactable}{I\+Interactable}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}\label{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}} 
+\index{InteractableMananger@{InteractableMananger}!instance@{instance}}
+\index{instance@{instance}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_interactable_mananger_a18fe46c9890e402feab61fb5d0d91258}\label{class_interactable_mananger_a18fe46c9890e402feab61fb5d0d91258}} 
+\index{InteractableMananger@{InteractableMananger}!interactCue@{interactCue}}
+\index{interactCue@{interactCue}!InteractableMananger@{InteractableMananger}}
+\doxysubsubsection{\texorpdfstring{interactCue}{interactCue}}
+{\footnotesize\ttfamily Text Interactable\+Mananger.\+interact\+Cue = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\+Manager/\mbox{\hyperlink{_interactable_mananger_8cs}{Interactable\+Mananger.\+cs}}\end{DoxyCompactItemize}

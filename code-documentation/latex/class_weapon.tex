@@ -2,8 +2,7 @@
 \label{class_weapon}\index{Weapon@{Weapon}}
 
 
-Inheritance diagram for Weapon\+:
-\nopagebreak
+Inheritance diagram for Weapon\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,9 +22,14 @@ Collaboration diagram for Weapon\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_weapon_aea366ee653badbbb1976706df42dbd6b}{Switch\+Kill\+Box}} (bool is\+On)
+void \mbox{\hyperlink{class_weapon_a5fba69ccf321b57614bf7a111a439330}{Deals\+Damage}} (int hit\+Box\+Index)
 \item 
-void \mbox{\hyperlink{class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4}{On\+Kill\+Box\+Enter}} (Collider other)
+bool \mbox{\hyperlink{class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e}{Try\+To\+Deals\+Damage}} (Collider target\+Collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Event \mbox{\hyperlink{class_weapon_aa1f1a99d4c7b39a588426ae14e8f70ed}{On\+Weapon\+Hit}} = new Unity\+Event()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -35,37 +39,31 @@ void \mbox{\hyperlink{class_weapon_ae4f517eead254a905b55b9d9cd9b651c}{Start}} ()
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{class_weapon_a67d637088f248dd13048b89e592ea63a}{damage}} = 0
+int \mbox{\hyperlink{class_weapon_a04fa2c0d153f48845cc3aee7dff66014}{damage}} = 0
 \item 
 Game\+Object \mbox{\hyperlink{class_weapon_af64c72d17c522cd5e5ba9fac264fe909}{wielder}} = null
 \item 
-\mbox{\hyperlink{class_physic_call_back}{Physic\+Call\+Back}} \mbox{\hyperlink{class_weapon_a502f290ff154c26d66504708e98220fc}{kill\+Box}} = null
-\item 
 \mbox{\hyperlink{class_character}{Character}} \mbox{\hyperlink{class_weapon_ab5b54675be9f5524c56ea95d53cc11f1}{wielder\+Char}} = null
+\item 
+List$<$ Collider $>$ \mbox{\hyperlink{class_weapon_a3a3a7225968c0d1aa83e9efdc069f4a3}{hitboxes}} = new List$<$Collider$>$()
+\item 
+Game\+Object \mbox{\hyperlink{class_weapon_ac3c90c4bd97de236562d2b0f91093aa5}{sword\+Edge}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4}\label{class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4}} 
-\index{Weapon@{Weapon}!OnKillBoxEnter@{OnKillBoxEnter}}
-\index{OnKillBoxEnter@{OnKillBoxEnter}!Weapon@{Weapon}}
-\doxysubsubsection{\texorpdfstring{OnKillBoxEnter()}{OnKillBoxEnter()}}
-{\footnotesize\ttfamily void Weapon.\+On\+Kill\+Box\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_weapon_a5fba69ccf321b57614bf7a111a439330}\label{class_weapon_a5fba69ccf321b57614bf7a111a439330}} 
+\index{Weapon@{Weapon}!DealsDamage@{DealsDamage}}
+\index{DealsDamage@{DealsDamage}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{DealsDamage()}{DealsDamage()}}
+{\footnotesize\ttfamily void Weapon.\+Deals\+Damage (\begin{DoxyParamCaption}\item[{int}]{hit\+Box\+Index }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=315pt]{class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_icgraph}
+\includegraphics[width=350pt]{class_weapon_a5fba69ccf321b57614bf7a111a439330_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_weapon_ae4f517eead254a905b55b9d9cd9b651c}\label{class_weapon_ae4f517eead254a905b55b9d9cd9b651c}} 
@@ -74,34 +72,54 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Weapon.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e}\label{class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e}} 
+\index{Weapon@{Weapon}!TryToDealsDamage@{TryToDealsDamage}}
+\index{TryToDealsDamage@{TryToDealsDamage}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{TryToDealsDamage()}{TryToDealsDamage()}}
+{\footnotesize\ttfamily bool Weapon.\+Try\+To\+Deals\+Damage (\begin{DoxyParamCaption}\item[{Collider}]{target\+Collider }\end{DoxyParamCaption})}
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_weapon_ae4f517eead254a905b55b9d9cd9b651c_cgraph}
+\includegraphics[width=350pt]{class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_weapon_aea366ee653badbbb1976706df42dbd6b}\label{class_weapon_aea366ee653badbbb1976706df42dbd6b}} 
-\index{Weapon@{Weapon}!SwitchKillBox@{SwitchKillBox}}
-\index{SwitchKillBox@{SwitchKillBox}!Weapon@{Weapon}}
-\doxysubsubsection{\texorpdfstring{SwitchKillBox()}{SwitchKillBox()}}
-{\footnotesize\ttfamily void Weapon.\+Switch\+Kill\+Box (\begin{DoxyParamCaption}\item[{bool}]{is\+On }\end{DoxyParamCaption})}
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_weapon_a67d637088f248dd13048b89e592ea63a}\label{class_weapon_a67d637088f248dd13048b89e592ea63a}} 
+\mbox{\Hypertarget{class_weapon_a04fa2c0d153f48845cc3aee7dff66014}\label{class_weapon_a04fa2c0d153f48845cc3aee7dff66014}} 
 \index{Weapon@{Weapon}!damage@{damage}}
 \index{damage@{damage}!Weapon@{Weapon}}
 \doxysubsubsection{\texorpdfstring{damage}{damage}}
-{\footnotesize\ttfamily float Weapon.\+damage = 0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int Weapon.\+damage = 0\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_weapon_a502f290ff154c26d66504708e98220fc}\label{class_weapon_a502f290ff154c26d66504708e98220fc}} 
-\index{Weapon@{Weapon}!killBox@{killBox}}
-\index{killBox@{killBox}!Weapon@{Weapon}}
-\doxysubsubsection{\texorpdfstring{killBox}{killBox}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_physic_call_back}{Physic\+Call\+Back}} Weapon.\+kill\+Box = null\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_weapon_a3a3a7225968c0d1aa83e9efdc069f4a3}\label{class_weapon_a3a3a7225968c0d1aa83e9efdc069f4a3}} 
+\index{Weapon@{Weapon}!hitboxes@{hitboxes}}
+\index{hitboxes@{hitboxes}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{hitboxes}{hitboxes}}
+{\footnotesize\ttfamily List$<$Collider$>$ Weapon.\+hitboxes = new List$<$Collider$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_weapon_aa1f1a99d4c7b39a588426ae14e8f70ed}\label{class_weapon_aa1f1a99d4c7b39a588426ae14e8f70ed}} 
+\index{Weapon@{Weapon}!OnWeaponHit@{OnWeaponHit}}
+\index{OnWeaponHit@{OnWeaponHit}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{OnWeaponHit}{OnWeaponHit}}
+{\footnotesize\ttfamily Unity\+Event Weapon.\+On\+Weapon\+Hit = new Unity\+Event()}
+
+\mbox{\Hypertarget{class_weapon_ac3c90c4bd97de236562d2b0f91093aa5}\label{class_weapon_ac3c90c4bd97de236562d2b0f91093aa5}} 
+\index{Weapon@{Weapon}!swordEdge@{swordEdge}}
+\index{swordEdge@{swordEdge}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{swordEdge}{swordEdge}}
+{\footnotesize\ttfamily Game\+Object Weapon.\+sword\+Edge\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_weapon_af64c72d17c522cd5e5ba9fac264fe909}\label{class_weapon_af64c72d17c522cd5e5ba9fac264fe909}} 
 \index{Weapon@{Weapon}!wielder@{wielder}}

@@ -105,7 +105,8 @@ Public Types</h2></td></tr>
 <a class="el" href="class_game_state.html#ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec">States.InGame</a>, 
 <a class="el" href="class_game_state.html#ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15">States.GamePaused</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_game_state.html#ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2">States.InDiagloues</a>
+&#160;&#160;<a class="el" href="class_game_state.html#ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2">States.InDiagloues</a>, 
+<a class="el" href="class_game_state.html#ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b">States.InInventory</a>
 <br />
  }</td></tr>
 <tr class="separator:ae37dba27688ee39e865e239fee76a979"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +183,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec"></a>InGame&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15"></a>GamePaused&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2"></a>InDiagloues&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b"></a>InInventory&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -208,9 +210,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_menu_acde01c79443ef44e82d129f32a525952_cgraph.png" border="0" usemap="#class_main_menu_acde01c79443ef44e82d129f32a525952_cgraph" alt=""/></div>
 <map name="class_main_menu_acde01c79443ef44e82d129f32a525952_cgraph" id="class_main_menu_acde01c79443ef44e82d129f32a525952_cgraph">
-<area shape="rect" title="Tell the game master to exit the game." alt="" coords="5,31,149,57"/>
-<area shape="rect" href="class_game_master.html#a33c802376b353f99be17c31e2829fdba" title="Exit the game." alt="" coords="203,5,362,32"/>
-<area shape="rect" href="class_game_master.html#a9eb6dd216e1ec4df704a85831d4c2a32" title="Return the single instance of the game master." alt="" coords="197,56,368,83"/>
+<area shape="rect" title="Tell the game master to exit the game." alt="" coords="5,13,149,39"/>
+<area shape="rect" href="class_singleton_monobehavior.html#a58152666f3346f3f59dfec471394df54" title=" " alt="" coords="197,5,377,47"/>
 </map>
 </div>
 
@@ -246,20 +247,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph.png" border="0" usemap="#class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph" alt=""/></div>
 <map name="class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph" id="class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph">
-<area shape="rect" title="Get the state type/name of the current game state." alt="" coords="1331,216,1475,243"/>
-<area shape="rect" href="class_game_master.html#a5fb08825f2107143346afeb7d5cbdb30" title=" " alt="" coords="1096,190,1283,231"/>
-<area shape="rect" href="class_n_p_c_interactable.html#a15982b83c5cb0678080e29afd48e379b" title=" " alt="" coords="609,288,771,315"/>
-<area shape="rect" href="class_game_master.html#ab6e3e51a33d6e89e7af93255f904a617" title="Request a new game state for the game." alt="" coords="833,187,1048,213"/>
-<area shape="rect" href="class_game_master.html#a9d6af77cccc0aacb723e14a0c7241b26" title="Find all the possible game states in the current scene." alt="" coords="595,19,785,61"/>
-<area shape="rect" href="class_n_p_c_interactable.html#abcfed17a85a7cbcf23b471f42bd01809" title=" " alt="" coords="609,85,771,112"/>
-<area shape="rect" href="class_game_paused.html#ab94908a41eff27b0cd7e978cd821e09f" title="Tell the game master to go to the In Game State." alt="" coords="596,136,784,163"/>
-<area shape="rect" href="class_in_dialogues.html#a97d0de2c3dd16ffb98ba7aa6d4d00c49" title=" " alt="" coords="623,187,757,213"/>
-<area shape="rect" href="class_in_game.html#a276249731903fd5b07ec8266a8a2e765" title=" " alt="" coords="634,237,746,264"/>
-<area shape="rect" href="class_game_master.html#a2aace22ba30a2984703f929627c7a231" title=" " alt="" coords="183,5,301,32"/>
-<area shape="rect" href="class_game_master.html#ae96def3d3c7314908b64b0c360763d97" title="Called whenever a scene is loaded." alt="" coords="349,31,547,57"/>
-<area shape="rect" href="class_game_master.html#a0f98f0d3b5b5d5bd79b3134adfb7b17d" title=" " alt="" coords="5,5,135,32"/>
-<area shape="rect" href="class_talk_to_n_p_c.html#a63eec91f57a7d036a7e683aac8ba620a" title=" " alt="" coords="391,85,505,112"/>
-<area shape="rect" href="class_game_paused.html#a7be01ca719349fd8fd23c78b907ee7a1" title=" " alt="" coords="375,136,521,163"/>
+<area shape="rect" title="Get the state type/name of the current game state." alt="" coords="1331,13,1475,39"/>
+<area shape="rect" href="class_game_master.html#a5fb08825f2107143346afeb7d5cbdb30" title=" " alt="" coords="1096,5,1283,47"/>
+<area shape="rect" href="class_game_master.html#ab6e3e51a33d6e89e7af93255f904a617" title="Request a new game state for the game." alt="" coords="833,13,1048,39"/>
+<area shape="rect" href="class_game_master.html#a9d6af77cccc0aacb723e14a0c7241b26" title="Find all the possible game states in the current scene." alt="" coords="595,5,785,47"/>
+<area shape="rect" href="class_game_master.html#a2aace22ba30a2984703f929627c7a231" title=" " alt="" coords="183,13,301,39"/>
+<area shape="rect" href="class_game_master.html#ae96def3d3c7314908b64b0c360763d97" title="Called whenever a scene is loaded." alt="" coords="349,38,547,65"/>
+<area shape="rect" href="class_game_master.html#a0f98f0d3b5b5d5bd79b3134adfb7b17d" title=" " alt="" coords="5,13,135,39"/>
 </map>
 </div>
 
@@ -286,15 +280,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_menu_a924ed3ebbfea4ab99675e90fa0f0b8b1_cgraph.png" border="0" usemap="#class_main_menu_a924ed3ebbfea4ab99675e90fa0f0b8b1_cgraph" alt=""/></div>
 <map name="class_main_menu_a924ed3ebbfea4ab99675e90fa0f0b8b1_cgraph" id="class_main_menu_a924ed3ebbfea4ab99675e90fa0f0b8b1_cgraph">
-<area shape="rect" title="Tell the game master to go to the Arena scene." alt="" coords="5,31,156,57"/>
-<area shape="rect" href="class_game_master.html#a9eb6dd216e1ec4df704a85831d4c2a32" title="Return the single instance of the game master." alt="" coords="204,5,375,32"/>
-<area shape="rect" href="class_game_master.html#a277fc326efbb056a21bb8b65158f89d8" title="Go to the arena scene." alt="" coords="206,56,373,83"/>
-<area shape="rect" href="class_game_master.html#a7e88d5833850a5a889d52f7bcb1520aa" title="Request load a new scene." alt="" coords="423,56,637,83"/>
-<area shape="rect" href="class_state_stack.html#acc7e34b7f00751505b0bc63a80ed9172" title=" " alt="" coords="685,56,848,83"/>
-<area shape="rect" href="class_state_stack.html#af913ff675174c5678d1f8fa45a08e1f7" title=" " alt="" coords="1059,31,1232,57"/>
-<area shape="rect" href="class_state_stack.html#a761f0ba6b0561beba5f307f78a39c346" title=" " alt="" coords="896,81,1011,108"/>
-<area shape="rect" href="class_state.html#a0c3ba47d37fa69c7089f047476cb624f" title=" " alt="" coords="1086,81,1205,108"/>
-<area shape="rect" href="class_logger.html#a37fe36ad5fc256ea8ed14cde19af2e43" title=" " alt="" coords="1062,132,1229,159"/>
+<area shape="rect" title="Tell the game master to go to the Arena scene." alt="" coords="5,13,156,39"/>
+<area shape="rect" href="class_singleton_monobehavior.html#a58152666f3346f3f59dfec471394df54" title=" " alt="" coords="204,5,384,47"/>
 </map>
 </div>
 
@@ -352,6 +339,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="class_in_game.html#a764b76056231238a3dd3d649bd821dde">InGame</a>, and <a class="el" href="class_in_inventory.html#a603f849f03eda7ca9d12d09b09766d93">InInventory</a>.</p>
+
 </div>
 </div>
 <a id="a049be19df7f1506e7ab150ec85c70aa9"></a>
@@ -406,6 +395,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_in_game.html#a4f8190e06ebef10b38df9fb105686187">InGame</a>, and <a class="el" href="class_in_inventory.html#a61da9c150fa3d08b670e64e412a758c4">InInventory</a>.</p>
 
 </div>
 </div>
@@ -564,7 +555,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/GameMaster/GameStates/<a class="el" href="_main_menu_8cs.html">MainMenu.cs</a></li>
+<li>Assets/Scripts/Systems/GameStates/<a class="el" href="_main_menu_8cs.html">MainMenu.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

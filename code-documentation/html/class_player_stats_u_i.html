@@ -86,18 +86,23 @@ Collaboration diagram for PlayerStatsUI:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_stats_u_i__coll__graph.png" border="0" usemap="#_player_stats_u_i_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_stats_u_i_coll__map" id="_player_stats_u_i_coll__map">
-<area shape="rect" title="Handle the health bar and stamina of the character based on the character stats data." alt="" coords="199,439,301,465"/>
-<area shape="rect" title=" " alt="" coords="5,171,116,197"/>
-<area shape="rect" href="class_flexible_u_i.html" title=" " alt="" coords="143,260,221,287"/>
-<area shape="rect" href="class_flexible_u_i_dots_bar.html" title=" " alt="" coords="116,349,243,376"/>
-<area shape="rect" href="class_flexible_u_i_stats_bar.html" title=" " alt="" coords="267,349,398,376"/>
-<area shape="rect" href="class_flexible_u_i_data.html" title=" " alt="" coords="141,171,247,197"/>
-<area shape="rect" title=" " alt="" coords="312,5,431,32"/>
-<area shape="rect" href="class_stats_bar_u_i_data.html" title=" " alt="" coords="131,81,243,108"/>
-<area shape="rect" href="class_dots_u_i_data.html" title=" " alt="" coords="267,81,355,108"/>
-<area shape="rect" href="class_character_data.html" title=" " alt="" coords="404,171,509,197"/>
-<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="431,81,539,108"/>
-<area shape="rect" href="class_character_stats_data.html" title=" " alt="" coords="563,81,699,108"/>
+<area shape="rect" title="Handle the health bar and stamina of the character based on the character stats data." alt="" coords="299,484,402,511"/>
+<area shape="rect" title=" " alt="" coords="305,81,415,108"/>
+<area shape="rect" href="class_flexible_u_i.html" title=" " alt="" coords="170,319,249,345"/>
+<area shape="rect" href="class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="478,319,557,345"/>
+<area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="551,206,635,233"/>
+<area shape="rect" href="class_character_stats_data.html" title=" " alt="" coords="943,81,1079,108"/>
+<area shape="rect" href="class_character_data.html" title=" " alt="" coords="870,206,975,233"/>
+<area shape="rect" title=" " alt="" coords="582,5,701,32"/>
+<area shape="rect" href="class_flexible_u_i_data.html" title=" " alt="" coords="136,206,243,233"/>
+<area shape="rect" href="class_stats_bar_u_i_data.html" title=" " alt="" coords="5,81,117,108"/>
+<area shape="rect" href="class_dots_u_i_data.html" title=" " alt="" coords="141,81,229,108"/>
+<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="681,81,789,108"/>
+<area shape="rect" href="class_conditions_checker.html" title=" " alt="" coords="573,132,704,159"/>
+<area shape="rect" href="class_flexible_u_i_dots_bar.html" title=" " alt="" coords="186,395,313,421"/>
+<area shape="rect" href="class_flexible_u_i_stats_bar.html" title=" " alt="" coords="31,395,161,421"/>
+<area shape="rect" href="class_death_event.html" title=" " alt="" coords="439,206,527,233"/>
+<area shape="rect" title=" " alt="" coords="439,81,603,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -114,9 +119,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a780a43b0a98b401319ea8d73046d4050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_flexible_u_i_dots_bar.html">FlexibleUIDotsBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_u_i.html#a780a43b0a98b401319ea8d73046d4050">staminaDots</a> = null</td></tr>
 <tr class="memdesc:a780a43b0a98b401319ea8d73046d4050"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Stamina bar of the character.  <a href="class_player_stats_u_i.html#a780a43b0a98b401319ea8d73046d4050">More...</a><br /></td></tr>
 <tr class="separator:a780a43b0a98b401319ea8d73046d4050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58faa9039cfd1b8eb0db6ed46f27728c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_data.html">CharacterData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_u_i.html#a58faa9039cfd1b8eb0db6ed46f27728c">data</a> = null</td></tr>
-<tr class="memdesc:a58faa9039cfd1b8eb0db6ed46f27728c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The character stats data of the character  <a href="class_player_stats_u_i.html#a58faa9039cfd1b8eb0db6ed46f27728c">More...</a><br /></td></tr>
-<tr class="separator:a58faa9039cfd1b8eb0db6ed46f27728c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3060a518dc908c9d4c738d831550198"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_stats_data.html">CharacterStatsData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_u_i.html#ae3060a518dc908c9d4c738d831550198">baseStats</a> = null</td></tr>
+<tr class="memdesc:ae3060a518dc908c9d4c738d831550198"><td class="mdescLeft">&#160;</td><td class="mdescRight">The character stats data of the character  <a href="class_player_stats_u_i.html#ae3060a518dc908c9d4c738d831550198">More...</a><br /></td></tr>
+<tr class="separator:ae3060a518dc908c9d4c738d831550198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab143f916cf63a83e714467d503171a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character.html">Character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_u_i.html#aab143f916cf63a83e714467d503171a8">player</a> = null</td></tr>
+<tr class="separator:aab143f916cf63a83e714467d503171a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handle the health bar and stamina of the character based on the character stats data. </p>
@@ -148,19 +155,21 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_stats_u_i_a9fd57f7db49724d102e3bce0d585242b_cgraph.png" border="0" usemap="#class_player_stats_u_i_a9fd57f7db49724d102e3bce0d585242b_cgraph" alt=""/></div>
 <map name="class_player_stats_u_i_a9fd57f7db49724d102e3bce0d585242b_cgraph" id="class_player_stats_u_i_a9fd57f7db49724d102e3bce0d585242b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,78,152,105"/>
+<area shape="rect" title=" " alt="" coords="5,122,152,149"/>
 <area shape="rect" href="class_flexible_u_i_stats_bar.html#af00a92f24d8561cc1fb06f641bea2462" title=" " alt="" coords="200,5,387,47"/>
-<area shape="rect" href="class_flexible_u_i_stats_bar.html#af032c3931f5c5cd1897b86832e2cc2ec" title=" " alt="" coords="201,71,386,112"/>
-<area shape="rect" href="class_flexible_u_i_dots_bar.html#a64d0bf48fc5603fd27a0f346e124a684" title=" " alt="" coords="203,136,384,177"/>
-<area shape="rect" href="class_flexible_u_i_dots_bar.html#a6fe943cb662715df88fb342e36234a8f" title=" " alt="" coords="435,143,627,170"/>
+<area shape="rect" href="class_character.html#ae8ba68110ff061ba6d40930466e463a1" title=" " alt="" coords="223,71,363,98"/>
+<area shape="rect" href="class_character.html#ab3d3becb9cd892580822255e21213db2" title=" " alt="" coords="218,122,369,149"/>
+<area shape="rect" href="class_flexible_u_i_stats_bar.html#af032c3931f5c5cd1897b86832e2cc2ec" title=" " alt="" coords="201,173,386,215"/>
+<area shape="rect" href="class_flexible_u_i_dots_bar.html#a64d0bf48fc5603fd27a0f346e124a684" title=" " alt="" coords="203,239,384,280"/>
+<area shape="rect" href="class_flexible_u_i_dots_bar.html#a6fe943cb662715df88fb342e36234a8f" title=" " alt="" coords="435,246,627,273"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a58faa9039cfd1b8eb0db6ed46f27728c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58faa9039cfd1b8eb0db6ed46f27728c">&#9670;&nbsp;</a></span>data</h2>
+<a id="ae3060a518dc908c9d4c738d831550198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3060a518dc908c9d4c738d831550198">&#9670;&nbsp;</a></span>baseStats</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +178,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_character_data.html">CharacterData</a> PlayerStatsUI.data = null</td>
+          <td class="memname"><a class="el" href="class_character_stats_data.html">CharacterStatsData</a> PlayerStatsUI.baseStats = null</td>
         </tr>
       </table>
   </td>
@@ -207,6 +216,28 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="aab143f916cf63a83e714467d503171a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab143f916cf63a83e714467d503171a8">&#9670;&nbsp;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_character.html">Character</a> PlayerStatsUI.player = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a780a43b0a98b401319ea8d73046d4050"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a780a43b0a98b401319ea8d73046d4050">&#9670;&nbsp;</a></span>staminaDots</h2>
 
@@ -232,7 +263,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/<a class="el" href="_player_stats_u_i_8cs.html">PlayerStatsUI.cs</a></li>
+<li>Assets/Scripts/UIs/<a class="el" href="_player_stats_u_i_8cs.html">PlayerStatsUI.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

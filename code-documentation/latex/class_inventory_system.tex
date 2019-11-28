@@ -1,0 +1,223 @@
+\hypertarget{class_inventory_system}{}\doxysection{Inventory\+System Class Reference}
+\label{class_inventory_system}\index{InventorySystem@{InventorySystem}}
+
+
+Inheritance diagram for Inventory\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_inventory_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Inventory\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_inventory_system_a52c18ae8d0bd5ba4423d18423050249b}{Add\+Item}} (\mbox{\hyperlink{class_item_object}{Item\+Object}} new\+Item)
+\item 
+bool \mbox{\hyperlink{class_inventory_system_a3d685e0b72c8c169ef1e73b487fc90c9}{Is\+Open}} ()
+\item 
+void \mbox{\hyperlink{class_inventory_system_a8bfa5c024c23fd01104bd2776555c580}{Remove\+Item}} (\mbox{\hyperlink{class_item_object}{Item\+Object}} target\+Item)
+\item 
+void \mbox{\hyperlink{class_inventory_system_a03ce0649f36d3296de55987cad60dcae}{Focus\+Item}} (\mbox{\hyperlink{class_item_object}{Item\+Object}} target\+Item)
+\item 
+\mbox{\hyperlink{class_item_object}{Item\+Object}} \mbox{\hyperlink{class_inventory_system_a22199f9f4cb9e82ad690803093094773}{Get\+Item}} (string item\+Name)
+\item 
+void \mbox{\hyperlink{class_inventory_system_aba3775b11c568a87a7f31e539c1558f2}{Hide\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_inventory_system_ae3ad38a4dae45ed902b04ff26df4521e}{Show\+UI}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_on_item_event}{On\+Item\+Event}} \mbox{\hyperlink{class_inventory_system_ac5955e815df7f5ecc07106b8ed7f99d1}{on\+Item\+Collected}} = new \mbox{\hyperlink{class_on_item_event}{On\+Item\+Event}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_inventory_system_a32e7d6bb38da997a0d769d37d35920e3}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inventory_object}{Inventory\+Object}} \mbox{\hyperlink{class_inventory_system_a145e31b9c32f0797cc806acfa03e78a2}{inventory}} = null
+\item 
+\mbox{\hyperlink{class_inventory_u_i_manager}{Inventory\+U\+I\+Manager}} \mbox{\hyperlink{class_inventory_system_a086a261282aa172c63e8b18e1a22fa78}{u\+I\+Manager}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}{instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inventory_system_a52c18ae8d0bd5ba4423d18423050249b}\label{class_inventory_system_a52c18ae8d0bd5ba4423d18423050249b}} 
+\index{InventorySystem@{InventorySystem}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily void Inventory\+System.\+Add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_object}{Item\+Object}}}]{new\+Item }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_a52c18ae8d0bd5ba4423d18423050249b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_system_a32e7d6bb38da997a0d769d37d35920e3}\label{class_inventory_system_a32e7d6bb38da997a0d769d37d35920e3}} 
+\index{InventorySystem@{InventorySystem}!Awake@{Awake}}
+\index{Awake@{Awake}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily override void Inventory\+System.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}{Singleton\+Monobehavior$<$ Inventory\+System $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_a32e7d6bb38da997a0d769d37d35920e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_system_a03ce0649f36d3296de55987cad60dcae}\label{class_inventory_system_a03ce0649f36d3296de55987cad60dcae}} 
+\index{InventorySystem@{InventorySystem}!FocusItem@{FocusItem}}
+\index{FocusItem@{FocusItem}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{FocusItem()}{FocusItem()}}
+{\footnotesize\ttfamily void Inventory\+System.\+Focus\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_object}{Item\+Object}}}]{target\+Item }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_a03ce0649f36d3296de55987cad60dcae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}\label{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}} 
+\index{InventorySystem@{InventorySystem}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_inventory_system_a22199f9f4cb9e82ad690803093094773}\label{class_inventory_system_a22199f9f4cb9e82ad690803093094773}} 
+\index{InventorySystem@{InventorySystem}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{GetItem()}{GetItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_item_object}{Item\+Object}} Inventory\+System.\+Get\+Item (\begin{DoxyParamCaption}\item[{string}]{item\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_a22199f9f4cb9e82ad690803093094773_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_system_aba3775b11c568a87a7f31e539c1558f2}\label{class_inventory_system_aba3775b11c568a87a7f31e539c1558f2}} 
+\index{InventorySystem@{InventorySystem}!HideUI@{HideUI}}
+\index{HideUI@{HideUI}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{HideUI()}{HideUI()}}
+{\footnotesize\ttfamily void Inventory\+System.\+Hide\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_aba3775b11c568a87a7f31e539c1558f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_system_a3d685e0b72c8c169ef1e73b487fc90c9}\label{class_inventory_system_a3d685e0b72c8c169ef1e73b487fc90c9}} 
+\index{InventorySystem@{InventorySystem}!IsOpen@{IsOpen}}
+\index{IsOpen@{IsOpen}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{IsOpen()}{IsOpen()}}
+{\footnotesize\ttfamily bool Inventory\+System.\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_a3d685e0b72c8c169ef1e73b487fc90c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_system_a8bfa5c024c23fd01104bd2776555c580}\label{class_inventory_system_a8bfa5c024c23fd01104bd2776555c580}} 
+\index{InventorySystem@{InventorySystem}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{RemoveItem()}{RemoveItem()}}
+{\footnotesize\ttfamily void Inventory\+System.\+Remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_object}{Item\+Object}}}]{target\+Item }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_a8bfa5c024c23fd01104bd2776555c580_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_inventory_system_ae3ad38a4dae45ed902b04ff26df4521e}\label{class_inventory_system_ae3ad38a4dae45ed902b04ff26df4521e}} 
+\index{InventorySystem@{InventorySystem}!ShowUI@{ShowUI}}
+\index{ShowUI@{ShowUI}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{ShowUI()}{ShowUI()}}
+{\footnotesize\ttfamily void Inventory\+System.\+Show\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_system_ae3ad38a4dae45ed902b04ff26df4521e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}\label{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}} 
+\index{InventorySystem@{InventorySystem}!instance@{instance}}
+\index{instance@{instance}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_inventory_system_a145e31b9c32f0797cc806acfa03e78a2}\label{class_inventory_system_a145e31b9c32f0797cc806acfa03e78a2}} 
+\index{InventorySystem@{InventorySystem}!inventory@{inventory}}
+\index{inventory@{inventory}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{inventory}{inventory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inventory_object}{Inventory\+Object}} Inventory\+System.\+inventory = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_inventory_system_ac5955e815df7f5ecc07106b8ed7f99d1}\label{class_inventory_system_ac5955e815df7f5ecc07106b8ed7f99d1}} 
+\index{InventorySystem@{InventorySystem}!onItemCollected@{onItemCollected}}
+\index{onItemCollected@{onItemCollected}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{onItemCollected}{onItemCollected}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_on_item_event}{On\+Item\+Event}} Inventory\+System.\+on\+Item\+Collected = new \mbox{\hyperlink{class_on_item_event}{On\+Item\+Event}}()}
+
+\mbox{\Hypertarget{class_inventory_system_a086a261282aa172c63e8b18e1a22fa78}\label{class_inventory_system_a086a261282aa172c63e8b18e1a22fa78}} 
+\index{InventorySystem@{InventorySystem}!uIManager@{uIManager}}
+\index{uIManager@{uIManager}!InventorySystem@{InventorySystem}}
+\doxysubsubsection{\texorpdfstring{uIManager}{uIManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inventory_u_i_manager}{Inventory\+U\+I\+Manager}} Inventory\+System.\+u\+I\+Manager = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\mbox{\hyperlink{_inventory_system_8cs}{Inventory\+System.\+cs}}\end{DoxyCompactItemize}
