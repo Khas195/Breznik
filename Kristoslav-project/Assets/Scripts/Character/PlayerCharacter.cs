@@ -13,7 +13,7 @@ public class PlayerCharacter : Character
     /// Whether the character should regen health and stamina or not.
     /// </summary>
     bool shouldRegen = false;
-    
+
 
 
     /// <summary>
@@ -41,6 +41,10 @@ public class PlayerCharacter : Character
             Regen();
         }
         regenCoolDownTimer.Tick();
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            BeingDamage(1000);
+        }
     }
 
     /// <summary>

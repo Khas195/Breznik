@@ -29,10 +29,6 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     List<GameState> possibleGameStates = new List<GameState>();
 
 
-
-    [SerializeField]
-    Text canInteractText;
-
     /// <summary>
     /// The name of the scene that is going to be loaded when moving into the LoadingScene.
     /// </summary>

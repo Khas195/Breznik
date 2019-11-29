@@ -91,18 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnWeaponHit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Shake
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.2
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   damage: 20
   wielder: {fileID: 7224959950909961287}
   wielderChar: {fileID: 311056116}
@@ -112,6 +101,9 @@ MonoBehaviour:
   - {fileID: 7766168901856136893}
   - {fileID: 2113142331773439123}
   swordEdge: {fileID: 6857394041753847913}
+  attackableMasks:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1841920558
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54411025f528d314e8f57369682c9658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  host: {fileID: 1854302561919761884}
+  host: {fileID: 3814753695939958152}
   interactCue: {fileID: 0}
 --- !u!1 &706283024076468064
 GameObject:
@@ -316,9 +308,31 @@ MonoBehaviour:
   OnCharacterDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 706283024076468064}
+      - m_Target: {fileID: 851732400}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 706283025778376290}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5272210171014145444}
+        m_MethodName: TriggerDeadAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -892,6 +906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9993eb2adb36d4ebed4a739851633e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDeathAnimationDone:
+    m_PersistentCalls:
+      m_Calls: []
   OnDamageTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -1076,12 +1093,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1854302561919761884 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3514334599668654679, guid: 5c920cf226a1bce49af4db463705b472,
-    type: 3}
-  m_PrefabInstance: {fileID: 2990006327961427851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &4365515067298097966 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1579582847686325413, guid: 5c920cf226a1bce49af4db463705b472,
@@ -1103,6 +1114,12 @@ GameObject:
 --- !u!4 &2123227515284787282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3749698335119577049, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3814753695939958152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2129666816750094851, guid: 5c920cf226a1bce49af4db463705b472,
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,533 @@
+\hypertarget{class_n_p_c_controller}{}\doxysection{N\+P\+C\+Controller Class Reference}
+\label{class_n_p_c_controller}\index{NPCController@{NPCController}}
+
+
+Inheritance diagram for N\+P\+C\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_n_p_c_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for N\+P\+C\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a8a17ccf18f60843d6894eb61f9cf532c}{Set\+Ai\+Active}} (bool active)
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a23fd795c5c17df41b42f79b3020bd827}{Set\+Patrol\+Range}} (int size)
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_acb65c639ab38a8e062f60f1beb56b73b}{Set\+Home}} (Transform transform)
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_a593d30ebfef585c2f3afbbd912a7823d}{Has\+Reach\+Point}} (Vector3 point)
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_ac8d33197efe7afb54a4ed7ffa08a579d}{Has\+Reached\+Current\+Destination}} ()
+\item 
+Nav\+Mesh\+Path \mbox{\hyperlink{class_n_p_c_controller_a9a1083cdcab90a17b8a7ca7dffe7cf41}{Get\+Current\+Path}} ()
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_a0a308323e7cfa36248175cf6c120fa45}{Set\+Destination}} (Vector3 new\+Destination)
+\item 
+Vector3 \mbox{\hyperlink{class_n_p_c_controller_a6923c30f3564b4521a6a2c20ce153376}{Get\+Random\+Point\+In\+Area}} ()
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_adc24db65003b25091b149b5e7144e0ba}{Look\+For\+Hostile}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a51f1d69c0589ef6bbe9f8f99580982ca}{Request\+Transition}} (\mbox{\hyperlink{class_scriptable_state}{Scriptable\+State}} next\+State)
+\item 
+Transform \mbox{\hyperlink{class_n_p_c_controller_adf6dac16be2de83c3fb6c904578ed04e}{Get\+Chase\+Target}} ()
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_aab21380894bb2db2b8bc83c6a2ec89cf}{Does\+Chase\+Target\+Exist}} ()
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_aef0e7717f08af17c919aab392c77b4f3}{Is\+In\+Attack\+Range}} (Vector3 position)
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a72edf479fcdce7f3a76707c3eb366b75}{Attack}} (Transform target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_n_p_c_controller_a97967683d10fea48400a2dee552f00e2}{chase\+Target}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a1c83390b87c5e9289fe28548cd7908d1}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_ac4ab080026202cca95c6c6f0bbf75cfe}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a25b4525d955f0ee00a4315f9c1f8bce7}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_ad5a20c22b8c5b8060112a558b82e313a}{Process\+Movement}} ()
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_a6341c5d18ed28a750615946aaed8411e}{Is\+Path\+Still\+Valid}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a6cc7638c8b0d82098a2b80627769cbbe}{Advance\+To\+Next\+Point\+In\+Path}} ()
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_ad49e506b6ee9d2f916693a5f16aa428e}{Convert\+Direction\+To\+Character\+Move\+Input}} (Vector3 \mbox{\hyperlink{class_n_p_c_controller_acb5b782b74852b5611d5534530bf06e5}{current\+Point}})
+\item 
+void \mbox{\hyperlink{class_n_p_c_controller_a4c75974f2e9bf3972397093d5bb12ae6}{On\+Draw\+Gizmos}} ()
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_ae0024c2aa3af1bb95570348333f08149}{Calculate\+Path}} (Vector3 new\+Destination)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character}{Character}} \mbox{\hyperlink{class_n_p_c_controller_aefb30c7d84f0b8afcf02282b11af90f0}{ai\+Character}} = null
+\item 
+\mbox{\hyperlink{class_scriptable_state}{Scriptable\+State}} \mbox{\hyperlink{class_n_p_c_controller_a13587d73375d50a1de13e7bfd59090ba}{current\+State}} = null
+\item 
+\mbox{\hyperlink{class_scriptable_state}{Scriptable\+State}} \mbox{\hyperlink{class_n_p_c_controller_ad9194f4d155f465bfe57ae87e24aad66}{remain\+In\+State}}
+\item 
+bool \mbox{\hyperlink{class_n_p_c_controller_a435742406f971368ba8ee3bc4a39592c}{is\+A\+I\+Active}} = false
+\item 
+Vector3 \mbox{\hyperlink{class_n_p_c_controller_aed003790921692b416df5b21a3c6271a}{current\+Destination}} = Vector3.\+zero
+\item 
+Nav\+Mesh\+Path \mbox{\hyperlink{class_n_p_c_controller_a5e1dd842a47414d149f3c37dc0ac2788}{current\+Path}} = null
+\item 
+int \mbox{\hyperlink{class_n_p_c_controller_acb5b782b74852b5611d5534530bf06e5}{current\+Point}} = 0
+\item 
+Transform \mbox{\hyperlink{class_n_p_c_controller_acb63af1361fcac63a84550c5c74603a3}{root\+Position}}
+\item 
+float \mbox{\hyperlink{class_n_p_c_controller_a50fe06ab11f500e998b976728053d6df}{patrol\+Range}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_p_c_controller_a6cc7638c8b0d82098a2b80627769cbbe}\label{class_n_p_c_controller_a6cc7638c8b0d82098a2b80627769cbbe}} 
+\index{NPCController@{NPCController}!AdvanceToNextPointInPath@{AdvanceToNextPointInPath}}
+\index{AdvanceToNextPointInPath@{AdvanceToNextPointInPath}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{AdvanceToNextPointInPath()}{AdvanceToNextPointInPath()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Advance\+To\+Next\+Point\+In\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a6cc7638c8b0d82098a2b80627769cbbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a72edf479fcdce7f3a76707c3eb366b75}\label{class_n_p_c_controller_a72edf479fcdce7f3a76707c3eb366b75}} 
+\index{NPCController@{NPCController}!Attack@{Attack}}
+\index{Attack@{Attack}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Attack (\begin{DoxyParamCaption}\item[{Transform}]{target }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a72edf479fcdce7f3a76707c3eb366b75_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{class_n_p_c_controller_a72edf479fcdce7f3a76707c3eb366b75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a1c83390b87c5e9289fe28548cd7908d1}\label{class_n_p_c_controller_a1c83390b87c5e9289fe28548cd7908d1}} 
+\index{NPCController@{NPCController}!Awake@{Awake}}
+\index{Awake@{Awake}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_n_p_c_controller_a1c83390b87c5e9289fe28548cd7908d1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_ae0024c2aa3af1bb95570348333f08149}\label{class_n_p_c_controller_ae0024c2aa3af1bb95570348333f08149}} 
+\index{NPCController@{NPCController}!CalculatePath@{CalculatePath}}
+\index{CalculatePath@{CalculatePath}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{CalculatePath()}{CalculatePath()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Calculate\+Path (\begin{DoxyParamCaption}\item[{Vector3}]{new\+Destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ae0024c2aa3af1bb95570348333f08149_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ae0024c2aa3af1bb95570348333f08149_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_ad49e506b6ee9d2f916693a5f16aa428e}\label{class_n_p_c_controller_ad49e506b6ee9d2f916693a5f16aa428e}} 
+\index{NPCController@{NPCController}!ConvertDirectionToCharacterMoveInput@{ConvertDirectionToCharacterMoveInput}}
+\index{ConvertDirectionToCharacterMoveInput@{ConvertDirectionToCharacterMoveInput}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{ConvertDirectionToCharacterMoveInput()}{ConvertDirectionToCharacterMoveInput()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Convert\+Direction\+To\+Character\+Move\+Input (\begin{DoxyParamCaption}\item[{Vector3}]{current\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ad49e506b6ee9d2f916693a5f16aa428e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ad49e506b6ee9d2f916693a5f16aa428e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_aab21380894bb2db2b8bc83c6a2ec89cf}\label{class_n_p_c_controller_aab21380894bb2db2b8bc83c6a2ec89cf}} 
+\index{NPCController@{NPCController}!DoesChaseTargetExist@{DoesChaseTargetExist}}
+\index{DoesChaseTargetExist@{DoesChaseTargetExist}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{DoesChaseTargetExist()}{DoesChaseTargetExist()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Does\+Chase\+Target\+Exist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_aab21380894bb2db2b8bc83c6a2ec89cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_adf6dac16be2de83c3fb6c904578ed04e}\label{class_n_p_c_controller_adf6dac16be2de83c3fb6c904578ed04e}} 
+\index{NPCController@{NPCController}!GetChaseTarget@{GetChaseTarget}}
+\index{GetChaseTarget@{GetChaseTarget}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{GetChaseTarget()}{GetChaseTarget()}}
+{\footnotesize\ttfamily Transform N\+P\+C\+Controller.\+Get\+Chase\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_adf6dac16be2de83c3fb6c904578ed04e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a9a1083cdcab90a17b8a7ca7dffe7cf41}\label{class_n_p_c_controller_a9a1083cdcab90a17b8a7ca7dffe7cf41}} 
+\index{NPCController@{NPCController}!GetCurrentPath@{GetCurrentPath}}
+\index{GetCurrentPath@{GetCurrentPath}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPath()}{GetCurrentPath()}}
+{\footnotesize\ttfamily Nav\+Mesh\+Path N\+P\+C\+Controller.\+Get\+Current\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a6923c30f3564b4521a6a2c20ce153376}\label{class_n_p_c_controller_a6923c30f3564b4521a6a2c20ce153376}} 
+\index{NPCController@{NPCController}!GetRandomPointInArea@{GetRandomPointInArea}}
+\index{GetRandomPointInArea@{GetRandomPointInArea}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{GetRandomPointInArea()}{GetRandomPointInArea()}}
+{\footnotesize\ttfamily Vector3 N\+P\+C\+Controller.\+Get\+Random\+Point\+In\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a6923c30f3564b4521a6a2c20ce153376_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_ac8d33197efe7afb54a4ed7ffa08a579d}\label{class_n_p_c_controller_ac8d33197efe7afb54a4ed7ffa08a579d}} 
+\index{NPCController@{NPCController}!HasReachedCurrentDestination@{HasReachedCurrentDestination}}
+\index{HasReachedCurrentDestination@{HasReachedCurrentDestination}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{HasReachedCurrentDestination()}{HasReachedCurrentDestination()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Has\+Reached\+Current\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ac8d33197efe7afb54a4ed7ffa08a579d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ac8d33197efe7afb54a4ed7ffa08a579d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a593d30ebfef585c2f3afbbd912a7823d}\label{class_n_p_c_controller_a593d30ebfef585c2f3afbbd912a7823d}} 
+\index{NPCController@{NPCController}!HasReachPoint@{HasReachPoint}}
+\index{HasReachPoint@{HasReachPoint}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{HasReachPoint()}{HasReachPoint()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Has\+Reach\+Point (\begin{DoxyParamCaption}\item[{Vector3}]{point }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a593d30ebfef585c2f3afbbd912a7823d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a593d30ebfef585c2f3afbbd912a7823d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_aef0e7717f08af17c919aab392c77b4f3}\label{class_n_p_c_controller_aef0e7717f08af17c919aab392c77b4f3}} 
+\index{NPCController@{NPCController}!IsInAttackRange@{IsInAttackRange}}
+\index{IsInAttackRange@{IsInAttackRange}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{IsInAttackRange()}{IsInAttackRange()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Is\+In\+Attack\+Range (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_n_p_c_controller_aef0e7717f08af17c919aab392c77b4f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_aef0e7717f08af17c919aab392c77b4f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a6341c5d18ed28a750615946aaed8411e}\label{class_n_p_c_controller_a6341c5d18ed28a750615946aaed8411e}} 
+\index{NPCController@{NPCController}!IsPathStillValid@{IsPathStillValid}}
+\index{IsPathStillValid@{IsPathStillValid}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{IsPathStillValid()}{IsPathStillValid()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Is\+Path\+Still\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_n_p_c_controller_a6341c5d18ed28a750615946aaed8411e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a6341c5d18ed28a750615946aaed8411e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_adc24db65003b25091b149b5e7144e0ba}\label{class_n_p_c_controller_adc24db65003b25091b149b5e7144e0ba}} 
+\index{NPCController@{NPCController}!LookForHostile@{LookForHostile}}
+\index{LookForHostile@{LookForHostile}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{LookForHostile()}{LookForHostile()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Look\+For\+Hostile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_adc24db65003b25091b149b5e7144e0ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_adc24db65003b25091b149b5e7144e0ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a4c75974f2e9bf3972397093d5bb12ae6}\label{class_n_p_c_controller_a4c75974f2e9bf3972397093d5bb12ae6}} 
+\index{NPCController@{NPCController}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a4c75974f2e9bf3972397093d5bb12ae6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_ad5a20c22b8c5b8060112a558b82e313a}\label{class_n_p_c_controller_ad5a20c22b8c5b8060112a558b82e313a}} 
+\index{NPCController@{NPCController}!ProcessMovement@{ProcessMovement}}
+\index{ProcessMovement@{ProcessMovement}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{ProcessMovement()}{ProcessMovement()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Process\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ad5a20c22b8c5b8060112a558b82e313a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_ad5a20c22b8c5b8060112a558b82e313a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a51f1d69c0589ef6bbe9f8f99580982ca}\label{class_n_p_c_controller_a51f1d69c0589ef6bbe9f8f99580982ca}} 
+\index{NPCController@{NPCController}!RequestTransition@{RequestTransition}}
+\index{RequestTransition@{RequestTransition}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{RequestTransition()}{RequestTransition()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Request\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scriptable_state}{Scriptable\+State}}}]{next\+State }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a51f1d69c0589ef6bbe9f8f99580982ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_a8a17ccf18f60843d6894eb61f9cf532c}\label{class_n_p_c_controller_a8a17ccf18f60843d6894eb61f9cf532c}} 
+\index{NPCController@{NPCController}!SetAiActive@{SetAiActive}}
+\index{SetAiActive@{SetAiActive}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{SetAiActive()}{SetAiActive()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Set\+Ai\+Active (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a0a308323e7cfa36248175cf6c120fa45}\label{class_n_p_c_controller_a0a308323e7cfa36248175cf6c120fa45}} 
+\index{NPCController@{NPCController}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+Set\+Destination (\begin{DoxyParamCaption}\item[{Vector3}]{new\+Destination }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a0a308323e7cfa36248175cf6c120fa45_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a0a308323e7cfa36248175cf6c120fa45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_p_c_controller_acb65c639ab38a8e062f60f1beb56b73b}\label{class_n_p_c_controller_acb65c639ab38a8e062f60f1beb56b73b}} 
+\index{NPCController@{NPCController}!SetHome@{SetHome}}
+\index{SetHome@{SetHome}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{SetHome()}{SetHome()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Set\+Home (\begin{DoxyParamCaption}\item[{Transform}]{transform }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a23fd795c5c17df41b42f79b3020bd827}\label{class_n_p_c_controller_a23fd795c5c17df41b42f79b3020bd827}} 
+\index{NPCController@{NPCController}!SetPatrolRange@{SetPatrolRange}}
+\index{SetPatrolRange@{SetPatrolRange}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{SetPatrolRange()}{SetPatrolRange()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Set\+Patrol\+Range (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_n_p_c_controller_ac4ab080026202cca95c6c6f0bbf75cfe}\label{class_n_p_c_controller_ac4ab080026202cca95c6c6f0bbf75cfe}} 
+\index{NPCController@{NPCController}!Start@{Start}}
+\index{Start@{Start}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a25b4525d955f0ee00a4315f9c1f8bce7}\label{class_n_p_c_controller_a25b4525d955f0ee00a4315f9c1f8bce7}} 
+\index{NPCController@{NPCController}!Update@{Update}}
+\index{Update@{Update}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void N\+P\+C\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_p_c_controller_a25b4525d955f0ee00a4315f9c1f8bce7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_n_p_c_controller_aefb30c7d84f0b8afcf02282b11af90f0}\label{class_n_p_c_controller_aefb30c7d84f0b8afcf02282b11af90f0}} 
+\index{NPCController@{NPCController}!aiCharacter@{aiCharacter}}
+\index{aiCharacter@{aiCharacter}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{aiCharacter}{aiCharacter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character}{Character}} N\+P\+C\+Controller.\+ai\+Character = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a97967683d10fea48400a2dee552f00e2}\label{class_n_p_c_controller_a97967683d10fea48400a2dee552f00e2}} 
+\index{NPCController@{NPCController}!chaseTarget@{chaseTarget}}
+\index{chaseTarget@{chaseTarget}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{chaseTarget}{chaseTarget}}
+{\footnotesize\ttfamily Transform N\+P\+C\+Controller.\+chase\+Target = null}
+
+\mbox{\Hypertarget{class_n_p_c_controller_aed003790921692b416df5b21a3c6271a}\label{class_n_p_c_controller_aed003790921692b416df5b21a3c6271a}} 
+\index{NPCController@{NPCController}!currentDestination@{currentDestination}}
+\index{currentDestination@{currentDestination}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{currentDestination}{currentDestination}}
+{\footnotesize\ttfamily Vector3 N\+P\+C\+Controller.\+current\+Destination = Vector3.\+zero\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a5e1dd842a47414d149f3c37dc0ac2788}\label{class_n_p_c_controller_a5e1dd842a47414d149f3c37dc0ac2788}} 
+\index{NPCController@{NPCController}!currentPath@{currentPath}}
+\index{currentPath@{currentPath}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{currentPath}{currentPath}}
+{\footnotesize\ttfamily Nav\+Mesh\+Path N\+P\+C\+Controller.\+current\+Path = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_acb5b782b74852b5611d5534530bf06e5}\label{class_n_p_c_controller_acb5b782b74852b5611d5534530bf06e5}} 
+\index{NPCController@{NPCController}!currentPoint@{currentPoint}}
+\index{currentPoint@{currentPoint}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{currentPoint}{currentPoint}}
+{\footnotesize\ttfamily int N\+P\+C\+Controller.\+current\+Point = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a13587d73375d50a1de13e7bfd59090ba}\label{class_n_p_c_controller_a13587d73375d50a1de13e7bfd59090ba}} 
+\index{NPCController@{NPCController}!currentState@{currentState}}
+\index{currentState@{currentState}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{currentState}{currentState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scriptable_state}{Scriptable\+State}} N\+P\+C\+Controller.\+current\+State = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a435742406f971368ba8ee3bc4a39592c}\label{class_n_p_c_controller_a435742406f971368ba8ee3bc4a39592c}} 
+\index{NPCController@{NPCController}!isAIActive@{isAIActive}}
+\index{isAIActive@{isAIActive}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{isAIActive}{isAIActive}}
+{\footnotesize\ttfamily bool N\+P\+C\+Controller.\+is\+A\+I\+Active = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_a50fe06ab11f500e998b976728053d6df}\label{class_n_p_c_controller_a50fe06ab11f500e998b976728053d6df}} 
+\index{NPCController@{NPCController}!patrolRange@{patrolRange}}
+\index{patrolRange@{patrolRange}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{patrolRange}{patrolRange}}
+{\footnotesize\ttfamily float N\+P\+C\+Controller.\+patrol\+Range\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_ad9194f4d155f465bfe57ae87e24aad66}\label{class_n_p_c_controller_ad9194f4d155f465bfe57ae87e24aad66}} 
+\index{NPCController@{NPCController}!remainInState@{remainInState}}
+\index{remainInState@{remainInState}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{remainInState}{remainInState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scriptable_state}{Scriptable\+State}} N\+P\+C\+Controller.\+remain\+In\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_n_p_c_controller_acb63af1361fcac63a84550c5c74603a3}\label{class_n_p_c_controller_acb63af1361fcac63a84550c5c74603a3}} 
+\index{NPCController@{NPCController}!rootPosition@{rootPosition}}
+\index{rootPosition@{rootPosition}!NPCController@{NPCController}}
+\doxysubsubsection{\texorpdfstring{rootPosition}{rootPosition}}
+{\footnotesize\ttfamily Transform N\+P\+C\+Controller.\+root\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Player/\mbox{\hyperlink{_n_p_c_controller_8cs}{N\+P\+C\+Controller.\+cs}}\end{DoxyCompactItemize}

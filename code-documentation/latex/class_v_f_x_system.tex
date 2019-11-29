@@ -1,0 +1,177 @@
+\hypertarget{class_v_f_x_system}{}\doxysection{V\+F\+X\+System Class Reference}
+\label{class_v_f_x_system}\index{VFXSystem@{VFXSystem}}
+
+
+Experimental scripts for spawning fire vfxxxx  
+
+
+
+
+Inheritance diagram for V\+F\+X\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_v_f_x_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V\+F\+X\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_v_f_x_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_v_f_x_system_a2c20bf8ded2c93badee40715a4646c3a}{Spawn\+Death}} (Vector3 location, float time)
+\item 
+void \mbox{\hyperlink{class_v_f_x_system_aa0f086ba41a87ee6f6f8c546805bc48a}{Spawn\+Hit}} (Vector3 location, float time)
+\item 
+void \mbox{\hyperlink{class_v_f_x_system_af4b42f99b0c289536ad8a89240e29ebe}{Spawn\+Blood}} (Vector3 location, float time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_v_f_x_system_a2380d4cfb380b7ead18c6f442a89e09f}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerator \mbox{\hyperlink{class_v_f_x_system_a07914700f78eb73c7dc4f9369826aa51}{Delete\+V\+FX}} (Game\+Object vfx\+To\+Delete, float time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_v_f_x_system_a702df883b96e38bccd6f7a11629133dc}{random\+Death\+V\+FX}} = null
+\item 
+Game\+Object \mbox{\hyperlink{class_v_f_x_system_a8774b4a8d66f7df7786bbe2a1d42b3ae}{attack\+Hit\+V\+FX}} = null
+\item 
+Game\+Object \mbox{\hyperlink{class_v_f_x_system_ab9ab16fce94e7e01ad9bad76e73d24f4}{being\+Damage\+V\+FX}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}{instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Experimental scripts for spawning fire vfxxxx 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_v_f_x_system_a2380d4cfb380b7ead18c6f442a89e09f}\label{class_v_f_x_system_a2380d4cfb380b7ead18c6f442a89e09f}} 
+\index{VFXSystem@{VFXSystem}!Awake@{Awake}}
+\index{Awake@{Awake}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily override void V\+F\+X\+System.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}{Singleton\+Monobehavior$<$ V\+F\+X\+System $>$}}.
+
+\mbox{\Hypertarget{class_v_f_x_system_a07914700f78eb73c7dc4f9369826aa51}\label{class_v_f_x_system_a07914700f78eb73c7dc4f9369826aa51}} 
+\index{VFXSystem@{VFXSystem}!DeleteVFX@{DeleteVFX}}
+\index{DeleteVFX@{DeleteVFX}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{DeleteVFX()}{DeleteVFX()}}
+{\footnotesize\ttfamily I\+Enumerator V\+F\+X\+System.\+Delete\+V\+FX (\begin{DoxyParamCaption}\item[{Game\+Object}]{vfx\+To\+Delete,  }\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_v_f_x_system_a07914700f78eb73c7dc4f9369826aa51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}\label{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}} 
+\index{VFXSystem@{VFXSystem}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_v_f_x_system_af4b42f99b0c289536ad8a89240e29ebe}\label{class_v_f_x_system_af4b42f99b0c289536ad8a89240e29ebe}} 
+\index{VFXSystem@{VFXSystem}!SpawnBlood@{SpawnBlood}}
+\index{SpawnBlood@{SpawnBlood}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{SpawnBlood()}{SpawnBlood()}}
+{\footnotesize\ttfamily void V\+F\+X\+System.\+Spawn\+Blood (\begin{DoxyParamCaption}\item[{Vector3}]{location,  }\item[{float}]{time }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_v_f_x_system_af4b42f99b0c289536ad8a89240e29ebe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_v_f_x_system_a2c20bf8ded2c93badee40715a4646c3a}\label{class_v_f_x_system_a2c20bf8ded2c93badee40715a4646c3a}} 
+\index{VFXSystem@{VFXSystem}!SpawnDeath@{SpawnDeath}}
+\index{SpawnDeath@{SpawnDeath}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{SpawnDeath()}{SpawnDeath()}}
+{\footnotesize\ttfamily void V\+F\+X\+System.\+Spawn\+Death (\begin{DoxyParamCaption}\item[{Vector3}]{location,  }\item[{float}]{time }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_v_f_x_system_a2c20bf8ded2c93badee40715a4646c3a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_v_f_x_system_aa0f086ba41a87ee6f6f8c546805bc48a}\label{class_v_f_x_system_aa0f086ba41a87ee6f6f8c546805bc48a}} 
+\index{VFXSystem@{VFXSystem}!SpawnHit@{SpawnHit}}
+\index{SpawnHit@{SpawnHit}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{SpawnHit()}{SpawnHit()}}
+{\footnotesize\ttfamily void V\+F\+X\+System.\+Spawn\+Hit (\begin{DoxyParamCaption}\item[{Vector3}]{location,  }\item[{float}]{time }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_v_f_x_system_aa0f086ba41a87ee6f6f8c546805bc48a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_v_f_x_system_a8774b4a8d66f7df7786bbe2a1d42b3ae}\label{class_v_f_x_system_a8774b4a8d66f7df7786bbe2a1d42b3ae}} 
+\index{VFXSystem@{VFXSystem}!attackHitVFX@{attackHitVFX}}
+\index{attackHitVFX@{attackHitVFX}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{attackHitVFX}{attackHitVFX}}
+{\footnotesize\ttfamily Game\+Object V\+F\+X\+System.\+attack\+Hit\+V\+FX = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_v_f_x_system_ab9ab16fce94e7e01ad9bad76e73d24f4}\label{class_v_f_x_system_ab9ab16fce94e7e01ad9bad76e73d24f4}} 
+\index{VFXSystem@{VFXSystem}!beingDamageVFX@{beingDamageVFX}}
+\index{beingDamageVFX@{beingDamageVFX}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{beingDamageVFX}{beingDamageVFX}}
+{\footnotesize\ttfamily Game\+Object V\+F\+X\+System.\+being\+Damage\+V\+FX = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}\label{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}} 
+\index{VFXSystem@{VFXSystem}!instance@{instance}}
+\index{instance@{instance}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_v_f_x_system_a702df883b96e38bccd6f7a11629133dc}\label{class_v_f_x_system_a702df883b96e38bccd6f7a11629133dc}} 
+\index{VFXSystem@{VFXSystem}!randomDeathVFX@{randomDeathVFX}}
+\index{randomDeathVFX@{randomDeathVFX}!VFXSystem@{VFXSystem}}
+\doxysubsubsection{\texorpdfstring{randomDeathVFX}{randomDeathVFX}}
+{\footnotesize\ttfamily Game\+Object V\+F\+X\+System.\+random\+Death\+V\+FX = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\mbox{\hyperlink{_v_f_x_system_8cs}{V\+F\+X\+System.\+cs}}\end{DoxyCompactItemize}

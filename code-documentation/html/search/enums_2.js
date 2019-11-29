@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tweentype_957',['TweenType',['../class_tweener.html#ae0bb19752c20d7484f42f7ca2d130229',1,'Tweener']]]
+  ['infoboxtype_1648',['InfoBoxType',['../namespace_naughty_attributes.html#aa04406e306e9b4ec12d055088cb37079',1,'NaughtyAttributes']]]
 ];

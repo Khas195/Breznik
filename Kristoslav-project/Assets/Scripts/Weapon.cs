@@ -17,6 +17,8 @@ public class Weapon : MonoBehaviour
     List<Collider> hitboxes = new List<Collider>();
     [SerializeField]
     GameObject swordEdge;
+    [SerializeField]
+    LayerMask attackableMasks;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class Weapon : MonoBehaviour
         if (hitBoxIndex < 1 || hitBoxIndex > hitboxes.Count) return;
         var targetHitBoxes = hitboxes[hitBoxIndex - 1];
         Collider[] cols = Physics.OverlapBox(targetHitBoxes.bounds.center, targetHitBoxes.bounds.extents,
-         targetHitBoxes.transform.rotation, LayerMask.GetMask("HitBox"));
+         targetHitBoxes.transform.rotation, attackableMasks);
         foreach (var col in cols)
         {
             TryToDealsDamage(col);
@@ -43,7 +45,7 @@ public class Weapon : MonoBehaviour
         {
             Logger.CharacterDebug(wielderChar, "Character's weapon didnt touch himself.");
             var character = otherObject.GetComponentInChildren<Character>();
-            if (character)
+            if (character && character.IsAlive())
             {
                 Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
                 VFXSystem.GetInstance().SpawnHit(targetCollider.ClosestPointOnBounds(swordEdge.transform.position), 5f);

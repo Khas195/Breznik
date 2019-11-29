@@ -112,21 +112,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a005eed16b6fc4f20d48a1cdeb788dcee"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a005eed16b6fc4f20d48a1cdeb788dcee">SetRigidBody</a> (Rigidbody hostRigidBody)</td></tr>
 <tr class="memdesc:a005eed16b6fc4f20d48a1cdeb788dcee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rigid body of the character's model.  <a href="class_movement.html#a005eed16b6fc4f20d48a1cdeb788dcee">More...</a><br /></td></tr>
 <tr class="separator:a005eed16b6fc4f20d48a1cdeb788dcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aad16d2f3cedb08e246f2befce8f11d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a1aad16d2f3cedb08e246f2befce8f11d">MoveRelativeTo</a> (float forward, float side, Transform relativeTo)</td></tr>
-<tr class="memdesc:a1aad16d2f3cedb08e246f2befce8f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function received the player's inputs (forward and side) then saved them to be processed in the next fixed update.  <a href="class_movement.html#a1aad16d2f3cedb08e246f2befce8f11d">More...</a><br /></td></tr>
-<tr class="separator:a1aad16d2f3cedb08e246f2befce8f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff6031ad6e03730fbe2cae1ab8c21de"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a8ff6031ad6e03730fbe2cae1ab8c21de">Move</a> (float forward, float side)</td></tr>
+<tr class="memdesc:a8ff6031ad6e03730fbe2cae1ab8c21de"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function received the player's inputs (forward and side) then saved them to be processed in the next fixed update.  <a href="class_movement.html#a8ff6031ad6e03730fbe2cae1ab8c21de">More...</a><br /></td></tr>
+<tr class="separator:a8ff6031ad6e03730fbe2cae1ab8c21de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a35054a243546e8d3318927034423a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a24a35054a243546e8d3318927034423a">SignalJump</a> ()</td></tr>
 <tr class="memdesc:a24a35054a243546e8d3318927034423a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will signal the target object to jump in the next FixedUpdate.  <a href="class_movement.html#a24a35054a243546e8d3318927034423a">More...</a><br /></td></tr>
 <tr class="separator:a24a35054a243546e8d3318927034423a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb022cc9dff3e3af971272f75b6b241"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a0fb022cc9dff3e3af971272f75b6b241">GetCurrentSpeed</a> ()</td></tr>
+<tr class="separator:a0fb022cc9dff3e3af971272f75b6b241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39996c31188b6d361b9fb8b4c38cd6df"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a39996c31188b6d361b9fb8b4c38cd6df">IsTouchingGround</a> ()</td></tr>
 <tr class="memdesc:a39996c31188b6d361b9fb8b4c38cd6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (checkGroundsList) It is important to know that the desired pivot should be on the bottom of the object.  <a href="class_movement.html#a39996c31188b6d361b9fb8b4c38cd6df">More...</a><br /></td></tr>
 <tr class="separator:a39996c31188b6d361b9fb8b4c38cd6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae608f54844231fb1d257e6dfe0e6cb46"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ae608f54844231fb1d257e6dfe0e6cb46">HadMoveCommand</a> ()</td></tr>
 <tr class="memdesc:ae608f54844231fb1d257e6dfe0e6cb46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the character received any move command  <a href="class_movement.html#ae608f54844231fb1d257e6dfe0e6cb46">More...</a><br /></td></tr>
 <tr class="separator:ae608f54844231fb1d257e6dfe0e6cb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4daa38b53b9f561762dcf6ad22f8a2b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_movement.html#a4daa38b53b9f561762dcf6ad22f8a2b2">Move</a> (float forward, float side)</td></tr>
-<tr class="memdesc:a4daa38b53b9f561762dcf6ad22f8a2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">All movements actions should be handle in this function.  <a href="class_i_movement.html#a4daa38b53b9f561762dcf6ad22f8a2b2">More...</a><br /></td></tr>
-<tr class="separator:a4daa38b53b9f561762dcf6ad22f8a2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0c2e788cddf407850ec24a7a8c9814"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_movement.html#acdc5e47c665524aa577a125d851a7cb8">MovementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_movement.html#a9e0c2e788cddf407850ec24a7a8c9814">GetCurrentMoveMode</a> ()</td></tr>
 <tr class="separator:a9e0c2e788cddf407850ec24a7a8c9814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdaa8bbfbe2acd10fc9fab9bd922d452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_movement.html#afdaa8bbfbe2acd10fc9fab9bd922d452">SetMovementMode</a> (<a class="el" href="class_i_movement.html#acdc5e47c665524aa577a125d851a7cb8">MovementType</a> newMode)</td></tr>
@@ -160,12 +159,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aa48b6d3425dafaeef32461ba63a7fd13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#aa48b6d3425dafaeef32461ba63a7fd13">Initalize</a> ()</td></tr>
 <tr class="memdesc:aa48b6d3425dafaeef32461ba63a7fd13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the necessary component for movement to work  <a href="class_movement.html#aa48b6d3425dafaeef32461ba63a7fd13">More...</a><br /></td></tr>
 <tr class="separator:aa48b6d3425dafaeef32461ba63a7fd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c17078074b453bc974b1212ce83a2c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a5c17078074b453bc974b1212ce83a2c0">RotateTowardMovingDirection</a> (float forward, float side, Transform relativeTo)</td></tr>
-<tr class="memdesc:a5c17078074b453bc974b1212ce83a2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the host game object toward the forward direction of the movement  <a href="class_movement.html#a5c17078074b453bc974b1212ce83a2c0">More...</a><br /></td></tr>
-<tr class="separator:a5c17078074b453bc974b1212ce83a2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb0186627db1cf95a2d8bda689efbe14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#afb0186627db1cf95a2d8bda689efbe14">Step</a> (float speed, int forward, int side)</td></tr>
-<tr class="memdesc:afb0186627db1cf95a2d8bda689efbe14"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move the host object according to the forward and side inputs of the player.  <a href="class_movement.html#afb0186627db1cf95a2d8bda689efbe14">More...</a><br /></td></tr>
-<tr class="separator:afb0186627db1cf95a2d8bda689efbe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99355a317281a0f40fbf42e533dd026e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a99355a317281a0f40fbf42e533dd026e">Step</a> (float speed, float forward, float side)</td></tr>
+<tr class="memdesc:a99355a317281a0f40fbf42e533dd026e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move the host object according to the forward and side inputs of the player.  <a href="class_movement.html#a99355a317281a0f40fbf42e533dd026e">More...</a><br /></td></tr>
+<tr class="separator:a99355a317281a0f40fbf42e533dd026e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9278ecc9daea58c9bc3737cc388e58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ad9278ecc9daea58c9bc3737cc388e58f">Update</a> ()</td></tr>
 <tr class="separator:ad9278ecc9daea58c9bc3737cc388e58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9687a887cb7ae16793f2fdc42d00d11c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c">FixedUpdate</a> ()</td></tr>
@@ -185,21 +181,21 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aea878220d5d71936418464735e8f3a6e"><td class="memItemLeft" align="right" valign="top">Collider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#aea878220d5d71936418464735e8f3a6e">charAirbornedCollider</a> = null</td></tr>
 <tr class="memdesc:aea878220d5d71936418464735e8f3a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collider this character will use while it is airborned.  <a href="class_movement.html#aea878220d5d71936418464735e8f3a6e">More...</a><br /></td></tr>
 <tr class="separator:aea878220d5d71936418464735e8f3a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa53362f61508dd4e5e87ca6ffd3a023e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#aa53362f61508dd4e5e87ca6ffd3a023e">rotateTowardMovingDir</a> = false</td></tr>
-<tr class="memdesc:aa53362f61508dd4e5e87ca6ffd3a023e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide if the host object should move foward accodring the camera's facing direction.  <a href="class_movement.html#aa53362f61508dd4e5e87ca6ffd3a023e">More...</a><br /></td></tr>
-<tr class="separator:aa53362f61508dd4e5e87ca6ffd3a023e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c590f7eff8f8f553a0862007f1195f4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a7c590f7eff8f8f553a0862007f1195f4">rotateSpeed</a> = 5f</td></tr>
-<tr class="memdesc:a7c590f7eff8f8f553a0862007f1195f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotate speed of the host object toward the camera's facing direction.  <a href="class_movement.html#a7c590f7eff8f8f553a0862007f1195f4">More...</a><br /></td></tr>
-<tr class="separator:a7c590f7eff8f8f553a0862007f1195f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b0dfbfa22a2ac11a60583d365cd8c49"><td class="memItemLeft" align="right" valign="top">List&lt; Transform &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a1b0dfbfa22a2ac11a60583d365cd8c49">checkGroundsList</a> = new List&lt;Transform&gt;()</td></tr>
 <tr class="memdesc:a1b0dfbfa22a2ac11a60583d365cd8c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of points which is needed to know whether the host object is airborned or not  <a href="class_movement.html#a1b0dfbfa22a2ac11a60583d365cd8c49">More...</a><br /></td></tr>
 <tr class="separator:a1b0dfbfa22a2ac11a60583d365cd8c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de9048128c83fbb5216a8631641654c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a8de9048128c83fbb5216a8631641654c">targetSpeed</a> = 0</td></tr>
+<tr class="separator:a8de9048128c83fbb5216a8631641654c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcb50fc53898f08e62479dff066c8cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a5bcb50fc53898f08e62479dff066c8cc">currentSpeed</a> = 0</td></tr>
+<tr class="separator:a5bcb50fc53898f08e62479dff066c8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220553cfcd0ed19cdf8f54cca4275687"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a220553cfcd0ed19cdf8f54cca4275687">smoothAccel</a> = 0</td></tr>
+<tr class="separator:a220553cfcd0ed19cdf8f54cca4275687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafcdcbb7b7f0eacc6e097116cbebe43d"><td class="memItemLeft" align="right" valign="top">Rigidbody&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#aafcdcbb7b7f0eacc6e097116cbebe43d">charRigidbody</a> = null</td></tr>
 <tr class="separator:aafcdcbb7b7f0eacc6e097116cbebe43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb0c2b1365bd3c6214946c76136a3116"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#adb0c2b1365bd3c6214946c76136a3116">moveForward</a> = 0</td></tr>
-<tr class="separator:adb0c2b1365bd3c6214946c76136a3116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96b4f05db69348433e6802732759e15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ab96b4f05db69348433e6802732759e15">moveSide</a> = 0</td></tr>
-<tr class="separator:ab96b4f05db69348433e6802732759e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af093d4d24f3cad02c1f4a36b81c1f29e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#af093d4d24f3cad02c1f4a36b81c1f29e">moveForward</a> = 0</td></tr>
+<tr class="separator:af093d4d24f3cad02c1f4a36b81c1f29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c3e10c2f664380247f778816cfdd8b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a11c3e10c2f664380247f778816cfdd8b">moveSide</a> = 0</td></tr>
+<tr class="separator:a11c3e10c2f664380247f778816cfdd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f34d7479aeee7ced2e2d5e5d1953975"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a5f34d7479aeee7ced2e2d5e5d1953975">jumpSignal</a> = false</td></tr>
 <tr class="separator:a5f34d7479aeee7ced2e2d5e5d1953975"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae627ac9640050f425e9645febd491784"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ae627ac9640050f425e9645febd491784">targetTransform</a> = null</td></tr>
@@ -267,12 +263,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_movement_a9687a887cb7ae16793f2fdc42d00d11c_cgraph.png" border="0" usemap="#class_movement_a9687a887cb7ae16793f2fdc42d00d11c_cgraph" alt=""/></div>
 <map name="class_movement_a9687a887cb7ae16793f2fdc42d00d11c_cgraph" id="class_movement_a9687a887cb7ae16793f2fdc42d00d11c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,56,164,83"/>
-<area shape="rect" href="class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,56,404,83"/>
-<area shape="rect" href="class_i_movement.html#a9cbf026ffe723f7d41166c64da9ce157" title="Get the correspondence speed in the data container(MovementData) based on the currnt movement mode." alt="" coords="452,5,684,32"/>
-<area shape="rect" href="class_movement.html#a5da7e0919d0a3391146e9e14f9e45035" title="Perform the jumping action by adding an impulse force to the host&#39;s rigid body according to its up di..." alt="" coords="510,56,626,83"/>
-<area shape="rect" href="class_movement.html#afb0186627db1cf95a2d8bda689efbe14" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="512,107,624,133"/>
-<area shape="rect" href="class_logger.html#a6d23d60dee59d263d5c92fc1bf2ca32b" title=" " alt="" coords="732,107,893,133"/>
+<area shape="rect" title=" " alt="" coords="5,31,164,57"/>
+<area shape="rect" href="class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,31,404,57"/>
+<area shape="rect" href="class_movement.html#a5da7e0919d0a3391146e9e14f9e45035" title="Perform the jumping action by adding an impulse force to the host&#39;s rigid body according to its up di..." alt="" coords="452,5,568,32"/>
+<area shape="rect" href="class_movement.html#a99355a317281a0f40fbf42e533dd026e" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="454,56,566,83"/>
 </map>
 </div>
 
@@ -300,6 +294,33 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fb022cc9dff3e3af971272f75b6b241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb022cc9dff3e3af971272f75b6b241">&#9670;&nbsp;</a></span>GetCurrentSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override float Movement.GetCurrentSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_i_movement.html#aff500f9dbc0a37d65dac4e07149a968b">IMovement</a>.</p>
 
 </div>
 </div>
@@ -357,10 +378,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph.png" border="0" usemap="#class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph" alt=""/></div>
 <map name="class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph" id="class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph">
-<area shape="rect" title="Get the correspondence speed in the data container(MovementData) based on the currnt movement mode." alt="" coords="452,31,684,57"/>
-<area shape="rect" href="class_movement_root_motion.html#a0f3c41856efec842d5f28375b18b24de" title="All movements actions should be handle in this function." alt="" coords="217,5,399,32"/>
-<area shape="rect" href="class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,56,404,83"/>
-<area shape="rect" href="class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" title="Get the correspondence speed in the data container(MovementData) based on the currnt movement mode." alt="" coords="235,31,467,57"/>
+<area shape="rect" href="class_movement_root_motion.html#a0f3c41856efec842d5f28375b18b24de" title="All movements actions should be handle in this function." alt="" coords="5,5,187,32"/>
+<area shape="rect" href="class_movement.html#ad9278ecc9daea58c9bc3737cc388e58f" title=" " alt="" coords="33,56,159,83"/>
 </map>
 </div>
 
@@ -500,8 +520,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a4daa38b53b9f561762dcf6ad22f8a2b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4daa38b53b9f561762dcf6ad22f8a2b2">&#9670;&nbsp;</a></span>Move()</h2>
+<a id="a8ff6031ad6e03730fbe2cae1ab8c21de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff6031ad6e03730fbe2cae1ab8c21de">&#9670;&nbsp;</a></span>Move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,7 +530,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void IMovement.Move </td>
+          <td class="memname">override void Movement.Move </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>forward</em>, </td>
@@ -529,79 +549,21 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>All movements actions should be handle in this function. </p>
-
-<p>Reimplemented in <a class="el" href="class_movement2_d.html#aea00f7aee904a57de7b8679208265ce8">Movement2D</a>, and <a class="el" href="class_movement_root_motion.html#a0f3c41856efec842d5f28375b18b24de">MovementRootMotion</a>.</p>
-
-</div>
-</div>
-<a id="a1aad16d2f3cedb08e246f2befce8f11d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aad16d2f3cedb08e246f2befce8f11d">&#9670;&nbsp;</a></span>MoveRelativeTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void Movement.MoveRelativeTo </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>forward</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>side</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Transform&#160;</td>
-          <td class="paramname"><em>relativeTo</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>This function received the player's inputs (forward and side) then saved them to be processed in the next fixed update. </p>
-<p>If shouldMoveTowardCameraDirection is true then it will rotate the host game object toward the camera's faciing direction first.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">forward</td><td>fordward is how much the host game object should move forward and backward</td></tr>
     <tr><td class="paramname">side</td><td>side is how much the host game object should move sideway</td></tr>
-    <tr><td class="paramname">relativeTo</td><td>If rotate Toward Moving Dirrection is true, use the forward and side of this to rotate the host object toward when moving.</td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="class_i_movement.html#a8ccafaf76fb26f2d369697c89d6d8762">IMovement</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_movement_a1aad16d2f3cedb08e246f2befce8f11d_cgraph.png" border="0" usemap="#class_movement_a1aad16d2f3cedb08e246f2befce8f11d_cgraph" alt=""/></div>
-<map name="class_movement_a1aad16d2f3cedb08e246f2befce8f11d_cgraph" id="class_movement_a1aad16d2f3cedb08e246f2befce8f11d_cgraph">
-<area shape="rect" title="This function received the player&#39;s inputs (forward and side) then saved them to be processed in the ..." alt="" coords="5,5,180,32"/>
-<area shape="rect" href="class_logger.html#a6d23d60dee59d263d5c92fc1bf2ca32b" title=" " alt="" coords="480,5,641,32"/>
-<area shape="rect" href="class_movement.html#a5c17078074b453bc974b1212ce83a2c0" title="Rotate the host game object toward the forward direction of the movement" alt="" coords="228,27,432,69"/>
-</map>
-</div>
+<p>Reimplemented from <a class="el" href="class_i_movement.html#a4daa38b53b9f561762dcf6ad22f8a2b2">IMovement</a>.</p>
 
 </div>
 </div>
@@ -634,11 +596,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph.png" border="0" usemap="#class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph" alt=""/></div>
 <map name="class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph" id="class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph">
-<area shape="rect" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="5,56,197,83"/>
-<area shape="rect" href="class_i_movement.html#a9cbf026ffe723f7d41166c64da9ce157" title="Get the correspondence speed in the data container(MovementData) based on the currnt movement mode." alt="" coords="245,5,477,32"/>
-<area shape="rect" href="class_movement.html#a5da7e0919d0a3391146e9e14f9e45035" title="Perform the jumping action by adding an impulse force to the host&#39;s rigid body according to its up di..." alt="" coords="303,56,419,83"/>
-<area shape="rect" href="class_movement.html#afb0186627db1cf95a2d8bda689efbe14" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="305,107,417,133"/>
-<area shape="rect" href="class_logger.html#a6d23d60dee59d263d5c92fc1bf2ca32b" title=" " alt="" coords="525,107,687,133"/>
+<area shape="rect" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="5,31,197,57"/>
+<area shape="rect" href="class_movement.html#a5da7e0919d0a3391146e9e14f9e45035" title="Perform the jumping action by adding an impulse force to the host&#39;s rigid body according to its up di..." alt="" coords="245,5,361,32"/>
+<area shape="rect" href="class_movement.html#a99355a317281a0f40fbf42e533dd026e" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="247,56,359,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -648,76 +608,6 @@ Here is the caller graph for this function:</div>
 <map name="class_movement_a905b8f5912002eda95b1c42849a99d20_icgraph" id="class_movement_a905b8f5912002eda95b1c42849a99d20_icgraph">
 <area shape="rect" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,5,404,32"/>
 <area shape="rect" href="class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,5,164,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5c17078074b453bc974b1212ce83a2c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c17078074b453bc974b1212ce83a2c0">&#9670;&nbsp;</a></span>RotateTowardMovingDirection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Movement.RotateTowardMovingDirection </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>forward</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>side</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Transform&#160;</td>
-          <td class="paramname"><em>relativeTo</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Rotate the host game object toward the forward direction of the movement </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">forward</td><td>fordward is how much the host game object should move forward and backward</td></tr>
-    <tr><td class="paramname">side</td><td>side is how much the host game object should move sideway</td></tr>
-    <tr><td class="paramname">relativeTo</td><td>Rotate the host object toward the host facing direction.</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_movement_a5c17078074b453bc974b1212ce83a2c0_cgraph.png" border="0" usemap="#class_movement_a5c17078074b453bc974b1212ce83a2c0_cgraph" alt=""/></div>
-<map name="class_movement_a5c17078074b453bc974b1212ce83a2c0_cgraph" id="class_movement_a5c17078074b453bc974b1212ce83a2c0_cgraph">
-<area shape="rect" title="Rotate the host game object toward the forward direction of the movement" alt="" coords="5,5,209,47"/>
-<area shape="rect" href="class_logger.html#a6d23d60dee59d263d5c92fc1bf2ca32b" title=" " alt="" coords="257,13,419,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_movement_a5c17078074b453bc974b1212ce83a2c0_icgraph.png" border="0" usemap="#class_movement_a5c17078074b453bc974b1212ce83a2c0_icgraph" alt=""/></div>
-<map name="class_movement_a5c17078074b453bc974b1212ce83a2c0_icgraph" id="class_movement_a5c17078074b453bc974b1212ce83a2c0_icgraph">
-<area shape="rect" title="Rotate the host game object toward the forward direction of the movement" alt="" coords="228,5,432,47"/>
-<area shape="rect" href="class_movement.html#a1aad16d2f3cedb08e246f2befce8f11d" title="This function received the player&#39;s inputs (forward and side) then saved them to be processed in the ..." alt="" coords="5,13,180,39"/>
 </map>
 </div>
 
@@ -759,9 +649,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655_icgraph.png" border="0" usemap="#class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655_icgraph" alt=""/></div>
 <map name="class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655_icgraph" id="class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655_icgraph">
-<area shape="rect" title="Set the movement data." alt="" coords="216,31,411,57"/>
-<area shape="rect" href="class_enemy_character.html#aebb29b453a4abbfbe598051cafb9342f" title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect" href="class_player_character.html#aa643acaf1b50c05a9ef66b833ffc7f95" title=" " alt="" coords="7,56,166,83"/>
+<area shape="rect" title="Set the movement data." alt="" coords="175,5,369,32"/>
+<area shape="rect" href="class_character.html#a7cca5d1f141f2f46a1d087fd3e28a953" title=" " alt="" coords="5,5,127,32"/>
 </map>
 </div>
 
@@ -906,8 +795,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="afb0186627db1cf95a2d8bda689efbe14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb0186627db1cf95a2d8bda689efbe14">&#9670;&nbsp;</a></span>Step()</h2>
+<a id="a99355a317281a0f40fbf42e533dd026e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99355a317281a0f40fbf42e533dd026e">&#9670;&nbsp;</a></span>Step()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -924,13 +813,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>forward</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>side</em>&#160;</td>
         </tr>
         <tr>
@@ -957,19 +846,10 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_movement_afb0186627db1cf95a2d8bda689efbe14_cgraph.png" border="0" usemap="#class_movement_afb0186627db1cf95a2d8bda689efbe14_cgraph" alt=""/></div>
-<map name="class_movement_afb0186627db1cf95a2d8bda689efbe14_cgraph" id="class_movement_afb0186627db1cf95a2d8bda689efbe14_cgraph">
-<area shape="rect" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="5,5,117,32"/>
-<area shape="rect" href="class_logger.html#a6d23d60dee59d263d5c92fc1bf2ca32b" title=" " alt="" coords="165,5,327,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_movement_afb0186627db1cf95a2d8bda689efbe14_icgraph.png" border="0" usemap="#class_movement_afb0186627db1cf95a2d8bda689efbe14_icgraph" alt=""/></div>
-<map name="class_movement_afb0186627db1cf95a2d8bda689efbe14_icgraph" id="class_movement_afb0186627db1cf95a2d8bda689efbe14_icgraph">
+<div class="center"><img src="class_movement_a99355a317281a0f40fbf42e533dd026e_icgraph.png" border="0" usemap="#class_movement_a99355a317281a0f40fbf42e533dd026e_icgraph" alt=""/></div>
+<map name="class_movement_a99355a317281a0f40fbf42e533dd026e_icgraph" id="class_movement_a99355a317281a0f40fbf42e533dd026e_icgraph">
 <area shape="rect" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="452,5,564,32"/>
 <area shape="rect" href="class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,5,404,32"/>
 <area shape="rect" href="class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,5,164,32"/>
@@ -1000,6 +880,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_movement_ad9278ecc9daea58c9bc3737cc388e58f_cgraph.png" border="0" usemap="#class_movement_ad9278ecc9daea58c9bc3737cc388e58f_cgraph" alt=""/></div>
+<map name="class_movement_ad9278ecc9daea58c9bc3737cc388e58f_cgraph" id="class_movement_ad9278ecc9daea58c9bc3737cc388e58f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" href="class_i_movement.html#a9cbf026ffe723f7d41166c64da9ce157" title="Get the correspondence speed in the data container(MovementData) based on the currnt movement mode." alt="" coords="180,5,412,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1099,6 +988,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a5bcb50fc53898f08e62479dff066c8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bcb50fc53898f08e62479dff066c8cc">&#9670;&nbsp;</a></span>currentSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Movement.currentSpeed = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a67ec344a60681000b657db752bc21971"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67ec344a60681000b657db752bc21971">&#9670;&nbsp;</a></span>data</h2>
 
@@ -1167,8 +1078,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="adb0c2b1365bd3c6214946c76136a3116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb0c2b1365bd3c6214946c76136a3116">&#9670;&nbsp;</a></span>moveForward</h2>
+<a id="af093d4d24f3cad02c1f4a36b81c1f29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af093d4d24f3cad02c1f4a36b81c1f29e">&#9670;&nbsp;</a></span>moveForward</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1177,7 +1088,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Movement.moveForward = 0</td>
+          <td class="memname">float Movement.moveForward = 0</td>
         </tr>
       </table>
   </td>
@@ -1213,8 +1124,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab96b4f05db69348433e6802732759e15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab96b4f05db69348433e6802732759e15">&#9670;&nbsp;</a></span>moveSide</h2>
+<a id="a11c3e10c2f664380247f778816cfdd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c3e10c2f664380247f778816cfdd8b">&#9670;&nbsp;</a></span>moveSide</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1223,7 +1134,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Movement.moveSide = 0</td>
+          <td class="memname">float Movement.moveSide = 0</td>
         </tr>
       </table>
   </td>
@@ -1235,8 +1146,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7c590f7eff8f8f553a0862007f1195f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c590f7eff8f8f553a0862007f1195f4">&#9670;&nbsp;</a></span>rotateSpeed</h2>
+<a id="a220553cfcd0ed19cdf8f54cca4275687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220553cfcd0ed19cdf8f54cca4275687">&#9670;&nbsp;</a></span>smoothAccel</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1245,7 +1156,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Movement.rotateSpeed = 5f</td>
+          <td class="memname">float Movement.smoothAccel = 0</td>
         </tr>
       </table>
   </td>
@@ -1255,13 +1166,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>The rotate speed of the host object toward the camera's facing direction. </p>
-<p>!&ndash; Not needed if shouldMoveTowardCameraDirection is false</p>
-
 </div>
 </div>
-<a id="aa53362f61508dd4e5e87ca6ffd3a023e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa53362f61508dd4e5e87ca6ffd3a023e">&#9670;&nbsp;</a></span>rotateTowardMovingDir</h2>
+<a id="a8de9048128c83fbb5216a8631641654c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de9048128c83fbb5216a8631641654c">&#9670;&nbsp;</a></span>targetSpeed</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1270,7 +1178,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Movement.rotateTowardMovingDir = false</td>
+          <td class="memname">float Movement.targetSpeed = 0</td>
         </tr>
       </table>
   </td>
@@ -1279,9 +1187,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Decide if the host object should move foward accodring the camera's facing direction. </p>
-<p>!&ndash; Instead of move forward according to its own facing direction</p>
 
 </div>
 </div>
