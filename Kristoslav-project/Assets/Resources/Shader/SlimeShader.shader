@@ -6,10 +6,10 @@
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _SpecMap("Spec Map", 2D) = "white" {}
         _BumpMap("Bump map", 2D) = "bump" {}
+        _Cube ("Cubemap", CUBE) = "" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _RimColor ("Rim Color", Color) = (0.26,0.19,0.16,0.0)
        _RimPower ("Rim Power", Range(0.5,8.0)) = 3.0
-       _RimLimit ("Rim Size", Range(0,1.0)) = 0.5
        _ScrollXSpeed("Scroll X Speed", Range(-10,10)) = 2
 		_ScrollYSpeed("Scroll Y Speed", Range(-10,10)) = 2
     }
@@ -34,6 +34,7 @@
             float2 uv_MainTex;
             float2 uv_BumpMap;
             float2 uv_SpecMap;
+            float3 worldRefl; INTERNAL_DATA
             float3 viewDir;
         };
 
@@ -41,9 +42,9 @@
         fixed4 _Color;
         float4 _RimColor;
         float _RimPower;
-        float _RimLimit;
         fixed _ScrollXSpeed;
         fixed _ScrollYSpeed;
+        samplerCUBE _Cube;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -72,14 +73,10 @@
             o.Normal = UnpackNormal(tex2D(_BumpMap, ScrollUV));
 
 
-
-            half rim = 1.0 - saturate(dot (normalize(IN.viewDir), o.Normal));
-            o.Emission = _RimColor.rgb * pow (rim, _RimPower);
-            if (rim <= _RimLimit) {
-                o.Alpha = c.a;
-            } else {
-                o.Alpha = rim;
-            }
+            half dotProduct =  saturate(dot (normalize(IN.viewDir), o.Normal));
+            half rim = 1.0 - dotProduct;
+            o.Emission =  texCUBE (_Cube,WorldReflectionVector (IN, o.Normal)).rgb* pow (rim, _RimPower);
+            o.Alpha = lerp(_Color.a, 1,  rim);
         }
         ENDCG
     }

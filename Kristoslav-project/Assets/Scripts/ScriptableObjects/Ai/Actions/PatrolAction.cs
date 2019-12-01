@@ -13,6 +13,7 @@ public class PatrolAction : Action
     {
         if (controller.HasReachedCurrentDestination())
         {
+            controller.SetMovement(IMovement.MovementType.Walk);
             var nextDestination = controller.GetRandomPointInArea();
             controller.SetDestination(nextDestination);
         }

@@ -25,6 +25,11 @@ public class NPCController : MonoBehaviour
     [BoxGroup("Requirements")]
     ScriptableState remainInState;
 
+    public void SetMovement(IMovement.MovementType moveType)
+    {
+        aiCharacter.RequestMovementType(moveType);
+    }
+
     [SerializeField]
     [BoxGroup("Settings")]
     bool isAIActive = false;
