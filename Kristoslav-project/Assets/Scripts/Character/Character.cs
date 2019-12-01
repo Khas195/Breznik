@@ -146,7 +146,7 @@ public class Character : MonoBehaviour
             OnCharacterDeath.Invoke(this);
         }
     }
-    void Update()
+    protected virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {

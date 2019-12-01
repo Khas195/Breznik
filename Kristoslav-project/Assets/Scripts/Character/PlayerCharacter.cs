@@ -34,8 +34,9 @@ public class PlayerCharacter : Character
         shouldRegen = true;
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         if (shouldRegen)
         {
             Regen();

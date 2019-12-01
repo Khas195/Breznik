@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class OnBackToIdle : StateMachineBehaviour
 {
+    [SerializeField]
+    List<string> donResetTriggers = new List<string>();
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponentInChildren<CharacterAnimatorControl>().SetIsAttack(false);
         foreach (AnimatorControllerParameter param in animator.parameters)
         {
+            foreach (var trigger in donResetTriggers)
+            {
+                Debug.Log("Hit trigger " + param.name);
+                if (trigger == param.name)
+                {
+                    Debug.Log("Dont reset  trigger " + param.name);
+                    continue;
+                }
+            }
+            Debug.Log("reset  trigger " + param.name);
             animator.ResetTrigger(param.name);
         }
     }
