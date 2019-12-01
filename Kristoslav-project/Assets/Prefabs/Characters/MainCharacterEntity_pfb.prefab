@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 2113142331773439123}
   attackableMasks:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 6656
 --- !u!1 &1841920558
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,13 +129,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841920558}
-  m_LocalRotation: {x: -0, y: -0, z: 0.24712265, w: 0.9689842}
-  m_LocalPosition: {x: 0.149, y: 0.681, z: 0.951}
-  m_LocalScale: {x: 1.4899484, y: 0.29531366, z: 1.2670673}
+  m_LocalRotation: {x: -0.06704356, y: 0.26288217, z: 0.23785448, w: 0.9326432}
+  m_LocalPosition: {x: 0.311, y: 0.769, z: 0.791}
+  m_LocalScale: {x: 1.73, y: 0.8, z: 1.2670673}
   m_Children: []
   m_Father: {fileID: 8816039565733780618}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.615002}
+  m_LocalEulerAnglesHint: {x: -14.484001, y: 28.262001, z: 24.95}
 --- !u!65 &1841920560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -336,7 +336,18 @@ MonoBehaviour:
         m_CallState: 2
   OnCharacterDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5272210171014145444}
+        m_MethodName: PlayDamagedAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
@@ -547,13 +558,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945434410277524741}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6332302, w: 0.7739635}
-  m_LocalPosition: {x: 0.082, y: 0.706, z: 0.951}
-  m_LocalScale: {x: 1.4899484, y: 0.29531366, z: 1.2670673}
+  m_LocalRotation: {x: -0, y: -0, z: -0.01996381, w: 0.9998007}
+  m_LocalPosition: {x: 0.303, y: 0.281, z: 1.169}
+  m_LocalScale: {x: 2.3696551, y: 2.2590175, z: 1.2670673}
   m_Children: []
   m_Father: {fileID: 8816039565733780618}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 78.578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.288}
 --- !u!65 &2113142331773439123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -591,13 +602,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2354938946863020680}
-  m_LocalRotation: {x: -0, y: -0, z: -0.34044656, w: 0.94026387}
-  m_LocalPosition: {x: -0.132, y: 0.704, z: 0.951}
-  m_LocalScale: {x: 1.4531521, y: 0.25794452, z: 1.2670673}
+  m_LocalRotation: {x: -0, y: -0, z: -0.01996381, w: 0.9998007}
+  m_LocalPosition: {x: 0.303, y: 0.281, z: 1.169}
+  m_LocalScale: {x: 2.3696551, y: 2.2590175, z: 1.2670673}
   m_Children: []
   m_Father: {fileID: 8816039565733780618}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -39.808002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.288}
 --- !u!65 &69851962009098128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -635,13 +646,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4351347657396142364}
-  m_LocalRotation: {x: -0, y: -0, z: 0.24712265, w: 0.9689842}
-  m_LocalPosition: {x: 0.149, y: 0.681, z: 0.951}
-  m_LocalScale: {x: 1.4899484, y: 0.29531366, z: 1.2670673}
+  m_LocalRotation: {x: -0.06704356, y: 0.26288217, z: 0.23785448, w: 0.9326432}
+  m_LocalPosition: {x: 0.311, y: 0.769, z: 0.791}
+  m_LocalScale: {x: 1.73, y: 0.8, z: 1.2670673}
   m_Children: []
   m_Father: {fileID: 8816039565733780618}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.615002}
+  m_LocalEulerAnglesHint: {x: -14.484001, y: 28.262001, z: 24.95}
 --- !u!65 &7766168901856136893
 BoxCollider:
   m_ObjectHideFlags: 0
