@@ -148,7 +148,14 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            BeingDamage(1);
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            BeingDamage(10000);
+        }
     }
     public float GetHealth()
     {
@@ -236,12 +243,17 @@ public class Character : MonoBehaviour
     /// </returns>
     public virtual bool RequestMovementType(Movement.MovementType moveType)
     {
+        if (movementBehavior.GetCurrentMoveMode() == moveType)
+        {
+            return true;
+        }
+
         if (changeMoveTypeConditions.IsSatisfied(this))
         {
             movementBehavior.SetMovementMode(moveType);
             return true;
         }
-        movementBehavior.SetMovementMode(Movement.MovementType.Walk);
+
         return false;
     }
     public bool IsAttacking()

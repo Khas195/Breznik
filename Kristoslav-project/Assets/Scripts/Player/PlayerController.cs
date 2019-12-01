@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour
         {
             character.RequestMovementType(IMovement.MovementType.Walk);
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             character.RequestJump();
         }

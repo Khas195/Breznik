@@ -19,6 +19,10 @@ public class CharacterAnimatorControl : MonoBehaviour
     Rigidbody hostRb = null;
     [SerializeField]
     Character character = null;
+    [SerializeField]
+    int numOfAttackMoves = 1;
+    [SerializeField]
+    int numOfHurtAnimations = 1;
     void Start()
     {
     }
@@ -33,7 +37,8 @@ public class CharacterAnimatorControl : MonoBehaviour
     }
     public void PlayAttackAnimation()
     {
-        animator.SetTrigger("attack");
+        var randomAttack = UnityEngine.Random.Range(0, numOfAttackMoves);
+        animator.SetTrigger("attack" + randomAttack);
 
     }
     public bool IsPlaying(string animationName)
@@ -66,5 +71,10 @@ public class CharacterAnimatorControl : MonoBehaviour
     public void TriggerDeadAnimation()
     {
         animator.SetTrigger("Die");
+    }
+    public void PlayDamagedAnimation()
+    {
+        var randomHurt = UnityEngine.Random.Range(0, numOfHurtAnimations);
+        animator.SetTrigger("hurt" + randomHurt);
     }
 }

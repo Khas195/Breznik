@@ -11,7 +11,5 @@ public class AttackChainEvent : StateMachineBehaviour
     {
         var characterAnimatorCtrl = animator.gameObject.transform.GetComponentInChildren<CharacterAnimatorControl>();
         characterAnimatorCtrl.SetIsAttack(true);
-        animator.applyRootMotion = true;
-        animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
     }
 }
