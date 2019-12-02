@@ -25,22 +25,14 @@ public class NPCController : MonoBehaviour
     [BoxGroup("Requirements")]
     ScriptableState remainInState;
 
-    public void SetMovement(IMovement.MovementType moveType)
-    {
-        aiCharacter.RequestMovementType(moveType);
-    }
-
     [SerializeField]
     [BoxGroup("Settings")]
     bool isAIActive = false;
-
-
 
     [SerializeField]
     [BoxGroup("Settings")]
     [ReadOnly]
     public Transform chaseTarget = null;
-
 
 
     [SerializeField]
@@ -121,7 +113,10 @@ public class NPCController : MonoBehaviour
             aiCharacter.RequestMove(0, 0);
         }
     }
-
+    public void SetMovement(IMovement.MovementType moveType)
+    {
+        aiCharacter.RequestMovementType(moveType);
+    }
     private bool IsPathStillValid()
     {
         Transform charTransform = aiCharacter.GetHost().transform;
@@ -144,7 +139,12 @@ public class NPCController : MonoBehaviour
     {
         currentPoint++;
     }
-
+    public bool IsInAttackLine(Transform target)
+    {
+        var dirToTarget = (target.transform.position - aiCharacter.GetHost().transform.position).normalized;
+        var angleFromFrontToTarget = Vector3.Angle(aiCharacter.GetHost().transform.forward, dirToTarget);
+        return angleFromFrontToTarget <= 20f;
+    }
     private void ConvertDirectionToCharacterMoveInput(Vector3 currentPoint)
     {
         var hostTransform = aiCharacter.GetHost().transform;
@@ -284,10 +284,13 @@ public class NPCController : MonoBehaviour
             return false;
         }
     }
-    public void Attack(Transform target)
+    public void Attack()
+    {
+        aiCharacter.Attack();
+    }
+    public void RotateToward(Transform target)
     {
         var direction = target.position - aiCharacter.GetHost().transform.position;
         aiCharacter.RotateToward(direction.normalized, false);
-        aiCharacter.Attack();
     }
 }

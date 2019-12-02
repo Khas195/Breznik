@@ -23,8 +23,10 @@ public class CharacterAnimatorControl : MonoBehaviour
     int numOfAttackMoves = 1;
     [SerializeField]
     int numOfHurtAnimations = 1;
+    Quaternion lastRotation = Quaternion.identity;
     void Start()
     {
+        lastRotation = hostRb.rotation;
     }
 
     // Update is called once per frame
@@ -34,6 +36,9 @@ public class CharacterAnimatorControl : MonoBehaviour
         animator.SetBool("TouchingGround", character.IsTouchingGround());
         animator.SetFloat("VelocityY", hostRb.velocity.y);
         animator.SetFloat("MoveSpeed", moveSpeed);
+        var rotateSpeed = hostRb.rotation.y - lastRotation.y;
+        animator.SetFloat("RotationSpeed", Mathf.Abs(rotateSpeed));
+
     }
     public void PlayAttackAnimation()
     {
