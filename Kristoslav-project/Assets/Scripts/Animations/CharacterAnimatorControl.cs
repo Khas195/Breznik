@@ -53,21 +53,7 @@ public class CharacterAnimatorControl : MonoBehaviour
             return false;
         }
     }
-    public void SetIsAttack(bool attack)
-    {
-        if (attack)
-        {
-            character.OnAttackStart();
-        }
-        else
-        {
-            character.OnAttackDone();
-        }
-    }
-    public bool IsInAttackingAnimation()
-    {
-        return character.IsAttacking();
-    }
+
     public void TriggerDeadAnimation()
     {
         animator.SetTrigger("Die");

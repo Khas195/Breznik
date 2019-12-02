@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnBackToIdle : StateMachineBehaviour
+public class ResetAnimParams : StateMachineBehaviour
 {
     [SerializeField]
     List<string> donResetTriggers = new List<string>();
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponentInChildren<CharacterAnimatorControl>().SetIsAttack(false);
         foreach (AnimatorControllerParameter param in animator.parameters)
         {
             foreach (var trigger in donResetTriggers)

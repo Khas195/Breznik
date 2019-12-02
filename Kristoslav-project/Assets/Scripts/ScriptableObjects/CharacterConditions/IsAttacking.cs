@@ -7,6 +7,6 @@ public class IsAttacking : CharacterBehaviorCondition
     bool reverse = false;
     public override bool IsSatisfied(Character character)
     {
-        return reverse ? !character.IsAttacking() : character.IsAttacking();
+        return false;
     }
 }
