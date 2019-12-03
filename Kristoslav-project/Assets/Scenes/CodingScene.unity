@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &418877950
 Transform:
   m_ObjectHideFlags: 0
@@ -9232,6 +9232,14 @@ PrefabInstance:
       propertyPath: interactCue
       value: 
       objectReference: {fileID: 910453269}
+    - target: {fileID: 1718198469, guid: d1492488a67a4534d9d7e3b8534aa96f, type: 3}
+      propertyPath: attackableMasks.m_Bits
+      value: 14848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718198469, guid: d1492488a67a4534d9d7e3b8534aa96f, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1492488a67a4534d9d7e3b8534aa96f, type: 3}
 --- !u!1 &1794335685

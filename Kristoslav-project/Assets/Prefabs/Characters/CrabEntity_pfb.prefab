@@ -140,7 +140,6 @@ MonoBehaviour:
   remainInState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
   isAIActive: 1
   chaseTarget: {fileID: 0}
-  inFrontAngle: 10
   currentDestination: {x: 0, y: 0, z: 0}
   enemyMasks:
     serializedVersion: 2
@@ -306,7 +305,9 @@ MonoBehaviour:
   canvas: {fileID: 5817657456573395770}
   hasHealthBar: 1
   healthBar: {fileID: 8370224790132350847}
-  baseStats: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
+  baseStats: {fileID: 11400000, guid: 5d978fda7e8b0704185b64b446f88a54, type: 2}
+  charData: {fileID: 11400000, guid: 97dfd08b98a89584685619b42d98ad5a, type: 2}
+  text: {fileID: 7705205114084619891}
 --- !u!1 &2242981206665762163
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +919,39 @@ MonoBehaviour:
       - m_Target: {fileID: 2283976039583868871}
         m_MethodName: TriggerDeadAnimation
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8708483071953876333}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7154547126365543968}
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1067410174110991101}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

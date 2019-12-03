@@ -436,7 +436,9 @@ MonoBehaviour:
   canvas: {fileID: 5513398982603877076}
   hasHealthBar: 1
   healthBar: {fileID: 3201309529414842198}
-  baseStats: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
+  baseStats: {fileID: 11400000, guid: af7fb3c87b03ae044860b09941123b05, type: 2}
+  charData: {fileID: 11400000, guid: 49913e2b4a7b4fe49b68a35c90bddd1e, type: 2}
+  text: {fileID: 7939340186535458281}
 --- !u!1 &4349585573394022746
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +514,39 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5679407554349877171}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5272491775574736294}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4818011571490091444}
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   OnCharacterDamaged:
     m_PersistentCalls:
@@ -866,7 +901,6 @@ MonoBehaviour:
   remainInState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
   isAIActive: 1
   chaseTarget: {fileID: 0}
-  inFrontAngle: 10
   currentDestination: {x: 0, y: 0, z: 0}
   enemyMasks:
     serializedVersion: 2
