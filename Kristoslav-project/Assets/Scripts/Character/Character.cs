@@ -114,6 +114,9 @@ public class Character : MonoBehaviour
     [BoxGroup("Character conditions check for actions")]
     [Required]
     protected ConditionsChecker canRotate;
+    private bool rotationLock;
+    private bool movementLock;
+    private bool jumpLock;
 
 
     #endregion
@@ -146,9 +149,16 @@ public class Character : MonoBehaviour
             OnCharacterDeath.Invoke(this);
         }
     }
-    void Update()
+    protected virtual void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            BeingDamage(1);
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            BeingDamage(10000);
+        }
     }
     public float GetHealth()
     {
@@ -170,7 +180,7 @@ public class Character : MonoBehaviour
     #region Action 
     public void RotateToward(Vector3 direction, bool rotateY)
     {
-        if (canRotate.IsSatisfied(this) == false) return;
+        if (canRotate.IsSatisfied(this) == false || rotationLock == true) return;
         if (rotateY == false)
         {
             direction.y = 0;
@@ -188,11 +198,12 @@ public class Character : MonoBehaviour
     public virtual bool RequestMove(float forward, float side)
     {
         var result = true;
-        if (moveConditions.IsSatisfied(this) == false)
+        if (moveConditions.IsSatisfied(this) == false || movementLock == true)
         {
             forward = side = 0;
             result = false;
         }
+
         movementBehavior.Move(forward, side);
         return result;
     }
@@ -219,7 +230,7 @@ public class Character : MonoBehaviour
     /// </returns>
     public virtual bool RequestJump()
     {
-        if (jumpConditions.IsSatisfied(this))
+        if (jumpConditions.IsSatisfied(this) || jumpLock == false)
         {
             movementBehavior.SignalJump();
             return true;
@@ -236,29 +247,47 @@ public class Character : MonoBehaviour
     /// </returns>
     public virtual bool RequestMovementType(Movement.MovementType moveType)
     {
+        if (movementBehavior.GetCurrentMoveMode() == moveType)
+        {
+            return true;
+        }
+
         if (changeMoveTypeConditions.IsSatisfied(this))
         {
             movementBehavior.SetMovementMode(moveType);
             return true;
         }
-        movementBehavior.SetMovementMode(Movement.MovementType.Walk);
+
         return false;
-    }
-    public bool IsAttacking()
-    {
-        return this.isAttacking;
-    }
-    public void OnAttackStart()
-    {
-        this.isAttacking = true;
-    }
-    public void OnAttackDone()
-    {
-        this.isAttacking = false;
     }
     public bool IsTouchingGround()
     {
         return this.movementBehavior.IsTouchingGround();
+    }
+    public void SetLockRotation(bool lockRot)
+    {
+
+        rotationLock = lockRot;
+    }
+    public bool IsRotationLock()
+    {
+        return rotationLock;
+    }
+    public void SetLockMovement(bool lockMov)
+    {
+        movementLock = lockMov;
+    }
+    public bool IsMovementLock()
+    {
+        return movementLock;
+    }
+    public void SetLockJump(bool lockJump)
+    {
+        jumpLock = lockJump;
+    }
+    public bool GetJumpLock()
+    {
+        return jumpLock;
     }
     public bool IsAlive()
     {
