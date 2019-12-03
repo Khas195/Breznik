@@ -1,0 +1,222 @@
+\hypertarget{class_quest_system}{}\doxysection{Quest\+System Class Reference}
+\label{class_quest_system}\index{QuestSystem@{QuestSystem}}
+
+
+Inheritance diagram for Quest\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_quest_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Quest\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_quest_system_a739d79cf8e08ad128cbf8523d5df4129}{Check\+If\+Active\+Quest\+Is\+Completed}} (\mbox{\hyperlink{class_quest}{Quest}} quest)
+\item 
+bool \mbox{\hyperlink{class_quest_system_a0bf89992be7c8eebbaa9b79d931e7dc7}{Check\+If\+Quest\+Archived}} (\mbox{\hyperlink{class_quest}{Quest}} quest)
+\item 
+bool \mbox{\hyperlink{class_quest_system_ae06784bbde0c0307350dfa3d06980a95}{Add\+Quest}} (\mbox{\hyperlink{class_quest}{Quest}} new\+Quest)
+\item 
+bool \mbox{\hyperlink{class_quest_system_a3ef68d642587280a33eb3fe56f7036c6}{Remove\+Quest}} (\mbox{\hyperlink{class_quest}{Quest}} target\+Quest)
+\item 
+List$<$ \mbox{\hyperlink{class_quest}{Quest}} $>$ \mbox{\hyperlink{class_quest_system_af7696cd006e2bf232759c1eb5746272b}{Get\+Active\+Quests}} ()
+\item 
+bool \mbox{\hyperlink{class_quest_system_a62dc56287e7c65868085a030576ee3ae}{Is\+Active\+Quest}} (\mbox{\hyperlink{class_quest}{Quest}} given\+Quest)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}} \mbox{\hyperlink{class_quest_system_acdd2f14e3a22ea42ae76574edb35c775}{quest\+Completed\+Event}} = new \mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}}()
+\item 
+\mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}} \mbox{\hyperlink{class_quest_system_a676b54ec086586b95eedf4e7f9a93c01}{quest\+Added\+Event}} = new \mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quest_system_a422041e4d817ed762fd5215f54221245}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_quest}{Quest}} $>$ \mbox{\hyperlink{class_quest_system_accc9ec48aae8fa2d6eeb943557d83f1a}{active\+Quest}} = new List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$()
+\item 
+List$<$ \mbox{\hyperlink{class_quest}{Quest}} $>$ \mbox{\hyperlink{class_quest_system_a728ac06dc1091532e40c09a40d264c37}{completed\+Quest}} = new List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$()
+\item 
+\mbox{\hyperlink{class_quest}{Quest}} \mbox{\hyperlink{class_quest_system_a197b7e740598cc6ece0ec742a639d930}{test}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}{instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_quest_system_ae06784bbde0c0307350dfa3d06980a95}\label{class_quest_system_ae06784bbde0c0307350dfa3d06980a95}} 
+\index{QuestSystem@{QuestSystem}!AddQuest@{AddQuest}}
+\index{AddQuest@{AddQuest}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{AddQuest()}{AddQuest()}}
+{\footnotesize\ttfamily bool Quest\+System.\+Add\+Quest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quest}{Quest}}}]{new\+Quest }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_quest_system_ae06784bbde0c0307350dfa3d06980a95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_quest_system_ae06784bbde0c0307350dfa3d06980a95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}\label{class_singleton_monobehavior_a09691a4d210e44e9ad078bb6811677fa}} 
+\index{QuestSystem@{QuestSystem}!Awake@{Awake}}
+\index{Awake@{Awake}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_quest_system_a739d79cf8e08ad128cbf8523d5df4129}\label{class_quest_system_a739d79cf8e08ad128cbf8523d5df4129}} 
+\index{QuestSystem@{QuestSystem}!CheckIfActiveQuestIsCompleted@{CheckIfActiveQuestIsCompleted}}
+\index{CheckIfActiveQuestIsCompleted@{CheckIfActiveQuestIsCompleted}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{CheckIfActiveQuestIsCompleted()}{CheckIfActiveQuestIsCompleted()}}
+{\footnotesize\ttfamily bool Quest\+System.\+Check\+If\+Active\+Quest\+Is\+Completed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quest}{Quest}}}]{quest }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_system_a739d79cf8e08ad128cbf8523d5df4129_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_quest_system_a0bf89992be7c8eebbaa9b79d931e7dc7}\label{class_quest_system_a0bf89992be7c8eebbaa9b79d931e7dc7}} 
+\index{QuestSystem@{QuestSystem}!CheckIfQuestArchived@{CheckIfQuestArchived}}
+\index{CheckIfQuestArchived@{CheckIfQuestArchived}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{CheckIfQuestArchived()}{CheckIfQuestArchived()}}
+{\footnotesize\ttfamily bool Quest\+System.\+Check\+If\+Quest\+Archived (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quest}{Quest}}}]{quest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_quest_system_af7696cd006e2bf232759c1eb5746272b}\label{class_quest_system_af7696cd006e2bf232759c1eb5746272b}} 
+\index{QuestSystem@{QuestSystem}!GetActiveQuests@{GetActiveQuests}}
+\index{GetActiveQuests@{GetActiveQuests}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{GetActiveQuests()}{GetActiveQuests()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$ Quest\+System.\+Get\+Active\+Quests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}\label{class_singleton_monobehavior_a58152666f3346f3f59dfec471394df54}} 
+\index{QuestSystem@{QuestSystem}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_quest_system_a62dc56287e7c65868085a030576ee3ae}\label{class_quest_system_a62dc56287e7c65868085a030576ee3ae}} 
+\index{QuestSystem@{QuestSystem}!IsActiveQuest@{IsActiveQuest}}
+\index{IsActiveQuest@{IsActiveQuest}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{IsActiveQuest()}{IsActiveQuest()}}
+{\footnotesize\ttfamily bool Quest\+System.\+Is\+Active\+Quest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quest}{Quest}}}]{given\+Quest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_quest_system_a3ef68d642587280a33eb3fe56f7036c6}\label{class_quest_system_a3ef68d642587280a33eb3fe56f7036c6}} 
+\index{QuestSystem@{QuestSystem}!RemoveQuest@{RemoveQuest}}
+\index{RemoveQuest@{RemoveQuest}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{RemoveQuest()}{RemoveQuest()}}
+{\footnotesize\ttfamily bool Quest\+System.\+Remove\+Quest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quest}{Quest}}}]{target\+Quest }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_quest_system_a3ef68d642587280a33eb3fe56f7036c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_system_a3ef68d642587280a33eb3fe56f7036c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_quest_system_a422041e4d817ed762fd5215f54221245}\label{class_quest_system_a422041e4d817ed762fd5215f54221245}} 
+\index{QuestSystem@{QuestSystem}!Update@{Update}}
+\index{Update@{Update}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Quest\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_system_a422041e4d817ed762fd5215f54221245_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_quest_system_accc9ec48aae8fa2d6eeb943557d83f1a}\label{class_quest_system_accc9ec48aae8fa2d6eeb943557d83f1a}} 
+\index{QuestSystem@{QuestSystem}!activeQuest@{activeQuest}}
+\index{activeQuest@{activeQuest}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{activeQuest}{activeQuest}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$ Quest\+System.\+active\+Quest = new List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_quest_system_a728ac06dc1091532e40c09a40d264c37}\label{class_quest_system_a728ac06dc1091532e40c09a40d264c37}} 
+\index{QuestSystem@{QuestSystem}!completedQuest@{completedQuest}}
+\index{completedQuest@{completedQuest}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{completedQuest}{completedQuest}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$ Quest\+System.\+completed\+Quest = new List$<$\mbox{\hyperlink{class_quest}{Quest}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}\label{class_singleton_monobehavior_a09b393a286be337740dcf81a6e128c0b}} 
+\index{QuestSystem@{QuestSystem}!instance@{instance}}
+\index{instance@{instance}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton_monobehavior}{Singleton\+Monobehavior}}$<$ T $>$.instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_quest_system_a676b54ec086586b95eedf4e7f9a93c01}\label{class_quest_system_a676b54ec086586b95eedf4e7f9a93c01}} 
+\index{QuestSystem@{QuestSystem}!questAddedEvent@{questAddedEvent}}
+\index{questAddedEvent@{questAddedEvent}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{questAddedEvent}{questAddedEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}} Quest\+System.\+quest\+Added\+Event = new \mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}}()}
+
+\mbox{\Hypertarget{class_quest_system_acdd2f14e3a22ea42ae76574edb35c775}\label{class_quest_system_acdd2f14e3a22ea42ae76574edb35c775}} 
+\index{QuestSystem@{QuestSystem}!questCompletedEvent@{questCompletedEvent}}
+\index{questCompletedEvent@{questCompletedEvent}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{questCompletedEvent}{questCompletedEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}} Quest\+System.\+quest\+Completed\+Event = new \mbox{\hyperlink{class_on_quest_event}{On\+Quest\+Event}}()}
+
+\mbox{\Hypertarget{class_quest_system_a197b7e740598cc6ece0ec742a639d930}\label{class_quest_system_a197b7e740598cc6ece0ec742a639d930}} 
+\index{QuestSystem@{QuestSystem}!test@{test}}
+\index{test@{test}!QuestSystem@{QuestSystem}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_quest}{Quest}} Quest\+System.\+test = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\mbox{\hyperlink{_quest_system_8cs}{Quest\+System.\+cs}}\end{DoxyCompactItemize}

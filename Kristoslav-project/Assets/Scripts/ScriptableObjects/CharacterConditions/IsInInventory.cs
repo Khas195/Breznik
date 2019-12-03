@@ -7,6 +7,14 @@ public class IsInInventory : CharacterBehaviorCondition
     bool reverse = false;
     public override bool IsSatisfied(Character character)
     {
-        return reverse ? !InventorySystem.GetInstance().IsOpen() : InventorySystem.GetInstance().IsOpen();
+        var inventorySystem = InventorySystem.GetInstance();
+        if (inventorySystem == null)
+        {
+            return reverse ? true : false;
+        }
+        else
+        {
+            return reverse ? !inventorySystem.IsOpen() : inventorySystem.IsOpen();
+        }
     }
 }

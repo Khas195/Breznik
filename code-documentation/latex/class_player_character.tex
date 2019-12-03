@@ -7,8 +7,7 @@ The player controlled character.
 
 
 
-Inheritance diagram for Player\+Character\+:
-\nopagebreak
+Inheritance diagram for Player\+Character\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,41 +27,62 @@ Collaboration diagram for Player\+Character\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-override void \mbox{\hyperlink{class_player_character_aa643acaf1b50c05a9ef66b833ffc7f95}{Awake}} ()
-\item 
-override \mbox{\hyperlink{class_character_stats_data}{Character\+Stats\+Data}} \mbox{\hyperlink{class_player_character_a1b5f31c890bea95fa6540e448bb77221}{Get\+Character\+Stats}} ()
-\begin{DoxyCompactList}\small\item\em Get the character stats data of the character. \end{DoxyCompactList}\item 
-override bool \mbox{\hyperlink{class_player_character_af98a13bab958e606a330ae868a1a7f69}{Request\+Jump}} ()
-\begin{DoxyCompactList}\small\item\em This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. \end{DoxyCompactList}\item 
-override bool \mbox{\hyperlink{class_player_character_aef051e596c27491d72361b8433262c81}{Request\+Move}} (float forward, float side)
-\begin{DoxyCompactList}\small\item\em This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
-override bool \mbox{\hyperlink{class_player_character_a49f0cf11a8e85e75507ff3269d044712}{Attack}} ()
-\begin{DoxyCompactList}\small\item\em This function invoke an event whenever the character is signal to attack It returns true if the event is successfully called and vice versa. \end{DoxyCompactList}\item 
-override bool \mbox{\hyperlink{class_player_character_a1ab466e19de293dab39f987f4abea91a}{Request\+Movement\+Type}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{I\+Movement.\+Movement\+Type}} move\+Type)
-\item 
-override void \mbox{\hyperlink{class_player_character_acbf0accf279c6616391dcb31b0ce4118}{Being\+Damage}} (float damage)
+override void \mbox{\hyperlink{class_player_character_adf49d8113b65926523cd08386dc2d8c0}{Being\+Damage}} (int damage)
 \begin{DoxyCompactList}\small\item\em Is called if the character are to be damaged. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_character_a0fbf9e72892c47b8853717124566df2d}{On\+Player\+Attack}} ()
 \item 
+virtual void \mbox{\hyperlink{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}{Awake}} ()
+\item 
+Game\+Object \mbox{\hyperlink{class_character_ad5015c2ad449b2c9a4598a899848e8cd}{Get\+Host}} ()
+\item 
+float \mbox{\hyperlink{class_character_ae8ba68110ff061ba6d40930466e463a1}{Get\+Health}} ()
+\item 
+float \mbox{\hyperlink{class_character_ab3d3becb9cd892580822255e21213db2}{Get\+Stamina}} ()
+\item 
+float \mbox{\hyperlink{class_character_abd24b554986aa766a4039185dbee3c49}{Get\+Current\+Speed}} ()
+\item 
+\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_character_afb97330c5c3a3f3b704d771956fd3377}{Get\+Stats}} ()
+\item 
+void \mbox{\hyperlink{class_character_a6582d4d3cbe40678ca81623958676b5f}{Rotate\+Toward}} (Vector3 direction, bool rotateY)
+\item 
+virtual bool \mbox{\hyperlink{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}{Request\+Move}} (float forward, float side)
+\begin{DoxyCompactList}\small\item\em This fucntion ask the move\+Behavior of the character to move the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_aac80a99e7d65890e59304a74fc059c74}{Attack}} ()
+\begin{DoxyCompactList}\small\item\em This function invoke an event whenever the character is signal to attack It returns true if the event is successfully called and vice versa. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_character_afea0491dc5b0a44c2e2296fb87c11393}{Request\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em This function ask the move\+Behavior of the character to signal the jump function in the next fixed update;. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_character_a9c90452155c735e88b3872d2fb62ad37}{Request\+Movement\+Type}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}} move\+Type)
 \begin{DoxyCompactList}\small\item\em This function set the movement Type for the move\+Behavior. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_ae1658993038fafcab66c35fabe7c5c4a}{Get\+Movement\+Behavior}} ()
-\begin{DoxyCompactList}\small\item\em Get the movement behavior of the character. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} \mbox{\hyperlink{class_character_aa175e282a08f772115452e76f542817d}{Get\+Character\+Animator}} ()
-\begin{DoxyCompactList}\small\item\em Get the character animator control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_character_aa93dd91db660de26a9f4d5f2539ddeaa}{Is\+Attacking}} ()
+\item 
+void \mbox{\hyperlink{class_character_a58338828aaf6af0ce7a6a02107513ce3}{On\+Attack\+Start}} ()
+\item 
+void \mbox{\hyperlink{class_character_a0f4fa390c0aa02d1e0c715cfb191eada}{On\+Attack\+Done}} ()
+\item 
+bool \mbox{\hyperlink{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c}{Is\+Touching\+Ground}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Event \mbox{\hyperlink{class_character_a2781bb31e42725e8e71efb4cff94e7c6}{on\+Character\+Attack}} = new Unity\+Event()
+\begin{DoxyCompactList}\small\item\em This is event is called when an attack is successfully trigger. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_death_event}{Death\+Event}} \mbox{\hyperlink{class_character_a0945c7aa868f33ea428e1bc9302b6bb9}{On\+Character\+Death}} = new \mbox{\hyperlink{class_death_event}{Death\+Event}}()
+\item 
+Unity\+Event \mbox{\hyperlink{class_character_a3bfd2e6d45fe4fc3d3e63172a6c00959}{On\+Character\+Damaged}} = new Unity\+Event()
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Camera \mbox{\hyperlink{class_player_character_ad89ffaebd61af5f365c200c256162004}{player\+Camera}} = null
-\begin{DoxyCompactList}\small\item\em The camera that follow the player \end{DoxyCompactList}\item 
 Rigidbody \mbox{\hyperlink{class_character_ae91b6199245ae87206e43fbd2ae9e440}{host\+Rigid\+Body}}
 \begin{DoxyCompactList}\small\item\em The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_i_movement}{I\+Movement}} \mbox{\hyperlink{class_character_a736d5b47bff2750392858a40e7ab1e9b}{movement\+Behavior}}
 \begin{DoxyCompactList}\small\item\em Reference to the movement behavior of the character. \end{DoxyCompactList}\item 
-Unity\+Event \mbox{\hyperlink{class_character_a2781bb31e42725e8e71efb4cff94e7c6}{on\+Character\+Attack}}
-\begin{DoxyCompactList}\small\item\em This is event is called when an attack is successfully trigger. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} \mbox{\hyperlink{class_character_a7350d7b91b3717ed4653f18bb40bab30}{animator\+Control}}
-\begin{DoxyCompactList}\small\item\em Reference to the animator control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_character_af86674f9440ec86b61c057dbc1b8586e}{character\+Data}} = null
+\begin{DoxyCompactList}\small\item\em The player character\textquotesingle{}s stats \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_character_a7bceb1f35a225d5475239fb8636921c4}{health}} = 0
+\item 
+float \mbox{\hyperlink{class_character_afedb7998be9bd7b6edb665777cf2c1c8}{stamina}} = 0
+\item 
 \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a36de084cc26942ad378ea9494ad8a5bc}{jump\+Conditions}}
 \begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a6ad4feaf8e9ec730dbaa1d718555b986}{move\+Conditions}}
@@ -70,7 +90,9 @@ Unity\+Event \mbox{\hyperlink{class_character_a2781bb31e42725e8e71efb4cff94e7c6}
 \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}{attack\+Conditions}}
 \begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_a3fca381aacbc571e0bf8678882ee2610}{change\+Move\+Type\+Conditions}}
-\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em An Scriptable Conditions checker that can be created in the Unity Editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} \mbox{\hyperlink{class_character_aaee9b3a240852149c350ec45afd1c6d3}{can\+Rotate}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -87,14 +109,12 @@ void \mbox{\hyperlink{class_player_character_a72167cfb9ada9c29cf1e030d4070d207}{
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_character_data}{Character\+Data}} \mbox{\hyperlink{class_player_character_a711782a7e3e2363a1f4d5841f050a119}{character\+Data}} = null
-\begin{DoxyCompactList}\small\item\em The player character\textquotesingle{}s stats \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_player_action_cost}{Player\+Action\+Cost}} \mbox{\hyperlink{class_player_character_a1375d85935af2f854809e45c8730a326}{attack\+Cost}} = null
-\begin{DoxyCompactList}\small\item\em The cost of attack when the character play an attack animation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_player_character_a15696f4b81a0bcf573aaa3ee14471e7c}{should\+Regen}} = false
 \begin{DoxyCompactList}\small\item\em Whether the character should regen health and stamina or not. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_player_character_afa0a869b63932832b0f2ce0f5bb07c99}{regen\+Cool\+Down\+Timer}} = null
-\begin{DoxyCompactList}\small\item\em The cooldown timer for regening after draining health or stamina. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The cooldown timer for regening after draining health or stamina. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_aabb3648d5aaeb3768a8fcc5ae6ce887b}{is\+Attacking}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -103,11 +123,11 @@ The player controlled character.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_player_character_a49f0cf11a8e85e75507ff3269d044712}\label{class_player_character_a49f0cf11a8e85e75507ff3269d044712}} 
+\mbox{\Hypertarget{class_character_aac80a99e7d65890e59304a74fc059c74}\label{class_character_aac80a99e7d65890e59304a74fc059c74}} 
 \index{PlayerCharacter@{PlayerCharacter}!Attack@{Attack}}
 \index{Attack@{Attack}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
-{\footnotesize\ttfamily override bool Player\+Character.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool Character.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -116,33 +136,40 @@ This function invoke an event whenever the character is signal to attack It retu
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{class_character_aac80a99e7d65890e59304a74fc059c74}{Character}}.
-
-\mbox{\Hypertarget{class_player_character_aa643acaf1b50c05a9ef66b833ffc7f95}\label{class_player_character_aa643acaf1b50c05a9ef66b833ffc7f95}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aac80a99e7d65890e59304a74fc059c74_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aac80a99e7d65890e59304a74fc059c74_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}\label{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}} 
 \index{PlayerCharacter@{PlayerCharacter}!Awake@{Awake}}
 \index{Awake@{Awake}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
-{\footnotesize\ttfamily override void Player\+Character.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Reimplemented from \mbox{\hyperlink{class_character_a7cca5d1f141f2f46a1d087fd3e28a953}{Character}}.
+{\footnotesize\ttfamily virtual void Character.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_player_character_aa643acaf1b50c05a9ef66b833ffc7f95_cgraph}
+\includegraphics[width=350pt]{class_character_a7cca5d1f141f2f46a1d087fd3e28a953_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_player_character_acbf0accf279c6616391dcb31b0ce4118}\label{class_player_character_acbf0accf279c6616391dcb31b0ce4118}} 
+\mbox{\Hypertarget{class_player_character_adf49d8113b65926523cd08386dc2d8c0}\label{class_player_character_adf49d8113b65926523cd08386dc2d8c0}} 
 \index{PlayerCharacter@{PlayerCharacter}!BeingDamage@{BeingDamage}}
 \index{BeingDamage@{BeingDamage}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{BeingDamage()}{BeingDamage()}}
-{\footnotesize\ttfamily override void Player\+Character.\+Being\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily override void Player\+Character.\+Being\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -155,73 +182,156 @@ Is called if the character are to be damaged.
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{class_character_af9b759e74efefe757ee49a38d79c5238}{Character}}.
+Reimplemented from \mbox{\hyperlink{class_character_a1dd0ceab877e52531230ad4d87b9e948}{Character}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_player_character_acbf0accf279c6616391dcb31b0ce4118_cgraph}
+\includegraphics[width=350pt]{class_player_character_adf49d8113b65926523cd08386dc2d8c0_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_character_aa175e282a08f772115452e76f542817d}\label{class_character_aa175e282a08f772115452e76f542817d}} 
-\index{PlayerCharacter@{PlayerCharacter}!GetCharacterAnimator@{GetCharacterAnimator}}
-\index{GetCharacterAnimator@{GetCharacterAnimator}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{GetCharacterAnimator()}{GetCharacterAnimator()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} Character.\+Get\+Character\+Animator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+\mbox{\Hypertarget{class_character_abd24b554986aa766a4039185dbee3c49}\label{class_character_abd24b554986aa766a4039185dbee3c49}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily float Character.\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
-
-
-Get the character animator control. 
-
-\begin{DoxyReturn}{Returns}
-The animator control of the character. Can be null
-\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_abd24b554986aa766a4039185dbee3c49_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_aa175e282a08f772115452e76f542817d_icgraph}
+\includegraphics[width=350pt]{class_character_abd24b554986aa766a4039185dbee3c49_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_player_character_a1b5f31c890bea95fa6540e448bb77221}\label{class_player_character_a1b5f31c890bea95fa6540e448bb77221}} 
-\index{PlayerCharacter@{PlayerCharacter}!GetCharacterStats@{GetCharacterStats}}
-\index{GetCharacterStats@{GetCharacterStats}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{GetCharacterStats()}{GetCharacterStats()}}
-{\footnotesize\ttfamily override \mbox{\hyperlink{class_character_stats_data}{Character\+Stats\+Data}} Player\+Character.\+Get\+Character\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_character_ae8ba68110ff061ba6d40930466e463a1}\label{class_character_ae8ba68110ff061ba6d40930466e463a1}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetHealth@{GetHealth}}
+\index{GetHealth@{GetHealth}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetHealth()}{GetHealth()}}
+{\footnotesize\ttfamily float Character.\+Get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
-
-
-Get the character stats data of the character. 
-
-\begin{DoxyReturn}{Returns}
-The character stats of the character. Can be null
-\end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{class_character_af8e4ce789975d7fabf0a27785653e38e}{Character}}.
-
-\mbox{\Hypertarget{class_character_ae1658993038fafcab66c35fabe7c5c4a}\label{class_character_ae1658993038fafcab66c35fabe7c5c4a}} 
-\index{PlayerCharacter@{PlayerCharacter}!GetMovementBehavior@{GetMovementBehavior}}
-\index{GetMovementBehavior@{GetMovementBehavior}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{GetMovementBehavior()}{GetMovementBehavior()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement}{I\+Movement}} Character.\+Get\+Movement\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
-
-
-
-Get the movement behavior of the character. 
-
-\begin{DoxyReturn}{Returns}
-The movement behavior of the character. Can be null
-\end{DoxyReturn}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_ae1658993038fafcab66c35fabe7c5c4a_icgraph}
+\includegraphics[width=350pt]{class_character_ae8ba68110ff061ba6d40930466e463a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ad5015c2ad449b2c9a4598a899848e8cd}\label{class_character_ad5015c2ad449b2c9a4598a899848e8cd}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetHost@{GetHost}}
+\index{GetHost@{GetHost}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetHost()}{GetHost()}}
+{\footnotesize\ttfamily Game\+Object Character.\+Get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_ad5015c2ad449b2c9a4598a899848e8cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ab3d3becb9cd892580822255e21213db2}\label{class_character_ab3d3becb9cd892580822255e21213db2}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetStamina@{GetStamina}}
+\index{GetStamina@{GetStamina}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetStamina()}{GetStamina()}}
+{\footnotesize\ttfamily float Character.\+Get\+Stamina (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_character_ab3d3becb9cd892580822255e21213db2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_afb97330c5c3a3f3b704d771956fd3377}\label{class_character_afb97330c5c3a3f3b704d771956fd3377}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetStats@{GetStats}}
+\index{GetStats@{GetStats}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetStats()}{GetStats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Character.\+Get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_afb97330c5c3a3f3b704d771956fd3377_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aa93dd91db660de26a9f4d5f2539ddeaa}\label{class_character_aa93dd91db660de26a9f4d5f2539ddeaa}} 
+\index{PlayerCharacter@{PlayerCharacter}!IsAttacking@{IsAttacking}}
+\index{IsAttacking@{IsAttacking}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{IsAttacking()}{IsAttacking()}}
+{\footnotesize\ttfamily bool Character.\+Is\+Attacking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aa93dd91db660de26a9f4d5f2539ddeaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c}\label{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c}} 
+\index{PlayerCharacter@{PlayerCharacter}!IsTouchingGround@{IsTouchingGround}}
+\index{IsTouchingGround@{IsTouchingGround}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{IsTouchingGround()}{IsTouchingGround()}}
+{\footnotesize\ttfamily bool Character.\+Is\+Touching\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a5116d3b44ae396f671a2e7daa5cbbe8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a0f4fa390c0aa02d1e0c715cfb191eada}\label{class_character_a0f4fa390c0aa02d1e0c715cfb191eada}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnAttackDone@{OnAttackDone}}
+\index{OnAttackDone@{OnAttackDone}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnAttackDone()}{OnAttackDone()}}
+{\footnotesize\ttfamily void Character.\+On\+Attack\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a0f4fa390c0aa02d1e0c715cfb191eada_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a58338828aaf6af0ce7a6a02107513ce3}\label{class_character_a58338828aaf6af0ce7a6a02107513ce3}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnAttackStart@{OnAttackStart}}
+\index{OnAttackStart@{OnAttackStart}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnAttackStart()}{OnAttackStart()}}
+{\footnotesize\ttfamily void Character.\+On\+Attack\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a58338828aaf6af0ce7a6a02107513ce3_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_player_character_a0fbf9e72892c47b8853717124566df2d}\label{class_player_character_a0fbf9e72892c47b8853717124566df2d}} 
@@ -230,8 +340,7 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{OnPlayerAttack()}{OnPlayerAttack()}}
 {\footnotesize\ttfamily void Player\+Character.\+On\+Player\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -248,19 +357,18 @@ Here is the call graph for this function\+:
 
 Regenerate the player character\textquotesingle{}s stamina and health. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_player_character_af2c489a2092d8941c48e095193ae2e8c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_player_character_af98a13bab958e606a330ae868a1a7f69}\label{class_player_character_af98a13bab958e606a330ae868a1a7f69}} 
+\mbox{\Hypertarget{class_character_afea0491dc5b0a44c2e2296fb87c11393}\label{class_character_afea0491dc5b0a44c2e2296fb87c11393}} 
 \index{PlayerCharacter@{PlayerCharacter}!RequestJump@{RequestJump}}
 \index{RequestJump@{RequestJump}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{RequestJump()}{RequestJump()}}
-{\footnotesize\ttfamily override bool Player\+Character.\+Request\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -270,15 +378,25 @@ This function ask the move\+Behavior of the character to signal the jump functio
 True\+: if successfully called the Signal\+Jump function and vice versa ~\newline
  
 \end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{class_character_afea0491dc5b0a44c2e2296fb87c11393}{Character}}.
-
-\mbox{\Hypertarget{class_player_character_aef051e596c27491d72361b8433262c81}\label{class_player_character_aef051e596c27491d72361b8433262c81}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_afea0491dc5b0a44c2e2296fb87c11393_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_afea0491dc5b0a44c2e2296fb87c11393_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}\label{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}} 
 \index{PlayerCharacter@{PlayerCharacter}!RequestMove@{RequestMove}}
 \index{RequestMove@{RequestMove}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{RequestMove()}{RequestMove()}}
-{\footnotesize\ttfamily override bool Player\+Character.\+Request\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool Character.\+Request\+Move (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -291,36 +409,26 @@ This fucntion ask the move\+Behavior of the character to move the character\text
 {\em side} & side is how much the host game object should move sideway \\
 \hline
 \end{DoxyParams}
-
-
-Reimplemented from \mbox{\hyperlink{class_character_aea4be2e1287d97dfc3187f66dad5a5bb}{Character}}.
-
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_player_character_aef051e596c27491d72361b8433262c81_cgraph}
+\includegraphics[width=350pt]{class_character_aea4be2e1287d97dfc3187f66dad5a5bb_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_player_character_a1ab466e19de293dab39f987f4abea91a}\label{class_player_character_a1ab466e19de293dab39f987f4abea91a}} 
-\index{PlayerCharacter@{PlayerCharacter}!RequestMovementType@{RequestMovementType}}
-\index{RequestMovementType@{RequestMovementType}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{RequestMovementType()}{RequestMovementType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily override bool Player\+Character.\+Request\+Movement\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{I\+Movement.\+Movement\+Type}}}]{move\+Type }\end{DoxyParamCaption})}
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_player_character_a1ab466e19de293dab39f987f4abea91a_icgraph}
+\includegraphics[width=350pt]{class_character_aea4be2e1287d97dfc3187f66dad5a5bb_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_character_a9c90452155c735e88b3872d2fb62ad37}\label{class_character_a9c90452155c735e88b3872d2fb62ad37}} 
 \index{PlayerCharacter@{PlayerCharacter}!RequestMovementType@{RequestMovementType}}
 \index{RequestMovementType@{RequestMovementType}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{RequestMovementType()}{RequestMovementType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{RequestMovementType()}{RequestMovementType()}}
 {\footnotesize\ttfamily virtual bool Character.\+Request\+Movement\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement.\+Movement\+Type}}}]{move\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
@@ -336,12 +444,32 @@ This function set the movement Type for the move\+Behavior.
 True\+: if successfully set the movement mode of the move behavior. ~\newline
  False\+: if movement\+Behavior is null. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a6582d4d3cbe40678ca81623958676b5f}\label{class_character_a6582d4d3cbe40678ca81623958676b5f}} 
+\index{PlayerCharacter@{PlayerCharacter}!RotateToward@{RotateToward}}
+\index{RotateToward@{RotateToward}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{RotateToward()}{RotateToward()}}
+{\footnotesize\ttfamily void Character.\+Rotate\+Toward (\begin{DoxyParamCaption}\item[{Vector3}]{direction,  }\item[{bool}]{rotateY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_cgraph}
+\includegraphics[width=350pt]{class_character_a6582d4d3cbe40678ca81623958676b5f_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -349,7 +477,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_character_a9c90452155c735e88b3872d2fb62ad37_icgraph}
+\includegraphics[width=350pt]{class_character_a6582d4d3cbe40678ca81623958676b5f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_player_character_a56136374d22824dcc76e8a22f7d4eeaf}\label{class_player_character_a56136374d22824dcc76e8a22f7d4eeaf}} 
@@ -358,8 +486,7 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Player\+Character.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -376,8 +503,7 @@ Here is the call graph for this function\+:
 
 Set should\+Regen to true 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -394,8 +520,7 @@ Here is the caller graph for this function\+:
 
 Trigger the cool down of regeneration. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -416,8 +541,7 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Player\+Character.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -427,16 +551,6 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_character_a7350d7b91b3717ed4653f18bb40bab30}\label{class_character_a7350d7b91b3717ed4653f18bb40bab30}} 
-\index{PlayerCharacter@{PlayerCharacter}!animatorControl@{animatorControl}}
-\index{animatorControl@{animatorControl}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{animatorControl}{animatorControl}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_animator_control}{Character\+Animator\+Control}} Character.\+animator\+Control\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-Reference to the animator control. 
-
 \mbox{\Hypertarget{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}\label{class_character_a55ade2ba7253be74f390cdcb8ceaafcd}} 
 \index{PlayerCharacter@{PlayerCharacter}!attackConditions@{attackConditions}}
 \index{attackConditions@{attackConditions}!PlayerCharacter@{PlayerCharacter}}
@@ -447,15 +561,11 @@ Reference to the animator control.
 
 An Scriptable Conditions checker that can be created in the Unity Editor. 
 
-attack\+Conditions check wheter the character can attack.\mbox{\Hypertarget{class_player_character_a1375d85935af2f854809e45c8730a326}\label{class_player_character_a1375d85935af2f854809e45c8730a326}} 
-\index{PlayerCharacter@{PlayerCharacter}!attackCost@{attackCost}}
-\index{attackCost@{attackCost}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{attackCost}{attackCost}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_player_action_cost}{Player\+Action\+Cost}} Player\+Character.\+attack\+Cost = null\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-The cost of attack when the character play an attack animation. 
+attack\+Conditions check wheter the character can attack.\mbox{\Hypertarget{class_character_aaee9b3a240852149c350ec45afd1c6d3}\label{class_character_aaee9b3a240852149c350ec45afd1c6d3}} 
+\index{PlayerCharacter@{PlayerCharacter}!canRotate@{canRotate}}
+\index{canRotate@{canRotate}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{canRotate}{canRotate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conditions_checker}{Conditions\+Checker}} Character.\+can\+Rotate\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
 
 \mbox{\Hypertarget{class_character_a3fca381aacbc571e0bf8678882ee2610}\label{class_character_a3fca381aacbc571e0bf8678882ee2610}} 
 \index{PlayerCharacter@{PlayerCharacter}!changeMoveTypeConditions@{changeMoveTypeConditions}}
@@ -467,15 +577,21 @@ The cost of attack when the character play an attack animation.
 
 An Scriptable Conditions checker that can be created in the Unity Editor. 
 
-change\+Move\+Type\+Conditions check whether it is possible to change the current move mode.\mbox{\Hypertarget{class_player_character_a711782a7e3e2363a1f4d5841f050a119}\label{class_player_character_a711782a7e3e2363a1f4d5841f050a119}} 
+change\+Move\+Type\+Conditions check whether it is possible to change the current move mode.\mbox{\Hypertarget{class_character_af86674f9440ec86b61c057dbc1b8586e}\label{class_character_af86674f9440ec86b61c057dbc1b8586e}} 
 \index{PlayerCharacter@{PlayerCharacter}!characterData@{characterData}}
 \index{characterData@{characterData}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{characterData}{characterData}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Player\+Character.\+character\+Data = null\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_data}{Character\+Data}} Character.\+character\+Data = null\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
 
 
 
 The player character\textquotesingle{}s stats 
+
+\mbox{\Hypertarget{class_character_a7bceb1f35a225d5475239fb8636921c4}\label{class_character_a7bceb1f35a225d5475239fb8636921c4}} 
+\index{PlayerCharacter@{PlayerCharacter}!health@{health}}
+\index{health@{health}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily float Character.\+health = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
 
 \mbox{\Hypertarget{class_character_ae91b6199245ae87206e43fbd2ae9e440}\label{class_character_ae91b6199245ae87206e43fbd2ae9e440}} 
 \index{PlayerCharacter@{PlayerCharacter}!hostRigidBody@{hostRigidBody}}
@@ -488,7 +604,13 @@ The player character\textquotesingle{}s stats
 The Rigid\+Body of the \mbox{\hyperlink{class_character}{Character}}\textquotesingle{}s model. 
 
 ~\newline
- Need to be set in Unity Editor.\mbox{\Hypertarget{class_character_a36de084cc26942ad378ea9494ad8a5bc}\label{class_character_a36de084cc26942ad378ea9494ad8a5bc}} 
+ Need to be set in Unity Editor.\mbox{\Hypertarget{class_character_aabb3648d5aaeb3768a8fcc5ae6ce887b}\label{class_character_aabb3648d5aaeb3768a8fcc5ae6ce887b}} 
+\index{PlayerCharacter@{PlayerCharacter}!isAttacking@{isAttacking}}
+\index{isAttacking@{isAttacking}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{isAttacking}{isAttacking}}
+{\footnotesize\ttfamily bool Character.\+is\+Attacking\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_character_a36de084cc26942ad378ea9494ad8a5bc}\label{class_character_a36de084cc26942ad378ea9494ad8a5bc}} 
 \index{PlayerCharacter@{PlayerCharacter}!jumpConditions@{jumpConditions}}
 \index{jumpConditions@{jumpConditions}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{jumpConditions}{jumpConditions}}
@@ -523,21 +645,23 @@ Reference to the movement behavior of the character.
 \index{PlayerCharacter@{PlayerCharacter}!onCharacterAttack@{onCharacterAttack}}
 \index{onCharacterAttack@{onCharacterAttack}!PlayerCharacter@{PlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{onCharacterAttack}{onCharacterAttack}}
-{\footnotesize\ttfamily Unity\+Event Character.\+on\+Character\+Attack\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily Unity\+Event Character.\+on\+Character\+Attack = new Unity\+Event()\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
 
 This is event is called when an attack is successfully trigger. 
 
-\mbox{\Hypertarget{class_player_character_ad89ffaebd61af5f365c200c256162004}\label{class_player_character_ad89ffaebd61af5f365c200c256162004}} 
-\index{PlayerCharacter@{PlayerCharacter}!playerCamera@{playerCamera}}
-\index{playerCamera@{playerCamera}!PlayerCharacter@{PlayerCharacter}}
-\doxysubsubsection{\texorpdfstring{playerCamera}{playerCamera}}
-{\footnotesize\ttfamily Camera Player\+Character.\+player\+Camera = null\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{class_character_a3bfd2e6d45fe4fc3d3e63172a6c00959}\label{class_character_a3bfd2e6d45fe4fc3d3e63172a6c00959}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnCharacterDamaged@{OnCharacterDamaged}}
+\index{OnCharacterDamaged@{OnCharacterDamaged}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnCharacterDamaged}{OnCharacterDamaged}}
+{\footnotesize\ttfamily Unity\+Event Character.\+On\+Character\+Damaged = new Unity\+Event()\hspace{0.3cm}{\ttfamily [inherited]}}
 
-
-
-The camera that follow the player 
+\mbox{\Hypertarget{class_character_a0945c7aa868f33ea428e1bc9302b6bb9}\label{class_character_a0945c7aa868f33ea428e1bc9302b6bb9}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnCharacterDeath@{OnCharacterDeath}}
+\index{OnCharacterDeath@{OnCharacterDeath}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnCharacterDeath}{OnCharacterDeath}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_death_event}{Death\+Event}} Character.\+On\+Character\+Death = new \mbox{\hyperlink{class_death_event}{Death\+Event}}()\hspace{0.3cm}{\ttfamily [inherited]}}
 
 \mbox{\Hypertarget{class_player_character_afa0a869b63932832b0f2ce0f5bb07c99}\label{class_player_character_afa0a869b63932832b0f2ce0f5bb07c99}} 
 \index{PlayerCharacter@{PlayerCharacter}!regenCoolDownTimer@{regenCoolDownTimer}}
@@ -558,6 +682,12 @@ The cooldown timer for regening after draining health or stamina.
 
 
 Whether the character should regen health and stamina or not. 
+
+\mbox{\Hypertarget{class_character_afedb7998be9bd7b6edb665777cf2c1c8}\label{class_character_afedb7998be9bd7b6edb665777cf2c1c8}} 
+\index{PlayerCharacter@{PlayerCharacter}!stamina@{stamina}}
+\index{stamina@{stamina}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{stamina}{stamina}}
+{\footnotesize\ttfamily float Character.\+stamina = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
 
 
 

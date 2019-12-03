@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_weapon-members.html">List of all members</a>  </div>
@@ -84,26 +85,31 @@ Collaboration diagram for Weapon:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_weapon__coll__graph.png" border="0" usemap="#_weapon_coll__map" alt="Collaboration graph"/></div>
 <map name="_weapon_coll__map" id="_weapon_coll__map">
-<area shape="rect" title=" " alt="" coords="424,408,495,435"/>
-<area shape="rect" title=" " alt="" coords="353,81,464,108"/>
-<area shape="rect" href="class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="151,319,229,345"/>
-<area shape="rect" href="class_character_animator_control.html" title=" " alt="" coords="59,408,230,435"/>
-<area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="15,199,99,225"/>
-<area shape="rect" href="class_physic_call_back.html" title=" " alt="" coords="497,319,611,345"/>
-<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="5,81,113,108"/>
-<area shape="rect" title=" " alt="" coords="64,5,183,32"/>
-<area shape="rect" href="class_conditions_checker.html" title=" " alt="" coords="94,132,225,159"/>
-<area shape="rect" href="class_my_trigger_event.html" title=" " alt="" coords="548,199,659,225"/>
-<area shape="rect" title=" " alt="" coords="528,81,679,108"/>
+<area shape="rect" title=" " alt="" coords="87,408,157,435"/>
+<area shape="rect" title=" " alt="" coords="5,81,116,108"/>
+<area shape="rect" href="class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="225,319,304,345"/>
+<area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="151,206,235,233"/>
+<area shape="rect" href="class_character_data.html" title=" " alt="" coords="284,206,389,233"/>
+<area shape="rect" title=" " alt="" coords="356,5,475,32"/>
+<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="301,81,409,108"/>
+<area shape="rect" href="class_character_stats_data.html" title=" " alt="" coords="141,81,277,108"/>
+<area shape="rect" href="class_conditions_checker.html" title=" " alt="" coords="605,132,735,159"/>
+<area shape="rect" href="class_death_event.html" title=" " alt="" coords="495,206,583,233"/>
+<area shape="rect" title=" " alt="" coords="485,81,649,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aea366ee653badbbb1976706df42dbd6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#aea366ee653badbbb1976706df42dbd6b">SwitchKillBox</a> (bool isOn)</td></tr>
-<tr class="separator:aea366ee653badbbb1976706df42dbd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e1fc16f0b3505210907b7ea8b9283f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a6e1fc16f0b3505210907b7ea8b9283f4">OnKillBoxEnter</a> (Collider other)</td></tr>
-<tr class="separator:a6e1fc16f0b3505210907b7ea8b9283f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fba69ccf321b57614bf7a111a439330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a5fba69ccf321b57614bf7a111a439330">DealsDamage</a> (int hitBoxIndex)</td></tr>
+<tr class="separator:a5fba69ccf321b57614bf7a111a439330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441dc127de9f7728ffdb3d94f2e1af3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a441dc127de9f7728ffdb3d94f2e1af3e">TryToDealsDamage</a> (Collider targetCollider)</td></tr>
+<tr class="separator:a441dc127de9f7728ffdb3d94f2e1af3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa1f1a99d4c7b39a588426ae14e8f70ed"><td class="memItemLeft" align="right" valign="top">UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#aa1f1a99d4c7b39a588426ae14e8f70ed">OnWeaponHit</a> = new UnityEvent()</td></tr>
+<tr class="separator:aa1f1a99d4c7b39a588426ae14e8f70ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -112,27 +118,29 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a67d637088f248dd13048b89e592ea63a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a> = 0</td></tr>
-<tr class="separator:a67d637088f248dd13048b89e592ea63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fa2c0d153f48845cc3aee7dff66014"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a04fa2c0d153f48845cc3aee7dff66014">damage</a> = 0</td></tr>
+<tr class="separator:a04fa2c0d153f48845cc3aee7dff66014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64c72d17c522cd5e5ba9fac264fe909"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">wielder</a> = null</td></tr>
 <tr class="separator:af64c72d17c522cd5e5ba9fac264fe909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a502f290ff154c26d66504708e98220fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_physic_call_back.html">PhysicCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a502f290ff154c26d66504708e98220fc">killBox</a> = null</td></tr>
-<tr class="separator:a502f290ff154c26d66504708e98220fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b54675be9f5524c56ea95d53cc11f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character.html">Character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#ab5b54675be9f5524c56ea95d53cc11f1">wielderChar</a> = null</td></tr>
 <tr class="separator:ab5b54675be9f5524c56ea95d53cc11f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3a7225968c0d1aa83e9efdc069f4a3"><td class="memItemLeft" align="right" valign="top">List&lt; Collider &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a3a3a7225968c0d1aa83e9efdc069f4a3">hitboxes</a> = new List&lt;Collider&gt;()</td></tr>
+<tr class="separator:a3a3a7225968c0d1aa83e9efdc069f4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c90c4bd97de236562d2b0f91093aa5"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#ac3c90c4bd97de236562d2b0f91093aa5">swordEdge</a></td></tr>
+<tr class="separator:ac3c90c4bd97de236562d2b0f91093aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6e1fc16f0b3505210907b7ea8b9283f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e1fc16f0b3505210907b7ea8b9283f4">&#9670;&nbsp;</a></span>OnKillBoxEnter()</h2>
+<a id="a5fba69ccf321b57614bf7a111a439330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fba69ccf321b57614bf7a111a439330">&#9670;&nbsp;</a></span>DealsDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Weapon.OnKillBoxEnter </td>
+          <td class="memname">void Weapon.DealsDamage </td>
           <td>(</td>
-          <td class="paramtype">Collider&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hitBoxIndex</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -140,21 +148,12 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_cgraph.png" border="0" usemap="#class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_cgraph" alt=""/></div>
-<map name="class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_cgraph" id="class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,56,168,83"/>
-<area shape="rect" href="class_logger.html#a8d6beb22eddfefb3610b259a593d574c" title=" " alt="" coords="242,5,401,32"/>
-<area shape="rect" href="class_character.html#aa175e282a08f772115452e76f542817d" title="Get the character animator control." alt="" coords="216,56,427,83"/>
-<area shape="rect" href="class_character_animator_control.html#a5bffce3e193cb3e1301b51b81c1cb464" title=" " alt="" coords="234,107,409,149"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_icgraph.png" border="0" usemap="#class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_icgraph" alt=""/></div>
-<map name="class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_icgraph" id="class_weapon_a6e1fc16f0b3505210907b7ea8b9283f4_icgraph">
-<area shape="rect" title=" " alt="" coords="156,5,319,32"/>
-<area shape="rect" href="class_weapon.html#ae4f517eead254a905b55b9d9cd9b651c" title=" " alt="" coords="5,5,108,32"/>
+<div class="center"><img src="class_weapon_a5fba69ccf321b57614bf7a111a439330_cgraph.png" border="0" usemap="#class_weapon_a5fba69ccf321b57614bf7a111a439330_cgraph" alt=""/></div>
+<map name="class_weapon_a5fba69ccf321b57614bf7a111a439330_cgraph" id="class_weapon_a5fba69ccf321b57614bf7a111a439330_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,160,61"/>
+<area shape="rect" href="class_weapon.html#a441dc127de9f7728ffdb3d94f2e1af3e" title=" " alt="" coords="208,35,395,61"/>
+<area shape="rect" href="class_logger.html#a8d6beb22eddfefb3610b259a593d574c" title=" " alt="" coords="453,5,612,32"/>
+<area shape="rect" href="class_singleton_monobehavior.html#a58152666f3346f3f59dfec471394df54" title=" " alt="" coords="443,57,623,98"/>
 </map>
 </div>
 
@@ -182,42 +181,49 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_weapon_ae4f517eead254a905b55b9d9cd9b651c_cgraph.png" border="0" usemap="#class_weapon_ae4f517eead254a905b55b9d9cd9b651c_cgraph" alt=""/></div>
-<map name="class_weapon_ae4f517eead254a905b55b9d9cd9b651c_cgraph" id="class_weapon_ae4f517eead254a905b55b9d9cd9b651c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,56,108,83"/>
-<area shape="rect" href="class_weapon.html#a6e1fc16f0b3505210907b7ea8b9283f4" title=" " alt="" coords="156,56,319,83"/>
-<area shape="rect" href="class_logger.html#a8d6beb22eddfefb3610b259a593d574c" title=" " alt="" coords="393,5,551,32"/>
-<area shape="rect" href="class_character.html#aa175e282a08f772115452e76f542817d" title="Get the character animator control." alt="" coords="367,56,577,83"/>
-<area shape="rect" href="class_character_animator_control.html#a5bffce3e193cb3e1301b51b81c1cb464" title=" " alt="" coords="385,107,559,149"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="aea366ee653badbbb1976706df42dbd6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea366ee653badbbb1976706df42dbd6b">&#9670;&nbsp;</a></span>SwitchKillBox()</h2>
+<a id="a441dc127de9f7728ffdb3d94f2e1af3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441dc127de9f7728ffdb3d94f2e1af3e">&#9670;&nbsp;</a></span>TryToDealsDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Weapon.SwitchKillBox </td>
+          <td class="memname">bool Weapon.TryToDealsDamage </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isOn</em></td><td>)</td>
+          <td class="paramtype">Collider&#160;</td>
+          <td class="paramname"><em>targetCollider</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_cgraph.png" border="0" usemap="#class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_cgraph" alt=""/></div>
+<map name="class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_cgraph" id="class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,192,61"/>
+<area shape="rect" href="class_logger.html#a8d6beb22eddfefb3610b259a593d574c" title=" " alt="" coords="251,5,409,32"/>
+<area shape="rect" href="class_singleton_monobehavior.html#a58152666f3346f3f59dfec471394df54" title=" " alt="" coords="240,57,420,98"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_icgraph.png" border="0" usemap="#class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_icgraph" alt=""/></div>
+<map name="class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_icgraph" id="class_weapon_a441dc127de9f7728ffdb3d94f2e1af3e_icgraph">
+<area shape="rect" title=" " alt="" coords="208,5,395,32"/>
+<area shape="rect" href="class_weapon.html#a5fba69ccf321b57614bf7a111a439330" title=" " alt="" coords="5,5,160,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a67d637088f248dd13048b89e592ea63a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67d637088f248dd13048b89e592ea63a">&#9670;&nbsp;</a></span>damage</h2>
+<a id="a04fa2c0d153f48845cc3aee7dff66014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fa2c0d153f48845cc3aee7dff66014">&#9670;&nbsp;</a></span>damage</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +232,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Weapon.damage = 0</td>
+          <td class="memname">int Weapon.damage = 0</td>
         </tr>
       </table>
   </td>
@@ -238,8 +244,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a502f290ff154c26d66504708e98220fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a502f290ff154c26d66504708e98220fc">&#9670;&nbsp;</a></span>killBox</h2>
+<a id="a3a3a7225968c0d1aa83e9efdc069f4a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a3a7225968c0d1aa83e9efdc069f4a3">&#9670;&nbsp;</a></span>hitboxes</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +254,43 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_physic_call_back.html">PhysicCallBack</a> Weapon.killBox = null</td>
+          <td class="memname">List&lt;Collider&gt; Weapon.hitboxes = new List&lt;Collider&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1f1a99d4c7b39a588426ae14e8f70ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f1a99d4c7b39a588426ae14e8f70ed">&#9670;&nbsp;</a></span>OnWeaponHit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEvent Weapon.OnWeaponHit = new UnityEvent()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3c90c4bd97de236562d2b0f91093aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c90c4bd97de236562d2b0f91093aa5">&#9670;&nbsp;</a></span>swordEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Weapon.swordEdge</td>
         </tr>
       </table>
   </td>
