@@ -125,7 +125,7 @@ public class NPCController : MonoBehaviour
         {
             return false;
         }
-        if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, 1))
+        if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetCharacterDataPack().stoppingDistance, 1))
         {
             if (NavMesh.CalculatePath(hit.position, currentPath.corners[currentPoint], 1, new NavMeshPath()) == false)
             {
@@ -160,16 +160,16 @@ public class NPCController : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetStats().stoppingDistance);
+        Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetCharacterDataPack().stoppingDistance);
 
         if (isAIActive && currentState)
         {
             Gizmos.color = currentState.GetGizmosColor();
-            Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetStats().aggroRange);
+            Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetCharacterDataPack().aggroRange);
         }
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetStats().attackRange);
+        Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetCharacterDataPack().attackRange);
 
         if (currentPath != null)
         {
@@ -195,7 +195,7 @@ public class NPCController : MonoBehaviour
     {
 
         var distance = Vector3.Distance(currentDestination, aiCharacter.GetHost().transform.position);
-        if (distance <= aiCharacter.GetStats().stoppingDistance)
+        if (distance <= aiCharacter.GetCharacterDataPack().stoppingDistance)
         {
             return true;
         }
@@ -217,7 +217,7 @@ public class NPCController : MonoBehaviour
         currentPath.ClearCorners();
         Transform charTransform = aiCharacter.GetHost().transform;
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetStats().stoppingDistance, NavMesh.AllAreas))
+        if (NavMesh.SamplePosition(charTransform.position, out hit, aiCharacter.GetCharacterDataPack().stoppingDistance, NavMesh.AllAreas))
         {
             if (hit.position.x != Mathf.Infinity && newDestination.x != Mathf.Infinity)
             {
@@ -239,7 +239,7 @@ public class NPCController : MonoBehaviour
     public bool LookForHostile()
     {
         Transform characterTransform = aiCharacter.GetHost().transform;
-        CharacterData stats = aiCharacter.GetStats();
+        CharacterData stats = aiCharacter.GetCharacterDataPack();
         Collider[] cols = Physics.OverlapSphere(characterTransform.position, stats.aggroRange, enemyMasks);
         for (int i = 0; i < cols.Length; i++)
         {
@@ -275,7 +275,7 @@ public class NPCController : MonoBehaviour
     }
     public bool IsInAttackRange(Vector3 position)
     {
-        if (Vector3.Distance(aiCharacter.GetHost().transform.position, position) <= aiCharacter.GetStats().attackRange)
+        if (Vector3.Distance(aiCharacter.GetHost().transform.position, position) <= aiCharacter.GetCharacterDataPack().attackRange)
         {
             return true;
         }

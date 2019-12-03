@@ -48,6 +48,10 @@ public class Weapon : MonoBehaviour
                 Logger.CharacterDebug(wielder.GetComponentInChildren<Character>(), "'s weapon had striked " + character);
                 OnWeaponHit.Invoke();
                 character.BeingDamage(damage);
+                if (character.GetHealth() <= 0)
+                {
+                    wielder.GetComponentInChildren<Character>().IncreaseHealth(character.GetCharacterDataPack().stats.healthReturnOnDeath);
+                }
                 return true;
             }
         }
