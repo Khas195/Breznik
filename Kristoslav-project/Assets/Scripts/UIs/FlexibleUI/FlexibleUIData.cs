@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class FlexibleUIData : ScriptableObject
 {
     public StatsBarUIData healthBar;
-    public DotsUIData staminaDots;
+    public DotsUIData healthDots;
 
     [Header("Inventory Item Background")]
     [ShowAssetPreview]
     public SpriteState itemButtonSpriteState;
 
     [ShowAssetPreview]
-    public Sprite ItemBackgroundSprite ;
+    public Sprite ItemBackgroundSprite;
 }
