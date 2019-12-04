@@ -223,7 +223,7 @@ public class Character : MonoBehaviour
     /// </returns>
     public virtual bool RequestJump()
     {
-        if (jumpConditions.IsSatisfied(this) || jumpLock == false)
+        if (jumpConditions.IsSatisfied(this) && jumpLock == false)
         {
             movementBehavior.SignalJump();
             return true;

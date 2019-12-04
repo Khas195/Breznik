@@ -14,11 +14,6 @@ public class PlayerStatsUI : MonoBehaviour
     [SerializeField]
     FlexibleUIDotsBar healthBar = null;
     /// <summary>
-    /// The Stamina bar of the character.
-    /// </summary>
-    [SerializeField]
-    FlexibleUIDotsBar staminaDots = null;
-    /// <summary>
     /// The character stats data of the character
     /// </summary>
     [SerializeField]
@@ -32,6 +27,5 @@ public class PlayerStatsUI : MonoBehaviour
         var targetHealthValue = player.GetHealth() / baseStats.health;
 
         healthBar.SetFilledAmount(targetHealthValue);
-
     }
 }
