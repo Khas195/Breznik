@@ -12,7 +12,7 @@ public class PlayerStatsUI : MonoBehaviour
     /// The health bar of the character.
     /// </summary>
     [SerializeField]
-    FlexibleUIStatsBar healthBar = null;
+    FlexibleUIDotsBar healthBar = null;
     /// <summary>
     /// The Stamina bar of the character.
     /// </summary>
@@ -29,14 +29,9 @@ public class PlayerStatsUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var targetHealthValue= player.GetHealth()/baseStats.health;
-        var targetStaminaValue = player.GetStamina()/baseStats.stamina;
+        var targetHealthValue = player.GetHealth() / baseStats.health;
 
-        var curHealthValue = healthBar.GetFilledAmount();
+        healthBar.SetFilledAmount(targetHealthValue);
 
-        curHealthValue  = Mathf.Lerp(curHealthValue, targetHealthValue, 0.1f);
-
-        healthBar.SetFilledAmount(curHealthValue);
-        staminaDots.SetFilledAmount(targetStaminaValue);
     }
 }
