@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -6,12 +7,13 @@ public class DotsUIData : ScriptableObject
 {
     public int maxCount;
 
-    [ShowAssetPreview]
-    public Sprite UsedSprite ;
-    [ShowAssetPreview]
-    public Sprite UnusedSprite ;
-    public float iconHeight;
-
-    public float IconWidth ;
+    public bool onTopUsedSprite = false;
+    public List<Sprite> UsedSprite = new List<Sprite>();
+    public bool onTopUnusedSprite = false;
+    public List<Sprite> UnusedSprite = new List<Sprite>();
+    public float usedSpriteIconHeight;
+    public float unusedSpriteIconHeight;
+    public float usedSpriteIconWidth;
+    public float unUsedSpriteIconWidth;
     public float spaceBetween;
 }

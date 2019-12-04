@@ -19,8 +19,14 @@ public class CharacterAnimatorControl : MonoBehaviour
     Rigidbody hostRb = null;
     [SerializeField]
     Character character = null;
+    [SerializeField]
+    int numOfAttackMoves = 1;
+    [SerializeField]
+    int numOfHurtAnimations = 1;
+    Quaternion lastRotation = Quaternion.identity;
     void Start()
     {
+        lastRotation = hostRb.rotation;
     }
 
     // Update is called once per frame
@@ -30,10 +36,14 @@ public class CharacterAnimatorControl : MonoBehaviour
         animator.SetBool("TouchingGround", character.IsTouchingGround());
         animator.SetFloat("VelocityY", hostRb.velocity.y);
         animator.SetFloat("MoveSpeed", moveSpeed);
+        var rotateSpeed = hostRb.rotation.y - lastRotation.y;
+        animator.SetFloat("RotationSpeed", Mathf.Abs(rotateSpeed));
+
     }
     public void PlayAttackAnimation()
     {
-        animator.SetTrigger("attack");
+        var randomAttack = UnityEngine.Random.Range(0, numOfAttackMoves);
+        animator.SetTrigger("attack" + randomAttack);
 
     }
     public bool IsPlaying(string animationName)
@@ -48,23 +58,14 @@ public class CharacterAnimatorControl : MonoBehaviour
             return false;
         }
     }
-    public void SetIsAttack(bool attack)
-    {
-        if (attack)
-        {
-            character.OnAttackStart();
-        }
-        else
-        {
-            character.OnAttackDone();
-        }
-    }
-    public bool IsInAttackingAnimation()
-    {
-        return character.IsAttacking();
-    }
+
     public void TriggerDeadAnimation()
     {
         animator.SetTrigger("Die");
+    }
+    public void PlayDamagedAnimation()
+    {
+        var randomHurt = UnityEngine.Random.Range(0, numOfHurtAnimations);
+        animator.SetTrigger("hurt" + randomHurt);
     }
 }

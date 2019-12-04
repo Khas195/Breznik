@@ -13,6 +13,7 @@ public class ChaseAction : Action
     private void Chase(NPCController controller)
     {
         Transform currentTarget = controller.GetChaseTarget();
+        controller.SetMovement(IMovement.MovementType.Run);
         controller.SetDestination(currentTarget.position);
     }
 }

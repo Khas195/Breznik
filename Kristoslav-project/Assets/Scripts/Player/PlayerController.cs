@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour
         {
             character.RequestMovementType(IMovement.MovementType.Walk);
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             character.RequestJump();
         }
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if ((forward != 0 || side != 0))
+        if ((forward != 0 || side != 0) && character.IsRotationLock() == false)
         {
             var movedir = Vector3.zero;
 

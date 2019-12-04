@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e16315120d37d4987261e23aa6f651, type: 3}
+  m_Name: RotateState
+  m_EditorClassIdentifier: 
+  gizmosColor: {r: 1, g: 0.67031884, b: 0, a: 1}
+  actions:
+  - {fileID: 11400000, guid: b3f6160124cfe4d46a4ab2b8b29cb5aa, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 11e815f0971333a4693cf631fbea95f9, type: 2}
+    trueState: {fileID: 11400000, guid: 9db3f4cde6b997249a6141c69953c9bf, type: 2}
+    falseState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
+  - decision: {fileID: 11400000, guid: f880d6d8829e04d42b71b74772d720bd, type: 2}
+    trueState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
+    falseState: {fileID: 11400000, guid: 63ee3915e47647744a426b4205fa8d5f, type: 2}

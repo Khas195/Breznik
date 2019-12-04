@@ -12,9 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ce99154c44b3945818e7eb3511e2d0, type: 3}
   m_Name: AttackCountUISkin
   m_EditorClassIdentifier: 
-  maxCount: 4
-  UsedSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  UnusedSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  iconHeight: 32
-  IconWidth: 32
-  spaceBetween: 18
+  maxCount: 5
+  onTopUsedSprite: 0
+  UsedSprite:
+  - {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  onTopUnusedSprite: 1
+  UnusedSprite:
+  - {fileID: 21300000, guid: 15b1a7b9339557049a76ba95ee66f579, type: 3}
+  - {fileID: 21300000, guid: 0648524d079d9b042ac160091220ed84, type: 3}
+  - {fileID: 21300000, guid: 199307b484400aa46a09e70d1bf9aa8e, type: 3}
+  - {fileID: 21300000, guid: d0ee2353eacaa234aa9b0d1970b7150b, type: 3}
+  - {fileID: 21300000, guid: ca5b8dc4bc5cdd7488a947ee07b18ea1, type: 3}
+  usedSpriteIconHeight: 45
+  unusedSpriteIconHeight: 45
+  usedSpriteIconWidth: 170
+  unUsedSpriteIconWidth: 170
+  spaceBetween: 0

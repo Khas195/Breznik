@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCStatsUI : MonoBehaviour
 {
@@ -15,16 +16,27 @@ public class NPCStatsUI : MonoBehaviour
 
     [SerializeField]
     bool hasHealthBar = true;
+
     [SerializeField]
     [ShowIf("hasHealthBar")]
     FlexibleUIStatsBar healthBar = null;
+
     [SerializeField]
     [ShowIf("hasHealthBar")]
+    [ReadOnly]
     CharacterStatsData baseStats = null;
-    GameObject cameraObject = null;
 
-    void Start()
+    [SerializeField]
+    [ShowIf("hasHealthBar")]
+    CharacterData charData = null;
+    GameObject cameraObject = null;
+    [SerializeField]
+    Text text;
+
+    void Awake()
     {
+        baseStats = charData.stats;
+        text.text = charData.characterName;
     }
     // Update is called once per frame
     void Update()
