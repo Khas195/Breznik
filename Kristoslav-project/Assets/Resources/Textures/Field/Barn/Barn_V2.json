@@ -1,0 +1,79 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                },
+                "Subsurface Scattering Parameters": {
+                    "sssColor": [
+                        0.7009999752044678,
+                        0.3009999990463257,
+                        0.3050000071525574
+                    ],
+                    "sssEnabled": true,
+                    "sssScale": 0.5,
+                    "sssType": 1
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "Big_roof_border": {
+            "shader": "Main shader"
+        },
+        "Default_Material": {
+            "shader": "Main shader"
+        },
+        "Door_1_border": {
+            "shader": "Main shader"
+        },
+        "Door_2_Border": {
+            "shader": "Main shader"
+        },
+        "Door_3_border": {
+            "shader": "Main shader"
+        },
+        "Front_window_hole": {
+            "shader": "Main shader"
+        },
+        "Piller_Main": {
+            "shader": "Main shader"
+        },
+        "Small_roof_Border": {
+            "shader": "Main shader"
+        },
+        "floor": {
+            "shader": "Main shader"
+        },
+        "main_roof": {
+            "shader": "Main shader"
+        },
+        "small_roof": {
+            "shader": "Main shader"
+        },
+        "top_window_border": {
+            "shader": "Main shader"
+        },
+        "walls": {
+            "shader": "Main shader"
+        },
+        "wood_piller": {
+            "shader": "Main shader"
+        }
+    }
+}
