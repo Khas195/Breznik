@@ -9,19 +9,19 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Eybrow_Mat
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: _ALPHATEST_ON _MASKMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
   disabledShaderPasses:
   - DistortionVectors
+  - MOTIONVECTORS
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
-  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -94,7 +94,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6da0846f04e835c4983ffeb2aa292824, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -147,7 +147,7 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
-    - _AlphaCutoff: 0.5
+    - _AlphaCutoff: 0.363
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
@@ -160,7 +160,7 @@ Material:
     - _CoatMask: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Cutoff: 0.5
+    - _Cutoff: 0.363
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalMapScale: 1
@@ -214,7 +214,7 @@ Material:
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
-    - _LinkDetailsWithBase: 0
+    - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
     - _Mode: 1
@@ -230,8 +230,8 @@ Material:
     - _ReceivesSSR: 1
     - _RefractionModel: 0
     - _SSRefractionProjectionModel: 0
-    - _Smoothness: 0.055
-    - _SmoothnessRemapMax: 0.055
+    - _Smoothness: 0.5
+    - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
