@@ -436,7 +436,9 @@ MonoBehaviour:
   canvas: {fileID: 5513398982603877076}
   hasHealthBar: 1
   healthBar: {fileID: 3201309529414842198}
-  baseStats: {fileID: 11400000, guid: 97efbdad81768ee4b9ad36cb4fcdf6c7, type: 2}
+  baseStats: {fileID: 11400000, guid: af7fb3c87b03ae044860b09941123b05, type: 2}
+  charData: {fileID: 11400000, guid: 49913e2b4a7b4fe49b68a35c90bddd1e, type: 2}
+  text: {fileID: 7939340186535458281}
 --- !u!1 &4349585573394022746
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +951,7 @@ MonoBehaviour:
   OnWeaponHit:
     m_PersistentCalls:
       m_Calls: []
-  damage: 10
+  damage: 2
   wielder: {fileID: 2746536152683543568}
   wielderChar: {fileID: 6435556520548606124}
   hitboxes:
@@ -976,7 +978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2073139254937615105
 RectTransform:
   m_ObjectHideFlags: 0

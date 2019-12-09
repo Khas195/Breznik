@@ -151,14 +151,7 @@ public class Character : MonoBehaviour
     }
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            BeingDamage(1);
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            BeingDamage(10000);
-        }
+
     }
     public float GetHealth()
     {
@@ -172,7 +165,7 @@ public class Character : MonoBehaviour
     {
         return movementBehavior.GetCurrentSpeed();
     }
-    public CharacterData GetStats()
+    public CharacterData GetCharacterDataPack()
     {
         return characterData;
     }
@@ -230,7 +223,7 @@ public class Character : MonoBehaviour
     /// </returns>
     public virtual bool RequestJump()
     {
-        if (jumpConditions.IsSatisfied(this) || jumpLock == false)
+        if (jumpConditions.IsSatisfied(this) && jumpLock == false)
         {
             movementBehavior.SignalJump();
             return true;
@@ -292,6 +285,14 @@ public class Character : MonoBehaviour
     public bool IsAlive()
     {
         return health > 0;
+    }
+    public void IncreaseHealth(float amount)
+    {
+        this.health += amount;
+        if (this.health >= characterData.stats.health)
+        {
+            this.health = characterData.stats.health;
+        }
     }
     #endregion
 
