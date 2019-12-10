@@ -18,17 +18,21 @@ public class Movement : IMovement
     [BoxGroup("Requirements")]
     Collider charCollider = null;
 
+    [SerializeField]
+    [BoxGroup("Requirements")]
+    bool hasAirbornedCollider;
     /// <summary>
     /// The collider this character will use while it is airborned. 
     ///</summary>
     [SerializeField]
     [BoxGroup("Requirements")]
+    [ShowIf("hasAirbornedCollider")]
     Collider charAirbornedCollider = null;
-
+    [SerializeField]
+    [BoxGroup("Requirements")]
     /// <summary>
     ///  The list of points which is needed to know whether the host object is airborned or not
     /// </summary>
-    [SerializeField]
     List<Transform> checkGroundsList = new List<Transform>();
 
     [SerializeField]
@@ -42,8 +46,6 @@ public class Movement : IMovement
     [SerializeField]
     [BoxGroup("Character Speed")]
     float smoothAccel = 0;
-
-
     Rigidbody charRigidbody = null;
     float moveForward = 0;
     float moveSide = 0;
@@ -105,8 +107,8 @@ public class Movement : IMovement
         var sideDirection = targetTransform.right * side;
 
         var moveDirection = forwardDirection + sideDirection;
-        var velocity = moveDirection * speed + Vector3.up * charRigidbody.velocity.y;
-        charRigidbody.velocity = velocity;
+        var newPos = moveDirection.normalized * speed * Time.deltaTime + charRigidbody.transform.position;
+        charRigidbody.MovePosition(newPos);
     }
     public override float GetCurrentSpeed()
     {
