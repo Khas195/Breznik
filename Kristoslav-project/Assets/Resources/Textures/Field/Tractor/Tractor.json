@@ -1,0 +1,73 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                },
+                "Subsurface Scattering Parameters": {
+                    "sssColor": [
+                        0.7009999752044678,
+                        0.3009999990463257,
+                        0.3050000071525574
+                    ],
+                    "sssEnabled": true,
+                    "sssScale": 0.5,
+                    "sssType": 1
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "Engine": {
+            "shader": "Main shader"
+        },
+        "Exhost": {
+            "shader": "Main shader"
+        },
+        "Fenders": {
+            "shader": "Main shader"
+        },
+        "Tractor_Tire_screw": {
+            "shader": "Main shader"
+        },
+        "Tractor_back_light": {
+            "shader": "Main shader"
+        },
+        "Tractor_back_light_border": {
+            "shader": "Main shader"
+        },
+        "Tractor_body": {
+            "shader": "Main shader"
+        },
+        "Tractor_front_light": {
+            "shader": "Main shader"
+        },
+        "Tractor_front_light_border": {
+            "shader": "Main shader"
+        },
+        "Tractor_metal_rim": {
+            "shader": "Main shader"
+        },
+        "Tractor_tire": {
+            "shader": "Main shader"
+        },
+        "Tractor_tyre1": {
+            "shader": "Main shader"
+        }
+    }
+}
