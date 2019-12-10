@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// The Game state of the game.
 /// </summary>
-public class GameState : State 
+public class GameState : State
 {
     public enum States
     {
@@ -15,7 +15,8 @@ public class GameState : State
         InGame,
         GamePaused,
         InDiagloues,
-        InInventory
+        InInventory,
+        DefaultState
     }
     /// <summary>
     /// The state's type of the current game state.
@@ -26,7 +27,8 @@ public class GameState : State
     /// Get the state type/name of the current game state.
     /// </summary>
     /// <returns>the state type/name</returns>
-    public States GetState() {
+    public States GetState()
+    {
         return state;
     }
 }
