@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ultilities
+public static class Ultilities
 {
     // Outdated, use Mathf.Lerp instead 
     public static float CalculateAsymptoticAverage(float currentValue, float target, float percentage)
@@ -19,5 +20,44 @@ public class Ultilities
         movedir = forwardDir + sideDir;
         return movedir;
     }
+    public static bool HasParameter(this Animator animator, string paramName)
+    {
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.name.Equals(paramName))
+            {
+                return true;
+            }
+        }
 
+        return false;
+    }
+    public static void SetValueInAnimator(this Animator animator, string paramName, float value)
+    {
+        if (HasParameter(animator, paramName))
+        {
+            animator.SetFloat(paramName, value);
+        }
+    }
+    public static void SetValueInAnimator(this Animator animator, string paramName, int value)
+    {
+        if (HasParameter(animator, paramName))
+        {
+            animator.SetInteger(paramName, value);
+        }
+    }
+    public static void SetValueInAnimator(this Animator animator, string paramName, bool value)
+    {
+        if (HasParameter(animator, paramName))
+        {
+            animator.SetBool(paramName, value);
+        }
+    }
+    public static void SetValueInAnimator(this Animator animator, string paramName)
+    {
+        if (HasParameter(animator, paramName))
+        {
+            animator.SetTrigger(paramName);
+        }
+    }
 }

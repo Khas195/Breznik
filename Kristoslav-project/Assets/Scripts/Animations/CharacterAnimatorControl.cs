@@ -33,17 +33,17 @@ public class CharacterAnimatorControl : MonoBehaviour
     void Update()
     {
         var moveSpeed = character.GetCurrentSpeed();
-        animator.SetBool("TouchingGround", character.IsTouchingGround());
-        animator.SetFloat("VelocityY", hostRb.velocity.y);
-        animator.SetFloat("MoveSpeed", moveSpeed);
+        animator.SetValueInAnimator("TouchingGround", character.IsTouchingGround());
+        animator.SetValueInAnimator("VelocityY", hostRb.velocity.y);
+        animator.SetValueInAnimator("MoveSpeed", moveSpeed);
         var rotateSpeed = hostRb.rotation.y - lastRotation.y;
-        animator.SetFloat("RotationSpeed", Mathf.Abs(rotateSpeed));
+        animator.SetValueInAnimator("RotationSpeed", Mathf.Abs(rotateSpeed));
 
     }
     public void PlayAttackAnimation()
     {
         var randomAttack = UnityEngine.Random.Range(0, numOfAttackMoves);
-        animator.SetTrigger("attack" + randomAttack);
+        animator.SetValueInAnimator("attack" + randomAttack);
 
     }
     public bool IsPlaying(string animationName)
@@ -61,11 +61,11 @@ public class CharacterAnimatorControl : MonoBehaviour
 
     public void TriggerDeadAnimation()
     {
-        animator.SetTrigger("Die");
+        animator.SetValueInAnimator("Die");
     }
     public void PlayDamagedAnimation()
     {
         var randomHurt = UnityEngine.Random.Range(0, numOfHurtAnimations);
-        animator.SetTrigger("hurt" + randomHurt);
+        animator.SetValueInAnimator("hurt" + randomHurt);
     }
 }

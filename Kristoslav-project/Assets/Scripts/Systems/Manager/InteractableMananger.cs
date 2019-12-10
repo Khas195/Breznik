@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InteractableMananger : SingletonMonobehavior<InteractableMananger>
 {
     [SerializeField]
+    [Required]
     GameObject host = null;
-    List<IInteractable> inRangeList = new List<IInteractable>();
     [SerializeField]
+    [Required]
     Text interactCue = null;
+    List<IInteractable> inRangeList = new List<IInteractable>();
 
     IInteractable highlightInteractable = null;
 
