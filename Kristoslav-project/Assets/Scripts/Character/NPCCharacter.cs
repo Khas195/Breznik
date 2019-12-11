@@ -11,15 +11,4 @@ public class NPCCharacter : Character
     {
         nameTag.text = this.characterData.name;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

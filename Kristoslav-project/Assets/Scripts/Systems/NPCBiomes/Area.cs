@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,11 +9,15 @@ using UnityEngine.AI;
 public class Area : MonoBehaviour
 {
     [SerializeField]
-    AreaData data;
+    [Required]
+    AreaData data = null;
     [SerializeField]
-    List<NPCController> nPCs;
+    [Required]
+    GameObject host = null;
     [SerializeField]
-    GameObject center;
+    [ReadOnly]
+    List<NPCController> nPCs = new List<NPCController>();
+
     void Start()
     {
         PopulateArea();
@@ -24,7 +29,7 @@ public class Area : MonoBehaviour
             var color = Color.green;
             color.a = 0.3f;
             Gizmos.color = color;
-            Gizmos.DrawSphere(center.transform.position, data.size);
+            Gizmos.DrawSphere(host.transform.position, data.size);
         }
     }
 
@@ -58,7 +63,7 @@ public class Area : MonoBehaviour
 
     private Vector3 RandomPointInArea()
     {
-        Vector3 randomPos = (UnityEngine.Random.insideUnitSphere * data.size) + center.transform.position;
+        Vector3 randomPos = (UnityEngine.Random.insideUnitSphere * data.size) + host.transform.position;
         float baseRange = 5f;
         NavMeshHit hit;
         while ((NavMesh.SamplePosition(randomPos, out hit, baseRange, NavMesh.AllAreas) == false))

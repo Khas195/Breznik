@@ -20,8 +20,10 @@ public class ResetAnimParams : StateMachineBehaviour
                     continue;
                 }
             }
-            Debug.Log("reset  trigger " + param.name);
-            animator.ResetTrigger(param.name);
+            if (param.type == AnimatorControllerParameterType.Trigger)
+            {
+                animator.ResetTrigger(param.name);
+            }
         }
     }
 
