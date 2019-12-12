@@ -70,8 +70,11 @@ public class Character : MonoBehaviour
     public DeathEvent OnCharacterDeath = new DeathEvent();
     [SerializeField]
     [BoxGroup("Character EVents")]
-    public UnityEvent OnCharacterDamaged = new UnityEvent();
+    public UnityEvent OnCharacterRevived = new UnityEvent();
 
+    [SerializeField]
+    [BoxGroup("Character EVents")]
+    public UnityEvent OnCharacterDamaged = new UnityEvent();
 
     [SerializeField]
     [BoxGroup("Character Current Status")]
@@ -86,6 +89,9 @@ public class Character : MonoBehaviour
     [BoxGroup("Character conditions check for actions")]
     [Required]
     protected ConditionsChecker jumpConditions;
+
+
+
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     /// moveConditions check whether it is possible to move
@@ -151,7 +157,10 @@ public class Character : MonoBehaviour
     }
     protected virtual void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            BeingDamage(1000);
+        }
     }
     public float GetHealth()
     {
@@ -293,6 +302,12 @@ public class Character : MonoBehaviour
         {
             this.health = characterData.stats.health;
         }
+    }
+    public void Revive()
+    {
+        this.health = characterData.stats.health;
+        this.stamina = characterData.stats.stamina;
+        OnCharacterRevived.Invoke();
     }
     #endregion
 
