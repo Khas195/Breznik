@@ -25,6 +25,11 @@ public class NPCController : MonoBehaviour
     [BoxGroup("Requirements")]
     ScriptableState remainInState;
 
+    public bool IsPointInArea(Vector3 position)
+    {
+        return homeArea.IsInArea(position);
+    }
+
     [SerializeField]
     [BoxGroup("Settings")]
     bool isAIActive = false;
@@ -44,13 +49,14 @@ public class NPCController : MonoBehaviour
     NavMeshPath currentPath = null;
     int currentPoint = 0;
 
-    //Test
-    Transform rootPosition;
-    float patrolRange;
+    Area homeArea;
+    ScriptableState beginState = null;
+
     void Awake()
     {
         currentPath = new NavMeshPath();
         currentDestination = aiCharacter.GetHost().transform.position;
+        beginState = currentState;
     }
     // Start is called before the first frame update
     void Start()
@@ -74,16 +80,19 @@ public class NPCController : MonoBehaviour
     public void SetAiActive(bool active)
     {
         this.isAIActive = active;
+        if (active == false)
+        {
+            homeArea.RemoveFromActiveList(this);
+        }
+        else
+        {
+            homeArea.AddToActiveList(this);
+        }
     }
 
-    public void SetPatrolRange(int size)
+    public void SetHome(Area area)
     {
-        this.patrolRange = size;
-    }
-
-    public void SetHome(Transform transform)
-    {
-        this.rootPosition = transform;
+        this.homeArea = area;
     }
 
     private void ProcessMovement()
@@ -113,10 +122,23 @@ public class NPCController : MonoBehaviour
             aiCharacter.RequestMove(0, 0);
         }
     }
+
+    public GameObject GetHost()
+    {
+        return aiCharacter.GetHost();
+    }
+
     public void SetMovement(IMovement.MovementType moveType)
     {
         aiCharacter.RequestMovementType(moveType);
     }
+
+    public void Revive()
+    {
+        currentState = beginState;
+        aiCharacter.Revive();
+    }
+
     private bool IsPathStillValid()
     {
         Transform charTransform = aiCharacter.GetHost().transform;
@@ -231,10 +253,7 @@ public class NPCController : MonoBehaviour
 
     public Vector3 GetRandomPointInArea()
     {
-        var randomDirection = (UnityEngine.Random.insideUnitSphere * patrolRange) + rootPosition.position;
-        NavMeshHit hit;
-        NavMesh.SamplePosition(randomDirection, out hit, patrolRange, 1);
-        return hit.position;
+        return homeArea.RandomPointInArea();
     }
     public bool LookForHostile()
     {
@@ -245,8 +264,11 @@ public class NPCController : MonoBehaviour
         {
             if (cols[i].gameObject.CompareTag("Player"))
             {
-                this.chaseTarget = cols[i].gameObject.transform;
-                return true;
+                if (this.IsPointInArea(cols[i].gameObject.transform.position))
+                {
+                    this.chaseTarget = cols[i].gameObject.transform;
+                    return true;
+                }
             }
         }
         return false;

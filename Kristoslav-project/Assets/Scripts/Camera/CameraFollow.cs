@@ -28,13 +28,16 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        encapsolatedTarget.Add(character);
+        if (character != null)
+        {
+            encapsolatedTarget.Add(character);
+        }
         mCamera = host.GetComponentInChildren<Camera>();
     }
 
     private void Update()
     {
-        
+
     }
     void FixedUpdate()
     {

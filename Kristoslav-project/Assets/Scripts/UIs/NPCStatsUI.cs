@@ -12,7 +12,9 @@ public class NPCStatsUI : MonoBehaviour
     [SerializeField]
     [Required]
     Canvas canvas = null;
-
+    [SerializeField]
+    [Required]
+    Text text = null;
 
     [SerializeField]
     bool hasHealthBar = true;
@@ -30,8 +32,7 @@ public class NPCStatsUI : MonoBehaviour
     [ShowIf("hasHealthBar")]
     CharacterData charData = null;
     GameObject cameraObject = null;
-    [SerializeField]
-    Text text;
+
 
     void Awake()
     {
