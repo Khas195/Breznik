@@ -212,10 +212,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &7675449276266327353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -229,6 +229,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.012598, y: 2.3079398, z: 1.808672}
   m_Center: {x: 0.03515947, y: 1.1391734, z: 0.087899595}
+--- !u!208 &3029242506065875171
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421987604540706909}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.25, y: 0.5, z: 1.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &1004806063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +259,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeathAnimationDone:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1996164539033213228}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamageTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -303,11 +330,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 7697840030018930536}
   canvas: {fileID: 5817657456573395770}
+  text: {fileID: 7705205114084619891}
   hasHealthBar: 1
   healthBar: {fileID: 8370224790132350847}
   baseStats: {fileID: 11400000, guid: 5d978fda7e8b0704185b64b446f88a54, type: 2}
   charData: {fileID: 11400000, guid: 97dfd08b98a89584685619b42d98ad5a, type: 2}
-  text: {fileID: 7705205114084619891}
 --- !u!1 &2242981206665762163
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +965,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7154547126365543968}
-        m_MethodName: set_isKinematic
+      - m_Target: {fileID: 3308532106848254657}
+        m_MethodName: SetAiActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCharacterRevived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2283976039583868871}
+        m_MethodName: Revive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8708483071953876333}
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,7 +1001,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1067410174110991101}
+      - m_Target: {fileID: 3308532106848254657}
+        m_MethodName: SetAiActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1996164539033213228}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -958,7 +1021,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   OnCharacterDamaged:
     m_PersistentCalls:
@@ -1199,6 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charCollider: {fileID: 7675449276266327353}
+  hasAirbornedCollider: 0
   charAirbornedCollider: {fileID: 2472684127469199230}
   checkGroundsList:
   - {fileID: 8799252425490733157}
@@ -1657,6 +1721,12 @@ GameObject:
 --- !u!4 &1996164539033213229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6280546926873690656, guid: cfe31e38505aac74ab10828d36830c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5520059872197221133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1996164539033213228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6280546926873690657, guid: cfe31e38505aac74ab10828d36830c1a,
     type: 3}
   m_PrefabInstance: {fileID: 5520059872197221133}
   m_PrefabAsset: {fileID: 0}

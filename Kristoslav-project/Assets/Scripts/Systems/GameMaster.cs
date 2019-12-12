@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,9 +18,6 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     StateStack<GameState> gameStateStack = new StateStack<GameState>();
 
 
-
-
-
     /// <summary>
     /// The possible game states in a certain scene.
     /// The first possible state will start as the base state.
@@ -28,6 +26,9 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     [SerializeField]
     List<GameState> possibleGameStates = new List<GameState>();
 
+    [SerializeField]
+    [Required]
+    GameObject defaultGameState = null;
 
     /// <summary>
     /// The name of the scene that is going to be loaded when moving into the LoadingScene.
@@ -90,10 +91,19 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     private void FindAllPossibleStates()
     {
         var gameStateHolder = GameObject.FindGameObjectWithTag("GameStates");
-        var possibleStates = gameStateHolder.GetComponentsInChildren<GameState>(includeInactive: true);
-        possibleGameStates.AddRange(possibleStates);
         gameStateStack.EmptyStack();
-        RequestGameState(possibleStates[0].GetState());
+        if (gameStateHolder != null)
+        {
+            var possibleStates = gameStateHolder.GetComponentsInChildren<GameState>(includeInactive: true);
+            possibleGameStates.AddRange(possibleStates);
+            RequestGameState(possibleStates[0].GetState());
+        }
+        else
+        {
+            var defaultState = this.defaultGameState.GetComponent<GameState>();
+            possibleGameStates.Add(defaultState);
+            RequestGameState(defaultState.GetState());
+        }
     }
     /// <summary>
     /// Can only be called by the Loading State.
