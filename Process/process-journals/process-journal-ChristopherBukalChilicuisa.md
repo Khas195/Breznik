@@ -1,2 +1,2 @@
-#Process Journal
-###Christopher Bukal Chilicuisa
+# Process Journal
+### Christopher Bukal Chilicuisa
