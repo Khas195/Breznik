@@ -40,6 +40,10 @@ public class CharacterAnimatorControl : MonoBehaviour
         animator.SetValueInAnimator("RotationSpeed", Mathf.Abs(rotateSpeed));
 
     }
+    public void Revive()
+    {
+        animator.SetValueInAnimator("Revive");
+    }
     public void PlayAttackAnimation()
     {
         var randomAttack = UnityEngine.Random.Range(0, numOfAttackMoves);
