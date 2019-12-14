@@ -277,6 +277,12 @@ public class Character : MonoBehaviour
 
         return false;
     }
+
+    public bool Isattacking()
+    {
+        return isAttacking;
+    }
+
     public bool IsTouchingGround()
     {
         return this.movementBehavior.IsTouchingGround();

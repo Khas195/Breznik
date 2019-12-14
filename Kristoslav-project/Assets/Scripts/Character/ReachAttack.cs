@@ -62,7 +62,7 @@ public class ReachAttack : MonoBehaviour
 
     public void TryReachTargetInDirection(Vector3 desiredDirection)
     {
-        if (reachRange == 0) return;
+        if (reachRange == 0 || shouldMove) return;
         Debug.Log("Try TO Reach");
         var cols = Physics.OverlapSphere(attackerHost.transform.position, reachRange, enemiesMask);
         if (cols.Length > 0)
@@ -72,7 +72,7 @@ public class ReachAttack : MonoBehaviour
             float smallestAngle = 0;
             FindClostTargetToFacingDIrection(desiredDirection, cols, out closest, out smallestAngle);
 
-            if (smallestAngle > 90) return;
+            if (smallestAngle > 60) return;
             float distanceFromTarget = Vector3.Distance(attackerHost.transform.position, closest.transform.position);
             if (distanceFromTarget <= attackRange) return;
 
