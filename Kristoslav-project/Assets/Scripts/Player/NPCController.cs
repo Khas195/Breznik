@@ -297,7 +297,7 @@ public class NPCController : MonoBehaviour
     }
     public bool IsInAttackRange(Vector3 position)
     {
-        if (Vector3.Distance(aiCharacter.GetHost().transform.position, position) <= aiCharacter.GetCharacterDataPack().reachRange)
+        if (Vector3.Distance(aiCharacter.GetHost().transform.position, position) <= aiCharacter.GetCharacterDataPack().attackRange)
         {
             return true;
         }
