@@ -8,19 +8,26 @@ public class Weapon : MonoBehaviour
 {
     public UnityEvent OnWeaponHit = new UnityEvent();
     [SerializeField]
-    int damage = 0;
-    [SerializeField]
-    GameObject wielder = null;
-    [SerializeField]
     Character wielderChar = null;
     [SerializeField]
     List<Collider> hitboxes = new List<Collider>();
     [SerializeField]
+    [ReadOnly]
     LayerMask attackableMasks;
 
+
+    [SerializeField]
+    [ReadOnly]
+    int damage = 0;
+
+    [SerializeField]
+    [ReadOnly]
+    GameObject wielder = null;
     void Start()
     {
-        wielderChar = wielder.GetComponentInChildren<Character>();
+        wielder = wielderChar.GetHost();
+        damage = wielderChar.GetCharacterDataPack().attackDamage;
+        attackableMasks = wielderChar.GetCharacterDataPack().enemiesMask;
     }
     public void DealsDamage(int hitBoxIndex)
     {
