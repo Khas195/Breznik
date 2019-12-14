@@ -37,6 +37,17 @@ public class Character : MonoBehaviour
     [Required]
     protected IMovement movementBehavior;
     /// <summary>
+    /// Reference to the attack behavior of the character.<br/>
+    /// If the character does not have a movement behavior, he/she will not be able to move.
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Requirements")]
+    bool reachingAttack = false;
+    [SerializeField]
+    [BoxGroup("Requirements")]
+    [ShowIf("reachingAttack")]
+    protected ReachAttack attackBehavior;
+    /// <summary>
     /// The player character's stats
     /// </summary>
     [Space]
@@ -62,8 +73,6 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character EVents")]
     public UnityEvent onCharacterAttack = new UnityEvent();
-
-
 
     [SerializeField]
     [BoxGroup("Character EVents")]
@@ -221,9 +230,15 @@ public class Character : MonoBehaviour
             return false;
         }
         onCharacterAttack.Invoke();
+
+        if (attackBehavior != null)
+        {
+            attackBehavior.TryReachTargetInDirection(hostRigidBody.transform.forward);
+        }
         isAttacking = true;
         return true;
     }
+
     /// <summary>
     /// This function ask the moveBehavior of the character to signal the jump function in the next fixed update;.
     /// </summary>
@@ -262,6 +277,12 @@ public class Character : MonoBehaviour
 
         return false;
     }
+
+    public bool Isattacking()
+    {
+        return isAttacking;
+    }
+
     public bool IsTouchingGround()
     {
         return this.movementBehavior.IsTouchingGround();
