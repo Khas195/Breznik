@@ -16,7 +16,12 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: af7fb3c87b03ae044860b09941123b05, type: 2}
   movementData: {fileID: 11400000, guid: cecfe39b8e3a0ad439db94721554d4b0, type: 2}
   rotateSpeed: 7
+  attackRange: 1.67
+  reachRange: 3
+  attackDamage: 20
   isNPC: 1
+  enemiesMask:
+    serializedVersion: 2
+    m_Bits: 13312
   aggroRange: 7
   stoppingDistance: 1.02
-  attackRange: 1.67
