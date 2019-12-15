@@ -43,13 +43,19 @@ public class InteractableMananger : SingletonMonobehavior<InteractableMananger>
     }
     void HighlightInteractable(IInteractable interact)
     {
-        interactCue.gameObject.SetActive(true);
-        interactCue.text = "E - " + interact.GetKindOfInteraction() + " " + interact.GetName();
+        if (interactCue != null)
+        {
+            interactCue.gameObject.SetActive(true);
+            interactCue.text = "E - " + interact.GetKindOfInteraction() + " " + interact.GetName();
+        }
         highlightInteractable = interact;
     }
     void TurnOffHightlight()
     {
-        interactCue.gameObject.SetActive(false);
+        if (interactCue != null)
+        {
+            interactCue.gameObject.SetActive(false);
+        }
         highlightInteractable = null;
     }
     void Update()
