@@ -20,6 +20,11 @@ public class DamageTriggerEvent : MonoBehaviour
     [SerializeField]
     [ShowIf("playFootEffects")]
     Transform rightFootLocation = null;
+    [SerializeField]
+    bool playFootSounds = false;
+    [SerializeField]
+    [ShowIf("playFootSounds")]
+    AudioSource footSource = null;
 
     [SerializeField]
     UnityEvent OnDeathAnimationDone = new UnityEvent();
@@ -49,5 +54,13 @@ public class DamageTriggerEvent : MonoBehaviour
                 vfx.PlayEffect(VFXResources.VFXList.FootFall, rightFootLocation.position, Quaternion.identity);
             }
         }
+        var soundsSys = SoundSystem.GetInstance();
+        if (soundsSys)
+        {
+            var clipToPlay = soundsSys.GetClip(SoundDictionary.SoundList.FootFall);
+            footSource.clip = clipToPlay;
+            footSource.Play();
+        }
     }
 }
+
