@@ -10,7 +10,6 @@ public class InteractableMananger : SingletonMonobehavior<InteractableMananger>
     [Required]
     GameObject host = null;
     [SerializeField]
-    [Required]
     Text interactCue = null;
     List<IInteractable> inRangeList = new List<IInteractable>();
 
