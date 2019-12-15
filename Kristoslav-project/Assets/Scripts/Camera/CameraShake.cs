@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
     [SerializeField]
-    Transform camTransform;
+    Transform camTransform = null;
 
     [SerializeField]
     float shakeAmount = 0.7f;

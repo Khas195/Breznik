@@ -37,6 +37,7 @@ public class InGame : GameState
     }
     public void OnInteractableFocusChange(IInteractable interact)
     {
+        if (interactCue == null) return;
         if (interact.IsFocus())
         {
             interactCue.gameObject.SetActive(true);
@@ -49,10 +50,12 @@ public class InGame : GameState
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             GameMaster.GetInstance().RequestGameState(GameState.States.GamePaused);
-        } 
-        if (Input.GetKeyDown(KeyCode.I)){
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
             GameMaster.GetInstance().RequestGameState(GameState.States.InInventory);
         }
     }

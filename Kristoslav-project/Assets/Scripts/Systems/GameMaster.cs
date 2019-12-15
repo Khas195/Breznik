@@ -27,7 +27,6 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     List<GameState> possibleGameStates = new List<GameState>();
 
     [SerializeField]
-    [Required]
     GameObject defaultGameState = null;
 
     /// <summary>
