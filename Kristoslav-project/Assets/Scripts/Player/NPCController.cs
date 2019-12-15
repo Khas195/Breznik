@@ -23,7 +23,7 @@ public class NPCController : MonoBehaviour
 
     [SerializeField]
     [BoxGroup("Requirements")]
-    ScriptableState remainInState;
+    ScriptableState remainInState = null;
 
     public bool IsPointInArea(Vector3 position)
     {
