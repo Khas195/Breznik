@@ -15,14 +15,22 @@ public class WoodenSword : Weapon
         {
             vfxSystem.PlayEffect(VFXResources.VFXList.SwordHitEnemy, particleSpawnPosition.position, Quaternion.identity);
         }
+
         var soundSystem = SoundSystem.GetInstance();
         if (soundSystem)
         {
-            var clipToPlay = soundSystem.GetClip(SoundDictionary.SoundList.SwordHitSlime);
+            AudioClip clipToPlay = null;
+            if (targetCollider.tag == "Slime")
+            {
+                clipToPlay = soundSystem.GetClip(SoundDictionary.SoundList.SwordHitSlime);
+            }
+            else if (targetCollider.tag == "Chicken")
+            {
+                clipToPlay = soundSystem.GetClip(SoundDictionary.SoundList.SwordHitChicken);
+            }
             swordHitSources.clip = clipToPlay;
             swordHitSources.Play();
         }
-
         return true;
     }
 }

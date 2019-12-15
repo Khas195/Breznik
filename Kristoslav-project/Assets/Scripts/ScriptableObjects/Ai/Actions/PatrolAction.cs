@@ -14,8 +14,12 @@ public class PatrolAction : Action
         if (controller.HasReachedCurrentDestination())
         {
             controller.SetMovement(IMovement.MovementType.Walk);
-            var nextDestination = controller.GetRandomPointInArea();
-            controller.SetDestination(nextDestination);
+            Vector3 nextDestination = Vector3.zero;
+            do
+            {
+                nextDestination = controller.GetRandomPointInArea();
+            }
+            while (controller.SetDestination(nextDestination) == false);
         }
     }
 }
