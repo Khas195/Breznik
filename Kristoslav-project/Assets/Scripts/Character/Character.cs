@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
@@ -10,10 +10,6 @@ public class DeathEvent : UnityEvent<Character>
 {
 
 }
-/// <summary>
-/// The Character class handles all the possible behavior that a character can have.
-///It's handle the character's behaviors by calling the appropriate behavior.
-/// </summary>
 public class Character : MonoBehaviour
 {
     #region Properties
@@ -85,10 +81,6 @@ public class Character : MonoBehaviour
     [BoxGroup("Character EVents")]
     public UnityEvent OnCharacterDamaged = new UnityEvent();
 
-    [SerializeField]
-    [BoxGroup("Character Current Status")]
-    [ReadOnly]
-    bool isAttacking;
     [Space]
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
@@ -97,7 +89,7 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
     [Required]
-    protected ConditionsChecker jumpConditions;
+    protected ConditionsChecker jumpConditions = null;
 
 
 
@@ -116,7 +108,7 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
     [Required]
-    protected ConditionsChecker attackConditions;
+    protected ConditionsChecker attackConditions = null;
     /// <summary>
     /// An Scriptable Conditions checker that can be created in the Unity Editor.
     /// changeMoveTypeConditions check whether it is possible to change the current move mode. 
@@ -124,14 +116,26 @@ public class Character : MonoBehaviour
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
     [Required]
-    protected ConditionsChecker changeMoveTypeConditions;
+    protected ConditionsChecker changeMoveTypeConditions = null;
     [SerializeField]
     [BoxGroup("Character conditions check for actions")]
     [Required]
-    protected ConditionsChecker canRotate;
+    protected ConditionsChecker canRotate = null;
+
+
+    [SerializeField]
+    [BoxGroup("Particle Effect Group")]
+    bool playPlayerLandEffect = false;
+    [SerializeField]
+    [BoxGroup("Particle Effect Group")]
+    [ShowIf("playPlayerLandEffect")]
+    Transform playerLandParticleSpawnPos = null;
+    bool isGround = true;
+
     private bool rotationLock;
     private bool movementLock;
     private bool jumpLock;
+
 
 
     #endregion
@@ -166,11 +170,29 @@ public class Character : MonoBehaviour
     }
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (playPlayerLandEffect)
         {
-            BeingDamage(1000);
+            HandlePlayerLandParticleEffect();
         }
+
     }
+
+    private void HandlePlayerLandParticleEffect()
+    {
+        if (isGround == false)
+        {
+            if (IsTouchingGround() == true)
+            {
+                var vfx = VFXSystem.GetInstance();
+                if (vfx)
+                {
+                    vfx.PlayEffect(VFXResources.VFXList.PlayerLand, playerLandParticleSpawnPos.position, Quaternion.Euler(90, 0, 0));
+                }
+            }
+        }
+        isGround = IsTouchingGround();
+    }
+
     public float GetHealth()
     {
         return health;
@@ -235,7 +257,6 @@ public class Character : MonoBehaviour
         {
             attackBehavior.TryReachTargetInDirection(hostRigidBody.transform.forward);
         }
-        isAttacking = true;
         return true;
     }
 
@@ -278,11 +299,6 @@ public class Character : MonoBehaviour
         return false;
     }
 
-    public bool Isattacking()
-    {
-        return isAttacking;
-    }
-
     public bool IsTouchingGround()
     {
         return this.movementBehavior.IsTouchingGround();
@@ -316,7 +332,7 @@ public class Character : MonoBehaviour
     {
         return health > 0;
     }
-    public void IncreaseHealth(float amount)
+    public virtual void IncreaseHealth(float amount)
     {
         this.health += amount;
         if (this.health >= characterData.stats.health)

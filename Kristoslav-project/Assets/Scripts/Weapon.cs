@@ -3,33 +3,32 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class Weapon : MonoBehaviour
 {
     public UnityEvent OnWeaponHit = new UnityEvent();
     [SerializeField]
-    Character wielderChar = null;
+    protected Character wielderChar = null;
     [SerializeField]
-    List<Collider> hitboxes = new List<Collider>();
+    protected List<Collider> hitboxes = new List<Collider>();
     [SerializeField]
     [ReadOnly]
-    LayerMask attackableMasks;
+    protected LayerMask attackableMasks;
 
 
     [SerializeField]
     [ReadOnly]
-    int damage = 0;
+    protected int damage = 0;
 
     [SerializeField]
     [ReadOnly]
-    GameObject wielder = null;
-    void Start()
+    protected GameObject wielder = null;
+    protected virtual void Start()
     {
         wielder = wielderChar.GetHost();
         damage = wielderChar.GetCharacterDataPack().attackDamage;
         attackableMasks = wielderChar.GetCharacterDataPack().enemiesMask;
     }
-    public void DealsDamage(int hitBoxIndex)
+    public virtual void DealsDamage(int hitBoxIndex)
     {
         Debug.Log("Deals attack called - Hit Box" + hitBoxIndex);
         if (hitBoxIndex < 0 || hitBoxIndex >= hitboxes.Count) return;
@@ -41,7 +40,7 @@ public class Weapon : MonoBehaviour
             TryToDealsDamage(col);
         }
     }
-    public bool TryToDealsDamage(Collider targetCollider)
+    public virtual bool TryToDealsDamage(Collider targetCollider)
     {
         Logger.CharacterDebug(wielderChar, "Character's weapon touch something");
 
