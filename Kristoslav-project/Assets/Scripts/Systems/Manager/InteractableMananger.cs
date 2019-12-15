@@ -10,7 +10,6 @@ public class InteractableMananger : SingletonMonobehavior<InteractableMananger>
     [Required]
     GameObject host = null;
     [SerializeField]
-    [Required]
     Text interactCue = null;
     List<IInteractable> inRangeList = new List<IInteractable>();
 
@@ -43,13 +42,19 @@ public class InteractableMananger : SingletonMonobehavior<InteractableMananger>
     }
     void HighlightInteractable(IInteractable interact)
     {
-        interactCue.gameObject.SetActive(true);
-        interactCue.text = "E - " + interact.GetKindOfInteraction() + " " + interact.GetName();
+        if (interactCue != null)
+        {
+            interactCue.gameObject.SetActive(true);
+            interactCue.text = "E - " + interact.GetKindOfInteraction() + " " + interact.GetName();
+        }
         highlightInteractable = interact;
     }
     void TurnOffHightlight()
     {
-        interactCue.gameObject.SetActive(false);
+        if (interactCue != null)
+        {
+            interactCue.gameObject.SetActive(false);
+        }
         highlightInteractable = null;
     }
     void Update()

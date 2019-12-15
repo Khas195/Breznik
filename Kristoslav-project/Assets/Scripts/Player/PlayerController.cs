@@ -64,9 +64,7 @@ public class PlayerController : MonoBehaviour
 
         if ((forward != 0 || side != 0) && character.IsRotationLock() == false)
         {
-            var movedir = Vector3.zero;
-
-            movedir = Ultilities.CalculateMoveDirection(horizontalInput: side, forwardInput: forward
+            var movedir = Ultilities.CalculateMoveDirection(horizontalInput: side, forwardInput: forward
                                             , playerCameraView.transform.forward, playerCameraView.transform.right);
 
             character.RotateToward(movedir.normalized, rotateY: false);

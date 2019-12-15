@@ -3,26 +3,32 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class Weapon : MonoBehaviour
 {
     public UnityEvent OnWeaponHit = new UnityEvent();
     [SerializeField]
-    int damage = 0;
+    protected Character wielderChar = null;
     [SerializeField]
-    GameObject wielder = null;
+    protected List<Collider> hitboxes = new List<Collider>();
     [SerializeField]
-    Character wielderChar = null;
-    [SerializeField]
-    List<Collider> hitboxes = new List<Collider>();
-    [SerializeField]
-    LayerMask attackableMasks;
+    [ReadOnly]
+    protected LayerMask attackableMasks;
 
-    void Start()
+
+    [SerializeField]
+    [ReadOnly]
+    protected int damage = 0;
+
+    [SerializeField]
+    [ReadOnly]
+    protected GameObject wielder = null;
+    protected virtual void Start()
     {
-        wielderChar = wielder.GetComponentInChildren<Character>();
+        wielder = wielderChar.GetHost();
+        damage = wielderChar.GetCharacterDataPack().attackDamage;
+        attackableMasks = wielderChar.GetCharacterDataPack().enemiesMask;
     }
-    public void DealsDamage(int hitBoxIndex)
+    public virtual void DealsDamage(int hitBoxIndex)
     {
         Debug.Log("Deals attack called - Hit Box" + hitBoxIndex);
         if (hitBoxIndex < 0 || hitBoxIndex >= hitboxes.Count) return;
@@ -34,7 +40,7 @@ public class Weapon : MonoBehaviour
             TryToDealsDamage(col);
         }
     }
-    public bool TryToDealsDamage(Collider targetCollider)
+    public virtual bool TryToDealsDamage(Collider targetCollider)
     {
         Logger.CharacterDebug(wielderChar, "Character's weapon touch something");
 
