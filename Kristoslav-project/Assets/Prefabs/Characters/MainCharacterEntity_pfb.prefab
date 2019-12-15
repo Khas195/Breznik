@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &685560922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685560923}
+  m_Layer: 0
+  m_Name: FootFallEffectLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &685560923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685560922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.271, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2439895567296526983}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &691266891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691266892}
+  m_Layer: 0
+  m_Name: FootFallEffectRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691266892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691266891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.193, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 415316723299446127}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870304433
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,6 +89,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5917570564292753436}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1212536676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212536677}
+  m_Layer: 0
+  m_Name: PlayerLandEffectSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1212536677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212536676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5917570564158883412}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474991716
 GameObject:
@@ -453,6 +543,10 @@ MonoBehaviour:
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
   canRotate: {fileID: 11400000, guid: eeb1353d43e849b4fa2a1e3a8c393db3, type: 2}
+  playPlayerLandEffect: 1
+  playerLandParticleSpawnPos: {fileID: 1212536677}
+  playHealEffect: 1
+  healSpawnPositon: {fileID: 3139662610222903020}
 --- !u!1 &706283025201240042
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +681,7 @@ Transform:
   - {fileID: 2027241953}
   - {fileID: 1935660552}
   m_Father: {fileID: 5917570564158883412}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &812284002290286117
 GameObject:
@@ -618,7 +712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5917570564158883412}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &4526462631086548910
 CapsuleCollider:
@@ -796,7 +890,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5917570564158883412}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2771081188801662061
 SphereCollider:
@@ -953,6 +1047,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9993eb2adb36d4ebed4a739851633e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playFootEffects: 1
+  leftFootLocation: {fileID: 685560923}
+  rightFootLocation: {fileID: 691266892}
   OnDeathAnimationDone:
     m_PersistentCalls:
       m_Calls: []
@@ -1002,7 +1099,7 @@ Transform:
   - {fileID: 5302194517594349875}
   - {fileID: 826151070430976809}
   m_Father: {fileID: 5917570564158883412}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9208491472250967603
 GameObject:
@@ -1144,6 +1241,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c920cf226a1bce49af4db463705b472, type: 3}
+--- !u!1 &7224959950909961287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5564923164932631500, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5917570564292753436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8890613615308416919, guid: 5c920cf226a1bce49af4db463705b472,
@@ -1162,9 +1265,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7224959950909961287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5564923164932631500, guid: 5c920cf226a1bce49af4db463705b472,
+--- !u!4 &415316723299446127 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3223771072805827300, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2439895567296526983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 622309282293867788, guid: 5c920cf226a1bce49af4db463705b472,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990006327961427851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3139662610222903020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 210807628063240551, guid: 5c920cf226a1bce49af4db463705b472,
     type: 3}
   m_PrefabInstance: {fileID: 2990006327961427851}
   m_PrefabAsset: {fileID: 0}

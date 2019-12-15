@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    [SerializeField] float rotationSpeed;
+    [SerializeField] float rotationSpeed = 1;
     Vector3 m_eulerAngle;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        m_eulerAngle = gameObject.transform.rotation.eulerAngles; 
+        m_eulerAngle = gameObject.transform.rotation.eulerAngles;
     }
 
     // Update is called once per frame
