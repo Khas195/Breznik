@@ -15,11 +15,8 @@ public class PatrolAction : Action
         {
             controller.SetMovement(IMovement.MovementType.Walk);
             Vector3 nextDestination = Vector3.zero;
-            do
-            {
-                nextDestination = controller.GetRandomPointInArea();
-            }
-            while (controller.SetDestination(nextDestination) == false);
+            nextDestination = controller.GetRandomPointInArea();
+            controller.SetDestination(nextDestination);
         }
     }
 }
