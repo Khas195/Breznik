@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class VFXList : ScriptableObject
+{
+
+}
 /// <summary>
 /// Experimental scripts for spawning fire vfxxxx
 /// </summary>
