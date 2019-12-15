@@ -13,4 +13,9 @@ public class PlayerCharacter : Character
         health = characterData.stats.health;
         stamina = characterData.stats.stamina;
     }
+
+    public override void BeingDamage(int damage)
+    {
+        base.BeingDamage(damage);
+    }
 }

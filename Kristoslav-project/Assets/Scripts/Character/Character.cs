@@ -10,10 +10,6 @@ public class DeathEvent : UnityEvent<Character>
 {
 
 }
-/// <summary>
-/// The Character class handles all the possible behavior that a character can have.
-///It's handle the character's behaviors by calling the appropriate behavior.
-/// </summary>
 public class Character : MonoBehaviour
 {
     #region Properties
