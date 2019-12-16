@@ -21,10 +21,13 @@ public class DamageTriggerEvent : MonoBehaviour
     [ShowIf("playFootEffects")]
     Transform rightFootLocation = null;
     [SerializeField]
-    bool playFootSounds = false;
+    bool playSounds = false;
     [SerializeField]
-    [ShowIf("playFootSounds")]
+    [ShowIf("playSounds")]
     AudioSource footSource = null;
+    [SerializeField]
+    [ShowIf("playSounds")]
+    AudioSource swordSwingSource = null;
 
     [SerializeField]
     UnityEvent OnDeathAnimationDone = new UnityEvent();
@@ -33,6 +36,17 @@ public class DamageTriggerEvent : MonoBehaviour
     {
         Debug.Log("Deals attack called - " + comboCount);
         OnDamageTrigger.Invoke(comboCount);
+        if (playSounds)
+        {
+            var soundsSys = SoundSystem.GetInstance();
+            if (soundsSys)
+            {
+                var clipToPlay = soundsSys.GetClip(SoundDictionary.SoundList.SwordSwing);
+                swordSwingSource.clip = clipToPlay;
+                swordSwingSource.Play();
+            }
+        }
+
     }
     public void DeathAnimationDone()
     {
