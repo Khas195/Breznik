@@ -40,6 +40,7 @@ public class Weapon : MonoBehaviour
             TryToDealsDamage(col);
         }
     }
+
     public virtual bool TryToDealsDamage(Collider targetCollider)
     {
         Logger.CharacterDebug(wielderChar, "Character's weapon touch something");
