@@ -43,6 +43,7 @@ public class CharacterAnimatorControl : MonoBehaviour
     public void Revive()
     {
         animator.SetValueInAnimator("Revive");
+        animator.SetValueInAnimator("IsDeath", false);
     }
     public void PlayAttackAnimation()
     {
@@ -65,8 +66,9 @@ public class CharacterAnimatorControl : MonoBehaviour
 
     public void TriggerDeadAnimation()
     {
-        animator.SetValueInAnimator("Die");
+        animator.SetValueInAnimator("IsDeath", true);
     }
+
     public void PlayDamagedAnimation()
     {
         var randomHurt = UnityEngine.Random.Range(0, numOfHurtAnimations);

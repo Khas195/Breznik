@@ -15,6 +15,10 @@ public class DeadZone : MonoBehaviour
             other.gameObject.transform.position = respawnPoint[currentSpawnPoint].transform.position;
         }
     }
+    public Vector3 GetRespawnPosition()
+    {
+        return respawnPoint[currentSpawnPoint].transform.position;
+    }
     public void SetNewSpawnPoint(int spawnPointToChangeTo)
     {
         currentSpawnPoint = spawnPointToChangeTo;
