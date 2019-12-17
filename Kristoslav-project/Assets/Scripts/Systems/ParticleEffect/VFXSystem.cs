@@ -21,13 +21,10 @@ public class VFXSystem : SingletonMonobehavior<VFXSystem>
         {
             if (item.tag == vFX)
             {
-                Debug.Log("Found VFX");
                 if (item.prefabs.Count <= 0)
                 {
-                    Debug.Log("This VFX has no prefabs to create: " + vFX);
                     return;
                 }
-                Debug.Log("SPawn VFX");
                 var chooseRandom = UnityEngine.Random.Range(0, item.prefabs.Count);
                 GameObject.Instantiate(item.prefabs[chooseRandom], position, rotation, this.transform);
             }
