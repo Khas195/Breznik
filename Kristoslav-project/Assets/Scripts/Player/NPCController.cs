@@ -230,8 +230,12 @@ public class NPCController : MonoBehaviour
 
     public bool SetDestination(Vector3 newDestination)
     {
-        currentDestination = newDestination;
-        return CalculatePath(currentDestination);
+        if (CalculatePath(newDestination))
+        {
+            currentDestination = newDestination;
+            return true;
+        }
+        return false;
     }
 
     private bool CalculatePath(Vector3 newDestination)
