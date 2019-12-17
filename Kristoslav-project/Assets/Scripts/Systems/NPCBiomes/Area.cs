@@ -21,12 +21,11 @@ public class Area : MonoBehaviour
     [ReadOnly]
     List<NPCController> aiControllers = new List<NPCController>();
 
-
-
     [SerializeField]
     [ReadOnly]
     List<NPCController> deactivatedAiControllers = new List<NPCController>();
-
+    [SerializeField]
+    LayerMask mobMask;
 
 
     [SerializeField]
@@ -83,18 +82,35 @@ public class Area : MonoBehaviour
     }
     private void SpawnRandomMob()
     {
+
+        var randomPos = RandomSpawnPointInArea();
+        if (IsPointOccupied(randomPos))
+        {
+            return;
+        }
+
         if (deactivatedAiControllers.Count <= 0)
         {
             GameObject mobPrefab = ChooseRandomMob();
-            CreateMobFromPrefab(mobPrefab);
+            CreateMobFromPrefab(mobPrefab, randomPos);
         }
         else
         {
             var mobToRevive = deactivatedAiControllers[0];
             var gameObjectHost = mobToRevive.GetHost();
-            gameObjectHost.transform.position = RandomSpawnPointInArea();
+            gameObjectHost.transform.position = randomPos;
             mobToRevive.Revive();
         }
+    }
+
+    private bool IsPointOccupied(Vector3 randomPos)
+    {
+        var cols = Physics.OverlapSphere(randomPos, 1f, mobMask);
+        if (cols.Length > 0)
+        {
+            return true;
+        }
+        return false;
     }
 
     private GameObject ChooseRandomMob()
@@ -116,10 +132,10 @@ public class Area : MonoBehaviour
         return inhabitantRatioToSpawn.inhabitant;
     }
 
-    private void CreateMobFromPrefab(GameObject mobPrefab)
+    private void CreateMobFromPrefab(GameObject mobPrefab, Vector3 spawnPoint)
     {
-        var randomPos = RandomSpawnPointInArea();
-        var newInhabitant = GameObject.Instantiate(mobPrefab, randomPos, Quaternion.identity, this.transform);
+
+        var newInhabitant = GameObject.Instantiate(mobPrefab, spawnPoint, Quaternion.identity, this.transform);
         var npcControl = newInhabitant.GetComponentInChildren<NPCController>();
         var collider = newInhabitant.GetComponentInChildren<Collider>(true);
         if (collider != null)
