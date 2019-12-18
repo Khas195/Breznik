@@ -10,12 +10,19 @@ public class CharacterLocks : StateMachineBehaviour
     bool lockMovement = false;
     [SerializeField]
     bool lockJump = false;
+    [SerializeField]
+    bool isWeaponTrailOn = false;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var character = animator.GetComponentInChildren<Character>();
         character.SetLockMovement(lockMovement);
         character.SetLockRotation(lockRotation);
         character.SetLockJump(lockJump);
+        var swordTrail = animator.GetComponentInChildren<SwordTrailController>();
+        if (swordTrail)
+        {
+            swordTrail.SetSwordTrail(isWeaponTrailOn);
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -280,10 +280,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 3
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!65 &2382007652604604209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9993eb2adb36d4ebed4a739851633e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSounds: 0
+  swordSwingSource: {fileID: 0}
   OnDeathAnimationDone:
     m_PersistentCalls:
       m_Calls:
@@ -598,6 +600,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1790842719674994209}
+        m_MethodName: Revive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnCharacterDamaged:
     m_PersistentCalls:
       m_Calls:
@@ -612,13 +625,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isAttacking: 0
   jumpConditions: {fileID: 11400000, guid: 1fce1bd2212abbd478b831b6e183a4f6, type: 2}
   moveConditions: {fileID: 11400000, guid: 374ffa367f3c1d441a23b620413f2a16, type: 2}
   attackConditions: {fileID: 11400000, guid: 63354548e1847b141a26a38c22c85e74, type: 2}
   changeMoveTypeConditions: {fileID: 11400000, guid: 84e38109ed4ec4344a74acde064d2e55,
     type: 2}
   canRotate: {fileID: 11400000, guid: c6c4d643a328c984a9fb86a6968d1eae, type: 2}
+  playPlayerLandEffect: 0
+  playerLandParticleSpawnPos: {fileID: 0}
 --- !u!1 &4544632170439038382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1396,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8892179989121913622, guid: d2aa457296fd9b54aaa61f1e9aefde20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855854372002301315, guid: d2aa457296fd9b54aaa61f1e9aefde20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92faf5573c7f21b4688d6bceb40425a8, type: 2}
+    - target: {fileID: 7767119476469606346, guid: d2aa457296fd9b54aaa61f1e9aefde20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92faf5573c7f21b4688d6bceb40425a8, type: 2}
+    - target: {fileID: 2269562146125939996, guid: d2aa457296fd9b54aaa61f1e9aefde20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92faf5573c7f21b4688d6bceb40425a8, type: 2}
+    - target: {fileID: 3909749461500620156, guid: d2aa457296fd9b54aaa61f1e9aefde20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92faf5573c7f21b4688d6bceb40425a8, type: 2}
     - target: {fileID: 7716720201616208532, guid: d2aa457296fd9b54aaa61f1e9aefde20,
         type: 3}
       propertyPath: m_LocalRotation.x
