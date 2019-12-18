@@ -43,11 +43,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeFinal_Model
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: a851c1eaeb0a1d14489652171199b747,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 45a92ac530438f945890957e03a9343d, type: 2}
     - target: {fileID: -4216859302048453862, guid: a851c1eaeb0a1d14489652171199b747,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -103,6 +98,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: a851c1eaeb0a1d14489652171199b747,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 45a92ac530438f945890957e03a9343d, type: 2}
+    - target: {fileID: 7131364728653278671, guid: a851c1eaeb0a1d14489652171199b747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c333f0643701c344ba18633a9712d967, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a851c1eaeb0a1d14489652171199b747, type: 3}
 --- !u!4 &2251307693155659483 stripped
