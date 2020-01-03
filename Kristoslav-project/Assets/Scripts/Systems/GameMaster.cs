@@ -225,6 +225,13 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
                     return true;
                 }
                 break;
+            case GameState.States.Cutscene:
+                if (currentStateType == GameState.States.GamePaused)
+                {
+                    gameStateStack.Push(result);
+                    return true;
+                }
+                break;
             default:
                 gameStateStack.EmptyStack();
                 gameStateStack.Push(result);
