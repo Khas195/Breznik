@@ -105,20 +105,9 @@ Well, I think this image said all that need to be said.
 ![Fixing Camera](./process-journal-TungCaoImages/fixingCameraJiterring.png "Fixing Camera")
 
 ---
-### Weekly Meeting #2 (Thursday, 24th October 2019)
-discord group 
-
----
-
-### Weekly Meeting #3 (Monday, 28th October 2019) 
-discord group created
-
----
-
-### In Class, True Story (Tuesday, 29th October 2019) 
-
----
-### Weekly Meeting #4 (Monday, 4th November 2019) 
+## Sprint #2 (October 28th to November 18th, 2019)
+One might wonder why was this sprint started while the other sprint was running.
+Originally, a sprint was supposed to be around 2 weeks. For the first sprint, however, we didn't create the 2nd sprint after said period because 
 
 ---
 ### In Class, True Story (Tuesday, 5th October 2019) 
