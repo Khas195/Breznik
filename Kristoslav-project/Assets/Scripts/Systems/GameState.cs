@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ using UnityEngine.UI;
 /// </summary>
 public class GameState : State
 {
+    [Serializable]
     public enum States
     {
         Loading,
@@ -16,6 +18,7 @@ public class GameState : State
         GamePaused,
         InDiagloues,
         InInventory,
+        Cutscene,
         DefaultState
     }
     /// <summary>

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 /// <summary>
 /// The In game state of the game.
 /// </summary>

@@ -831,7 +831,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5919222110923061040
 Transform:
@@ -864,7 +864,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5919222111709743781
 Transform:
@@ -922,7 +922,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5919222111878005815
 Transform:
@@ -954,7 +954,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5919222112691803252
 Transform:
@@ -992,7 +992,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5919222112777553051
 Transform:
@@ -1028,7 +1028,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5919222112915600457
 Transform:
@@ -1985,6 +1985,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.3571004
       objectReference: {fileID: 0}
+    - target: {fileID: -2407389511548532868, guid: 5b57ff36bc3bf974895d02878fed40f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1134714066672644336, guid: 0c123b79cefcdbb409f492d6a99f6a0e,
+        type: 3}
+    - target: {fileID: -3021847937962244329, guid: 5b57ff36bc3bf974895d02878fed40f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1134714066672644336, guid: 0c123b79cefcdbb409f492d6a99f6a0e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b57ff36bc3bf974895d02878fed40f2, type: 3}
 --- !u!4 &8856147701789657057 stripped
@@ -2545,6 +2557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockA_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 8459816109103610045, guid: 3867e07364b95ce4283efd311478d2f1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8459816109103610042, guid: 3867e07364b95ce4283efd311478d2f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2599,6 +2616,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452225815817610908, guid: 3867e07364b95ce4283efd311478d2f1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916248542830279390, guid: 3867e07364b95ce4283efd311478d2f1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3867e07364b95ce4283efd311478d2f1, type: 3}
@@ -2695,6 +2722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2770,6 +2802,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_EndHouse_01_1MAT_model
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d30a69781dda4e54fbe2328f2a8968cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: d30a69781dda4e54fbe2328f2a8968cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d30a69781dda4e54fbe2328f2a8968cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2840,6 +2882,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 7087200961041043365, guid: d30a69781dda4e54fbe2328f2a8968cf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1134714066672644336, guid: 0c123b79cefcdbb409f492d6a99f6a0e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d30a69781dda4e54fbe2328f2a8968cf, type: 3}
 --- !u!4 &1684339562758581163 stripped
@@ -3690,6 +3738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_03_pfb (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3990,6 +4043,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_03_pfb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4140,6 +4198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Well_01_pfb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2775826418300596594, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1215671403268096865, guid: aa70cb45d2f33be4a9440844a45eb38f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4194,6 +4257,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299017954549672873, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247257359915986009, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969636042212776860, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727820140283221381, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668189413860662966, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa70cb45d2f33be4a9440844a45eb38f, type: 3}
@@ -4534,6 +4622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_House_03_pfb (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
@@ -5379,6 +5472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
@@ -7105,6 +7203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_03_pfb (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7184,6 +7287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
@@ -7335,6 +7443,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockB_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 1367657319511851744, guid: 3a4dcdc314a8d3945859f4bd18e6c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4169519586002558211, guid: 3a4dcdc314a8d3945859f4bd18e6c586,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7389,6 +7502,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442868984024065414, guid: 3a4dcdc314a8d3945859f4bd18e6c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126001856888893452, guid: 3a4dcdc314a8d3945859f4bd18e6c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4dcdc314a8d3945859f4bd18e6c586, type: 3}
@@ -8025,6 +8148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockE_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 5762996373840575191, guid: ae585bf50b975e54f982a764cfd8abaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8009161672419243317, guid: ae585bf50b975e54f982a764cfd8abaf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8079,6 +8207,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437562594139690220, guid: ae585bf50b975e54f982a764cfd8abaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 424371850303759697, guid: ae585bf50b975e54f982a764cfd8abaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae585bf50b975e54f982a764cfd8abaf, type: 3}
@@ -8175,6 +8313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlabB_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 30308950784455058, guid: b4efed61ce861b749903b6fff8294943,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3443649422511225077, guid: b4efed61ce861b749903b6fff8294943,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8229,6 +8372,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503062132083830688, guid: b4efed61ce861b749903b6fff8294943,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658065829803980562, guid: b4efed61ce861b749903b6fff8294943,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4efed61ce861b749903b6fff8294943, type: 3}
@@ -8325,6 +8478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Well_01_pfb (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2775826418300596594, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1215671403268096865, guid: aa70cb45d2f33be4a9440844a45eb38f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8389,6 +8547,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.2499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299017954549672873, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247257359915986009, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969636042212776860, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727820140283221381, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668189413860662966, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa70cb45d2f33be4a9440844a45eb38f, type: 3}
@@ -8484,6 +8667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
@@ -8784,6 +8972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
@@ -10315,6 +10508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10635,6 +10833,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Well_01_pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 2775826418300596594, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1215671403268096865, guid: aa70cb45d2f33be4a9440844a45eb38f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10689,6 +10892,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299017954549672873, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247257359915986009, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969636042212776860, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727820140283221381, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668189413860662966, guid: aa70cb45d2f33be4a9440844a45eb38f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa70cb45d2f33be4a9440844a45eb38f, type: 3}
@@ -12355,6 +12583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12595,6 +12828,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12744,6 +12982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
@@ -12895,6 +13138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks1_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 6033241184946201170, guid: a0c120df4a8bcc346be14c4d699a0e50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4654242677034959071, guid: a0c120df4a8bcc346be14c4d699a0e50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12949,6 +13197,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483672789297168143, guid: a0c120df4a8bcc346be14c4d699a0e50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432446766170094066, guid: a0c120df4a8bcc346be14c4d699a0e50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5526446006467743557, guid: a0c120df4a8bcc346be14c4d699a0e50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400962142221164429, guid: a0c120df4a8bcc346be14c4d699a0e50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194180269576774320, guid: a0c120df4a8bcc346be14c4d699a0e50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c120df4a8bcc346be14c4d699a0e50, type: 3}
@@ -13045,6 +13318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13119,6 +13397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
@@ -13435,6 +13718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_03_pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13584,6 +13872,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_House_03_pfb (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
@@ -13885,6 +14178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockD_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 1646350788664509417, guid: c219bf8f3d8795c4b916cb89fe697ef7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8288247425286171920, guid: c219bf8f3d8795c4b916cb89fe697ef7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13940,6 +14238,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5869458751528299107, guid: c219bf8f3d8795c4b916cb89fe697ef7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751467227893139274, guid: c219bf8f3d8795c4b916cb89fe697ef7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c219bf8f3d8795c4b916cb89fe697ef7, type: 3}
 --- !u!4 &2387057579207461737 stripped
@@ -13959,6 +14267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RockG_Pfb
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424868298520178582, guid: ddd9e880328b3bd419597261a8dcc82d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7269915354891688514, guid: ddd9e880328b3bd419597261a8dcc82d,
         type: 3}
@@ -14014,6 +14327,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795261420065677090, guid: ddd9e880328b3bd419597261a8dcc82d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830367717056230883, guid: ddd9e880328b3bd419597261a8dcc82d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd9e880328b3bd419597261a8dcc82d, type: 3}
@@ -14349,6 +14672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
@@ -14724,6 +15052,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
@@ -15400,6 +15733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlabA_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 8252079711685113359, guid: 7f55ba0e79b79b54a904da0728582484,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1090850509597373561, guid: 7f55ba0e79b79b54a904da0728582484,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15454,6 +15792,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770016353864032306, guid: 7f55ba0e79b79b54a904da0728582484,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315742743470405970, guid: 7f55ba0e79b79b54a904da0728582484,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f55ba0e79b79b54a904da0728582484, type: 3}
@@ -15850,6 +16198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16225,6 +16578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_03_pfb (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3688877687834071749, guid: 473444b06f345f34c94682351550ba3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390369983485452502, guid: 473444b06f345f34c94682351550ba3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16375,6 +16733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16524,6 +16887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
@@ -17380,6 +17748,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18060,6 +18433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockC_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 2808744983393321739, guid: f67bb7b6d49e9004aa329f3d1da55c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6434522699837422921, guid: f67bb7b6d49e9004aa329f3d1da55c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18114,6 +18492,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47537658501145860, guid: f67bb7b6d49e9004aa329f3d1da55c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956183275834382745, guid: f67bb7b6d49e9004aa329f3d1da55c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f67bb7b6d49e9004aa329f3d1da55c3b, type: 3}
@@ -19050,6 +19438,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_Fence_01_2_pfb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3163112411726743989, guid: f73359129cc3c6042b133d2082429e73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2143423298293005222, guid: f73359129cc3c6042b133d2082429e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19514,6 +19907,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Village_Fence_01_1_pfb
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207310419245013887, guid: 0a5a7323833bc324c8dd6458794a040c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9088067117103507820, guid: 0a5a7323833bc324c8dd6458794a040c,
         type: 3}
@@ -20270,6 +20668,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockF_Pfb
       objectReference: {fileID: 0}
+    - target: {fileID: 85545709118352843, guid: 7a0bf91177b2dc74aa2fd47af8396f60,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3377122985938861118, guid: 7a0bf91177b2dc74aa2fd47af8396f60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20324,6 +20727,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954071466996720716, guid: 7a0bf91177b2dc74aa2fd47af8396f60,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112810231756757942, guid: 7a0bf91177b2dc74aa2fd47af8396f60,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a0bf91177b2dc74aa2fd47af8396f60, type: 3}
@@ -20775,6 +21188,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7832578129355350973, guid: 1dad9af98f6fd664888fc406153ce351,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1134714066672644336, guid: 0c123b79cefcdbb409f492d6a99f6a0e,
+        type: 3}
+    - target: {fileID: -7883714509376002135, guid: 1dad9af98f6fd664888fc406153ce351,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1134714066672644336, guid: 0c123b79cefcdbb409f492d6a99f6a0e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dad9af98f6fd664888fc406153ce351, type: 3}
 --- !u!4 &4226788909810296735 stripped
