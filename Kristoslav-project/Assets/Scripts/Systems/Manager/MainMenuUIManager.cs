@@ -5,15 +5,15 @@ using UnityEngine;
 public class MainMenuUIManager : SingletonMonobehavior<MainMenuUIManager>
 {
     [SerializeField]
-    GameObject mainMenuPanel;
+    Animator mainMenuPanel;
 
     public void Show()
     {
-        mainMenuPanel.SetActive(true);
+        mainMenuPanel.SetTrigger("In");
     }
     public void Hide()
     {
-        mainMenuPanel.SetActive(false);
+        mainMenuPanel.SetTrigger("Out");
     }
 
 }
