@@ -22,7 +22,10 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        ControlMovement();
+        if (GameMaster.GetInstance().IsGamePaused() == false)
+        {
+            ProcessInput();
+        }
     }
     /**
      * All inputs by the player are and should be done in this function .
@@ -31,7 +34,7 @@ public class PlayerController : MonoBehaviour
      * Space (Calls SignalJump function in IMovement) .
      * Recieved Horizontal and vertical then call the Move function in IMovement with those parameters .
      */
-    private void ControlMovement()
+    private void ProcessInput()
     {
 
         var side = Input.GetAxisRaw("Horizontal");

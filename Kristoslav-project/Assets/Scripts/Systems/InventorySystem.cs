@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnItemEvent : UnityEvent<ItemObject>{
+public class OnItemEvent : UnityEvent<ItemObject>
+{
 }
 public class InventorySystem : SingletonMonobehavior<InventorySystem>
 {
@@ -20,7 +21,7 @@ public class InventorySystem : SingletonMonobehavior<InventorySystem>
         base.Awake();
         inventory.ClearContainer();
     }
-    
+
     public void AddItem(ItemObject newItem)
     {
         if (inventory.AddItem(newItem))

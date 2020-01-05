@@ -61,33 +61,33 @@ public class NPCInteractable : IInteractable
         Logger.NPCDebug("Talk to " + this);
         if (base.Interact(interacter))
         {
-            if (GameMaster.GetInstance().RequestGameState(GameState.States.InDiagloues))
-            {
-                if (givenQuest)
-                {
-                    if (QuestSystem.GetInstance().CheckIfActiveQuestIsCompleted(givenQuest))
-                    {
-                        Talk(questFinishedTalk);
-                    }
-                    else if (QuestSystem.GetInstance().CheckIfQuestArchived(givenQuest))
-                    {
-                        Talk(afterQuestIsFinished);
-                    }
-                    else if (QuestSystem.GetInstance().IsActiveQuest(givenQuest))
-                    {
-                        Talk(whileQuestIsActive);
-                    }
-                }
-                else
-                {
-                    Talk(beforeQuestIsFinished);
-                }
-                isTracking = true;
-                if (playerObject == null)
-                {
-                    playerObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYER);
-                }
-            }
+            // if (GameMaster.GetInstance().RequestGameState(GameState.States.InDiagloues))
+            // {
+            //     if (givenQuest)
+            //     {
+            //         if (QuestSystem.GetInstance().CheckIfActiveQuestIsCompleted(givenQuest))
+            //         {
+            //             Talk(questFinishedTalk);
+            //         }
+            //         else if (QuestSystem.GetInstance().CheckIfQuestArchived(givenQuest))
+            //         {
+            //             Talk(afterQuestIsFinished);
+            //         }
+            //         else if (QuestSystem.GetInstance().IsActiveQuest(givenQuest))
+            //         {
+            //             Talk(whileQuestIsActive);
+            //         }
+            //     }
+            //     else
+            //     {
+            //         Talk(beforeQuestIsFinished);
+            //     }
+            //     isTracking = true;
+            //     if (playerObject == null)
+            //     {
+            //         playerObject = EntitiesMaster.GetInstance().GetGlobalEntity(EntitiesMaster.EntitiesKey.PLAYER);
+            //     }
+            //}
             otherSpeaker = interacter;
         }
         return false;
