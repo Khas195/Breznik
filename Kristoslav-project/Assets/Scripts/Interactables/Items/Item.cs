@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
-public class Item : IInteractable 
+public class Item : IInteractable
 {
     [SerializeField]
     GameObject itemEntity = null;
-    [SerializeField]
     ItemObject itemData = null;
     [SerializeField]
+    bool useInventoryUI = false;
+    [SerializeField]
+    [ShowIf("useInventoryUI")]
     Canvas itemCanvas = null;
     void Awake()
     {
@@ -17,23 +20,29 @@ public class Item : IInteractable
     public override void Defocus(GameObject interacter)
     {
         base.Defocus(interacter);
-        itemCanvas.gameObject.SetActive(false);
+        if (useInventoryUI)
+        {
+            itemCanvas.gameObject.SetActive(false);
+        }
     }
 
     public override void Focus(GameObject interacter)
     {
         base.Focus(interacter);
-        itemCanvas.gameObject.SetActive(true);
+        if (useInventoryUI)
+        {
+            itemCanvas.gameObject.SetActive(true);
+        }
     }
 
     public override string GetKindOfInteraction()
     {
-        return "Pick up";
+        return "Pick Up";
     }
 
     public override string GetName()
     {
-        return itemData.name; 
+        return itemData.name;
     }
 
     public override bool Interact(GameObject interacter)
@@ -44,5 +53,6 @@ public class Item : IInteractable
         return true;
     }
 
-    
+
 }
+
