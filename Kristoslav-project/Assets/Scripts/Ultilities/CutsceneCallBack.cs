@@ -7,9 +7,15 @@ public class CutsceneCallBack : MonoBehaviour
 {
     [SerializeField]
     UnityEvent onCutsceneDone;
+    [SerializeField]
+    UnityEvent onCutsceneStart;
 
     public void OnCutsceneDone()
     {
         onCutsceneDone.Invoke();
+    }
+    public void OnCutsceneStart()
+    {
+        onCutsceneStart.Invoke();
     }
 }

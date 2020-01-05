@@ -181,6 +181,10 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     {
         RequestGameState(GameState.States.GamePaused);
     }
+    public void GoToCutSceneState()
+    {
+        RequestGameState(GameState.States.Cutscene);
+    }
 
 
     public bool IsGamePaused()

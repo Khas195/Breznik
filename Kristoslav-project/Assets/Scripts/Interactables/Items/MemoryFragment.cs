@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MemoryFragment : IInteractable
 {
+    [SerializeField]
+    UnityEvent OnInteract = new UnityEvent();
     public override void Defocus(GameObject interacter)
     {
         base.Defocus(interacter);
@@ -23,6 +26,7 @@ public class MemoryFragment : IInteractable
 
         Debug.Log("Interact with memory");
         this.gameObject.SetActive(false);
+        OnInteract.Invoke();
         return true;
     }
 
