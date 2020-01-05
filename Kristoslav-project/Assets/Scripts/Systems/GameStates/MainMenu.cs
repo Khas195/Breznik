@@ -6,47 +6,17 @@ using UnityEngine.UI;
 /// </summary>
 public class MainMenu : GameState
 {
-    /// <summary>
-    /// The start button to go to the main game scene.
-    /// </summary>
-    [SerializeField]
-    Button startButton = null;
-
-
-    /// <summary>
-    /// Called then Main Menu is poped out of the stack.
-    /// </summary>
-    public override void OnPopped()
+    public override void OnStateEnter()
     {
-        base.OnPopped();
-        this.gameObject.SetActive(false);
-    }
-    /// <summary>
-    /// Called then Main Menu is pushed intpo the stack.
-    /// Make the start button uninteractable.
-    /// </summary>
-    public override void OnPushed()
-    {
-        base.OnPushed();
+        GameMaster.GetInstance().SetGameTimeScale(0.0f);
         this.gameObject.SetActive(true);
-        startButton.interactable = false;
+        MainMenuUIManager.GetInstance().Show();
     }
-    public void StartGame()
-    {
 
-    }
-    /// <summary>
-    /// Tell the game master to go to the Arena scene.
-    /// </summary>
-    public void GoToArena()
+    public override void OnStateExit()
     {
-        GameMaster.GetInstance().GoToArena();
-    }
-    /// <summary>
-    /// Tell the game master to exit the game.
-    /// </summary>
-    public void ExitGame()
-    {
-        GameMaster.GetInstance().ExitGame();
+        GameMaster.GetInstance().SetGameTimeScale(1.0f);
+        this.gameObject.SetActive(false);
+        MainMenuUIManager.GetInstance().Hide();
     }
 }

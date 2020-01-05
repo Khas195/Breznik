@@ -7,46 +7,6 @@ using UnityEngine.UI;
 /// </summary>
 public class InGame : GameState
 {
-    [SerializeField]
-    GameObject inGameUIs = null;
-    [SerializeField]
-    Text interactCue = null;
-    /// <summary>
-    /// Called when the in game state is poped out of the stack.
-    /// Show the mouse.
-    /// </summary>
-    public override void OnPopped()
-    {
-        base.OnPopped();
-        this.gameObject.SetActive(false);
-        inGameUIs.SetActive(false);
-        GameMaster.GetInstance().SetMouseVisibility(true);
-    }
-
-    /// <summary>
-    /// Called when the in game state is poped out of the stack.
-    /// hide the mouse.
-    /// </summary>
-    public override void OnPushed()
-    {
-        base.OnPushed();
-        this.gameObject.SetActive(true);
-        inGameUIs.SetActive(true);
-        GameMaster.GetInstance().SetMouseVisibility(false);
-    }
-    public void OnInteractableFocusChange(IInteractable interact)
-    {
-        if (interactCue == null) return;
-        if (interact.IsFocus())
-        {
-            interactCue.gameObject.SetActive(true);
-            interactCue.text = "E - " + interact.GetKindOfInteraction() + " " + interact.GetName();
-        }
-        else
-        {
-            interactCue.gameObject.SetActive(false);
-        }
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -59,17 +19,19 @@ public class InGame : GameState
         }
     }
 
-    public override void OnPressed()
+    public override void OnStateExit()
     {
-        base.OnPressed();
+        GameMaster.GetInstance().SetGameTimeScale(0.0f);
         this.gameObject.SetActive(false);
         GameMaster.GetInstance().SetMouseVisibility(true);
+        InGameUIManager.GetInstance().TurnOffOverlay();
     }
 
-    public override void OnReturnPeek()
+    public override void OnStateEnter()
     {
-        base.OnReturnPeek();
+        GameMaster.GetInstance().SetGameTimeScale(1.0f);
         this.gameObject.SetActive(true);
         GameMaster.GetInstance().SetMouseVisibility(false);
+        InGameUIManager.GetInstance().TurnOnOverlay();
     }
 }

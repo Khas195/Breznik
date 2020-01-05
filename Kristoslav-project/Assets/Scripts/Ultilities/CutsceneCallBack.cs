@@ -10,6 +10,6 @@ public class CutsceneCallBack : MonoBehaviour
 
     public void OnCutsceneDone()
     {
-
+        onCutsceneDone.Invoke();
     }
 }

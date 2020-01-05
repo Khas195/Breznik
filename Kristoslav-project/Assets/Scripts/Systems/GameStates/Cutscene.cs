@@ -1,23 +1,12 @@
 public class Cutscene : GameState
 {
-    public override void OnPopped()
+    public override void OnStateEnter()
     {
-        base.OnPopped();
+        throw new System.NotImplementedException();
     }
 
-    public override void OnPressed()
+    public override void OnStateExit()
     {
-        base.OnPressed();
-    }
-
-    public override void OnPushed()
-    {
-        base.OnPushed();
-        CutsceneSystem.GetInstance().PlayNext();
-    }
-
-    public override void OnReturnPeek()
-    {
-        base.OnReturnPeek();
+        throw new System.NotImplementedException();
     }
 }
