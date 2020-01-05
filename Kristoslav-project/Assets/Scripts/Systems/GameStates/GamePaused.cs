@@ -8,59 +8,29 @@ using UnityEngine;
 /// </summary>
 public class GamePaused : GameState
 {
-    /// <summary>
-    /// The InGame menu holder.
-    /// </summary>
-    [SerializeField]
-    GameObject inGameMenuHolder = null;
-    /// <summary>
-    /// Called when game paused state is poped out of the stack.
-    /// Hide in game menu and unpaused the game.
-    /// </summary>
-    public override void OnPopped()
-    {
-        base.OnPopped();
-        this.gameObject.SetActive(false);
-        inGameMenuHolder.SetActive(false);
-        GameMaster.GetInstance().SetGameTimeScale(1f);
-    }
-
-    /// <summary>
-    /// Called when game paused state is pushed onto the stack.
-    /// Show the in game menu and paused the game.
-    /// </summary>
-    public override void OnPushed()
-    {
-        base.OnPushed();
-        this.gameObject.SetActive(true);
-        inGameMenuHolder.SetActive(true);
-        GameMaster.GetInstance().SetGameTimeScale(0f);
-    }
-    /// <summary>
-    /// Tell the game master to go to the In Game State.
-    /// </summary>
-    public void ResumeGame()
-    {
-        GameMaster.GetInstance().RequestGameState(GameState.States.InGame);
-    }
-    /// <summary>
-    /// Tell the game master to Exit the game.
-    /// </summary>
-    public void ExitGame()
-    {
-        GameMaster.GetInstance().ExitGame();
-    }
-    /// <summary>
-    /// Tell the game master to go to the MainMenu.
-    /// </summary>
-    public void BackToMenu()
-    {
-        GameMaster.GetInstance().RequestLoadScene("MainMenuScene");
-    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            this.ResumeGame();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameMaster.GetInstance().RequestGameState(States.InGame);
         }
+    }
+
+    public override void OnStateExit()
+    {
+        GameMaster.GetInstance().SetGameTimeScale(1.0f);
+        GameMaster.GetInstance().SetMouseVisibility(false);
+        InGameUIManager.GetInstance().TurnOffPausedMenu();
+        InGameUIManager.GetInstance().TurnOnOverlay();
+        this.gameObject.SetActive(false);
+    }
+
+    public override void OnStateEnter()
+    {
+        this.gameObject.SetActive(true);
+        GameMaster.GetInstance().SetMouseVisibility(true);
+        GameMaster.GetInstance().SetGameTimeScale(0.0f);
+        InGameUIManager.GetInstance().TurnOnPausedMenu();
+        InGameUIManager.GetInstance().TurnOffOverlay();
     }
 }
