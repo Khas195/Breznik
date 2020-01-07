@@ -2,31 +2,25 @@ using UnityEngine;
 
 public class InInventory : GameState
 {
-    public override void OnPopped()
+    public override void OnStateEnter()
     {
-        base.OnPopped();
-        InventorySystem.GetInstance().HideUI();
-        GameMaster.GetInstance().SetMouseVisibility(false);
-        this.gameObject.SetActive(false);
-    }
-
-    public override void OnPressed()
-    {
-        base.OnPressed();
-    }
-
-    public override void OnPushed()
-    {
-        base.OnPushed();
         InventorySystem.GetInstance().ShowUI();
         GameMaster.GetInstance().SetMouseVisibility(true);
         this.gameObject.SetActive(true);
     }
 
-    public override void OnReturnPeek()
+    public override void OnStateExit()
     {
-        base.OnReturnPeek();
+        InventorySystem.GetInstance().HideUI();
+        GameMaster.GetInstance().SetMouseVisibility(false);
+        this.gameObject.SetActive(false);
     }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Escape))
