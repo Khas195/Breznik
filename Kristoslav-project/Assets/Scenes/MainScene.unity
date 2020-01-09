@@ -8215,7 +8215,9 @@ MonoBehaviour:
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
+  m_BeforeStackBundles:
+  - assemblyQualifiedName: IL3DN_Fog_PP, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   m_AfterStackBundles: []
 --- !u!4 &1210661105 stripped
 Transform:
@@ -10069,26 +10071,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1446261152}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1446512670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1021126394481529348, guid: 9d260ec8c1f7dc040a294c679a24b844,
-    type: 3}
-  m_PrefabInstance: {fileID: 1459821372}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1446512671
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446512670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 1606128990015798788, guid: 3c7357f52f61bdb41a90d2b679f1ee3a, type: 3}
 --- !u!4 &1446512674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4066922894680006679, guid: 9d260ec8c1f7dc040a294c679a24b844,
@@ -10106,16 +10088,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrannyHouse_r1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021126394481529348, guid: 9d260ec8c1f7dc040a294c679a24b844,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021126394481529348, guid: 9d260ec8c1f7dc040a294c679a24b844,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4066922894680006679, guid: 9d260ec8c1f7dc040a294c679a24b844,
         type: 3}
@@ -10171,21 +10143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066922894680006679, guid: 9d260ec8c1f7dc040a294c679a24b844,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0230584
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066922894680006679, guid: 9d260ec8c1f7dc040a294c679a24b844,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0230582
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066922894680006679, guid: 9d260ec8c1f7dc040a294c679a24b844,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.0230584
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d260ec8c1f7dc040a294c679a24b844, type: 3}
