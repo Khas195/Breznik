@@ -1017,6 +1017,7 @@ MonoBehaviour:
   remainInState: {fileID: 11400000, guid: e9f8f54efe978764496471db832ef179, type: 2}
   isAIActive: 1
   chaseTarget: {fileID: 0}
+  patrolPath: []
   currentDestination: {x: 0, y: 0, z: 0}
   enemyMasks:
     serializedVersion: 2
@@ -1421,26 +1422,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 92faf5573c7f21b4688d6bceb40425a8, type: 2}
-    - target: {fileID: 7716720201616208532, guid: d2aa457296fd9b54aaa61f1e9aefde20,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.34207913
-      objectReference: {fileID: 0}
-    - target: {fileID: 7716720201616208532, guid: d2aa457296fd9b54aaa61f1e9aefde20,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.58087385
-      objectReference: {fileID: 0}
-    - target: {fileID: 7716720201616208532, guid: d2aa457296fd9b54aaa61f1e9aefde20,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.3748142
-      objectReference: {fileID: 0}
-    - target: {fileID: 7716720201616208532, guid: d2aa457296fd9b54aaa61f1e9aefde20,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6364603
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2aa457296fd9b54aaa61f1e9aefde20, type: 3}
 --- !u!95 &9136943883806712697 stripped

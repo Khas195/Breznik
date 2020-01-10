@@ -20,4 +20,5 @@ public class CharacterData : ScriptableObject
     public float aggroRange = 20f;
     [ShowIf("isNPC")]
     public float stoppingDistance = 3f;
+    public float chaseRange = 30f;
 }
