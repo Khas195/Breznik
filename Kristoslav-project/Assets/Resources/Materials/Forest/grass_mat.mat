@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: grass_mat
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _DOUBLESIDED_ON _NORMALMAP_TANGENT_SPACE
+  m_Shader: {fileID: 4800000, guid: 45298a4e821d9384198627d26bc6a9aa, type: 3}
+  m_ShaderKeywords: _DOUBLESIDED_ON _NORMALMAP_TANGENT_SPACE _SNOW_ON _WIGGLE_ON _WIND_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -89,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4b5598dd499ef4b4ca12bd6f8f149758, type: 3}
+        m_Texture: {fileID: 2800000, guid: c1cbebb0cffd8d44d8ccff7568fcbf0c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -116,6 +116,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -137,6 +141,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TransmittanceColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -197,7 +205,7 @@ Material:
     - _EnableSpecularOcclusion: 0
     - _EnergyConservingSpecularColor: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
@@ -217,6 +225,7 @@ Material:
     - _MaterialID: 1
     - _Metallic: 0
     - _Mode: 0
+    - _NormalIntensity: 1
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _OcclusionStrength: 1
@@ -233,9 +242,11 @@ Material:
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
+    - _Snow: 1
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularHighlights: 1
+    - _SpecularIntensity: 0.2
     - _SrcBlend: 1
     - _StencilRef: 2
     - _StencilRefDepth: 0
@@ -267,15 +278,20 @@ Material:
     - _UVSec: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
+    - _Wiggle: 1
+    - _WiggleStrenght: 0.072
+    - _Wind: 1
+    - _WindStrenght: 0.081
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 3
     - _ZTestModeDistortion: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - __dirty: 1
     m_Colors:
     - _BaseColor: {r: 0.375539, g: 0.7075472, b: 0.23696157, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.37553898, g: 0.7075471, b: 0.23696154, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -283,6 +299,7 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
