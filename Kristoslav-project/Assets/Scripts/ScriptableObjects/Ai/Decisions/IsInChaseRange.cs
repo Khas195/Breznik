@@ -7,7 +7,7 @@ public class IsInChaseRange : Decision
     {
         var chaseTarget = controller.GetChaseTarget();
 
-        return controller.IsPointInArea(chaseTarget.position);
+        return controller.IsOutOfRange(chaseTarget.position) == false;
     }
 }
 

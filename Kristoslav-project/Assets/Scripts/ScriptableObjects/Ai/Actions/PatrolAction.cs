@@ -15,7 +15,7 @@ public class PatrolAction : Action
         {
             controller.SetMovement(IMovement.MovementType.Walk);
             Vector3 nextDestination = Vector3.zero;
-            nextDestination = controller.GetRandomPointInArea();
+            nextDestination = controller.GetNextPointInPath();
             controller.SetDestination(nextDestination);
         }
     }

@@ -10,12 +10,17 @@ public class VFXResources : ScriptableObject
     {
         SwordHitEnemy,
         EnemyHitPlayer,
-        SwordHitSlime,
         Heal,
         SwordHitsRock,
         PlayerLand,
         CrabInterval,
-        FootFall
+        FootFall,
+        SwordHitChicken,
+        ChickenDeath,
+        SwordHitCrab,
+        CrabDeath,
+        SwordHitSlime,
+        SlimeDeath
     }
     [Serializable]
     public struct VFX
