@@ -120,13 +120,26 @@ public class NPCController : MonoBehaviour
 
         return closestPos;
     }
+    bool reversePath = false;
     public Vector3 GetNextPointInPath()
     {
-        curPointInPath += 1;
-        if (curPointInPath >= patrolPath.Count)
+        if (reversePath == false)
         {
-            curPointInPath = 0;
+            curPointInPath += 1;
+            if (curPointInPath >= patrolPath.Count)
+            {
+                reversePath = true;
+            }
         }
+        else
+        {
+            curPointInPath -= 1;
+            if (curPointInPath <= 0)
+            {
+                reversePath = false;
+            }
+        }
+        curPointInPath = Mathf.Clamp(curPointInPath, 0, patrolPath.Count - 1);
         return patrolPath[curPointInPath];
     }
 
@@ -271,8 +284,6 @@ public class NPCController : MonoBehaviour
             {
                 Gizmos.DrawLine(patrolPath[i], patrolPath[i + 1]);
             }
-            Gizmos.DrawLine(patrolPath[patrolPath.Count - 1], patrolPath[0]);
-
         }
 
         Gizmos.color = Color.red;
