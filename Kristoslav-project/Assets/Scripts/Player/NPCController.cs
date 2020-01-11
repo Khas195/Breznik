@@ -19,16 +19,9 @@ public class NPCController : MonoBehaviour
     [Required]
     ScriptableState currentState = null;
 
-
-
     [SerializeField]
     [BoxGroup("Requirements")]
     ScriptableState remainInState = null;
-
-    public bool IsPointInArea(Vector3 position)
-    {
-        return homeArea.IsInArea(position);
-    }
 
     [SerializeField]
     [BoxGroup("Settings")]
@@ -38,7 +31,11 @@ public class NPCController : MonoBehaviour
     [BoxGroup("Settings")]
     [ReadOnly]
     public Transform chaseTarget = null;
-
+    [SerializeField]
+    GameObject patrolPathHolder = null;
+    [SerializeField]
+    [ReadOnly]
+    List<Vector3> patrolPath = new List<Vector3>();
 
     [SerializeField]
     [ReadOnly]
@@ -48,9 +45,11 @@ public class NPCController : MonoBehaviour
 
     NavMeshPath currentPath = null;
     int currentPoint = 0;
+    int curPointInPath = -1;
 
-    Area homeArea;
     ScriptableState beginState = null;
+
+
 
     void Awake()
     {
@@ -61,6 +60,22 @@ public class NPCController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        patrolPath.Clear();
+        patrolPath.Add(aiCharacter.GetHost().transform.position);
+        if (patrolPathHolder)
+        {
+            var transforms = patrolPathHolder.GetComponentsInChildren<Transform>();
+            foreach (var trans in transforms)
+            {
+                if (trans == patrolPathHolder.transform)
+                {
+                    continue;
+                }
+                patrolPath.Add(trans.position);
+            }
+        }
+
+        this.SetAiActive(true);
     }
 
     // Update is called once per frame
@@ -76,24 +91,62 @@ public class NPCController : MonoBehaviour
         }
         ProcessMovement();
     }
+    public bool IsOutOfRange(Vector3 position)
+    {
+        var bounds = new Bounds(patrolPath[0], Vector3.zero);
+        foreach (var item in patrolPath)
+        {
+            bounds.Encapsulate(item);
+        }
+
+        if (Vector3.Distance(bounds.center, position) > aiCharacter.GetCharacterDataPack().chaseRange)
+        {
+            return true;
+        }
+        return false;
+    }
+    private int GetClosestPatrolIndex(Vector3 position, int closestPos)
+    {
+        var closestDistance = Vector3.Distance(patrolPath[closestPos], position);
+        for (int i = 0; i < patrolPath.Count; ++i)
+        {
+            var distance = Vector3.Distance(patrolPath[i], position);
+            if (distance < closestDistance)
+            {
+                closestPos = i;
+                closestDistance = distance;
+            }
+        }
+
+        return closestPos;
+    }
+    public Vector3 GetNextPointInPath()
+    {
+        curPointInPath += 1;
+        if (curPointInPath >= patrolPath.Count)
+        {
+            curPointInPath = 0;
+        }
+        return patrolPath[curPointInPath];
+    }
 
     public void SetAiActive(bool active)
     {
         this.isAIActive = active;
-        if (active == false)
+        if (MonsterManager.GetInstance())
         {
-            homeArea.RemoveFromActiveList(this);
+            if (isAIActive == false)
+            {
+                MonsterManager.GetInstance().OnAiDeactivated(this);
+            }
+            else
+            {
+                MonsterManager.GetInstance().OnAiActivated(this);
+            }
         }
-        else
-        {
-            homeArea.AddToActiveList(this);
-        }
+
     }
 
-    public void SetHome(Area area)
-    {
-        this.homeArea = area;
-    }
 
     private void ProcessMovement()
     {
@@ -188,6 +241,38 @@ public class NPCController : MonoBehaviour
         {
             Gizmos.color = currentState.GetGizmosColor();
             Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetCharacterDataPack().aggroRange);
+
+        }
+
+        Gizmos.color = Color.yellow;
+        patrolPath.Clear();
+        if (patrolPathHolder != null)
+        {
+            var transforms = patrolPathHolder.GetComponentsInChildren<Transform>();
+            foreach (var trans in transforms)
+            {
+                if (trans == patrolPathHolder.transform)
+                {
+                    continue;
+                }
+                patrolPath.Add(trans.position);
+            }
+        }
+        if (patrolPath.Count > 0)
+        {
+            var bounds = new Bounds(patrolPath[0], Vector3.zero);
+            foreach (var item in patrolPath)
+            {
+                bounds.Encapsulate(item);
+            }
+            Gizmos.DrawWireSphere(bounds.center, 1f);
+            Gizmos.DrawWireSphere(bounds.center, aiCharacter.GetCharacterDataPack().chaseRange);
+            for (int i = 0; i < patrolPath.Count - 1; ++i)
+            {
+                Gizmos.DrawLine(patrolPath[i], patrolPath[i + 1]);
+            }
+            Gizmos.DrawLine(patrolPath[patrolPath.Count - 1], patrolPath[0]);
+
         }
 
         Gizmos.color = Color.red;
@@ -255,10 +340,6 @@ public class NPCController : MonoBehaviour
         return false;
     }
 
-    public Vector3 GetRandomPointInArea()
-    {
-        return homeArea.RandomPointInArea();
-    }
     public bool LookForHostile()
     {
         Transform characterTransform = aiCharacter.GetHost().transform;
@@ -268,7 +349,7 @@ public class NPCController : MonoBehaviour
         {
             if (cols[i].gameObject.CompareTag("Player"))
             {
-                if (this.IsPointInArea(cols[i].gameObject.transform.position))
+                if (IsOutOfRange(cols[i].gameObject.transform.position) == false)
                 {
                     this.chaseTarget = cols[i].gameObject.transform;
                     return true;
