@@ -325,8 +325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9993eb2adb36d4ebed4a739851633e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: 8
+  host: {fileID: 2746536152683543568}
   playSounds: 0
-  swordSwingSource: {fileID: 0}
+  attackSoundSource: {fileID: 0}
   OnDeathAnimationDone:
     m_PersistentCalls:
       m_Calls:
