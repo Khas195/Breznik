@@ -7,6 +7,8 @@ public class SoundSystem : SingletonMonobehavior<SoundSystem>
     [SerializeField]
     [Required]
     SoundDictionary soundDictionary = null;
+    [SerializeField]
+    AudioSource backgroundSource = null;
     protected override void Awake()
     {
         base.Awake();
@@ -22,5 +24,23 @@ public class SoundSystem : SingletonMonobehavior<SoundSystem>
             }
         }
         return null;
+    }
+    void Update()
+    {
+        if (backgroundSource.isPlaying == false)
+        {
+            var randomSong = Random.Range(0, soundDictionary.backgroundMusic.Count - 1);
+            backgroundSource.clip = soundDictionary.backgroundMusic[randomSong];
+        }
+    }
+    public void PlayBackGroundMusic()
+    {
+        backgroundSource.Play();
+        backgroundSource.enabled = true;
+    }
+    public void StopBackGroundMusic()
+    {
+        backgroundSource.Stop();
+        backgroundSource.enabled = false;
     }
 }

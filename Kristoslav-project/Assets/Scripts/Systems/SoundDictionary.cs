@@ -27,4 +27,6 @@ public class SoundDictionary : ScriptableObject
     }
     [SerializeField]
     public List<SoundResources> resourcesList = new List<SoundResources>();
+    [SerializeField]
+    public List<AudioClip> backgroundMusic = new List<AudioClip>();
 }
