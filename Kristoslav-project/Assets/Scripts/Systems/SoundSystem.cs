@@ -29,8 +29,9 @@ public class SoundSystem : SingletonMonobehavior<SoundSystem>
     {
         if (backgroundSource.isPlaying == false)
         {
-            var randomSong = Random.Range(0, soundDictionary.backgroundMusic.Count - 1);
+            var randomSong = Random.Range(0, soundDictionary.backgroundMusic.Count);
             backgroundSource.clip = soundDictionary.backgroundMusic[randomSong];
+            Debug.Log("New Song : " + backgroundSource.clip.name + " randomed as " + randomSong);
             if (GameMaster.GetInstance().GetCurrentGameState().GetState() == GameState.States.InGame)
             {
                 PlayBackGroundMusic();
