@@ -203,6 +203,8 @@ GameObject:
   - component: {fileID: 1551400485920568784}
   - component: {fileID: 128129181287826016}
   - component: {fileID: 2359557432407960486}
+  - component: {fileID: 1220020544309673238}
+  - component: {fileID: 6471782790470660326}
   m_Layer: 0
   m_Name: House_Base
   m_TagString: Untagged
@@ -249,7 +251,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8ea90c742f525d34faa1381cd072bd17, type: 2}
+  - {fileID: 2100000, guid: ec1c8f1898f053f4db1f510e69f32ac5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -270,6 +272,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1220020544309673238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143510368868093897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.443354, y: 5.6391077, z: 14.715826}
+  m_Center: {x: 2.4107761, y: 2.8195539, z: -0.043015957}
+--- !u!65 &6471782790470660326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143510368868093897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.315659, y: 5.6391077, z: 6.663672}
+  m_Center: {x: -3.8022583, y: 2.8195539, z: -3.4954436}
 --- !u!1 &6019502333118398912
 GameObject:
   m_ObjectHideFlags: 0

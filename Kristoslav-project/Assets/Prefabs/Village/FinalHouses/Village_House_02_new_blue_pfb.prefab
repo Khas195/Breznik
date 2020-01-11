@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6158697161719564198}
   - component: {fileID: 4699660393107976214}
   - component: {fileID: 6935943709349812688}
+  - component: {fileID: 735208916731395694}
+  - component: {fileID: 6749631389236505908}
   m_Layer: 0
   m_Name: House_Base
   m_TagString: Untagged
@@ -78,6 +80,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &735208916731395694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549108855896964543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.435829, y: 5.6391077, z: 13.024572}
+  m_Center: {x: 2.2336066, y: 2.8195539, z: -0.9762516}
+--- !u!65 &6749631389236505908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549108855896964543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.975341, y: 5.6391077, z: 6.769334}
+  m_Center: {x: -3.997208, y: 2.8195539, z: -3.5160842}
 --- !u!1 &2360251117204707448
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7914448308105849485}
   m_Layer: 0
-  m_Name: Village_House_02_new_model
+  m_Name: Village_House_02_new_blue_pfb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
