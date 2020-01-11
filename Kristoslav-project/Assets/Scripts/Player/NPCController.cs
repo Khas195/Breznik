@@ -259,6 +259,7 @@ public class NPCController : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         patrolPath.Clear();
+        patrolPath.Add(aiCharacter.GetHost().transform.position);
         if (patrolPathHolder != null)
         {
             var transforms = patrolPathHolder.GetComponentsInChildren<Transform>();
