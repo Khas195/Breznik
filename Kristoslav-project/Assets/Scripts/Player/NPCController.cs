@@ -93,16 +93,11 @@ public class NPCController : MonoBehaviour
     }
     public bool IsOutOfRange(Vector3 position)
     {
-        var bounds = new Bounds(patrolPath[0], Vector3.zero);
-        foreach (var item in patrolPath)
-        {
-            bounds.Encapsulate(item);
-        }
-
-        if (Vector3.Distance(bounds.center, position) > aiCharacter.GetCharacterDataPack().chaseRange)
+        if (Vector3.Distance(aiCharacter.GetHost().transform.position, position) > aiCharacter.GetCharacterDataPack().aggroRange)
         {
             return true;
         }
+
         return false;
     }
     private int GetClosestPatrolIndex(Vector3 position, int closestPos)
@@ -280,7 +275,6 @@ public class NPCController : MonoBehaviour
                 bounds.Encapsulate(item);
             }
             Gizmos.DrawWireSphere(bounds.center, 1f);
-            Gizmos.DrawWireSphere(bounds.center, aiCharacter.GetCharacterDataPack().chaseRange);
             for (int i = 0; i < patrolPath.Count - 1; ++i)
             {
                 Gizmos.DrawLine(patrolPath[i], patrolPath[i + 1]);
