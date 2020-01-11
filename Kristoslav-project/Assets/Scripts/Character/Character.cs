@@ -170,6 +170,10 @@ public class Character : MonoBehaviour
     }
     protected virtual void Update()
     {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            BeingDamage(1000);
+        }
         if (playPlayerLandEffect)
         {
             HandlePlayerLandParticleEffect();

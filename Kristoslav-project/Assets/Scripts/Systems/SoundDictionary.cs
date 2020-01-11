@@ -16,7 +16,8 @@ public class SoundDictionary : ScriptableObject
         chickenAttack,
         chickenFootFall,
         CrabHeavyAttack,
-        CrabFootFall
+        CrabFootFall,
+        SwordHitCrab
     }
     [Serializable]
     public struct SoundResources
