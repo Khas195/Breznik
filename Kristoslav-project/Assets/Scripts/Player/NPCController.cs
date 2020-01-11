@@ -32,9 +32,10 @@ public class NPCController : MonoBehaviour
     [ReadOnly]
     public Transform chaseTarget = null;
     [SerializeField]
+    GameObject patrolPathHolder = null;
+    [SerializeField]
+    [ReadOnly]
     List<Vector3> patrolPath = new List<Vector3>();
-
-
 
     [SerializeField]
     [ReadOnly]
@@ -44,7 +45,7 @@ public class NPCController : MonoBehaviour
 
     NavMeshPath currentPath = null;
     int currentPoint = 0;
-    int curPointInPath = 0;
+    int curPointInPath = -1;
 
     ScriptableState beginState = null;
 
@@ -59,7 +60,21 @@ public class NPCController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        patrolPath.Clear();
         patrolPath.Add(aiCharacter.GetHost().transform.position);
+        if (patrolPathHolder)
+        {
+            var transforms = patrolPathHolder.GetComponentsInChildren<Transform>();
+            foreach (var trans in transforms)
+            {
+                if (trans == patrolPathHolder.transform)
+                {
+                    continue;
+                }
+                patrolPath.Add(trans.position);
+            }
+        }
+
         this.SetAiActive(true);
     }
 
@@ -227,22 +242,37 @@ public class NPCController : MonoBehaviour
             Gizmos.color = currentState.GetGizmosColor();
             Gizmos.DrawWireSphere(aiCharacter.GetHost().transform.position, aiCharacter.GetCharacterDataPack().aggroRange);
 
-            if (patrolPath.Count > 0)
-            {
-                var bounds = new Bounds(patrolPath[0], Vector3.zero);
-                foreach (var item in patrolPath)
-                {
-                    bounds.Encapsulate(item);
-                }
-                Gizmos.DrawWireSphere(bounds.center, 1f);
-                Gizmos.DrawWireSphere(bounds.center, aiCharacter.GetCharacterDataPack().chaseRange);
-                for (int i = 0; i < patrolPath.Count - 1; ++i)
-                {
-                    Gizmos.DrawLine(patrolPath[i], patrolPath[i + 1]);
-                }
-                Gizmos.DrawLine(patrolPath[patrolPath.Count - 1], patrolPath[0]);
+        }
 
+        Gizmos.color = Color.yellow;
+        patrolPath.Clear();
+        if (patrolPathHolder != null)
+        {
+            var transforms = patrolPathHolder.GetComponentsInChildren<Transform>();
+            foreach (var trans in transforms)
+            {
+                if (trans == patrolPathHolder.transform)
+                {
+                    continue;
+                }
+                patrolPath.Add(trans.position);
             }
+        }
+        if (patrolPath.Count > 0)
+        {
+            var bounds = new Bounds(patrolPath[0], Vector3.zero);
+            foreach (var item in patrolPath)
+            {
+                bounds.Encapsulate(item);
+            }
+            Gizmos.DrawWireSphere(bounds.center, 1f);
+            Gizmos.DrawWireSphere(bounds.center, aiCharacter.GetCharacterDataPack().chaseRange);
+            for (int i = 0; i < patrolPath.Count - 1; ++i)
+            {
+                Gizmos.DrawLine(patrolPath[i], patrolPath[i + 1]);
+            }
+            Gizmos.DrawLine(patrolPath[patrolPath.Count - 1], patrolPath[0]);
+
         }
 
         Gizmos.color = Color.red;
