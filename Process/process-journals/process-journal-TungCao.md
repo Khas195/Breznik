@@ -66,6 +66,32 @@ For me though, the first haft of this sprint, I was working on the combat system
 
 Well, I did later on add a different task called the "Character an change combo and hit things". Which was a bit clearer than just "Combat System". Though, it sill sucked.
 
+![RunAndHit](./process-journal-TungCaoImages/runandHit.gif "RunAndHit")
+![RunAndHit](./process-journal-TungCaoImages/runandHit2.gif "RunAndHit")
+
+#### A Better Setup
+Though, it was not said in the previous semester but I had already developed a different setup than most people do for all of my Unity Project.
+The setup aimed to reveal as much information as possible to the user (as in Unity editor, as in Me). 
+
+One of my grudges with having a normal set up is this:
+
+![Normal](./process-journal-TungCaoImages/normalSetup.png "NormalSetup")
+
+This is so claustrophobic, it is hard to find information from this. You are either forced to add more code into one script or you can add more scripts into one object which would lead to the same problem. 
+
+![Normal](./process-journal-TungCaoImages/NormalSetup2.png "NormalSetup")
+
+And if you see the above on unity, what can u really tell about the game object. How many scripts are running in it ?.
+
+As such, unless absolutely necessary, I would never add script straight to the object that it is affecting.
+
+![](./process-journal-TungCaoImages/bettersetup.png)
+
+So all of the scripts, affecting the host object, would be in the Behavior node and each script in one object. Each of them will have a  Host object reference back to the game object that it is affecting. Like the example above, One can tell how many scripts are running on KrstoslavScaledWRig_Model.
+
+It is, by no mean, a perfect system and there are still many limitations that I am trying to work around it. One of these limitations are physic callbacks and finding the script in in the game object.
+
+
 All these preparation was for the first playtest session which was going to happen on the 22nd of October, which was the week after that week. More on the review of that playtest can be see below.
 
 #### Playtest session #1 (Tuesday, 22nd October 2019)
@@ -112,7 +138,37 @@ Well, I think this image said all that need to be said.
 ## Sprint #2 (October 28th to November 18th, 2019)
 One might wonder why was this sprint started while the other sprint was running. This was where we made the first mistake in project management, I would say. Instead of sending tasks that was not finished to the backlog then start a new sprint, we started a new sprint and add new tasks there. This result in some sprints running for a very long time.
 
+So for this sprint, there are 3 big tasks that I was able to get done which was the AI behaviour, The Quest System and the integration of attack animations.
 
+Of course, besides that, there are also miscellaneous tasks that I was able to get done as well.
+
+### Let's there be Intelligence (AI Behavior or behaviour) 
+Now, for this task I would like to split it into 2 sections. The behaviors themselves and the pathfinding. 
+#### The Behaviors
+The behaviors are the decisions that the AI made in the game. For example, whether he should continue to chase a target or should he return to patroling.
+
+To achieve these behaviors in game. I choosed to follow Unity's Pluggable AI for a couple of reasons. 
+
+One of them is because it is pluggable. Hmm, to further explain this, I have to show the end result first. So in the game, the Ai can do the 2 following things: He can make decisions and he can do actions.
+
+The amount of actions that he can do depends on his current state.
+With each decision, he can change into a different state or stay in his current state.
+
+![AI State](./process-journal-TungCaoImages/chaseState.png "AIState")
+
+In this example, we are in the chase state, as such, the action that we will perform would be the Chase action. Of course, a state can do more than one action if so desired. 
+
+After each action, it will run through all the decisions that it can make. In this case The ActiveState decision decides whether chasing action is still possible. In our case, it is whether the chase target is still alive. Then, if it is true then we will continue chasing by remain in the state. Otherwise, we would go to the patrol state and perform the actions and decisions there.
+
+Of course, because all of these decisions and actions are scriptable  object, so is the state itself. We have the freedom to create, drag and drop to change the behavior of our AI. For Further implementation, check my code inside the project or follow [Pluggable AI with scriptable Objects](https://www.youtube.com/watch?v=cHUXh5biQMg&list=PLX2vGYjWbI0ROSj_B0_eir_VkHrEkd4pi)
+
+#### The pathfinding
+
+One would think that this might be the easiest thing to do in the game, since unity has its own pathfinding system such as Agents and the Navmesh. The problem with using the unity's agents is that the agent dictates the movement of our game object or character. 
+
+![Agent](./process-journal-TungCaoImages/agent.png "agent")
+
+We didn't want that because we had our own movement system that was already implemented. 
 
 ---
 ### In Class, True Story (Tuesday, 5th October 2019) 
