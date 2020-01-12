@@ -45,5 +45,18 @@ Bare blocks.
 Later, Tung would bring up a point concerning this early playtest which I agree with, which is that a playtest this early on in the production doesn't really serve any constructive point, as our ideas
 aren't yet a t the level where we would be testing certain game design decisions.
 
+---
+
 ## 22nd October, 2019.
 We were introduced to big boards this class.
+
+We started quickly writing down ideas and elements we wanted in the game. I expressed I wanted an sense of vagueness and abiguity. I wanted to acheive this through the presence of anachronistic elements,
+such as early 20th century houses along with 1980s electronics. Additionally, I wanted the player to feel excitment when ecnountering enemies, as opposed to caution or fright. At first we agreed to simply
+put up as many things as we could think of, regardless of priority, and to sort them out in the coming weeks.
+
+After this, we decided to hold regular weekly meetings where we would go over the developments through the week. Since Tung already had a ready library of handy scripts governing character movement, I 
+gave him the task of developing the basic inventory and quest systems we would need. The rest of the team each had the task of designing the laylout for their respective areas, Fredi would do the Village,
+Sarah would do the Vorest, and Hari the Field. Additionally for each area we would have some kind of central marker: the Village would have the Grandmother's house, the Forest the small lake and cabin, and
+the Field would have an abandoned barn.
+
+We talked more about the narrative of the game and the motives behind it.
