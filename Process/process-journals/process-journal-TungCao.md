@@ -2,7 +2,7 @@
 
 This is the process journal of Tung T. Cao the programmer in the group.
 
-First thing first, I do unserstand that a journal should be written as things happened not after. So instead of trying to fabricate this journal as if I was written it that day, I will just be straight forward and say that it was written after all the events had happened. As such, this is not much of a journal but rather my own reflections and assetments looking back at them. __Well with all things, however, there is always an exception, an outliar if you will, and that would be the "Initial Thought" section because that was written at that time.__
+First thing first, I do unserstand that a journal should be written as things happened not after. So instead of trying to fabricate this journal as if I was written it that day, I will just be straight forward and say that it was written after all the events had happened. As such, this is not much of a journal but rather my own reflections, assetments and even explaination of how and what I did ? looking back at them. __Well with all things, however, there is always an exception, an outliar if you will, and that would be the "Initial Thought" section because that was written at that time.__
 
 This journal will be written from sprint to sprint. The reason for that is because we worked closely with each other during the project so by writing from meetings to meetings would be quite difficult. Of course, all the important events such as Playtest session, milestone presentation or break points in the process of making this game will be included as well.
 
@@ -95,6 +95,7 @@ It is, by no mean, a perfect system and there are still many limitations that I 
 
 Other than that, I also added this really cool thing. If there is a missing reference in a script in a gameobject then an angry emoticon will appear next to the game object in the hierarchy. 
 ![](./process-journal-TungCaoImages/iconInEditor.png)
+
 To be honest, we didn't use it that much because it causes too many random errors and not work as intended.  Something to develop next semester I guess.
 
 
@@ -112,7 +113,7 @@ It is a good learning experience for future projects, playtests should have a pu
 For the second half, which started on the 28th of October, I worked on the Inventory System, Pickup items and I did fix the jittering of the camera movement.
 
 ##### Inventory System (Finished November 2nd) 
-For the Inventory system, I design it with the MVC model in my mind at the time. I didn't draw the design for it, unfortunately, but the same design would later on be apply for the quest system in the game. 
+For the Inventory system, I designed it with the MVC model in my mind at the time. I didn't draw the design for it, unfortunately, but the same design would later on be apply for the quest system in the game. 
 
 It basically has a Inventory System class, Inventory UI Manager Class and Inventory class. Where the Inventory system class handles all the flow of data from Inventory itself to the UI manager and vice versa while the Inventory handles the process of the data and the Inventory UI manager handles all the showing of said data to the screen. 
 
@@ -122,6 +123,10 @@ And the result :
 
 For the 3d cube in the inventory, I used a different camera viewing it from the distance. The camera does not render it to the screen but rather to a render texture. To which having an image on the canvas drawing the rendered texture instead. It was quite cool at the time.
 ##### Picking Up Items (Finished November 2nd)
+
+I was trying to mimic the design in zelda at this point in time.
+![](./process-journal-TungCaoImages/itemShowWhenRunPast.gif "Inventory")
+
 The pickup item was pretty straight forward where you collect the item's data then send it to the Inventory System. The Problem, believe it or not, resides in who is suppose to be showing the pick up text in the game and where should the pick up text be. 
 
 Should the InventoryUIManager shows it ? or should I add a script inside the character to show it, since that script would had more information on how and when to show the pick up text. Mainly because there's a trigger collider event for whenever an item enter its range. As such it is easier to send this signal to something inside the character rather than some god manager in the scene. 
@@ -148,11 +153,33 @@ One might wonder why was this sprint started while the other sprint was running.
 So for this sprint, there are 3 big tasks that I was able to get done which was the AI behaviour, The Quest System and the integration of attack animations.
 
 Of course, besides that, there are also miscellaneous tasks that I was able to get done as well.
+### Questing (Finished Nov 10th)
 
-### Let's there be Intelligence (AI Behavior or behaviour) 
+Well for there to be quest, the player need to be able to talk to the npc first to get the quest. Well, I would be honest here and say that it was a very quick hack and slash implementation since I didn't know the specifics of how the interaction would turn out. It was too far ahead to plan anything concrete at this point so I just did this:
+
+![](./process-journal-TungCaoImages/talkToNPC.gif)
+
+To be really really honest though, I don't remember how I implemented that. It was something with state machine and stuffs. Let's move on...
+
+I was considering my option for how to do the questing system at the time. What is involve in a quest ?. I analized that a quest comprises of the following:
+Receiving a quest, doing the objectives and returning of the quest. The objectives can varies and the returning of quest can be optional too. 
+
+This is my initial design:
+
+![](./process-journal-TungCaoImages/QuestSystemDesign.jpg)
+
+It was quite bare boned with only 2 type of objectives like collect and kill something. 
+And I also wanted to seperate the quest system a little bit like the MVC model just like the inventory system. So I expanded it a bit:
+
+![](./process-journal-TungCaoImages/QuestSystemDesign-Objectives.jpg)
+
+The implementation was straight forward after the design was made since I just needed to follow it. Quest System distributes and receives quest, QuestUIManager
+ see the quests in the Quests and show em and the Quests, themselves, has a list of objectives that when all return trues then the quests are done.
+
+### Let's there be Intelligence (AI Behavior or behaviour)  (Finished Nov 16th)
 Now, for this task I would like to split it into 3 sections. The controller, The behaviors themselves and the pathfinding. 
 #### The Controller
-Ever since I thought of __The Setup__ I thought above, I always been thinking of how should I control a character in the game. I used to combine the Input for a character and the behavior of the character themself into one gigantic character script.
+Ever since I thought of __The Setup__ above, I always been thinking of how should I control a character in the game. I used to combine the Input for a character and the behavior of the character themself into one gigantic character script.
 
 I stopped doing that since it always creates trouble  whenever I approach the AI. Moreover, I had always been thinking of changing the character I control in game and if I made a huge script then it wouldn't be impossible.
 
@@ -168,6 +195,8 @@ I did separate some of the character's behaviors but I gotta say it was not wort
 
 On the other hand though, seperating the input and the character did wonders.
 
+![](./process-journal-TungCaoImages/CharacterAndNPCDesign.jpg)
+
 ![](./process-journal-TungCaoImages/controllerCharacter.png)
 
 Where the player controller will control the character and the character do what the character do without knowing who is controlling it.
@@ -178,19 +207,19 @@ so if I want my character to jump I just request jump then the character will ch
 
 ![](./process-journal-TungCaoImages/characterRef.png)
 
-Of course the character is assigned in the editor. This kind of sepration create special oppotunities in the future where we can switch the character ref at any point in the game and it would still works. This is a saying I've been telling my group "you guys are always one drag away from playing anything character in the game". Which was true, since we have this:
+Of course the character is assigned in the editor. This kind of sepration creates special oppotunities in the future where we can switch the character ref at any point in the game and it would still works. This is a saying I've been telling my group "you guys are always one drag away from playing anything character in the game". Which was true, since we have this:
 
 ![](./process-journal-TungCaoImages/crabboWalk0.gif)
 ![](./process-journal-TungCaoImages/playAsChicken.gif)
 
-To be honest, though, at the time that I made this speration. I didn't even thinkg that this was possible. As you can see, the footage above is way later in the project.
+To be honest, though, at the time that I made this seperation. I didn't even thinkg that this was possible. As you can see, the footage above is way later in the project.
 
 #### The Behaviors
 The behaviors are the decisions that the AI made in the game. For example, whether he should continue to chase a target or should he return to patroling.
 
-To achieve these behaviors in game. I choosed to follow Unity's Pluggable AI for a couple of reasons. 
+To achieve these behaviors in game. I choosed to follow [Unity's Pluggable AI](https://www.youtube.com/watch?v=cHUXh5biQMg&list=PLX2vGYjWbI0ROSj_B0_eir_VkHrEkd4pi) for a couple of reasons. 
 
-One of them is because it is pluggable. Hmm, to further explain this, I have to show the end result first. So in the game, the Ai can do the 2 following things: He can make decisions and he can do actions.
+One of them is because it is pluggable. In the game, the Ai can do the 2 following things: He can make decisions and he can do actions.
 
 The amount of actions that he can do depends on his current state.
 With each decision, he can change into a different state or stay in his current state.
@@ -201,7 +230,11 @@ In this example, we are in the chase state, as such, the action that we will per
 
 After each action, it will run through all the decisions that it can make. In this case The ActiveState decision decides whether chasing action is still possible. In our case, it is whether the chase target is still alive. Then, if it is true then we will continue chasing by remain in the state. Otherwise, we would go to the patrol state and perform the actions and decisions there.
 
-Of course, because all of these decisions and actions are scriptable  object, so is the state itself. We have the freedom to create, drag and drop to change the behavior of our AI. For Further implementation, check my code inside the project or follow [Pluggable AI with scriptable Objects](https://www.youtube.com/watch?v=cHUXh5biQMg&list=PLX2vGYjWbI0ROSj_B0_eir_VkHrEkd4pi)
+Of course, because all of these decisions and actions are scriptable  object, so is the state itself. We have the freedom to create, drag and drop to change the behavior of our AI. [Pluggable AI with scriptable Objects]
+
+All of that just for this broken thing: 
+
+![](./process-journal-TungCaoImages/aiChase.gif)
 
 #### The pathfinding
 
@@ -209,8 +242,17 @@ One would think that this might be the easiest thing to do in the game, since un
 
 ![Agent](./process-journal-TungCaoImages/agent.png "agent")
 
-We didn't want that because we had our own movement system that was already implemented. 
+We didn't want that because we had our own movement system that was already implemented. So It was such a hassle to use the Navmesh just to calculate the path in the game. You have to [sample the postion](https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html) and it will return the list of path. 
 
+The problem here lies where the path that it returns doesn't factor in the character width and height. At the time, I was not that familiar with the Unity Navmesh agent so I didn't know and still don't know how to fix this problem. 
+
+Another problem is that since I was not using the agent, the character couldn't avoid each other in the game which led to me just putting in an obstacle component for all of the monster in the game. 
+
+Well, after all of that, it worked 70% of the time so it was good enough.
+
+![](./process-journal-TungCaoImages/AiPathfinding.gif)
+
+### 
 ---
 ### In Class, True Story (Tuesday, 5th October 2019) 
 
