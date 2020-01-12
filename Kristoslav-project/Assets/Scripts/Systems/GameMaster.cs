@@ -87,6 +87,11 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
             RequestGameState(defaultState.GetState());
         }
     }
+    public void ReloadLevel()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
     /// <summary>
     /// Show or hide mouse in the current scene.
     /// </summary>

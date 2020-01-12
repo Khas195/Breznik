@@ -13,6 +13,11 @@ public class DeadZone : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.transform.position = respawnPoint[currentSpawnPoint].transform.position;
+            var monsterManagaer = MonsterManager.GetInstance();
+            if (monsterManagaer != null)
+            {
+                monsterManagaer.ReviveAll();
+            }
         }
     }
     public Vector3 GetRespawnPosition()
