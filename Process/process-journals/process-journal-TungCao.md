@@ -1,10 +1,14 @@
 # Process Journal - Tung Cao
 
-This is the process journal of Tung T. Cao the programmer and narrative designer in the group. I do unserstand that a journal should be written as things happened not after. Nevertheless, it was written after all the events had happened. As such, this is not much of a journal neither a story but rather my own reflections and assetments looking back at them. __Well with all things, however, there is always an exception, an outliar if you will, and that would be the initial thought section.__
+This is the process journal of Tung T. Cao the programmer in the group.
 
-This journal will be written from sprint to sprint. The reason for that is because we worked closely with each other during the project so doing from meetings to meetings would be quite hard. Of course, all the important events such as Playtest session, milestone presentation or break points in the process of making this game will be included as well.
+First thing first, I do unserstand that a journal should be written as things happened not after. So instead of trying to fabricate this journal as if I was written it that day, I will just be straight forward and say that it was written after all the events had happened. As such, this is not much of a journal but rather my own reflections and assetments looking back at them. __Well with all things, however, there is always an exception, an outliar if you will, and that would be the "Initial Thought" section because that was written at that time.__
 
-As the programmer of the project, most of my sprints are revolved around programming tasks. At least, until after the milestone presentation where I am more involve with the Narrative design of the game. So in the end, I am both a programmer and a Narrative designer.
+This journal will be written from sprint to sprint. The reason for that is because we worked closely with each other during the project so by writing from meetings to meetings would be quite difficult. Of course, all the important events such as Playtest session, milestone presentation or break points in the process of making this game will be included as well.
+
+As the programmer of the project, most of my sprints are revolved around programming tasks. At least, until after the milestone presentation where I am more involve with the Narrative design of the game. Also near the end, I started to redesigned the level so it makes sense gameplay-wise while coordinating with our environment artist for a more artistic view on the game. 
+
+So in the end, I guess, I can say that I am a programmer, a Narrative designer and a level designer.
 
 ---
 ### Before The final protype
@@ -105,20 +109,10 @@ Well, I think this image said all that need to be said.
 ![Fixing Camera](./process-journal-TungCaoImages/fixingCameraJiterring.png "Fixing Camera")
 
 ---
-### Weekly Meeting #2 (Thursday, 24th October 2019)
-discord group 
+## Sprint #2 (October 28th to November 18th, 2019)
+One might wonder why was this sprint started while the other sprint was running. This was where we made the first mistake in project management, I would say. Instead of sending tasks that was not finished to the backlog then start a new sprint, we started a new sprint and add new tasks there. This result in some sprints running for a very long time.
 
----
 
-### Weekly Meeting #3 (Monday, 28th October 2019) 
-discord group created
-
----
-
-### In Class, True Story (Tuesday, 29th October 2019) 
-
----
-### Weekly Meeting #4 (Monday, 4th November 2019) 
 
 ---
 ### In Class, True Story (Tuesday, 5th October 2019) 
