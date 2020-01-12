@@ -8,7 +8,7 @@ This journal will be written from sprint to sprint. The reason for that is becau
 
 As the programmer of the project, most of my sprints are revolved around programming tasks. At least, until after the milestone presentation where I am more involve with the Narrative design of the game. Also near the end, I started to redesigned the level so it makes sense gameplay-wise while coordinating with our environment artist for a more artistic view on the game. 
 
-So in the end, I guess, I can say that I am a programmer, a Narrative designer and a level designer.
+So in the end, I guess, I can say that I am Programmer, a Narrative Designer and a Level Designer.
 
 ---
 ### Before The final protype
@@ -91,6 +91,13 @@ So all of the scripts, affecting the host object, would be in the Behavior node 
 
 It is, by no mean, a perfect system and there are still many limitations that I am trying to work around it. One of these limitations are physic callbacks and finding the script in in the game object.
 
+#### Miscellaneous 
+
+Other than that, I also added this really cool thing. If there is a missing reference in a script in a gameobject then an angry emoticon will appear next to the game object in the hierarchy. 
+![](./process-journal-TungCaoImages/iconInEditor.png)
+To be honest, we didn't use it that much because it causes too many random errors and not work as intended.  Something to develop next semester I guess.
+
+
 
 All these preparation was for the first playtest session which was going to happen on the 22nd of October, which was the week after that week. More on the review of that playtest can be see below.
 
@@ -143,7 +150,41 @@ So for this sprint, there are 3 big tasks that I was able to get done which was 
 Of course, besides that, there are also miscellaneous tasks that I was able to get done as well.
 
 ### Let's there be Intelligence (AI Behavior or behaviour) 
-Now, for this task I would like to split it into 2 sections. The behaviors themselves and the pathfinding. 
+Now, for this task I would like to split it into 3 sections. The controller, The behaviors themselves and the pathfinding. 
+#### The Controller
+Ever since I thought of __The Setup__ I thought above, I always been thinking of how should I control a character in the game. I used to combine the Input for a character and the behavior of the character themself into one gigantic character script.
+
+I stopped doing that since it always creates trouble  whenever I approach the AI. Moreover, I had always been thinking of changing the character I control in game and if I made a huge script then it wouldn't be impossible.
+
+Then I thought of controlling a puppet instead. You know, no matter the puppet if I rig it with string I can control it. 
+
+![](./process-journal-TungCaoImages/puppet.jpg)
+
+So I started to look at the character script not as the big script where I do all my character related things. I began to split it into different parts. 
+
+We have the controller part, the character and it's behaviors. This is not the same as the behaviors that I'm gonna talk about in the next section, however. What I meant is moving, attacking, jumping, e.t.c. 
+
+I did separate some of the character's behaviors but I gotta say it was not worth it due to complexity reason.
+
+On the other hand though, seperating the input and the character did wonders.
+
+![](./process-journal-TungCaoImages/controllerCharacter.png)
+
+Where the player controller will control the character and the character do what the character do without knowing who is controlling it.
+
+![](./process-journal-TungCaoImages/snippetRequestJump.png)
+
+so if I want my character to jump I just request jump then the character will check if he can jump. If he can he will jump, otherwise he will not. This is extremely useful since the controller doens't need to know all the nuisances like when can this character jump, how does this character jump and so on. Same can be apply for attacking, rotating and moving.
+
+![](./process-journal-TungCaoImages/characterRef.png)
+
+Of course the character is assigned in the editor. This kind of sepration create special oppotunities in the future where we can switch the character ref at any point in the game and it would still works. This is a saying I've been telling my group "you guys are always one drag away from playing anything character in the game". Which was true, since we have this:
+
+![](./process-journal-TungCaoImages/crabboWalk0.gif)
+![](./process-journal-TungCaoImages/playAsChicken.gif)
+
+To be honest, though, at the time that I made this speration. I didn't even thinkg that this was possible. As you can see, the footage above is way later in the project.
+
 #### The Behaviors
 The behaviors are the decisions that the AI made in the game. For example, whether he should continue to chase a target or should he return to patroling.
 
