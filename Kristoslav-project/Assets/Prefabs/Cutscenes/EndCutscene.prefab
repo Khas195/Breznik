@@ -67,9 +67,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 490122f2653028146a04bec1ca54de4b, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 17
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -452,9 +452,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 490122f2653028146a04bec1ca54de4b, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 17
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -482,7 +482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &684558772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2e02777083858ff44858c9d25f5f3931, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6f2d924dc17889644bdca2e3be592828, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -753,9 +753,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 490122f2653028146a04bec1ca54de4b, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 17
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -909,9 +909,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 490122f2653028146a04bec1ca54de4b, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 17
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1065,9 +1065,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 490122f2653028146a04bec1ca54de4b, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 17
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1448,9 +1448,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCutsceneDone:
     m_PersistentCalls:
+      m_Calls: []
+  onCutsceneStart:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: GoToInGame
+        m_MethodName: GoToCutSceneState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1460,12 +1463,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onCutsceneStart:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: GoToCutSceneState
+        m_MethodName: StopBackGroundMusic
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1481,7 +1492,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2840107468392029958}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 62fbcb204170af04c872c37c8122ca36, type: 3}
