@@ -63,7 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_state-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">State Class Reference</div>  </div>
@@ -74,8 +74,15 @@ Inheritance diagram for State:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state__inherit__graph.png" border="0" usemap="#_state_inherit__map" alt="Inheritance graph"/></div>
 <map name="_state_inherit__map" id="_state_inherit__map">
-<area shape="rect" title=" " alt="" coords="34,80,87,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" title=" " alt="" coords="301,80,355,107"/>
+<area shape="rect" href="class_game_state.html" title="The Game state of the game." alt="" coords="284,155,372,181"/>
+<area shape="rect" title=" " alt="" coords="273,5,383,32"/>
+<area shape="rect" href="class_game_paused.html" title="The Paused State of the Game." alt="" coords="5,229,107,256"/>
+<area shape="rect" href="class_in_dialogues.html" title=" " alt="" coords="131,229,221,256"/>
+<area shape="rect" href="class_in_game.html" title="The In game state of the game." alt="" coords="245,229,312,256"/>
+<area shape="rect" href="class_in_inventory.html" title=" " alt="" coords="336,229,419,256"/>
+<area shape="rect" href="class_loading.html" title=" " alt="" coords="443,229,509,256"/>
+<area shape="rect" href="class_main_menu.html" title="The main menu state of the game." alt="" coords="533,229,616,256"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -98,11 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0c3ba47d37fa69c7089f047476cb624f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbbf150abda90027741407a291db1924"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#adbbf150abda90027741407a291db1924">OnReturnPeek</a> ()</td></tr>
 <tr class="separator:adbbf150abda90027741407a291db1924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c341a528a9942d41af4192ceecfbce7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a8c341a528a9942d41af4192ceecfbce7">StateUpdate</a> ()</td></tr>
-<tr class="separator:a8c341a528a9942d41af4192ceecfbce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
 <tr class="memitem:ad0507e140b71af2ef1051b1745dc87fd"><td class="memItemLeft" align="right" valign="top">UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#ad0507e140b71af2ef1051b1745dc87fd">OnPressedEvent</a></td></tr>
 <tr class="separator:ad0507e140b71af2ef1051b1745dc87fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20fc72fdf070d3a72357cb7fa803b47e"><td class="memItemLeft" align="right" valign="top">UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a20fc72fdf070d3a72357cb7fa803b47e">OnPoppedEvent</a></td></tr>
@@ -135,16 +140,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_state_a0c3ba47d37fa69c7089f047476cb624f_icgraph.png" border="0" usemap="#class_state_a0c3ba47d37fa69c7089f047476cb624f_icgraph" alt=""/></div>
-<map name="class_state_a0c3ba47d37fa69c7089f047476cb624f_icgraph" id="class_state_a0c3ba47d37fa69c7089f047476cb624f_icgraph">
-<area shape="rect" title=" " alt="" coords="379,5,497,32"/>
-<area shape="rect" href="class_state_stack.html#a761f0ba6b0561beba5f307f78a39c346" title=" " alt="" coords="216,5,331,32"/>
-<area shape="rect" href="class_state_stack.html#acc7e34b7f00751505b0bc63a80ed9172" title=" " alt="" coords="5,5,168,32"/>
-</map>
-</div>
+
+<p>Reimplemented in <a class="el" href="class_game_paused.html#a44e93e36cdfac76598bef1f1bde3e820">GamePaused</a>, <a class="el" href="class_in_game.html#ad722ed4120b3f0b074d88826f0c92bff">InGame</a>, <a class="el" href="class_main_menu.html#a377f01e82d7af136b370ad93386c68f8">MainMenu</a>, <a class="el" href="class_loading.html#a845cca47db957daabf404c255ed27da4">Loading</a>, <a class="el" href="class_in_dialogues.html#a2a9aab722aaef2ae3d20948e27aacb3b">InDialogues</a>, and <a class="el" href="class_in_inventory.html#a3e45ca7e42f2d90cfe6da5f3045cc5e3">InInventory</a>.</p>
 
 </div>
 </div>
@@ -171,6 +168,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="class_in_game.html#a764b76056231238a3dd3d649bd821dde">InGame</a>, and <a class="el" href="class_in_inventory.html#a603f849f03eda7ca9d12d09b09766d93">InInventory</a>.</p>
+
 </div>
 </div>
 <a id="ad9351d83800a1801d889e6ac3f379e23"></a>
@@ -195,15 +194,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_state_ad9351d83800a1801d889e6ac3f379e23_icgraph.png" border="0" usemap="#class_state_ad9351d83800a1801d889e6ac3f379e23_icgraph" alt=""/></div>
-<map name="class_state_ad9351d83800a1801d889e6ac3f379e23_icgraph" id="class_state_ad9351d83800a1801d889e6ac3f379e23_icgraph">
-<area shape="rect" title=" " alt="" coords="175,5,293,32"/>
-<area shape="rect" href="class_state_stack.html#a4b4516153a095577b4866d87b9584fc0" title=" " alt="" coords="5,5,127,32"/>
-</map>
-</div>
+
+<p>Reimplemented in <a class="el" href="class_game_paused.html#a1b9933653c83eeb1e9021a0c16f33ec6">GamePaused</a>, <a class="el" href="class_in_game.html#a4e330cfbca66f59b90979968bbe5209e">InGame</a>, <a class="el" href="class_main_menu.html#a049be19df7f1506e7ab150ec85c70aa9">MainMenu</a>, <a class="el" href="class_loading.html#a80066f4798d69bd7cc6aef91740469a9">Loading</a>, <a class="el" href="class_in_inventory.html#a5d92258ec97a3b0de3c6105089724962">InInventory</a>, and <a class="el" href="class_in_dialogues.html#af58fb078649ac3560e1618ab7e2d6fa9">InDialogues</a>.</p>
 
 </div>
 </div>
@@ -230,30 +222,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a8c341a528a9942d41af4192ceecfbce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c341a528a9942d41af4192ceecfbce7">&#9670;&nbsp;</a></span>StateUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void State.StateUpdate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reimplemented in <a class="el" href="class_in_game.html#a4f8190e06ebef10b38df9fb105686187">InGame</a>, and <a class="el" href="class_in_inventory.html#a61da9c150fa3d08b670e64e412a758c4">InInventory</a>.</p>
 
 </div>
 </div>
@@ -263,19 +232,11 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">UnityEvent State.OnPoppedEvent</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -285,19 +246,11 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">UnityEvent State.OnPressedEvent</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -307,19 +260,11 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">UnityEvent State.OnPushedEvent</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -329,19 +274,11 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">UnityEvent State.OnReturnPeekEvent</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

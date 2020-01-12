@@ -1,0 +1,235 @@
+\hypertarget{class_loading}{}\doxysection{Loading Class Reference}
+\label{class_loading}\index{Loading@{Loading}}
+
+
+Inheritance diagram for Loading\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_loading__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Loading\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_loading__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \{ \newline
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}{States.\+Loading}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}{States.\+Main\+Menu}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
+\newline
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_loading_a845cca47db957daabf404c255ed27da4}{On\+Popped}} ()
+\item 
+override void \mbox{\hyperlink{class_loading_a80066f4798d69bd7cc6aef91740469a9}{On\+Pushed}} ()
+\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_afdf496f9802777eb2a7ea99e2705d573}{Get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the state type/name of the current game state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}{On\+Pressed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_state_adbbf150abda90027741407a291db1924}{On\+Return\+Peek}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_ad0507e140b71af2ef1051b1745dc87fd}{On\+Pressed\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_a20fc72fdf070d3a72357cb7fa803b47e}{On\+Popped\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_a53de060b4fa2616ccc02d6e405703d42}{On\+Return\+Peek\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_aa5bb373a5972ecd79e81e201e660bbf9}{On\+Pushed\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_loading_afbec5d4ac3fd411afa0740d0888782db}{slider}} = null
+\item 
+Text \mbox{\hyperlink{class_loading_afe5dd3d5521ae18518efe05fefa2eba9}{loading\+Text}} = null
+\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}{state}} = \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}
+\begin{DoxyCompactList}\small\item\em The state\textquotesingle{}s type of the current game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979}\label{class_game_state_ae37dba27688ee39e865e239fee76a979}} 
+\index{Loading@{Loading}!States@{States}}
+\index{States@{States}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{States}{States}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Loading@{Loading}!Loading@{Loading}}\index{Loading@{Loading}!Loading@{Loading}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}} 
+Loading&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MainMenu@{MainMenu}!Loading@{Loading}}\index{Loading@{Loading}!MainMenu@{MainMenu}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}} 
+Main\+Menu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InGame@{InGame}!Loading@{Loading}}\index{Loading@{Loading}!InGame@{InGame}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}} 
+In\+Game&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GamePaused@{GamePaused}!Loading@{Loading}}\index{Loading@{Loading}!GamePaused@{GamePaused}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}} 
+Game\+Paused&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InDiagloues@{InDiagloues}!Loading@{Loading}}\index{Loading@{Loading}!InDiagloues@{InDiagloues}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}} 
+In\+Diagloues&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!Loading@{Loading}}\index{Loading@{Loading}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_state_afdf496f9802777eb2a7ea99e2705d573}\label{class_game_state_afdf496f9802777eb2a7ea99e2705d573}} 
+\index{Loading@{Loading}!GetState@{GetState}}
+\index{GetState@{GetState}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} Game\+State.\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Get the state type/name of the current game state. 
+
+\begin{DoxyReturn}{Returns}
+the state type/name
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_loading_a845cca47db957daabf404c255ed27da4}\label{class_loading_a845cca47db957daabf404c255ed27da4}} 
+\index{Loading@{Loading}!OnPopped@{OnPopped}}
+\index{OnPopped@{OnPopped}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnPopped()}{OnPopped()}}
+{\footnotesize\ttfamily override void Loading.\+On\+Popped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a0c3ba47d37fa69c7089f047476cb624f}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_loading_a845cca47db957daabf404c255ed27da4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}\label{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}} 
+\index{Loading@{Loading}!OnPressed@{OnPressed}}
+\index{OnPressed@{OnPressed}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
+{\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
+
+\mbox{\Hypertarget{class_loading_a80066f4798d69bd7cc6aef91740469a9}\label{class_loading_a80066f4798d69bd7cc6aef91740469a9}} 
+\index{Loading@{Loading}!OnPushed@{OnPushed}}
+\index{OnPushed@{OnPushed}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnPushed()}{OnPushed()}}
+{\footnotesize\ttfamily override void Loading.\+On\+Pushed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_ad9351d83800a1801d889e6ac3f379e23}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_loading_a80066f4798d69bd7cc6aef91740469a9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_adbbf150abda90027741407a291db1924}\label{class_state_adbbf150abda90027741407a291db1924}} 
+\index{Loading@{Loading}!OnReturnPeek@{OnReturnPeek}}
+\index{OnReturnPeek@{OnReturnPeek}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
+{\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_loading_afe5dd3d5521ae18518efe05fefa2eba9}\label{class_loading_afe5dd3d5521ae18518efe05fefa2eba9}} 
+\index{Loading@{Loading}!loadingText@{loadingText}}
+\index{loadingText@{loadingText}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{loadingText}{loadingText}}
+{\footnotesize\ttfamily Text Loading.\+loading\+Text = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_state_a20fc72fdf070d3a72357cb7fa803b47e}\label{class_state_a20fc72fdf070d3a72357cb7fa803b47e}} 
+\index{Loading@{Loading}!OnPoppedEvent@{OnPoppedEvent}}
+\index{OnPoppedEvent@{OnPoppedEvent}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnPoppedEvent}{OnPoppedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Popped\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_ad0507e140b71af2ef1051b1745dc87fd}\label{class_state_ad0507e140b71af2ef1051b1745dc87fd}} 
+\index{Loading@{Loading}!OnPressedEvent@{OnPressedEvent}}
+\index{OnPressedEvent@{OnPressedEvent}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnPressedEvent}{OnPressedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pressed\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_aa5bb373a5972ecd79e81e201e660bbf9}\label{class_state_aa5bb373a5972ecd79e81e201e660bbf9}} 
+\index{Loading@{Loading}!OnPushedEvent@{OnPushedEvent}}
+\index{OnPushedEvent@{OnPushedEvent}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnPushedEvent}{OnPushedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pushed\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_a53de060b4fa2616ccc02d6e405703d42}\label{class_state_a53de060b4fa2616ccc02d6e405703d42}} 
+\index{Loading@{Loading}!OnReturnPeekEvent@{OnReturnPeekEvent}}
+\index{OnReturnPeekEvent@{OnReturnPeekEvent}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{OnReturnPeekEvent}{OnReturnPeekEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Return\+Peek\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_loading_afbec5d4ac3fd411afa0740d0888782db}\label{class_loading_afbec5d4ac3fd411afa0740d0888782db}} 
+\index{Loading@{Loading}!slider@{slider}}
+\index{slider@{slider}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{slider}{slider}}
+{\footnotesize\ttfamily Slider Loading.\+slider = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}\label{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}} 
+\index{Loading@{Loading}!state@{state}}
+\index{state@{state}!Loading@{Loading}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} Game\+State.\+state = \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+The state\textquotesingle{}s type of the current game state. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_loading_8cs}{Loading.\+cs}}\end{DoxyCompactItemize}

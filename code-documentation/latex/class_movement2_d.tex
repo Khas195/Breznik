@@ -38,11 +38,21 @@ override void \mbox{\hyperlink{class_movement2_d_aea00f7aee904a57de7b8679208265c
 override void \mbox{\hyperlink{class_movement2_d_ad644849dbe54e82815ee2a4bca79756e}{Signal\+Jump}} ()
 \begin{DoxyCompactList}\small\item\em this function signal the jump input of the player and the jump action should be handle in the next fixed update function ~\newline
  \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}{Get\+Current\+Speed}} ()
+\item 
+\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} \mbox{\hyperlink{class_i_movement_a9e0c2e788cddf407850ec24a7a8c9814}{Get\+Current\+Move\+Mode}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_i_movement_a678684cf45c8f45b5b29d15a7741784b}{Had\+Move\+Command}} ()
+\item 
 virtual void \mbox{\hyperlink{class_i_movement_ac77e46ee7a9f56a5a850f216eab9d628}{Set\+Rigid\+Body}} (Rigidbody host\+Rigid\+Body)
 \begin{DoxyCompactList}\small\item\em Set the rigid body for the movement behavior. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_i_movement_afdaa8bbfbe2acd10fc9fab9bd922d452}{Set\+Movement\+Mode}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} new\+Mode)
 \begin{DoxyCompactList}\small\item\em Set the current movement mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}{Set\+Movement\+Data}} (\mbox{\hyperlink{class_movement_data}{Movement\+Data}} movement\+Data)
+\begin{DoxyCompactList}\small\item\em Set the movement data. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_i_movement_aac27e47a2c9667d8b691c936471082f5}{Is\+Touching\+Ground}} ()
+\item 
+virtual \mbox{\hyperlink{class_movement_data}{Movement\+Data}} \mbox{\hyperlink{class_i_movement_a02cf39d107895cca12448ce39c4555f0}{Get\+Movement\+Data}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -105,6 +115,36 @@ Run&\\
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_movement_a9e0c2e788cddf407850ec24a7a8c9814}\label{class_i_movement_a9e0c2e788cddf407850ec24a7a8c9814}} 
+\index{Movement2D@{Movement2D}!GetCurrentMoveMode@{GetCurrentMoveMode}}
+\index{GetCurrentMoveMode@{GetCurrentMoveMode}!Movement2D@{Movement2D}}
+\doxysubsubsection{\texorpdfstring{GetCurrentMoveMode()}{GetCurrentMoveMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} I\+Movement.\+Get\+Current\+Move\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}\label{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}} 
+\index{Movement2D@{Movement2D}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!Movement2D@{Movement2D}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily virtual float I\+Movement.\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_movement_a0fb022cc9dff3e3af971272f75b6b241}{Movement}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_i_movement_a02cf39d107895cca12448ce39c4555f0}\label{class_i_movement_a02cf39d107895cca12448ce39c4555f0}} 
+\index{Movement2D@{Movement2D}!GetMovementData@{GetMovementData}}
+\index{GetMovementData@{GetMovementData}!Movement2D@{Movement2D}}
+\doxysubsubsection{\texorpdfstring{GetMovementData()}{GetMovementData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_movement_data}{Movement\+Data}} I\+Movement.\+Get\+Movement\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
 \mbox{\Hypertarget{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}\label{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}} 
 \index{Movement2D@{Movement2D}!GetSpeedBasedOnMode@{GetSpeedBasedOnMode}}
 \index{GetSpeedBasedOnMode@{GetSpeedBasedOnMode}!Movement2D@{Movement2D}}
@@ -115,13 +155,24 @@ Run&\\
 
 Get the correspondence speed in the data container(\+Movement\+Data) based on the currnt movement mode. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_i_movement_a678684cf45c8f45b5b29d15a7741784b}\label{class_i_movement_a678684cf45c8f45b5b29d15a7741784b}} 
+\index{Movement2D@{Movement2D}!HadMoveCommand@{HadMoveCommand}}
+\index{HadMoveCommand@{HadMoveCommand}!Movement2D@{Movement2D}}
+\doxysubsubsection{\texorpdfstring{HadMoveCommand()}{HadMoveCommand()}}
+{\footnotesize\ttfamily virtual bool I\+Movement.\+Had\+Move\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_movement_ae608f54844231fb1d257e6dfe0e6cb46}{Movement}}.
+
 \mbox{\Hypertarget{class_i_movement_aac27e47a2c9667d8b691c936471082f5}\label{class_i_movement_aac27e47a2c9667d8b691c936471082f5}} 
 \index{Movement2D@{Movement2D}!IsTouchingGround@{IsTouchingGround}}
 \index{IsTouchingGround@{IsTouchingGround}!Movement2D@{Movement2D}}
@@ -132,7 +183,8 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Reimplemented in \mbox{\hyperlink{class_movement_a39996c31188b6d361b9fb8b4c38cd6df}{Movement}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -158,8 +210,31 @@ Move the host object towards the forward and side inputs of the player.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{class_i_movement_abeb4f7bb7a84ba21041dd4ac88081f23}{I\+Movement}}.
+Reimplemented from \mbox{\hyperlink{class_i_movement_a4daa38b53b9f561762dcf6ad22f8a2b2}{I\+Movement}}.
 
+\mbox{\Hypertarget{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}\label{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}} 
+\index{Movement2D@{Movement2D}!SetMovementData@{SetMovementData}}
+\index{SetMovementData@{SetMovementData}!Movement2D@{Movement2D}}
+\doxysubsubsection{\texorpdfstring{SetMovementData()}{SetMovementData()}}
+{\footnotesize\ttfamily void I\+Movement.\+Set\+Movement\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movement_data}{Movement\+Data}}}]{movement\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Set the movement data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em movement\+Data} & The movement data\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_i_movement_afdaa8bbfbe2acd10fc9fab9bd922d452}\label{class_i_movement_afdaa8bbfbe2acd10fc9fab9bd922d452}} 
 \index{Movement2D@{Movement2D}!SetMovementMode@{SetMovementMode}}
 \index{SetMovementMode@{SetMovementMode}!Movement2D@{Movement2D}}
@@ -170,8 +245,7 @@ Implements \mbox{\hyperlink{class_i_movement_abeb4f7bb7a84ba21041dd4ac88081f23}{
 
 Set the current movement mode. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -197,8 +271,7 @@ Set the rigid body for the movement behavior.
 
 Reimplemented in \mbox{\hyperlink{class_movement_a005eed16b6fc4f20d48a1cdeb788dcee}{Movement}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -218,7 +291,7 @@ this function signal the jump input of the player and the jump action should be 
 
 
 
-Implements \mbox{\hyperlink{class_i_movement_a2d47acb7fe566d1301ac90efd48772b9}{I\+Movement}}.
+Reimplemented from \mbox{\hyperlink{class_i_movement_a90ee03e4b3be9f77c9cd8b09a58b900d}{I\+Movement}}.
 
 \mbox{\Hypertarget{class_movement2_d_a2ca9d7325e390e6f82f6744196852634}\label{class_movement2_d_a2ca9d7325e390e6f82f6744196852634}} 
 \index{Movement2D@{Movement2D}!Update@{Update}}

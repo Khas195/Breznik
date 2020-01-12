@@ -1,68 +1,262 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-/// <summary>
-/// The Character class handles all the possible behavior that a character can have.
-///It's handle the character's behaviors by calling the appropriate behavior.
-/// </summary>
+[Serializable]
+public class DeathEvent : UnityEvent<Character>
+{
+
+}
 public class Character : MonoBehaviour
 {
+    #region Properties
     /// <summary>
     /// The RigidBody of the Character's model. <br/>
     /// Need to be set in Unity Editor.
     /// </summary>
     [SerializeField]
-    Rigidbody hostRigidBody;
+    [BoxGroup("Requirements")]
+    [Required]
+    protected Rigidbody hostRigidBody;
+
+
 
     /// <summary>
     /// Reference to the movement behavior of the character.<br/>
     /// If the character does not have a movement behavior, he/she will not be able to move.
     /// </summary>
     [SerializeField]
-    IMovement movementBehavior;
+    [BoxGroup("Requirements")]
+    [Required]
+    protected IMovement movementBehavior;
+    /// <summary>
+    /// Reference to the attack behavior of the character.<br/>
+    /// If the character does not have a movement behavior, he/she will not be able to move.
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Requirements")]
+    bool reachingAttack = false;
+    [SerializeField]
+    [BoxGroup("Requirements")]
+    [ShowIf("reachingAttack")]
+    protected ReachAttack attackBehavior;
+    /// <summary>
+    /// The player character's stats
+    /// </summary>
+    [Space]
+    [SerializeField]
+    [BoxGroup("Character Stats Holder")]
+    [Required]
+    protected CharacterData characterData = null;
+
+
 
     [SerializeField]
-    UnityEvent onCharacterAttack;
+    [BoxGroup("Character Stats Holder")]
+    [ReadOnly]
+    protected float health = 0;
+    [SerializeField]
+    [BoxGroup("Character Stats Holder")]
+    [ReadOnly]
+    protected float stamina = 0;
+    [Space]
+    /// <summary>
+    /// This is event is called when an attack is successfully trigger.
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Character EVents")]
+    public UnityEvent onCharacterAttack = new UnityEvent();
 
-    void Awake()
+    [SerializeField]
+    [BoxGroup("Character EVents")]
+    public DeathEvent OnCharacterDeath = new DeathEvent();
+    [SerializeField]
+    [BoxGroup("Character EVents")]
+    public UnityEvent OnCharacterRevived = new UnityEvent();
+
+    [SerializeField]
+    [BoxGroup("Character EVents")]
+    public UnityEvent OnCharacterDamaged = new UnityEvent();
+
+    [Space]
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    /// jumpConditions check whether it is possible to jump.
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
+    [Required]
+    protected ConditionsChecker jumpConditions = null;
+
+
+
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    /// moveConditions check whether it is possible to move
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
+    [Required]
+    protected ConditionsChecker moveConditions;
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    ///  attackConditions check wheter the character can attack.
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
+    [Required]
+    protected ConditionsChecker attackConditions = null;
+    /// <summary>
+    /// An Scriptable Conditions checker that can be created in the Unity Editor.
+    /// changeMoveTypeConditions check whether it is possible to change the current move mode. 
+    /// </summary>
+    [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
+    [Required]
+    protected ConditionsChecker changeMoveTypeConditions = null;
+    [SerializeField]
+    [BoxGroup("Character conditions check for actions")]
+    [Required]
+    protected ConditionsChecker canRotate = null;
+
+
+    [SerializeField]
+    [BoxGroup("Particle Effect Group")]
+    bool playPlayerLandEffect = false;
+    [SerializeField]
+    [BoxGroup("Particle Effect Group")]
+    [ShowIf("playPlayerLandEffect")]
+    Transform playerLandParticleSpawnPos = null;
+    bool isGround = true;
+
+    private bool rotationLock;
+    private bool movementLock;
+    private bool jumpLock;
+
+
+
+    #endregion
+    #region Functions
+    #region UnityFunctions
+    public virtual void Awake()
     {
         movementBehavior.SetRigidBody(hostRigidBody);
+        movementBehavior.SetMovementData(characterData.movementData);
+        health = characterData.stats.health;
+        stamina = characterData.stats.stamina;
+    }
+    public GameObject GetHost()
+    {
+        return hostRigidBody.gameObject;
+    }
+    #endregion
+    #region Stats Manipulation
+    /// <summary>
+    /// Is called if the character are to be damaged.
+    /// </summary>
+    /// <param name="damage"> the damage value</param>
+    public virtual void BeingDamage(int damage)
+    {
+        this.health -= damage;
+        OnCharacterDamaged.Invoke();
+        Logger.CharacterDebug(this, " suffered " + damage + ", OUCH!! - Health Left: " + this.health + " out of " + characterData.stats.health);
+        if (this.health <= 0)
+        {
+            OnCharacterDeath.Invoke(this);
+        }
+    }
+    protected virtual void Update()
+    {
+        if (playPlayerLandEffect)
+        {
+            HandlePlayerLandParticleEffect();
+        }
+
     }
 
+    private void HandlePlayerLandParticleEffect()
+    {
+        if (isGround == false)
+        {
+            if (IsTouchingGround() == true)
+            {
+                var vfx = VFXSystem.GetInstance();
+                if (vfx)
+                {
+                    vfx.PlayEffect(VFXResources.VFXList.PlayerLand, playerLandParticleSpawnPos.position, Quaternion.Euler(90, 0, 0));
+                }
+            }
+        }
+        isGround = IsTouchingGround();
+    }
+
+    public float GetHealth()
+    {
+        return health;
+    }
+    public float GetStamina()
+    {
+        return stamina;
+    }
+    public float GetCurrentSpeed()
+    {
+        return movementBehavior.GetCurrentSpeed();
+    }
+    public CharacterData GetCharacterDataPack()
+    {
+        return characterData;
+    }
+    #endregion
+    #region Action 
+    public void RotateToward(Vector3 direction, bool rotateY)
+    {
+        if (canRotate.IsSatisfied(this) == false || rotationLock == true) return;
+        if (rotateY == false)
+        {
+            direction.y = 0;
+        }
+        var lookRotation = Quaternion.LookRotation(direction);
+
+        hostRigidBody.transform.rotation = Quaternion.Slerp(hostRigidBody.transform.rotation, lookRotation
+                                        , characterData.rotateSpeed * Time.deltaTime);
+    }
     /// <summary>
     /// This fucntion ask the moveBehavior of the character to move the character's model.
     /// </summary>
     /// <param name="forward"> fordward is how much the host game object should move forward and backward </param>
     /// <param name="side"> side is how much the host game object should move sideway </param>
-    /// <returns> 
-    /// True: if successfully called the move function. <br/>
-    /// False: if moveBehavior is null <br/>
-    /// </returns>
-    public bool RequestMove(float forward, float side)
+    public virtual bool RequestMove(float forward, float side)
     {
-        if (movementBehavior == null) return false;
+        var result = true;
+        if (moveConditions.IsSatisfied(this) == false || movementLock == true)
+        {
+            forward = side = 0;
+            result = false;
+        }
 
         movementBehavior.Move(forward, side);
-        return true;
+        return result;
     }
     /// <summary>
     /// This function invoke an event whenever the character is signal to attack
     /// It returns true if the event is successfully called and vice versa.
     /// </summary>
     /// <returns></returns>
-    public bool Attack()
+    public virtual bool Attack()
     {
-        Definition.CharacterDebug(this, "try to attack");
-        if (movementBehavior.IsTouchingGround() == false)
+        if (attackConditions.IsSatisfied(this) == false)
         {
-            Definition.CharacterDebug(this, "attack failed, character is in the air");
             return false;
         }
-        Definition.CharacterDebug(this, "attack triggred successful");
         onCharacterAttack.Invoke();
+
+        if (attackBehavior != null)
+        {
+            attackBehavior.TryReachTargetInDirection(hostRigidBody.transform.forward);
+        }
         return true;
     }
 
@@ -70,15 +264,11 @@ public class Character : MonoBehaviour
     /// This function ask the moveBehavior of the character to signal the jump function in the next fixed update;.
     /// </summary>
     /// <returns>
-    /// True: if successfully called the SignalJump function. <br />
-    /// False: <br/>
-    ///   - if the model is not touching the ground
-    ///   - If the movementBehaviro is null </returns>
-    public bool RequestJump()
+    /// True: if successfully called the SignalJump function and vice versa <br />
+    /// </returns>
+    public virtual bool RequestJump()
     {
-        if (movementBehavior == null) return false;
-
-        if (movementBehavior.IsTouchingGround())
+        if (jumpConditions.IsSatisfied(this) && jumpLock == false)
         {
             movementBehavior.SignalJump();
             return true;
@@ -93,14 +283,72 @@ public class Character : MonoBehaviour
     /// True: if successfully set the movement mode of the move behavior. <br/>
     /// False: if movementBehavior is null.
     /// </returns>
-    public bool RequestMovementType(Movement.MovementType moveType)
+    public virtual bool RequestMovementType(Movement.MovementType moveType)
     {
-        if (movementBehavior != null)
+        if (movementBehavior.GetCurrentMoveMode() == moveType)
+        {
+            return true;
+        }
+
+        if (changeMoveTypeConditions.IsSatisfied(this))
         {
             movementBehavior.SetMovementMode(moveType);
             return true;
         }
+
         return false;
     }
+
+    public bool IsTouchingGround()
+    {
+        return this.movementBehavior.IsTouchingGround();
+    }
+    public void SetLockRotation(bool lockRot)
+    {
+
+        rotationLock = lockRot;
+    }
+    public bool IsRotationLock()
+    {
+        return rotationLock;
+    }
+    public void SetLockMovement(bool lockMov)
+    {
+        movementLock = lockMov;
+    }
+    public bool IsMovementLock()
+    {
+        return movementLock;
+    }
+    public void SetLockJump(bool lockJump)
+    {
+        jumpLock = lockJump;
+    }
+    public bool GetJumpLock()
+    {
+        return jumpLock;
+    }
+    public bool IsAlive()
+    {
+        return health > 0;
+    }
+    public virtual void IncreaseHealth(float amount)
+    {
+        this.health += amount;
+        if (this.health >= characterData.stats.health)
+        {
+            this.health = characterData.stats.health;
+        }
+    }
+    public void Revive()
+    {
+        this.health = characterData.stats.health;
+        this.stamina = characterData.stats.stamina;
+        OnCharacterRevived.Invoke();
+    }
+    #endregion
+
+
+    #endregion
 }
 

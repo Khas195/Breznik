@@ -68,61 +68,245 @@ $(function() {
 <div class="textblock">
 <p><a href="hierarchy.html">Go to the textual class hierarchy</a></p>
 </div><table border="0" cellspacing="10" cellpadding="0">
-<tr><td><img src="inherit_graph_0.png" border="0" usemap="#_area_view" alt=""/>
-<map name="_area_view" id="_area_view">
-<area shape="rect" title=" " alt="" coords="5,385,116,412"/>
-<area shape="rect" href="class_area_view.html" title=" " alt="" coords="212,5,289,32"/>
-<area shape="rect" href="class_camera_follow.html" title=" " alt="" coords="199,56,303,83"/>
-<area shape="rect" href="class_camera_rotate_mouse.html" title=" " alt="" coords="179,107,323,133"/>
-<area shape="rect" href="class_camera_zoom.html" title=" " alt="" coords="201,157,300,184"/>
-<area shape="rect" href="class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="211,208,290,235"/>
-<area shape="rect" href="class_character_animator_control.html" title=" " alt="" coords="165,259,336,285"/>
-<area shape="rect" href="class_constraint_camera.html" title=" " alt="" coords="187,309,314,336"/>
-<area shape="rect" href="class_front_back_sorting_manager.html" title="This class manages all the game object that runs the different sorting methods." alt="" coords="164,360,337,387"/>
-<area shape="rect" href="class_i_front_back_sorting.html" title="This class aims to generalize the possible sorting method for 2d sprites in a top down view." alt="" coords="187,411,314,437"/>
-<area shape="rect" href="class_i_interactable.html" title=" " alt="" coords="205,461,297,488"/>
-<area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="209,512,293,539"/>
-<area shape="rect" href="class_monologue_manager.html" title=" " alt="" coords="183,563,318,589"/>
-<area shape="rect" href="class_mouse_rotate_camera.html" title="This class roate the camera entity based on the motion of the mouse." alt="" coords="179,613,323,640"/>
-<area shape="rect" href="class_on_create_trigger.html" title=" " alt="" coords="193,664,309,691"/>
-<area shape="rect" href="class_player_controller.html" title="This class processes the player&#39;s input and tell the character to perform the intended action." alt="" coords="193,715,308,741"/>
-<area shape="rect" href="class_state.html" title=" " alt="" coords="224,765,277,792"/>
-<area shape="rect" href="class_front_back_sorting.html" title="This class offers the most simple sorting." alt="" coords="403,360,526,387"/>
-<area shape="rect" href="class_front_back_two_point_sort.html" title="This class offers a 2 points for the process of determination of whether the character&#39;s sprite is ab..." alt="" coords="385,411,544,437"/>
-<area shape="rect" href="class_movement.html" title="This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the ob..." alt="" coords="424,461,505,488"/>
-<area shape="rect" href="class_movement2_d.html" title="This class handles all movement related behavior in 2D." alt="" coords="416,512,513,539"/>
-<area shape="rect" href="class_movement_root_motion.html" title="This class move the host object by ultilize root motion in the animations of the host object." alt="" coords="391,563,538,589"/>
+<tr><td><img src="inherit_graph_0.png" border="0" usemap="#_action" alt=""/>
+<map name="_action" id="_action">
+<area shape="rect" title=" " alt="" coords="5,613,124,640"/>
+<area shape="rect" href="class_action.html" title=" " alt="" coords="233,81,292,108"/>
+<area shape="rect" href="class_area_data.html" title=" " alt="" coords="225,208,301,235"/>
+<area shape="rect" href="class_character_behavior_condition.html" title="Check a certain condtion to see if it satisfied ." alt="" coords="172,259,353,285"/>
+<area shape="rect" href="class_character_data.html" title=" " alt="" coords="210,309,315,336"/>
+<area shape="rect" href="class_character_stats_data.html" title=" " alt="" coords="195,360,331,387"/>
+<area shape="rect" href="class_conditions_checker.html" title=" " alt="" coords="197,411,328,437"/>
+<area shape="rect" href="class_decision.html" title=" " alt="" coords="227,461,299,488"/>
+<area shape="rect" href="class_dots_u_i_data.html" title=" " alt="" coords="219,512,307,539"/>
+<area shape="rect" href="class_flexible_u_i_data.html" title=" " alt="" coords="209,563,316,589"/>
+<area shape="rect" href="class_game_event.html" title="This game event signal its listener if the event is raised." alt="" coords="218,613,307,640"/>
+<area shape="rect" href="class_inventory_object.html" title=" " alt="" coords="207,664,318,691"/>
+<area shape="rect" href="class_item_object.html" title=" " alt="" coords="220,715,305,741"/>
+<area shape="rect" href="class_monologue_data.html" title=" " alt="" coords="207,765,319,792"/>
+<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="209,816,317,843"/>
+<area shape="rect" href="class_objective.html" title=" " alt="" coords="225,867,300,893"/>
+<area shape="rect" href="class_player_action_cost.html" title=" " alt="" coords="201,917,324,944"/>
+<area shape="rect" href="class_quest.html" title=" " alt="" coords="234,968,291,995"/>
+<area shape="rect" href="class_scriptable_state.html" title=" " alt="" coords="207,1019,318,1045"/>
+<area shape="rect" href="class_stats_bar_u_i_data.html" title=" " alt="" coords="207,1069,319,1096"/>
+<area shape="rect" href="class_attack_action.html" title=" " alt="" coords="422,5,519,32"/>
+<area shape="rect" href="class_chase_action.html" title=" " alt="" coords="423,56,519,83"/>
+<area shape="rect" href="class_patrol_action.html" title=" " alt="" coords="424,107,517,133"/>
+<area shape="rect" href="class_has_stamina.html" title="Check if the player action cost has enough stamina." alt="" coords="424,157,517,184"/>
+<area shape="rect" href="class_is_attacking.html" title=" " alt="" coords="427,208,514,235"/>
+<area shape="rect" href="class_is_in_inventory.html" title=" " alt="" coords="424,259,517,285"/>
+<area shape="rect" href="class_is_in_paused_menu.html" title=" " alt="" coords="411,309,530,336"/>
+<area shape="rect" href="class_is_touching_ground.html" title="Check if the character is touching ground." alt="" coords="407,360,534,387"/>
+<area shape="rect" href="class_active_state_decision.html" title=" " alt="" coords="401,411,540,437"/>
+<area shape="rect" href="class_is_in_attack_range.html" title=" " alt="" coords="412,461,529,488"/>
+<area shape="rect" href="class_spot_player.html" title=" " alt="" coords="427,512,514,539"/>
+<area shape="rect" href="class_collect_objective.html" title=" " alt="" coords="413,841,528,868"/>
+<area shape="rect" href="class_return_objective.html" title=" " alt="" coords="414,892,527,919"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" usemap="#_definition" alt=""/>
-<map name="_definition" id="_definition">
-<area shape="rect" href="class_definition.html" title=" " alt="" coords="5,5,80,32"/>
+<tr><td><img src="inherit_graph_1.png" border="0" usemap="#_animation_combo_event" alt=""/>
+<map name="_animation_combo_event" id="_animation_combo_event">
+<area shape="rect" title=" " alt="" coords="5,892,116,919"/>
+<area shape="rect" href="class_animation_combo_event.html" title=" " alt="" coords="181,5,334,32"/>
+<area shape="rect" href="class_area.html" title=" " alt="" coords="233,56,282,83"/>
+<area shape="rect" href="class_area_view.html" title=" " alt="" coords="219,107,296,133"/>
+<area shape="rect" href="class_camera_follow.html" title=" " alt="" coords="205,157,309,184"/>
+<area shape="rect" href="class_camera_rotate_mouse.html" title=" " alt="" coords="185,208,329,235"/>
+<area shape="rect" href="class_camera_shake.html" title=" " alt="" coords="205,259,309,285"/>
+<area shape="rect" href="class_camera_zoom.html" title=" " alt="" coords="208,309,307,336"/>
+<area shape="rect" href="class_character.html" title="The Character class handles all the possible behavior that a character can have." alt="" coords="218,360,297,387"/>
+<area shape="rect" href="class_character_animator_control.html" title=" " alt="" coords="172,411,343,437"/>
+<area shape="rect" href="class_constraint_camera.html" title=" " alt="" coords="194,461,321,488"/>
+<area shape="rect" href="class_damage_on_touch.html" title=" " alt="" coords="196,512,319,539"/>
+<area shape="rect" href="class_damage_trigger_event.html" title=" " alt="" coords="187,563,328,589"/>
+<area shape="rect" href="class_dont_destroy_on_load.html" title="This script keep the parent game object and its children from being destroy when loading scene." alt="" coords="188,613,327,640"/>
+<area shape="rect" href="class_flexible_u_i.html" title=" " alt="" coords="218,664,297,691"/>
+<area shape="rect" href="class_front_back_sorting_manager.html" title="This class manages all the game object that runs the different sorting methods." alt="" coords="171,715,344,741"/>
+<area shape="rect" href="class_game_event_listener.html" title="Listen to a game event that can be created in UnityEditor." alt="" coords="190,765,325,792"/>
+<area shape="rect" href="class_i_front_back_sorting.html" title="This class aims to generalize the possible sorting method for 2d sprites in a top down view." alt="" coords="194,816,321,843"/>
+<area shape="rect" href="class_i_interactable.html" title=" " alt="" coords="211,867,303,893"/>
+<area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="215,917,299,944"/>
+<area shape="rect" href="class_inventory_slot.html" title=" " alt="" coords="209,968,305,995"/>
+<area shape="rect" href="class_inventory_u_i_manager.html" title=" " alt="" coords="190,1019,325,1045"/>
+<area shape="rect" href="class_main_camera_entity.html" title=" " alt="" coords="193,1069,322,1096"/>
+<area shape="rect" href="class_monologue_manager.html" title=" " alt="" coords="190,1120,325,1147"/>
+<area shape="rect" href="class_mouse_rotate_camera.html" title="This class roate the camera entity based on the motion of the mouse." alt="" coords="185,1171,329,1197"/>
+<area shape="rect" href="class_n_p_c_controller.html" title=" " alt="" coords="205,1221,309,1248"/>
+<area shape="rect" href="class_n_p_c_stats_u_i.html" title=" " alt="" coords="211,1272,303,1299"/>
+<area shape="rect" href="class_on_create_trigger.html" title=" " alt="" coords="199,1323,315,1349"/>
+<area shape="rect" href="class_physic_call_back.html" title=" " alt="" coords="200,1373,315,1400"/>
+<area shape="rect" href="class_player_controller.html" title="This class processes the player&#39;s input and tell the character to perform the intended action." alt="" coords="200,1424,315,1451"/>
+<area shape="rect" href="class_player_stats_u_i.html" title="Handle the health bar and stamina of the character based on the character stats data." alt="" coords="206,1475,309,1501"/>
+<area shape="rect" href="class_quest_u_i_manager.html" title=" " alt="" coords="198,1525,317,1552"/>
+<area shape="rect" href="class_rotate_over_time.html" title=" " alt="" coords="200,1576,315,1603"/>
+<area shape="rect" href="class_rotate_toward.html" title=" " alt="" coords="207,1627,308,1653"/>
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="164,1677,351,1704"/>
+<area shape="rect" href="class_state.html" title=" " alt="" coords="231,1728,284,1755"/>
+<area shape="rect" href="class_weapon.html" title=" " alt="" coords="222,1779,293,1805"/>
+<area shape="rect" href="class_n_p_c_character.html" title=" " alt="" coords="425,335,531,361"/>
+<area shape="rect" href="class_player_character.html" title="The player controlled character." alt="" coords="421,385,535,412"/>
+<area shape="rect" href="class_flexible_u_i_button.html" title=" " alt="" coords="419,588,537,615"/>
+<area shape="rect" href="class_flexible_u_i_dots_bar.html" title=" " alt="" coords="415,639,541,665"/>
+<area shape="rect" href="class_flexible_u_i_stats_bar.html" title=" " alt="" coords="413,689,543,716"/>
+<area shape="rect" href="class_front_back_sorting.html" title="This class offers the most simple sorting." alt="" coords="417,740,539,767"/>
+<area shape="rect" href="class_front_back_two_point_sort.html" title="This class offers a 2 points for the process of determination of whether the character&#39;s sprite is ab..." alt="" coords="399,791,557,817"/>
+<area shape="rect" href="class_item.html" title=" " alt="" coords="455,841,501,868"/>
+<area shape="rect" href="class_n_p_c_interactable.html" title=" " alt="" coords="420,892,536,919"/>
+<area shape="rect" href="class_movement.html" title="This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the ob..." alt="" coords="437,943,519,969"/>
+<area shape="rect" href="class_movement2_d.html" title="This class handles all movement related behavior in 2D." alt="" coords="429,993,527,1020"/>
+<area shape="rect" href="class_movement_root_motion.html" title="This class move the host object by ultilize root motion in the animations of the host object." alt="" coords="405,1044,551,1071"/>
+<area shape="rect" href="class_game_state.html" title="The Game state of the game." alt="" coords="434,1728,522,1755"/>
+<area shape="rect" href="class_game_paused.html" title="The Paused State of the Game." alt="" coords="605,1601,707,1628"/>
+<area shape="rect" href="class_in_dialogues.html" title=" " alt="" coords="611,1652,701,1679"/>
+<area shape="rect" href="class_in_game.html" title="The In game state of the game." alt="" coords="623,1703,689,1729"/>
+<area shape="rect" href="class_in_inventory.html" title=" " alt="" coords="615,1753,697,1780"/>
+<area shape="rect" href="class_loading.html" title=" " alt="" coords="623,1804,689,1831"/>
+<area shape="rect" href="class_main_menu.html" title="The main menu state of the game." alt="" coords="615,1855,697,1881"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" usemap="#_monologue_data" alt=""/>
-<map name="_monologue_data" id="_monologue_data">
-<area shape="rect" title=" " alt="" coords="5,31,124,57"/>
-<area shape="rect" href="class_monologue_data.html" title=" " alt="" coords="172,5,284,32"/>
-<area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="174,56,282,83"/>
+<tr><td><img src="inherit_graph_2.png" border="0" usemap="#_attack_chain_event" alt=""/>
+<map name="_attack_chain_event" id="_attack_chain_event">
+<area shape="rect" title=" " alt="" coords="5,31,164,57"/>
+<area shape="rect" href="class_attack_chain_event.html" title=" " alt="" coords="212,5,337,32"/>
+<area shape="rect" href="class_on_back_to_idle.html" title=" " alt="" coords="223,56,326,83"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#_on_player_see_object" alt=""/>
-<map name="_on_player_see_object" id="_on_player_see_object">
-<area shape="rect" title=" " alt="" coords="5,5,89,32"/>
-<area shape="rect" href="class_on_player_see_object.html" title=" " alt="" coords="137,5,275,32"/>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#_combo_damage_trigger" alt=""/>
+<map name="_combo_damage_trigger" id="_combo_damage_trigger">
+<area shape="rect" title=" " alt="" coords="5,107,89,133"/>
+<area shape="rect" href="class_combo_damage_trigger.html" title=" " alt="" coords="137,5,288,32"/>
+<area shape="rect" href="class_death_event.html" title=" " alt="" coords="169,56,257,83"/>
+<area shape="rect" href="class_my_trigger_event.html" title=" " alt="" coords="157,107,268,133"/>
+<area shape="rect" href="class_on_item_event.html" title=" " alt="" coords="165,157,261,184"/>
+<area shape="rect" href="class_on_quest_event.html" title=" " alt="" coords="159,208,266,235"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#_state_stack" alt=""/>
-<map name="_state_stack" id="_state_stack">
-<area shape="rect" href="class_state_stack.html" title=" " alt="" coords="5,5,92,32"/>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#_entity_pack" alt=""/>
+<map name="_entity_pack" id="_entity_pack">
+<area shape="rect" href="class_entity_pack.html" title=" " alt="" coords="5,5,92,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#_tweener" alt=""/>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#_inhabitant_ratio" alt=""/>
+<map name="_inhabitant_ratio" id="_inhabitant_ratio">
+<area shape="rect" href="struct_inhabitant_ratio.html" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#_logger" alt=""/>
+<map name="_logger" id="_logger">
+<area shape="rect" href="class_logger.html" title=" " alt="" coords="5,5,67,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#_naughty_attributes_8_i_dropdown_list" alt=""/>
+<map name="_naughty_attributes_8_i_dropdown_list" id="_naughty_attributes_8_i_dropdown_list">
+<area shape="rect" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" href="interface_naughty_attributes_1_1_i_dropdown_list.html" title=" " alt="" coords="239,13,449,39"/>
+<area shape="rect" href="class_naughty_attributes_1_1_dropdown_list.html" title=" " alt="" coords="497,5,684,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#_naughty_attributes_8_naughty_attribute" alt=""/>
+<map name="_naughty_attributes_8_naughty_attribute" id="_naughty_attributes_8_naughty_attribute">
+<area shape="rect" title=" " alt="" coords="5,966,76,993"/>
+<area shape="rect" href="class_naughty_attributes_1_1_naughty_attribute.html" title=" " alt="" coords="124,959,303,1000"/>
+<area shape="rect" href="class_naughty_attributes_1_1_draw_condition_attribute.html" title=" " alt="" coords="351,228,565,269"/>
+<area shape="rect" href="class_naughty_attributes_1_1_drawer_attribute.html" title=" " alt="" coords="373,515,543,556"/>
+<area shape="rect" href="class_naughty_attributes_1_1_group_attribute.html" title=" " alt="" coords="351,966,565,993"/>
+<area shape="rect" href="class_naughty_attributes_1_1_meta_attribute.html" title=" " alt="" coords="354,1031,562,1058"/>
+<area shape="rect" href="class_naughty_attributes_1_1_validator_attribute.html" title=" " alt="" coords="367,1220,549,1261"/>
+<area shape="rect" href="class_naughty_attributes_1_1_show_if_attribute.html" title=" " alt="" coords="635,5,803,47"/>
+<area shape="rect" href="class_naughty_attributes_1_1_hide_if_attribute.html" title=" " alt="" coords="877,5,1040,47"/>
+<area shape="rect" href="class_naughty_attributes_1_1_button_attribute.html" title=" " alt="" coords="635,71,803,112"/>
+<area shape="rect" href="class_naughty_attributes_1_1_dropdown_attribute.html" title=" " alt="" coords="625,136,812,177"/>
+<area shape="rect" href="class_naughty_attributes_1_1_enable_if_attribute.html" title=" " alt="" coords="633,201,804,243"/>
+<area shape="rect" href="class_naughty_attributes_1_1_label_attribute.html" title="Override default label" alt="" coords="613,267,824,294"/>
+<area shape="rect" href="class_naughty_attributes_1_1_min_max_slider_attribute.html" title=" " alt="" coords="631,319,807,360"/>
+<area shape="rect" href="class_naughty_attributes_1_1_progress_bar_attribute.html" title=" " alt="" coords="627,384,810,425"/>
+<area shape="rect" href="class_naughty_attributes_1_1_read_only_attribute.html" title=" " alt="" coords="625,449,812,491"/>
+<area shape="rect" href="class_naughty_attributes_1_1_reorderable_list_attribute.html" title=" " alt="" coords="619,515,818,556"/>
+<area shape="rect" href="class_naughty_attributes_1_1_resizable_text_area_attribute.html" title=" " alt="" coords="625,580,812,621"/>
+<area shape="rect" href="class_naughty_attributes_1_1_show_asset_preview_attribute.html" title=" " alt="" coords="621,645,817,687"/>
+<area shape="rect" href="class_naughty_attributes_1_1_show_native_property_attribute.html" title=" " alt="" coords="620,711,817,752"/>
+<area shape="rect" href="class_naughty_attributes_1_1_show_non_serialized_field_attribute.html" title=" " alt="" coords="626,776,811,817"/>
+<area shape="rect" href="class_naughty_attributes_1_1_slider_attribute.html" title=" " alt="" coords="637,841,800,883"/>
+<area shape="rect" href="class_naughty_attributes_1_1_tag_attribute.html" title="Make tags appear as tag popup fields" alt="" coords="619,907,819,934"/>
+<area shape="rect" href="class_naughty_attributes_1_1_disable_if_attribute.html" title=" " alt="" coords="872,201,1045,243"/>
+<area shape="rect" href="class_naughty_attributes_1_1_box_group_attribute.html" title=" " alt="" coords="625,959,813,1000"/>
+<area shape="rect" href="class_naughty_attributes_1_1_info_box_attribute.html" title=" " alt="" coords="632,1024,805,1065"/>
+<area shape="rect" href="class_naughty_attributes_1_1_on_value_changed_attribute.html" title=" " alt="" coords="629,1089,809,1131"/>
+<area shape="rect" href="class_naughty_attributes_1_1_max_value_attribute.html" title=" " alt="" coords="625,1155,813,1196"/>
+<area shape="rect" href="class_naughty_attributes_1_1_min_value_attribute.html" title=" " alt="" coords="627,1220,811,1261"/>
+<area shape="rect" href="class_naughty_attributes_1_1_required_attribute.html" title=" " alt="" coords="628,1285,809,1327"/>
+<area shape="rect" href="class_naughty_attributes_1_1_validate_input_attribute.html" title=" " alt="" coords="630,1351,807,1392"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#_singleton_monobehavior_3_01_entities_master_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_entities_master_01_4" id="_singleton_monobehavior_3_01_entities_master_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_entities_master.html" title=" " alt="" coords="208,13,315,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#_singleton_monobehavior_3_01_game_master_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_game_master_01_4" id="_singleton_monobehavior_3_01_game_master_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_game_master.html" title="Control the flow of the game." alt="" coords="208,13,305,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#_singleton_monobehavior_3_01_input_mananger_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_input_mananger_01_4" id="_singleton_monobehavior_3_01_input_mananger_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_input_mananger.html" title=" " alt="" coords="208,13,315,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#_singleton_monobehavior_3_01_interactable_mananger_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_interactable_mananger_01_4" id="_singleton_monobehavior_3_01_interactable_mananger_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" href="class_interactable_mananger.html" title=" " alt="" coords="224,13,371,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#_singleton_monobehavior_3_01_inventory_system_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_inventory_system_01_4" id="_singleton_monobehavior_3_01_inventory_system_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_inventory_system.html" title=" " alt="" coords="208,13,327,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#_singleton_monobehavior_3_01_quest_system_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_quest_system_01_4" id="_singleton_monobehavior_3_01_quest_system_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_quest_system.html" title=" " alt="" coords="208,13,311,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#_singleton_monobehavior_3_01_v_f_x_system_01_4" alt=""/>
+<map name="_singleton_monobehavior_3_01_v_f_x_system_01_4" id="_singleton_monobehavior_3_01_v_f_x_system_01_4">
+<area shape="rect" href="class_singleton_monobehavior.html" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_v_f_x_system.html" title="Experimental scripts for spawning fire vfxxxx" alt="" coords="208,13,299,39"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#_state_stack_3_01_game_state_01_4" alt=""/>
+<map name="_state_stack_3_01_game_state_01_4" id="_state_stack_3_01_game_state_01_4">
+<area shape="rect" href="class_state_stack.html" title=" " alt="" coords="5,5,183,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#_state_stack_3_01_t_01_4" alt=""/>
+<map name="_state_stack_3_01_t_01_4" id="_state_stack_3_01_t_01_4">
+<area shape="rect" href="class_state_stack.html" title=" " alt="" coords="5,5,124,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#_timer" alt=""/>
+<map name="_timer" id="_timer">
+<area shape="rect" href="class_timer.html" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#_transition" alt=""/>
+<map name="_transition" id="_transition">
+<area shape="rect" href="class_transition.html" title=" " alt="" coords="5,5,84,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#_tweener" alt=""/>
 <map name="_tweener" id="_tweener">
 <area shape="rect" href="class_tweener.html" title=" " alt="" coords="5,5,76,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#_ultilities" alt=""/>
+<tr><td><img src="inherit_graph_21.png" border="0" usemap="#_ultilities" alt=""/>
 <map name="_ultilities" id="_ultilities">
 <area shape="rect" href="class_ultilities.html" title=" " alt="" coords="5,5,73,32"/>
 </map>

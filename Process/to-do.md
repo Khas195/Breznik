@@ -3,12 +3,28 @@
 * On Wednesday: Release the game
 
 ---
-### Bugs
+### Bugs and Other Changes In Code
 
 _If you found any bugs in the game then add them to this list_
 
-- Wait for it
+---
 
+### 23 October 2019 (After the first play test)
+#### Bugs
+
+- ~~Enemy Health bar rotate toward the character instead of the camera.~~
+- ~~When attack, sometimes it doesn’t do damage.~~
+- ~~When attack, it deals too much damage.~~
+- ~~Camera stuck when rotate too much.~~
+- ~~Character play run animation when being pushed.~~
+- ~~Character collider got stuck to his surroundings.~~
+- ~~Character stuck in jumping animation.~~
+#### Other changes
+    
+- ~~When moving, rotate toward the move direction not the camera look direction~~.
+- ~~Make the dangerous objects look more intimidating~~
+- ~~Smaller collider while jumping.~~
+- ~~Change stamina to dots instead of precise bar.~~
 ---
 ### To do
 - ~~Meeting on Thursday, 17 October 2019 at 12:30 am~~. 
@@ -19,11 +35,14 @@ _If you found any bugs in the game then add them to this list_
 
 - Goal something for the playtest.
 
-    - Combat system (Tung, Tuesday 22 October 2019).
+    - ~~Combat system (Tung, Tuesday 22 October 2019).~~
+        - Not actually done, The character can attack but there's no AI and the Ai doesnt hit back.
 
-    - Fighting Animation(Chris, Monday 21 October 2019).
+    - ~~Fighting Animation(Chris, Monday 21 October 2019).~~
 
-    - Basic UI (can be done easily).
+    - ~~Basic UI (can be done easily).~~
+        - Added health bar.
+        - The stamina bar is just changing the color of the health bar.
 
 - Unity Version: 2019.2.6f1.
 

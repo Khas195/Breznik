@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cd6da5e12e824bbdbc0faf11779e4, type: 3}
+  m_Name: Chicken_NPC_Hostile
+  m_EditorClassIdentifier: 
+  characterName: Rabid Chicken
+  stats: {fileID: 11400000, guid: af7fb3c87b03ae044860b09941123b05, type: 2}
+  movementData: {fileID: 11400000, guid: cecfe39b8e3a0ad439db94721554d4b0, type: 2}
+  rotateSpeed: 7
+  attackRange: 1.6
+  reachRange: 2.3
+  attackDamage: 20
+  isNPC: 1
+  enemiesMask:
+    serializedVersion: 2
+    m_Bits: 13312
+  aggroRange: 7
+  stoppingDistance: 1.02
+  chaseRange: 13.89

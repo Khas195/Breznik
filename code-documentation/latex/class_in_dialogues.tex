@@ -1,0 +1,246 @@
+\hypertarget{class_in_dialogues}{}\doxysection{In\+Dialogues Class Reference}
+\label{class_in_dialogues}\index{InDialogues@{InDialogues}}
+
+
+Inheritance diagram for In\+Dialogues\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_in_dialogues__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for In\+Dialogues\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_in_dialogues__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \{ \newline
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}{States.\+Loading}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}{States.\+Main\+Menu}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
+\newline
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_in_dialogues_a2a9aab722aaef2ae3d20948e27aacb3b}{On\+Popped}} ()
+\item 
+override void \mbox{\hyperlink{class_in_dialogues_af58fb078649ac3560e1618ab7e2d6fa9}{On\+Pushed}} ()
+\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_afdf496f9802777eb2a7ea99e2705d573}{Get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the state type/name of the current game state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}{On\+Pressed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_state_adbbf150abda90027741407a291db1924}{On\+Return\+Peek}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_ad0507e140b71af2ef1051b1745dc87fd}{On\+Pressed\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_a20fc72fdf070d3a72357cb7fa803b47e}{On\+Popped\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_a53de060b4fa2616ccc02d6e405703d42}{On\+Return\+Peek\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_aa5bb373a5972ecd79e81e201e660bbf9}{On\+Pushed\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_in_dialogues_a97d0de2c3dd16ffb98ba7aa6d4d00c49}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_in_dialogues_af7eb3d5c13930b834537961153b14155}{dialogue\+UI}} = null
+\item 
+\mbox{\hyperlink{class_monologue_manager}{Monologue\+Manager}} \mbox{\hyperlink{class_in_dialogues_a9f4ee01584059d2ff15479341fcf92d0}{manager}} = null
+\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}{state}} = \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}
+\begin{DoxyCompactList}\small\item\em The state\textquotesingle{}s type of the current game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979}\label{class_game_state_ae37dba27688ee39e865e239fee76a979}} 
+\index{InDialogues@{InDialogues}!States@{States}}
+\index{States@{States}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{States}{States}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Loading@{Loading}!InDialogues@{InDialogues}}\index{InDialogues@{InDialogues}!Loading@{Loading}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}} 
+Loading&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MainMenu@{MainMenu}!InDialogues@{InDialogues}}\index{InDialogues@{InDialogues}!MainMenu@{MainMenu}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}} 
+Main\+Menu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InGame@{InGame}!InDialogues@{InDialogues}}\index{InDialogues@{InDialogues}!InGame@{InGame}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}} 
+In\+Game&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GamePaused@{GamePaused}!InDialogues@{InDialogues}}\index{InDialogues@{InDialogues}!GamePaused@{GamePaused}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}} 
+Game\+Paused&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InDiagloues@{InDiagloues}!InDialogues@{InDialogues}}\index{InDialogues@{InDialogues}!InDiagloues@{InDiagloues}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}} 
+In\+Diagloues&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!InDialogues@{InDialogues}}\index{InDialogues@{InDialogues}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_state_afdf496f9802777eb2a7ea99e2705d573}\label{class_game_state_afdf496f9802777eb2a7ea99e2705d573}} 
+\index{InDialogues@{InDialogues}!GetState@{GetState}}
+\index{GetState@{GetState}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} Game\+State.\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Get the state type/name of the current game state. 
+
+\begin{DoxyReturn}{Returns}
+the state type/name
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_in_dialogues_a2a9aab722aaef2ae3d20948e27aacb3b}\label{class_in_dialogues_a2a9aab722aaef2ae3d20948e27aacb3b}} 
+\index{InDialogues@{InDialogues}!OnPopped@{OnPopped}}
+\index{OnPopped@{OnPopped}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnPopped()}{OnPopped()}}
+{\footnotesize\ttfamily override void In\+Dialogues.\+On\+Popped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a0c3ba47d37fa69c7089f047476cb624f}{State}}.
+
+\mbox{\Hypertarget{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}\label{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}} 
+\index{InDialogues@{InDialogues}!OnPressed@{OnPressed}}
+\index{OnPressed@{OnPressed}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
+{\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
+
+\mbox{\Hypertarget{class_in_dialogues_af58fb078649ac3560e1618ab7e2d6fa9}\label{class_in_dialogues_af58fb078649ac3560e1618ab7e2d6fa9}} 
+\index{InDialogues@{InDialogues}!OnPushed@{OnPushed}}
+\index{OnPushed@{OnPushed}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnPushed()}{OnPushed()}}
+{\footnotesize\ttfamily override void In\+Dialogues.\+On\+Pushed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_ad9351d83800a1801d889e6ac3f379e23}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_in_dialogues_af58fb078649ac3560e1618ab7e2d6fa9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_adbbf150abda90027741407a291db1924}\label{class_state_adbbf150abda90027741407a291db1924}} 
+\index{InDialogues@{InDialogues}!OnReturnPeek@{OnReturnPeek}}
+\index{OnReturnPeek@{OnReturnPeek}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
+{\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
+
+\mbox{\Hypertarget{class_in_dialogues_a97d0de2c3dd16ffb98ba7aa6d4d00c49}\label{class_in_dialogues_a97d0de2c3dd16ffb98ba7aa6d4d00c49}} 
+\index{InDialogues@{InDialogues}!Update@{Update}}
+\index{Update@{Update}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void In\+Dialogues.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_in_dialogues_a97d0de2c3dd16ffb98ba7aa6d4d00c49_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_in_dialogues_af7eb3d5c13930b834537961153b14155}\label{class_in_dialogues_af7eb3d5c13930b834537961153b14155}} 
+\index{InDialogues@{InDialogues}!dialogueUI@{dialogueUI}}
+\index{dialogueUI@{dialogueUI}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{dialogueUI}{dialogueUI}}
+{\footnotesize\ttfamily Game\+Object In\+Dialogues.\+dialogue\+UI = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_in_dialogues_a9f4ee01584059d2ff15479341fcf92d0}\label{class_in_dialogues_a9f4ee01584059d2ff15479341fcf92d0}} 
+\index{InDialogues@{InDialogues}!manager@{manager}}
+\index{manager@{manager}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{manager}{manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_monologue_manager}{Monologue\+Manager}} In\+Dialogues.\+manager = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_state_a20fc72fdf070d3a72357cb7fa803b47e}\label{class_state_a20fc72fdf070d3a72357cb7fa803b47e}} 
+\index{InDialogues@{InDialogues}!OnPoppedEvent@{OnPoppedEvent}}
+\index{OnPoppedEvent@{OnPoppedEvent}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnPoppedEvent}{OnPoppedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Popped\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_ad0507e140b71af2ef1051b1745dc87fd}\label{class_state_ad0507e140b71af2ef1051b1745dc87fd}} 
+\index{InDialogues@{InDialogues}!OnPressedEvent@{OnPressedEvent}}
+\index{OnPressedEvent@{OnPressedEvent}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnPressedEvent}{OnPressedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pressed\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_aa5bb373a5972ecd79e81e201e660bbf9}\label{class_state_aa5bb373a5972ecd79e81e201e660bbf9}} 
+\index{InDialogues@{InDialogues}!OnPushedEvent@{OnPushedEvent}}
+\index{OnPushedEvent@{OnPushedEvent}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnPushedEvent}{OnPushedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pushed\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_a53de060b4fa2616ccc02d6e405703d42}\label{class_state_a53de060b4fa2616ccc02d6e405703d42}} 
+\index{InDialogues@{InDialogues}!OnReturnPeekEvent@{OnReturnPeekEvent}}
+\index{OnReturnPeekEvent@{OnReturnPeekEvent}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{OnReturnPeekEvent}{OnReturnPeekEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Return\+Peek\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}\label{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}} 
+\index{InDialogues@{InDialogues}!state@{state}}
+\index{state@{state}!InDialogues@{InDialogues}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} Game\+State.\+state = \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+The state\textquotesingle{}s type of the current game state. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_in_dialogues_8cs}{In\+Dialogues.\+cs}}\end{DoxyCompactItemize}

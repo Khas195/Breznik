@@ -104,8 +104,14 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:adbbbae516b9d54ffc9afe287dcb72cd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#adbbbae516b9d54ffc9afe287dcb72cd5">Start</a> ()</td></tr>
 <tr class="separator:adbbbae516b9d54ffc9afe287dcb72cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623c485e39b82f268a356463829fd8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#a623c485e39b82f268a356463829fd8b9">Update</a> ()</td></tr>
+<tr class="separator:a623c485e39b82f268a356463829fd8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8ce2043b1a47917b8b970f5579af9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#ab8ce2043b1a47917b8b970f5579af9ec">FixedUpdate</a> ()</td></tr>
 <tr class="separator:ab8ce2043b1a47917b8b970f5579af9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af572f7bb45ca2a3027beacdd5985a60d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#af572f7bb45ca2a3027beacdd5985a60d">LateUpdate</a> ()</td></tr>
+<tr class="separator:af572f7bb45ca2a3027beacdd5985a60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d9ea20b33b52754914e072747f753a"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#a10d9ea20b33b52754914e072747f753a">LerpToward</a> (Vector3 targetPos, Vector3 curPos)</td></tr>
+<tr class="separator:a10d9ea20b33b52754914e072747f753a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af01ec816d70679ea8bfe388f71d07704"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#af01ec816d70679ea8bfe388f71d07704">GetCenterPosition</a> (List&lt; Transform &gt; listOfTargets)</td></tr>
 <tr class="separator:af01ec816d70679ea8bfe388f71d07704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -125,6 +131,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:acb30ca174771a79306af65c0d3d95338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c065826af6f896189a9dd0899ab43ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#a0c065826af6f896189a9dd0899ab43ec">followZ</a> = false</td></tr>
 <tr class="separator:a0c065826af6f896189a9dd0899ab43ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f7c211f52a15dcef5e488b16c7bbda"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#ab2f7c211f52a15dcef5e488b16c7bbda">maxDistance</a> = 2</td></tr>
+<tr class="separator:ab2f7c211f52a15dcef5e488b16c7bbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24ab1266bb03cde2c3cd3d0450c190b"><td class="memItemLeft" align="right" valign="top">Camera&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_follow.html#ac24ab1266bb03cde2c3cd3d0450c190b">mCamera</a></td></tr>
+<tr class="separator:ac24ab1266bb03cde2c3cd3d0450c190b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa7fc79bdb7d71410f19383973e1f707b"></a>
@@ -209,9 +219,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_camera_follow_ab8ce2043b1a47917b8b970f5579af9ec_cgraph.png" border="0" usemap="#class_camera_follow_ab8ce2043b1a47917b8b970f5579af9ec_cgraph" alt=""/></div>
 <map name="class_camera_follow_ab8ce2043b1a47917b8b970f5579af9ec_cgraph" id="class_camera_follow_ab8ce2043b1a47917b8b970f5579af9ec_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,187,32"/>
+<area shape="rect" title=" " alt="" coords="5,31,187,57"/>
 <area shape="rect" href="class_camera_follow.html#af01ec816d70679ea8bfe388f71d07704" title=" " alt="" coords="235,5,449,32"/>
-<area shape="rect" href="class_definition.html#af26cae00523f1e3be0215836ddf6e463" title=" " alt="" coords="497,5,659,32"/>
+<area shape="rect" href="class_camera_follow.html#a10d9ea20b33b52754914e072747f753a" title=" " alt="" coords="255,56,429,83"/>
 </map>
 </div>
 
@@ -241,21 +251,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_cgraph.png" border="0" usemap="#class_camera_follow_af01ec816d70679ea8bfe388f71d07704_cgraph" alt=""/></div>
-<map name="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_cgraph" id="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,220,32"/>
-<area shape="rect" href="class_definition.html#af26cae00523f1e3be0215836ddf6e463" title=" " alt="" coords="268,5,429,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_icgraph.png" border="0" usemap="#class_camera_follow_af01ec816d70679ea8bfe388f71d07704_icgraph" alt=""/></div>
 <map name="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_icgraph" id="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_icgraph">
-<area shape="rect" title=" " alt="" coords="235,5,449,32"/>
+<area shape="rect" title=" " alt="" coords="235,31,449,57"/>
 <area shape="rect" href="class_camera_follow.html#ab8ce2043b1a47917b8b970f5579af9ec" title=" " alt="" coords="5,5,187,32"/>
+<area shape="rect" href="class_camera_follow.html#af572f7bb45ca2a3027beacdd5985a60d" title=" " alt="" coords="9,56,183,83"/>
 </map>
 </div>
 
@@ -282,6 +284,85 @@ Here is the caller graph for this function:</div>
 <map name="class_camera_follow_a91abed0cd1fb485e5fb2fd531185e8f5_icgraph" id="class_camera_follow_a91abed0cd1fb485e5fb2fd531185e8f5_icgraph">
 <area shape="rect" title=" " alt="" coords="163,5,395,32"/>
 <area shape="rect" href="class_area_view.html#a58d5c95f3bbe4adc940e4497caeb3447" title=" " alt="" coords="5,5,115,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af572f7bb45ca2a3027beacdd5985a60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af572f7bb45ca2a3027beacdd5985a60d">&#9670;&nbsp;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraFollow.LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d_cgraph.png" border="0" usemap="#class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d_cgraph" alt=""/></div>
+<map name="class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d_cgraph" id="class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,32"/>
+<area shape="rect" href="class_camera_follow.html#af01ec816d70679ea8bfe388f71d07704" title=" " alt="" coords="228,5,443,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10d9ea20b33b52754914e072747f753a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d9ea20b33b52754914e072747f753a">&#9670;&nbsp;</a></span>LerpToward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 CameraFollow.LerpToward </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>targetPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>curPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera_follow_a10d9ea20b33b52754914e072747f753a_icgraph.png" border="0" usemap="#class_camera_follow_a10d9ea20b33b52754914e072747f753a_icgraph" alt=""/></div>
+<map name="class_camera_follow_a10d9ea20b33b52754914e072747f753a_icgraph" id="class_camera_follow_a10d9ea20b33b52754914e072747f753a_icgraph">
+<area shape="rect" title=" " alt="" coords="235,5,409,32"/>
+<area shape="rect" href="class_camera_follow.html#ab8ce2043b1a47917b8b970f5579af9ec" title=" " alt="" coords="5,5,187,32"/>
 </map>
 </div>
 
@@ -326,6 +407,31 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">void CameraFollow.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a623c485e39b82f268a356463829fd8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623c485e39b82f268a356463829fd8b9">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraFollow.Update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -484,6 +590,50 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">Transform CameraFollow.host = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2f7c211f52a15dcef5e488b16c7bbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f7c211f52a15dcef5e488b16c7bbda">&#9670;&nbsp;</a></span>maxDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.maxDistance = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac24ab1266bb03cde2c3cd3d0450c190b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24ab1266bb03cde2c3cd3d0450c190b">&#9670;&nbsp;</a></span>mCamera</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Camera CameraFollow.mCamera</td>
         </tr>
       </table>
   </td>

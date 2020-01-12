@@ -7,11 +7,11 @@ public class CameraFollow : MonoBehaviour
 {
     [SerializeField]
     Transform host = null;
+
     [SerializeField]
     List<Transform> encapsolatedTarget = new List<Transform>();
     [SerializeField]
     Transform character = null;
-
     [SerializeField]
     [Tooltip("Each frame the camera move x percentage closer to the target")]
     float followPercentage = 0.02f;
@@ -21,31 +21,58 @@ public class CameraFollow : MonoBehaviour
     bool followY = false;
     [SerializeField]
     bool followZ = false;
+    [SerializeField]
+    float maxDistance = 2;
 
-
+    Camera mCamera;
     // Start is called before the first frame update
     void Start()
     {
-        encapsolatedTarget.Add(character);
+        if (character != null)
+        {
+            encapsolatedTarget.Add(character);
+        }
+        mCamera = host.GetComponentInChildren<Camera>();
     }
 
+    private void Update()
+    {
+
+    }
     void FixedUpdate()
     {
         var targetPos = GetCenterPosition(encapsolatedTarget);
         var hostPos = host.position;
+        hostPos = LerpToward(targetPos, hostPos);
+
+        host.position = hostPos;
+    }
+    void LateUpdate()
+    {
+        var targetPos = GetCenterPosition(encapsolatedTarget);
+        var hostPos = host.position;
+        if (Vector3.Distance(targetPos, hostPos) > maxDistance)
+        {
+            hostPos = targetPos - (targetPos - hostPos).normalized * maxDistance;
+        }
+        host.position = hostPos;
+    }
+
+    private Vector3 LerpToward(Vector3 targetPos, Vector3 curPos)
+    {
         if (followX)
         {
-            hostPos.x = Mathf.Lerp(hostPos.x, targetPos.x, followPercentage);
+            curPos.x = Mathf.Lerp(curPos.x, targetPos.x, followPercentage);
         }
         if (followY)
         {
-            hostPos.y = Mathf.Lerp(hostPos.y, targetPos.y, followPercentage);
+            curPos.y = Mathf.Lerp(curPos.y, targetPos.y, followPercentage);
         }
         if (followZ)
         {
-            hostPos.z = Mathf.Lerp(hostPos.z, targetPos.z, followPercentage);
+            curPos.z = Mathf.Lerp(curPos.z, targetPos.z, followPercentage);
         }
-        host.transform.position = hostPos;
+        return curPos;
     }
 
     public void SetFollowPercentage(float value)
@@ -79,7 +106,6 @@ public class CameraFollow : MonoBehaviour
         {
             bounds.Encapsulate(target.position);
         }
-        Definition.CameraDebug("Camera Center position: " + bounds.center);
         return bounds.center;
     }
 

@@ -1,0 +1,335 @@
+\hypertarget{class_game_paused}{}\doxysection{Game\+Paused Class Reference}
+\label{class_game_paused}\index{GamePaused@{GamePaused}}
+
+
+The Paused \mbox{\hyperlink{class_state}{State}} of the Game.  
+
+
+
+
+Inheritance diagram for Game\+Paused\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_game_paused__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Paused\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_game_paused__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \{ \newline
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}{States.\+Loading}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}{States.\+Main\+Menu}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}{States.\+Game\+Paused}}, 
+\newline
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}{States.\+In\+Diagloues}}, 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}{States.\+In\+Inventory}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_game_paused_a44e93e36cdfac76598bef1f1bde3e820}{On\+Popped}} ()
+\begin{DoxyCompactList}\small\item\em Called when game paused state is poped out of the stack. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6}{On\+Pushed}} ()
+\begin{DoxyCompactList}\small\item\em Called when game paused state is pushed onto the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f}{Resume\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Tell the game master to go to the In Game \mbox{\hyperlink{class_state}{State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_paused_a46ce04df192c184eac724f1adae0580e}{Exit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Tell the game master to Exit the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_paused_a04e35f80b8fed630e18114bcacf74ce7}{Back\+To\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Tell the game master to go to the \mbox{\hyperlink{class_main_menu}{Main\+Menu}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_afdf496f9802777eb2a7ea99e2705d573}{Get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the state type/name of the current game state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}{On\+Pressed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_state_adbbf150abda90027741407a291db1924}{On\+Return\+Peek}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_ad0507e140b71af2ef1051b1745dc87fd}{On\+Pressed\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_a20fc72fdf070d3a72357cb7fa803b47e}{On\+Popped\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_a53de060b4fa2616ccc02d6e405703d42}{On\+Return\+Peek\+Event}}
+\item 
+Unity\+Event \mbox{\hyperlink{class_state_aa5bb373a5972ecd79e81e201e660bbf9}{On\+Pushed\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_paused_a7be01ca719349fd8fd23c78b907ee7a1}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_game_paused_a54875d7598e4ebb37d91c5ce80df6d3c}{in\+Game\+Menu\+Holder}} = null
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_in_game}{In\+Game}} menu holder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} \mbox{\hyperlink{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}{state}} = \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}
+\begin{DoxyCompactList}\small\item\em The state\textquotesingle{}s type of the current game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Paused \mbox{\hyperlink{class_state}{State}} of the Game. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979}\label{class_game_state_ae37dba27688ee39e865e239fee76a979}} 
+\index{GamePaused@{GamePaused}!States@{States}}
+\index{States@{States}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{States}{States}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{Game\+State.\+States}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Loading@{Loading}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!Loading@{Loading}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a16bfbf9c462762cf1cba4134ec53c504}} 
+Loading&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MainMenu@{MainMenu}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!MainMenu@{MainMenu}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979aad1111b48f98329333237912fc3b371b}} 
+Main\+Menu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InGame@{InGame}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!InGame@{InGame}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}} 
+In\+Game&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GamePaused@{GamePaused}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!GamePaused@{GamePaused}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ac1607e2b3a86040d367b4782ae1f4e15}} 
+Game\+Paused&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InDiagloues@{InDiagloues}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!InDiagloues@{InDiagloues}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}\label{class_game_state_ae37dba27688ee39e865e239fee76a979ad9dd98497b3065b667fe2e282aa36cf2}} 
+In\+Diagloues&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InInventory@{InInventory}!GamePaused@{GamePaused}}\index{GamePaused@{GamePaused}!InInventory@{InInventory}}}\mbox{\Hypertarget{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}\label{class_game_state_ae37dba27688ee39e865e239fee76a979a080fcb6fb5cf54b2afcee8c035d55a8b}} 
+In\+Inventory&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_paused_a04e35f80b8fed630e18114bcacf74ce7}\label{class_game_paused_a04e35f80b8fed630e18114bcacf74ce7}} 
+\index{GamePaused@{GamePaused}!BackToMenu@{BackToMenu}}
+\index{BackToMenu@{BackToMenu}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{BackToMenu()}{BackToMenu()}}
+{\footnotesize\ttfamily void Game\+Paused.\+Back\+To\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tell the game master to go to the \mbox{\hyperlink{class_main_menu}{Main\+Menu}}. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_a04e35f80b8fed630e18114bcacf74ce7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_paused_a46ce04df192c184eac724f1adae0580e}\label{class_game_paused_a46ce04df192c184eac724f1adae0580e}} 
+\index{GamePaused@{GamePaused}!ExitGame@{ExitGame}}
+\index{ExitGame@{ExitGame}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{ExitGame()}{ExitGame()}}
+{\footnotesize\ttfamily void Game\+Paused.\+Exit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tell the game master to Exit the game. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_a46ce04df192c184eac724f1adae0580e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_state_afdf496f9802777eb2a7ea99e2705d573}\label{class_game_state_afdf496f9802777eb2a7ea99e2705d573}} 
+\index{GamePaused@{GamePaused}!GetState@{GetState}}
+\index{GetState@{GetState}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} Game\+State.\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Get the state type/name of the current game state. 
+
+\begin{DoxyReturn}{Returns}
+the state type/name
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_afdf496f9802777eb2a7ea99e2705d573_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_paused_a44e93e36cdfac76598bef1f1bde3e820}\label{class_game_paused_a44e93e36cdfac76598bef1f1bde3e820}} 
+\index{GamePaused@{GamePaused}!OnPopped@{OnPopped}}
+\index{OnPopped@{OnPopped}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnPopped()}{OnPopped()}}
+{\footnotesize\ttfamily override void Game\+Paused.\+On\+Popped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when game paused state is poped out of the stack. 
+
+Hide in game menu and unpaused the game.
+
+Reimplemented from \mbox{\hyperlink{class_state_a0c3ba47d37fa69c7089f047476cb624f}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_a44e93e36cdfac76598bef1f1bde3e820_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}\label{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}} 
+\index{GamePaused@{GamePaused}!OnPressed@{OnPressed}}
+\index{OnPressed@{OnPressed}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
+{\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
+
+\mbox{\Hypertarget{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6}\label{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6}} 
+\index{GamePaused@{GamePaused}!OnPushed@{OnPushed}}
+\index{OnPushed@{OnPushed}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnPushed()}{OnPushed()}}
+{\footnotesize\ttfamily override void Game\+Paused.\+On\+Pushed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when game paused state is pushed onto the stack. 
+
+Show the in game menu and paused the game.
+
+Reimplemented from \mbox{\hyperlink{class_state_ad9351d83800a1801d889e6ac3f379e23}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_adbbf150abda90027741407a291db1924}\label{class_state_adbbf150abda90027741407a291db1924}} 
+\index{GamePaused@{GamePaused}!OnReturnPeek@{OnReturnPeek}}
+\index{OnReturnPeek@{OnReturnPeek}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
+{\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
+
+\mbox{\Hypertarget{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f}\label{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f}} 
+\index{GamePaused@{GamePaused}!ResumeGame@{ResumeGame}}
+\index{ResumeGame@{ResumeGame}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{ResumeGame()}{ResumeGame()}}
+{\footnotesize\ttfamily void Game\+Paused.\+Resume\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tell the game master to go to the In Game \mbox{\hyperlink{class_state}{State}}. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_ab94908a41eff27b0cd7e978cd821e09f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_paused_a7be01ca719349fd8fd23c78b907ee7a1}\label{class_game_paused_a7be01ca719349fd8fd23c78b907ee7a1}} 
+\index{GamePaused@{GamePaused}!Update@{Update}}
+\index{Update@{Update}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Game\+Paused.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_paused_a7be01ca719349fd8fd23c78b907ee7a1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_paused_a54875d7598e4ebb37d91c5ce80df6d3c}\label{class_game_paused_a54875d7598e4ebb37d91c5ce80df6d3c}} 
+\index{GamePaused@{GamePaused}!inGameMenuHolder@{inGameMenuHolder}}
+\index{inGameMenuHolder@{inGameMenuHolder}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{inGameMenuHolder}{inGameMenuHolder}}
+{\footnotesize\ttfamily Game\+Object Game\+Paused.\+in\+Game\+Menu\+Holder = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{class_in_game}{In\+Game}} menu holder. 
+
+\mbox{\Hypertarget{class_state_a20fc72fdf070d3a72357cb7fa803b47e}\label{class_state_a20fc72fdf070d3a72357cb7fa803b47e}} 
+\index{GamePaused@{GamePaused}!OnPoppedEvent@{OnPoppedEvent}}
+\index{OnPoppedEvent@{OnPoppedEvent}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnPoppedEvent}{OnPoppedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Popped\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_ad0507e140b71af2ef1051b1745dc87fd}\label{class_state_ad0507e140b71af2ef1051b1745dc87fd}} 
+\index{GamePaused@{GamePaused}!OnPressedEvent@{OnPressedEvent}}
+\index{OnPressedEvent@{OnPressedEvent}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnPressedEvent}{OnPressedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pressed\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_aa5bb373a5972ecd79e81e201e660bbf9}\label{class_state_aa5bb373a5972ecd79e81e201e660bbf9}} 
+\index{GamePaused@{GamePaused}!OnPushedEvent@{OnPushedEvent}}
+\index{OnPushedEvent@{OnPushedEvent}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnPushedEvent}{OnPushedEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pushed\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_state_a53de060b4fa2616ccc02d6e405703d42}\label{class_state_a53de060b4fa2616ccc02d6e405703d42}} 
+\index{GamePaused@{GamePaused}!OnReturnPeekEvent@{OnReturnPeekEvent}}
+\index{OnReturnPeekEvent@{OnReturnPeekEvent}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{OnReturnPeekEvent}{OnReturnPeekEvent}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Return\+Peek\+Event\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}\label{class_game_state_a74a21359dbd9e4fe3f9500a2c47dabfc}} 
+\index{GamePaused@{GamePaused}!state@{state}}
+\index{state@{state}!GamePaused@{GamePaused}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979}{States}} Game\+State.\+state = \mbox{\hyperlink{class_game_state_ae37dba27688ee39e865e239fee76a979a7f3d370e94c8b1fea09838572013d8ec}{States.\+In\+Game}}\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+The state\textquotesingle{}s type of the current game state. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Systems/\+Game\+States/\mbox{\hyperlink{_game_paused_8cs}{Game\+Paused.\+cs}}\end{DoxyCompactItemize}

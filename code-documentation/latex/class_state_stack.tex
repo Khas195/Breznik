@@ -1,107 +1,112 @@
-\hypertarget{class_state_stack}{}\doxysection{State\+Stack Class Reference}
-\label{class_state_stack}\index{StateStack@{StateStack}}
+\hypertarget{class_state_stack}{}\doxysection{State\+Stack$<$ T $>$ Class Template Reference}
+\label{class_state_stack}\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_state_stack_a4b4516153a095577b4866d87b9584fc0}{Push}} (\mbox{\hyperlink{class_state}{State}} new\+State)
+void \mbox{\hyperlink{class_state_stack_a773ed2fd19ae42ea8ce3b36dfaf7f350}{Push}} (T new\+State)
 \item 
-bool \mbox{\hyperlink{class_state_stack_af913ff675174c5678d1f8fa45a08e1f7}{Is\+Stack\+Empty}} ()
+bool \mbox{\hyperlink{class_state_stack_a6accf613261b17d75b46d68a6cafacc4}{Is\+Stack\+Empty}} ()
 \item 
-\mbox{\hyperlink{class_state}{State}} \mbox{\hyperlink{class_state_stack_a761f0ba6b0561beba5f307f78a39c346}{Pop}} ()
+T \mbox{\hyperlink{class_state_stack_a01bf856191f334dbfed9591c9987ef5b}{Pop}} ()
 \item 
-void \mbox{\hyperlink{class_state_stack_acc7e34b7f00751505b0bc63a80ed9172}{Empty\+Stack}} ()
+void \mbox{\hyperlink{class_state_stack_ab43c07e3a417a56f6b7777aa86ba0218}{Empty\+Stack}} ()
 \item 
-\mbox{\hyperlink{class_state}{State}} \mbox{\hyperlink{class_state_stack_aa7e9b23bbeb69e47e460ecd93cd176c9}{Get\+Peek}} ()
+T \mbox{\hyperlink{class_state_stack_ac45f04d50641c7f03ee86ba2062580c7}{Get\+Peek}} ()
 \item 
-bool \mbox{\hyperlink{class_state_stack_a3dce6691e1553fc9a7bcb7eb925d012e}{Contains}} (\mbox{\hyperlink{class_state}{State}} playing\+State)
+bool \mbox{\hyperlink{class_state_stack_a58f313b161de6c4aa6c99b87bab22337}{Contains}} (T playing\+State)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Stack$<$ \mbox{\hyperlink{class_state}{State}} $>$ \mbox{\hyperlink{class_state_stack_aa875322362f3546c8f9093059157baa8}{stack}} = new Stack$<$\mbox{\hyperlink{class_state}{State}}$>$()
+Stack$<$ T $>$ \mbox{\hyperlink{class_state_stack_a4fe3ac600d35f32decf4c45937206353}{stack}} = new Stack$<$T$>$()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_state_stack_a3dce6691e1553fc9a7bcb7eb925d012e}\label{class_state_stack_a3dce6691e1553fc9a7bcb7eb925d012e}} 
-\index{StateStack@{StateStack}!Contains@{Contains}}
-\index{Contains@{Contains}!StateStack@{StateStack}}
+\mbox{\Hypertarget{class_state_stack_a58f313b161de6c4aa6c99b87bab22337}\label{class_state_stack_a58f313b161de6c4aa6c99b87bab22337}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!Contains@{Contains}}
+\index{Contains@{Contains}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
-{\footnotesize\ttfamily bool State\+Stack.\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}}}]{playing\+State }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.Contains (\begin{DoxyParamCaption}\item[{T}]{playing\+State }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_state_stack_acc7e34b7f00751505b0bc63a80ed9172}\label{class_state_stack_acc7e34b7f00751505b0bc63a80ed9172}} 
-\index{StateStack@{StateStack}!EmptyStack@{EmptyStack}}
-\index{EmptyStack@{EmptyStack}!StateStack@{StateStack}}
+\mbox{\Hypertarget{class_state_stack_ab43c07e3a417a56f6b7777aa86ba0218}\label{class_state_stack_ab43c07e3a417a56f6b7777aa86ba0218}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!EmptyStack@{EmptyStack}}
+\index{EmptyStack@{EmptyStack}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{EmptyStack()}{EmptyStack()}}
-{\footnotesize\ttfamily void State\+Stack.\+Empty\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.Empty\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_state_stack_acc7e34b7f00751505b0bc63a80ed9172_cgraph}
+\includegraphics[width=350pt]{class_state_stack_ab43c07e3a417a56f6b7777aa86ba0218_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_state_stack_aa7e9b23bbeb69e47e460ecd93cd176c9}\label{class_state_stack_aa7e9b23bbeb69e47e460ecd93cd176c9}} 
-\index{StateStack@{StateStack}!GetPeek@{GetPeek}}
-\index{GetPeek@{GetPeek}!StateStack@{StateStack}}
+\mbox{\Hypertarget{class_state_stack_ac45f04d50641c7f03ee86ba2062580c7}\label{class_state_stack_ac45f04d50641c7f03ee86ba2062580c7}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!GetPeek@{GetPeek}}
+\index{GetPeek@{GetPeek}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GetPeek()}{GetPeek()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_state}{State}} State\+Stack.\+Get\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.Get\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_state_stack_af913ff675174c5678d1f8fa45a08e1f7}\label{class_state_stack_af913ff675174c5678d1f8fa45a08e1f7}} 
-\index{StateStack@{StateStack}!IsStackEmpty@{IsStackEmpty}}
-\index{IsStackEmpty@{IsStackEmpty}!StateStack@{StateStack}}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_stack_ac45f04d50641c7f03ee86ba2062580c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_stack_a6accf613261b17d75b46d68a6cafacc4}\label{class_state_stack_a6accf613261b17d75b46d68a6cafacc4}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!IsStackEmpty@{IsStackEmpty}}
+\index{IsStackEmpty@{IsStackEmpty}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{IsStackEmpty()}{IsStackEmpty()}}
-{\footnotesize\ttfamily bool State\+Stack.\+Is\+Stack\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.Is\+Stack\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_state_stack_af913ff675174c5678d1f8fa45a08e1f7_icgraph}
+\includegraphics[width=350pt]{class_state_stack_a6accf613261b17d75b46d68a6cafacc4_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_state_stack_a761f0ba6b0561beba5f307f78a39c346}\label{class_state_stack_a761f0ba6b0561beba5f307f78a39c346}} 
-\index{StateStack@{StateStack}!Pop@{Pop}}
-\index{Pop@{Pop}!StateStack@{StateStack}}
+\mbox{\Hypertarget{class_state_stack_a01bf856191f334dbfed9591c9987ef5b}\label{class_state_stack_a01bf856191f334dbfed9591c9987ef5b}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!Pop@{Pop}}
+\index{Pop@{Pop}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{Pop()}{Pop()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_state}{State}} State\+Stack.\+Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{class_state_stack_a761f0ba6b0561beba5f307f78a39c346_cgraph}
+\includegraphics[width=350pt]{class_state_stack_a01bf856191f334dbfed9591c9987ef5b_icgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=324pt]{class_state_stack_a761f0ba6b0561beba5f307f78a39c346_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_state_stack_a4b4516153a095577b4866d87b9584fc0}\label{class_state_stack_a4b4516153a095577b4866d87b9584fc0}} 
-\index{StateStack@{StateStack}!Push@{Push}}
-\index{Push@{Push}!StateStack@{StateStack}}
+\mbox{\Hypertarget{class_state_stack_a773ed2fd19ae42ea8ce3b36dfaf7f350}\label{class_state_stack_a773ed2fd19ae42ea8ce3b36dfaf7f350}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!Push@{Push}}
+\index{Push@{Push}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{Push()}{Push()}}
-{\footnotesize\ttfamily void State\+Stack.\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}}}]{new\+State }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.Push (\begin{DoxyParamCaption}\item[{T}]{new\+State }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=343pt]{class_state_stack_a4b4516153a095577b4866d87b9584fc0_cgraph}
+\includegraphics[width=350pt]{class_state_stack_a773ed2fd19ae42ea8ce3b36dfaf7f350_icgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_state_stack_aa875322362f3546c8f9093059157baa8}\label{class_state_stack_aa875322362f3546c8f9093059157baa8}} 
-\index{StateStack@{StateStack}!stack@{stack}}
-\index{stack@{stack}!StateStack@{StateStack}}
+\mbox{\Hypertarget{class_state_stack_a4fe3ac600d35f32decf4c45937206353}\label{class_state_stack_a4fe3ac600d35f32decf4c45937206353}} 
+\index{StateStack$<$ T $>$@{StateStack$<$ T $>$}!stack@{stack}}
+\index{stack@{stack}!StateStack$<$ T $>$@{StateStack$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{stack}{stack}}
-{\footnotesize\ttfamily Stack$<$\mbox{\hyperlink{class_state}{State}}$>$ State\+Stack.\+stack = new Stack$<$\mbox{\hyperlink{class_state}{State}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Stack$<$T$>$ \mbox{\hyperlink{class_state_stack}{State\+Stack}}$<$ T $>$.stack = new Stack$<$T$>$()\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

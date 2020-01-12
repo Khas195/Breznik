@@ -9,14 +9,23 @@ using UnityEngine.UI;
  */
 public class PlayerController : MonoBehaviour
 {
-
     [SerializeField]
     /** \brief Reference to the character*/
     Character character = null;
-
+    [SerializeField]
+    Camera playerCameraView = null;
+    [SerializeField]
+    UnityEvent interact = new UnityEvent();
+    void Start()
+    {
+        EntitiesMaster.GetInstance().RegisterEntity(EntitiesMaster.EntitiesKey.PLAYER, character.GetHost());
+    }
     void Update()
     {
-        ControlMovement();
+        if (GameMaster.GetInstance().IsGamePaused() == false)
+        {
+            ProcessInput();
+        }
     }
     /**
      * All inputs by the player are and should be done in this function .
@@ -25,12 +34,11 @@ public class PlayerController : MonoBehaviour
      * Space (Calls SignalJump function in IMovement) .
      * Recieved Horizontal and vertical then call the Move function in IMovement with those parameters .
      */
-    private void ControlMovement()
+    private void ProcessInput()
     {
 
-        var horizontal = Input.GetAxisRaw("Horizontal");
-        var vertical = Input.GetAxisRaw("Vertical");
-
+        var side = Input.GetAxisRaw("Horizontal");
+        var forward = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             character.RequestMovementType(IMovement.MovementType.Run);
@@ -39,14 +47,37 @@ public class PlayerController : MonoBehaviour
         {
             character.RequestMovementType(IMovement.MovementType.Walk);
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             character.RequestJump();
         }
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             character.Attack();
         }
-        character.RequestMove(vertical, horizontal);
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            var gameState = GameMaster.GetInstance().GetCurrentGameState();
+            if (gameState != null && gameState.GetState() == GameState.States.InGame)
+            {
+                interact.Invoke();
+            }
+        }
+
+        if ((forward != 0 || side != 0) && character.IsRotationLock() == false)
+        {
+            var movedir = Ultilities.CalculateMoveDirection(horizontalInput: side, forwardInput: forward
+                                            , playerCameraView.transform.forward, playerCameraView.transform.right);
+
+            character.RotateToward(movedir.normalized, rotateY: false);
+        }
+        forward = Mathf.Abs(forward) > Mathf.Abs(side) ? Mathf.Abs(forward) : Mathf.Abs(side);
+        character.RequestMove(forward, 0);
 
     }
+
+
+
+
 }

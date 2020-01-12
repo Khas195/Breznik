@@ -1,5 +1,28 @@
 var searchData=
 [
-  ['jumpforce_399',['jumpForce',['../class_movement_data.html#add3951a81364e0efe57acd3531d9d129',1,'MovementData']]],
-  ['jumpsignal_400',['jumpSignal',['../class_movement.html#a5f34d7479aeee7ced2e2d5e5d1953975',1,'Movement']]]
+  ['iconheight_1485',['iconHeight',['../class_dots_u_i_data.html#ad78c0a052ba9b79648c53cc632ca8bcd',1,'DotsUIData']]],
+  ['iconwidth_1486',['IconWidth',['../class_dots_u_i_data.html#a819382fc4e7edb2593a30405424b3a34',1,'DotsUIData']]],
+  ['image_1487',['image',['../class_flexible_u_i_button.html#a4d1cb181fada638d8bfcb2f828bc3258',1,'FlexibleUIButton']]],
+  ['ingamemenuholder_1488',['inGameMenuHolder',['../class_game_paused.html#a54875d7598e4ebb37d91c5ce80df6d3c',1,'GamePaused']]],
+  ['ingameuis_1489',['inGameUIs',['../class_in_game.html#aecf40a2a6096bc68c6221cbecf73abf5',1,'InGame']]],
+  ['inhabitant_1490',['inhabitant',['../struct_inhabitant_ratio.html#af2747d3d57363a0245fa87427fc563e0',1,'InhabitantRatio']]],
+  ['inmotion_1491',['inMotion',['../class_movement2_d.html#a853551f79b76925cb0ac497575024098',1,'Movement2D']]],
+  ['inrangelist_1492',['inRangeList',['../class_interactable_mananger.html#a5dcfcfcaac94a5bc91ff648af5416448',1,'InteractableMananger']]],
+  ['instance_1493',['instance',['../class_singleton_monobehavior.html#a09b393a286be337740dcf81a6e128c0b',1,'SingletonMonobehavior.instance()'],['../class_monologue_manager.html#a819aa41648a865482bdcdfa34fc66f50',1,'MonologueManager.instance()']]],
+  ['interact_1494',['interact',['../class_player_controller.html#a80d258caf8cd82c89d710c7d1496b47c',1,'PlayerController']]],
+  ['interactcue_1495',['interactCue',['../class_in_game.html#aefe71393116010196052d835865540bc',1,'InGame.interactCue()'],['../class_interactable_mananger.html#a18fe46c9890e402feab61fb5d0d91258',1,'InteractableMananger.interactCue()']]],
+  ['inventory_1496',['inventory',['../class_inventory_system.html#a145e31b9c32f0797cc806acfa03e78a2',1,'InventorySystem']]],
+  ['isaiactive_1497',['isAIActive',['../class_n_p_c_controller.html#a435742406f971368ba8ee3bc4a39592c',1,'NPCController']]],
+  ['isattacking_1498',['isAttacking',['../class_character.html#aabb3648d5aaeb3768a8fcc5ae6ce887b',1,'Character']]],
+  ['isfocus_1499',['isFocus',['../class_i_interactable.html#a233e5a0b03c975eb9f9c33edcdea591e',1,'IInteractable']]],
+  ['isnpc_1500',['isNPC',['../class_character_data.html#ad916f47b932f56c96bd2d3413d9e39a3',1,'CharacterData']]],
+  ['isplaying_1501',['isPlaying',['../class_monologue_manager.html#a290073fd2fc3f88cef85ddf33a573222',1,'MonologueManager']]],
+  ['istracking_1502',['isTracking',['../class_n_p_c_interactable.html#ab313210ee2369cde4132b2899e8ffad9',1,'NPCInteractable']]],
+  ['isviewing_1503',['isViewing',['../class_area_view.html#ac7536c3ccc0438e6c93884b9d9447ee9',1,'AreaView']]],
+  ['item_1504',['item',['../class_inventory_slot.html#aca9142606dcd41ac70f9e23204aadedb',1,'InventorySlot']]],
+  ['itembackgroundsprite_1505',['ItemBackgroundSprite',['../class_flexible_u_i_data.html#a80952b7f5095e80f632c36382559e399',1,'FlexibleUIData']]],
+  ['itembuttonspritestate_1506',['itemButtonSpriteState',['../class_flexible_u_i_data.html#ae122be82c66370134012914daf8142f7',1,'FlexibleUIData']]],
+  ['itemcanvas_1507',['itemCanvas',['../class_item.html#a69b2e6c744b21f76decff601b87323ce',1,'Item']]],
+  ['itemdata_1508',['itemData',['../class_item.html#a892d6f45d68a26f4e5c96786b70138fd',1,'Item']]],
+  ['itementity_1509',['itemEntity',['../class_item.html#a9329196df38f9ad2b8c6f97df8909844',1,'Item']]]
 ];

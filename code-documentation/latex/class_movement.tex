@@ -39,10 +39,20 @@ override void \mbox{\hyperlink{class_movement_a8ff6031ad6e03730fbe2cae1ab8c21de}
 \begin{DoxyCompactList}\small\item\em This function received the player\textquotesingle{}s inputs (forward and side) then saved them to be processed in the next fixed update. \end{DoxyCompactList}\item 
 override void \mbox{\hyperlink{class_movement_a24a35054a243546e8d3318927034423a}{Signal\+Jump}} ()
 \begin{DoxyCompactList}\small\item\em This function will signal the target object to jump in the next Fixed\+Update. \end{DoxyCompactList}\item 
+override float \mbox{\hyperlink{class_movement_a0fb022cc9dff3e3af971272f75b6b241}{Get\+Current\+Speed}} ()
+\item 
 override bool \mbox{\hyperlink{class_movement_a39996c31188b6d361b9fb8b4c38cd6df}{Is\+Touching\+Ground}} ()
 \begin{DoxyCompactList}\small\item\em Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (check\+Grounds\+List) It is important to know that the desired pivot should be on the bottom of the object. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_movement_ae608f54844231fb1d257e6dfe0e6cb46}{Had\+Move\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Check if the character received any move command \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} \mbox{\hyperlink{class_i_movement_a9e0c2e788cddf407850ec24a7a8c9814}{Get\+Current\+Move\+Mode}} ()
+\item 
 void \mbox{\hyperlink{class_i_movement_afdaa8bbfbe2acd10fc9fab9bd922d452}{Set\+Movement\+Mode}} (\mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} new\+Mode)
-\begin{DoxyCompactList}\small\item\em Set the current movement mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the current movement mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}{Set\+Movement\+Data}} (\mbox{\hyperlink{class_movement_data}{Movement\+Data}} movement\+Data)
+\begin{DoxyCompactList}\small\item\em Set the movement data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_movement_data}{Movement\+Data}} \mbox{\hyperlink{class_i_movement_a02cf39d107895cca12448ce39c4555f0}{Get\+Movement\+Data}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,48 +71,50 @@ float \mbox{\hyperlink{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}{Get\+
 void \mbox{\hyperlink{class_movement_a5382914e6da64dbf89460062fdb4a08a}{Start}} ()
 \item 
 void \mbox{\hyperlink{class_movement_aa48b6d3425dafaeef32461ba63a7fd13}{Initalize}} ()
-\begin{DoxyCompactList}\small\item\em Initalize all the cached variables. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_movement_a0f3cb0f99b816ba52592d87bb74e6f14}{Rotate\+Toward\+Camera\+Direction}} (float forward, float side)
-\begin{DoxyCompactList}\small\item\em Rotate the host game object toward the camera entity\textquotesingle{}s facing direction. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_movement_afb0186627db1cf95a2d8bda689efbe14}{Step}} (float speed, int forward, int side)
+\begin{DoxyCompactList}\small\item\em Initialize the necessary component for movement to work \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_movement_a99355a317281a0f40fbf42e533dd026e}{Step}} (float speed, float forward, float side)
 \begin{DoxyCompactList}\small\item\em This function move the host object according to the forward and side inputs of the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_movement_ad9278ecc9daea58c9bc3737cc388e58f}{Update}} ()
+\item 
 void \mbox{\hyperlink{class_movement_a9687a887cb7ae16793f2fdc42d00d11c}{Fixed\+Update}} ()
 \item 
 void \mbox{\hyperlink{class_movement_a905b8f5912002eda95b1c42849a99d20}{Process\+Movement}} ()
-\begin{DoxyCompactList}\small\item\em This function process the movement of the host object according to the forward, side and jump inputs The movement speed is also changed if the host object is airborned. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function process the movement of the host object according to the forward, side and jump inputs The movement speed is also changed if the host object is airborned \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_movement_a5da7e0919d0a3391146e9e14f9e45035}{Jump}} ()
 \begin{DoxyCompactList}\small\item\em Perform the jumping action by adding an impulse force to the host\textquotesingle{}s rigid body according to its up direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Collider \mbox{\hyperlink{class_movement_ad1a469a1d0beb756eb0fcb9a51dbe7d6}{char\+Collider}}
+Collider \mbox{\hyperlink{class_movement_ad1a469a1d0beb756eb0fcb9a51dbe7d6}{char\+Collider}} = null
 \begin{DoxyCompactList}\small\item\em The Collider of the character\textquotesingle{}s model; \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_movement_a290c56cad0392b795a2c331a763a2804}{should\+Move\+Toward\+Camera\+Direction}}
-\begin{DoxyCompactList}\small\item\em Decide if the host object should move foward accodring the camera\textquotesingle{}s facing direction. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_movement_a7c590f7eff8f8f553a0862007f1195f4}{rotate\+Speed}}
-\begin{DoxyCompactList}\small\item\em The rotate speed of the host object toward the camera\textquotesingle{}s facing direction. \end{DoxyCompactList}\item 
-Game\+Object \mbox{\hyperlink{class_movement_adc343e30f231928fd7584eb8f936c124}{camera\+Yaw\+Pivot}}
-\begin{DoxyCompactList}\small\item\em The camera entity that the host entity is facing toward. \end{DoxyCompactList}\item 
-List$<$ Transform $>$ \mbox{\hyperlink{class_movement_a1b0dfbfa22a2ac11a60583d365cd8c49}{check\+Grounds\+List}}
-\begin{DoxyCompactList}\small\item\em The list of points which is needed to know whether the host object is airborned or not. \end{DoxyCompactList}\item 
+Collider \mbox{\hyperlink{class_movement_aea878220d5d71936418464735e8f3a6e}{char\+Airborned\+Collider}} = null
+\begin{DoxyCompactList}\small\item\em The collider this character will use while it is airborned. \end{DoxyCompactList}\item 
+List$<$ Transform $>$ \mbox{\hyperlink{class_movement_a1b0dfbfa22a2ac11a60583d365cd8c49}{check\+Grounds\+List}} = new List$<$Transform$>$()
+\begin{DoxyCompactList}\small\item\em The list of points which is needed to know whether the host object is airborned or not \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_movement_a8de9048128c83fbb5216a8631641654c}{target\+Speed}} = 0
+\item 
+float \mbox{\hyperlink{class_movement_a5bcb50fc53898f08e62479dff066c8cc}{current\+Speed}} = 0
+\item 
+float \mbox{\hyperlink{class_movement_a220553cfcd0ed19cdf8f54cca4275687}{smooth\+Accel}} = 0
+\item 
 Rigidbody \mbox{\hyperlink{class_movement_aafcdcbb7b7f0eacc6e097116cbebe43d}{char\+Rigidbody}} = null
-\begin{DoxyCompactList}\small\item\em the rigidbody of the character\textquotesingle{}s model. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_movement_adb0c2b1365bd3c6214946c76136a3116}{move\+Forward}} = 0
-\begin{DoxyCompactList}\small\item\em cached the forward value in the Move function \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_movement_ab96b4f05db69348433e6802732759e15}{move\+Side}} = 0
-\begin{DoxyCompactList}\small\item\em cached the side value in the Move function \end{DoxyCompactList}\item 
+\item 
+float \mbox{\hyperlink{class_movement_af093d4d24f3cad02c1f4a36b81c1f29e}{move\+Forward}} = 0
+\item 
+float \mbox{\hyperlink{class_movement_a11c3e10c2f664380247f778816cfdd8b}{move\+Side}} = 0
+\item 
 bool \mbox{\hyperlink{class_movement_a5f34d7479aeee7ced2e2d5e5d1953975}{jump\+Signal}} = false
-\begin{DoxyCompactList}\small\item\em cached the jump signal in the Signal Jump function \end{DoxyCompactList}\item 
+\item 
 Transform \mbox{\hyperlink{class_movement_ae627ac9640050f425e9645febd491784}{target\+Transform}} = null
-\begin{DoxyCompactList}\small\item\em Cached transform of the host object. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_movement_a836d56f003e6665c68ff1b0ca34da9d9}{distance\+To\+Ground}}
-\begin{DoxyCompactList}\small\item\em the distance from the middle of the character\textquotesingle{}s collider\textquotesingle{}s center to ground. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_movement_a836d56f003e6665c68ff1b0ca34da9d9}{distance\+To\+Ground}} = 0.\+1f
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . 
 
-!-- The host object is not necessary be the parent gameobject of the script.!-- 
+!-- The host object is not necessary be the parent gameobject of the script.!--
 
 \doxysubsection{Member Enumeration Documentation}
 \mbox{\Hypertarget{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}\label{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}} 
@@ -134,13 +146,36 @@ Run&\\
 \doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
 {\footnotesize\ttfamily void Movement.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_movement_a9687a887cb7ae16793f2fdc42d00d11c_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_i_movement_a9e0c2e788cddf407850ec24a7a8c9814}\label{class_i_movement_a9e0c2e788cddf407850ec24a7a8c9814}} 
+\index{Movement@{Movement}!GetCurrentMoveMode@{GetCurrentMoveMode}}
+\index{GetCurrentMoveMode@{GetCurrentMoveMode}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{GetCurrentMoveMode()}{GetCurrentMoveMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_movement_acdc5e47c665524aa577a125d851a7cb8}{Movement\+Type}} I\+Movement.\+Get\+Current\+Move\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_movement_a0fb022cc9dff3e3af971272f75b6b241}\label{class_movement_a0fb022cc9dff3e3af971272f75b6b241}} 
+\index{Movement@{Movement}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily override float Movement.\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_i_movement_aff500f9dbc0a37d65dac4e07149a968b}{I\+Movement}}.
+
+\mbox{\Hypertarget{class_i_movement_a02cf39d107895cca12448ce39c4555f0}\label{class_i_movement_a02cf39d107895cca12448ce39c4555f0}} 
+\index{Movement@{Movement}!GetMovementData@{GetMovementData}}
+\index{GetMovementData@{GetMovementData}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{GetMovementData()}{GetMovementData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_movement_data}{Movement\+Data}} I\+Movement.\+Get\+Movement\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
 \mbox{\Hypertarget{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}\label{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157}} 
 \index{Movement@{Movement}!GetSpeedBasedOnMode@{GetSpeedBasedOnMode}}
 \index{GetSpeedBasedOnMode@{GetSpeedBasedOnMode}!Movement@{Movement}}
@@ -151,13 +186,31 @@ Here is the call graph for this function\+:\nopagebreak
 
 Get the correspondence speed in the data container(\+Movement\+Data) based on the currnt movement mode. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_movement_ae608f54844231fb1d257e6dfe0e6cb46}\label{class_movement_ae608f54844231fb1d257e6dfe0e6cb46}} 
+\index{Movement@{Movement}!HadMoveCommand@{HadMoveCommand}}
+\index{HadMoveCommand@{HadMoveCommand}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{HadMoveCommand()}{HadMoveCommand()}}
+{\footnotesize\ttfamily override bool Movement.\+Had\+Move\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the character received any move command 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_i_movement_a678684cf45c8f45b5b29d15a7741784b}{I\+Movement}}.
+
 \mbox{\Hypertarget{class_movement_aa48b6d3425dafaeef32461ba63a7fd13}\label{class_movement_aa48b6d3425dafaeef32461ba63a7fd13}} 
 \index{Movement@{Movement}!Initalize@{Initalize}}
 \index{Initalize@{Initalize}!Movement@{Movement}}
@@ -166,7 +219,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Initalize all the cached variables. 
+Initialize the necessary component for movement to work 
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -185,6 +238,9 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (check\+Grounds\+List) It is important to know that the desired pivot should be on the bottom of the object. 
 
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Reimplemented from \mbox{\hyperlink{class_i_movement_aac27e47a2c9667d8b691c936471082f5}{I\+Movement}}.
@@ -199,7 +255,7 @@ Reimplemented from \mbox{\hyperlink{class_i_movement_aac27e47a2c9667d8b691c93647
 
 Perform the jumping action by adding an impulse force to the host\textquotesingle{}s rigid body according to its up direction. 
 
-!-- Here is the caller graph for this function\+:\nopagebreak
+!--Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,24 +272,17 @@ Perform the jumping action by adding an impulse force to the host\textquotesingl
 
 This function received the player\textquotesingle{}s inputs (forward and side) then saved them to be processed in the next fixed update. 
 
-If should\+Move\+Toward\+Camera\+Direction is true then it will rotate the host game object toward the camera\textquotesingle{}s faciing direction first. 
+
 \begin{DoxyParams}{Parameters}
-{\em fordward} & is how much the host game object should move forward and backward \\
+{\em forward} & fordward is how much the host game object should move forward and backward\\
 \hline
-{\em side} & is how much the host game object should move sideway \\
+{\em side} & side is how much the host game object should move sideway\\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{class_i_movement_abeb4f7bb7a84ba21041dd4ac88081f23}{I\+Movement}}.
+Reimplemented from \mbox{\hyperlink{class_i_movement_a4daa38b53b9f561762dcf6ad22f8a2b2}{I\+Movement}}.
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_movement_a8ff6031ad6e03730fbe2cae1ab8c21de_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_movement_a905b8f5912002eda95b1c42849a99d20}\label{class_movement_a905b8f5912002eda95b1c42849a99d20}} 
 \index{Movement@{Movement}!ProcessMovement@{ProcessMovement}}
 \index{ProcessMovement@{ProcessMovement}!Movement@{Movement}}
@@ -242,13 +291,14 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-This function process the movement of the host object according to the forward, side and jump inputs The movement speed is also changed if the host object is airborned. 
+This function process the movement of the host object according to the forward, side and jump inputs The movement speed is also changed if the host object is airborned 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph}
+\includegraphics[width=347pt]{class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -258,35 +308,27 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_movement_a905b8f5912002eda95b1c42849a99d20_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_movement_a0f3cb0f99b816ba52592d87bb74e6f14}\label{class_movement_a0f3cb0f99b816ba52592d87bb74e6f14}} 
-\index{Movement@{Movement}!RotateTowardCameraDirection@{RotateTowardCameraDirection}}
-\index{RotateTowardCameraDirection@{RotateTowardCameraDirection}!Movement@{Movement}}
-\doxysubsubsection{\texorpdfstring{RotateTowardCameraDirection()}{RotateTowardCameraDirection()}}
-{\footnotesize\ttfamily void Movement.\+Rotate\+Toward\+Camera\+Direction (\begin{DoxyParamCaption}\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}\label{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655}} 
+\index{Movement@{Movement}!SetMovementData@{SetMovementData}}
+\index{SetMovementData@{SetMovementData}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{SetMovementData()}{SetMovementData()}}
+{\footnotesize\ttfamily void I\+Movement.\+Set\+Movement\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movement_data}{Movement\+Data}}}]{movement\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
 
-Rotate the host game object toward the camera entity\textquotesingle{}s facing direction. 
+Set the movement data. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em fordward} & is how much the host game object should move forward and backward \\
-\hline
-{\em side} & is how much the host game object should move sideway \\
+{\em movement\+Data} & The movement data\\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_movement_a0f3cb0f99b816ba52592d87bb74e6f14_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_movement_a0f3cb0f99b816ba52592d87bb74e6f14_icgraph}
+\includegraphics[width=350pt]{class_i_movement_a08c5a7c4bd8c1d78a9e455f42712e655_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_i_movement_afdaa8bbfbe2acd10fc9fab9bd922d452}\label{class_i_movement_afdaa8bbfbe2acd10fc9fab9bd922d452}} 
@@ -299,8 +341,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Set the current movement mode. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -338,7 +379,7 @@ This function will signal the target object to jump in the next Fixed\+Update.
 
 If the character\textquotesingle{}s jump is on cd then nothing will happen. 
 
-Implements \mbox{\hyperlink{class_i_movement_a2d47acb7fe566d1301ac90efd48772b9}{I\+Movement}}.
+Reimplemented from \mbox{\hyperlink{class_i_movement_a90ee03e4b3be9f77c9cd8b09a58b900d}{I\+Movement}}.
 
 \mbox{\Hypertarget{class_movement_a5382914e6da64dbf89460062fdb4a08a}\label{class_movement_a5382914e6da64dbf89460062fdb4a08a}} 
 \index{Movement@{Movement}!Start@{Start}}
@@ -353,57 +394,67 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=298pt]{class_movement_a5382914e6da64dbf89460062fdb4a08a_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_movement_afb0186627db1cf95a2d8bda689efbe14}\label{class_movement_afb0186627db1cf95a2d8bda689efbe14}} 
+\mbox{\Hypertarget{class_movement_a99355a317281a0f40fbf42e533dd026e}\label{class_movement_a99355a317281a0f40fbf42e533dd026e}} 
 \index{Movement@{Movement}!Step@{Step}}
 \index{Step@{Step}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{Step()}{Step()}}
-{\footnotesize\ttfamily void Movement.\+Step (\begin{DoxyParamCaption}\item[{float}]{speed,  }\item[{int}]{forward,  }\item[{int}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Movement.\+Step (\begin{DoxyParamCaption}\item[{float}]{speed,  }\item[{float}]{forward,  }\item[{float}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 This function move the host object according to the forward and side inputs of the player. 
 
-The movement is performed by manipulating the velocity property of the rigidbody. The speed of the movement is reduced if the host object is airborned. 
+The movement is performed by manipulating the velocity property of the rigidbody. The speed of the movement is reduced if the host object is airborned.
+
+
 \begin{DoxyParams}{Parameters}
-{\em speed} & is the desired movement speed for the host object. \\
+{\em speed} & speed is the desired movement speed for the host object.\\
 \hline
-{\em forward} & is how much the player need to move forward or backward. \\
+{\em forward} & forward is how much the player need to move forward or backward.\\
 \hline
-{\em side} & is how much the player need to move sideway. \\
+{\em side} & side is how much the player need to move sideway.\\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=331pt]{class_movement_afb0186627db1cf95a2d8bda689efbe14_cgraph}
+\includegraphics[width=350pt]{class_movement_a99355a317281a0f40fbf42e533dd026e_icgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+\mbox{\Hypertarget{class_movement_ad9278ecc9daea58c9bc3737cc388e58f}\label{class_movement_ad9278ecc9daea58c9bc3737cc388e58f}} 
+\index{Movement@{Movement}!Update@{Update}}
+\index{Update@{Update}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Movement.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_movement_afb0186627db1cf95a2d8bda689efbe14_icgraph}
+\includegraphics[width=350pt]{class_movement_ad9278ecc9daea58c9bc3737cc388e58f_cgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_movement_adc343e30f231928fd7584eb8f936c124}\label{class_movement_adc343e30f231928fd7584eb8f936c124}} 
-\index{Movement@{Movement}!cameraYawPivot@{cameraYawPivot}}
-\index{cameraYawPivot@{cameraYawPivot}!Movement@{Movement}}
-\doxysubsubsection{\texorpdfstring{cameraYawPivot}{cameraYawPivot}}
-{\footnotesize\ttfamily Game\+Object Movement.\+camera\+Yaw\+Pivot\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_movement_aea878220d5d71936418464735e8f3a6e}\label{class_movement_aea878220d5d71936418464735e8f3a6e}} 
+\index{Movement@{Movement}!charAirbornedCollider@{charAirbornedCollider}}
+\index{charAirbornedCollider@{charAirbornedCollider}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{charAirbornedCollider}{charAirbornedCollider}}
+{\footnotesize\ttfamily Collider Movement.\+char\+Airborned\+Collider = null\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-The camera entity that the host entity is facing toward. 
+The collider this character will use while it is airborned. 
 
-!-- Needed to be assigned in the unity editor if should\+Move\+Toward\+Camera\+Direction is true \mbox{\Hypertarget{class_movement_ad1a469a1d0beb756eb0fcb9a51dbe7d6}\label{class_movement_ad1a469a1d0beb756eb0fcb9a51dbe7d6}} 
+/summary$>$ \mbox{\Hypertarget{class_movement_ad1a469a1d0beb756eb0fcb9a51dbe7d6}\label{class_movement_ad1a469a1d0beb756eb0fcb9a51dbe7d6}} 
 \index{Movement@{Movement}!charCollider@{charCollider}}
 \index{charCollider@{charCollider}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{charCollider}{charCollider}}
-{\footnotesize\ttfamily Collider Movement.\+char\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Collider Movement.\+char\+Collider = null\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -415,19 +466,21 @@ The Collider of the character\textquotesingle{}s model;
 \doxysubsubsection{\texorpdfstring{charRigidbody}{charRigidbody}}
 {\footnotesize\ttfamily Rigidbody Movement.\+char\+Rigidbody = null\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-the rigidbody of the character\textquotesingle{}s model. 
-
 \mbox{\Hypertarget{class_movement_a1b0dfbfa22a2ac11a60583d365cd8c49}\label{class_movement_a1b0dfbfa22a2ac11a60583d365cd8c49}} 
 \index{Movement@{Movement}!checkGroundsList@{checkGroundsList}}
 \index{checkGroundsList@{checkGroundsList}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{checkGroundsList}{checkGroundsList}}
-{\footnotesize\ttfamily List$<$Transform$>$ Movement.\+check\+Grounds\+List\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily List$<$Transform$>$ Movement.\+check\+Grounds\+List = new List$<$Transform$>$()\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-The list of points which is needed to know whether the host object is airborned or not. 
+The list of points which is needed to know whether the host object is airborned or not 
+
+\mbox{\Hypertarget{class_movement_a5bcb50fc53898f08e62479dff066c8cc}\label{class_movement_a5bcb50fc53898f08e62479dff066c8cc}} 
+\index{Movement@{Movement}!currentSpeed@{currentSpeed}}
+\index{currentSpeed@{currentSpeed}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{currentSpeed}{currentSpeed}}
+{\footnotesize\ttfamily float Movement.\+current\+Speed = 0\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_i_movement_a67ec344a60681000b657db752bc21971}\label{class_i_movement_a67ec344a60681000b657db752bc21971}} 
 \index{Movement@{Movement}!data@{data}}
@@ -443,11 +496,7 @@ The container for all movement related data.
 \index{Movement@{Movement}!distanceToGround@{distanceToGround}}
 \index{distanceToGround@{distanceToGround}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{distanceToGround}{distanceToGround}}
-{\footnotesize\ttfamily float Movement.\+distance\+To\+Ground\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-the distance from the middle of the character\textquotesingle{}s collider\textquotesingle{}s center to ground. 
+{\footnotesize\ttfamily float Movement.\+distance\+To\+Ground = 0.\+1f\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_movement_a5f34d7479aeee7ced2e2d5e5d1953975}\label{class_movement_a5f34d7479aeee7ced2e2d5e5d1953975}} 
 \index{Movement@{Movement}!jumpSignal@{jumpSignal}}
@@ -455,19 +504,11 @@ the distance from the middle of the character\textquotesingle{}s collider\textqu
 \doxysubsubsection{\texorpdfstring{jumpSignal}{jumpSignal}}
 {\footnotesize\ttfamily bool Movement.\+jump\+Signal = false\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-cached the jump signal in the Signal Jump function 
-
-\mbox{\Hypertarget{class_movement_adb0c2b1365bd3c6214946c76136a3116}\label{class_movement_adb0c2b1365bd3c6214946c76136a3116}} 
+\mbox{\Hypertarget{class_movement_af093d4d24f3cad02c1f4a36b81c1f29e}\label{class_movement_af093d4d24f3cad02c1f4a36b81c1f29e}} 
 \index{Movement@{Movement}!moveForward@{moveForward}}
 \index{moveForward@{moveForward}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{moveForward}{moveForward}}
-{\footnotesize\ttfamily int Movement.\+move\+Forward = 0\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-cached the forward value in the Move function 
+{\footnotesize\ttfamily float Movement.\+move\+Forward = 0\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_i_movement_a9f07868b9cb1f199b0f014f34bf8b497}\label{class_i_movement_a9f07868b9cb1f199b0f014f34bf8b497}} 
 \index{Movement@{Movement}!moveMode@{moveMode}}
@@ -479,45 +520,29 @@ cached the forward value in the Move function
 
 The current movement mode. 
 
-\mbox{\Hypertarget{class_movement_ab96b4f05db69348433e6802732759e15}\label{class_movement_ab96b4f05db69348433e6802732759e15}} 
+\mbox{\Hypertarget{class_movement_a11c3e10c2f664380247f778816cfdd8b}\label{class_movement_a11c3e10c2f664380247f778816cfdd8b}} 
 \index{Movement@{Movement}!moveSide@{moveSide}}
 \index{moveSide@{moveSide}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{moveSide}{moveSide}}
-{\footnotesize\ttfamily int Movement.\+move\+Side = 0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Movement.\+move\+Side = 0\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_movement_a220553cfcd0ed19cdf8f54cca4275687}\label{class_movement_a220553cfcd0ed19cdf8f54cca4275687}} 
+\index{Movement@{Movement}!smoothAccel@{smoothAccel}}
+\index{smoothAccel@{smoothAccel}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{smoothAccel}{smoothAccel}}
+{\footnotesize\ttfamily float Movement.\+smooth\+Accel = 0\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_movement_a8de9048128c83fbb5216a8631641654c}\label{class_movement_a8de9048128c83fbb5216a8631641654c}} 
+\index{Movement@{Movement}!targetSpeed@{targetSpeed}}
+\index{targetSpeed@{targetSpeed}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{targetSpeed}{targetSpeed}}
+{\footnotesize\ttfamily float Movement.\+target\+Speed = 0\hspace{0.3cm}{\ttfamily [private]}}
 
-cached the side value in the Move function 
-
-\mbox{\Hypertarget{class_movement_a7c590f7eff8f8f553a0862007f1195f4}\label{class_movement_a7c590f7eff8f8f553a0862007f1195f4}} 
-\index{Movement@{Movement}!rotateSpeed@{rotateSpeed}}
-\index{rotateSpeed@{rotateSpeed}!Movement@{Movement}}
-\doxysubsubsection{\texorpdfstring{rotateSpeed}{rotateSpeed}}
-{\footnotesize\ttfamily float Movement.\+rotate\+Speed\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-The rotate speed of the host object toward the camera\textquotesingle{}s facing direction. 
-
-!-- Not needed if should\+Move\+Toward\+Camera\+Direction is false \mbox{\Hypertarget{class_movement_a290c56cad0392b795a2c331a763a2804}\label{class_movement_a290c56cad0392b795a2c331a763a2804}} 
-\index{Movement@{Movement}!shouldMoveTowardCameraDirection@{shouldMoveTowardCameraDirection}}
-\index{shouldMoveTowardCameraDirection@{shouldMoveTowardCameraDirection}!Movement@{Movement}}
-\doxysubsubsection{\texorpdfstring{shouldMoveTowardCameraDirection}{shouldMoveTowardCameraDirection}}
-{\footnotesize\ttfamily bool Movement.\+should\+Move\+Toward\+Camera\+Direction\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Decide if the host object should move foward accodring the camera\textquotesingle{}s facing direction. 
-
-!-- Instead of move forward according to its own facing direction \mbox{\Hypertarget{class_movement_ae627ac9640050f425e9645febd491784}\label{class_movement_ae627ac9640050f425e9645febd491784}} 
+\mbox{\Hypertarget{class_movement_ae627ac9640050f425e9645febd491784}\label{class_movement_ae627ac9640050f425e9645febd491784}} 
 \index{Movement@{Movement}!targetTransform@{targetTransform}}
 \index{targetTransform@{targetTransform}!Movement@{Movement}}
 \doxysubsubsection{\texorpdfstring{targetTransform}{targetTransform}}
 {\footnotesize\ttfamily Transform Movement.\+target\+Transform = null\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Cached transform of the host object. 
 
 
 

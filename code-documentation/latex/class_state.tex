@@ -2,11 +2,12 @@
 \label{class_state}\index{State@{State}}
 
 
-Inheritance diagram for State\+:\nopagebreak
+Inheritance diagram for State\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{class_state__inherit__graph}
+\includegraphics[width=350pt]{class_state__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -28,10 +29,8 @@ virtual void \mbox{\hyperlink{class_state_ad9351d83800a1801d889e6ac3f379e23}{On\
 virtual void \mbox{\hyperlink{class_state_a0c3ba47d37fa69c7089f047476cb624f}{On\+Popped}} ()
 \item 
 virtual void \mbox{\hyperlink{class_state_adbbf150abda90027741407a291db1924}{On\+Return\+Peek}} ()
-\item 
-virtual void \mbox{\hyperlink{class_state_a8c341a528a9942d41af4192ceecfbce7}{State\+Update}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Unity\+Event \mbox{\hyperlink{class_state_ad0507e140b71af2ef1051b1745dc87fd}{On\+Pressed\+Event}}
@@ -51,18 +50,19 @@ Unity\+Event \mbox{\hyperlink{class_state_aa5bb373a5972ecd79e81e201e660bbf9}{On\
 \doxysubsubsection{\texorpdfstring{OnPopped()}{OnPopped()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Popped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_state_a0c3ba47d37fa69c7089f047476cb624f_icgraph}
-\end{center}
-\end{figure}
+
+
+Reimplemented in \mbox{\hyperlink{class_game_paused_a44e93e36cdfac76598bef1f1bde3e820}{Game\+Paused}}, \mbox{\hyperlink{class_in_game_ad722ed4120b3f0b074d88826f0c92bff}{In\+Game}}, \mbox{\hyperlink{class_main_menu_a377f01e82d7af136b370ad93386c68f8}{Main\+Menu}}, \mbox{\hyperlink{class_loading_a845cca47db957daabf404c255ed27da4}{Loading}}, \mbox{\hyperlink{class_in_dialogues_a2a9aab722aaef2ae3d20948e27aacb3b}{In\+Dialogues}}, and \mbox{\hyperlink{class_in_inventory_a3e45ca7e42f2d90cfe6da5f3045cc5e3}{In\+Inventory}}.
+
 \mbox{\Hypertarget{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}\label{class_state_aec0b882c580ce0dcaf2886e02ba04fd2}} 
 \index{State@{State}!OnPressed@{OnPressed}}
 \index{OnPressed@{OnPressed}!State@{State}}
 \doxysubsubsection{\texorpdfstring{OnPressed()}{OnPressed()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a764b76056231238a3dd3d649bd821dde}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a603f849f03eda7ca9d12d09b09766d93}{In\+Inventory}}.
 
 \mbox{\Hypertarget{class_state_ad9351d83800a1801d889e6ac3f379e23}\label{class_state_ad9351d83800a1801d889e6ac3f379e23}} 
 \index{State@{State}!OnPushed@{OnPushed}}
@@ -70,24 +70,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{OnPushed()}{OnPushed()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Pushed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=296pt]{class_state_ad9351d83800a1801d889e6ac3f379e23_icgraph}
-\end{center}
-\end{figure}
+
+
+Reimplemented in \mbox{\hyperlink{class_game_paused_a1b9933653c83eeb1e9021a0c16f33ec6}{Game\+Paused}}, \mbox{\hyperlink{class_in_game_a4e330cfbca66f59b90979968bbe5209e}{In\+Game}}, \mbox{\hyperlink{class_main_menu_a049be19df7f1506e7ab150ec85c70aa9}{Main\+Menu}}, \mbox{\hyperlink{class_loading_a80066f4798d69bd7cc6aef91740469a9}{Loading}}, \mbox{\hyperlink{class_in_inventory_a5d92258ec97a3b0de3c6105089724962}{In\+Inventory}}, and \mbox{\hyperlink{class_in_dialogues_af58fb078649ac3560e1618ab7e2d6fa9}{In\+Dialogues}}.
+
 \mbox{\Hypertarget{class_state_adbbf150abda90027741407a291db1924}\label{class_state_adbbf150abda90027741407a291db1924}} 
 \index{State@{State}!OnReturnPeek@{OnReturnPeek}}
 \index{OnReturnPeek@{OnReturnPeek}!State@{State}}
 \doxysubsubsection{\texorpdfstring{OnReturnPeek()}{OnReturnPeek()}}
 {\footnotesize\ttfamily virtual void State.\+On\+Return\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{class_state_a8c341a528a9942d41af4192ceecfbce7}\label{class_state_a8c341a528a9942d41af4192ceecfbce7}} 
-\index{State@{State}!StateUpdate@{StateUpdate}}
-\index{StateUpdate@{StateUpdate}!State@{State}}
-\doxysubsubsection{\texorpdfstring{StateUpdate()}{StateUpdate()}}
-{\footnotesize\ttfamily virtual void State.\+State\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+Reimplemented in \mbox{\hyperlink{class_in_game_a4f8190e06ebef10b38df9fb105686187}{In\+Game}}, and \mbox{\hyperlink{class_in_inventory_a61da9c150fa3d08b670e64e412a758c4}{In\+Inventory}}.
 
 
 
@@ -96,25 +91,25 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{State@{State}!OnPoppedEvent@{OnPoppedEvent}}
 \index{OnPoppedEvent@{OnPoppedEvent}!State@{State}}
 \doxysubsubsection{\texorpdfstring{OnPoppedEvent}{OnPoppedEvent}}
-{\footnotesize\ttfamily Unity\+Event State.\+On\+Popped\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Popped\+Event}
 
 \mbox{\Hypertarget{class_state_ad0507e140b71af2ef1051b1745dc87fd}\label{class_state_ad0507e140b71af2ef1051b1745dc87fd}} 
 \index{State@{State}!OnPressedEvent@{OnPressedEvent}}
 \index{OnPressedEvent@{OnPressedEvent}!State@{State}}
 \doxysubsubsection{\texorpdfstring{OnPressedEvent}{OnPressedEvent}}
-{\footnotesize\ttfamily Unity\+Event State.\+On\+Pressed\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pressed\+Event}
 
 \mbox{\Hypertarget{class_state_aa5bb373a5972ecd79e81e201e660bbf9}\label{class_state_aa5bb373a5972ecd79e81e201e660bbf9}} 
 \index{State@{State}!OnPushedEvent@{OnPushedEvent}}
 \index{OnPushedEvent@{OnPushedEvent}!State@{State}}
 \doxysubsubsection{\texorpdfstring{OnPushedEvent}{OnPushedEvent}}
-{\footnotesize\ttfamily Unity\+Event State.\+On\+Pushed\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Pushed\+Event}
 
 \mbox{\Hypertarget{class_state_a53de060b4fa2616ccc02d6e405703d42}\label{class_state_a53de060b4fa2616ccc02d6e405703d42}} 
 \index{State@{State}!OnReturnPeekEvent@{OnReturnPeekEvent}}
 \index{OnReturnPeekEvent@{OnReturnPeekEvent}!State@{State}}
 \doxysubsubsection{\texorpdfstring{OnReturnPeekEvent}{OnReturnPeekEvent}}
-{\footnotesize\ttfamily Unity\+Event State.\+On\+Return\+Peek\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Unity\+Event State.\+On\+Return\+Peek\+Event}
 
 
 

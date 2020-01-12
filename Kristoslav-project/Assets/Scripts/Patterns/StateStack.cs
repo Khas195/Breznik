@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-public class StateStack 
+public class StateStack<T> where T : State
 {
-    Stack<State> stack = new Stack<State>();
+    Stack<T> stack = new Stack<T>();
 
-    public void Push(State newState)
+    public void Push(T newState)
     {
         if (newState == null)
         {
-            Definition.StateStackDebug("Pushing NULL into the stack");
+            Logger.StateStackDebug("Pushing NULL into the stack");
+            
         }
         
         if (IsStackEmpty() == false)
         {
-            Definition.StateStackDebug("Call OnPressed on " + stack.Peek());
+            Logger.StateStackDebug("Call OnPressed on " + stack.Peek());
             stack.Peek().OnPressed();
         }
 
         stack.Push(newState);
 
         newState.OnPushed();
-        Definition.StateStackDebug("Call OnPushed on " + newState);
+        Logger.StateStackDebug("Call OnPushed on " + newState);
     }
 
     public bool IsStackEmpty()
@@ -29,22 +30,22 @@ public class StateStack
         return stack.Count <= 0;
     }
 
-    public State Pop()
+    public T Pop()
     {
-        State result = null;
+        T result = null;
         if (IsStackEmpty())
         {
-            Definition.StateStackDebug("Popping an empty stack");
+            Logger.StateStackDebug("Popping an empty stack");
             return result;
         }
 
-        Definition.StateStackDebug("Call OnPop on" + result);
+        Logger.StateStackDebug("Call OnPop on" + result);
         result = stack.Pop();
         result.OnPopped();
 
         if (!IsStackEmpty())
         {
-            Definition.StateStackDebug("Call OnReturn Peek on" + stack.Peek());
+            Logger.StateStackDebug("Call OnReturn Peek on" + stack.Peek());
             stack.Peek().OnReturnPeek();
         }
         return result;
@@ -58,12 +59,16 @@ public class StateStack
         }
     }
 
-    public State GetPeek()
+    public T GetPeek()
     {
-        return stack.Peek();
+        if (stack.Count > 0) {
+            return stack.Peek();
+        } else {
+            return null;
+        }
     }
 
-    public bool Contains(State playingState)
+    public bool Contains(T playingState)
     {
         return stack.Contains(playingState);
     }
