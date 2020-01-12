@@ -20,3 +20,15 @@ where the player would control a boy-like character from a small village with a 
 and adventurous.
 
 The problem which was not so clear to me then, but which is painfully obvious to me in retrospect, is that I had no clear ending, or even central conflict around which the events of the game would revolve.
+This did not deter me, however, as I was excited to work on this immagined venture; though this leads me to my second fatal mistake. My main interest through working on this project was to dive deeper
+into the pipeline of creating 3D characters, retopologizing them, texturing them, rigging them, and finally animating and implementing them in the Unity engine. I viewed the project through this lense, 
+and that lead me to neglect much more vital elemnts concerning the project.
+
+Nevertheless, Tung had already previously agreed to work with me regardless of what project I would come up with. And with them, Hariharan, Frederic, and Sarah had all decided to join.
+
+As for the tasks to be assigned, my choices were thus: Tung, obviously would handle the code, as he is by far the most advanced among us in this respect, I would handle the character designs, modelling, 
+and animation, Sarah would be resposible for the environment (as she had already stated that she was skilled in this area, and wished to work on it), and Fredi would handle the modelling of the houses (as
+he similarly expressed a wish to do so). Hari was an uncertainty; I knew his personal preference would be to to programming, but considering that that position was already filled, and Tung's reluctance to 
+work with another, I appointed him the position of modelling various hard-surface props.
+
+The rest of the class was spent talking amongst eachother, with me trying to explain a more detailed conept for the game, and Tung going over the tools we would work with in the production.
