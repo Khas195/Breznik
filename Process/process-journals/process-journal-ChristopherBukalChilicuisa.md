@@ -20,3 +20,43 @@ where the player would control a boy-like character from a small village with a 
 and adventurous.
 
 The problem which was not so clear to me then, but which is painfully obvious to me in retrospect, is that I had no clear ending, or even central conflict around which the events of the game would revolve.
+This did not deter me, however, as I was excited to work on this immagined venture; though this leads me to my second fatal mistake. My main interest through working on this project was to dive deeper
+into the pipeline of creating 3D characters, retopologizing them, texturing them, rigging them, and finally animating and implementing them in the Unity engine. I viewed the project through this lense, 
+and that lead me to neglect much more vital elemnts concerning the project.
+
+Nevertheless, Tung had already previously agreed to work with me regardless of what project I would come up with. And with them, Hariharan, Frederic, and Sarah had all decided to join.
+
+As for the tasks to be assigned, my choices were thus: Tung, obviously would handle the code, as he is by far the most advanced among us in this respect, I would handle the character designs, modelling, 
+and animation, Sarah would be resposible for the environment (as she had already stated that she was skilled in this area, and wished to work on it), and Fredi would handle the modelling of the houses (as
+he similarly expressed a wish to do so). Hari was an uncertainty; I knew his personal preference would be to to programming, but considering that that position was already filled, and Tung's reluctance to 
+work with another, I appointed him the position of modelling various hard-surface props.
+
+The rest of the class was spent talking amongst eachother, with me trying to explain a more detailed conept for the game, and Tung going over the tools we would work with in the production.
+
+---
+
+## 17th October, 2019.
+We held our first meeting the following Thursday. The point here was two-fold: go into more detail on the tools we had chosen to use (Hacknplan, SmartGit), also deciding on a nameing convention, and to
+determine what we would do for the fast-upcoming playtest. We had less than five days to com eup with something playable, as a sort of proof of concept.
+
+We decided the best way would be to do everything in graybox. Meaning, a rudimentary box-character with animations, for running, jumping, and attacking, with the environment also being constructed out of
+Bare blocks.
+
+Later, Tung would bring up a point concerning this early playtest which I agree with, which is that a playtest this early on in the production doesn't really serve any constructive point, as our ideas
+aren't yet a t the level where we would be testing certain game design decisions.
+
+---
+
+## 22nd October, 2019.
+We were introduced to big boards this class.
+
+We started quickly writing down ideas and elements we wanted in the game. I expressed I wanted an sense of vagueness and abiguity. I wanted to acheive this through the presence of anachronistic elements,
+such as early 20th century houses along with 1980s electronics. Additionally, I wanted the player to feel excitment when ecnountering enemies, as opposed to caution or fright. At first we agreed to simply
+put up as many things as we could think of, regardless of priority, and to sort them out in the coming weeks.
+
+After this, we decided to hold regular weekly meetings where we would go over the developments through the week. Since Tung already had a ready library of handy scripts governing character movement, I 
+gave him the task of developing the basic inventory and quest systems we would need. The rest of the team each had the task of designing the laylout for their respective areas, Fredi would do the Village,
+Sarah would do the Vorest, and Hari the Field. Additionally for each area we would have some kind of central marker: the Village would have the Grandmother's house, the Forest the small lake and cabin, and
+the Field would have an abandoned barn.
+
+We talked more about the narrative of the game and the motives behind it.
