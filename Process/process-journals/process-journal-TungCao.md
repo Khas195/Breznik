@@ -149,9 +149,11 @@ Well, I think this image said all that need to be said.
 ## Sprint #2 (October 28th to November 18th, 2019)
 One might wonder why was this sprint started while the other sprint was running. This was where we made the first mistake in project management, I would say. Instead of sending tasks that was not finished to the backlog then start a new sprint, we started a new sprint and add new tasks there. This result in some sprints running for a very long time.
 
+For me, though, I did told my team that developing an AI in the game would resulted in 2 weeks of works hence this sprint ran long for me. 
+
 I remember during this week we had an in class meeting where we talked about the project via the big board. I think I had a quite rediculous arguement with Chris about fetch quests and Collect quests. He argued that they are different because one you need to return it and the other you don't. Where I argued that the they are the same, it is just that the sequential steps in completing a quest is just one less.  
 
-There were 3 big tasks that I was able to get done which was the AI behaviour, The Quest System and the integration of attack animations.
+Regarding the tasks, There were 3 big tasks that I was able to get done which was the AI behaviour, The Quest System and the integration of attack animations.
 
 Of course, besides that, there are also miscellaneous tasks that I was able to get done as well.
 ### Questing (Finished Nov 10th)
@@ -212,13 +214,6 @@ so if I want my character to jump I just request jump then the character will ch
 
 ![](./process-journal-TungCaoImages/characterRef.png)
 
-Of course the character is assigned in the editor. This kind of sepration creates special oppotunities in the future where we can switch the character ref at any point in the game and it would still works. This is a saying I've been telling my group "you guys are always one drag away from playing anything character in the game". Which was true, since we have this:
-
-![](./process-journal-TungCaoImages/crabboWalk0.gif)
-![](./process-journal-TungCaoImages/playAsChicken.gif)
-
-To be honest, though, at the time that I made this seperation. I didn't even thinkg that this was possible. As you can see, the footage above is way later in the project.
-
 #### The Behaviors
 The behaviors are the decisions that the AI made in the game. For example, whether he should continue to chase a target or should he return to patroling.
 
@@ -249,7 +244,7 @@ One would think that this might be the easiest thing to do in the game, since un
 
 We didn't want that because we had our own movement system that was already implemented. So It was such a hassle to use the Navmesh just to calculate the path in the game. You have to [sample the postion](https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html) and it will return the list of path. 
 
-The problem here lies where the path that it returns doesn't factor in the character width and height. At the time, I was not that familiar with the Unity Navmesh agent so I didn't know and still don't know how to fix this problem. 
+The problem, here, lies where the path that it returns doesn't factor in the character width and height. At the time, I was not that familiar with the Unity Navmesh agent so I didn't know and still don't know how to fix this problem. 
 
 Another problem is that since I was not using the agent, the character couldn't avoid each other in the game which led to me just putting in an obstacle component for all of the monster in the game. 
 
@@ -257,69 +252,131 @@ Well, after all of that, it worked 70% of the time so it was good enough.
 
 ![](./process-journal-TungCaoImages/AiPathfinding.gif)
 
-### 
----
-### In Class, True Story (Tuesday, 5th October 2019) 
+#### Miscellaneous 
+Other than that, I added Chris's character animation in the game such as run, walk and attack which can be seen above. Then I fixed some bugs where the attack animation did not sync with hit box. 
+
+Which can be seen below:
+
+![](./process-journal-TungCaoImages/animationSync.png)
+![](./process-journal-TungCaoImages/OnTriggerAndOverlapBox.jpg)
 
 ---
-### Weekly Meeting #5 (Monday, 11th November 2019) 
+### Project Week (Monday, November 11th 2019 - Sunday 17th November 2019) 
+During this period, we had a project week where I attended the illustration workshop called "Future City, 30 years from now". It was quite relaxing to be honest. It was little break from the whole project and just think about something else.
 
----
-### Project Week (Monday, 11th November 2019 - Sunday 17th November 2019) 
+It was pretty cool where I had to design a couple of futuristic building using adobe illustrator. Then we got to talk about what would the future be like and stuff like that.
 
----
-### Weekly Meeting #6 (Monday, 18th November 2019)
+Well, at the end they promised that they would show a poster of the whole city but I have yet to seen it. Furthermore, I found out that I absolutely, completely hate adobe illustrator. I uninstalled it the moment the workshop was done.
 
----
-### In Class, True Story (Tuesday, 19th November 2019) 
+In conclusion, Love the class, hate the tools.
 
 ---
 ### Playtest Session #2 (Tuesday, 19th November 2019) 
 
----
-### Rehearse Milestone presentation (Monday, 25th November 2019)
+For this playtest, Sarah finished with her terrain during  and it was quite cool. The feeling of putting the monsters and their functions in the scene after it being developed in a gray box for more than a month. AND it worked as intended. It was so satisfying.
+
+After this playtest, everyone was just chillin' for a couple of days then do the presentation for the Milstone presentation. I think that was the reason why most of the stuff for the playtest evening was resolved on November 22nd. 
+
+Though, on the darker side of things, we wasted another playtest evening just like playtest #1. Same problems and still no anwser. Since, I was kind of focusing the technical side of things, the problem slipped my mind.  
 
 ---
-### Milestone presentation (Tuesday, 26th November 2019)
+## Sprint #3 (November 4th to December 3rd, 2019)
 
---- 
-### Working together At Neon Wood (Saturday, 30th November 2019)
+Feels kind of like the movie "Memento" now since we are going back in time again. Well as said earlier, for me sprint #2 and #3 are intertwine since the development of the AI in the was expected to be this long.
 
----
-### Weekly Meeting #7 (Monday, 2nd December 2019)
+I think sprint #3 started, for me, on November 22nd more or less. Not thing eventful or cool to talk about unfortunately. Mostly because it was about putting the system in sprint #2 and #1 in the game for the playtest session #2.
 
----
-### In Class, True Story (Tuesday, 3rd December 2019) 
+Also, thanks to the speration I did in sprint #2. I found out, after putting the enemy model in the game, that it allows the switching of the character reference at any point in the game and it would still works. Well, since the controller is controlling the character, regardless which character is assigned to it. 
 
---- 
-### Working together At Neon Wood (Thursday, 5th December 2019)
-Canceled Hari and sarah are sick
-Freddy is out of town
+To be honest, though, at the time that I made this seperation. I didn't even think that this was possible. 
 
---- 
-### Discord Talk (Thursday, 5th December 2019)
-Doing discord talk instead
+So I just pretend that it was all planned out by me.... I am indeed shameless.
+Then I just told them, with a proud provado that "you guys are always one drag away from playing anything character in the game". Which was true, since we have this:
 
---- 
-### Working together At Neon Wood (Friday, 6th December  2019)
+![](./process-journal-TungCaoImages/crabboWalk0.gif)
 
---- 
-### Working together At Neon Wood (Saturday, 7th December 2019)
+![](./process-journal-TungCaoImages/playAsChicken.gif)
 
---- 
-### Weekly Meeting #8(Monday, 9th December 2019)
+I, also, did some shading shenanigans with the slime since Christ wanted me a slime in the game.  
+
+![](./process-journal-TungCaoImages/slimeShader50PercentTransparent.gif)
+
+Quite cool if I do say so myself. Though, I don't think we even used it in the end.
 
 ---
-### In Class, True Story (Tuesday, 10th December 2019) 
+## Milestone presentation (Tuesday, 26th November 2019)
+Here we were, the milstone presentation. I did had problem doing the slides for it, however. Most of the thing I did was code related so I didn't know what to put in my slides. 
+
+If I showed them the thing I did in sprint #1 and sprint #2, would they understand or even care ?. I mean most of them are artists and designers. Even though the thing I did was cool to me, for them it would just be another simple game mechanics that ought to be there. Furthermore, do I even have enough time to present them ?. 
+
+Sometimes, it is just frustrating to be a programmer, really. Most of the thing you do, only fellow programmers appreciates it and people only look for bugs in the thing that you made.
+
+So I just made some slides that relate my implementation with game design concept which I did really researched. One would be amazed, how these simple mechanics that we take for granted in game, is implemented.
+
+Oh well, It is what it is or rather it was what it was, I guess.
+
+On the darker side, again. I did told Chris that it was not gonna went well with the game concept. Again, the looming problem of the game missing an essential part was still there. I did not know whether he understood that or he really thought that the game was ok.
 
 ---
-### Working together At Neon Wood(Saturday, 14th December 2019)
+## Sprint #4 (November 25th to December 16th, 2019)
+The sprints were catching up and we were slowly beginning to be back on track. Since the date different in sprint #3 and #4 is shorter. As in, they were not interwine with each other that much.
 
---- 
-### Weekly Meeting #9 (Monday, 16th December 2019)
+This week, Chris came to me with a really cool problem. In the attack animation, he wanted the character to be able to exit the attacking state in the animator and be able to move and jump during the recovery period of the animation.
+
+He suggested that I should calculate the time of the point of recovery during the attack animation and allow the player to exit from there.
+
+When I first hear his suggestion, I paused and was like "yeahhh, we're not doing that". I was like that because if one ever work with animator before. One would know that getting the timming during the animation, via code, is really complicated... or to me they were. 
+
+Since trying to know when the player is in attacking animation was difficult for me because animation doesn't just transition between each other instantly but rather blend with each other. 
+
+So I suggested a different solution, how about we splitted the attack animation into 2. In one animation state, we would allow transition out of and in the other not. That was quite a simplier implementation of the problem and he did not had to modify the attack animation much.
+
+![](./process-journal-TungCaoImages/attackAnimationSplit.png)
+
+So when the character attack, the attack animation is in RootA. The recovery of the attack animation would be in RootB. In RootA, we would not allow any exiting of the state unless to recovery. From recovery, we would allow exiting to all states.
+
+We talked about the implementation further and reached the above aggrement on which state should the player be able to rotate, jump, move,... 
+
+I don't think we could had gotten this solution if I didn't know any thing about modeling/animation and He didn't understand code and the animator. This, ingenious, solution was accomplished because of both of our knowledges in both field.
+
+Before this point,  whenever I worked with an artist, it was more or less they gave me assets and I put it in the game. It was cooperative, yes, but for me it was "cool, you gave me some assets I can use". This was the first time that I ever feel a cooperative connection with an artist to accomplish something in the game.
+
+And the result cannot even show with a gif or an image, One has to actually go into the game and play it to feel it. It is a very subtle detail in the game. It solved the problem in the second playtest where the character feels static when attacking. 
 
 ---
-### In Class, True Story (Tuesday, 17th December 2019) 
+## Sprint #5 (November 30th to December 16th, 2019)
+Well, sprint #4 and #5 ended on the same time. At that point, I realized that it was a problem where our sprints kept interwine each other so I talked to everyone and suggest that we should resolved everything in sprint #5, at best sprint #6.
+
+Though, for this sprint, I was, again, just  putting in the stuff I did from the previous sprints in the game such as implementing more enemy animation in the game. Which after, implementing two, the others would just fall into a pipeline.
+
+### The Journey to Narrative design. (First Draft finished December 9th)
+
+Since, it is hard to come up with an out of this world, special game mechanic. I thought it would be better to start doing the narrative design.  Mostly, because I thought that everyone had a very vauge impression of what our game would look like in the end. For example: where we starts, how the game gonna progress step by step. 
+
+We did talk about it earler but it was: boy woke up -> boy open a treasure map -> boy pick up his sword -> boy go adventure. 
+
+Then again, there was no clear steps to tell the story of Krstoslav and his grandma. So me and Chris talked about it and the story he wanted to tell, once again. This time and would wrote the step by step of how the player can gather these treasures or items. 
+
+We aggreed that having animated cutscene was an unlikely possibility. We decided to go with a drawn cutscene instead.
+
+![](./process-journal-TungCaoImages/narrativeStep.png)
+
+This was the start of my official involvment in the narrative design. Of course, these thing that I wrote was not set in stone. It needed to go through Chris for vision keeping (not go compeletely crazy with the story) and artistic decisions of the cutscene. 
+
+---
+## Sprint #6 (December 9th to December 16th, 2019)
+
+It was brief but this week I had to go hard back to the world of programming since assets are being done and features are being requested. I had to combined assets to prepare for the next playtest as well. 
+
+I added screenshake on attack, fixed the slopes problem (which I don't remember how I fixed it) and putting them in the scene. Even though the level was different, as said before, after you put them in twice (the gray box and the 2nd play test), everything just fell into a pipeline. Nothing to really talk about.
+
+One of the feature that was noticable was the enemy move forward when they attack without using root motion. I thought it was gonna be difficult but in the end it was not that difficult. 
+
+You just had to do a sphere cast to find all the enemy surrounding the player. Calculate their angles with respect to the player's forward direction to see which one is in front. Then the player would just try to move toward that enemy. Same principle would applied for all enemy character.
+
+It worked 70% of the time so it was good enough......
+
+Unfortunately, didn't have much time to work on the narrative of the game during this period. 
 
 ---
 ### Playtest session #3 (Tuesday, 17th December 2019) 
