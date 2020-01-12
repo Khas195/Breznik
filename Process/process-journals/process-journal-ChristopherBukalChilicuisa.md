@@ -32,3 +32,18 @@ he similarly expressed a wish to do so). Hari was an uncertainty; I knew his per
 work with another, I appointed him the position of modelling various hard-surface props.
 
 The rest of the class was spent talking amongst eachother, with me trying to explain a more detailed conept for the game, and Tung going over the tools we would work with in the production.
+
+---
+
+## 17th October, 2019.
+We held our first meeting the following Thursday. The point here was two-fold: go into more detail on the tools we had chosen to use (Hacknplan, SmartGit), also deciding on a nameing convention, and to
+determine what we would do for the fast-upcoming playtest. We had less than five days to com eup with something playable, as a sort of proof of concept.
+
+We decided the best way would be to do everything in graybox. Meaning, a rudimentary box-character with animations, for running, jumping, and attacking, with the environment also being constructed out of
+Bare blocks.
+
+Later, Tung would bring up a point concerning this early playtest which I agree with, which is that a playtest this early on in the production doesn't really serve any constructive point, as our ideas
+aren't yet a t the level where we would be testing certain game design decisions.
+
+## 22nd October, 2019.
+We were introduced to big boards this class.
