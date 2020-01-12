@@ -107,7 +107,6 @@ Thinking back about it, I think it was unnecessary because it kind of defeats th
 
 It is a good learning experience for future projects, playtests should have a purpose of actually testing actual elements in the game. Either it is a completely new elements or a combination of old elements that we want to see if it actually works . 
 
-
 ---
 #### Second Half (October 28th to November 4th)
 For the second half, which started on the 28th of October, I worked on the Inventory System, Pickup items and I did fix the jittering of the camera movement.
@@ -150,7 +149,9 @@ Well, I think this image said all that need to be said.
 ## Sprint #2 (October 28th to November 18th, 2019)
 One might wonder why was this sprint started while the other sprint was running. This was where we made the first mistake in project management, I would say. Instead of sending tasks that was not finished to the backlog then start a new sprint, we started a new sprint and add new tasks there. This result in some sprints running for a very long time.
 
-So for this sprint, there are 3 big tasks that I was able to get done which was the AI behaviour, The Quest System and the integration of attack animations.
+I remember during this week we had an in class meeting where we talked about the project via the big board. I think I had a quite rediculous arguement with Chris about fetch quests and Collect quests. He argued that they are different because one you need to return it and the other you don't. Where I argued that the they are the same, it is just that the sequential steps in completing a quest is just one less.  
+
+There were 3 big tasks that I was able to get done which was the AI behaviour, The Quest System and the integration of attack animations.
 
 Of course, besides that, there are also miscellaneous tasks that I was able to get done as well.
 ### Questing (Finished Nov 10th)
@@ -175,6 +176,10 @@ And I also wanted to seperate the quest system a little bit like the MVC model j
 
 The implementation was straight forward after the design was made since I just needed to follow it. Quest System distributes and receives quest, QuestUIManager
  see the quests in the Quests and show em and the Quests, themselves, has a list of objectives that when all return trues then the quests are done.
+
+ 
+![](./process-journal-TungCaoImages/receivingQuest.gif)
+
 
 ### Let's there be Intelligence (AI Behavior or behaviour)  (Finished Nov 16th)
 Now, for this task I would like to split it into 3 sections. The controller, The behaviors themselves and the pathfinding. 
