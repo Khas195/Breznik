@@ -519,7 +519,7 @@ Though I had to agree that her level looks better. In the end, we talked and dra
 
 ![](./process-journal-TungCaoImages/levelFinalDraft.png)
 
-Some platforms in some of the path are scaled up so the player doesn't need to constantly look down and she aggreed to add one stair in one section. So in the end:  
+*Some platforms in some of the path are scaled up so the player doesn't need to constantly look down and she aggreed to add one stair in one section. So in the end:*
 
 ![](./process-journal-TungCaoImages/absoluteWin.png)
 
