@@ -557,7 +557,7 @@ This game was quite a blast to have been through. At the beggining it was quite 
 
 It was kind of cool to solve these gameplay problems with Chris, an artist who actually know how the technical side works. At the beginning, I think that we but-headed each other a lot of the time. but as the project proceed we kind of works better as a team. As can be seen in the narrative and music part toward the end.
 
-After being vision keeper for 2 semesters, I think I understand the burden of it and I think that Chris did a great job of it toward the end. Everything kind of come back to you, so you start doubting every decisions you made because it gonna affect how the game gonna look and play like. Most of the time, you are not gonna get what you envision it to be. Finally, you have to keep being motivated yourself no matter what happened because if the vision keeper gives up, the project falls appart. Well, that was how I felt when I was vision keeper. 
+After being vision keeper for 2 semesters, I think I understand the burden of it .Everything kind of come back to you, so you start doubting every decisions you made because it gonna affect how the game gonna look and play like. Most of the time, you are not gonna get what you envision it to be. Finally, you have to keep being motivated yourself no matter what happened because if the vision keeper gives up, the project falls appart. Well, that was how I felt when I was vision keeper. Regardless of whether it is the same to him, I think he did a great job toward the end. 
 
 At the end, I got to work closely with Sarah on the design of the level which was an experience trying to balance the game design aspect of the game and the look of it. 
 
