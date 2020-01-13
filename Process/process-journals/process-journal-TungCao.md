@@ -124,6 +124,7 @@ For the 3d cube in the inventory, I used a different camera viewing it from the 
 ##### Picking Up Items (Finished November 2nd)
 
 I was trying to mimic the design in zelda at this point in time.
+
 ![](./process-journal-TungCaoImages/itemShowWhenRunPast.gif "Inventory")
 
 The pickup item was pretty straight forward where you collect the item's data then send it to the Inventory System. The Problem, believe it or not, resides in who is suppose to be showing the pick up text in the game and where should the pick up text be. 
@@ -361,6 +362,12 @@ We aggreed that having animated cutscene was an unlikely possibility. We decided
 
 ![](./process-journal-TungCaoImages/narrativeStep.png)
 
+![](./process-journal-TungCaoImages/cakeSceneFirstDraft.png)
+
+Sometimes, with these things, people might not  get the intention of the scene so I added some text saying the intention of the cutscene. Which was really cool, because when people understand what you are trying to do then they give very productive feedbacks.
+
+For Chris, all he needed to understand was the context of the cutscene. I clearly told him that he did not have to draw the cutscene line by line by rather contextual.
+
 This was the start of my official involvment in the narrative design. Of course, these thing that I wrote was not set in stone. It needed to go through Chris for vision keeping (not go compeletely crazy with the story) and artistic decisions of the cutscene. 
 
 ---
@@ -379,14 +386,77 @@ It worked 70% of the time so it was good enough......
 Unfortunately, didn't have much time to work on the narrative of the game during this period. 
 
 ---
-### Playtest session #3 (Tuesday, 17th December 2019) 
+## Playtest session #3 (Tuesday, 17th December 2019) 
+During this playtest, we actually got to test something. We got a lot of feedback from the different testers. 
 
---- 
-### Discord Talk (Thusday, 19th December 2019)
-Freddy not there
+![](./process-journal-TungCaoImages/lastPlayTestFeedback.png)
+
+I noticed that some of the problem in the game can be fixed via level design. For example:  some areas feels empty, rythm of the game for the jumping puzzle, enemies has no meanings,...
+
+Which at the time, was on my agenda, the moment I finished writing for all the cutscene.
 
 ---
-### Chrismas Break (Monday, 22nd December - Sunday, 5 January )
+## Sprint #7 (December 16th, 2019 to Jan 3rd, 2020)
+Needed to add the year. How annoying!. 
+
+This sprint ran right through Chrismas break for me. As in, I didn't really care much about Chrismas since in Viet Nam, we don't take that long of a break during Chrismas and my family is not here anyway.
+
+During this period, I only worked on the narrative of the game. I focused and wrote the Music box cutscene and the sweater cutscene. It was rather hard to tell the story of Krstoslav and the grandma, I realized.
+
+### Planning the Narrative Cutscenes
+To write an emotional story, the players need to somehow be attached with the main character or the protagonist. There were so many restrictions. 
+
+Such as we can only have 5 cutscenes and 2 of them were set in stone (the beginning and end cutscene). 
+
++ The other 3 cutscense shouldn't had more than 4 panels, due to time reason.
++ The middle cutscenes need to show the characteristic of the protagonist and grandma. 
++ It should show their connections and conflicts. 
++ Not to mention,the scenes should not be in any particular order
+
+So I kind of sketched out this board and try to identify what I wanted to write for the 3 middle cutscenes, before I wrote any words.
+
+![](./process-journal-TungCaoImages/beginCut.png)
+
+Though, we kind of miss the treasure map in the end.
+
+![](./process-journal-TungCaoImages/musicBoxCut.png)
+
+
+![](./process-journal-TungCaoImages/sweaterCut.png)
+
+
+#### The Music Box Cutscene
+
+Out of all those note, I was only able to write for the music box cutscene, at first.
+
+![](./process-journal-TungCaoImages/musicBoxCutscene.png)
+
+I quickly realized that even though I would really prefer to write like above. It was very hard for Chris to draw the cutscene because of the amount of context needed to be translated. 
+
+I even tried to draw storyboards for the cutscenes but since it'd been so long since I last drew that it was .... questionable. Maybe I should takes art again next semester or start drawing random storyboard again.
+
+![](./process-journal-TungCaoImages/tryingToStoryBoard.png)
+
+So we talked together and try to figure out how we can compact this into a cutscene.
+
+
+![](./process-journal-TungCaoImages/musicBoxPlan.jpg)
+
+At first, we thought that switch Krstoslav position with the young grandma and the old grandma with her mom. We instantly realized that it would create confusion if we do that. Thus we decided to change the "mom" from the "dad" instead. 
+
+#### The Sweater Cutscene
+It was switched out of to a different idea where Krstoslav would make and give the sweater to the grandma so that it shows Krstoslav's  love for his grandmother. This was due to me felt like Chris's vision wouldn't like the idea that Krstoslav being a jerk which would lead to the players hating the main character. Furthermore, I beleive that it would be too much without any previous scene building up to it. 
+
+Learning from my mistake with writing for the music box cutscene, I promptly switch to a more screenplay style. 
+
+![](./process-journal-TungCaoImages/SweaterCutScenes.png)
+
+Which Chris aggreed that it was ok since there were not that much detail and he could use his artistic view and drew it in his own way.
+
+Though I did read up different camera position and stuffs in film making to wrote that. At the end, he changed it all to his style. It was quite heart breaking but I digest.
+
+---
+## Final Sprint #8 (December 16th, 2019 to Jan 3rd, 2020)
 
 ---
 ### Conclusion (Unidentify date)
