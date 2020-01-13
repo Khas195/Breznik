@@ -559,7 +559,7 @@ It was kind of cool to solve these gameplay problems with Chris, an artist who a
 
 After being vision keeper for 2 semesters, I think I understand the burden of it .Everything kind of come back to you, so you start doubting every decisions you made because it gonna affect how the game gonna look and play like. Most of the time, you are not gonna get what you envision it to be. Finally, you have to keep being motivated yourself no matter what happened because if the vision keeper gives up, the project falls appart. Well, that was how I felt when I was vision keeper. Regardless of whether it is the same to him, I think he did a great job toward the end. 
 
-At the end, I got to work closely with Sarah on the design of the level which was an experience trying to balance the game design aspect of the game and the look of it. 
+At the end, I got to work with Sarah on the design of the level which was an experience trying to balance the game design aspect of the game and the look of it. 
 
 I got to expand my coding library even further with the Quest and Inventory System, though they sadly did not make it into the game. Maybe, I should not rushed to make  them too early. Something to think about I guess. I, also, made and learnt a lot of mistakes as a game designer, narrative design and level design, as well. This closing statement is already long so I would rather not write about them.
 
