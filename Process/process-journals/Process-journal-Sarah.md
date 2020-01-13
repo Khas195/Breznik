@@ -6,7 +6,7 @@ My process journal basically consists of a small overview that I've written down
 ---
 
 The goal of "True Story" project class was to kick off with an idea for a game with the help of an experience/story from people. Each member of the class had to come up with two prototypes. When Chris presented his adventure game idea with lovely visuals, I was sold.
-Lucky me, I was also able to be part of the group working making this project come true.
+Lucky me, I was also able to be part of the group making this project come true.
 
 ### First Meeting
 
