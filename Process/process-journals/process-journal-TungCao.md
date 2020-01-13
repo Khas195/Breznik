@@ -456,8 +456,106 @@ Which Chris aggreed that it was ok since there were not that much detail and he 
 Though I did read up different camera position and stuffs in film making to wrote that. At the end, he changed it all to his style. It was quite heart breaking but I digest.
 
 ---
-## Final Sprint #8 (December 16th, 2019 to Jan 3rd, 2020)
+## Final Sprint #8 (January 3th, 2019 to Jan 12th, 2020)
+The last push to the finish of the game.  In this last push, I would like to split it into 3 sections: the narrative, the music and the final implementations. 
+
+### The Narrative
+It was so awesome to see the thing that you wrote became a cutscene in the game. Regardless of whether the player would understand them or not, it was a great accomplishment. 
+
+For the beginning Cutscene: 
+![](./process-journal-TungCaoImages/BeginningCutscene.gif)
+
+![](./process-journal-TungCaoImages/MusicBoxCutScene.gif)
+
+![](./process-journal-TungCaoImages/SweaterCutScenes.gif)
+
+Now, the problem arrived at the Cake Cutscenes. It was so hard to write for it because with the previous cutscenes. There were always a message to sent, a moment in the relationship that can be transmitted. 
+
+Whether to establish the character, the love of Krstoslav to his grandma and the passing down of the music box. At that point in time, however, the best solution of the cake cutscene, which was determined to be the first cutscene for the player, was to support the other cutscene and establish the character even more.
+
+Hence, I thought of the death of Krstoslav's parent so that Krstoslav and His grandma would share this loss. The loss of the parent and the lost of the children. As such, in their emotional state, they would bond to fill this gap. Which would lead to the following cutscene having more of a emotional impact on the player.
+
+Nevertheless, both Chris and Sebastian didn't think it was a good idea. One, the death card is used to common to cheat this emotional impact. Two, it was too depressing... I think.
+
+To which, I say, it is true but we didn't really have much time left. In the end, however, the cake cutscene's death can only be interpret with Krstoslav wearing a blacksuit. 
+
+![](./process-journal-TungCaoImages/CakeCutScene.gif)
+
+And of course, the end cutscene.
+
+![](./process-journal-TungCaoImages/endcutscene.gif)
+
+
+### The Level Design
+
+With Sarah's new island model, I started to do the level design. I downloaded and replayed darksoul a couple of time to analyze their level. 
+
+![](./process-journal-TungCaoImages/LevelFirstDraft.png)
+
+Comparing to the old layout, I would say that this was quite the improvement. 
+
++ We have shortcut from each of the island to another. 
++ There were almost no places that look the same so the player can know where they are. 
++ Idealy, the player would never have to run straight between these island. The paths are always either ascending, turning or requires the player to jump.
++ There are anticipation to the surrounding platforms wherever you go (The tail of the arrow is where the player stand, the tip is where he would look at because of the path turning).
+
+It was very cool and it made the level feels way better to transverse through. 
+
+So when Sarah looked at it. She told me it didn't look really good because it looked too cramp and in some angle it didn't look really good.
+
+![](./process-journal-TungCaoImages/2ndDraft.png)
+
+But for her level, It had these problems:
++ some platforms was so small that most of the time, the player was looking down such that they wouldn't fall. 
++ Which kind of undoing some of her work, because they are not looking at the beautiful level. 
++ In some paths, the player would needed to keep jumping constantly without any break in the middle. Which would lead to the tranversing of the level becoming a chore. 
++ She removed my stairs, those stairs were cool.
+
+Though I had to aggree that her level looks better. In the end we talked and drafted a new level.
+
+![](./process-journal-TungCaoImages/levelFinalDraft.png)
+
+Some platforms in some of the path are scaled up so the player doesn't need to constantly look down and she aggreed to add one stair in one section. So in the end:  
+
+![](./process-journal-TungCaoImages/absoluteWin.png)
+
+### The Music
+Me and Chris decided to go the recording room to record some music for the game. I, honestly speaking, know very little about music. I can only tell him how it should feels for some places and let him do his magic. 
+
++ For the begining cutscene, we wanted a more mysterious vibe to it. Then when the grandma turns around we should miss a note, intentionally. 
+
++ For the cake cutscene, it should feels kind of sad because of the lost of the love one. The background music for the village should had the same tone with the cake. It should be sad because the village is kind of empty.
+
++ The Music box cutscene, since he was playing a guitar not a music box so I asked him to just play as though it sounds like a music box.  
+
++ The sweater cutscene, it should feels proud when the player listen to it. Like Krstoslav made the sweater for his grandma through his hard work so he is proud of his work. And in the sond, it kind of ramping up until the part where he gives the sweater then a drop which was pretty nice.
+
++ The ending marks the reunion of Krstolav and the grandma. So kind of like an ending to the story.
+
+I just told him that and he was able to create the music in our game. Regardless, of whether the musics are good or not. I think that was awesome.
+
+### The Final Implementation.
+
+With me and Chris sharing the placement of the monster in the scene. I went through and tried to rig everything (Cutscenes, collect item, ...)  to make everything works as intended.
+
+Chris and Hari even did some code to add to their model. It was the hovering or levitating effect.  
+
+Then Chris went back in to place some levitating rocks which was really cool because one of the rock had the music box symbol on it and it was near the music box. I found it to be cool whether intentional or not. When I last played through it, I went past that and was like "Oh the symbol on the rock leads to the music box".
+
+![](./process-journal-TungCaoImages/musicBoxSymbolRock.png)
+
+Sarah did something incredible to make the game look really good. She went through and re-texture almost everything and even remodel some stuffs as well. In retrospect, she could had done it earlier but it was really awesome to see the look of the game changed so much after just 2 days. 
+
 
 ---
-### Conclusion (Unidentify date)
+### Closing Statement (November 13th, 2020 at 2:32 AM)
 
+This game was quite a blast to have been through. At the begining it was quite rough to go because of the lack of that uniqueness. However, as the game go on to be developed it became more unique itself through the story and visual we added to it. 
+
+It was a blast to solve these gameplay problems with Chris, an artist who actually know how the technical side works. At the beginning, I think that we but-headed each other a lot of the time but as the project proceed we kind of works better as a team. As can be seen in the narrative and music part toward the end.
+
+At the end, I had to work closely with Sarah on the design of the level which was an experience trying to balance the game design aspect of the game and the look of it. 
+
+I realized that I am most happy when I do and think about design tasks. Coding is fun and all but I found that it was just a mean for me to have the freedom of design. I hope I can be vision keeper again next semester because I have a lot of game design ideas now and I want to try them out. 
+
+---
