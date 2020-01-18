@@ -25,7 +25,6 @@ public class LevitateEffect : MonoBehaviour
         this.amplitudeFactor = Random.Range(0.5f, 1.5f);
         this.speedFactor = Random.Range(0.5f, 1.5f);
         this.faze = Random.Range(0f, 1f) * 180f;
-        Debug.Log(this.faze);
     }
 
     // Update is called once per frame
